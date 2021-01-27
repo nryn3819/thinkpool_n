@@ -1,0 +1,52 @@
+.table_w{
+    display:block;
+    width:100%;
+    float:left;
+    overflow:hidden;
+
+    table{
+        border-top:1px solid #666;
+        thead{
+            tr th{
+                padding: {
+                    top: 7px;
+                    bottom: 7px;
+                    left: 15px;
+                    right: 15px;
+                }
+                font : {
+                    size: 14px;
+                    weight: bold;
+                }
+                color:#333;
+                
+                border-bottom:1px solid #666;
+                background:#f5f5f5;
+                text-align:center;
+
+            }
+        }
+
+        tbody{
+            tr td{
+                padding: {
+                    top: 14px;
+                    bottom: 15px;
+                    left:15px;
+                    right:15px;
+                }
+                font: {
+                    size: 14px;
+                    weight: 300;
+                }
+                color:#666;
+                border-bottom:1px solid #dfdfdf;
+
+                a{
+                    color:#666;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}

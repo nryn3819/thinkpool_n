@@ -1,0 +1,40 @@
+@import 'subnav';
+@import 'item';
+@import 'ai_info';
+@import 'rmd_bot';
+
+.sub-content {
+    position: relative;
+    clear: both;
+
+
+
+    .sub-section {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        padding: 40px 35px 60px;
+        overflow: hidden;
+    }
+}
+
+.sub-content-banner {
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+.sub-title {
+    display: block;
+    width: 100%;
+    text-indent: 8px;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}

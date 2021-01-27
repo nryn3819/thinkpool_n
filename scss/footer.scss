@@ -1,0 +1,103 @@
+// footer
+#footer_w {
+    min-height: 280px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+
+    #realfooter {
+        position: relative;
+        width: 1030px;
+        margin: 0 auto;
+
+        //하단메뉴
+        .fmenu {
+            display: inline-block;
+            width: 100%;
+            margin-top: 50px;
+
+            ul {
+                display: block;
+
+                li {
+                    display: inline-block;
+                    float: left;
+                    height: 16px;
+                    line-height: 16px;
+                    border-left: 1px solid #b4b4b4;
+                    margin-left: 19px;
+                    padding-left: 20px;
+
+                    &:first-child {
+                        border-left: 0;
+                        margin-left: 0;
+                        padding-left: 0;
+                    }
+
+                    a {
+                        display: inline-block;
+                        font-size: 14px;
+                        color: #333;
+                        font-weight: 300;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        //패밀리사이트
+        .fsite {
+            position: absolute;
+            top: 50px;
+            right: 0;
+
+            button {
+                width: 160px;
+                height: 34px;
+                background: #f6f6f7;
+                text-align: left;
+                box-shadow: 0 0 5px #ccc;
+
+                .caret {
+                    float: right;
+                    margin-top: 8px;
+                }
+            }
+
+            li {
+                a:hover {
+                    background: rgb(28, 58, 129);
+                    background: linear-gradient(0deg, rgba(62, 114, 237, 1) 0%, rgba(102, 141, 236, 1) 43%, rgba(130, 167, 255, 1) 100%);
+                    color: #fff;
+                }
+            }
+        }
+
+        //address
+        address {
+            display: block;
+            margin-top: 15px;
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                color: #999;
+                font-weight: 300;
+
+                em {
+                    color: #333;
+                    font-weight: 300;
+                    font-style: normal;
+                }
+
+                //copyright
+                .copy {
+                    display: block;
+                    margin-top: 30px;
+                    font-size: 13px;
+                    color: #999;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

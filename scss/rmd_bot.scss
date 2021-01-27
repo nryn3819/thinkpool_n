@@ -1,0 +1,498 @@
+@import "table";
+
+.bot_list_w {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+
+    .bot_w {
+        display: block;
+        width: 330px;
+        height: 278px;
+        border: 1px solid #d7d7d7;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+        margin-top: 20px;
+
+        .top {
+            display: block;
+            width: 100%;
+            padding-top: 25px;
+            float: left;
+
+            .thumb {
+                display: block;
+                width: 140px;
+                height: 125px;
+                text-align: center;
+                padding-top: 25px;
+                float: left;
+            }
+        }
+    }
+
+    .btm {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        text-align: center;
+
+        button {
+            width: 285px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            padding: 0;
+            margin: 0;
+            background: #3e72ed;
+
+            span {
+                font-size: 16px;
+                color: #fff;
+                font-weight: 300;
+
+                em {
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                &::after {
+                    content: '→';
+                    padding-left: 10px;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+
+.bot_info {
+    display: block;
+    width: 180px;
+    float: left;
+    padding-left: 10px;
+
+    .per {
+        display: block;
+        width: 100%;
+        float: left;
+
+        span {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 300;
+            padding-right: 20px;
+            background: url(../img/sub/bot/bu_per.png) no-repeat 100% 50%;
+        }
+
+        strong {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: 300;
+            width: 100%;
+        }
+    }
+
+    .info {
+        display: block;
+        width: 100%;
+        float: left;
+        padding-top: 10px;
+
+        dt {
+            width: 90px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 700;
+            text-align: left;
+            float: left;
+            clear: left;
+        }
+
+        dd {
+            width: calc(100% - 90px);
+            height: 24px;
+            line-height: 24px;
+            padding-left: 0;
+            margin-left: 0;
+            font-size: 14px;
+            color: #666;
+            float: left;
+        }
+
+        .st_inv {
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 700;
+        }
+    }
+}
+
+.bot_detail {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+    .bot_title {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        .thumb {
+            display: inline-block;
+            width: 116px;
+            height: 116px;
+            border-radius: 115px;
+            border: 1px solid #d7d7d7;
+            background: #fff;
+            text-align: center;
+            padding: 17px 0;
+        }
+
+        .bot_name {
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+
+            font : {
+                size: 36px;
+                weight: 700;
+            }
+        }
+
+    }
+}
+
+.bot_detail_info {
+    display: block;
+    width: 100%;
+    padding-top: 25px;
+
+    .left {
+        display: block;
+        width: 486px;
+        height: 180px;
+
+        padding: {
+            top: 30px;
+            left: 25px;
+            right: 25px;
+            bottom: 30px;
+        }
+
+        background:#fff;
+        float:left;
+
+        dl {
+            display: block;
+
+            dt {
+                display: block;
+                width: 117px;
+                height: 36px;
+                line-height: 26px;
+
+                font : {
+                    size: 16px;
+                    weight: 700;
+                }
+
+                color:#333;
+
+                padding: {
+                    bottom: 10px;
+                }
+
+                float:left;
+                clear:left;
+            }
+
+            dd {
+                display: block;
+                width: calc(100% - 117px);
+                height: 36px;
+                line-height: 26px;
+
+                font : {
+                    size: 15px;
+                    weight: 300;
+                }
+
+                color:#666;
+                letter-spacing:-0.025em;
+
+                padding: {
+                    bottom: 10px;
+                }
+
+                float:left;
+            }
+        }
+    }
+
+    .right {
+        position: relative;
+        display: block;
+        width: 486px;
+        height: 180px;
+
+        padding: {
+            top: 30px;
+            left: 25px;
+            right: 25px;
+            bottom: 30px;
+        }
+
+        background:#fff;
+        float:right;
+
+        strong {
+            font: {
+                size: 16px;
+                weight: bold;
+            }
+
+            height:26px;
+            line-height:26px;
+        }
+
+        .txt {
+            display: block;
+            padding-top: 10px;
+
+            font : {
+                size: 15px;
+                weight: 300;
+            }
+
+            color:#666;
+            line-height:25px;
+        }
+
+        .button {
+            position: absolute;
+            top: 25px;
+            right: 0;
+
+            button {
+                display: block;
+                height: 40px;
+                border-radius: 40px;
+
+                padding: {
+                    left: 20px;
+                    right: 20px;
+                }
+
+                margin: {
+                    top: 15px;
+                    bottom: 15px;
+                    right: 35px;
+                    left: 0;
+                }
+
+                &.btn-primary {
+                    background: #3e72ed;
+                }
+
+                &.btn-default {
+                    background: #fff;
+                    border: 1px solid #d7d7d7;
+                }
+
+                &:focus {
+                    outline: 0;
+                }
+
+                span {
+                    width: 88px;
+                }
+            }
+        }
+    }
+}
+
+
+.allDetail {
+    display: block;
+    width: 100%;
+
+    .result {
+        display: block;
+        width: 668px;
+        float: left;
+
+        .resultbox_w {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            margin: {
+                top: 20px;
+            }
+
+            .resultbox {
+                display: flex;
+                width: 154px;
+                height: 183px;
+                border: 1px solid #d7d7d7;
+                border-radius: 5px;
+                flex-wrap: wrap;
+                align-content: center;
+
+                span {
+                    display: block;
+                    width: 100%;
+                    line-height: 24px;
+                    text-align: center;
+
+                    font: {
+                        size: 16px;
+                        weight: 300;
+                    }
+
+                    color:#333;
+                }
+
+                strong {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+
+                    font : {
+                        size: 30px;
+                        weight: 700;
+                    }
+
+                    padding: {
+                        top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .risk {
+        display: block;
+        width: calc(100% - 668px);
+
+        padding : {
+            left: 30px;
+        }
+
+        float:left;
+
+        .riskbox {
+            display: block;
+            width: 100%;
+            height: 183px;
+            border: 1px solid #d7d7d7;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    }
+
+    .per {
+        display: block;
+        width: 460px;
+        float: left;
+        margin-top: 40px;
+
+        .chartbox {
+            display: block;
+            width: 100%;
+            height: 335px;
+            background: #f7f7f7;
+            margin-top: 20px;
+        }
+    }
+
+    .highreturn {
+        display: block;
+        width: calc(100% - 460px);
+        padding-left: 30px;
+        margin-top: 40px;
+        float: left;
+
+        .tablebox {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+
+
+
+            .board_pager {
+                margin-top: 0;
+                overflow: hidden;
+
+                nav {
+                    ul {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .item_w {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .sms_sample{
+        display:block;
+        width:100%;
+        float:left;
+        margin-top:20px;
+
+        .sms_w{
+            display:flex;
+            width:100%;
+            justify-content: space-between;
+            padding-top:40px;
+
+            .smsbox{
+                display:inline-block;
+                width:210px;
+                height:227px;
+                background:url(../img/sub/bot/bg_sms.jpg) no-repeat 0 0;
+                padding: {
+                    top: 55px;
+                    left: 26px;
+                    right: 27px;
+                    bottom:24px;
+                }
+            }
+        }
+    }
+}
+
+.box-title {
+    display: block;
+    height:24px;
+    line-height:24px;
+
+    font: {
+        size: 20px;
+        weight: 700;
+    }
+
+    color:#333;
+}
