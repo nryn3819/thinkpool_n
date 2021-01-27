@@ -19,16 +19,6 @@
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
         padding: 40px 35px 60px;
         overflow: hidden;
-
-        &.char {
-            background: {
-                color: #fff;
-                image: url(../img/sub/item/rmd/bg_top_box.png);
-                repeat: no-repeat;
-                position: 0 100%;
-
-            }
-        }
     }
 }
 
