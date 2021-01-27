@@ -143,6 +143,10 @@
     padding-left: 30px;
     overflow: hidden;
 
+    .re_cmmt &{
+        padding-left:0;
+    }
+
     .inputBox {
         position: relative;
         display: block;
