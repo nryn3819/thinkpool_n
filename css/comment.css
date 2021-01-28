@@ -46,6 +46,8 @@
 
 .re_cmmt_input { display: none; width: 100%; padding-left: 30px; overflow: hidden; }
 
+.re_cmmt .re_cmmt_input { padding-left: 0; }
+
 .re_cmmt_input .inputBox { position: relative; display: block; width: 840px; height: 102px; border: 1px solid #d7d7d7; background: #f6f6f6; padding: 12px 15px; margin-top: 25px; float: left; }
 
 .re_cmmt_input .inputBox .user_nick { display: block; float: left; font-size: 14px; color: #333; font-weight: 700; }
