@@ -291,30 +291,35 @@
                             
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane in active" id="char_fav">
+                                    <div role="tabpanel" class="tab-pane active" id="char_fav">
                                         <div class="left_item_list" role="tabpanel">
                                         
                                             <!-- Nav tabs -->
-                                            <ul class="left_item nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#item01" aria-controls="item01" role="tab" data-toggle="tab">Home</a></li>
-                                                <li role="presentation"><a href="#item02" aria-controls="item02" role="tab" data-toggle="tab">Profile</a></li>
-                                                <li role="presentation"><a href="#item03" aria-controls="item03" role="tab" data-toggle="tab">Messages</a></li>
-                                                <li role="presentation"><a href="#item04" aria-controls="item04" role="tab" data-toggle="tab">Settings</a></li>
-                                                <li role="presentation" class="snb disabled"><a href="#item05" aria-controls="item05" role="tab" data-toggle="tab"><span class="date up">10:20</span><span class="item">종목명</span></a></li>
-                                                <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
-                                                <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
-                                                <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
-                                                <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
-                                                <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
-                                            </ul>
+                                            <div class="left_item_w">
+                                                <ul class="left_item nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#item01" aria-controls="item01" role="tab" data-toggle="tab">Home</a></li>
+                                                    <li role="presentation" class=""><a href="#item02" aria-controls="item02" role="tab" data-toggle="tab">Profile</a></li>
+                                                    <li role="presentation" class=""><a href="#item03" aria-controls="item03" role="tab" data-toggle="tab">Messages</a></li>
+                                                    <li role="presentation" class=""><a href="#item04" aria-controls="item04" role="tab" data-toggle="tab">Settings</a></li>
+                                                    <li role="presentation" class="snb disabled"><a href="#item05" aria-controls="item05" role="tab" data-toggle="tab"><span class="date up">10:20</span><span class="item">종목명</span></a></li>
+                                                    <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
+                                                    <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
+                                                    <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
+                                                    <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
+                                                    <li role="presentation" class="disabled"><a href="#" aria-controls="" role="tab" data-toggle="tab">empty</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- //tab -->
+                                            
                                         
                                             <!-- Tab panes -->
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane fade in active" id="item01">
                                                     <div class="item_w">
                                                         <div class="top">
-                                                            <div class="cdn">
-                                                                <img src="" alt="">
+                                                            <div class="cdn sell"> <!-- 상단 매수,매도,보유,관망 과 class명 동일 -->
+                                                                <strong>보유중</strong>
+                                                                <span>8월 23일 매수 후 현재</span>
                                                             </div>
                                                             <!-- //cdn -->
 
@@ -397,15 +402,15 @@
                                         </div>
                                     </div>
                                     <!-- //인기검색종목 -->
-                                    <div role="tabpanel" class="tab-pane fade" id="char_top01">...</div>
+                                    <div role="tabpanel" class="tab-pane" id="char_top01">...</div>
                                     <!-- //AI적중률Top -->
-                                    <div role="tabpanel" class="tab-pane fade" id="char_top02">...</div>
+                                    <div role="tabpanel" class="tab-pane" id="char_top02">...</div>
                                     <!-- //최고수익률top -->
-                                    <div role="tabpanel" class="tab-pane fade" id="char_top03">...</div>
+                                    <div role="tabpanel" class="tab-pane" id="char_top03">...</div>
                                     <!-- //누적수익률top -->
-                                    <div role="tabpanel" class="tab-pane fade" id="today01">...</div>
+                                    <div role="tabpanel" class="tab-pane" id="today01">...</div>
                                     <!-- //오늘매수 -->
-                                    <div role="tabpanel" class="tab-pane fade" id="today02">...</div>
+                                    <div role="tabpanel" class="tab-pane" id="today02">...</div>
                                     <!-- //오늘매도 -->
                                 </div>
 
@@ -579,7 +584,56 @@
                                 <!-- //header -->
 
                                 <div class="modal-body">
-                                    
+                                    <div class="top">
+                                        <span>적중률과 수익률로 검증된 AI매매신호!</span>
+                                        <strong>
+                                            최대 수익률 <span class="up">357.2%</span>, 연평균 수익률 <span class="up">20.3%</span>
+                                        </strong>
+                                    </div>
+                                    <!-- //top -->
+
+                                    <div class="con">
+                                        <ul>
+                                            <li>
+                                                <div class="box">
+                                                    <span>매수매도 타이밍</span>
+                                                    <strong>실시간 문자알림</strong>
+                                                </div>
+
+                                                <span>
+                                                    장중 급등주 실시간 매매 타이밍 알림!! <br>
+                                                    내 종목 최대 30 개 집중 관리!!
+                                                </span>
+                                            </li>
+
+                                            <li>
+                                                <div class="box">
+                                                    <span>전 종목 매매신호</span>
+                                                    <strong>무제한 조회 가능</strong>
+                                                </div>
+
+                                                <span>
+                                                    코스피,코스닥 전종목은 물론, ETF 까지!! <br>
+                                                    물린 내 종목, 정확한 매도 타이밍 포착!!
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //con -->
+
+                                    <div class="button">
+                                        <button type="button" class="btn btn-primary"><span>서비스 가입하기 <em>(59,800원, 휴대폰 자동결제)</em></span></button>
+
+                                        <ul>
+                                            <li>
+                                                <a href="#">다른 서비스 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">서비스 자세히보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //button -->
                                 </div>
                                 <!-- //m-body -->
                             </div>
