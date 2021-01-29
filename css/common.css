@@ -28,6 +28,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .dn { color: #447aec !important; }
 
+.mt-0 { margin-top: 0px !important; }
+
+.mt-20 { margin-top: 20px !important; }
+
 .mt-40 { margin-top: 40px !important; }
 
 .pt-65 { padding-top: 65px !important; }
@@ -690,7 +694,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .rmd_bot_tabw .tab-content { position: relative; display: block; width: 100%; margin-top: 40px; }
 
-.rmd_bot_tabw .tab-content .tab-pane { display: block; width: 100%; overflow: hidden; }
+.rmd_bot_tabw .tab-content .tab-pane { width: 100%; overflow: hidden; }
 
 .rmd_bot_tabw .tab-content .tab-pane dl { display: block; overflow: hidden; }
 
