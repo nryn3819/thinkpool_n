@@ -1,12 +1,13 @@
 //특징주
 @import 'char';
+@import 'item_main';
 
 #itemTop {
     position: relative;
     width: 100%;
     margin-top: 60px;
     overflow: hidden;
-    padding:0 20px;
+    padding: 0 20px;
 
 }
 
@@ -249,7 +250,8 @@
                 font-size: 14px;
                 color: #333;
                 font-weight: 300;
-                &:focus{
+
+                &:focus {
                     text-decoration: none;
                 }
             }
