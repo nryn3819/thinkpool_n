@@ -1010,6 +1010,16 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .issue-relation .table_w table tbody tr { display: table; width: 100%; }
 
+.empty { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 800px; text-align: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.empty.issue-empty p { display: block; width: 100%; line-height: 26px; font-size: 16px; color: #666; font-weight: 300; text-align: center; padding-bottom: 20px; }
+
+.empty.issue-empty button { display: block; width: 115px; height: 30px; line-height: 28px; float: none; border: 1px solid #3e72ed; background: #fff; border-radius: 5px; font-size: 14px; color: #3e72ed; padding: 0; margin: 0; }
+
+.empty.issue-empty button:hover, .empty.issue-empty button:focus { background: #3e72ed; color: #fff; }
+
+.empty.issue-empty button span { padding: 0; margin: 0; }
+
 .sub-content { position: relative; clear: both; }
 
 .sub-content .sub-section { display: block; margin-top: 20px; width: 100%; background: #fff; border: 1px solid #d6d6d6; border-radius: 5px; -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); padding: 40px 35px 60px; overflow: hidden; }
