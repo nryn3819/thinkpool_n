@@ -199,7 +199,6 @@
                             <a href="#"><em>#</em>태그명태그명</a>
                             <a href="#"><em>#</em>태그명태그명</a>
                             <a href="#"><em>#</em>태그명태그명</a>
-                            <a href="#"><em>#</em>태그명태그명</a>
                         </div>
                         <!-- //list -->
                     </div>
@@ -223,276 +222,326 @@
                 </nav>
                 <!-- //subNav -->
 
-                <div id="content" class="sub nbg mt-20">
-                    <h3 class="sr-only">종목홈</h3>
+                <div id="content" class="sub">
+                    <h3 class="sr-only">종목 이슈</h3>
 
-                    <div class="sub-content">
-                        <div class="sub-section mt-0">
-                            <h4 class="sr-only">종목 정보</h4>
-                            <div class="itemHomeBox">
-                                <div class="left">
-                                    <div class="item_cdn">
-                                        <span>AI매매신호 상태</span>
-                                        <strong>보유중</strong>
-                                    </div>
-                                    <!-- 
-                                        //상태 
-                                        매수.매도 up/dn 클래스 사용
-                                        실시간알림 100.html 팝업사용 
-                                        작업이후 주석삭제
-                                        data-toggle="modal" data-target="#direct" 
+                    <div class="item_board_nav">
+                        <h4 class="sr-only">종목이슈카테고리</h4>
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="#">이슈</a></li>
+                            <li role="presentation"><a href="#">이슈분석</a></li>
+                        </ul>
+                    </div>
+                    <!-- //item_board_nav -->
 
-                                    -->
+                    <div class="issue-analysis mt-40">
+                        <h4 class="sub-title">주가&middot;이슈 상관성 분석</h4>
 
-                                    <div class="item_info">
-                                        <span class="sig">8월 23일 <em class="up">매수신호</em> 발생</span>
-                                        <!-- /신호정보 -->
+                        <div class="chartbox mt-20"></div>
+                    </div>
+                    <!-- //issue-analysis -->
 
-                                        <span class="info">
-                                            매수가: <em>1,323,000</em>원
-                                        </span>
-                                        <!-- //가격 -->
-
-                                        <span class="info">
-                                            보유기간: <em>3</em>일
-                                        </span>
-                                        <!-- //보유기간 -->
-                                    </div>
-                                    <!-- //정보 -->
-
-                                    <div class="more">
-                                        <a href="#">매매신호 자세히보기</a>
-                                    </div>
-                                    <!-- //더보기 -->
-
-                                    <div class="enp_info">
-                                        <span class="tree">코스피 > 의약품</span>
-                                        <span class="info">단백질 및 바이오 의약품 제조기업</span>
-                                    </div>
-                                    <!-- //기업정보 -->
-
-                                    <div class="more">
-                                        <a href="#">기업개요 자세히보기</a>
-                                    </div>
-                                    <!-- //more -->
-                                </div>
-                                <!-- //좌측정보 -->
-
-                                <div class="right">
-                                    <div class="top">
-                                        <strong title="코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가">코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가</strong>
-
-                                        <span>전일대비 상승세 전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세</span>
-                                        <span>전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세</span>
-                                        <span>전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비</span>
-                                    </div>
-
-                                    <div class="con">
-                                        <div role="tabpanel">
-                                        
-                                            <!-- Nav tabs -->
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#day" aria-controls="for day" role="tab" data-toggle="tab">일봉</a></li>
-                                                <li role="presentation"><a href="#week" aria-controls="for week" role="tab" data-toggle="tab">주봉</a></li>
-                                                <li role="presentation"><a href="#month" aria-controls="for month" role="tab" data-toggle="tab">월봉</a></li>
-                                                <li role="presentation"><a href="#min" aria-controls="for 5minutes" role="tab" data-toggle="tab">5분봉</a></li>
-                                                <li role="presentation"><a href="#sale" aria-controls="for sale" role="tab" data-toggle="tab">매물대</a></li>
-                                                <li role="presentation" class="sub"><a href="#buy" aria-controls="Trading Trends by Subject" role="tab" data-toggle="tab">주체별매매동향</a>
-                                                </li>
-                                            </ul>
-                                        
-                                            <!-- Tab panes -->
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="day">
-                                                    <div class="chartbox"></div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="week">
-                                                    <div class="chartbox"></div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="month">
-                                                    <div class="chartbox"></div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="min">
-                                                    <div class="chartbox"></div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="sale">
-                                                    <div class="chartbox"></div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="buy">
-                                                    <div class="guide">
-                                                        <span>외국인 1000천 순매수 <em class="up">(지분율 56.01% 5일 누적 213만주 순매수 상장주식대비 3.72%)</em></span>
-                                                        <span>외국인 1000천 순매수 <em class="dn">(지분율 56.01% 5일 누적 213만주 순매수 상장주식대비 3.72%)</em></span>
-                                                    </div>
-                                                    <div class="chartbox"></div>
-                                                </div>
+                    <div class="latest-issue">
+                        <h4 class="sr-only">최근이슈항목</h4>
+                        <div role="tabpanel">
+                        
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#latest01" aria-controls="latest01" role="tab" data-toggle="tab">이슈1</a></li>
+                                <li role="presentation"><a href="#latest02" aria-controls="latest02" role="tab" data-toggle="tab">이슈2</a></li>
+                                <li role="presentation"><a href="#latest03" aria-controls="latest03" role="tab" data-toggle="tab">이슈3</a></li>
+                                <li role="presentation"><a href="#latest04" aria-controls="latest04" role="tab" data-toggle="tab">이슈4</a></li>
+                                <li role="presentation"><a href="#latest05" aria-controls="latest04" role="tab" data-toggle="tab">이슈5</a></li>
+                            </ul>
+                        
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="latest01">
+                                    <ul>
+                                        <li>
+                                            <div class="tit">
+                                                <a href="#" class="obj">당신의 아이들은 어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요</a>
+                                                <span class="date">2020/09/08 14:20 타임앤포인트</span>
                                             </div>
-                                        
-                                        </div>
-                                        <!-- //tabpanel -->
-                                    </div>
-                                    <!-- //con -->
+                                            <!-- //제목 -->
+                                            <div class="txt">
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                            </div>
+                                            <!-- //내용 -->
+                                        </li>
+                                        <li>
+                                            <div class="tit">
+                                                <a href="#" class="obj">당신의 아이들은 어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요</a>
+                                                <span class="date">2020/09/08 14:20 타임앤포인트</span>
+                                            </div>
+                                            <!-- //제목 -->
+                                            <div class="txt">
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                            </div>
+                                            <!-- //내용 -->
+                                        </li>
+                                        <li>
+                                            <div class="tit">
+                                                <a href="#" class="obj">당신의 아이들은 어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요어떤콘텐츠에 열광하고 있나요</a>
+                                                <span class="date">2020/09/08 14:20 타임앤포인트</span>
+                                            </div>
+                                            <!-- //제목 -->
+                                            <div class="txt">
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                                거리두기를 할수록 실내에 머물면서 E-Sports 접할 기회는 많아져 COVID-19으로 소비자들이 실내에 머무는 시간이 늘어나면서 E-Sports를접하는 시간도
+                                                길어지고 있음. 때문에 이미 LOL, Battle Ground 등 메가히트 ESports 게임을 출시한 회사들이 많은 투자자들의 주목을 끈 바 있음
+                                            </div>
+                                            <!-- //내용 -->
+                                        </li>
+                                    </ul>
                                 </div>
-                                <!-- //우측컨텐츠 -->
+                                <div role="tabpanel" class="tab-pane fade" id="latest02">...</div>
+                                <div role="tabpanel" class="tab-pane fade" id="latest03">...</div>
+                                <div role="tabpanel" class="tab-pane fade" id="latest04">...</div>
+                                <div role="tabpanel" class="tab-pane fade" id="latest05">...</div>
                             </div>
-                        </div>
-                        <!-- //종목정보 -->
 
-                        <div class="sub-section mt-40">
-                            <h4 class="sr-only">시세 분석</h4>
-                            <div class="itemHomeBox">
-                                <div class="left">
-                                    <div class="item_tit">
-                                        <span>시세분석</span>
-                                        <strong class="guide">전고점 대비 75% 구간진입</strong>
-                                    </div>
-                                    <!-- //종목명 및 주요내용 -->
-
-                                    <div class="item_txt">
-                                        <span class="date">10시11분 기준</span>
-                                        <span class="txt">
-                                            전고점 대비 74% 구간진입.
-                                            전고점 대비 74% 구간진입.전고점 대비
-                                            74% 구간진입.전고점 대비 74% 구간진입.
-                                            전고점 대비 74% 구간진입.
-                                        </span>
-                                    </div>
-                                    <!-- //종목안내 -->
-                                </div>
-                                <!-- //좌측정보 -->
-
-                                <div class="right">
-                                    <div class="con">
-                                        <div class="chartbox"></div>
-                                    </div>
-                                </div>
-                                <!-- //우측컨텐츠 -->
+                            <div class="more">
+                                <a href="#">이슈 전체 보기</a>
                             </div>
+                        
                         </div>
-                        <!-- //시세분석 -->
 
-                        <div class="sub-content-banner">
-                            <a href="#"><img src="./img/sub/bnr/adviser.jpg" alt="어드바이저"></a>
-                        </div>
-                        <!-- //씽크풀배너 -->
+                    </div>
+                    <!-- //latest-issue -->
 
-                        <div class="sub-section">
-                            <h4 class="sr-only">리포트 분석</h4>
-                            <div class="itemHomeBox">
-                                <div class="left">
-                                    <div class="item_tit">
-                                        <span>리포트 분석</span>
-
-                                        <strong class="name">삼성전자</strong>
-                                        <strong class="info dn">목표가 일제히 상향</strong>
+                    <div class="issue-relation">
+                        <div class="rmd_bot_tabw" role="tabpanel">
+                        
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a data-toggle="tab" aria-controls="summary" href="#summary">연관종목 요약</a>
+                                </li>
+                                <li role="presentatio">
+                                    <a data-toggle="tab" aria-controls="compare" href="#compare">매매동향 비교</a>
+                                </li>
+                                <li role="presentatio">
+                                    <a data-toggle="tab" aria-controls="chart" href="#chart">차트비교</a>
+                                </li>
+                            </ul>
+                            <!-- //tab-list -->
+                        
+                            <div class="tab-content">
+                                <div id="summary" class="tab-pane fade in active" role="tabpanel">
+                                    <div class="table_w">
+                                        <table width="100%" class="table table-hover">
+                                            <colgroup>
+                                                <col width="120">
+                                                <col width="100">
+                                                <col width="100">
+                                                <col width="*">
+                                                <col width="250">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">종목명</th>
+                                                    <th scope="col">현재가</th>
+                                                    <th scope="col">등락률</th>
+                                                    <th scope="col">기업개요</th>
+                                                    <th scope="col">다른 이슈</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <span>종목명종목명</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span>18,400</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="up">+19.23%</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">세계 최초 줄기세포 어쩌고 저쩌고 저쩌고 어쩌고 궁시렁궁시렁</a>
+                                                    </td>
+                                                    <td>
+                                                        <span>원격의료, 코로나19, 남북평화</span>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <!-- //종목명 및 주요내용 -->
-
-                                    <div class="item_txt">
-                                        <span class="txt">삼성전자에 대해 최근4일동안 4개의 증권사에서 목표가를 상향 조정함</span>
-                                        <span class="date">
-                                            10시 11분 기준
-                                        </span>
-                                    </div>
-                                    <!-- //종목안내 -->
                                 </div>
-                                <!-- //좌측정보 -->
-
-                                <div class="right">
-                                    <div class="con">
-                                        <div class="table_w">
-                                            <table width="100%" class="table table-hover">
-                                                <colgroup>
-                                                    <col width="*">
-                                                    <col width="310">
-                                                    <col width="120">
-                                                    <col width="90">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">증권사</th>
-                                                        <th scope="col">제목</th>
-                                                        <th scope="col">목표가</th>
-                                                        <th scope="col">발표일</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>한화투자증권</td>
-                                                        <td><a href="#">경동전자발표이벤트는 어쩌고 저쩌고 아무개 개똥이 어쩌고</a></td>
-                                                        <td class="text-center">50,000</td>
-                                                        <td class="text-center">8/24</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>한화투자증권</td>
-                                                        <td><a href="#">경동전자발표이벤트는 어쩌고 저쩌고 </a></td>
-                                                        <td class="text-center">50,000</td>
-                                                        <td class="text-center">8/24</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>한화투자증권</td>
-                                                        <td><a href="#">경동전자발표이벤트는 어쩌고 저쩌고 </a></td>
-                                                        <td class="text-center">50,000</td>
-                                                        <td class="text-center">8/24</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>한화투자증권</td>
-                                                        <td><a href="#">경동전자발표이벤트는 어쩌고 저쩌고 </a></td>
-                                                        <td class="text-center">50,000</td>
-                                                        <td class="text-center">8/24</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>한화투자증권</td>
-                                                        <td><a href="#">경동전자발표이벤트는 어쩌고 저쩌고 </a></td>
-                                                        <td class="text-center">50,000</td>
-                                                        <td class="text-center">8/24</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                <!-- //pane -->
+                        
+                                <div id="compare" class="tab-pane fade" role="tabpanel">
                                 </div>
-                                <!-- //우측컨텐츠 -->
+                                <!-- //pane -->
+                        
+                                <div id="chart" class="tab-pane fade" role="tabpanel">
+                                </div>
+                                <!-- //pane -->
                             </div>
+                            <!-- //tab-content -->
+                        
                         </div>
-                        <!-- //리포트 분석 -->
-
-                        <div class="sub-section mt-40">
-                            <h4 class="sr-only">이슈 분석</h4>
-                            <div class="itemHomeBox">
-                                <div class="left">
-                                    <div class="item_tit">
-                                        <span>이슈분석</span>
-
-                                        <strong class="guide">'마스크' 관련주 강세</strong>
-                                        <strong class="info up">+5.3% 상승</strong>
-                                    </div>
-                                    <!-- //아이템종목명 -->
-
-                                    <div class="item_mn">
-                                        <em>주요종목</em>
-                                        <span class="list">오공, 쌍방울, 톱텍</span>
-                                        <span class="date">10시11분 기준</span>
-                                    </div>
-                                    <!-- //주요종목 -->
-                                </div>
-                                <!-- //좌측정보 -->
-
-                                <div class="right">
-                                    <div class="con">
-                                        <div class="chartbox"></div>
-                                    </div>
-                                </div>
-                                <!-- //우측컨텐츠 -->
-                            </div>
-                        </div>
-                        <!-- //이슈분석 -->
-
-                        <div class="gbnr mt-40">
-                            <img src="./img/sub/bnr/adviser.jpg" alt="" width="100%" height="90">
-                            <!-- //970x90 임시이미지 -->
-                        </div>
-                        <!-- //구글배너 -->
-
                     </div>
 
                 </div>

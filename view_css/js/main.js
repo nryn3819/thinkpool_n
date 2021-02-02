@@ -4,6 +4,8 @@
 
 $(function () {
 
+    $('[data-toggle="modal"]').removeAttr('href');
+
     //상단배너 가리기
     $('.top_close').on('click', function () {
         $('.top_w').slideUp();

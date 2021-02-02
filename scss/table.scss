@@ -10,8 +10,8 @@
         thead {
             tr th {
                 padding: {
-                    top: 7px;
-                    bottom: 7px;
+                    top: 8px;
+                    bottom: 9px;
                     left: 15px;
                     right: 15px;
                 }
@@ -33,8 +33,8 @@
         tbody {
             tr td {
                 padding: {
-                    top: 14px;
-                    bottom: 15px;
+                    top: 12px;
+                    bottom: 13px;
                     left: 15px;
                     right: 15px;
                 }
@@ -48,8 +48,13 @@
                 border-bottom:1px solid #dfdfdf;
 
                 a {
+                    display:block;
+                    max-width:280px;
                     color: #666;
                     cursor: pointer;
+                    overflow:hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
             }
         }

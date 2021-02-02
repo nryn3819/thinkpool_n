@@ -2,6 +2,7 @@
 @import 'item';
 @import 'ai_info';
 @import 'rmd_bot';
+@import 'issue';
 
 .sub-content {
     position: relative;
@@ -20,21 +21,21 @@
         padding: 40px 35px 60px;
         overflow: hidden;
 
-        &.char{
+        &.char {
             background: {
-                color:#fff;
+                color: #fff;
                 image: url(../img/sub/item/rmd/bg_char.png);
                 repeat: no-repeat;
                 position: 0 100%;
             }
         }
 
-        &.char_tab{
-            position:relative;
+        &.char_tab {
+            position: relative;
         }
 
-        &.npd{
-            padding:0;
+        &.npd {
+            padding: 0;
         }
     }
 }

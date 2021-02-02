@@ -214,7 +214,7 @@
     .top {
         display: block;
         height: 170px;
-        margin-bottom:20px;
+        margin-bottom: 20px;
 
         strong {
             display: block;
@@ -230,7 +230,7 @@
 
         span {
             display: block;
-            width:100%;
+            width: 100%;
             font-size: 15px;
             line-height: 18px;
             color: #666;
@@ -242,20 +242,37 @@
         }
     }
 
-    .con{
-        display:block;
+    .con {
+        display: block;
 
-        .nav{
-            display:block;
-            width:100%;
-            border:0;
+        .nav {
+            display: block;
+            width: 100%;
+            border: 0;
 
-            li{
-                margin:0;
-                a{
-                    border:0;
-                    padding:0;
-                    margin:0;
+            li {
+                margin: 0;
+
+                &.active,
+                &:hover {
+                    a {
+                        color: #4c84ff;
+                        border: 1px solid #4c84ff;
+                        background: #fff;
+                    }
+                }
+
+                a {
+                    border: 0;
+                    padding: 0;
+
+                    margin: {
+                        top: 0;
+                        left: 0;
+                        right: 10px;
+                        bottom: 0;
+                    }
+
                     width:62px;
                     height:30px;
                     line-height:28px;
@@ -267,7 +284,53 @@
                     text-align:Center;
                     border-radius:5px;
                 }
+
+                &.sub {
+                    float: right;
+
+                    a {
+                        margin-right: 0;
+                        width: 120px;
+                        background: #fff;
+                    }
+                }
             }
         }
+
+        .tab-content {
+            display: block;
+            margin-top: 20px;
+
+            .guide {
+                display: block;
+
+                span {
+                    display: block;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #666;
+                    font-weight: 300;
+
+                    em {
+                        font-style: normal;
+                    }
+
+                    &::before {
+                        content: '\00b7';
+                        padding-right: 3px;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .chartbox {
+        display: block;
+        margin-top: 20px;
+        min-height: 300px;
+        background: #f8f8f8;
     }
 }
