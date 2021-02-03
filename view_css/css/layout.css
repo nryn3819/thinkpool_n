@@ -4,9 +4,9 @@
 
 #container { width: 1070px; height: auto; margin: 0 auto; overflow: hidden; padding: 0 0 30px; }
 
-#content { display: inline-block; width: 1030px; min-height: 800px; background: #fff; overflow: hidden; clear: both; border: 1px solid #d6d6d6; border-radius: 5px; -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); padding: 40px 35px 60px; margin: 35px 20px 0; }
+#content { display: inline-block; width: 1030px; min-height: 800px; background: #fff; overflow: hidden; clear: both; border: 0 0 5px 0 rgba(0, 0, 0, 0.1); border-radius: 5px; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); padding: 40px 35px 60px; margin: 35px 20px 0; }
 
-#content.nbg { width: 1070px; background: none; -webkit-box-shadow: none; box-shadow: none; border: 0; padding: 0; margin: 101px 0 0 0; padding: 0 20px 60px; }
+#content.nbg { width: 1070px; background: none; box-shadow: none; border: 0; padding: 0; margin: 101px 0 0 0; padding: 0 20px 60px; }
 
 #container_banner { display: block; width: 1030px; margin: 40px 20px 160px 20px; overflow: hidden; }
 

@@ -21,7 +21,7 @@
 
 #direct .modal-body .con ul li:first-child { width: 255px; background-image: url(../img/bu_pop.jpg); background-repeat: no-repeat; background-position: 100% 30%; }
 
-#direct .modal-body .con ul li .box { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 180px; height: 100px; background: #e4f8fa; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; border-radius: 10px; margin-left: 17px; margin-right: 18px; float: left; }
+#direct .modal-body .con ul li .box { display: inline-flex; width: 180px; height: 100px; background: #e4f8fa; flex-wrap: wrap; justify-content: center; align-content: center; border-radius: 10px; margin-left: 17px; margin-right: 18px; float: left; }
 
 #direct .modal-body .con ul li .box span { display: block; font-size: 20px; color: #333b58; font-weight: 400; }
 
@@ -37,7 +37,7 @@
 
 #direct .modal-body .button button span em { display: block; font-style: normal; font-size: 14px; color: #b7cbfb; font-weight: 300; }
 
-#direct .modal-body .button ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 30px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#direct .modal-body .button ul { display: flex; margin-top: 30px; justify-content: center; }
 
 #direct .modal-body .button ul li { display: block; margin: 0 20px; }
 

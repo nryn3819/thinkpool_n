@@ -10,7 +10,7 @@
 
 #allmenu .allmenu_wrap .allmenu_content { position: relative; width: 100%; padding: 60px 0; clear: both; overflow: hidden; }
 
-#allmenu .allmenu_wrap .allmenu_content .menu { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 1035px; -ms-flex-pack: distribute; justify-content: space-around; float: left; }
+#allmenu .allmenu_wrap .allmenu_content .menu { display: inline-flex; width: 1035px; justify-content: space-around; float: left; }
 
 #allmenu .allmenu_wrap .allmenu_content .menu .menu_list { display: inline-block; width: 207px; height: 372px; float: left; padding: 0 40px; border-left: 1px solid #ddd; }
 
@@ -60,7 +60,7 @@
 
 #header_w .top_w .top { width: 1030px; margin: 0 auto; }
 
-#header_w #realheader { width: 100%; height: 119px; margin: 0 auto; border-bottom: 1px solid #d6d6d6; }
+#header_w #realheader { width: 100%; height: 119px; margin: 0 auto; border-bottom: 0 0 5px 0 rgba(0, 0, 0, 0.1); }
 
 #header_w #realheader #header { position: relative; width: 1030px; margin: 0 auto; }
 
@@ -86,17 +86,17 @@
 
 #header_w #realheader #header .nav .allmenu { display: inline-block; width: 36px; height: 36px; float: left; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
 
-#header_w #realheader #header .nav .main_menu { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 470px; float: left; -ms-flex-pack: distribute; justify-content: space-around; }
+#header_w #realheader #header .nav .main_menu { display: inline-flex; width: 470px; float: left; justify-content: space-around; }
 
 #header_w #realheader #header .nav .main_menu li { display: inline-block; height: 52px; }
 
-#header_w #realheader #header .nav .main_menu li a { display: inline-block; text-align: center; min-width: 77px; height: 36px; line-height: 36px; border-bottom: 3px solid #fff; -webkit-box-sizing: content-box; box-sizing: content-box; font-size: 15px; color: #333; font-weight: 400; padding: 0 0 13px 0; float: left; }
+#header_w #realheader #header .nav .main_menu li a { display: inline-block; text-align: center; min-width: 77px; height: 36px; line-height: 36px; border-bottom: 3px solid #fff; box-sizing: content-box; font-size: 15px; color: #333; font-weight: 400; padding: 0 0 13px 0; float: left; }
 
 #header_w #realheader #header .nav .main_menu li a:hover { font-weight: 800; border-bottom: 3px solid #333; text-decoration: none; }
 
 #header_w #realheader #header .nav .main_menu li a.active { font-weight: 800; border-bottom: 3px solid #333; }
 
-#header_w #realheader #header .nav .add_menu { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 298px; height: 15px; -ms-flex-pack: distribute; justify-content: space-around; margin-top: 12px; border-left: 1px solid #ddd; }
+#header_w #realheader #header .nav .add_menu { display: inline-flex; width: 298px; height: 15px; justify-content: space-around; margin-top: 12px; border-left: 1px solid #ddd; }
 
 #header_w #realheader #header .nav .add_menu li { display: inline-block; }
 
@@ -104,18 +104,12 @@
 
 #header_w #realheader #header .nav .sch { position: relative; display: block; width: 220px; float: right; }
 
-#header_w #realheader #header .nav .sch input { width: 100%; height: 33px; line-height: 33px; border: 0; border-bottom: 1px solid #447aec; font-size: 15px; color: #447aec; padding-right: 32px; padding-left: 2px; }
+#header_w #realheader #header .nav .sch input { width: 100%; height: 33px; line-height: 33px; border: 0; border-bottom: 1px solid #3e72ed; font-size: 15px; color: #3e72ed; padding-right: 32px; padding-left: 2px; }
 
-#header_w #realheader #header .nav .sch input::-webkit-input-placeholder { font-size: 15px; color: #447aec; letter-spacing: -0.025em; }
+#header_w #realheader #header .nav .sch input::placeholder { font-size: 15px; color: #3e72ed; letter-spacing: -0.025em; }
 
-#header_w #realheader #header .nav .sch input:-ms-input-placeholder { font-size: 15px; color: #447aec; letter-spacing: -0.025em; }
+#header_w #realheader #header .nav .sch input:focus { border: 0; outline: 0; border-bottom: 1px solid #3e72ed; font-weight: 400; }
 
-#header_w #realheader #header .nav .sch input::-ms-input-placeholder { font-size: 15px; color: #447aec; letter-spacing: -0.025em; }
-
-#header_w #realheader #header .nav .sch input::placeholder { font-size: 15px; color: #447aec; letter-spacing: -0.025em; }
-
-#header_w #realheader #header .nav .sch input:focus { border: 0; outline: 0; border-bottom: 1px solid #447aec; font-weight: 400; }
-
-#header_w #realheader #header .nav .sch button { background: 0; border: 0; color: #447aec; position: absolute; top: 10px; right: 0; }
+#header_w #realheader #header .nav .sch button { background: 0; border: 0; color: #3e72ed; position: absolute; top: 10px; right: 0; }
 
 .member_simple .modal-footer { text-align: center; }

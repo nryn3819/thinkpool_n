@@ -201,9 +201,9 @@
 
 .board_view_content .adText { display: block; width: 100%; padding-top: 60px; text-align: center; }
 
-.board_view_content .adText span { font-size: 14px; color: #447aec; font-weight: 300; padding-right: 15px; }
+.board_view_content .adText span { font-size: 14px; color: #3e72ed; font-weight: 300; padding-right: 15px; }
 
-.board_view_content .adText a { font-size: 14px; color: #447aec; font-weight: 300; text-decoration: underline; }
+.board_view_content .adText a { font-size: 14px; color: #3e72ed; font-weight: 300; text-decoration: underline; }
 
 .board_view_content .share { position: absolute; top: 25px; right: 10px; }
 
@@ -444,7 +444,7 @@
 
 .write .file_upload_box { display: block; width: 100%; background: #f6f6f6; padding: 20px 0; float: left; margin-bottom: 20px; }
 
-.write .file_upload_box dl { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.write .file_upload_box dl { display: flex; width: 100%; align-items: center; }
 
 .write .file_upload_box dl dt { display: inline-block; width: 130px; height: 34px; line-height: 34px; text-align: center; font-size: 14px; color: #333; font-weight: bold; }
 
@@ -504,7 +504,7 @@
 
 .cmmtBox .vote ul li.oppose { background: url(../img/sub/board/oppose.png) no-repeat 0 50%; }
 
-.cmmtBox .vote ul li.oppose span { color: #447aec; }
+.cmmtBox .vote ul li.oppose span { color: #3e72ed; }
 
 .cmmtBox .declaration { position: absolute; top: 20px; right: 0; }
 

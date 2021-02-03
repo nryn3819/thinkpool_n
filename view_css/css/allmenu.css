@@ -10,7 +10,7 @@
 
 #allmenu .allmenu_wrap .allmenu_content { position: relative; width: 100%; padding: 60px 0; clear: both; overflow: hidden; }
 
-#allmenu .allmenu_wrap .allmenu_content .menu { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 1035px; -ms-flex-pack: distribute; justify-content: space-around; float: left; }
+#allmenu .allmenu_wrap .allmenu_content .menu { display: inline-flex; width: 1035px; justify-content: space-around; float: left; }
 
 #allmenu .allmenu_wrap .allmenu_content .menu .menu_list { display: inline-block; width: 207px; height: 372px; float: left; padding: 0 40px; border-left: 1px solid #ddd; }
 

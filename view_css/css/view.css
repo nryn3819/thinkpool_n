@@ -79,9 +79,9 @@
 
 .board_view_content .adText { display: block; width: 100%; padding-top: 60px; text-align: center; }
 
-.board_view_content .adText span { font-size: 14px; color: #447aec; font-weight: 300; padding-right: 15px; }
+.board_view_content .adText span { font-size: 14px; color: #3e72ed; font-weight: 300; padding-right: 15px; }
 
-.board_view_content .adText a { font-size: 14px; color: #447aec; font-weight: 300; text-decoration: underline; }
+.board_view_content .adText a { font-size: 14px; color: #3e72ed; font-weight: 300; text-decoration: underline; }
 
 .board_view_content .share { position: absolute; top: 25px; right: 10px; }
 

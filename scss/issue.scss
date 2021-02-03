@@ -36,7 +36,7 @@
             &.active,
             &:hover {
                 a {
-                    background: $blue;
+                    background: #3e72ed;
                     color:#fff;
                 }
             }
@@ -57,12 +57,12 @@
                         display:inline-block;
                         max-width:100%;
                         font-size:16px;
-                        color:$blue;
+                        color:#3e72ed;
                         font-weight:300;
                         overflow:hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
-                        border-bottom:1px solid $blue;
+                        border-bottom:1px solid #3e72ed;
                     }
                     .date{
                         display:block;
@@ -159,16 +159,16 @@
             height:30px;
             line-height:28px;
             float:none;
-            border:1px solid $blue;
+            border:1px solid #3e72ed;
             background:#fff;
             border-radius: 5px;;
             font-size:14px;
-            color:$blue;
+            color:#3e72ed;
             padding:0;
             margin:0;
 
             &:hover,&:focus{
-                background:$blue;
+                background:#3e72ed;
                 color:#fff;
             }
 

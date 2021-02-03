@@ -38,7 +38,7 @@
 
 .issue-relation .table_w table tbody tr { display: table; width: 100%; }
 
-.empty { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 800px; text-align: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.empty { display: flex; min-height: 800px; text-align: center; justify-content: center; align-content: center; align-items: center; flex-wrap: wrap; }
 
 .empty.issue-empty p { display: block; width: 100%; line-height: 26px; font-size: 16px; color: #666; font-weight: 300; text-align: center; padding-bottom: 20px; }
 
