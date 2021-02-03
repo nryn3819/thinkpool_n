@@ -15,7 +15,7 @@
     height: 33px;
     line-height: 30px;
     padding: 0 15px;
-    background: #3e72ed;
+    background: $blue;
     font-size: 14px;
     color: #fff;
     font-weight: 500;
@@ -27,7 +27,7 @@
     display: block;
     width: 175px;
     height: 33px;
-    border: 1px solid #d7d7d7;
+    border: $border-d7;
     border-radius: 3px;
     padding: 0 10px;
     font-size: 14px;
@@ -53,7 +53,7 @@
                     th {
                         height: 53px;
                         line-height: 52px;
-                        border-bottom: 1px solid #d7d7d7;
+                        border-bottom: $border-d7;
                         padding: 0 15px 0 40px;
                         font-size: 14px;
                         color: #333;
@@ -62,7 +62,7 @@
 
                     td {
 
-                        border-bottom: 1px solid #d7d7d7;
+                        border-bottom: $border-d7;
                         padding: 0 40px;
                         font-size: 14px;
                         color: #333;
@@ -117,7 +117,7 @@
                         width: 600px;
                         height: 78px;
                         background: #fff;
-                        border: 1px solid #d7d7d7;
+                        border: $border-d7;
                         overflow-y: auto;
                         float:left;
 
@@ -145,7 +145,7 @@
                         color: #333;
                         font-weight: 300;
                         text-align: center;
-                        border: 1px solid #d7d7d7;
+                        border: $border-d7;
                         border-radius: 5px;
                         background: #fff;
                         margin-left: 20px;
@@ -162,7 +162,7 @@
                         color:#333;
                         font-weight:300;
                         text-align:center;
-                        border:1px solid #d7d7d7;
+                        border:$border-d7;
                         border-radius:5px;
                         background:#fff;
                         margin:10px 0 0 20px;

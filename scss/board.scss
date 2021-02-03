@@ -33,7 +33,7 @@
         line-height: 40px;
         border-bottom: 1px solid #dfdfdf;
         font-size: 14px;
-        color: #3e72ed;
+        color: $blue;
         font-weight: 500;
         text-align: left;
         text-indent: 25px;
@@ -142,7 +142,7 @@
                         .bagdg {
                             display: inline-block;
                             font-size: 12px;
-                            color: #3e72ed;
+                            color: $blue;
                             padding-left: 3px;
                         }
                     }
@@ -163,8 +163,8 @@
                         }
 
                         &.label-rmd {
-                            border: 1px solid #fa5460;
-                            color: #fa5460;
+                            border: 1px solid $red2;
+                            color: $red2;
                         }
 
                         &.label-blind {
@@ -230,7 +230,7 @@
     button {
         padding-left: 30px;
         padding-right: 30px;
-        background: #3e72ed;
+        background: $blue;
         font-size: 13px;
         font-weight: 300;
     }
@@ -263,7 +263,7 @@
             min-height: 61px;
             background: #fff;
             padding: 22px 27px;
-            border: 1px solid #d6d6d6;
+            border: $border-d6;
             text-align: left;
             font-size: 13px;
             line-height: 18px;
@@ -337,8 +337,8 @@
                 a,
                 span {
 
-                    border: 1px solid #3e72ed;
-                    color: #3e72ed;
+                    border: 1px solid $blue;
+                    color: $blue;
                     background: none;
                     font-weight: 500;
                 }
@@ -357,8 +357,8 @@
                 border: 1px solid #fff;
 
                 &:hover {
-                    border: 1px solid #3e72ed;
-                    color: #3e72ed;
+                    border: 1px solid $blue;
+                    color: $blue;
                     background: none;
                     font-weight: 500;
                 }
@@ -411,11 +411,11 @@
     }
 
     &.b_write {
-        border: 1px solid #3e72ed;
+        border: 1px solid $blue;
 
         &:hover {
-            border: 1px solid #3e72ed;
-            background: #3e72ed;
+            border: 1px solid $blue;
+            background: $blue;
 
             span {
                 color: #fff;
@@ -425,7 +425,7 @@
         }
 
         span {
-            color: #3e72ed;
+            color: $blue;
             padding: 0 5px 0 25px;
             background: url(../img/btn_bullet_write.png) no-repeat 4px 50%;
         }

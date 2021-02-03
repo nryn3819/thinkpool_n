@@ -103,7 +103,7 @@
                             display: block;
                             font-size: 20px;
                             line-height: 30px;
-                            color: #3e72ed;
+                            color: $blue;
                             font-weight: 700;
                         }
                     }
@@ -133,7 +133,7 @@
             button {
                 width: 245px;
                 height: 64px;
-                background: #3e72ed;
+                background: $blue;
                 border-radius: 64px;
 
                 span {
@@ -163,7 +163,7 @@
 
                     a{
                         font-size:14px;
-                        color:#3e72ed;
+                        color:$blue;
                         font-weight:300;
 
                         &::after{

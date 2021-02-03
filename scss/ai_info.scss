@@ -45,7 +45,7 @@
                             height: 153px;
                             overflow: hidden;
                             text-align:center;
-                            border:1px solid #d7d7d7;
+                            border:$border-d7;
                             border-radius:5px;
                             padding:5px 0 0 0 ;
 
@@ -57,7 +57,7 @@
                                     display:block;
                                     font-style:normal;
                                     font-size:18px;
-                                    color:#3e72ed;
+                                    color:$blue;
                                     font-weight:700;
                                     padding:5px 0 10px 0;
                                 }
@@ -294,7 +294,7 @@
         width: calc(100% - 2px);
         height: 44px;
         line-height: 43px;
-        border-top: 1px solid #d7d7d7;
+        border-top: $border-d7;
         text-align: center;
 
         button {
@@ -302,7 +302,7 @@
             outline: 0;
             background: none;
             font-size: 14px;
-            color: #3e72ed;
+            color: $blue;
             font-weight: 300;
 
             span {
@@ -319,7 +319,7 @@
     left: 0;
     height: 65px;
     line-height: 65px;
-    border-bottom: 1px solid #d7d7d7;
+    border-bottom: $border-d7;
     padding: 0 35px;
 
     strong {
@@ -368,7 +368,7 @@
                     display:block;
                     padding:5px 0 10px 0;
                     font-size:24px;
-                    color:#3e72ed;
+                    color:$blue;
                     font-weight:700;
                 }
             }

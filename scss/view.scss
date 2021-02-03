@@ -118,7 +118,7 @@
                 a {
                     display: inline-block;
                     font-size: 13px;
-                    color: #3e72ed;
+                    color: $blue;
                     text-decoration: underline;
                 }
             }
@@ -177,7 +177,7 @@
     width: 100%;
     float: left;
     margin-top: 20px;
-    border-top: 1px solid #d7d7d7;
+    border-top: $border-d7;
     padding-bottom: 70px;
     overflow: hidden;
 
@@ -204,19 +204,19 @@
                 width: 80px;
                 padding: 15px 0;
                 margin: 0 7px;
-                border: 1px solid #d7d7d7;
+                border: $border-d7;
                 border-radius: 5px;
                 cursor: pointer;
 
                 &.approve {
                     .count {
-                        color: #fc2f2f;
+                        color: $red;
                     }
                 }
 
                 &.oppose {
                     .count {
-                        color: #3e72ed;
+                        color: $blue;
                     }
                 }
 
@@ -245,14 +245,14 @@
 
         span {
             font-size: 14px;
-            color: #447aec;
+            color: $blue2;
             font-weight: 300;
             padding-right: 15px;
         }
 
         a {
             font-size: 14px;
-            color: #447aec;
+            color: $blue2;
             font-weight: 300;
             text-decoration: underline;
         }
@@ -268,7 +268,7 @@
             width: 34px;
             height: 34px;
             background: #f7f7f7;
-            border: 1px solid #d7d7d7;
+            border: $border-d7;
             border-radius: 34px;
         }
     }
@@ -372,7 +372,7 @@
                         width: 30px;
                         height: 30px;
                         line-height: 27px;
-                        border: 1px solid #d7d7d7;
+                        border: $border-d7;
                         text-align: center;
                         font-size: 14px;
                         color: #333;
@@ -387,8 +387,8 @@
                         }
 
                         &.active {
-                            border: 1px solid #3e72ed;
-                            color: #3e72ed;
+                            border: 1px solid $blue;
+                            color: $blue;
                         }
                     }
                 }
@@ -405,7 +405,7 @@
         height: 230px;
         padding: 25px 20px;
         background: #fff;
-        border: 1px solid #d7d7d7;
+        border: $border-d7;
         z-index: 99;
 
         .con {
@@ -477,7 +477,7 @@
                     &::before {
                         content: '▶';
                         font-size: 10px;
-                        color: #3e72ed;
+                        color: $blue;
                         font-weight: 300;
                         float: left;
                         padding: 0 5px 0 0;
@@ -486,7 +486,7 @@
                     .obj {
                         width: 700px;
                         font-weight:400;
-                        color: #3e72ed;
+                        color: $blue;
                         &:hover{
                             text-decoration: none;
                         }
@@ -495,13 +495,13 @@
                     .nick {
                         letter-spacing:-0.025em;
                         font-weight:400;
-                        color: #3e72ed;
+                        color: $blue;
                     }
 
                     .date {
                         letter-spacing:-0.025em;
                         font-weight:400;
-                        color: #3e72ed;
+                        color: $blue;
                     }
                 }
             }
@@ -523,7 +523,7 @@
                     float: left;
 
                     &:hover {
-                        color: #3e72ed;
+                        color: $blue;
                         text-decoration: underline;
                     }
                 }
@@ -599,7 +599,7 @@
                             height: 22px;
                             line-height: 22px;
                             padding: 12px 15px;
-                            border-bottom: 1px solid #d7d7d7;
+                            border-bottom: $border-d7;
                             font-size: 14px;
                             color: #666;
                             font-weight: 300;
@@ -676,7 +676,7 @@
                 height: 40px;
                 line-height: 40px;
                 border-radius: 40px;
-                background: #3e72ed;
+                background: $blue;
 
                 &:visited {
                     outline: 0;
@@ -762,7 +762,7 @@
                 height: 40px;
                 line-height: 40px;
                 border-radius: 40px;
-                background: #3e72ed;
+                background: $blue;
 
                 &:visited {
                     outline: 0;
@@ -802,11 +802,11 @@
                 height: 40px;
                 line-height: 40px;
                 border-radius: 40px;
-                background: #3e72ed;
+                background: $blue;
 
                 &.btn-default {
                     background: #fff;
-                    border: 1px solid #d7d7d7;
+                    border: $border-d7;
                 }
 
                 &:visited {
@@ -896,7 +896,7 @@
                 margin-top: 10px;
                 font-size: 14px;
                 line-height: 18px;
-                color: #3e72ed;
+                color: $blue;
                 font-weight: 300;
                 letter-spacing: -0.025em;
 
@@ -925,7 +925,7 @@
     left: -400px;
     width: 380px;
     height: 154px;
-    border: 1px solid #d7d7d7;
+    border: $border-d7;
     padding: 15px 20px;
     z-index: 99;
     background: #fff;
