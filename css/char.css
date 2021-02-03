@@ -245,7 +245,7 @@
 
 .left_item_list > .tab-content .item_w .con .info ul li strong em { font-style: normal; font-weight: 700; }
 
-.left_item_list > .tab-content .empty { position: relative; }
+.left_item_list > .tab-content .empty { position: relative; min-height: 513px; }
 
 .left_item_list > .tab-content .empty .direct { position: absolute; top: 200px; left: 0; width: 100%; text-align: center; z-index: 99; }
 

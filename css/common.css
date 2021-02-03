@@ -246,6 +246,26 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 #c_side .side_banner { display: block; width: 100%; margin-top: 35px; clear: both; float: left; overflow: hidden; }
 
+.main-chart { display: block; }
+
+.main-chart .left { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; align-content: center; width: 50%; float: left; }
+
+.main-chart .right { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; align-content: center; width: 50%; float: left; }
+
+.main-chart .label.label-default { display: inline-block; font-size: 12px; color: #fff; font-weight: 700; border-radius: 5px; background: #333; padding: 3px 5px; }
+
+.main-chart .info { display: block; width: 240px; float: left; }
+
+.main-chart .info .con { display: block; padding-top: 15px; }
+
+.main-chart .info .con strong { font-size: 30px; color: #333; font-weight: 300; }
+
+.main-chart .info .con span { padding-left: 3px; font-size: 12px; font-weight: 300; }
+
+.main-chart .chartbox { display: block; width: calc(100% - 240px); float: left; }
+
+.main-chart .chartbox span { display: block; width: 100%; min-height: 150px; background: #f8f8f8; }
+
 #subNav { position: relative; width: 100%; margin-top: 55px; padding: 0 20px; }
 
 #subNav ul { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
@@ -522,7 +542,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .left_item_list > .tab-content .item_w .con .info ul li strong em { font-style: normal; font-weight: 700; }
 
-.left_item_list > .tab-content .empty { position: relative; }
+.left_item_list > .tab-content .empty { position: relative; min-height: 513px; }
 
 .left_item_list > .tab-content .empty .direct { position: absolute; top: 200px; left: 0; width: 100%; text-align: center; z-index: 99; }
 
@@ -742,7 +762,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info { display: block; width: 100%; height: 155px; float: left; overflow: hidden; }
 
-.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb { display: block; float: left; width: 127px; height: 153px; overflow: hidden; }
+.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb { display: block; float: left; width: 127px; height: 153px; overflow: hidden; text-align: center; border: 1px solid #d7d7d7; border-radius: 5px; padding: 5px 0 0 0; }
+
+.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span { font-size: 12px; color: #333; font-weight: 300; }
+
+.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span em { display: block; font-style: normal; font-size: 18px; color: #3e72ed; font-weight: 700; padding: 5px 0 10px 0; }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .info { position: relative; display: block; width: calc(100% - 127px); padding: 10px 0 0 20px; float: left; overflow: hidden; }
 
@@ -812,9 +836,17 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .rmd-bot-cont .left { display: block; width: 220px; height: 380px; float: left; background: #f6f6f6; }
 
-.rmd-bot-cont .left .bot { display: block; width: 100%; height: 230px; float: left; }
+.rmd-bot-cont .left .bot { display: block; width: 100%; height: 230px; text-align: center; float: left; }
 
-.rmd-bot-cont .left .info { display: block; width: 100%; float: left; }
+.rmd-bot-cont .left .bot .name { display: block; text-align: center; margin-top: 30px; }
+
+.rmd-bot-cont .left .bot .name em { display: block; font-style: normal; font-size: 14px; color: #333; font-weight: 300; }
+
+.rmd-bot-cont .left .bot .name strong { display: block; padding: 5px 0 10px 0; font-size: 24px; color: #3e72ed; font-weight: 700; }
+
+.rmd-bot-cont .left .bot .thumb { margin-top: 10px; }
+
+.rmd-bot-cont .left .info { display: block; width: 100%; float: left; margin-top: 10px; }
 
 .rmd-bot-cont .left .info dl { padding: 0 25px; }
 
