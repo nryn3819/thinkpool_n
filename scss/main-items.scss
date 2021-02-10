@@ -1,0 +1,115 @@
+.main-items{
+    display:block;
+    width:100%;
+
+    &>.nav{
+        display: flex;
+        border-bottom:0;
+        justify-content: center;
+        li{
+            float:none;
+            margin-bottom:0;
+            a{
+                margin:0 50px;
+                padding: {
+                    top:0;
+                    right:2px;
+                    bottom:15px;
+                    left:2px;
+                }
+                border:0;
+                border-radius: 0;
+
+                font: {
+                    size:18px;
+                    weight:300;
+                }
+                color:#333;
+                &:hover{
+                    color:#4C84FF;
+                    font-weight:700;
+                    border-bottom:2px solid #4C84FF;
+                    background:none;
+                    .label{
+                        background:#4C84FF;
+                        color:#fff;
+                    }
+                }
+                &:active{
+                    outline:0;
+                }
+
+                .label{
+                    height:20px;
+                    line-height:20px;
+                    padding:0 3px;
+                    border:1px solid #4C84FF;
+                    border-radius: 5px;
+                    color:#4C84FF;
+                    background:#fff;
+                    font : {
+                        size:14px;
+                        weight:300;
+                    }
+                }
+            }
+            &.active a{
+                color:#4C84FF;
+                font-weight:700;
+                border-bottom:2px solid #4C84FF;
+                .label{
+                    background:#4C84FF;
+                    color:#fff;
+                }
+                &:hover,&:active,&:focus{
+                    outline:0;
+                    border:0;
+                    border-bottom:2px solid #4C84FF;
+                }
+            }
+        }
+    }
+
+    &>.tab-content{
+        display:block;
+        margin-top:30px;
+    }
+}
+
+.main-items-tab{
+    display:block;
+
+    &>.nav{
+        display:flex;
+        border-bottom:0;
+        justify-content: center;
+
+        li{
+            display:block;
+            &.active a{
+                background:#4C84FF;
+                border:1px solid #4C84FF;
+                color:#fff;
+            }
+            a{
+                margin:0 5px;
+                padding:0 20px;
+                height:34px;
+                line-height:32px;
+                border:1px solid #d7d7d7;
+                border-radius: 34px;
+                font : {
+                    size:14px;
+                    weight:400;
+                }
+                color:#666;
+
+                &:hover{
+                    background:#4C84FF;
+                    color:#fff;
+                    border:1px solid #4C84FF;
+                }
+            }
+        }
+    }
+}

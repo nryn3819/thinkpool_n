@@ -18,7 +18,7 @@
         border: 1px solid #d6d6d6;
         border-radius: 5px;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-        padding: 40px 35px 60px;
+        padding: 40px 35px 45px;
         overflow: hidden;
 
         &.char {
@@ -46,6 +46,49 @@
     float: left;
     margin: 40px 0;
     overflow: hidden;
+
+    &.text-banner {
+        position:relative;
+        height: 63px;
+        line-height: 63px;
+        text-align: center;
+        background: rgb(61, 93, 221);
+        background: linear-gradient(90deg, rgba(61, 93, 221, 1) 0%, rgba(70, 135, 242, 1) 70%, rgba(61, 93, 221, 1) 100%);
+
+        .text-banner_w{
+            display:inline-block;
+            .txt{
+                a{
+                    font-size:18px;
+                    font-weight:700;
+                    color:#fff;
+                }
+            }
+        }
+        .bx-pager{
+            position:absolute;
+            top:3px;
+            right:100px;
+            .bx-pager-item{
+                display:block;
+                width:13px;
+                height:13px;
+                margin-top:4px;
+                a{
+                    display:inline-block;
+                    width:13px;
+                    height:13px;
+                    text-indent:-9999em;
+                    background:#fff;
+                    border-radius: 15px;
+                    &.active{
+                        background:#b1b1b1;
+                    }
+                }
+
+            }
+        }
+    }
 }
 
 .sub-title {
@@ -55,15 +98,16 @@
     font-size: 24px;
     color: #333;
     font-weight: 700;
-    &-s{
-        font-size:20px;
-        text-indent:0;
-        font-weight:700;
+
+    &-s {
+        font-size: 20px;
+        text-indent: 0;
+        font-weight: 700;
     }
 }
 
-.ell2{
-    overflow:hidden;
+.ell2 {
+    overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     display: -webkit-box;
