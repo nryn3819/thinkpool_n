@@ -6,6 +6,20 @@ $(function () {
 
     $('[data-toggle="modal"]').removeAttr('href');
 
+    //메인 슬라이더
+    $('.text-banner_w').bxSlider({
+        auto:true,
+        mode: 'vertical',
+        control: false,
+        infiniteLoop: false,
+        minSlides: 1,
+        maxSlides: 1,
+        moveSlides: 1,
+        nextText: '',
+        prevText: '',
+        hideControlOnEnd: true
+    });
+
     //상단배너 가리기
     $('.top_close').on('click', function () {
         $('.top_w').slideUp();

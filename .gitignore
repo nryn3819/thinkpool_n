@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,node,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,node,git
+# Created by https://www.toptal.com/developers/gitignore/api/node,yarn,git,vscode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,git,vscode
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -131,33 +131,28 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
-# Dump file
-*.stackdump
+### yarn ###
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
 
-# Folder config file
-[Dd]esktop.ini
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
 
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
+# and uncomment the following lines
+# .pnp.*
 
-# Windows shortcuts
-*.lnk
-
-# End of https://www.toptal.com/developers/gitignore/api/windows,node,git
-package-lock.json
-package.json
-postcss.config.js
+# End of https://www.toptal.com/developers/gitignore/api/node,yarn,git,vscode
