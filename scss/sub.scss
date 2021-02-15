@@ -3,6 +3,8 @@
 @import 'ai_info';
 @import 'rmd_bot';
 @import 'issue';
+@import 'mpa';
+@import 'tab';
 
 .sub-content {
     position: relative;
@@ -108,6 +110,13 @@
         text-indent: 0;
         font-weight: 700;
     }
+    &-xs {
+        font : {
+            size: 18px;
+            weight: 700;
+        }
+        text-indent: 0;
+    }
 }
 
 .ell2 {
@@ -117,4 +126,23 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+
+.sub-nm-box{
+    display:block;
+    width:100%;
+    overflow:hidden;
+
+    .left{
+        position:relative;
+        display:block;
+        width: calc(50% - 25px);
+        float:left;
+    }
+    .right{
+        position:relative;
+        display:block;
+        width: calc(50% - 25px);
+        float:right;
+    }
 }

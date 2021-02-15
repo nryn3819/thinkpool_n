@@ -1,0 +1,25 @@
+//market price analysis 시세분석
+
+.mpa{
+    .info{
+        position:absolute;
+        top:0;
+        right:0;
+
+        span{
+            font: {
+                size: 18px;
+                weight: 300;
+            }
+            padding-left:15px;
+        }
+    }
+
+    .chartbox{
+        display:block;
+        width:100%;
+        min-height:225px;
+        margin-top:10px;
+    }
+
+}

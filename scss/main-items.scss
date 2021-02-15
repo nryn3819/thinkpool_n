@@ -112,4 +112,43 @@
             }
         }
     }
+
+    .guide{
+        display:block;
+        clear:both;
+        float:left;
+
+        span{
+            display:block;
+            height:23px;
+            line-height:23px;
+            font: {
+                size:13px;
+                weight:300;
+            }
+            color:#999;
+
+            &::before{
+                content: '\00B7';
+                padding-right:5px;
+            }
+        }
+    }
+
+    .more{
+        float:right;
+
+        a{
+            font : {
+                size:14px;
+                weight: 300;
+            }
+            color:#4C84FF;
+            text-decoration: underline;
+
+            &::after{
+                content : " →";
+            }
+        }
+    }
 }

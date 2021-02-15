@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-chart {
   display: block;
 }
@@ -420,4 +421,39 @@
   background: #4C84FF;
   color: #fff;
   border: 1px solid #4C84FF;
+}
+
+.main-items-tab .guide {
+  display: block;
+  clear: both;
+  float: left;
+}
+
+.main-items-tab .guide span {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.main-items-tab .guide span::before {
+  content: '\00B7';
+  padding-right: 5px;
+}
+
+.main-items-tab .more {
+  float: right;
+}
+
+.main-items-tab .more a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #4C84FF;
+  text-decoration: underline;
+}
+
+.main-items-tab .more a::after {
+  content: " →";
 }

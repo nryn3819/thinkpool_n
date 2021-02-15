@@ -1,0 +1,18 @@
+.mpa .info {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mpa .info span {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 15px;
+}
+
+.mpa .chartbox {
+  display: block;
+  width: 100%;
+  min-height: 225px;
+  margin-top: 10px;
+}

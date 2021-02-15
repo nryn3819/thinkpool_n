@@ -1,3 +1,34 @@
+.check-radio{
+    display:block;
+    overflow:hidden;
+    clear:both; 
+
+    ul{
+        li{
+            display:block;
+            float:left;
+            margin-right:20px;
+
+            input{
+                width:20px;
+                height:20px;
+                margin:0;
+                padding:0;
+                float:left;
+                cursor: pointer;
+            }
+
+            label{
+                font-size: 13px;
+                color:#333;
+                font-weight:300;
+                padding-left:5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .table_w {
     display: block;
     width: 100%;
@@ -150,10 +181,11 @@
         &.mitem{
             thead tr{
                 th{
-                    padding:{
+                    padding: {
                         left:5px;
                         right:5px;
                     }
+                    vertical-align: middle;
                 }
             }
             tbody tr{
@@ -162,9 +194,15 @@
                         left:7px;
                         right:7px;
                     }
+                    vertical-align: middle;
                     a{
                         display:block;
                         float:left;
+                        &.view{
+                            color:#4379EB;
+                            text-decoration: underline;
+                            float:none;
+                        }
                     }
                     .tgglyphi{
                         cursor:pointer;
