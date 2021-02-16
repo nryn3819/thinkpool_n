@@ -4,6 +4,7 @@
   width: 100%;
   margin-top: 55px;
   padding: 0 20px;
+  z-index: 99;
 }
 
 #subNav ul {
@@ -38,6 +39,25 @@
   padding-bottom: 2px;
   text-decoration: none;
   border-bottom: 3px solid #3e72ed;
+}
+
+#subNav.leftNav {
+  margin-top: 0;
+  padding: 0 5px;
+  width: auto;
+  float: left;
+}
+
+#subNav.leftNav ul {
+  display: block;
+}
+
+#subNav.leftNav ul li {
+  margin-right: 45px;
+}
+
+#subNav.leftNav ul li a {
+  font-size: 24px;
 }
 
 #subNav.garo {

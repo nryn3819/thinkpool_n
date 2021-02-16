@@ -4,6 +4,7 @@
   width: 100%;
   margin-top: 55px;
   padding:0 20px;
+  z-index:99;
 
   ul {
     display: flex;
@@ -34,6 +35,24 @@
           padding-bottom:2px;
           text-decoration:none;
           border-bottom: 3px solid #3e72ed;
+        }
+      }
+    }
+  }
+
+  &.leftNav{
+    margin-top:0;
+    padding:0 5px;
+    width:auto;
+    float:left;
+    
+    ul{
+      display:block;
+
+      li{
+        margin-right:45px;
+        a{
+          font-size: 24px;
         }
       }
     }

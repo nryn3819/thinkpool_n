@@ -20,6 +20,26 @@ $(function () {
         hideControlOnEnd: true
     });
 
+    //이슈홈 슬라이더
+    let issueListIndex = $('.issue-nav-list .list-w .active').index();
+    
+
+    $('.issue-nav-list .list-w').bxSlider({
+        mode: 'horizontal',
+        pager: false,
+        minSlides: 1,
+        maxSlides: 6,
+        moveSlides: 1,
+        slideMargin: 0,
+        slideWidth: 958 / 6,
+        startSlide : issueListIndex,
+        //infiniteLoop:false,
+        nextText: '>',
+        prevText: '<',
+        hideControlOnEnd: true
+    });
+    
+
     //상단배너 가리기
     $('.top_close').on('click', function () {
         $('.top_w').slideUp();

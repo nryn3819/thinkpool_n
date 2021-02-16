@@ -1,0 +1,125 @@
+//isuue home
+
+.ch_today{
+    display:block;
+    margin-left:110px;
+    padding-top:10px;
+    float:Left;
+
+    span{
+        font-size:14px;
+        color:#999;
+        font-weight:300;
+    }
+
+    strong{
+        font-size:14px;
+        color:#333;
+        font-weight:700;
+    }
+
+    button{
+        background:none;
+        border:0;
+        outline:0;
+        cursor:pointer;
+        font-size:14px;
+        color:#333;
+        font-weight:700;
+    }
+}
+
+.issue-nav-list{
+    position:relative;
+    display:block;
+    width:100%;
+
+    .bx-wrapper{
+        max-width:955px !important;
+    }
+
+    .bx-prev{
+        position:absolute;
+        top:10px;
+        left:-15px;
+        z-index:99;
+        background:#fff;
+        width:30px;
+        height:30px;
+        line-height:31px;
+        text-align:center;
+        font-size:20px;
+        font-family: Dotum;
+        color:#d8d8d8;
+        font-weight:500;
+        border-radius:30px;
+        border:1px solid #d6d6d6;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        text-decoration: none;
+
+        &:hover{
+            border:1px solid #3e73ed;
+            background:#3e73ed;
+            color:#fff;
+        }
+        
+        &.disabled{
+            display:none;
+        }
+    }
+    .bx-next{
+        position:absolute;
+        top:10px;
+        right:-15px;
+        z-index:99;
+        background:#fff;
+        width:30px;
+        height:30px;
+        line-height:31px;
+        text-align:center;
+        font-size:21px;
+        font-family: Dotum;
+        color:#d8d8d8;
+        font-weight:500;
+        border-radius:30px;
+        border:1px solid #d6d6d6;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        text-decoration: none;
+
+        &:hover{
+            border:1px solid #3e73ed;
+            background:#3e73ed;
+            color:#fff;
+        }
+        
+        &.disabled{
+            display:none;
+        }
+    }
+
+    .list-w{
+
+        .list{
+            display:block;
+            width:calc(100% / 6);
+            border:1px solid #d7d7d7;
+            height:54px;
+            line-height:52px;
+            text-align:center;
+            font-size:16px;
+            font-weight:300;
+            color:#333;
+            float:left;
+            cursor:pointer;
+            border-right:0;
+            &:last-child{
+                border-right:1px solid #d7d7d7;
+            }
+            &:hover,&.active{
+                background:#3e73ed;
+                color:#fff;
+                font-weight:700;
+            }
+        }
+    }
+}

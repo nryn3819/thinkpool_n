@@ -1,0 +1,19 @@
+.nborder .modal-header {
+  border-bottom: 0;
+}
+
+.nborder .modal-body {
+  display: inline-block;
+  width: 100%;
+  position: initial;
+}
+
+.nborder .modal-footer {
+  border-top: 0;
+}
+
+.modal-title.btitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3E72ED;
+}

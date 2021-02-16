@@ -621,6 +621,7 @@ table {
 }
 
 #content {
+  position: relative;
   display: inline-block;
   width: 1030px;
   min-height: 800px;
@@ -1328,6 +1329,7 @@ table {
   width: 100%;
   margin-top: 55px;
   padding: 0 20px;
+  z-index: 99;
 }
 
 #subNav ul {
@@ -1362,6 +1364,25 @@ table {
   padding-bottom: 2px;
   text-decoration: none;
   border-bottom: 3px solid #3e72ed;
+}
+
+#subNav.leftNav {
+  margin-top: 0;
+  padding: 0 5px;
+  width: auto;
+  float: left;
+}
+
+#subNav.leftNav ul {
+  display: block;
+}
+
+#subNav.leftNav ul li {
+  margin-right: 45px;
+}
+
+#subNav.leftNav ul li a {
+  font-size: 24px;
 }
 
 #subNav.garo {
@@ -3613,6 +3634,56 @@ table {
   cursor: pointer;
 }
 
+.modal-index-table thead {
+  display: block;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.modal-index-table thead tr {
+  display: table;
+  width: 100%;
+}
+
+.modal-index-table thead tr th:nth-child(4), .modal-index-table thead tr th:nth-child(5), .modal-index-table thead tr th:nth-child(6), .modal-index-table thead tr th:nth-child(7), .modal-index-table thead tr th:nth-child(8), .modal-index-table thead tr th:nth-child(9) {
+  width: 103px;
+}
+
+.modal-index-table thead tr th:nth-child(1) {
+  width: 90px;
+}
+
+.modal-index-table thead tr th:nth-child(2), .modal-index-table thead tr th:nth-child(3) {
+  width: 80px;
+}
+
+.modal-index-table tbody {
+  display: block;
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  float: left;
+}
+
+.modal-index-table tbody tr {
+  display: table;
+  width: 100%;
+}
+
+.modal-index-table tbody tr td:nth-child(4), .modal-index-table tbody tr td:nth-child(5), .modal-index-table tbody tr td:nth-child(6), .modal-index-table tbody tr td:nth-child(7), .modal-index-table tbody tr td:nth-child(8), .modal-index-table tbody tr td:nth-child(9) {
+  width: 102px;
+}
+
+.modal-index-table tbody tr td:nth-child(1) {
+  width: 89px;
+}
+
+.modal-index-table tbody tr td:nth-child(2), .modal-index-table tbody tr td:nth-child(3) {
+  width: 80px;
+}
+
 .label {
   padding: 0;
 }
@@ -4082,6 +4153,130 @@ table {
   color: #333;
 }
 
+.ch_today {
+  display: block;
+  margin-left: 110px;
+  padding-top: 10px;
+  float: Left;
+}
+
+.ch_today span {
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
+.ch_today strong {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+
+.ch_today button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+
+.issue-nav-list {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.issue-nav-list .bx-wrapper {
+  max-width: 955px !important;
+}
+
+.issue-nav-list .bx-prev {
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  z-index: 99;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 31px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Dotum;
+  color: #d8d8d8;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.issue-nav-list .bx-prev:hover {
+  border: 1px solid #3e73ed;
+  background: #3e73ed;
+  color: #fff;
+}
+
+.issue-nav-list .bx-prev.disabled {
+  display: none;
+}
+
+.issue-nav-list .bx-next {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  z-index: 99;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 31px;
+  text-align: center;
+  font-size: 21px;
+  font-family: Dotum;
+  color: #d8d8d8;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.issue-nav-list .bx-next:hover {
+  border: 1px solid #3e73ed;
+  background: #3e73ed;
+  color: #fff;
+}
+
+.issue-nav-list .bx-next.disabled {
+  display: none;
+}
+
+.issue-nav-list .list-w .list {
+  display: block;
+  width: calc(100% / 6);
+  border: 1px solid #d7d7d7;
+  height: 54px;
+  line-height: 52px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  float: left;
+  cursor: pointer;
+  border-right: 0;
+}
+
+.issue-nav-list .list-w .list:last-child {
+  border-right: 1px solid #d7d7d7;
+}
+
+.issue-nav-list .list-w .list:hover, .issue-nav-list .list-w .list.active {
+  background: #3e73ed;
+  color: #fff;
+  font-weight: 700;
+}
+
 .issue-analysis .chartbox {
   display: block;
   min-height: 300px;
@@ -4271,6 +4466,34 @@ table {
   margin-top: 10px;
 }
 
+.idsView {
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+
+.idsView li {
+  display: block;
+  float: left;
+}
+
+.idsView li::before {
+  content: '|';
+  color: #d7d7d7;
+  padding: 0 15px;
+}
+
+.idsView li:first-child::before {
+  content: '';
+  padding: 0;
+}
+
+.idsView li a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}
+
 .nav-tabs.tab-lg {
   display: block;
   width: 100%;
@@ -4332,6 +4555,62 @@ table {
 .tab-content .tab-pane .guide span::before {
   content: '\00B7';
   padding-right: 5px;
+}
+
+.modal-mpa-index .nav.nav-tabs {
+  position: absolute;
+  top: 22px;
+  left: 170px;
+  border-bottom: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li {
+  width: auto;
+  height: 32px;
+  padding-right: 15px;
+}
+
+.modal-mpa-index .nav.nav-tabs li:last-child {
+  padding-right: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li:first-child::before {
+  content: '';
+  padding-right: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li::before {
+  content: '│';
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  padding: 2px 15px 0 0;
+  float: left;
+}
+
+.modal-mpa-index .nav.nav-tabs li.active a {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+}
+
+.modal-mpa-index .nav.nav-tabs li a {
+  padding: 0 0 7px 0;
+  margin: 0;
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+  float: left;
+}
+
+.modal-mpa-index .nav.nav-tabs li a:hover {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+  background: none;
 }
 
 .sub-content {
@@ -6359,4 +6638,24 @@ table {
   font-size: 13px;
   color: #999;
   font-weight: 300;
+}
+
+.nborder .modal-header {
+  border-bottom: 0;
+}
+
+.nborder .modal-body {
+  display: inline-block;
+  width: 100%;
+  position: initial;
+}
+
+.nborder .modal-footer {
+  border-top: 0;
+}
+
+.modal-title.btitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3E72ED;
 }

@@ -172,6 +172,56 @@
   cursor: pointer;
 }
 
+.modal-index-table thead {
+  display: block;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.modal-index-table thead tr {
+  display: table;
+  width: 100%;
+}
+
+.modal-index-table thead tr th:nth-child(4), .modal-index-table thead tr th:nth-child(5), .modal-index-table thead tr th:nth-child(6), .modal-index-table thead tr th:nth-child(7), .modal-index-table thead tr th:nth-child(8), .modal-index-table thead tr th:nth-child(9) {
+  width: 103px;
+}
+
+.modal-index-table thead tr th:nth-child(1) {
+  width: 90px;
+}
+
+.modal-index-table thead tr th:nth-child(2), .modal-index-table thead tr th:nth-child(3) {
+  width: 80px;
+}
+
+.modal-index-table tbody {
+  display: block;
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  float: left;
+}
+
+.modal-index-table tbody tr {
+  display: table;
+  width: 100%;
+}
+
+.modal-index-table tbody tr td:nth-child(4), .modal-index-table tbody tr td:nth-child(5), .modal-index-table tbody tr td:nth-child(6), .modal-index-table tbody tr td:nth-child(7), .modal-index-table tbody tr td:nth-child(8), .modal-index-table tbody tr td:nth-child(9) {
+  width: 102px;
+}
+
+.modal-index-table tbody tr td:nth-child(1) {
+  width: 89px;
+}
+
+.modal-index-table tbody tr td:nth-child(2), .modal-index-table tbody tr td:nth-child(3) {
+  width: 80px;
+}
+
 .label {
   padding: 0;
 }

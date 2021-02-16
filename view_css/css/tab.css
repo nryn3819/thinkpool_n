@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .nav-tabs.tab-lg {
   display: block;
   width: 100%;
@@ -59,4 +60,60 @@
 .tab-content .tab-pane .guide span::before {
   content: '\00B7';
   padding-right: 5px;
+}
+
+.modal-mpa-index .nav.nav-tabs {
+  position: absolute;
+  top: 22px;
+  left: 170px;
+  border-bottom: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li {
+  width: auto;
+  height: 32px;
+  padding-right: 15px;
+}
+
+.modal-mpa-index .nav.nav-tabs li:last-child {
+  padding-right: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li:first-child::before {
+  content: '';
+  padding-right: 0;
+}
+
+.modal-mpa-index .nav.nav-tabs li::before {
+  content: '│';
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  padding: 2px 15px 0 0;
+  float: left;
+}
+
+.modal-mpa-index .nav.nav-tabs li.active a {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+}
+
+.modal-mpa-index .nav.nav-tabs li a {
+  padding: 0 0 7px 0;
+  margin: 0;
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+  float: left;
+}
+
+.modal-mpa-index .nav.nav-tabs li a:hover {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+  background: none;
 }

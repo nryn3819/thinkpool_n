@@ -210,6 +210,52 @@
                 }
             }
         }
+
+        @at-root .modal-index-table{
+            thead{
+                display:block;
+                width:100%;
+                float:left;
+                overflow:hidden;
+
+                tr{
+                    display:table;
+                    width:100%;
+
+                    th:nth-child(4),th:nth-child(5),th:nth-child(6),th:nth-child(7),th:nth-child(8),th:nth-child(9){
+                        width:103px;
+                    }
+                    th:nth-child(1){
+                        width:90px;
+                    }
+                    th:nth-child(2),th:nth-child(3){
+                        width:80px;
+                    }
+                }
+            }
+            tbody{
+                display:block;
+                width:100%;
+                height:700px;
+                overflow-y:auto;
+                overflow-x:hidden;
+                float:left;
+                tr{
+                    display:table;
+                    width:100%;
+
+                    td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7),td:nth-child(8),td:nth-child(9){
+                        width:102px;
+                    }
+                    td:nth-child(1){
+                        width:89px;
+                    }
+                    td:nth-child(2),td:nth-child(3){
+                        width:80px;
+                    }
+                }
+            }
+        }
     }
 }
 

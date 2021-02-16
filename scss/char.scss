@@ -67,6 +67,42 @@
                 padding:0 3px;
                 text-align:left;
 
+                &::-webkit-input-placeholder {
+                    font: {
+                        size: 20px;
+                        weight: 300;
+                    }
+
+                    color:#7874f7;
+                }
+
+                &::-moz-placeholder {
+                    font: {
+                        size: 20px;
+                        weight: 300;
+                    }
+
+                    color:#7874f7;
+                }
+
+                &:-ms-input-placeholder {
+                    font: {
+                        size: 20px;
+                        weight: 300;
+                    }
+
+                    color:#7874f7;
+                }
+
+                &::-ms-input-placeholder {
+                    font: {
+                        size: 20px;
+                        weight: 300;
+                    }
+
+                    color:#7874f7;
+                }
+
                 &::placeholder {
                     font: {
                         size: 20px;

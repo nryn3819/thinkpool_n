@@ -23,3 +23,31 @@
     }
 
 }
+
+.idsView{
+    position:absolute;
+    top:0;
+    right:25px;
+
+    li{
+        display:block;
+        float:left;
+        &::before{
+            content: '|';
+            color:#d7d7d7;
+            padding:0 15px;
+        }
+        &:first-child::before{
+            content:'';
+            padding:0;
+        }
+
+        a{
+            font : {
+                size:14px;
+                weight:300;
+            }
+            color:#333;
+        }
+    }
+}
