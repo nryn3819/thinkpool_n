@@ -123,3 +123,163 @@
         }
     }
 }
+
+.issue_top{
+    display:block;
+
+    .tit{
+        display:block;
+        width:100%;
+        height:30px;
+        line-height:30px;
+        font: {
+            size:24px;
+            weight:700;
+        }
+        color:#333;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+    }
+
+    .txt{
+        display:block;
+        margin-top:20px;
+        padding:0 10px;
+        font : {
+            size:15px;
+            weight:300;
+        }
+        color:#666;
+        line-height:30px;
+
+        a{
+            font : {
+                size:13px;
+                weight:300;
+            }
+            color:#3e73ed;
+        }
+    }
+}
+
+.issue_und{
+    display:block;
+
+    .chartbox{
+        border:1px solid #d7d7d7;
+        min-height:300px;
+    }
+
+    .article_list{
+        display:block;
+        padding:0 5px;
+        ul{
+            display:block;
+            width:100%;
+
+            li{
+                display:block;
+                width:100%;
+                float:left;
+                
+
+                a{
+                    height:40px;
+                    line-height:40px;
+                    font-size:15px;
+                    color:#333;
+                    font-weight:300;
+                    cursor:pointer;
+                    &:hover{
+                        .obj{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .obj{
+                    display:block;
+                    width:620px;
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    padding-right:10px;
+                    float:left;
+                }
+                .enp{
+                    display:block;
+                    width:210px;
+                    float:left;
+                    text-align:center;
+                }
+                .date{
+                    display:block;
+                    width:118px;
+                    float:left;
+                    text-align:right;
+                    color:#999;
+                }
+            }
+        }
+    }
+}
+
+.issue_info{
+    display:block;
+
+    .tab-content{
+        .tab-pane{
+            .chartbox{
+                position:relative;
+                display:block;
+                width:100%;
+
+                ul{
+                    display:flex;
+                    width:100%;
+                    justify-content: space-between;
+                    flex-wrap:wrap;
+
+                    li{
+                        display:block;
+                        text-align:center;
+                        width:300px;
+                        height:240px;
+                        background:#f5f5f5;
+                        margin: {
+                            bottom:25px;
+                        }
+
+                        strong{
+                            display:block;
+                            text-align:center;
+                            padding-top:20px;
+                            font: {
+                                size:16px;
+                                weight:500;
+                            }
+                            color:#333;
+                        }
+
+                        .chartImg{
+                            display:inline-block;
+                            margin-top:15px;
+                            width:250px;
+                            height:165px;
+                            background:#fff;
+                        }
+                    }
+                }
+                .date{
+                    position:absolute;
+                    top:-33px;
+                    right:3px;
+                    font-size:13px;
+                    font-weight:300;
+                    color:#999;
+                }
+            }
+        }
+    }
+}

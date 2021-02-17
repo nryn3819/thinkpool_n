@@ -126,13 +126,14 @@
                         }
                     }
 
-                    .itemInfo {
+                    @at-root .itemInfo {
                         display: block;
                         width: 100%;
                         height: 40px;
                         background: #f6f6f6;
                         padding: 0 15px;
                         margin: 20px 0 0 0;
+                        border-radius: 5px;
                         float: left;
                         overflow: hidden;
                         clear: both;
@@ -142,6 +143,7 @@
 
                             dt {
                                 display: block;
+                                width:auto;
                                 height: 40px;
                                 line-height: 40px;
                                 float: left;
@@ -152,6 +154,7 @@
 
                             dd {
                                 display: block;
+                                width: auto;
                                 height: 40px;
                                 line-height: 40px;
                                 float: left;
@@ -245,6 +248,18 @@
         .tab-pane {
             width: 100%;
             overflow:hidden;
+
+            p {
+                display:block;
+                height:30px;
+                line-height:30px;
+                font : {
+                    size:14px;
+                    weight:300;
+                }
+                color:#666;
+                margin-bottom:20px;
+            }
 
             dl {
                 display: block;
@@ -341,7 +356,7 @@
     .left {
         display: block;
         width: 220px;
-        height: 380px;
+        height: 200px;
         float: left;
         background: #f6f6f6;
 
@@ -355,7 +370,10 @@
             .name{
                 display:block;
                 text-align:center;
-                margin-top:30px;
+                margin-top:20px;
+                a:hover{
+                    text-decoration: none;
+                }
 
                 em{
                     display:block;
@@ -366,7 +384,6 @@
                 }
                 strong{
                     display:block;
-                    padding:5px 0 10px 0;
                     font-size:24px;
                     color:#3e72ed;
                     font-weight:700;
@@ -421,11 +438,12 @@
     .right {
         display: block;
         width:738px;
+        height:200px;
         float: left;
         padding-left:40px;
         overflow:hidden;
 
-        dl{
+        .info dl{
             display:block;
             width:100%;
             dt{
@@ -456,5 +474,92 @@
                 float:left;
             }
         }
+
+        .info{
+            display:block;
+            overflow:hidden;
+        }
+        
+    }
+    .graph{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        float:left;
+
+        .graph-box{
+            display:block;
+            width:calc(50% - 15px);
+
+        }
+    }
+}
+
+.bot-sch-w{
+    position:relative;
+}
+
+.schItemBox{
+    display:block;
+    height:auto;
+    overflow:hidden;
+
+    .left{
+        display:block;
+        width:200px;
+        min-height:430px;
+        height:100%;
+        background:#f5f5f5;
+        padding:25px ;
+        float:left;
+
+        @at-root .rankList{
+            li{
+                display:block;
+                padding-bottom:20px;
+                overflow:hidden;
+                clear:left;
+
+                .num{
+                    display:block;
+                    float:left;
+                    font: {
+                        size:16px;
+                        weight:300;
+                    }
+                    color:#333;
+                }
+                .txt{
+                    display:block;
+                    float:left;
+                    a{
+                        strong{
+                            display:block;
+                            font: {
+                                size:16px;
+                                weight:300;
+                            }
+                            color:#333;
+                        }
+                    }
+                    span{
+                        display:block;
+                        font: {
+                            size:13px;
+                            weight:300;
+                        }
+                        color:#999;
+                        padding-top:10px;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        display:block;
+        width:720px;
+        min-height:430px;
+        background:#f5f5f5;
+        float:right;
     }
 }
