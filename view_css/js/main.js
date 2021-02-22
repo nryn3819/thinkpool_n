@@ -20,6 +20,29 @@ $(function () {
         hideControlOnEnd: true
     });
 
+    //이슈홈 슬라이더
+    let issueNavList = $('.issue-nav-list .list-w .list').length;
+    let issueListIndex = $('.issue-nav-list .list-w .active').index();
+
+    
+    if(issueNavList > 6){
+        $('.issue-nav-list .list-w').bxSlider({
+            mode: 'horizontal',
+            pager: false,
+            minSlides: 1,
+            maxSlides: 6,
+            moveSlides: 1,
+            slideMargin: 0,
+            slideWidth: 958 / 6,
+            startSlide : issueListIndex,
+            //infiniteLoop:false,
+            nextText: '>',
+            prevText: '<',
+            hideControlOnEnd: true
+        });
+    }
+    
+
     //상단배너 가리기
     $('.top_close').on('click', function () {
         $('.top_w').slideUp();
@@ -178,6 +201,37 @@ $(function () {
         });
         slider2.reloadSlider();
     }
+
+
+
+    //프린트버튼
+
+    // 폰트사이즈조절
+
+    var lcvText = $('.listContentView .cont'),
+        lcvLink = $('.listContentView .cont .txt a');
+    
+
+    $('.btn-font').bind('click', function(){
+        var fsize = parseInt($('.listContentView .cont .txt').css('font-size'));
+
+        if(fsize < 20){
+            lcvText.css({
+                "font-size" : fsize + 2 + "px",
+                "line-height" : fsize + 10 + "px"
+            });
+            lcvLink.css('font-size', fsize + 2 + "px");
+
+        }else if(fsize >= 20){
+            lcvText.css({
+                "font-size" : "15px",
+                "line-height" : "25px"
+            });
+            lcvLink.css('font-size',  "15px");
+        }
+    });
+    
+
 
 
     

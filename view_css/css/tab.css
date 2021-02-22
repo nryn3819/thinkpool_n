@@ -171,6 +171,51 @@
   background: none;
 }
 
+.tab-sm.nborder .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-sm.nborder .nav::before, .tab-sm.nborder .nav::after {
+  display: none;
+}
+
+.tab-sm.nborder .nav li {
+  width: 20%;
+  text-align: center;
+  padding: 0;
+}
+
+.tab-sm.nborder .nav li::before {
+  padding: 2px 0 0 0;
+}
+
+.tab-sm.nborder .nav li a {
+  padding: 0;
+  width: calc(100% - 15px);
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.tab-sm.nborder .nav li a:hover, .tab-sm.nborder .nav li a:active {
+  height: 19px;
+  line-height: 19px;
+  font-size: 16px;
+  border-bottom: 0;
+  color: #3E72ED;
+  font-weight: 500;
+}
+
+.tab-sm.nborder .nav li.active a {
+  height: 19px;
+  line-height: 19px;
+  font-size: 16px;
+  border-bottom: 0;
+  color: #3E72ED;
+  font-weight: 500;
+}
+
 .sm-left-tabs {
   display: block;
 }

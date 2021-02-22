@@ -1,0 +1,72 @@
+//페이징
+.board_pager {
+    display: block;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.pagination {
+    li {
+        &.disabled {
+            a {
+                display: none;
+            }
+        }
+
+        &:first-child {
+            a {
+                border: 1px solid #dedede;
+                border-radius: 0;
+
+                span {
+                    border: none;
+                }
+            }
+        }
+
+        &:last-child {
+            a {
+                border: 1px solid #dedede;
+                border-radius: 0;
+
+                span {
+                    border: none;
+                }
+            }
+        }
+
+        &.active {
+
+            a,
+            span {
+
+                border: 1px solid #3e72ed;
+                color: #3e72ed;
+                background: none;
+                font-weight: 500;
+            }
+        }
+
+        a {
+            width: 34px;
+            height: 34px;
+            line-height: 32px;
+            border: 0;
+            font-size: 13px;
+            color: #000;
+            font-weight: 500;
+            padding: 0;
+            margin: 0 5px;
+            border: 1px solid #fff;
+
+            &:hover {
+                border: 1px solid #3e72ed;
+                color: #3e72ed;
+                background: none;
+                font-weight: 500;
+            }
+        }
+    }
+}

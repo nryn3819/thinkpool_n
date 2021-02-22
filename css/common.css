@@ -425,7 +425,7 @@ table {
 }
 
 #header_w #realheader #header .logo {
-  display: inline-block;
+  display: block;
   margin: 20px 0 0 2px;
   float: left;
 }
@@ -445,7 +445,7 @@ table {
 }
 
 #header_w #realheader #header .info ul li {
-  display: inline-block;
+  display: block;
   float: left;
   margin-left: 5px;
 }
@@ -481,7 +481,7 @@ table {
 }
 
 #header_w #realheader #header .nav {
-  display: inline-block;
+  display: block;
   width: 100%;
   float: left;
   clear: left;
@@ -489,7 +489,7 @@ table {
 }
 
 #header_w #realheader #header .nav .allmenu {
-  display: inline-block;
+  display: block;
   width: 36px;
   height: 36px;
   float: left;
@@ -513,7 +513,7 @@ table {
 }
 
 #header_w #realheader #header .nav .main_menu li a {
-  display: inline-block;
+  display: block;
   text-align: center;
   min-width: 77px;
   height: 36px;
@@ -2442,9 +2442,11 @@ table {
 
 .gbnr {
   display: block;
+  margin: 0 auto;
   width: 100%;
-  padding: 0 30px;
+  max-width: 900px;
   height: 90px;
+  text-align: center;
 }
 
 .itemHomeBox {
@@ -3566,6 +3568,64 @@ table {
   float: right;
 }
 
+.board_pager {
+  display: block;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.pagination li.disabled a {
+  display: none;
+}
+
+.pagination li:first-child a {
+  border: 1px solid #dedede;
+  border-radius: 0;
+}
+
+.pagination li:first-child a span {
+  border: none;
+}
+
+.pagination li:last-child a {
+  border: 1px solid #dedede;
+  border-radius: 0;
+}
+
+.pagination li:last-child a span {
+  border: none;
+}
+
+.pagination li.active a,
+.pagination li.active span {
+  border: 1px solid #3e72ed;
+  color: #3e72ed;
+  background: none;
+  font-weight: 500;
+}
+
+.pagination li a {
+  width: 34px;
+  height: 34px;
+  line-height: 32px;
+  border: 0;
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 5px;
+  border: 1px solid #fff;
+}
+
+.pagination li a:hover {
+  border: 1px solid #3e72ed;
+  color: #3e72ed;
+  background: none;
+  font-weight: 500;
+}
+
 .check-radio {
   display: block;
   overflow: hidden;
@@ -3973,11 +4033,20 @@ table {
 }
 
 .bot_info .per span {
-  display: inline-block;
+  display: block;
   font-size: 14px;
+  height: 20px;
+  line-height: 20px;
   font-weight: 300;
-  padding-right: 20px;
-  background: url(../img/sub/bot/bu_per.png) no-repeat 100% 50%;
+}
+
+.bot_info .per span::after {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url(../img/sub/bot/bu_per.png) no-repeat 5px 6px;
+  cursor: pointer;
 }
 
 .bot_info .per strong {
@@ -4977,6 +5046,51 @@ table {
   background: none;
 }
 
+.tab-sm.nborder .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-sm.nborder .nav::before, .tab-sm.nborder .nav::after {
+  display: none;
+}
+
+.tab-sm.nborder .nav li {
+  width: 20%;
+  text-align: center;
+  padding: 0;
+}
+
+.tab-sm.nborder .nav li::before {
+  padding: 2px 0 0 0;
+}
+
+.tab-sm.nborder .nav li a {
+  padding: 0;
+  width: calc(100% - 15px);
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.tab-sm.nborder .nav li a:hover, .tab-sm.nborder .nav li a:active {
+  height: 19px;
+  line-height: 19px;
+  font-size: 16px;
+  border-bottom: 0;
+  color: #3E72ED;
+  font-weight: 500;
+}
+
+.tab-sm.nborder .nav li.active a {
+  height: 19px;
+  line-height: 19px;
+  font-size: 16px;
+  border-bottom: 0;
+  color: #3E72ED;
+  font-weight: 500;
+}
+
 .sm-left-tabs {
   display: block;
 }
@@ -5028,6 +5142,255 @@ table {
   padding: 0;
   margin: 0;
   float: none;
+}
+
+.themebox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.themebox .left {
+  display: block;
+  width: calc(50% - 20px);
+  float: left;
+}
+
+.themebox .right {
+  display: block;
+  width: calc(50% - 20px);
+  float: right;
+}
+
+.themeNews {
+  display: block;
+  overflow: hidden;
+}
+
+.themeNews .newsList {
+  display: block;
+}
+
+.themeNews .newsList .list {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.themeNews .newsList .list:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.themeNews .newsList .list a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+.themeNews .newsList .list .title {
+  display: block;
+  width: calc(100% - 180px);
+  height: 20px;
+  line-height: 20px;
+  padding-right: 10px;
+}
+
+.themeNews .newsList .list .title strong {
+  display: block;
+  max-width: calc(100% - 45px);
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.themeNews .newsList .list .title .label {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 7px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.themeNews .newsList .list .title .label-danger {
+  background: #FB5360;
+}
+
+.themeNews .newsList .list .txt {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  color: #666;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.themeNews .newsList .list .date {
+  position: absolute;
+  width: 180px;
+  text-align: right;
+  top: 20px;
+  right: 0;
+}
+
+.themeNews .newsList .list .date span {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+}
+
+.themeNews .newsList .list .date span:first-child {
+  padding-left: 0;
+}
+
+.listContentView {
+  position: relative;
+  display: block;
+}
+
+.listContentView .top {
+  display: block;
+}
+
+.listContentView .top .title {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+}
+
+.listContentView .top .title strong {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.listContentView .top .date {
+  display: block;
+}
+
+.listContentView .top .date span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.listContentView .cont {
+  display: block;
+  margin: 20px 0;
+  padding: 40px 0;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  font-size: 15px;
+  color: #666;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.listContentView .cont a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+
+.listContentView .cont .info {
+  display: block;
+  padding-top: 40px;
+}
+
+.btn-group {
+  display: block;
+  text-align: right;
+  overflow: hidden;
+}
+
+.btn-group .btn-circle {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 34px;
+  background: #f5f5f7;
+  border: 1px solid #d7d7d7;
+  float: right;
+  margin-left: 3px;
+}
+
+.btn-group .btn-list {
+  display: inline-block;
+  padding: 0 15px;
+  height: 34px;
+  border-radius: 34px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  font-size: 13px;
+  color: #666;
+  float: right;
+  margin-left: 3px;
+}
+
+.themePop {
+  top: 50% !important;
+  left: 550px !important;
+  margin-top: -42px;
+}
+
+.latest.allList ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.latest.allList ul li {
+  display: block;
+  width: calc(50% - 30px);
+  margin-bottom: 10px;
+}
+
+.latest.allList ul li a {
+  display: block;
+  width: 100%;
+  height: 17px;
+  line-height: 17px;
+}
+
+.latest.allList ul li a span {
+  display: block;
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  color: #333;
+}
+
+.latest.allList ul li a em {
+  float: right;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.latest.allList ul li a:hover span {
+  text-decoration: underline;
 }
 
 .sub-content {
@@ -5448,64 +5811,6 @@ table {
 .board_sch .layer_guide .ly_close button span {
   font-size: 16px;
   color: #000;
-}
-
-.board_pager {
-  display: block;
-  width: 100%;
-  float: left;
-  overflow: hidden;
-  margin-top: 70px;
-}
-
-.board_pager .pagination li.disabled a {
-  display: none;
-}
-
-.board_pager .pagination li:first-child a {
-  border: 1px solid #dedede;
-  border-radius: 0;
-}
-
-.board_pager .pagination li:first-child a span {
-  border: none;
-}
-
-.board_pager .pagination li:last-child a {
-  border: 1px solid #dedede;
-  border-radius: 0;
-}
-
-.board_pager .pagination li:last-child a span {
-  border: none;
-}
-
-.board_pager .pagination li.active a,
-.board_pager .pagination li.active span {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
-  font-weight: 500;
-}
-
-.board_pager .pagination li a {
-  width: 34px;
-  height: 34px;
-  line-height: 32px;
-  border: 0;
-  font-size: 13px;
-  color: #000;
-  font-weight: 500;
-  padding: 0;
-  margin: 0 5px;
-  border: 1px solid #fff;
-}
-
-.board_pager .pagination li a:hover {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
-  font-weight: 500;
 }
 
 .b_btn {

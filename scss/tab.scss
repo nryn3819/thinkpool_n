@@ -193,6 +193,51 @@
             }
         }
     }
+    &.nborder{
+        .nav{
+            display:flex;
+            justify-content: space-between;
+            &::before,&::after{
+                display:none;
+            }
+            li{
+                width:20%;
+                text-align:center;
+                padding:0;
+
+                &::before{
+                    padding:2px 0 0 0;
+                }
+
+                a{
+                    padding:0;
+                    width:calc(100% - 15px);
+                    text-align:center;
+                    font-size:16px;
+                    color:#999;
+
+                    &:hover,&:active{
+                        height:19px;
+                        line-height:19px;
+                        font-size:16px;
+                        border-bottom:0;
+                        color:#3E72ED;
+                        font-weight:500;
+                    }
+                }
+                &.active{
+                    a{
+                        height:19px;
+                        line-height:19px;
+                        font-size:16px;
+                        border-bottom:0;
+                        color:#3E72ED;
+                        font-weight:500;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -246,3 +291,5 @@
         }
     }
 }
+
+

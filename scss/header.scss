@@ -35,7 +35,7 @@
 
       //logo
       .logo {
-        display: inline-block;
+        display: block;
         margin: 20px 0 0 2px;
         float: left;
 
@@ -56,7 +56,7 @@
 
         ul {
           li {
-            display: inline-block;
+            display: block;
             float: left;
             margin-left: 5px;
 
@@ -95,7 +95,7 @@
 
       //menu
       .nav {
-        display: inline-block;
+        display: block;
         width: 100%;
         float: left;
         clear: left;
@@ -103,7 +103,7 @@
 
         //allmenu
         .allmenu {
-          display: inline-block;
+          display: block;
           width: 36px;
           height: 36px;
           float: left;
@@ -126,7 +126,7 @@
             height: 52px;
 
             a {
-              display: inline-block;
+              display: block;
               text-align: center;
               min-width: 77px;
               height: 36px;

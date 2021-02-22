@@ -218,7 +218,7 @@
 }
 
 #header_w #realheader #header .logo {
-  display: inline-block;
+  display: block;
   margin: 20px 0 0 2px;
   float: left;
 }
@@ -238,7 +238,7 @@
 }
 
 #header_w #realheader #header .info ul li {
-  display: inline-block;
+  display: block;
   float: left;
   margin-left: 5px;
 }
@@ -274,7 +274,7 @@
 }
 
 #header_w #realheader #header .nav {
-  display: inline-block;
+  display: block;
   width: 100%;
   float: left;
   clear: left;
@@ -282,7 +282,7 @@
 }
 
 #header_w #realheader #header .nav .allmenu {
-  display: inline-block;
+  display: block;
   width: 36px;
   height: 36px;
   float: left;
@@ -306,7 +306,7 @@
 }
 
 #header_w #realheader #header .nav .main_menu li a {
-  display: inline-block;
+  display: block;
   text-align: center;
   min-width: 77px;
   height: 36px;
