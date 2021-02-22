@@ -165,6 +165,7 @@
 
         &.table-nboder{
             border-top:0;
+            vertical-align: middle;
 
             tbody tr{
                 td{
@@ -187,9 +188,15 @@
         &.table-bordered{
             border-left:0 !important;
             border-right:0 !important;
+            vertical-align: middle;
 
             thead{
                 tr{
+                    &.big{
+                        th,td{
+                            padding:18px 0 19px 0;
+                        }
+                    }
                     th,td{
                         &:first-child{
                             border-left:0;
@@ -197,6 +204,7 @@
                         &:last-child{
                             border-right:0;
                         }
+                        vertical-align: middle;
                     }
                 }
             }
@@ -210,6 +218,12 @@
                         &:last-child{
                             border-right:0;
                         }
+
+                        a{
+                            display:inline-block;
+                            color:#4379EB;
+                        }
+                        vertical-align: middle;
                     }
                 }
             }

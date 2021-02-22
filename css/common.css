@@ -167,6 +167,10 @@ table {
   padding-top: 65px !important;
 }
 
+.fw300 {
+  font-weight: 300 !important;
+}
+
 .modal-text01 {
   display: block;
   line-height: 18px;
@@ -562,6 +566,10 @@ table {
   display: block;
   width: 220px;
   float: right;
+}
+
+#header_w #realheader #header .nav .sch .form-group {
+  width: 100%;
 }
 
 #header_w #realheader #header .nav .sch input {
@@ -3135,24 +3143,26 @@ table {
   letter-spacing: -0.025em;
 }
 
-.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .itemInfo {
+.itemInfo {
   display: block;
   width: 100%;
   height: 40px;
   background: #f6f6f6;
   padding: 0 15px;
   margin: 20px 0 0 0;
+  border-radius: 5px;
   float: left;
   overflow: hidden;
   clear: both;
 }
 
-.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .itemInfo dl {
+.itemInfo dl {
   display: block;
 }
 
-.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .itemInfo dl dt {
+.itemInfo dl dt {
   display: block;
+  width: auto;
   height: 40px;
   line-height: 40px;
   float: left;
@@ -3161,8 +3171,9 @@ table {
   font-weight: 700;
 }
 
-.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .itemInfo dl dd {
+.itemInfo dl dd {
   display: block;
+  width: auto;
   height: 40px;
   line-height: 40px;
   float: left;
@@ -3244,6 +3255,16 @@ table {
 .rmd_bot_tabw .tab-content .tab-pane {
   width: 100%;
   overflow: hidden;
+}
+
+.rmd_bot_tabw .tab-content .tab-pane p {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .rmd_bot_tabw .tab-content .tab-pane dl {
@@ -3339,7 +3360,7 @@ table {
 .rmd-bot-cont .left {
   display: block;
   width: 220px;
-  height: 380px;
+  height: 200px;
   float: left;
   background: #f6f6f6;
 }
@@ -3355,7 +3376,11 @@ table {
 .rmd-bot-cont .left .bot .name {
   display: block;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.rmd-bot-cont .left .bot .name a:hover {
+  text-decoration: none;
 }
 
 .rmd-bot-cont .left .bot .name em {
@@ -3368,7 +3393,6 @@ table {
 
 .rmd-bot-cont .left .bot .name strong {
   display: block;
-  padding: 5px 0 10px 0;
   font-size: 24px;
   color: #3e72ed;
   font-weight: 700;
@@ -3421,17 +3445,18 @@ table {
 .rmd-bot-cont .right {
   display: block;
   width: 738px;
+  height: 200px;
   float: left;
   padding-left: 40px;
   overflow: hidden;
 }
 
-.rmd-bot-cont .right dl {
+.rmd-bot-cont .right .info dl {
   display: block;
   width: 100%;
 }
 
-.rmd-bot-cont .right dl dt {
+.rmd-bot-cont .right .info dl dt {
   width: 125px;
   height: 30px;
   line-height: 30px;
@@ -3446,7 +3471,7 @@ table {
   clear: left;
 }
 
-.rmd-bot-cont .right dl dd {
+.rmd-bot-cont .right .info dl dd {
   width: 570px;
   height: 30px;
   line-height: 30px;
@@ -3458,6 +3483,87 @@ table {
   padding: 0;
   margin: 0;
   float: left;
+}
+
+.rmd-bot-cont .right .info {
+  display: block;
+  overflow: hidden;
+}
+
+.rmd-bot-cont .graph {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  float: left;
+}
+
+.rmd-bot-cont .graph .graph-box {
+  display: block;
+  width: calc(50% - 15px);
+}
+
+.bot-sch-w {
+  position: relative;
+}
+
+.schItemBox {
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+
+.schItemBox .left {
+  display: block;
+  width: 200px;
+  min-height: 430px;
+  height: 100%;
+  background: #f5f5f5;
+  padding: 25px;
+  float: left;
+}
+
+.rankList li {
+  display: block;
+  padding-bottom: 20px;
+  overflow: hidden;
+  clear: left;
+}
+
+.rankList li .num {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  padding-right: 3px;
+}
+
+.rankList li .txt {
+  display: block;
+  float: left;
+}
+
+.rankList li .txt a strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+}
+
+.rankList li .txt span {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+  padding-top: 10px;
+}
+
+.schItemBox .right {
+  display: block;
+  width: 720px;
+  min-height: 430px;
+  background: #f5f5f5;
+  float: right;
 }
 
 .check-radio {
@@ -3508,9 +3614,14 @@ table {
   font-size: 14px;
   font-weight: bold;
   color: #333;
-  border-bottom: 1px solid #666;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 0;
   background: #f5f5f5;
   text-align: center;
+}
+
+.table_w table tbody tr:first-child td {
+  border-top: 1px solid #666;
 }
 
 .table_w table tbody tr td {
@@ -3592,6 +3703,7 @@ table {
 
 .table_w table.table-nboder {
   border-top: 0;
+  vertical-align: middle;
 }
 
 .table_w table.table-nboder tbody tr td {
@@ -3605,6 +3717,54 @@ table {
 
 .table_w table.table-nboder tbody tr td a:hover {
   text-decoration: underline;
+}
+
+.table_w table.table-bordered {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  vertical-align: middle;
+}
+
+.table_w table.table-bordered thead tr.big th, .table_w table.table-bordered thead tr.big td {
+  padding: 18px 0 19px 0;
+}
+
+.table_w table.table-bordered thead tr th, .table_w table.table-bordered thead tr td {
+  vertical-align: middle;
+}
+
+.table_w table.table-bordered thead tr th:first-child, .table_w table.table-bordered thead tr td:first-child {
+  border-left: 0;
+}
+
+.table_w table.table-bordered thead tr th:last-child, .table_w table.table-bordered thead tr td:last-child {
+  border-right: 0;
+}
+
+.table_w table.table-bordered tbody tr th, .table_w table.table-bordered tbody tr td {
+  vertical-align: middle;
+}
+
+.table_w table.table-bordered tbody tr th:first-child, .table_w table.table-bordered tbody tr td:first-child {
+  border-left: 0;
+}
+
+.table_w table.table-bordered tbody tr th:last-child, .table_w table.table-bordered tbody tr td:last-child {
+  border-right: 0;
+}
+
+.table_w table.table-bordered tbody tr th a, .table_w table.table-bordered tbody tr td a {
+  display: inline-block;
+  color: #4379EB;
+}
+
+.table_w table.table-bordered.tbnborder tbody tr:first-child td, .table_w table.table-bordered.tbnborder tbody tr:first-child th {
+  border-top: 1px solid #666;
+}
+
+.table_w table.table-bordered.tbnborder tbody tr td, .table_w table.table-bordered.tbnborder tbody tr th {
+  border: 0;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .table_w table.mitem thead tr th {
@@ -4186,6 +4346,7 @@ table {
   position: relative;
   display: block;
   width: 100%;
+  min-height: 54px;
 }
 
 .issue-nav-list .bx-wrapper {
@@ -4275,6 +4436,155 @@ table {
   background: #3e73ed;
   color: #fff;
   font-weight: 700;
+}
+
+.issue_top {
+  display: block;
+  clear: both;
+}
+
+.issue_top .tit {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.issue_top .txt {
+  display: block;
+  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  line-height: 30px;
+}
+
+.issue_top .txt a {
+  font-size: 13px;
+  font-weight: 300;
+  color: #3e73ed;
+}
+
+.issue_und {
+  display: block;
+}
+
+.issue_und .chartbox {
+  border: 1px solid #d7d7d7;
+  min-height: 300px;
+}
+
+.issue_und .article_list {
+  display: block;
+  padding: 0 5px;
+}
+
+.issue_und .article_list ul {
+  display: block;
+  width: 100%;
+}
+
+.issue_und .article_list ul li {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.issue_und .article_list ul li a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.issue_und .article_list ul li a:hover .obj {
+  text-decoration: underline;
+}
+
+.issue_und .article_list ul li .obj {
+  display: block;
+  width: 620px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 10px;
+  float: left;
+}
+
+.issue_und .article_list ul li .enp {
+  display: block;
+  width: 210px;
+  float: left;
+  text-align: center;
+}
+
+.issue_und .article_list ul li .date {
+  display: block;
+  width: 118px;
+  float: left;
+  text-align: right;
+  color: #999;
+}
+
+.issue_info {
+  display: block;
+}
+
+.issue_info .tab-content .tab-pane .chartbox {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li {
+  display: block;
+  text-align: center;
+  width: 300px;
+  height: 240px;
+  background: #f5f5f5;
+  margin-bottom: 25px;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li strong {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li .chartImg {
+  display: inline-block;
+  margin-top: 15px;
+  width: 250px;
+  height: 165px;
+  background: #fff;
+}
+
+.issue_info .tab-content .tab-pane .chartbox .date {
+  position: absolute;
+  top: -33px;
+  right: 3px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
 }
 
 .issue-analysis .chartbox {
@@ -4492,6 +4802,7 @@ table {
   font-size: 14px;
   font-weight: 300;
   color: #333;
+  cursor: pointer;
 }
 
 .nav-tabs.tab-lg {
@@ -4537,13 +4848,13 @@ table {
   font-weight: 700;
 }
 
-.tab-content .tab-pane .guide {
+.tab-content .guide {
   display: block;
   clear: both;
   float: left;
 }
 
-.tab-content .tab-pane .guide span {
+.tab-content .guide span {
   display: block;
   height: 23px;
   line-height: 23px;
@@ -4552,7 +4863,7 @@ table {
   color: #999;
 }
 
-.tab-content .tab-pane .guide span::before {
+.tab-content .guide span::before {
   content: '\00B7';
   padding-right: 5px;
 }
@@ -4611,6 +4922,112 @@ table {
   font-weight: 700;
   border-bottom: 3px solid #333;
   background: none;
+}
+
+.tab-sm .nav {
+  border-bottom: 0;
+}
+
+.tab-sm .nav li {
+  width: auto;
+  height: 32px;
+  padding-right: 30px;
+}
+
+.tab-sm .nav li:last-child {
+  padding-right: 0;
+}
+
+.tab-sm .nav li:first-child::before {
+  content: '';
+  padding-right: 0;
+}
+
+.tab-sm .nav li::before {
+  content: '│';
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  padding: 2px 30px 0 0;
+  float: left;
+}
+
+.tab-sm .nav li.active a {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+}
+
+.tab-sm .nav li a {
+  padding: 0 0 17px 0;
+  margin: 0;
+  line-height: 17px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+  float: left;
+}
+
+.tab-sm .nav li a:hover {
+  border: 0;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+  background: none;
+}
+
+.sm-left-tabs {
+  display: block;
+}
+
+.sm-left-tabs .nav.nav-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.sm-left-tabs .nav.nav-tabs::after, .sm-left-tabs .nav.nav-tabs::before {
+  display: none;
+}
+
+.sm-left-tabs .nav.nav-tabs li {
+  display: block;
+  height: auto;
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sm-left-tabs .nav.nav-tabs li a {
+  background: none;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999;
+  padding: 0;
+  margin: 0;
+}
+
+.sm-left-tabs .nav.nav-tabs li a:hover, .sm-left-tabs .nav.nav-tabs li a:active {
+  border-bottom: 0;
+  font-weight: 400;
+  color: #333;
+}
+
+.sm-left-tabs .nav.nav-tabs li.active a {
+  border-bottom: 0;
+  font-weight: 400;
+  color: #333;
+}
+
+.sm-left-tabs .nav.nav-tabs li::before {
+  display: none;
+  content: '';
+  padding: 0;
+  margin: 0;
+  float: none;
 }
 
 .sub-content {

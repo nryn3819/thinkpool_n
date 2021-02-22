@@ -33,6 +33,7 @@
     position:relative;
     display:block;
     width:100%;
+    min-height:54px;
 
     .bx-wrapper{
         max-width:955px !important;
@@ -126,6 +127,7 @@
 
 .issue_top{
     display:block;
+    clear:both;
 
     .tit{
         display:block;
