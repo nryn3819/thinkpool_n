@@ -1111,7 +1111,7 @@
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 970px;
   height: 90px;
   text-align: center;
 }
@@ -2299,6 +2299,12 @@
   clear: both;
 }
 
+.check-radio.pn-a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .check-radio ul li {
   display: block;
   float: left;
@@ -2320,6 +2326,11 @@
   font-weight: 300;
   padding-left: 5px;
   cursor: pointer;
+}
+
+.check-radio ul li label span {
+  font-size: 12px;
+  color: #999;
 }
 
 .table_w {
@@ -2613,6 +2624,24 @@
   color: #999;
   font-weight: 400;
   padding-left: 5px;
+}
+
+.tbl-more {
+  display: block;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tbl-more button {
+  margin: 0 auto;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.tbl-more span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
 }
 
 .bot_list_w {
@@ -3811,9 +3840,42 @@
   float: none;
 }
 
+.btn-circle {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 34px;
+  background: #f5f5f7;
+  border: 1px solid #d7d7d7;
+  margin-left: 3px;
+}
+
+.btn-list {
+  display: block;
+  padding: 0 15px;
+  height: 34px;
+  border-radius: 34px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  font-size: 13px;
+  color: #666;
+  margin-left: 3px;
+}
+
+.btn-white {
+  background: #fff;
+}
+
 .themebox {
   width: 100%;
   overflow: hidden;
+}
+
+.themebox .chartbox {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+  border: 1px solid #dfdfdf;
 }
 
 .themebox .left {
@@ -3962,6 +4024,7 @@
   display: block;
   margin: 20px 0;
   padding: 40px 0;
+  min-height: 350px;
   border-top: 1px solid #d7d7d7;
   border-bottom: 1px solid #d7d7d7;
   font-size: 15px;
@@ -3987,28 +4050,8 @@
   overflow: hidden;
 }
 
-.btn-group .btn-circle {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  border-radius: 34px;
-  background: #f5f5f7;
-  border: 1px solid #d7d7d7;
+.btn-group button {
   float: right;
-  margin-left: 3px;
-}
-
-.btn-group .btn-list {
-  display: inline-block;
-  padding: 0 15px;
-  height: 34px;
-  border-radius: 34px;
-  background: #fff;
-  border: 1px solid #d7d7d7;
-  font-size: 13px;
-  color: #666;
-  float: right;
-  margin-left: 3px;
 }
 
 .themePop {
@@ -4058,6 +4101,18 @@
 
 .latest.allList ul li a:hover span {
   text-decoration: underline;
+}
+
+.sectorbox {
+  position: relative;
+}
+
+.sectorbox .chartbox {
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  float: left;
+  background: #f8f8f8;
 }
 
 .sub-content {
@@ -4168,6 +4223,14 @@
   font-size: 18px;
   font-weight: 700;
   text-indent: 0;
+}
+
+.sub-title-nidt {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
 }
 
 .ell2 {

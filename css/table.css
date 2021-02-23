@@ -62,6 +62,12 @@
   clear: both;
 }
 
+.check-radio.pn-a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .check-radio ul li {
   display: block;
   float: left;
@@ -83,6 +89,11 @@
   font-weight: 300;
   padding-left: 5px;
   cursor: pointer;
+}
+
+.check-radio ul li label span {
+  font-size: 12px;
+  color: #999;
 }
 
 .table_w {
@@ -376,4 +387,22 @@
   color: #999;
   font-weight: 400;
   padding-left: 5px;
+}
+
+.tbl-more {
+  display: block;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tbl-more button {
+  margin: 0 auto;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.tbl-more span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
 }
