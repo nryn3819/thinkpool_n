@@ -6,6 +6,7 @@
 @import 'mpa';
 @import 'tab';
 @import 'theme';
+@import 'dcs';
 
 .sub-content {
     position: relative;
@@ -43,6 +44,9 @@
 
         &.rmd-bot-w{
             position:relative;
+        }
+        .gbnr{
+            margin-left:-6px;
         }
     }
 }

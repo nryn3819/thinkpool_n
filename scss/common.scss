@@ -181,6 +181,14 @@ table {
   font-weight: 300 !important;
 }
 
+.hspace100{
+  display:block;
+  width:100%;
+  height:100px;
+  float:left;
+  clear:left;
+}
+
 .modal-text01 {
   display: block;
   line-height: 18px;
