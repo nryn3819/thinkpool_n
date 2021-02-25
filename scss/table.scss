@@ -179,8 +179,79 @@
         &.table-nboder{
             border-top:0;
             vertical-align: middle;
+            &.l-boder{
+                tbody tr{
+                    th,td{
+                        padding: {
+                            left: 15px;
+                            right: 15px;
+                            top: 4px;
+                            bottom:4px;
+                        }
+                        border-left:1px solid #dfdfdf;
+                        &:first-child{
+                            border-left:0;
+                        }
+                    }
+                }
+                tfoot tr{
+                    th,td{
+                        padding: {
+                            left: 15px;
+                            right: 15px;
+                            top: 4px;
+                            bottom:4px;
+                        }
+                        border-bottom:1px solid #dfdfdf;
+                        border-left:1px solid #dfdfdf;
+                        &:first-child{
+                            border-left:0;
+                        }
+
+                        span{
+                            font-size:13px;
+                            font-weight:300;
+                            color:#666;
+                        }
+                    }
+                }
+            }
 
             tbody tr{
+
+                &.sell{
+                    background:#EFF3FC;
+                }
+                &.buy{
+                    background:#FCE7E7;
+                }
+
+                &.bpboder{
+                    th,td{
+                        border-top:1px solid #dfdfdf;
+                    }
+                }
+                &.btboder{
+                    th,td{
+                        border-bottom:1px solid #dfdfdf;
+                    }
+                }
+                th{
+                    border-bottom:0;
+                    border-top:0;
+                    font-size:13px;
+                    font-weight:300;
+                    border-right:1px solid #dfdfdf;
+                    border-left:1px solid #dfdfdf;
+
+                    &:first-child{
+                        border-left:0;
+                    }
+
+                    &.info{
+                        background:#f5f5f5;
+                    }
+                }
                 td{
                     border-bottom:0;
                     border-top:0;
@@ -194,6 +265,12 @@
                     a:hover{
                         text-decoration: underline;
                     }
+
+                    &.info{
+                        background:#f5f5f5;
+                    }
+
+                    
                 }
             }
         }
@@ -203,8 +280,26 @@
             border-right:0 !important;
             vertical-align: middle;
 
+            &.small-line{
+                tbody tr{
+                    th,td{
+                        padding: {
+                            top: 11px;
+                            bottom:12px;
+                        }
+                    }
+                }
+            }
+
             thead{
                 tr{
+                    &.sboder{
+                        th{
+                            border-top:1px solid #dfdfdf;
+                            border-bottom:1px solid #dfdfdf;
+                            font-weight:300;
+                        }
+                    }
                     &.big{
                         th,td{
                             padding:18px 0 19px 0;
@@ -224,6 +319,13 @@
 
             tbody{
                 tr{
+                    &.nbtboder{
+                        th,td{
+                            border-top:0;
+                            border-bottom:0;
+                        }
+                    }
+
                     th,td{
                         &:first-child{
                             border-left:0;
@@ -237,9 +339,44 @@
                             color:#4379EB;
                         }
                         vertical-align: middle;
+
+                        &.sell{
+                            background:#EFF3FC;
+                        }
+                        &.buy{
+                            background:#FCE7E7;
+                        }
                     }
                 }
             }
+
+            tfoot{
+                tr{
+                    td,th{
+                        padding: {
+                            top: 12px;
+                            bottom:13px;
+                            left: 15px;
+                            right: 15px;
+                        }
+                        font-size: 13px;
+                        weight:300;
+
+                        span{
+                            font: {
+                                size:13px;
+                                weight:300;
+                            }
+                            color:#333;
+                        }
+
+                        &:first-child{
+                            border-left:0;
+                        }
+                    }
+                }
+            }
+
             &.tbnborder{
                 tbody{
                     tr{

@@ -17,6 +17,78 @@
   float: left;
 }
 
+.itemHomeBox .nav {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.itemHomeBox .nav li {
+  margin: 0;
+}
+
+.itemHomeBox .nav li.active a, .itemHomeBox .nav li:hover a {
+  color: #4c84ff;
+  border: 1px solid #4c84ff;
+  background: #fff;
+}
+
+.itemHomeBox .nav li a {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  width: 62px;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #d7d7d7;
+  background: #f5f5f5;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  text-align: Center;
+  border-radius: 5px;
+}
+
+.itemHomeBox .nav li.sub {
+  float: right;
+}
+
+.itemHomeBox .nav li.sub a {
+  margin-right: 0;
+  width: 120px;
+  background: #fff;
+}
+
+.itemHomeBox .tab-content {
+  display: block;
+  margin-top: 20px;
+}
+
+.itemHomeBox .tab-content .guide {
+  display: block;
+}
+
+.itemHomeBox .tab-content .guide span {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.itemHomeBox .tab-content .guide span em {
+  font-style: normal;
+}
+
+.itemHomeBox .tab-content .guide span::before {
+  content: '\00b7';
+  padding-right: 3px;
+}
+
 .itemHomeBox .left .item_cdn {
   display: block;
   width: 100%;
@@ -238,78 +310,6 @@
 
 .itemHomeBox .right .con {
   display: block;
-}
-
-.itemHomeBox .right .con .nav {
-  display: block;
-  width: 100%;
-  border: 0;
-}
-
-.itemHomeBox .right .con .nav li {
-  margin: 0;
-}
-
-.itemHomeBox .right .con .nav li.active a, .itemHomeBox .right .con .nav li:hover a {
-  color: #4c84ff;
-  border: 1px solid #4c84ff;
-  background: #fff;
-}
-
-.itemHomeBox .right .con .nav li a {
-  border: 0;
-  padding: 0;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 10px;
-  margin-bottom: 0;
-  width: 62px;
-  height: 30px;
-  line-height: 28px;
-  border: 1px solid #d7d7d7;
-  background: #f5f5f5;
-  font-size: 13px;
-  color: #333;
-  font-weight: 500;
-  text-align: Center;
-  border-radius: 5px;
-}
-
-.itemHomeBox .right .con .nav li.sub {
-  float: right;
-}
-
-.itemHomeBox .right .con .nav li.sub a {
-  margin-right: 0;
-  width: 120px;
-  background: #fff;
-}
-
-.itemHomeBox .right .con .tab-content {
-  display: block;
-  margin-top: 20px;
-}
-
-.itemHomeBox .right .con .tab-content .guide {
-  display: block;
-}
-
-.itemHomeBox .right .con .tab-content .guide span {
-  display: block;
-  height: 24px;
-  line-height: 24px;
-  font-size: 14px;
-  color: #666;
-  font-weight: 300;
-}
-
-.itemHomeBox .right .con .tab-content .guide span em {
-  font-style: normal;
-}
-
-.itemHomeBox .right .con .tab-content .guide span::before {
-  content: '\00b7';
-  padding-right: 3px;
 }
 
 .itemHomeBox .right .chartbox {
