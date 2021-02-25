@@ -25,16 +25,32 @@
   overflow: hidden;
 }
 
-.dcsAll .sch-input {
+.sch-input {
   display: block;
   float: left;
 }
 
-.dcsAll .sch-input .form-inline {
+.sch-input.pn-a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sch-input.pn-a.a-right {
+  top: -10px;
+  left: auto;
+  right: 0;
+}
+
+.sch-input .form-inline {
   position: relative;
 }
 
-.dcsAll .sch-input input.form-control {
+.sch-input .form-inline .input-group {
+  width: 330px;
+}
+
+.sch-input input.form-control {
   width: 330px;
   height: 40px;
   border: 1px solid #d7d7d7;
@@ -46,13 +62,13 @@
   padding-right: 45px;
 }
 
-.dcsAll .sch-input input.form-control::placeholder {
+.sch-input input.form-control::placeholder {
   font-size: 15px;
   font-weight: 300;
   color: #999;
 }
 
-.dcsAll .sch-input button {
+.sch-input button {
   position: absolute;
   top: 0;
   right: 15px;

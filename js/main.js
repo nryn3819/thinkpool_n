@@ -230,10 +230,5 @@ $(function () {
             lcvLink.css('font-size',  "15px");
         }
     });
-    
-
-
-
-    
 
 });

@@ -32,6 +32,12 @@
     li{
         display:block;
         float:left;
+
+        &.active a{
+            color:#3e72ed;
+            font-weight:500;
+        }
+
         &::before{
             content: '|';
             color:#d7d7d7;

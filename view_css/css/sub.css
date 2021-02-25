@@ -3895,11 +3895,11 @@
   overflow: hidden;
 }
 
-.themeNews .newsList {
+.newsList {
   display: block;
 }
 
-.themeNews .newsList .list {
+.newsList .list {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -3907,12 +3907,12 @@
   border-bottom: 1px solid #d7d7d7;
 }
 
-.themeNews .newsList .list:last-child {
+.newsList .list:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
 
-.themeNews .newsList .list a {
+.newsList .list > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -3923,17 +3923,18 @@
   cursor: pointer;
 }
 
-.themeNews .newsList .list .title {
+.newsList .list .title {
+  position: relative;
   display: block;
-  width: calc(100% - 180px);
+  width: 100%;
   height: 20px;
   line-height: 20px;
   padding-right: 10px;
 }
 
-.themeNews .newsList .list .title strong {
+.newsList .list .title strong {
   display: block;
-  max-width: calc(100% - 45px);
+  max-width: calc(100% - 250px);
   font-size: 16px;
   color: #333;
   font-weight: 700;
@@ -3943,7 +3944,7 @@
   float: left;
 }
 
-.themeNews .newsList .list .title .label {
+.newsList .list .title .label {
   height: 20px;
   line-height: 20px;
   padding: 0 7px;
@@ -3953,11 +3954,11 @@
   font-weight: 500;
 }
 
-.themeNews .newsList .list .title .label-danger {
+.newsList .list .title .label-danger {
   background: #FB5360;
 }
 
-.themeNews .newsList .list .txt {
+.newsList .list .txt {
   display: block;
   width: 100%;
   font-size: 15px;
@@ -3966,22 +3967,66 @@
   font-weight: 300;
 }
 
-.themeNews .newsList .list .date {
+.newsList .list .date {
   position: absolute;
   width: 180px;
   text-align: right;
-  top: 20px;
+  top: 0;
   right: 0;
 }
 
-.themeNews .newsList .list .date span {
+.newsList .list .date span {
   font-size: 13px;
   color: #999;
   font-weight: 300;
 }
 
-.themeNews .newsList .list .date span:first-child {
+.newsList .list .date span:first-child {
   padding-left: 0;
+}
+
+.newsList .list .tag {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.newsList .list .tag span {
+  padding-right: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #3e72ed;
+}
+
+.newsList .list .admin-delete {
+  position: relative;
+  display: block;
+  height: 30px;
+  margin: 10px 0 0;
+}
+
+.newsList .list .admin-delete a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.newsList .list .admin-delete a:hover {
+  border: 0;
+  background: #FB5360;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .listContentView {
@@ -4142,16 +4187,32 @@
   overflow: hidden;
 }
 
-.dcsAll .sch-input {
+.sch-input {
   display: block;
   float: left;
 }
 
-.dcsAll .sch-input .form-inline {
+.sch-input.pn-a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sch-input.pn-a.a-right {
+  top: -10px;
+  left: auto;
+  right: 0;
+}
+
+.sch-input .form-inline {
   position: relative;
 }
 
-.dcsAll .sch-input input.form-control {
+.sch-input .form-inline .input-group {
+  width: 330px;
+}
+
+.sch-input input.form-control {
   width: 330px;
   height: 40px;
   border: 1px solid #d7d7d7;
@@ -4163,13 +4224,13 @@
   padding-right: 45px;
 }
 
-.dcsAll .sch-input input.form-control::placeholder {
+.sch-input input.form-control::placeholder {
   font-size: 15px;
   font-weight: 300;
   color: #999;
 }
 
-.dcsAll .sch-input button {
+.sch-input button {
   position: absolute;
   top: 0;
   right: 15px;
@@ -4208,6 +4269,28 @@
   font-size: 15px;
   font-weight: 300;
   color: #666;
+}
+
+.news_w {
+  position: relative;
+}
+
+.badge-ai {
+  float: left;
+  width: 21px;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  background: #3d71ed;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
 }
 
 .sub-content {

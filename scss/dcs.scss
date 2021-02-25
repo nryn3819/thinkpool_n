@@ -32,12 +32,26 @@
     width:100%;
     overflow:hidden;
 
-    .sch-input{
+    @at-root .sch-input{
         display:block;
         float:left;
+        &.pn-a{
+            position:absolute;
+            top:0;
+            left:0;
+
+            &.a-right{
+                top:-10px;
+                left:auto;
+                right:0;
+            }
+        }
 
         .form-inline{
             position:relative;
+            .input-group{
+                width:330px;
+            }
         }
 
         input.form-control{

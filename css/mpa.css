@@ -28,6 +28,11 @@
   float: left;
 }
 
+.idsView li.active a {
+  color: #3e72ed;
+  font-weight: 500;
+}
+
 .idsView li::before {
   content: '|';
   color: #d7d7d7;
