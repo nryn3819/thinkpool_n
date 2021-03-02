@@ -1,0 +1,210 @@
+// ai 매매신호
+
+.aisignal_w{
+    display:block;
+
+    .top{
+        display:block;
+        overflow:hidden;
+
+        .left{
+            width:230px;
+            float:left;
+        }
+        .right{
+            position:relative;
+            width:calc(100% - 270px);
+            float:left;
+            margin-left:40px;
+
+            .tit{
+                display:block;
+                strong{
+                    display:block;
+                    width:100%;
+                    font : {
+                        size:24px;
+                        weight:700;
+                    }
+                    color:#333;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-top:40px;
+                }
+            }
+
+            .txt{
+                display:block;
+                margin-top:15px;
+
+                span{
+                    display:block;
+                    width:100%;
+                    line-height:40px;
+                    font-size:15px;
+                    font-weight:300;
+                    color:#666;
+                }
+            }
+
+            .button{
+                padding:0;
+                margin-top:15px;
+
+                .btn{
+                    width:120px;
+                    height:40px;
+                    line-height:38px;
+                    padding:0;
+                    margin-right:10px;
+                    border:1px solid #3e72ed;
+                    border-radius: 3px;
+                    text-align:center;
+                    &-primary{
+                        background:#3e72ed;
+                        span{
+                            background:url(../img/bu_bell_on.png) no-repeat 0 50%;
+                            background-size:15px auto;
+                        }
+                    }
+                    &-default{
+                        background:#fff;
+                        span{
+                            color:#3e72ed !important;
+                            background:url(../img/bu_bell.png) no-repeat 0 50%;
+                            background-size:15px auto;
+                        }
+                    }
+
+                    span{
+                        margin:0;
+                        padding:0 0 0 18px;
+                        color:#fff;
+                        font-size:15px;
+                        font-weight:300;
+                    }
+                }
+            }
+
+            .date{
+                position:absolute;
+                top:3px;
+                left:0;
+
+                span{
+                    font: {
+                        size:13px;
+                        weight:300;
+                    }
+                    color:#666;
+                    em{
+                        padding-left:10px;
+                        color:#999;
+                        font-style:normal;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .chart_w{
+        display:block;
+
+        .chartbox{
+            min-height:300px;
+            background:#f5f5f5;
+        }
+    }
+
+    .info{
+        display:block;
+
+        p{
+            display:block;
+            padding:20px 0;
+            font-size:13px;
+            color:#666;
+            font-weight:300;
+        }
+
+        .popover{
+            font: {
+                size:14px;
+                weight:300;
+            }
+            color:#333;
+
+            .txt{
+                display:block;
+                border-bottom:1px solid #dfdfdf;
+                padding:5px 0;
+
+                strong{
+                    display:block;
+                    font-weight:700;
+                    padding:3px 0;
+                }
+
+                &:last-child{
+                    border-bottom:0;
+                }
+            }
+        
+        }
+
+        .info_list{
+            display:flex;
+            justify-content: space-between;
+
+            &>div{
+                display:block;
+                width:222px;
+                height:120px;
+                border:1px solid #dfdfdf;
+                text-align:center;
+                
+                strong{
+                    display:block;
+                    padding-top:30px;
+                    font-size:24px;
+                    font-weight:700;
+                }
+
+                span{
+                    display:block;
+                    padding-top:30px;
+                    font-size:14px;
+                    font-weight:300;
+                    color:#333;
+                }
+            }
+        }
+    }
+    .signal_more{
+        position:absolute;
+        top:32px;
+        right:35px;
+
+        button{
+            width:130px;
+            height:35px;
+            line-height:33px;
+            text-align:center;
+            border:1px solid #dfdfdf;
+            background:none;
+            border-radius:3px;
+            font-size:12px;
+            color:#666;
+            font-weight:300;
+            padding:0;
+            margin:0;
+            span{
+                margin:0;
+                padding:0;
+            }
+        }
+    }
+    
+}

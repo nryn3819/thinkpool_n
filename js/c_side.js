@@ -8,7 +8,7 @@ $(function(){
     });
 
     //우측메뉴 종목리스트 오버
-    $("[data-toggle='popover']").popover({
+    $("a[data-toggle='popover']").popover({
         trigger: 'manual',
         html: true,
         placement: 'left'

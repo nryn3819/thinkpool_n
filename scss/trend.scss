@@ -1,0 +1,143 @@
+// 매매동향
+
+.b_trend_w{
+    position:relative;
+    display:block;
+
+    .table_w{
+        position:relative;
+        overflow:hidden;
+
+        .date{
+            position:absolute;
+            top:10px;
+            right:0;
+            height:20px;
+            line-height:20px;
+            
+            span{
+                font-size:13px;
+                color:#999;
+            }
+        }
+    }
+
+    .guide {
+        display: block;
+        clear: both;
+        float: left;
+
+        span {
+            display: block;
+            height: 23px;
+            line-height: 23px;
+
+            font: {
+                size: 13px;
+                weight: 300;
+            }
+
+            color:#999;
+
+            &::before {
+                content: '\00B7';
+                padding-right: 5px;
+            }
+
+            em{
+                font: {
+                    style : normal;
+                }
+            }
+        }
+    }
+}
+
+.b_trend{
+    display:block;
+    width:100%;
+    overflow:hidden;
+
+    
+
+    
+
+    .left{
+        display:block;
+        width: 670px;
+        height:300px;
+        float:left;
+    }
+
+    .right{
+        display:block;
+        width:calc(100% - 710px);
+        height:300px;
+        float:right;
+
+        .trend_tbl_title{
+            display:block;
+            overflow:hidden;
+
+            strong{
+                font-size:16px;
+                font-weight:700;
+                color:#333;
+
+                em{
+                    font-style:normal;
+                    font-weight:300;
+                }
+            }
+            span{
+                font-size:13px;
+                color:#999;
+                font-weight:300;
+                float:right;
+            }
+        }
+
+        .table{
+            thead{
+                tr{
+                    th,td{
+                        height:22px;
+                        line-height:22px;
+                        font-weight:300;
+
+                        padding: {
+                            top: 6px;
+                            bottom: 7px;
+                            left: 5px;
+                            right: 5px;
+                        }
+                    }
+                }
+            }
+
+            tbody{
+                tr{
+                    &:first-child{
+                        th,td{
+                            padding: {
+                                top:18px;
+                            }
+                        }
+                    }
+
+                    th,td{
+                        height:16px;
+                        line-height:16px;
+                        padding: {
+                            top:10px;
+                            bottom: 11px;
+                            left: 5px;
+                            right: 5px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
