@@ -7,6 +7,14 @@
     margin-top: 70px;
 }
 
+.paging{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    clear:both;
+    float:left;
+}
+
 .pagination {
     li {
         &.disabled {

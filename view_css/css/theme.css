@@ -190,6 +190,7 @@
 .listContentView {
   position: relative;
   display: block;
+  clear: both;
 }
 
 .listContentView .top {

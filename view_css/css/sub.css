@@ -10,6 +10,7 @@
 #subNav ul {
   display: flex;
   width: 100%;
+  padding: 0 3px;
   justify-content: space-between;
 }
 
@@ -1206,16 +1207,16 @@
   padding-right: 3px;
 }
 
-.itemHomeBox .left .item_cdn {
+.item_cdn {
   display: block;
   width: 100%;
-  height: 170px;
+  min-height: 170px;
   border-radius: 5px;
   background: #f9f9f9 url(../img/bu_item_cdn.png) no-repeat center 20px;
   text-align: center;
 }
 
-.itemHomeBox .left .item_cdn span {
+.item_cdn > span {
   display: inline-block;
   width: 95px;
   height: 22px;
@@ -1230,13 +1231,29 @@
   border-radius: 22px;
 }
 
-.itemHomeBox .left .item_cdn strong {
+.item_cdn > strong {
   display: block;
   width: 100%;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
   color: #333;
+}
+
+.item_cdn .txt {
+  display: block;
+  margin-top: 30px;
+  padding-bottom: 25px;
+}
+
+.item_cdn .txt span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+}
+
+.item_cdn .txt em {
+  font-style: normal;
 }
 
 .itemHomeBox .left .item_info {
@@ -1444,49 +1461,50 @@
   padding: 0 20px;
 }
 
-#itemTop .itemInfo {
+#itemTop > .itemInfo {
   display: block;
   width: 100%;
   float: left;
+  padding: 0;
 }
 
-#itemTop .itemInfo .name {
+#itemTop > .itemInfo .name {
   display: inline-block;
 }
 
-#itemTop .itemInfo .name strong {
+#itemTop > .itemInfo .name strong {
   font-size: 36px;
   color: #333;
   text-indent: 5px;
   font-weight: 700;
 }
 
-#itemTop .itemInfo .price {
+#itemTop > .itemInfo .price {
   display: inline-block;
   padding-left: 18px;
 }
 
-#itemTop .itemInfo .price span {
+#itemTop > .itemInfo .price span {
   font-size: 24px;
   font-weight: 300;
 }
 
-#itemTop .itemInfo .per {
+#itemTop > .itemInfo .per {
   display: inline-block;
   padding-left: 16px;
 }
 
-#itemTop .itemInfo .per span {
+#itemTop > .itemInfo .per span {
   font-size: 24px;
   font-weight: 300;
 }
 
-#itemTop .itemInfo .time {
+#itemTop > .itemInfo .time {
   display: inline-block;
   padding-left: 10px;
 }
 
-#itemTop .itemInfo .time span {
+#itemTop > .itemInfo .time span {
   font-size: 13px;
   color: #666;
 }
@@ -1645,6 +1663,18 @@
   float: left;
   margin-top: 10px;
   margin-right: 9px;
+}
+
+.item_board_nav button.btn-active {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  padding: 0 25px;
+  background: #f5f5f5;
+}
+
+.item_board_nav button.btn-active:focus {
+  outline: 0;
 }
 
 .infoMn {
@@ -2243,6 +2273,14 @@
   margin-top: 70px;
 }
 
+.paging {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  float: left;
+}
+
 .pagination li.disabled a {
   display: none;
 }
@@ -2293,6 +2331,13 @@
   font-weight: 500;
 }
 
+.popover {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  line-height: 23px;
+}
+
 .check-radio {
   display: block;
   overflow: hidden;
@@ -2340,6 +2385,26 @@
   overflow: hidden;
 }
 
+.table_w .guide {
+  display: block;
+  clear: both;
+  float: left;
+}
+
+.table_w .guide span {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.table_w .guide span::before {
+  content: '\00B7';
+  padding-right: 5px;
+}
+
 .table_w table {
   border-top: 1px solid #666;
 }
@@ -2371,6 +2436,10 @@
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
+}
+
+.table_w table tbody tr td.bdl {
+  border-left: 1px solid #dfdfdf;
 }
 
 .table_w table tbody tr td a {
@@ -2428,6 +2497,7 @@
   border-bottom: 1px solid #dfdfdf;
   padding: 0 15px;
   background: #f5f5f5;
+  border-top: 0 !important;
 }
 
 .table_w table.table-lft tbody tr td {
@@ -2563,6 +2633,16 @@
   border-bottom: 0;
 }
 
+.table_w table.table-bordered tbody tr.btboder th, .table_w table.table-bordered tbody tr.btboder td {
+  border-top: 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.table_w table.table-bordered tbody tr.nblboder th, .table_w table.table-bordered tbody tr.nblboder td {
+  border-left: 0;
+  border-right: 0;
+}
+
 .table_w table.table-bordered tbody tr th, .table_w table.table-bordered tbody tr td {
   vertical-align: middle;
 }
@@ -2594,7 +2674,7 @@
   padding-left: 15px;
   padding-right: 15px;
   font-size: 13px;
-  weight: 300;
+  font-weight: 300;
 }
 
 .table_w table.table-bordered tfoot tr td span, .table_w table.table-bordered tfoot tr th span {
@@ -4148,6 +4228,7 @@
 .listContentView {
   position: relative;
   display: block;
+  clear: both;
 }
 
 .listContentView .top {
@@ -4285,13 +4366,13 @@
   width: 100%;
 }
 
-.dcsbox .tab-content .date {
+.dcsbox .tab-content .tab-pane > .date {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.dcsbox .tab-content .date span {
+.dcsbox .tab-content .tab-pane > .date span {
   font-size: 13px;
   font-weight: 300;
   color: #999;
@@ -4465,6 +4546,328 @@
   font-size: 12px;
   font-weight: 300;
   color: #999;
+}
+
+.b_trend_w {
+  position: relative;
+  display: block;
+}
+
+.b_trend_w .table_w {
+  position: relative;
+  overflow: hidden;
+}
+
+.b_trend_w .table_w .date {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  height: 20px;
+  line-height: 20px;
+}
+
+.b_trend_w .table_w .date span {
+  font-size: 13px;
+  color: #999;
+}
+
+.b_trend_w .guide {
+  display: block;
+  clear: both;
+  float: left;
+}
+
+.b_trend_w .guide span {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.b_trend_w .guide span::before {
+  content: '\00B7';
+  padding-right: 5px;
+}
+
+.b_trend_w .guide span em {
+  font-style: normal;
+}
+
+.b_trend {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.b_trend .left {
+  display: block;
+  width: 670px;
+  height: 300px;
+  float: left;
+}
+
+.b_trend .right {
+  display: block;
+  width: calc(100% - 710px);
+  height: 300px;
+  float: right;
+}
+
+.b_trend .right .trend_tbl_title {
+  display: block;
+  overflow: hidden;
+}
+
+.b_trend .right .trend_tbl_title strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.b_trend .right .trend_tbl_title strong em {
+  font-style: normal;
+  font-weight: 300;
+}
+
+.b_trend .right .trend_tbl_title span {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  float: right;
+}
+
+.b_trend .right .table thead tr th, .b_trend .right .table thead tr td {
+  height: 22px;
+  line-height: 22px;
+  font-weight: 300;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.b_trend .right .table tbody tr:first-child th, .b_trend .right .table tbody tr:first-child td {
+  padding-top: 18px;
+}
+
+.b_trend .right .table tbody tr th, .b_trend .right .table tbody tr td {
+  height: 16px;
+  line-height: 16px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.aisignal_w {
+  display: block;
+}
+
+.aisignal_w .top {
+  display: block;
+  overflow: hidden;
+}
+
+.aisignal_w .top .left {
+  width: 230px;
+  float: left;
+}
+
+.aisignal_w .top .right {
+  position: relative;
+  width: calc(100% - 270px);
+  float: left;
+  margin-left: 40px;
+}
+
+.aisignal_w .top .right .tit {
+  display: block;
+}
+
+.aisignal_w .top .right .tit strong {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.aisignal_w .top .right .txt {
+  display: block;
+  margin-top: 15px;
+}
+
+.aisignal_w .top .right .txt span {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+}
+
+.aisignal_w .top .right .button {
+  padding: 0;
+  margin-top: 15px;
+}
+
+.aisignal_w .top .right .button .btn {
+  width: 120px;
+  height: 40px;
+  line-height: 38px;
+  padding: 0;
+  margin-right: 10px;
+  border: 1px solid #3e72ed;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.aisignal_w .top .right .button .btn-primary {
+  background: #3e72ed;
+}
+
+.aisignal_w .top .right .button .btn-primary span {
+  background: url(../img/bu_bell_on.png) no-repeat 0 50%;
+  background-size: 15px auto;
+}
+
+.aisignal_w .top .right .button .btn-default {
+  background: #fff;
+}
+
+.aisignal_w .top .right .button .btn-default span {
+  color: #3e72ed !important;
+  background: url(../img/bu_bell.png) no-repeat 0 50%;
+  background-size: 15px auto;
+}
+
+.aisignal_w .top .right .button .btn span {
+  margin: 0;
+  padding: 0 0 0 18px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.aisignal_w .top .right .date {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.aisignal_w .top .right .date span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+}
+
+.aisignal_w .top .right .date span em {
+  padding-left: 10px;
+  color: #999;
+  font-style: normal;
+}
+
+.aisignal_w .chart_w {
+  display: block;
+}
+
+.aisignal_w .chart_w .chartbox {
+  min-height: 300px;
+  background: #f5f5f5;
+}
+
+.aisignal_w .info {
+  display: block;
+}
+
+.aisignal_w .info p {
+  display: block;
+  padding: 20px 0;
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+}
+
+.aisignal_w .info .popover {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}
+
+.aisignal_w .info .popover .txt {
+  display: block;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px 0;
+}
+
+.aisignal_w .info .popover .txt strong {
+  display: block;
+  font-weight: 700;
+  padding: 3px 0;
+}
+
+.aisignal_w .info .popover .txt:last-child {
+  border-bottom: 0;
+}
+
+.aisignal_w .info .info_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aisignal_w .info .info_list > div {
+  display: block;
+  width: 222px;
+  height: 120px;
+  border: 1px solid #dfdfdf;
+  text-align: center;
+}
+
+.aisignal_w .info .info_list > div strong {
+  display: block;
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.aisignal_w .info .info_list > div span {
+  display: block;
+  padding-top: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}
+
+.aisignal_w .signal_more {
+  position: absolute;
+  top: 32px;
+  right: 35px;
+}
+
+.aisignal_w .signal_more button {
+  width: 130px;
+  height: 35px;
+  line-height: 33px;
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  background: none;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+
+.aisignal_w .signal_more button span {
+  margin: 0;
+  padding: 0;
 }
 
 .sub-content {

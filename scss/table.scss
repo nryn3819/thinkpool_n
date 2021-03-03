@@ -1,6 +1,15 @@
 //테이블
 @import 'paging';
 
+.popover{
+    font: {
+        size:13px;
+        weight:300;
+    }
+    color:#666;
+    line-height:23px;
+}
+
 .check-radio{
     display:block;
     overflow:hidden;
@@ -47,6 +56,28 @@
     width: 100%;
     float: left;
     overflow: hidden;
+
+    .guide{
+        display:block;
+        clear:both;
+        float:left;
+
+        span{
+            display:block;
+            height:23px;
+            line-height:23px;
+            font: {
+                size:13px;
+                weight:300;
+            }
+            color:#999;
+
+            &::before{
+                content: '\00B7';
+                padding-right:5px;
+            }
+        }
+    }
 
     table {
         border-top: 1px solid #666;
@@ -378,7 +409,7 @@
                             right: 15px;
                         }
                         font-size: 13px;
-                        weight:300;
+                        font-weight:300;
 
                         span{
                             font: {

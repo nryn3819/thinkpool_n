@@ -6,6 +6,14 @@
   margin-top: 70px;
 }
 
+.paging {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  float: left;
+}
+
 .pagination li.disabled a {
   display: none;
 }
@@ -56,6 +64,13 @@
   font-weight: 500;
 }
 
+.popover {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  line-height: 23px;
+}
+
 .check-radio {
   display: block;
   overflow: hidden;
@@ -103,6 +118,26 @@
   overflow: hidden;
 }
 
+.table_w .guide {
+  display: block;
+  clear: both;
+  float: left;
+}
+
+.table_w .guide span {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+}
+
+.table_w .guide span::before {
+  content: '\00B7';
+  padding-right: 5px;
+}
+
 .table_w table {
   border-top: 1px solid #666;
 }
@@ -134,6 +169,10 @@
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
+}
+
+.table_w table tbody tr td.bdl {
+  border-left: 1px solid #dfdfdf;
 }
 
 .table_w table tbody tr td a {
@@ -191,6 +230,7 @@
   border-bottom: 1px solid #dfdfdf;
   padding: 0 15px;
   background: #f5f5f5;
+  border-top: 0 !important;
 }
 
 .table_w table.table-lft tbody tr td {
@@ -326,6 +366,16 @@
   border-bottom: 0;
 }
 
+.table_w table.table-bordered tbody tr.btboder th, .table_w table.table-bordered tbody tr.btboder td {
+  border-top: 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.table_w table.table-bordered tbody tr.nblboder th, .table_w table.table-bordered tbody tr.nblboder td {
+  border-left: 0;
+  border-right: 0;
+}
+
 .table_w table.table-bordered tbody tr th, .table_w table.table-bordered tbody tr td {
   vertical-align: middle;
 }
@@ -357,7 +407,7 @@
   padding-left: 15px;
   padding-right: 15px;
   font-size: 13px;
-  weight: 300;
+  font-weight: 300;
 }
 
 .table_w table.table-bordered tfoot tr td span, .table_w table.table-bordered tfoot tr th span {

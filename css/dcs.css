@@ -7,13 +7,13 @@
   width: 100%;
 }
 
-.dcsbox .tab-content .date {
+.dcsbox .tab-content .tab-pane > .date {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.dcsbox .tab-content .date span {
+.dcsbox .tab-content .tab-pane > .date span {
   font-size: 13px;
   font-weight: 300;
   color: #999;

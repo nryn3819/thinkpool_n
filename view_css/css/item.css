@@ -1081,16 +1081,16 @@
   padding-right: 3px;
 }
 
-.itemHomeBox .left .item_cdn {
+.item_cdn {
   display: block;
   width: 100%;
-  height: 170px;
+  min-height: 170px;
   border-radius: 5px;
   background: #f9f9f9 url(../img/bu_item_cdn.png) no-repeat center 20px;
   text-align: center;
 }
 
-.itemHomeBox .left .item_cdn span {
+.item_cdn > span {
   display: inline-block;
   width: 95px;
   height: 22px;
@@ -1105,13 +1105,29 @@
   border-radius: 22px;
 }
 
-.itemHomeBox .left .item_cdn strong {
+.item_cdn > strong {
   display: block;
   width: 100%;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
   color: #333;
+}
+
+.item_cdn .txt {
+  display: block;
+  margin-top: 30px;
+  padding-bottom: 25px;
+}
+
+.item_cdn .txt span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+}
+
+.item_cdn .txt em {
+  font-style: normal;
 }
 
 .itemHomeBox .left .item_info {
@@ -1319,49 +1335,50 @@
   padding: 0 20px;
 }
 
-#itemTop .itemInfo {
+#itemTop > .itemInfo {
   display: block;
   width: 100%;
   float: left;
+  padding: 0;
 }
 
-#itemTop .itemInfo .name {
+#itemTop > .itemInfo .name {
   display: inline-block;
 }
 
-#itemTop .itemInfo .name strong {
+#itemTop > .itemInfo .name strong {
   font-size: 36px;
   color: #333;
   text-indent: 5px;
   font-weight: 700;
 }
 
-#itemTop .itemInfo .price {
+#itemTop > .itemInfo .price {
   display: inline-block;
   padding-left: 18px;
 }
 
-#itemTop .itemInfo .price span {
+#itemTop > .itemInfo .price span {
   font-size: 24px;
   font-weight: 300;
 }
 
-#itemTop .itemInfo .per {
+#itemTop > .itemInfo .per {
   display: inline-block;
   padding-left: 16px;
 }
 
-#itemTop .itemInfo .per span {
+#itemTop > .itemInfo .per span {
   font-size: 24px;
   font-weight: 300;
 }
 
-#itemTop .itemInfo .time {
+#itemTop > .itemInfo .time {
   display: inline-block;
   padding-left: 10px;
 }
 
-#itemTop .itemInfo .time span {
+#itemTop > .itemInfo .time span {
   font-size: 13px;
   color: #666;
 }
@@ -1520,6 +1537,18 @@
   float: left;
   margin-top: 10px;
   margin-right: 9px;
+}
+
+.item_board_nav button.btn-active {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  padding: 0 25px;
+  background: #f5f5f5;
+}
+
+.item_board_nav button.btn-active:focus {
+  outline: 0;
 }
 
 .infoMn {
