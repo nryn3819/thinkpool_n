@@ -154,8 +154,12 @@
 }
 
 .aisignal_w .info .info_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .aisignal_w .info .info_list > div {

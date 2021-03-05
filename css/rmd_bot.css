@@ -560,6 +560,7 @@
 
 .tbl-more button {
   margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -570,11 +571,17 @@
 }
 
 .bot_list_w {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-content: space-around;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bot_list_w .bot_w {
@@ -584,7 +591,8 @@
   border: 1px solid #d7d7d7;
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
@@ -873,20 +881,28 @@
 }
 
 .allDetail .result .resultbox_w {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 20px;
 }
 
 .allDetail .result .resultbox_w .resultbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 154px;
   height: 183px;
   border: 1px solid #d7d7d7;
   border-radius: 5px;
-  flex-wrap: wrap;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .allDetail .result .resultbox_w .resultbox span {
@@ -927,6 +943,7 @@
 .allDetail .per {
   display: block;
   width: 460px;
+  min-height: 380px;
   float: left;
   margin-top: 40px;
 }
@@ -942,6 +959,7 @@
 .allDetail .highreturn {
   display: block;
   width: calc(100% - 460px);
+  min-height: 380px;
   padding-left: 30px;
   margin-top: 40px;
   float: left;
@@ -951,6 +969,20 @@
   display: block;
   width: 100%;
   margin-top: 20px;
+}
+
+.allDetail .highreturn .tablebox .table_w .table {
+  margin-bottom: 0;
+}
+
+.allDetail .highreturn .tablebox .table_w .table thead tr th, .allDetail .highreturn .tablebox .table_w .table thead tr td {
+  padding-top: 11px;
+  padding-bottom: 12px;
+}
+
+.allDetail .highreturn .tablebox .table_w .table tbody tr th, .allDetail .highreturn .tablebox .table_w .table tbody tr td {
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 .allDetail .highreturn .tablebox .board_pager {
@@ -977,9 +1009,13 @@
 }
 
 .allDetail .sms_sample .sms_w {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 40px;
 }
 

@@ -8,10 +8,14 @@
 }
 
 #subNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 0 3px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #subNav ul li {
@@ -74,10 +78,14 @@
 }
 
 #subNav.garo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1030px;
   margin: 0 auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #subNav.garo ul li {

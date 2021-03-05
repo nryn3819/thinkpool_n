@@ -46,9 +46,12 @@
 }
 
 #allmenu .allmenu_wrap .allmenu_content .menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 1035px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   float: left;
 }
 

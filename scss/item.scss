@@ -183,13 +183,13 @@
             }
 
             a {
-                width: 160px;
+                min-width: 160px;
                 margin-right: 0;
                 height: 54px;
                 line-height: 54px;
                 border: 1px solid #d6d6d6;
                 border-right: 0;
-                padding: 0;
+                padding: 0 25px;
                 font-size: 16px;
                 color: #333;
                 font-weight: 300;

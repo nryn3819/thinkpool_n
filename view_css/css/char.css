@@ -67,13 +67,19 @@
 }
 
 #direct .modal-body .con ul li .box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 180px;
   height: 100px;
   background: #e4f8fa;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-radius: 10px;
   margin-left: 17px;
   margin-right: 18px;
@@ -136,9 +142,13 @@
 }
 
 #direct .modal-body .button ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #direct .modal-body .button ul li {
@@ -212,6 +222,24 @@
   text-align: left;
 }
 
+.rmd_item_sch .sch form input[type='text']::-webkit-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  color: #7874f7;
+}
+
+.rmd_item_sch .sch form input[type='text']:-ms-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  color: #7874f7;
+}
+
+.rmd_item_sch .sch form input[type='text']::-ms-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  color: #7874f7;
+}
+
 .rmd_item_sch .sch form input[type='text']::placeholder {
   font-size: 20px;
   font-weight: 300;
@@ -230,7 +258,8 @@
   font-weight: 300;
   color: #fff;
   text-align: center;
-  box-shadow: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
   border: 0;
 }
 
@@ -306,9 +335,12 @@
 }
 
 .rmd_item_sch .info .infolist {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 470px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .rmd_item_sch .info .infolist li {
@@ -361,10 +393,15 @@
 }
 
 .signal_update .info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .signal_update .info ul li {
@@ -425,11 +462,15 @@
 }
 
 .item_char_all > .nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid #d7d7d7;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 35px;
 }
 
@@ -809,15 +850,22 @@
 }
 
 .left_item_list > .tab-content .item_w .con .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 30%;
   float: left;
   border-bottom: 1px solid #d7d7d7;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .left_item_list > .tab-content .item_w .con .info ul li:nth-child(2n) {

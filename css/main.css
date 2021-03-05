@@ -4,18 +4,28 @@
 }
 
 .main-chart .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   width: 50%;
   float: left;
   padding-right: 15px;
 }
 
 .main-chart .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   width: 50%;
   float: left;
 }
@@ -213,9 +223,12 @@
 }
 
 .main-signal .left .signal ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .main-signal .left .signal ul li {
@@ -224,13 +237,19 @@
 }
 
 .main-signal .left .signal ul li .ccl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 110px;
   border: 1px solid #FC6C76;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
   border-radius: 110px;
 }
@@ -259,9 +278,12 @@
 }
 
 .main-signal .left .info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .main-signal .left .info ul li {
@@ -312,9 +334,13 @@
 }
 
 .main-items > .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 0;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-items > .nav li {
@@ -390,9 +416,13 @@
 }
 
 .main-items-tab > .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 0;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-items-tab > .nav li {

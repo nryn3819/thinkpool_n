@@ -278,5 +278,25 @@ $(function () {
         });
     });
 
+    //adviser
+    $('.p_num_submit').on('click', function(){
+        $('.a_num_input').show();
+    });
+    
+
+    $('.pNumCheck').on('click', function(){
+        var thisBtn = $(this);
+
+        $('#subscribe').modal('hide');
+        $('#subscribe').on('hidden.bs.modal', function(e){
+            var nextModal = $(thisBtn).attr('data-target');
+            $(nextModal).modal('show');
+            $(this).off('hidden.bs.modal');
+        });
+        
+    });
+
+    //
+
 
 });

@@ -419,6 +419,7 @@
     .per {
         display: block;
         width: 460px;
+        min-height:380px;
         float: left;
         margin-top: 40px;
 
@@ -434,6 +435,7 @@
     .highreturn {
         display: block;
         width: calc(100% - 460px);
+        min-height:380px;
         padding-left: 30px;
         margin-top: 40px;
         float: left;
@@ -442,6 +444,28 @@
             display: block;
             width: 100%;
             margin-top: 20px;
+
+            .table_w{
+                .table{
+                    margin-bottom:0; 
+                    thead tr{
+                        th,td{
+                            padding: {
+                                top: 11px;
+                                bottom:12px;
+                            }
+                        }
+                    }
+                    tbody tr{
+                        th,td{
+                            padding: {
+                                top: 13px;
+                                bottom:14px;
+                            }
+                        }
+                    }
+                }
+            }
 
 
 
@@ -464,6 +488,8 @@
         width: 100%;
         float: left;
         margin-top: 40px;
+
+        
     }
 
     .sms_sample{

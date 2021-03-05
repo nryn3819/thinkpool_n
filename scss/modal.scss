@@ -18,3 +18,180 @@
     }
     color:#3E72ED;
 }
+
+.scb_popup{
+    .modal-dialog{
+        width:540px;
+    }
+    .modal-body{
+        .scb_guide{
+
+            &.box{
+                width:440px;
+                height:110px;
+                margin:0 auto;
+                background:#f5f5f5;
+                border-radius: 5px;
+                
+                span{
+                    display:block;
+                    line-height:36px;
+                    padding-top:20px;
+                }
+            }
+
+            &.txt-s{
+                span{
+                    font-size:14px;
+                    line-height:30px;
+                }
+            }
+
+            span{
+                font-size:16px;
+                font-weight:300;
+                color:#333;
+            }
+
+            display:block;
+
+            ul{
+                display:block;
+                width:100%;
+
+                li{
+                    display:block;
+                    text-align:center;
+
+                    div{
+                        display:inline-block;
+                        line-height:30px;
+                        font: {
+                            size:16px;
+                            weight:300;
+                        }
+                        color:#333;
+
+                        &::before{
+                            content: '\00B7';
+                            padding-right:5px;
+                        }
+
+                        a{
+                            color:#333;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .scb_input{
+            display:block;
+
+            dl{
+                dt{
+                    &.a_num_input{
+                        display:none;
+                    }
+
+                    display:block;
+                    width:100px;
+                    height:40px;
+                    line-height:40px;
+                    text-align:right;
+                    margin-bottom:10px;
+                    font: {
+                        size:16px;
+                        weight:300;
+                    }
+                    color:#333;
+                    float:left;
+                    clear:left;
+                }
+                dd{
+                    &.a_num_input{
+                        display:none;
+                    }
+
+                    display:block;
+                    width:calc(100% - 100px);
+                    height:40px;
+                    line-height:40px;
+                    padding-left:15px;
+                    margin-bottom:10px;
+                    float:left;
+                    .form-group{
+                        display:block;
+                        float:left;
+                    }
+
+                    .form-control{
+                        width:204px;
+                        height:40px;
+                        border:1px solid #dfdfdf;
+                        background:#f5f5f5;
+                        padding:0 10px;
+                    }
+                    label,span{
+                        height:40px;
+                        line-height:40px;
+                        margin-left:15px;
+                        padding:0;
+                        font: {
+                            size:16px;
+                            weight:300;
+                        }
+                        color:#333;
+                    }
+                    span.time{
+                        margin-left:5px;
+                    }
+
+                    button{
+                        width:120px;
+                        height:40px;
+                        line-height:38px;
+                        border:1px solid #3E72ED;
+                        border-radius: 5px;
+                        text-align:center;
+                        font-size:16px;
+                        font-weight:300;
+                        color:#3E72ED;
+                        padding:0;
+                        background:#fff;
+                        margin-left:10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-footer{
+        text-align:center;
+        padding-bottom:70px;
+
+        button{
+            padding:0 40px;
+            height:40px;
+            line-height:38px;
+            &.btn-primary{
+                background:#3E72ED;
+                border-radius: 40px;
+            }
+
+            span{
+                padding:0;
+                margin:0;
+                font: {
+                    size: 16px;
+                    weight: 300;
+                }
+                color:#fff;
+            }
+            .glyphicon{
+                padding-right:10px;
+            }
+        }
+    }
+}

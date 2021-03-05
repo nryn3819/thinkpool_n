@@ -46,9 +46,12 @@
 }
 
 #allmenu .allmenu_wrap .allmenu_content .menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 1035px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   float: left;
 }
 
@@ -294,10 +297,13 @@
 }
 
 #header_w #realheader #header .nav .main_menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 470px;
   float: left;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #header_w #realheader #header .nav .main_menu li {
@@ -312,7 +318,8 @@
   height: 36px;
   line-height: 36px;
   border-bottom: 3px solid #fff;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   font-size: 15px;
   color: #333;
   font-weight: 400;
@@ -332,10 +339,13 @@
 }
 
 #header_w #realheader #header .nav .add_menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 298px;
   height: 15px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 12px;
   border-left: 1px solid #ddd;
 }
@@ -375,6 +385,24 @@
   color: #3e72ed;
   padding-right: 32px;
   padding-left: 2px;
+}
+
+#header_w #realheader #header .nav .sch input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: #3e72ed;
+  letter-spacing: -0.025em;
+}
+
+#header_w #realheader #header .nav .sch input:-ms-input-placeholder {
+  font-size: 15px;
+  color: #3e72ed;
+  letter-spacing: -0.025em;
+}
+
+#header_w #realheader #header .nav .sch input::-ms-input-placeholder {
+  font-size: 15px;
+  color: #3e72ed;
+  letter-spacing: -0.025em;
 }
 
 #header_w #realheader #header .nav .sch input::placeholder {
