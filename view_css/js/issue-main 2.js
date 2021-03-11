@@ -18,8 +18,6 @@ $(function(){
             //infiniteLoop:false,
             nextText: '>',
             prevText: '<',
-            preventDefaultSwipeX: false,
-            touchEnabled: false,
             hideControlOnEnd: true
         });
     }

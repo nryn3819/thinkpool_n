@@ -21,8 +21,13 @@ $(function () {
     });
 
     //이슈홈 슬라이더
-    let issueNavList = $('.issue-nav-list .list-w .list').length;
-    let issueListIndex = $('.issue-nav-list .list-w .active').index();
+    var issueNavList = $('.issue-nav-list .list-w .list').length;
+    var issueListIndex = $('.issue-nav-list .list-w .active').index();
+
+    $('.issue-nav-list .list-w .list').on('click', function(){
+        $('.issue-nav-list .list-w .list').removeClass('active');
+        $(this).addClass('active');
+    });
 
     
     if(issueNavList > 6){
@@ -38,6 +43,8 @@ $(function () {
             //infiniteLoop:false,
             nextText: '>',
             prevText: '<',
+            preventDefaultSwipeX: false,
+            touchEnabled: false,
             hideControlOnEnd: true
         });
     }
@@ -296,7 +303,15 @@ $(function () {
         
     });
 
-    //
+    //module
+
+    var moduleLeft = $('.modulebox').find('.left');
+
+    $('.modulebox .left').each(function (index, item){
+        var moduleLeftHeight = $(item).next('.right').height();
+
+        $(item).height(moduleLeftHeight + 'px');
+    })
 
 
 });

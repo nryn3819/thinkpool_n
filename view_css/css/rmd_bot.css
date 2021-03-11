@@ -394,6 +394,10 @@
   color: #4379EB;
 }
 
+.table_w table.table-bordered tbody tr th a.obj, .table_w table.table-bordered tbody tr td a.obj {
+  color: #666;
+}
+
 .table_w table.table-bordered tbody tr th.sell, .table_w table.table-bordered tbody tr td.sell {
   background: #EFF3FC;
 }

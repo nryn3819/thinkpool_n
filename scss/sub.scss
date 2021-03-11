@@ -17,8 +17,6 @@
     position: relative;
     clear: both;
 
-
-
     .sub-section {
         display: block;
         margin-top: 20px;
@@ -52,6 +50,11 @@
         }
         .gbnr{
             margin-left:-6px;
+        }
+
+        .modulebox{
+            padding-bottom:40px;
+            border-bottom:1px solid #d7d7d7;
         }
     }
 }

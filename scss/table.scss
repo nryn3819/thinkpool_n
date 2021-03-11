@@ -386,6 +386,9 @@
                         a{
                             display:inline-block;
                             color:#4379EB;
+                            &.obj{
+                                color:#666;
+                            }
                         }
                         vertical-align: middle;
 

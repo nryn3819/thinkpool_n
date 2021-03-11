@@ -1,0 +1,342 @@
+@import 'module-table';
+
+//module 
+
+.module-section{
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 41px 36px 46px;
+    overflow: hidden;
+}
+
+.modulebox{
+    display:inline-block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+
+    .left{
+        width:285px;
+        min-height:250px;
+        float:left;
+        padding-right:50px;
+        display:flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+    .right{
+        width:calc(100% - 285px);
+        float:left;
+    }
+
+}
+
+//content
+.module-content{
+    position:relative;
+    display:block;
+    width:100%;
+
+    //title
+    .title{
+        display:block;
+
+        span{
+            display:block;
+            font: {
+                size: 15px;
+                weight: 300; 
+            }
+            color:#666;
+        }
+        //span
+
+        strong{
+            display:block;
+            line-height:30px;
+            font : {
+                size:20px;
+                weight: 700;
+            }
+            color: #333;
+        }
+    }
+
+    //text
+    .text{
+        display:block;
+
+        span{
+            display:block;
+            line-height:20px;
+
+            font: {
+                size: 14px;
+                weight: 300;
+            }
+            color:#666;
+        }
+
+        //작은글씨
+        &-s{
+            span{
+                font : {
+                    size: 12px;
+                    weight:300;
+                }
+                color:#666;
+            }
+        }
+
+    }
+
+    
+}
+
+
+//chart
+.bgcolor{
+    background:#f5f5f5;
+} // background 임시컬러
+.module-chart{
+    display:block;
+    width: 100%;
+    min-height:150px;
+    float:left;
+    overflow:hidden;
+}
+.module-tbl{
+    position:relative;
+    display:block;
+    width:100%;
+    float:left;
+    overflow:hidden;
+
+    &-guide{
+        position:absolute;
+        top:0;
+        right:0;
+
+        span{
+            font: {
+                size:13px;
+                weight:300;
+            }
+            color:#999;
+        }
+    }
+    //guide
+
+    &-txt{
+        display:block;
+        width:100%;
+        overflow: hidden;
+        float:left;
+
+        font: {
+            size:14px;
+            weight:300;
+        }
+        color:#666;
+
+        .title{
+            display:block;
+            width:100%;
+            float:left;
+            clear:both;
+            line-height:34px;
+
+            font: {
+                size: 24px;
+                weight:700;
+            }
+            color:#333;
+            padding:0 0 5px 0;
+
+            &-s{
+                display:block;
+                line-height:30px;
+                font: {
+                    size:20px;
+                    weight:700;
+                }
+                color:#333;
+            }
+            &-xs{
+                display:block;
+                line-height:28px;
+                font: {
+                    size:18px;
+                    weight:700;
+                }
+                color:#333;
+            }
+            &-l{
+                display:block;
+                line-height:36px;
+                font: {
+                    size:26px;
+                    weight:700;
+                }
+                color:#333;
+            }
+            &-xl{
+                display:block;
+                line-height:38px;
+                font: {
+                    size:28px;
+                    weight:700;
+                }
+                color:#333;
+            }
+        }
+
+        button{
+            padding:0 15px;
+            border-radius: 5px;
+            border:1px solid #d6d6d6;
+            background:#fff;
+            font-size: 14px;
+            height:30px;
+            color:#333;
+            font-weight:500;
+            &:hover{
+                border:1px solid #3e72ed;
+                color:#3e72ed;
+                font-weight:500;
+            }
+        }
+
+        &>span{
+            display:block;
+            line-height:20px;
+        }
+        //span
+
+        a{
+            line-height:20px;
+            font: {
+                size:14px;
+                weight:300;
+            }
+            color:#666;
+        }
+        //a
+    }
+    //txt
+
+    .third-table-box{
+        display:block;
+        width:100%;
+        overflow: hidden;
+        
+        &>div{
+            display:block;
+            width:224px;
+            float:left;
+            &:nth-child(2n){
+                width:223px;
+                float:left;
+                border-left:1px solid #d7d7d7;
+                border-right:1px solid #d7d7d7;
+            }
+
+            table{
+                float:left;
+            }
+        }
+    }
+    // third-table-box
+    .half-table-box{
+        display:block;
+        width:100%;
+        overflow:hidden;
+
+        &>div{
+            display:block;
+            width:335px;
+            float:left;
+
+            &:last-child{
+                width:336px;
+                border-left:1px solid #d7d7d7;
+            }
+        }
+    }
+    // half-table-box
+
+}
+
+.module-txt-box{
+    display:block;
+    width:100%;
+    min-height:100px;
+    border-radius: 5px;
+    background:#f5f5f5;
+    padding:20px;
+    line-height:24px;
+    float:left;
+
+    font: {
+        size: 14px;
+        weight:300;
+    }
+    color:#666;
+}
+
+.module-latest{
+    display:block;
+    width:100%;
+    float:left;
+    overflow:hidden;
+
+    ul{
+        display:block;
+        width:100%;
+
+        li{
+            display:block;
+            width:100%;
+            overflow:hidden;
+            float:left;
+            padding: 4px 0 5px 0;
+
+            &::before{
+                content: '\00B7';
+                padding-right:5px;
+                float:left;
+            }
+
+            a{
+                display:block;
+                max-width:calc(100% - 60px);
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                font: {
+                    size:15px;
+                    weight:300;
+                }
+                color:#666;
+                line-height:21px;
+                float:left;
+            }
+            .date{
+                display:block;
+                font: {
+                    style:normal;
+                    size:14px;
+                    weight:300;
+                }
+                color:#999;
+                line-height:21px;
+                float:right;
+            }
+        }
+    }
+}
