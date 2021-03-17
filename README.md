@@ -29,8 +29,8 @@
     텍스트 - module-tbl-txt > strong, span, div.dot 등
     테이블 - module-tbl > table
     테이블 2단 - module-tbl > half-table-box > div + div
-    테이블 3단 - module-tbl > third-table-box > div + div
-    단위 및 기준 등의 우측상단 - module-tbl-guide > span
+    테이블 3단 - module-tbl > third-table-box > div + div + div
+    단위 및 기준 등의 우측상단 - module-tbl > module-tbl-guide > span
     텍스트박스(배경있는 텍스트박스) - module-txt-box
     차트 - module-chart
   </div>
