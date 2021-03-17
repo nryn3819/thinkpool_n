@@ -179,6 +179,19 @@
 
                     text-indent:-9999em;
                 }
+                span.app::before {
+                    display: inline-block;
+                    content: 'bullet';
+                    width: 23px;
+
+                    background: {
+                        image: url(../img/bu_appstore.png);
+                        repeat: no-repeat;
+                        position: 0 50%;
+                    }
+
+                    text-indent:-9999em;
+                }
 
                 span::after {
                     display: inline-block;
@@ -700,22 +713,29 @@
                         text-align: center;
                         padding-top: 10px;
                         font-size: 15px;
+                        font-weight:300;
                     }
 
                     &.buy {
-                        background: #fb5360;
+                        strong{
+                            color:#FFD6C0;
+                        }
+                        background: #7773F7;
                     }
 
                     &.sell {
-                        background: #3e72ed;
+                        strong{
+                            color:#99E3FF;
+                        }
+                        background: #7773F7;
                     }
 
                     &.pssn {
-                        background: #7874f7;
+                        background: #7773F7;
                     }
 
                     &.ppnwk {
-                        background: #666;
+                        background: #7773F7;
                     }
                 }
 

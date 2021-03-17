@@ -1,0 +1,264 @@
+//매매신호 소개
+.sub-section.npd{
+    padding:0;
+}
+.signal_introduce{
+    display:block;
+    width:100%;
+
+    .top{
+        display:block;
+        width:100%;
+        height:480px;
+        background:url(../img/sub/introduce/topbg.jpg) no-repeat 0 0;
+
+        .txt{
+            display:block;
+            padding:60px 0 0 100px;
+
+            strong{
+                display:block;
+                font: {
+                    size: 36px;
+                    weight: 700;
+                }
+                color:#333;
+            }
+
+            span{
+                display:block;
+                padding-top:20px;
+                font: {
+                    size: 24px;
+                    weight:300;
+                }
+                color:#333;
+                line-height:40px;
+            }
+        }
+
+        .download{
+            display:block;
+            padding:130px 0 0 85px;
+
+            .btn{
+                display:inline-block;
+                height:55px;
+                line-height:55px;
+                border-radius: 55px;
+                width:290px;
+                padding:0 35px;
+
+                &-web{
+                    display:block;
+                    background:#7773F7;
+                    margin-bottom:15px;
+
+                    span{
+                        display:inline-block;
+                        text-align:center;
+                        width:100%;
+                        color:#fff;
+                        font-size:22px;
+                        font-weight:500;
+                        background:url(../img/sub/introduce/bu_web.png) no-repeat 0 50%;
+                        padding-left:10px;
+                    }
+                }
+                &-android{
+                    background:#000;
+
+                    span{
+                        display:inline-block;
+                        text-align:center;
+                        width:100%;
+                        font-size:18px;
+                        font-weight:500;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_android.jpg) no-repeat 0 50%;
+                        padding-left:20px;
+                    }
+                }
+                &-ios{
+                    background:#000;
+
+                    span{
+                        display:inline-block;
+                        text-align:center;
+                        width:100%;
+                        height:55px;
+                        font-size:18px;
+                        font-weight:500;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_ios.png) no-repeat 0 10px;
+                        padding-left:10px;
+                    }
+                }
+            }
+        }
+    }
+    //top
+
+
+    .introduce{
+        display:block;
+        width:100%;
+        padding-bottom:50px;
+
+        .itd{
+            width:100%;
+            padding:70px 65px;
+
+            em{
+                display:inline-block;
+                height:28px;
+                line-height:28px;
+                font: {
+                    style:normal;
+                    size:14px;
+                    weight:700;
+                }
+                color:#fff;
+                background:#7773F7;
+                border-radius: 28px;
+                padding:0 15px;
+            }
+
+            strong{
+                display:block;
+                padding-top:15px;
+                font: {
+                    size:30px;
+                    weight:bold;
+                }
+                color:#333;
+                line-height:48px;
+            }
+
+            span{
+                display:block;
+                height:24px;
+                line-height:24px;
+                font-size:18px;
+                font-weight:300;
+                color:#333;
+                &::before{
+                    content: '-';
+                    padding-right:2px;
+                }
+            }
+
+            &01{
+                background:url(../img/sub/introduce/itd01.png) no-repeat 650px 75px;
+            }
+            &02{
+                background:#FAFAFC url(../img/sub/introduce/itd02.png) no-repeat 70px 75px;
+            }
+            &03{
+                background:url(../img/sub/introduce/itd03.png) no-repeat 650px 75px;
+            }
+
+        }
+    }
+}
+
+.usr-recomm{
+    display:block;
+    width:100%;
+
+    li{
+        display:block;
+        width:50%;
+        padding:40px 20px 40px 0;
+        float:left;
+
+        .usr_ico{
+            display:block;
+            float:left;
+        }
+        .usr_txt{
+            display:block;
+            float:left;
+            font: {
+                size:15px;
+                weight:300;
+            }
+            color:#666;
+            line-height:24px;
+            padding:10px 0 0 15px;
+        }
+    }
+}
+
+.dwn_tit{
+    display:block;
+    height:80px;
+    line-height:80px;
+    text-align:center;
+
+    font: {
+        size:30px;
+        weight:700;
+    }
+    color:#333;
+}
+.dwn_b{
+    display:block;
+    padding-bottom:30px;
+    
+
+    .btn{
+        display:inline-block;
+        height:55px;
+        line-height:55px;
+        border-radius: 55px;
+        width:290px;
+        padding:0 35px;
+
+        &-web{
+            display:inline-block;
+            background:#7773F7;
+
+            span{
+                display:inline-block;
+                text-align:center;
+                width:100%;
+                color:#fff;
+                font-size:22px;
+                font-weight:500;
+                background:url(../img/sub/introduce/bu_web.png) no-repeat 0 50%;
+                padding-left:10px;
+            }
+        }
+        &-android{
+            background:#000;
+
+            span{
+                display:inline-block;
+                text-align:center;
+                width:100%;
+                font-size:18px;
+                font-weight:500;
+                color:#fff;
+                background:url(../img/sub/introduce/bu_android.jpg) no-repeat 0 50%;
+                padding-left:20px;
+            }
+        }
+        &-ios{
+            background:#000;
+            margin:0 15px;
+
+            span{
+                display:inline-block;
+                text-align:center;
+                width:100%;
+                height:55px;
+                font-size:18px;
+                font-weight:500;
+                color:#fff;
+                background:url(../img/sub/introduce/bu_ios.png) no-repeat 0 10px;
+                padding-left:10px;
+            }
+        }
+    }
+}
