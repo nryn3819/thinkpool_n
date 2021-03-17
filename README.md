@@ -48,6 +48,15 @@
 
 6. 참조 - [부트스트랩](http://bootstrapk.com/css/#helper-classes)
 
+* 2020.03.21 변경사항
+  - 더보기 버튼 module-content 밖으로 빼기 
+```html
+  //right 내용
+  <div class="module-content"></div>
+  <a href="#" class="more pull-right">⟶더보기</a>
+```
+
+
 
 
    
