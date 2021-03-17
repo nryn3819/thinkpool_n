@@ -297,6 +297,16 @@
   text-indent: -9999em;
 }
 
+.rmd_item_sch .button .btn-primary span.app::before {
+  display: inline-block;
+  content: 'bullet';
+  width: 23px;
+  background-image: url(../img/bu_appstore.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  text-indent: -9999em;
+}
+
 .rmd_item_sch .button .btn-primary span::after {
   display: inline-block;
   content: 'bullet';
@@ -764,22 +774,31 @@
   text-align: center;
   padding-top: 10px;
   font-size: 15px;
+  font-weight: 300;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.buy {
-  background: #fb5360;
+  background: #7773F7;
+}
+
+.left_item_list > .tab-content .item_w .top .cdn.buy strong {
+  color: #FFD6C0;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.sell {
-  background: #3e72ed;
+  background: #7773F7;
+}
+
+.left_item_list > .tab-content .item_w .top .cdn.sell strong {
+  color: #99E3FF;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.pssn {
-  background: #7874f7;
+  background: #7773F7;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.ppnwk {
-  background: #666;
+  background: #7773F7;
 }
 
 .left_item_list > .tab-content .item_w .top .info {

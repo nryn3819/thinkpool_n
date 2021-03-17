@@ -480,6 +480,13 @@
   float: right;
 }
 
+.module-more {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 20px;
+}
+
 .itemHomeBox {
   display: block;
   width: 100%;
