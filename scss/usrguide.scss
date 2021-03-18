@@ -1,0 +1,257 @@
+// 이용안내
+
+.usrguide{
+
+    .box{
+        display:block;
+        padding-top:40px;
+
+        &.box01{
+            min-height:180px;
+            background:url(../img/sub/usrguide/boxbg.png) no-repeat 675px 8px;
+
+            .top{
+                display:block;
+
+                .txt{
+                    display:block;
+                    margin-top:55px;
+
+                    span{
+                        display:block;
+                        line-height:35px;
+                        font-size:25px;
+                        font-weight:300;
+                        color:#7874F7;
+                    }
+                }
+            }
+
+            .box-title{
+                display:block;
+                height:29px;
+                text-indent:-9999em;
+                background:url(../img/sub/usrguide/tit01.png) no-repeat 0 0;
+            }
+        }
+        &.box02{
+            .box-title{
+                display:block;
+                height:29px;
+                text-indent:-9999em;
+                background:url(../img/sub/usrguide/tit02.png) no-repeat 0 0;
+            }
+        }
+
+        .gde{
+            display:block;
+            border-top:1px solid #d7d7d7;
+            padding:15px 0;
+
+            span{
+                font-size:13px;
+                color:#999;
+                font-weight:300;
+                line-height:24px;
+            }
+        }
+
+        .svc_w{
+            padding:30px 0;
+            border-top:1px solid #d7d7d7;
+
+            .svcbox{
+                display:block;
+                width:100%;
+                overflow:hidden;
+
+                &.btm{
+                    padding-top:30px; 
+
+                    .left,.right{
+                        background:#f5f5f5;
+                        border-radius: 5px;
+                        padding:30px;
+
+                        strong,span{
+                            margin-left:15px;
+                        }
+                        strong{
+                            font : {
+                                size:18px;
+                                weight:700;
+                            }
+                            color:#333;
+                        }
+                        span{
+                            line-height:25px;
+                            font: {
+                                size:15px;
+                                weight:300;
+                            }
+                            color:#666;
+                            em{
+                                color:#3e72ed;
+                                cursor:pointer;
+                            }
+                        }
+                    }
+                }
+
+                .left{
+                    display:block;
+                    width:460px;
+                    float:left;
+
+                    strong,span{
+                        margin-left:15px;
+                    }
+                    strong{
+                        font : {
+                            size:18px;
+                            weight:700;
+                        }
+                        color:#333;
+                    }
+                    span{
+                        line-height:25px;
+                        font: {
+                            size:15px;
+                            weight:300;
+                        }
+                        color:#666;
+                        em{
+                            color:#3e72ed;
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .right{
+                    display:block;
+                    width:calc(100% - 500px);
+                    padding-top:15px;
+                    float:right;
+
+                    button{
+                        display:block;
+                        width:200px;
+                        height:70px;
+                        border-radius: 5px;
+                        border:0;
+                        outline: 0;
+                        padding:0;
+                        background:#3e72ed;
+
+                        span{
+                            display:block;
+                            font: {
+                                size:18px;
+                                weight:700;
+                            }
+                            color:#fff;
+                            padding-bottom:5px;
+                        }
+                        em{
+                            font : {
+                                style:normal;
+                                size:14px;
+                                weight:300;
+                            }
+                            color:#fff;
+                        }
+
+                        &:active{
+                            background:#ccc;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    
+}
+
+.payment_dwn{
+    display:block;
+    margin-top:20px;
+    padding-top:30px;
+    border-top:1px solid #d7d7d7;
+
+    div{
+        height:90px;
+        background:#DBEBFF;
+
+        strong{
+            display:block;
+            padding-right:50px;
+            height:90px;
+            line-height:90px;
+            float:left;
+            text-indent:40px;
+            font: {
+                size:25px;
+                weight:700;
+            }
+            color:#1A479A;
+        }
+
+        .btn{
+            display:inline-block;
+            height:44px;
+            line-height:42px;
+            border-radius: 44px;
+            padding:0 17px;
+            margin:25px 6px 0;
+
+            &-web{
+                display:block;
+                background:#7773F7;
+                margin-bottom:15px;
+
+                span{
+                    display:inline-block;
+                    text-align:center;
+                    width:100%;
+                    color:#fff;
+                    font-size:22px;
+                    font-weight:500;
+                    background:url(../img/sub/introduce/bu_web.png) no-repeat 0 50%;
+                    padding-left:10px;
+                }
+            }
+            &-android{
+                background:#000;
+
+                span{
+                    display:inline-block;
+                    text-align:center;
+                    width:100%;
+                    font-size:15px;
+                    font-weight:400;
+                    color:#fff;
+                    background:url(../img/sub/introduce/bu_android.jpg) no-repeat 5px 12px;
+                    background-size:18px 20px;
+                    padding:0 5px 0 35px;
+                }
+            }
+            &-ios{
+                background:#000;
+
+                span{
+                    display:inline-block;
+                    text-align:center;
+                    width:100%;
+                    font-size:15px;
+                    font-weight:400;
+                    color:#fff;
+                    background:url(../img/sub/introduce/bu_ios.png) no-repeat 10px 7px;
+                    background-size:21px 26px;
+                    padding:0 5px 0 50px;
+                }
+            }
+        }
+
+    }
+}

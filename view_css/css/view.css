@@ -545,28 +545,40 @@
   width: 535px;
 }
 
-#user_class .modal-sm .modal-header {
+#user_class .modal-xsm {
+  width: 390px;
+}
+
+#user_class .modal-header {
   padding: 20px 20px 5px;
   border-bottom: 0;
 }
 
-#user_class .modal-sm .modal-body {
+#user_class .modal-body {
   padding: 0 40px;
 }
 
-#user_class .modal-sm .modal-body strong {
+#user_class .modal-body strong {
   display: block;
   font-size: 14px;
   color: #333;
   font-weight: bold;
 }
 
-#user_class .modal-sm .modal-body table {
+#user_class .modal-body span {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 300;
+}
+
+#user_class .modal-body table {
   width: 100%;
   margin-top: 20px;
 }
 
-#user_class .modal-sm .modal-body table thead tr th {
+#user_class .modal-body table thead tr th {
   height: 45px;
   line-height: 45px;
   border-top: 1px solid #000;
@@ -581,7 +593,7 @@
   font-weight: 700;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td {
+#user_class .modal-body table tbody tr td {
   height: 22px;
   line-height: 22px;
   padding: 12px 15px;
@@ -591,12 +603,12 @@
   font-weight: 300;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td .cl {
+#user_class .modal-body table tbody tr td .cl {
   padding-left: 15px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico {
-  display: inline-block;
+#user_class .modal-body table tbody tr td span.label.ico {
+  display: block;
   padding: 0;
   margin: 0;
   width: 22px;
@@ -606,69 +618,69 @@
   float: left;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico01 {
+#user_class .modal-body table tbody tr td span.label.ico.ico01 {
   background-position: 0 0;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico02 {
+#user_class .modal-body table tbody tr td span.label.ico.ico02 {
   background-position: 0 -22px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico03 {
+#user_class .modal-body table tbody tr td span.label.ico.ico03 {
   background-position: 0 -44px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico04 {
+#user_class .modal-body table tbody tr td span.label.ico.ico04 {
   background-position: 0 -66px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico05 {
+#user_class .modal-body table tbody tr td span.label.ico.ico05 {
   background-position: 0 -88px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico06 {
+#user_class .modal-body table tbody tr td span.label.ico.ico06 {
   background-position: 0 -110px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico07 {
+#user_class .modal-body table tbody tr td span.label.ico.ico07 {
   background-position: 0 -132px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico08 {
+#user_class .modal-body table tbody tr td span.label.ico.ico08 {
   background-position: 0 -154px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico09 {
+#user_class .modal-body table tbody tr td span.label.ico.ico09 {
   background-position: 0 -176px;
 }
 
-#user_class .modal-sm .modal-body table tbody tr td span.label.ico.ico10 {
+#user_class .modal-body table tbody tr td span.label.ico.ico10 {
   background-position: 0 -198px;
 }
 
-#user_class .modal-sm .modal-footer {
+#user_class .modal-footer {
   border-top: 0;
   padding-bottom: 60px;
   text-align: center !important;
 }
 
-#user_class .modal-sm .modal-footer button {
+#user_class .modal-footer button {
   padding: 0 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
   border-radius: 40px;
   background: #3e72ed;
 }
 
-#user_class .modal-sm .modal-footer button:visited {
+#user_class .modal-footer button:visited {
   outline: 0;
 }
 
-#user_class .modal-sm .modal-footer button:active {
+#user_class .modal-footer button:active {
   outline: 0;
 }
 
-#user_class .modal-sm .modal-footer button:focus {
+#user_class .modal-footer button:focus {
   outline: 0;
 }
 
@@ -730,7 +742,7 @@
 #viewMore .modal-dialog .modal-footer button {
   padding: 0 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
   border-radius: 40px;
   background: #3e72ed;
 }
@@ -765,7 +777,7 @@
 #dcr .modal-sm .modal-footer button {
   padding: 0 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
   border-radius: 40px;
   background: #3e72ed;
 }
