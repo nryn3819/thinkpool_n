@@ -1,0 +1,129 @@
+//나의 ai매매신호
+
+.mysignal{
+    display:block;
+    width:100%;
+    overflow:hidden;
+
+    .left{
+        display:flex;
+        width:380px;
+        justify-content: space-between;
+        float:left;
+
+        .list{
+            position:relative;
+            display:flex;
+            width:177px;
+            height:130px;
+            border:1px solid #ddd;
+            background:#fff;
+            border-radius: 5px;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
+            &.list01{
+                background:#fff url(../img/sub/mysignal/sig01.png) no-repeat -43px 40px;
+            }
+            &.list02{
+                background:#fff url(../img/sub/mysignal/sig02.png) no-repeat -30px 45px;
+            }
+
+            .check{
+                position:absolute;
+                top:10px;
+                left:10px;
+                font-size:24px;
+                font-weight:700;
+            }
+
+
+            strong{
+                display:inline-block;
+                line-height:30px;
+                font-size:25px;
+                font-weight:700;
+                color:#FC2F39;
+            }
+            span{
+                display:inline-block;
+                line-height:30px;
+                font-size:20px;
+                font-weight:400;
+                color:#333;
+            }
+        }
+    }
+
+    .right{
+        display:flex;
+        width:calc(100% - 440px);
+        height:130px;
+        overflow:hidden;
+        align-items: flex-end;
+        float:right;
+        
+
+        dl{
+            display:block;
+            padding:10px 0;
+            float:left;
+
+            dt{
+                display:block;
+                width:175px;
+                height:40px;
+                line-height:40px;
+                float:left;
+                clear:left;
+            }
+
+            dd{
+                display:block;
+                height:40px;
+                line-height:40px;
+                float:left;
+                font-size:16px;
+                color:#666;
+                font-weight:300;
+
+                button{
+                    width:75px;
+                    height:28px;
+                    line-height:26px;
+                    border:1px solid #3e72ed;
+                    background:#fff;
+                    border-radius:5px;
+                    font-size:14px;
+                    color:#3e72ed;
+                    padding:0;
+                    float:none;
+                    margin-left:20px;
+                    &:hover{
+                        background:#3e72ed;
+                        color:#fff;
+                        font-weight:500;
+                    }
+                }
+            }
+        }
+
+        button{
+            width:165px;
+            height:40px;
+            line-height:38px;
+            border-radius: 40px;
+            color:#fff;
+            font-size:16px;
+            font-weight:300;
+            padding:0;
+            background:#3e72ed;
+            margin:0 0 10px 45px;
+            border:0;
+            float:left;
+        }
+    }
+
+}

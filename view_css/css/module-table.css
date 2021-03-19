@@ -31,6 +31,10 @@
   background: #f5fcff;
 }
 
+.module-table tbody tr.success th, .module-table tbody tr.success td {
+  background: #f3f5ff;
+}
+
 .module-table tbody tr th {
   vertical-align: middle;
   line-height: 18px;
