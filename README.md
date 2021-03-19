@@ -1,5 +1,6 @@
 # 모듈 작업 사용법 - 54.html 
-## module.html ###(두페이지 동일합니다. RC팀에서는 module.html 페이지를 보시면됩니다.)
+## module.html 
+### (두페이지 동일합니다. RC팀에서는 module.html 페이지를 보시면됩니다.)
 
 1. 섹션 - 모듈 테두리
 ```html
@@ -61,6 +62,22 @@
   +  2,3단 테이블 높이값 변경 (css변경)
     - 2단테이블 - 58px
     - 3단테이블 - 76px
+
+#### 2020.03.19 변경사항 
+  + 테이블 tfoot(외국계추정합) 부분 tbody 통합 
+    ````
+    <tfoot>
+      <tr></tr>
+    </tfoot>
+    삭제 
+
+    <tbody>
+      ...
+      
+      <tr class="success></tr>
+      <!-- 기존의 tfoot 부분 -->
+    </tbody>
+    ````
 
 
 
