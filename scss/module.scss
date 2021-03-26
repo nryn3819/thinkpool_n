@@ -64,6 +64,16 @@
             }
             color: #333;
         }
+
+        span{
+            display:block;
+            line-height:28px;
+            font: {
+                size:24px;
+                weight:300;
+            }
+            color:#666;
+        }
     }
 
     //text
@@ -92,6 +102,60 @@
             }
         }
 
+    }
+
+    .garo-list{
+        display:block;
+        width:170px;
+        float:left;
+
+        strong{
+            display:block;
+            float:left;
+            font-size:15px;
+            color:#333;
+            font-weight:700;
+            text-align:left;
+        }
+
+
+        ol{
+            display:block;
+            float:left;
+
+            li{
+                display:block;
+                width:100%;
+                height:40px;
+                line-height:40px;
+                float:left;
+                
+                em{
+                    display:block;
+                    float:left;
+                    font-size:14px;
+                    color:#999;
+                    font-weight:400;
+                    font-style:normal;
+                    padding-right:3px;
+                }
+
+                span{
+                    display:block;
+                    float:left;
+                    font-size:14px;
+                    color:#666;
+                    font-weight:300;
+                }
+            }
+        }
+    }
+    .garo-chart{
+        display:block;
+        width:calc(100% - 230px);
+        min-height:260px;
+        margin-left:60px;
+        float:left;
     }
 
     

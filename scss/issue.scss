@@ -143,6 +143,42 @@
     align-items: center;
     flex-wrap:wrap;
 
+    &-mysignal{
+        width:100%;
+        min-height:400px;
+
+        p{
+            display:block;
+            width:100%;
+            line-height:26px;
+            font-size:16px;
+            color:#666;
+            font-weight:300;
+            text-align:center;
+            padding-bottom:20px;
+        }
+
+        button{
+            width:205px;
+            height:46px;
+            line-height:46px;
+            border-radius: 46px;
+            border:0;
+            padding:0;
+            background:#e8e8e8;
+            font-size:16px;
+            color:#333;
+            font-weight:300;
+            text-align:center;
+            margin:30px 8px 0 8px;
+
+            &:hover{
+                background:#3e72ed;
+                color:#fff;
+            }
+        }
+    }
+
     &.issue-empty{
         p{
             display:block;

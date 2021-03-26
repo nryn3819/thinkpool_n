@@ -184,3 +184,130 @@
 .scb_popup .modal-footer button .glyphicon {
   padding-right: 10px;
 }
+
+#cancel .modal-header {
+  border: 0;
+}
+
+#cancel .modal-body .tit {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+#cancel .modal-body .con {
+  display: block;
+  padding: 0 30px;
+}
+
+#cancel .modal-body .con dl {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+#cancel .modal-body .con dl dt {
+  display: block;
+  width: 175px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #dbdbdb;
+  float: left;
+  clear: left;
+  text-align: left;
+  text-indent: 30px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .con dl dd {
+  display: block;
+  width: calc(100% - 175px);
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: left;
+  float: left;
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .con dl .btm_n {
+  border-bottom: 0;
+}
+
+#cancel .modal-body .btnbox {
+  display: block;
+}
+
+#cancel .modal-body .btnbox p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+
+#cancel .modal-body .btnbox .btn {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  border-radius: 40px;
+  padding: 0;
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+#cancel .modal-body .btnbox .btn:hover, #cancel .modal-body .btnbox .btn:active, #cancel .modal-body .btnbox .btn:focus {
+  outline: 0;
+}
+
+#cancel .modal-body .btnbox .btn-default {
+  background: #ebebeb;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .btnbox .btn-primary {
+  background: #3E72ED;
+  color: #fff;
+  font-weight: 300;
+}
+
+#cancel .modal-body .guide {
+  text-align: left;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+#cancel .modal-body .guide strong {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+
+#cancel .modal-body .guide span {
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+}
+
+#cancel .modal-body .guide span::before {
+  display: inline-block;
+  float: left;
+}
+
+#cancel .modal-body .guide span em {
+  display: inline-block;
+  width: 490px;
+  float: left;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#cancel .modal-footer {
+  border-top: 0;
+}

@@ -604,10 +604,13 @@
 }
 
 #user_class .modal-body table tbody tr td .cl {
-  padding-left: 15px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico {
+span.label.ico {
   display: block;
   padding: 0;
   margin: 0;
@@ -618,43 +621,43 @@
   float: left;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico01 {
+span.label.ico.ico01 {
   background-position: 0 0;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico02 {
+span.label.ico.ico02 {
   background-position: 0 -22px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico03 {
+span.label.ico.ico03 {
   background-position: 0 -44px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico04 {
+span.label.ico.ico04 {
   background-position: 0 -66px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico05 {
+span.label.ico.ico05 {
   background-position: 0 -88px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico06 {
+span.label.ico.ico06 {
   background-position: 0 -110px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico07 {
+span.label.ico.ico07 {
   background-position: 0 -132px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico08 {
+span.label.ico.ico08 {
   background-position: 0 -154px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico09 {
+span.label.ico.ico09 {
   background-position: 0 -176px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico10 {
+span.label.ico.ico10 {
   background-position: 0 -198px;
 }
 

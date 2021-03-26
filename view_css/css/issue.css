@@ -429,6 +429,42 @@
       flex-wrap: wrap;
 }
 
+.empty-mysignal {
+  width: 100%;
+  min-height: 400px;
+}
+
+.empty-mysignal p {
+  display: block;
+  width: 100%;
+  line-height: 26px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.empty-mysignal button {
+  width: 205px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 46px;
+  border: 0;
+  padding: 0;
+  background: #e8e8e8;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+  margin: 30px 8px 0 8px;
+}
+
+.empty-mysignal button:hover {
+  background: #3e72ed;
+  color: #fff;
+}
+
 .empty.issue-empty p {
   display: block;
   width: 100%;

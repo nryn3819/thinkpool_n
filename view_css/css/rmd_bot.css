@@ -119,6 +119,87 @@
   overflow: hidden;
 }
 
+.table_w .tbl-top {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.table_w .tbl-top .btn {
+  display: inline-block;
+  height: 34px;
+  line-height: 32px;
+  padding: 0 20px;
+  border: 1px solid #dfdfdf;
+  margin-right: 8px;
+  border-radius: 34px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.table_w .tbl-top .btn span {
+  color: #666;
+  font-weight: 300;
+}
+
+.table_w .tbl-top .btn:hover {
+  border: 1px solid #666;
+  color: #333;
+}
+
+.table_w .tbl-top .btn:hover span {
+  color: #333;
+}
+
+.table_w .tbl-top .btn-primary {
+  background: #4379EB;
+  border: 0;
+}
+
+.table_w .tbl-top .btn-primary span {
+  color: #fff;
+}
+
+.table_w .tbl-top .btn-primary:hover {
+  border: 0;
+}
+
+.table_w .tbl-top .btn-primary:hover span {
+  color: #fff;
+}
+
+.table_w .tbl-top .left {
+  display: block;
+  float: left;
+  padding: 3px 0 2px 0;
+}
+
+.table_w .tbl-top .right {
+  display: block;
+  float: right;
+}
+
+.table_w .tbl-top .right .form-inline {
+  float: left;
+}
+
+.table_w .tbl-top .right .btn {
+  height: 40px;
+  line-height: 38px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.table_w .tbl-top .right > span {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  padding-top: 10px;
+}
+
 .table_w .guide {
   display: block;
   clear: both;
@@ -137,6 +218,15 @@
 .table_w .guide span::before {
   content: '\00B7';
   padding-right: 5px;
+}
+
+.table_w .guide p {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
 }
 
 .table_w table {
@@ -184,6 +274,23 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.table_w table tbody tr td .btn {
+  display: inline-block;
+  height: 27px;
+  line-height: 25px;
+  border: 1px solid #dbdbdb;
+  background: #f5f5f5;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 300;
+  border-radius: 0;
+}
+
+.table_w table tbody tr td .btn:active, .table_w table tbody tr td .btn:focus, .table_w table tbody tr td .btn:visited {
+  outline: 0;
 }
 
 .table_w table.signal {

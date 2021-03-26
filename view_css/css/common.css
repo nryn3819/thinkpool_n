@@ -1359,7 +1359,7 @@ table {
 
 .main-items > .nav li a .label {
   height: 20px;
-  line-height: 20px;
+  line-height: 18px;
   padding: 0 3px;
   border: 1px solid #4C84FF;
   border-radius: 5px;
@@ -2694,6 +2694,10 @@ table {
   background: #f5fcff;
 }
 
+.module-table tbody tr.success th, .module-table tbody tr.success td {
+  background: #f3f5ff;
+}
+
 .module-table tbody tr th {
   vertical-align: middle;
   line-height: 18px;
@@ -2914,6 +2918,14 @@ table {
   color: #333;
 }
 
+.module-content .title span {
+  display: block;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #666;
+}
+
 .module-content .text {
   display: block;
 }
@@ -2930,6 +2942,60 @@ table {
   font-size: 12px;
   font-weight: 300;
   color: #666;
+}
+
+.module-content .garo-list {
+  display: block;
+  width: 170px;
+  float: left;
+}
+
+.module-content .garo-list strong {
+  display: block;
+  float: left;
+  font-size: 15px;
+  color: #333;
+  font-weight: 700;
+  text-align: left;
+}
+
+.module-content .garo-list ol {
+  display: block;
+  float: left;
+}
+
+.module-content .garo-list ol li {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+
+.module-content .garo-list ol li em {
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #999;
+  font-weight: 400;
+  font-style: normal;
+  padding-right: 3px;
+}
+
+.module-content .garo-list ol li span {
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.module-content .garo-chart {
+  display: block;
+  width: calc(100% - 230px);
+  min-height: 260px;
+  margin-left: 60px;
+  float: left;
 }
 
 .bgcolor {
@@ -4429,6 +4495,87 @@ table {
   overflow: hidden;
 }
 
+.table_w .tbl-top {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.table_w .tbl-top .btn {
+  display: inline-block;
+  height: 34px;
+  line-height: 32px;
+  padding: 0 20px;
+  border: 1px solid #dfdfdf;
+  margin-right: 8px;
+  border-radius: 34px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.table_w .tbl-top .btn span {
+  color: #666;
+  font-weight: 300;
+}
+
+.table_w .tbl-top .btn:hover {
+  border: 1px solid #666;
+  color: #333;
+}
+
+.table_w .tbl-top .btn:hover span {
+  color: #333;
+}
+
+.table_w .tbl-top .btn-primary {
+  background: #4379EB;
+  border: 0;
+}
+
+.table_w .tbl-top .btn-primary span {
+  color: #fff;
+}
+
+.table_w .tbl-top .btn-primary:hover {
+  border: 0;
+}
+
+.table_w .tbl-top .btn-primary:hover span {
+  color: #fff;
+}
+
+.table_w .tbl-top .left {
+  display: block;
+  float: left;
+  padding: 3px 0 2px 0;
+}
+
+.table_w .tbl-top .right {
+  display: block;
+  float: right;
+}
+
+.table_w .tbl-top .right .form-inline {
+  float: left;
+}
+
+.table_w .tbl-top .right .btn {
+  height: 40px;
+  line-height: 38px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.table_w .tbl-top .right > span {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  padding-top: 10px;
+}
+
 .table_w .guide {
   display: block;
   clear: both;
@@ -4447,6 +4594,15 @@ table {
 .table_w .guide span::before {
   content: '\00B7';
   padding-right: 5px;
+}
+
+.table_w .guide p {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
 }
 
 .table_w table {
@@ -4494,6 +4650,23 @@ table {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.table_w table tbody tr td .btn {
+  display: inline-block;
+  height: 27px;
+  line-height: 25px;
+  border: 1px solid #dbdbdb;
+  background: #f5f5f5;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 300;
+  border-radius: 0;
+}
+
+.table_w table tbody tr td .btn:active, .table_w table tbody tr td .btn:focus, .table_w table tbody tr td .btn:visited {
+  outline: 0;
 }
 
 .table_w table.signal {
@@ -5784,6 +5957,42 @@ table {
       flex-wrap: wrap;
 }
 
+.empty-mysignal {
+  width: 100%;
+  min-height: 400px;
+}
+
+.empty-mysignal p {
+  display: block;
+  width: 100%;
+  line-height: 26px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.empty-mysignal button {
+  width: 205px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 46px;
+  border: 0;
+  padding: 0;
+  background: #e8e8e8;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+  margin: 30px 8px 0 8px;
+}
+
+.empty-mysignal button:hover {
+  background: #3e72ed;
+  color: #fff;
+}
+
 .empty.issue-empty p {
   display: block;
   width: 100%;
@@ -6566,7 +6775,7 @@ table {
   color: #999;
 }
 
-.sch-input button {
+.sch-input .form-inline button {
   position: absolute;
   top: 0;
   right: 15px;
@@ -7917,6 +8126,501 @@ table {
   color: #666;
 }
 
+.mysignal {
+  display: inline-block;
+  width: 100%;
+}
+
+.mysignal .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 380px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: left;
+}
+
+.mysignal .left .list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 177px;
+  height: 130px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mysignal .left .list.list01 {
+  background: #fff url(../img/sub/mysignal/sig01.png) no-repeat -43px 40px;
+}
+
+.mysignal .left .list.list02 {
+  background: #fff url(../img/sub/mysignal/sig02.png) no-repeat -30px 45px;
+}
+
+.mysignal .left .list .check {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.mysignal .left .list strong {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #FC2F39;
+}
+
+.mysignal .left .list span {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+
+.mysignal .right {
+  position: relative;
+  display: block;
+  width: calc(100% - 430px);
+  height: 130px;
+  padding-top: 5px;
+  text-align: right;
+  float: right;
+}
+
+.mysignal .right dl {
+  display: inline-block;
+  width: 450px;
+  border-top: 2px solid #333;
+  text-align: left;
+}
+
+.mysignal .right dl dt {
+  display: block;
+  width: 210px;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 20px;
+  float: left;
+  clear: left;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.mysignal .right dl dd {
+  display: block;
+  width: 240px;
+  height: 42px;
+  line-height: 42px;
+  float: left;
+  font-size: 16px;
+  color: #666;
+  font-weight: 300;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.mysignal .right dl dd button {
+  width: 75px;
+  height: 28px;
+  line-height: 26px;
+  border: 1px solid #3e72ed;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #3e72ed;
+  padding: 0;
+  float: none;
+  margin-left: 20px;
+}
+
+.mysignal .right dl dd button:hover {
+  background: #3e72ed;
+  color: #fff;
+  font-weight: 500;
+}
+
+.mysignal .right .bnr {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.mysignal .right .app {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  display: block;
+  height: 40px;
+  z-index: 99;
+}
+
+.mysignal .right .app .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  padding: 0 15px;
+  border: 0;
+}
+
+.mysignal .right .app .btn-android {
+  background: #000;
+  margin: 0 5px;
+}
+
+.mysignal .right .app .btn-android span {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  background: url(../img/sub/introduce/bu_android.jpg) no-repeat 0 10px;
+  background-size: 18px 20px;
+  padding-left: 30px;
+  float: left;
+}
+
+.mysignal .right .app .btn-ios {
+  background: #000;
+  margin: 0 5px;
+}
+
+.mysignal .right .app .btn-ios span {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
+  background: url(../img/sub/introduce/bu_ios.png) no-repeat 0 5px;
+  background-size: 19px 25px;
+  padding-left: 40px;
+  float: left;
+}
+
+.none-svc {
+  position: relative;
+  display: block;
+  padding-left: 7px;
+  overflow: hidden;
+}
+
+.none-svc .txt {
+  display: block;
+}
+
+.none-svc .txt strong {
+  font-size: 30px;
+  font-weight: 700;
+  color: #7874F7;
+}
+
+.none-svc .txt span {
+  display: block;
+  padding-top: 10px;
+  color: #333;
+  line-height: 32px;
+}
+
+.none-svc .txt span font {
+  size: 18px;
+  weight: 300;
+}
+
+.none-svc .sch {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.none-svc .sch .left {
+  display: block;
+  width: 400px;
+  height: 50px;
+  border-bottom: 2px solid #7874F7;
+  float: left;
+}
+
+.none-svc .sch .left input {
+  height: 48px;
+  border: 0;
+  width: 355px;
+  float: left;
+  font-size: 17px;
+  font-weight: 300;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+}
+
+.none-svc .sch .left input::-webkit-input-placeholder {
+  font-size: 17px;
+  color: #7874F7;
+}
+
+.none-svc .sch .left input:-ms-input-placeholder {
+  font-size: 17px;
+  color: #7874F7;
+}
+
+.none-svc .sch .left input::-ms-input-placeholder {
+  font-size: 17px;
+  color: #7874F7;
+}
+
+.none-svc .sch .left input::placeholder {
+  font-size: 17px;
+  color: #7874F7;
+}
+
+.none-svc .sch .left button {
+  float: left;
+  background: #7874F7;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100%;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.none-svc .sch .right {
+  float: left;
+  width: calc(100% - 400px);
+  text-align: right;
+}
+
+.none-svc .sch .right .btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 48px;
+  border-radius: 50px;
+  padding: 0 25px;
+}
+
+.none-svc .sch .right .btn-android {
+  background: #000;
+}
+
+.none-svc .sch .right .btn-android span {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background: url(../img/sub/introduce/bu_android.jpg) no-repeat 0 50%;
+  padding: 0 20px 0 30px;
+}
+
+.none-svc .sch .right .btn-ios {
+  background: #000;
+  margin-left: 10px;
+}
+
+.none-svc .sch .right .btn-ios span {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background: url(../img/sub/introduce/bu_ios.png) no-repeat 0 8px;
+  padding: 0 30px 0 60px;
+}
+
+.social {
+  min-height: 815px;
+  padding: 0 !important;
+  background: #faf9f8 !important;
+}
+
+.social .keyword {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.social .keyword .left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  min-height: 815px;
+  border-radius: 5px 0 0 5px;
+  z-index: 99;
+}
+
+.social .keyword .left .tit {
+  display: block;
+  width: 198px;
+  padding: 35px 0 30px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.social .keyword .left .tit strong {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.social .keyword .left .tit span {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+  padding-top: 15px;
+}
+
+.social .keyword .left .list {
+  display: block;
+  width: 100%;
+}
+
+.social .keyword .left .list ul {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.social .keyword .left .list ul li {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.social .keyword .left .list ul li a {
+  display: block;
+  width: 198px;
+  height: 60px;
+  line-height: 60px;
+  text-indent: 30px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  float: left;
+}
+
+.social .keyword .left .list ul li.active a, .social .keyword .left .list ul li:hover a {
+  color: #fff;
+  font-weight: 500;
+  background: #3e72ed;
+  text-decoration: none;
+}
+
+.social .keyword .left .list ul li.active::after, .social .keyword .left .list ul li:hover::after {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  width: 12px;
+  content: '▶︎';
+  font-size: 13px;
+  color: #3e72ed;
+  font-weight: 500;
+  float: left;
+  padding: 0;
+  text-indent: 0;
+  margin: 0 0 0 -2px;
+  text-align: left;
+}
+
+.social .keyword .right {
+  display: block;
+  width: calc(100% - 198px);
+  min-height: 815px;
+  background: #fff;
+  margin-left: 198px;
+  padding: 35px;
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid #dfdfdf;
+  float: left;
+}
+
+.social .keyword .right .title {
+  display: block;
+  width: 100%;
+  float: left;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.social .keyword .right .title .guide {
+  display: block;
+  padding-top: 20px;
+}
+
+.social .keyword .right .title .guide span {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.social .keyword .right .title .guide span::before {
+  line-height: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  float: left;
+}
+
+.social .keyword .right .title .guide span.g01::before {
+  color: #54C318;
+}
+
+.social .keyword .right .title .guide span.g02::before {
+  color: #4B83FF;
+}
+
+.social .keyword .right .title .guide span.g03::before {
+  color: #FF4CB1;
+}
+
+.social .keyword .right .title .guide span.g04::before {
+  color: #A44CFF;
+}
+
+.social .keyword .right .chart {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 300px;
+  float: left;
+}
+
+.social .keyword .right .chart.bg {
+  background: #f5f5f5;
+}
+
 .sub-content {
   position: relative;
   clear: both;
@@ -8026,6 +8730,14 @@ table {
   font-weight: 700;
 }
 
+.sub-title em {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #999;
+  padding-left: 10px;
+}
+
 .sub-title-s {
   font-size: 20px;
   text-indent: 0;
@@ -8036,6 +8748,11 @@ table {
   font-size: 18px;
   font-weight: 700;
   text-indent: 0;
+}
+
+.sub-title-xs span {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .sub-title-nidt {
@@ -8273,6 +8990,21 @@ table {
   color: #999;
 }
 
+.tbl-chart {
+  cursor: pointer;
+}
+
+.fav-item {
+  padding-left: 30px;
+  background: url(../img/sub/item/ins_off.png) no-repeat 0 50%;
+  background-size: auto 16px;
+}
+
+.fav-item.active {
+  background: url(../img/sub/item/ins_on.png) no-repeat 0 50%;
+  background-size: auto 16px;
+}
+
 .board_sch {
   position: relative;
   display: block;
@@ -8281,22 +9013,47 @@ table {
   margin-top: 40px;
 }
 
+.board_sch p {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.board_sch span {
+  display: block;
+  float: left;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+
 .board_sch select {
   background: #f6f6f7;
   font-size: 13px;
+  height: 36px;
+  float: left;
+  cursor: pointer;
 }
 
 .board_sch input {
+  display: block;
+  width: 215px !important;
   background: #f6f6f7;
   font-size: 13px;
+  height: 36px;
+  float: left;
+  margin: 0 10px;
 }
 
 .board_sch button {
   padding-left: 30px;
   padding-right: 30px;
   background: #3e72ed;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
+  height: 36px;
+  border: 0;
 }
 
 .board_sch .guide {
@@ -8370,6 +9127,10 @@ table {
   border: 1px solid #b2b2b2;
 }
 
+.b_btn:hover .glyphicon {
+  color: #b2b2b2;
+}
+
 .b_btn.pull-left {
   margin-right: 8px;
 }
@@ -8380,11 +9141,20 @@ table {
 
 .b_btn span {
   display: block;
+  height: 34px;
+  line-height: 30px;
   padding: 0 5px;
   color: #333;
   font-size: 13px;
   font-weight: 300;
   float: left;
+}
+
+.b_btn span.glyphicon {
+  padding: 0;
+  font-size: 17px;
+  color: #d1d1d1;
+  font-weight: 300;
 }
 
 .b_btn.b_circle {
@@ -8420,6 +9190,169 @@ table {
   color: #3e72ed;
   padding: 0 5px 0 25px;
   background: url(../img/btn_bullet_write.png) no-repeat 4px 50%;
+}
+
+.bestList {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 230px;
+  min-height: 124px;
+  background: url(../img/sub/best.png) no-repeat 0 0;
+}
+
+.bestList strong {
+  display: block;
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  line-height: 30px;
+}
+
+.bestList span {
+  display: block;
+  width: 100%;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  height: 86px;
+  line-height: 22px;
+  padding-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.bestList em {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+}
+
+.myClassbox {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background: #FAFAFC;
+}
+
+.myClassbox .user_info {
+  display: inline-block;
+  height: 42px;
+  padding: 18px 0;
+}
+
+.myClassbox span {
+  display: block;
+  float: left;
+}
+
+.myClassbox span.label.ico {
+  width: 42px;
+  height: 42px;
+  background-size: 42px auto;
+}
+
+.myClassbox span.user_class {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+  line-height: 42px;
+  padding: 0 20px;
+}
+
+.myClassbox span.user_class em {
+  font-style: normal;
+}
+
+.myClassbox button {
+  display: block;
+  float: left;
+  height: 36px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 25px;
+  margin-top: 3px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.myClassbox button:focus, .myClassbox button:hover, .myClassbox button:active {
+  background: #fff;
+  outline: 0;
+  border: 1px solid #d7d7d7;
+}
+
+.myItemSch {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background: #FAFAFC;
+  overflow: hidden;
+}
+
+.myItemSch .board_sch {
+  display: inline-block;
+  width: auto;
+  margin-top: 20px;
+  float: none;
+}
+
+.myItemSch .board_sch input {
+  background: #fff;
+  width: 336px !important;
+}
+
+.myItemList_w .myItemList {
+  display: block;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+.myItemList_w .myItemList .list {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 25px 0 15px 0;
+  float: left;
+}
+
+.myItemList_w .myItemList .list strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.myItemList_w .myItemList .list span {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 0;
+  font-weight: 300;
+  color: #666;
+  float: left;
+}
+
+.myItemList_w .myItemList .list span em {
+  font-style: normal;
+  color: #3e72ed;
 }
 
 .board_view_info {
@@ -9027,10 +9960,13 @@ table {
 }
 
 #user_class .modal-body table tbody tr td .cl {
-  padding-left: 15px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico {
+span.label.ico {
   display: block;
   padding: 0;
   margin: 0;
@@ -9041,43 +9977,43 @@ table {
   float: left;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico01 {
+span.label.ico.ico01 {
   background-position: 0 0;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico02 {
+span.label.ico.ico02 {
   background-position: 0 -22px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico03 {
+span.label.ico.ico03 {
   background-position: 0 -44px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico04 {
+span.label.ico.ico04 {
   background-position: 0 -66px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico05 {
+span.label.ico.ico05 {
   background-position: 0 -88px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico06 {
+span.label.ico.ico06 {
   background-position: 0 -110px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico07 {
+span.label.ico.ico07 {
   background-position: 0 -132px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico08 {
+span.label.ico.ico08 {
   background-position: 0 -154px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico09 {
+span.label.ico.ico09 {
   background-position: 0 -176px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico10 {
+span.label.ico.ico10 {
   background-position: 0 -198px;
 }
 
@@ -10109,4 +11045,131 @@ table {
 
 .scb_popup .modal-footer button .glyphicon {
   padding-right: 10px;
+}
+
+#cancel .modal-header {
+  border: 0;
+}
+
+#cancel .modal-body .tit {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+#cancel .modal-body .con {
+  display: block;
+  padding: 0 30px;
+}
+
+#cancel .modal-body .con dl {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+#cancel .modal-body .con dl dt {
+  display: block;
+  width: 175px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #dbdbdb;
+  float: left;
+  clear: left;
+  text-align: left;
+  text-indent: 30px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .con dl dd {
+  display: block;
+  width: calc(100% - 175px);
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: left;
+  float: left;
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .con dl .btm_n {
+  border-bottom: 0;
+}
+
+#cancel .modal-body .btnbox {
+  display: block;
+}
+
+#cancel .modal-body .btnbox p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+
+#cancel .modal-body .btnbox .btn {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  border-radius: 40px;
+  padding: 0;
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+#cancel .modal-body .btnbox .btn:hover, #cancel .modal-body .btnbox .btn:active, #cancel .modal-body .btnbox .btn:focus {
+  outline: 0;
+}
+
+#cancel .modal-body .btnbox .btn-default {
+  background: #ebebeb;
+  color: #333;
+  font-weight: 300;
+}
+
+#cancel .modal-body .btnbox .btn-primary {
+  background: #3E72ED;
+  color: #fff;
+  font-weight: 300;
+}
+
+#cancel .modal-body .guide {
+  text-align: left;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+#cancel .modal-body .guide strong {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+
+#cancel .modal-body .guide span {
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+}
+
+#cancel .modal-body .guide span::before {
+  display: inline-block;
+  float: left;
+}
+
+#cancel .modal-body .guide span em {
+  display: inline-block;
+  width: 490px;
+  float: left;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#cancel .modal-footer {
+  border-top: 0;
 }

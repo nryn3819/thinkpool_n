@@ -197,6 +197,21 @@
   color: #999;
 }
 
+.tbl-chart {
+  cursor: pointer;
+}
+
+.fav-item {
+  padding-left: 30px;
+  background: url(../img/sub/item/ins_off.png) no-repeat 0 50%;
+  background-size: auto 16px;
+}
+
+.fav-item.active {
+  background: url(../img/sub/item/ins_on.png) no-repeat 0 50%;
+  background-size: auto 16px;
+}
+
 .board_sch {
   position: relative;
   display: block;
@@ -205,22 +220,47 @@
   margin-top: 40px;
 }
 
+.board_sch p {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.board_sch span {
+  display: block;
+  float: left;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+
 .board_sch select {
   background: #f6f6f7;
   font-size: 13px;
+  height: 36px;
+  float: left;
+  cursor: pointer;
 }
 
 .board_sch input {
+  display: block;
+  width: 215px !important;
   background: #f6f6f7;
   font-size: 13px;
+  height: 36px;
+  float: left;
+  margin: 0 10px;
 }
 
 .board_sch button {
   padding-left: 30px;
   padding-right: 30px;
   background: #3e72ed;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
+  height: 36px;
+  border: 0;
 }
 
 .board_sch .guide {
@@ -294,6 +334,10 @@
   border: 1px solid #b2b2b2;
 }
 
+.b_btn:hover .glyphicon {
+  color: #b2b2b2;
+}
+
 .b_btn.pull-left {
   margin-right: 8px;
 }
@@ -304,11 +348,20 @@
 
 .b_btn span {
   display: block;
+  height: 34px;
+  line-height: 30px;
   padding: 0 5px;
   color: #333;
   font-size: 13px;
   font-weight: 300;
   float: left;
+}
+
+.b_btn span.glyphicon {
+  padding: 0;
+  font-size: 17px;
+  color: #d1d1d1;
+  font-weight: 300;
 }
 
 .b_btn.b_circle {
@@ -344,6 +397,169 @@
   color: #3e72ed;
   padding: 0 5px 0 25px;
   background: url(../img/btn_bullet_write.png) no-repeat 4px 50%;
+}
+
+.bestList {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 230px;
+  min-height: 124px;
+  background: url(../img/sub/best.png) no-repeat 0 0;
+}
+
+.bestList strong {
+  display: block;
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  line-height: 30px;
+}
+
+.bestList span {
+  display: block;
+  width: 100%;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  height: 86px;
+  line-height: 22px;
+  padding-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.bestList em {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+}
+
+.myClassbox {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background: #FAFAFC;
+}
+
+.myClassbox .user_info {
+  display: inline-block;
+  height: 42px;
+  padding: 18px 0;
+}
+
+.myClassbox span {
+  display: block;
+  float: left;
+}
+
+.myClassbox span.label.ico {
+  width: 42px;
+  height: 42px;
+  background-size: 42px auto;
+}
+
+.myClassbox span.user_class {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+  line-height: 42px;
+  padding: 0 20px;
+}
+
+.myClassbox span.user_class em {
+  font-style: normal;
+}
+
+.myClassbox button {
+  display: block;
+  float: left;
+  height: 36px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 25px;
+  margin-top: 3px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.myClassbox button:focus, .myClassbox button:hover, .myClassbox button:active {
+  background: #fff;
+  outline: 0;
+  border: 1px solid #d7d7d7;
+}
+
+.myItemSch {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background: #FAFAFC;
+  overflow: hidden;
+}
+
+.myItemSch .board_sch {
+  display: inline-block;
+  width: auto;
+  margin-top: 20px;
+  float: none;
+}
+
+.myItemSch .board_sch input {
+  background: #fff;
+  width: 336px !important;
+}
+
+.myItemList_w .myItemList {
+  display: block;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+.myItemList_w .myItemList .list {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 25px 0 15px 0;
+  float: left;
+}
+
+.myItemList_w .myItemList .list strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.myItemList_w .myItemList .list span {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 0;
+  font-weight: 300;
+  color: #666;
+  float: left;
+}
+
+.myItemList_w .myItemList .list span em {
+  font-style: normal;
+  color: #3e72ed;
 }
 
 .board_view_info {
@@ -951,10 +1167,13 @@
 }
 
 #user_class .modal-body table tbody tr td .cl {
-  padding-left: 15px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico {
+span.label.ico {
   display: block;
   padding: 0;
   margin: 0;
@@ -965,43 +1184,43 @@
   float: left;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico01 {
+span.label.ico.ico01 {
   background-position: 0 0;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico02 {
+span.label.ico.ico02 {
   background-position: 0 -22px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico03 {
+span.label.ico.ico03 {
   background-position: 0 -44px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico04 {
+span.label.ico.ico04 {
   background-position: 0 -66px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico05 {
+span.label.ico.ico05 {
   background-position: 0 -88px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico06 {
+span.label.ico.ico06 {
   background-position: 0 -110px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico07 {
+span.label.ico.ico07 {
   background-position: 0 -132px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico08 {
+span.label.ico.ico08 {
   background-position: 0 -154px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico09 {
+span.label.ico.ico09 {
   background-position: 0 -176px;
 }
 
-#user_class .modal-body table tbody tr td span.label.ico.ico10 {
+span.label.ico.ico10 {
   background-position: 0 -198px;
 }
 

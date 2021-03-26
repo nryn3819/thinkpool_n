@@ -195,3 +195,130 @@
         }
     }
 }
+
+
+#cancel{
+    .modal-header{
+        border:0;
+    }
+    .modal-body{
+        .tit{
+            font-size:20px;
+            color:#333;
+            font-weight:700;
+        }
+        .con{
+            display:block;
+            padding:0 30px;
+
+            dl{
+                display:inline-block;
+                width:100%; 
+                border-top:1px solid #000;
+                border-bottom:1px solid #000;
+
+
+                dt{
+                    display:block;
+                    width:175px;
+                    height:45px;
+                    line-height:45px;
+                    border-bottom:1px solid #dbdbdb;
+                    float:left;
+                    clear:left;
+                    text-align:left;
+                    text-indent:30px;
+                    font-size:18px;
+                    color:#333;
+                    font-weight:300;
+                }
+                dd{
+                    display:block;
+                    width:calc(100% - 175px);
+                    height:45px;
+                    line-height:45px;
+                    border-bottom:1px solid #dbdbdb;
+                    text-align:left;
+                    float:left;
+                    font-size:18px;
+                    color:#333;
+                    font-weight:300;
+                }
+                .btm_n{
+                    border-bottom:0;
+                }
+            }
+
+        }
+
+        .btnbox{
+            display:block;
+
+            p{
+                font-size:16px;
+                font-weight:300;
+                padding-bottom:40px;
+            }
+
+            .btn{
+                display:inline-block;
+                width:120px;
+                height:40px;
+                line-height:40px;
+                border:0;
+                border-radius: 40px;
+                padding:0;
+                margin:0 8px;
+                font-size:18px;
+
+                &:hover,&:active,&:focus{
+                    outline:0;
+                }
+
+                &-default{
+                    background:#ebebeb;
+                    color:#333;
+                    font-weight:300;
+                }
+                &-primary{
+                    background:#3E72ED;
+                    color:#fff;
+                    font-weight:300;
+                }
+            }
+        }
+
+        .guide{
+            text-align:left;
+            padding:0 30px;
+            overflow:hidden;
+
+            strong{
+                font-size:14px;
+                color:#333;
+                font-weight:700;
+            }
+
+            span{
+                font-size:13px;
+                color:#666;
+                font-weight:300;
+
+                &::before{
+                    display:inline-block;
+                    float:left;
+                }
+                em{
+                    display:inline-block;
+                    width:490px;
+                    float:left;
+                    font-style:normal;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .modal-footer{
+        border-top:0;
+    }
+}

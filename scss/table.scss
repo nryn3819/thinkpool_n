@@ -57,6 +57,83 @@
     float: left;
     overflow: hidden;
 
+    
+
+    .tbl-top{
+        display:block;
+        width:100%;
+        float:left;
+
+        .btn{
+            display:inline-block;
+            height:34px;
+            line-height:32px;
+            padding:0 20px;
+            border:1px solid #dfdfdf;
+            margin-right:8px;
+            border-radius: 34px;
+            background:#fff;
+            font-size:13px;
+    
+            span{
+                color:#666;
+                font-weight:300;
+            }
+            
+            &:hover{
+                border:1px solid #666;
+                color:#333;
+                span{
+                    color:#333;
+                }
+            }
+            &-primary{
+                background:#4379EB;
+                border:0;
+                span{
+                    color:#fff;
+                }
+                &:hover{
+                    border:0;
+                    span{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+
+        .left{
+            display:block;
+            float:left;
+            padding:3px 0 2px 0;
+        }
+        .right{
+            display:block;
+            float:right;
+
+            .form-inline{
+                float:left;
+            }
+
+            .btn{
+                height:40px;
+                line-height:38px;
+                border-radius: 5px;
+                font-size:15px;
+                margin-left:10px;
+                margin-right:0;
+            }
+
+            &>span{
+                display:block;
+                font-size:13px;
+                font-weight:300;
+                color:#666;
+                padding-top:10px;
+            }
+        }
+    }
+
     .guide{
         display:block;
         clear:both;
@@ -77,7 +154,20 @@
                 padding-right:5px;
             }
         }
+
+        p{
+            display:block;
+            height:23px;
+            line-height:23px;
+            font: {
+                size:14px;
+                weight:300;
+            }
+            color:#666;
+        }
     }
+
+    
 
     table {
         border-top: 1px solid #666;
@@ -114,6 +204,8 @@
             }
             tr td {
 
+                
+
                 &.bdl{
                     border-left:1px solid #dfdfdf;
                 }
@@ -141,6 +233,24 @@
                     overflow:hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+                }
+
+                .btn{
+                    display:inline-block;
+                    height:27px;
+                    line-height:25px;
+                    border:1px solid #dbdbdb;
+                    background:#f5f5f5;
+                    padding:0 12px;
+
+                    font-size:14px;
+                    color:#333;
+                    font-weight:300;
+                    border-radius: 0;
+
+                    &:active, &:focus, &:visited{
+                        outline:0;
+                    }
                 }
             }
         }

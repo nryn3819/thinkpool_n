@@ -87,7 +87,7 @@
   color: #999;
 }
 
-.sch-input button {
+.sch-input .form-inline button {
   position: absolute;
   top: 0;
   right: 15px;

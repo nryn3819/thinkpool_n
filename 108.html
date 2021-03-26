@@ -198,8 +198,21 @@
                                         <button>변경하기</button>
                                     </dd>
                                 </dl>
+
+                                <div class="bnr">
+                                    <img src="./img/sub/mysignal/itembnr_3.png" alt="3종목 부족하시죠?">
+                                </div>
+                                <!-- //3개월 배너 -->
+
                                 <div class="app">
-                                    <button>앱으로 이용하기</button>
+                                    <button class="btn btn-android">
+                                        <span>Google Play 다운로드</span>
+                                    </button>
+
+                                    <button class="btn btn-ios">
+                                        <span>IOS 다운로드</span>
+                                    </button>
+
                                 </div>
                             </div>
                             <!-- right -->
@@ -218,6 +231,349 @@
                                 </ul>
                             </div>
                             <!-- // -->
+
+                            <div class="table_w">
+                                <div class="guide">
+                                    <p>※ 실시간으로 매수/매도 타이밍을 알림 받을 종목을 등록/삭제 할 수 있습니다.</p>
+                                </div>
+                                <!-- //guide -->
+
+                                <div class="tbl-top mt-20">
+                                    <div class="left">
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                            <span>선택종목삭제</span>
+                                        </button>
+
+                                        <button class="btn btn-default">
+                                            <span>MY종목 가져오기</span>
+                                        </button>
+                                    </div>
+                                    <!-- //left  button-->
+
+                                    <div class="right">
+
+                                        <div class="sch-input">
+                                            <form class="form-inline">
+                                                <div class="form-group">
+                                                  <label class="sr-only" for="schItemDCS">종목검색</label>
+                                                  <div class="input-group">
+                                                    <input type="text" class="form-control" id="schItemDCS" placeholder="종목명 또는 종목코드를 입력하세요.">
+                                                  </div>
+                                                </div>
+                                                <button type="submit" class="glyphicon glyphicon-search" title="검색"></button>
+                                            </form>
+                                            <!-- //from -->
+                                            <button type="submit" class="btn btn-primary"><span>+종목추가</span></button>
+                                            <!--  -->
+                                        </div>
+                                        <!-- sch-input -->
+
+                                    </div>
+                                    <!-- //right sch-->
+                                </div>
+                                <!-- //tbl-top -->
+
+                                <table class="table table-hover mt-10 pull-left">
+                                    <colgroup>
+                                        <col width="120">
+                                        <col width="*">
+                                        <col width="170">
+                                        <col width="120">
+                                        <col width="120">
+                                        <col width="120">
+                                        <col width="100">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <label for="allcheck">
+                                                    <input type="checkbox" id="allcheck">
+                                                    전체선택
+                                                </label>
+                                            </th>
+                                            <th scope="col">종목명</th>
+                                            <th scope="col">시세</th>
+                                            <th scope="col">신호상태</th>
+                                            <th scope="col">현재수익률</th>
+                                            <th scope="col">매도수익률</th>
+                                            <th scope="col">보유/관망일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+612.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+16.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="tblCheckItem">
+                                            </td>
+                                            <td>
+                                                <a href="#">종목명종목명종목명</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="pull-left text-right up">50,000</span>
+                                                <span class="pull-right text-right up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">오늘매수</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+6.20%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="up">+2.30%</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>관말 3일째</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="paging text-center">
+                                    <ul class="pagination">
+                                        <li class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //paging -->
+                            </div>
+                            <!-- //table -->
+
+                            <div class="gbnr mt-20 pull-left">
+                                <img src="./img/sub/bnr/adviser.jpg" alt="" width="100%" height="90">
+                            </div>
+                            <!-- //google bnr  -->
+
+
+                            <div class="hspace100"></div>
 
                             
                         </div>

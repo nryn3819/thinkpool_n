@@ -615,10 +615,13 @@
                         font-weight: 300;
 
                         .cl {
-                            padding-left: 15px;
+                            padding-left: 30px;
+                            font-size:14px;
+                            color:#666;
+                            font-weight:300;
                         }
 
-                        span.label.ico {
+                        @at-root span.label.ico {
                             display: block;
                             padding: 0;
                             margin: 0;

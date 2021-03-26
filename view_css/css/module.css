@@ -31,6 +31,10 @@
   background: #f5fcff;
 }
 
+.module-table tbody tr.success th, .module-table tbody tr.success td {
+  background: #f3f5ff;
+}
+
 .module-table tbody tr th {
   vertical-align: middle;
   line-height: 18px;
@@ -251,6 +255,14 @@
   color: #333;
 }
 
+.module-content .title span {
+  display: block;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #666;
+}
+
 .module-content .text {
   display: block;
 }
@@ -267,6 +279,60 @@
   font-size: 12px;
   font-weight: 300;
   color: #666;
+}
+
+.module-content .garo-list {
+  display: block;
+  width: 170px;
+  float: left;
+}
+
+.module-content .garo-list strong {
+  display: block;
+  float: left;
+  font-size: 15px;
+  color: #333;
+  font-weight: 700;
+  text-align: left;
+}
+
+.module-content .garo-list ol {
+  display: block;
+  float: left;
+}
+
+.module-content .garo-list ol li {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+
+.module-content .garo-list ol li em {
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #999;
+  font-weight: 400;
+  font-style: normal;
+  padding-right: 3px;
+}
+
+.module-content .garo-list ol li span {
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.module-content .garo-chart {
+  display: block;
+  width: calc(100% - 230px);
+  min-height: 260px;
+  margin-left: 60px;
+  float: left;
 }
 
 .bgcolor {

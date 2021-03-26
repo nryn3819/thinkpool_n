@@ -1,9 +1,9 @@
 //나의 ai매매신호
 
 .mysignal{
-    display:block;
+    display:inline-block;
     width:100%;
-    overflow:hidden;
+    
 
     .left{
         display:flex;
@@ -58,38 +58,45 @@
     }
 
     .right{
-        display:flex;
-        width:calc(100% - 440px);
+        position:relative;
+        display:block;
+        width:calc(100% - 430px);
         height:130px;
-        overflow:hidden;
-        align-items: flex-end;
+        padding-top:5px;
+        text-align:right;
         float:right;
         
 
         dl{
-            display:block;
-            padding:10px 0;
-            float:left;
+            display:inline-block;
+            width:450px;
+            border-top:2px solid #333;
+            text-align:left;
 
             dt{
                 display:block;
-                width:175px;
-                height:40px;
-                line-height:40px;
+                width:210px;
+                height:42px;
+                line-height:42px;
+                padding-left:20px;
                 float:left;
                 clear:left;
+                border-bottom:1px solid #d7d7d7;
             }
 
             dd{
                 display:block;
-                height:40px;
-                line-height:40px;
+                width:240px;
+                height:42px;
+                line-height:42px;
                 float:left;
                 font-size:16px;
                 color:#666;
                 font-weight:300;
+                border-bottom:1px solid #d7d7d7;
 
                 button{
+                    
                     width:75px;
                     height:28px;
                     line-height:26px;
@@ -109,21 +116,189 @@
                 }
             }
         }
+        .bnr{
+            display:inline-block;
+            padding-left:10px;
+        }
 
-        button{
-            width:165px;
+        .app{
+            position:absolute;
+            top:-65px;
+            right:0;
+            display:block;
             height:40px;
-            line-height:38px;
-            border-radius: 40px;
-            color:#fff;
-            font-size:16px;
-            font-weight:300;
-            padding:0;
-            background:#3e72ed;
-            margin:0 0 10px 45px;
-            border:0;
-            float:left;
+            z-index:99;
+
+            .btn{
+                display:inline-block;
+                height:40px;
+                line-height:40px;
+                border-radius: 5px;
+                padding:0 15px;
+                border:0;
+
+                &-android{
+                    background:#000;
+                    margin:0 5px;
+
+                    span{
+                        display:inline-block;
+                        text-align:left;
+                        width:100%;
+                        font-size:17px;
+                        font-weight:500;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_android.jpg) no-repeat 0 10px;
+                        background-size:18px 20px;
+                        padding-left:30px;
+                        float:left;
+                    }
+                }
+                &-ios{
+                    background:#000;
+                    margin:0 5px;
+
+                    span{
+                        display:inline-block;
+                        width:100%;
+                        height:40px;
+                        font-size:17px;
+                        font-weight:500;
+                        text-align:left;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_ios.png) no-repeat 0 5px;
+                        background-size:19px 25px;
+                        padding-left:40px;
+                        float:left;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+.none-svc{
+    position:relative;
+    display:block;
+    padding-left:7px;
+    overflow:hidden;
+
+    .txt{
+        display:block;
+
+        strong{
+            font: {
+                size:30px;
+                weight:700;
+            }
+            color:#7874F7;
+        }
+
+        span{
+            display:block;
+            padding-top:10px;
+            font{
+                size:18px;
+                weight:300;
+            }
+            color:#333;
+            line-height:32px;
         }
     }
 
+    .sch{
+        display:block;
+        width:100%;
+        overflow:hidden;
+        float:left;
+        
+
+        .left{
+            display:block;
+            width:400px;
+            height:50px;
+            border-bottom:2px solid #7874F7;
+            float:left;
+
+            input{
+                height:48px;
+                border:0;
+                width:355px;
+                float:left;
+
+                font: {
+                    size:17px;
+                    weight:300;
+                }
+                background:none;
+                box-shadow:none;
+                outline:0;
+
+                &::placeholder{
+                    font-size:17px;
+                    color:#7874F7;
+                }
+            }
+
+            button{
+                float:left;
+                background:#7874F7;
+                color:#fff;
+                border:0;
+                font-size:20px;
+                width:40px;
+                height:40px;
+                line-height:40px;
+                border-radius:100%;
+                padding:0;
+                margin-top:5px;
+            }
+        }
+        .right{
+            float:left;
+            width:calc(100% - 400px);
+            text-align:right;
+
+            .btn{
+                display:inline-block;
+                height:50px;
+                line-height:48px;
+                border-radius: 50px;
+                padding:0 25px;
+
+                &-android{
+                    background:#000;
+
+                    span{
+                        display:inline-block;
+                        text-align:center;
+                        width:100%;
+                        font-size:18px;
+                        font-weight:500;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_android.jpg) no-repeat 0 50%;
+                        padding:0 20px 0 30px;
+                    }
+                }
+                &-ios{
+                    background:#000;
+                    margin-left:10px;
+
+                    span{
+                        display:inline-block;
+                        text-align:center;
+                        width:100%;
+                        height:48px;
+                        font-size:18px;
+                        font-weight:500;
+                        color:#fff;
+                        background:url(../img/sub/introduce/bu_ios.png) no-repeat 0 8px;
+                        padding:0 30px 0 60px;
+                    }
+                }
+            }
+        }
+    }
 }

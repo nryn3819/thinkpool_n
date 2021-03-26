@@ -16,6 +16,7 @@
 @import 'usrguide';
 @import 'qna';
 @import 'mysignal';
+@import 'keyword';
 
 .sub-content {
     position: relative;
@@ -122,6 +123,18 @@
     color: #333;
     font-weight: 700;
 
+    em{
+        font: {
+            style: normal;
+            weight: 300;
+            size: 14px;
+        }
+        color:#999;
+        padding-left:10px;
+    }
+
+    
+
     &-s {
         font-size: 20px;
         text-indent: 0;
@@ -133,6 +146,11 @@
             weight: 700;
         }
         text-indent: 0;
+
+        span{
+            font-size:16px;
+            font-weight:300;
+        }
     }
     &-nidt{
         display: block;
