@@ -17,6 +17,8 @@
 @import 'qna';
 @import 'mysignal';
 @import 'keyword';
+@import 'customer';
+
 
 .sub-content {
     position: relative;
@@ -139,6 +141,16 @@
         font-size: 20px;
         text-indent: 0;
         font-weight: 700;
+
+        em{
+            font: {
+                size:16px;
+                style:normal;
+                weight:300;
+            }
+            color:#666;
+            padding-left:5px;
+        }
     }
     &-xs {
         font : {

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
         integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- basic css -->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="scss/common.scss">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -145,176 +145,224 @@
 
                 <nav id="subNav" class="garo">
                     <ul>
-                        <li><a href="#" class="active">AI종목추천 홈</a></li>
-                        <li><a href="#">추천봇전체보기</a></li>
-                        <li><a href="#"><span class="label-primary label">적응형</span> AI어드바이저</a></li>
-                        <li><a href="#">나의추천봇</a></li>
-                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#" class="active">쇼셜분석</a></li>
+                        <li><a href="#">증권가 속보</a></li>
+                        <li><a href="#">주식종합토론</a></li>
+                        <li><a href="#">유머방</a></li>
+                        <li><a href="#">정치방</a></li>
+                        <li><a href="#">나의활동</a></li>
                     </ul>
                 </nav>
 
                 <div id="content" class="sub nbg">
                     <!-- nbg 추가 -->
-                    <h3 class="sub-title">나의 AI매매신호</h3>
+                    <h3 class="sub-title">고객센터</h3>
 
-                    <div class="sub-content">
-                        
-
-                        <div class="mysignal mt-40">
-                            <div class="left">
-                                <div class="list list01">
-                                    <strong>무제한</strong>
-                                    <span>매매내역보기</span>
-
-                                    <div class="check glyphicon glyphicon-ok dn"></div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="list list02">
-                                    <strong>30종목</strong>
-                                    <span>실시간 알림 수신</span>
-
-                                    <div class="check glyphicon glyphicon-ok dn"></div>
-                                </div>
-                                <!-- // -->
-                            </div>
-                            <!-- left -->
-
-                            <div class="right">
-                                <dl>
-                                    <dt>이용중인서비스</dt>
-                                    <dd>
-                                        <span class="dn">무제한 AI매매신호 서비스</span>
-                                    </dd>
-
-                                    <dt>이용기간</dt>
-                                    <dd>
-                                        <span>2020-10-20 ~ 2020-11-20</span>
-                                    </dd>
-
-                                    <dt>SMS수신</dt>
-                                    <dd>
-                                        <span>010-52**-23**</span>
-                                        <button>변경하기</button>
-                                    </dd>
-                                </dl>
-
-                                <div class="bnr">
-                                    <img src="./img/sub/mysignal/itembnr_3.png" alt="3종목 부족하시죠?">
-                                </div>
-                                <!-- //3개월 배너 -->
-
-                                <div class="app">
-                                    <button class="btn btn-android">
-                                        <span>Google Play 다운로드</span>
-                                    </button>
-
-                                    <button class="btn btn-ios">
-                                        <span>IOS 다운로드</span>
-                                    </button>
-
-                                </div>
-                            </div>
-                            <!-- right -->
-                        </div>
-                        <!-- //나의매매신호 -->
-
-
-                        <div class="sub-section mt-40 clearfix">
-
-                            <div class="item_board_nav mb-40">
-                                <h4 class="sr-only">나의AI매매신호 카테고리</h4>
-                                <ul class="nav nav-tabs">
-                                    <li role="presentation"><a href="#">나의 알림종목</a></li>
-                                    <li role="presentation" class="active"><a href="#">알림 내역</a></li>
-                                    <li role="presentation"><a href="#">서비스결제내역</a></li>
-                                </ul>
-                            </div>
-                            <!-- // -->
-
-                            <div class="table_w">
-
-                                <div class="tbl-top">
-                                    <div class="left">
-                                        <h4 class="sub-title-xs">AI매매신호 실시간 문자내역 <span>(최근1년)</span></h4>
-                                    </div>
-                                    <!-- //left -->
-
-                                    <div class="right">
-                                        <span>실제 받으신 신호발생 시간과 시간차가 있을 수 있습니다.</span>
-                                    </div>
-                                    <!-- //right -->
-                                </div>
-                                <!-- //tbl-top -->
-
-                                <table class="table table-hover mt-10 pull-left">
-                                    <colgroup>
-                                        <col width="150">
-                                        <col width="100">
-                                        <col width="*">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">신호발생일시</th>
-                                            <th scope="col">신호상태</th>
-                                            <th scope="col">SMS발송내역</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">
-                                                <span>2020/11/25</span>
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="up">매수</span>
-                                            </td>
-                                            <td>
-                                                <span>문자내용 어쩌구 저쩌구 얄라리얄라 문자내용 어쩌구 저쩌구 얄라리얄라 문자내용 어쩌구 저쩌구</span>
-                                            </td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                                <!-- //table -->
-
-                                <div class="paging text-center">
-                                    <ul class="pagination">
-                                        <li class="disabled">
-                                            <a href="#" aria-label="Previous">
-                                                <span aria-hidden="true">«</span>
-                                            </a>
-                                        </li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                            <a href="#" aria-label="Next">
-                                                <span aria-hidden="true">»</span>
-                                            </a>
-                                        </li>
+                    <div class="sub-content mt-20">
+                        <div class="sub-section">
+                            <div class="customer" role="tabpanel">
+                                <div class="item_board_nav">
+                                    <h4 class="sr-only">나의AI매매신호 카테고리</h4>
+                                    <ul class="nav nav-tabs">
+                                        <li role="presentation" class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">아이디 찾기</a></li>
+                                        <li role="presentation"><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">비밀번호 찾기</a></li>
+                                        <li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">비밀번호 변경</a></li>
+                                        <li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">회원정보 변경</a></li>
+                                        <li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">회원가입</a></li>
+                                        <li role="presentation"><a href="#tab06" aria-controls="tab06" role="tab" data-toggle="tab">회원탈퇴</a></li>
                                     </ul>
                                 </div>
-                                <!-- //paging -->
+                                <!-- //tab -->
+
+                                <div class="tab-content member_setting">
+                                    <div class="tab-pane fade in active" role="tabpanel" id="tab01">
+                                        <div class="title">
+                                            <strong class="idpw">아이디 찾기</strong>
+                                        </div>
+                                        <!-- //title -->
+
+                                        <div class="user_input">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="">이름</label>
+                                                    <input type="text" placeholder="가입시 등록한 이름을 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                                <div class="form-group">
+                                                    <label for="">비밀번호</label>
+                                                    <input type="password" placeholder="'-' 없이 번호만 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                                <button type="submit" class="btn btn-primary">아이디 찾기</button>
+                                            </form>
+                                        </div>
+                                        <!-- //user_input -->
+
+                                        <div class="idlist">
+                                            <p class="text-center">※ 아이디를 확인해주세요!</p>
+
+                                            <div class="table_w mt-20">
+                                                <table class="table table-hover">
+                                                    <colgroup>
+                                                        <col width="50%">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">아이디</th>
+                                                            <th scope="col">가입일</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span>abcd****</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span>2020/11/24</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="btnbox">
+                                                <button type="button" class="btn btn-primary">비밀번호 찾기</button>
+                                                <button type="button" class="btn btn-primary">로그인</button>
+                                            </div>
+
+                                        </div>
+                                        <!-- //idlist -->
+
+                                        
+                                    </div>
+                                    <!-- //tab-pane -->
+
+                                    <div class="tab-pane fade" role="tabpanel" id="tab02">
+                                        <div class="title">
+                                            <strong class="idpw">비밀번호 찾기</strong>
+                                        </div>
+                                        <!-- //title -->
+
+                                        <div class="user_input">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="">아이디</label>
+                                                    <input type="text" placeholder="아이디를 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                                <div class="form-group">
+                                                    <label for="">이름</label>
+                                                    <input type="text" placeholder="가입시 등록한 이름을 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                                <div class="form-group">
+                                                    <label for="">휴대폰 번호</label>
+                                                    <input class="pnum pnum-p" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
+                                                    <button type="submit" class="clause_num">인증번호받기</button>
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group clause">
+                                                    <label for="">인증번호</label>
+                                                    <input class="pnum" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
+                                                    <button type="submit" class="clause_num">확인</button>
+                                                </div>
+                                                <!-- //group -->
+                                            </form>
+
+
+                                            <div class="btnbox">
+                                                <p>※ 비밀번호찾기에 어려움이 있으시면 고객센터 1666-6300 으로 연락주시기 바랍니다.</p>
+                                                <button type="button" class="btn btn-primary">확인</button>
+                                            </div>
+                                        </div>
+                                        <!-- //user_input -->
+
+                                        <div class="complete_massage">
+                                            <strong>회원님 카카오톡으로 임시 비밀번호를 발송 하였습니다.</strong>
+
+                                            <span>
+                                                <em class="dn">
+                                                    보내드린 임시 비밀번호로 로그인하신후 <br>
+                                                    비밀번호변경에서 원하시는 비밀번호로 변경하시기 바랍니다.
+                                                </em> <br>
+                                                카카오톡을 설치하지 않은 회원님께는 SMS문자로 전송됩니다.
+                                            </span>
+
+                                            <div class="btnbox mt-40">
+                                                <p>※ 임시비밀번호가 정상적으로 수신되지 않으실 경우 1666-6300 으로 연락주시기 바랍니다.</p>
+                                                <button type="button" class="btn btn-primary">비밀번호 변경</button>
+                                                <button type="button" class="btn btn-default">로그인</button>
+                                            </div>
+
+                                        </div>
+
+                                        <script>
+                                            $('.clause_num').on('click', function(){
+                                                $(this).addClass('active');
+                                                $('.clause').show();
+                                            });
+                                        </script>
+                                    </div>
+                                    <!-- //tab-pane -->
+
+                                    <div class="tab-pane fade" role="tabpanel" id="tab03">
+                                        <div class="title">
+                                            <strong class="pw">비밀번호 변경</strong>
+                                        </div>
+                                        <!-- //title -->
+
+                                        <div class="user_input">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="">현재비밀번호</label>
+                                                    <input type="text" placeholder="비밀번호를 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                                <div class="form-group">
+                                                    <label for="">새비밀번호</label>
+                                                    <input type="text" placeholder="새 비밀번호를 입력하세요">
+                                                    <span class="up txt">
+                                                        6~12자리 영문,숫자만 가능하며, 연속하여<br>
+                                                        동일한 영문 또는 숫자3자리 이상 사용불가
+                                                    </span>
+                                                </div>
+                                                <!-- //group -->
+                                                <div class="form-group">
+                                                    <label for="">새비밀번호를 다시한번 입력해주세요</label>
+                                                    <input type="text" placeholder="새 비밀번호를 다시한번 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                            </form>
+
+
+                                            <div class="btnbox">
+                                                <button type="button" class="btn btn-primary">변경완료</button>
+                                            </div>
+                                        </div>
+                                        <!-- //user_input -->
+                                    </div>
+                                    <!-- //tab-pane -->
+
+                                    <div class="tab-pane fade" role="tabpanel" id="tab04">4</div>
+                                    <!-- //tab-pane -->
+
+                                    <div class="tab-pane fade" role="tabpanel" id="tab05">5</div>
+                                    <!-- //tab-pane -->
+
+                                    <div class="tab-pane fade" role="tabpanel" id="tab06">6</div>
+                                    <!-- //tab-pane -->
+
+                                </div>
+                                <!-- //tab-content -->
                             </div>
-                            <!-- //tbl -->
-
-                            <div class="gbnr mt-20 pull-left">
-                                <img src="./img/sub/bnr/adviser.jpg" alt="" width="100%" height="90">
-                            </div>
-                            <!-- //google bnr  -->
-
-
-                            <div class="hspace100"></div>
-
-                            
+                            <!-- //customer -->
                         </div>
-                        <!-- //sub-section -->
-
+                        <!-- //section -->
                     </div>
-                    <!-- //sub-content -->
-
+                    <!-- // -->
 
 
                 </div>
@@ -357,6 +405,7 @@
                             </li>
 
                             <li class="list">
+
                                 <a href="#" class="myItemList" data-toggle="popover"
                                     data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
                                     <span class="name" title="종목명">삼성전자</span>

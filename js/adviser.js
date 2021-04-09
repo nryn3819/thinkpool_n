@@ -13,7 +13,11 @@ $(function(){
         $('#subscribe').modal('hide');
         $('#subscribe').on('hidden.bs.modal', function(e){
             var nextModal = $(thisBtn).attr('data-target');
-            $(nextModal).modal('show');
+            $(nextModal).modal({
+                show : true,
+                keyboard: false,
+                backdrop: 'static'
+            });
             $(this).off('hidden.bs.modal');
         });
     });

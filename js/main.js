@@ -297,10 +297,9 @@ $(function () {
         $('#subscribe').modal('hide');
         $('#subscribe').on('hidden.bs.modal', function(e){
             var nextModal = $(thisBtn).attr('data-target');
-            $(nextModal).modal('show');
+            $(nextModal).modal();
             $(this).off('hidden.bs.modal');
         });
-        
     });
 
     //module
