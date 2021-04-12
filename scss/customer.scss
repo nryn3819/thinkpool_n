@@ -468,3 +468,48 @@
 
     
 }
+
+.clause_box{
+    display:block;
+    padding-top:60px;
+
+    .title{
+        display:block;
+        padding-bottom:60px;
+
+        strong{
+            display:block;
+            font-size:40px;
+            color:#333;
+            font-weight:300;
+        }
+        span{
+            display:block;
+            padding-top:40px;
+            font-size:20px;
+            color:#333;
+            font-weight:700;
+        }
+    }
+
+    article{
+        display:block;
+        padding-bottom:40px;
+
+        .tit{
+            display:block;
+            font-size:14px;
+            color:#333;
+            font-weight:500;
+        }
+        .con{
+            display:block;
+            font-size:13px;
+            line-height:24px;
+            color:#666;
+            font-weight:400;
+            white-space: pre-wrap;
+            letter-spacing: -0.05em;
+        }
+    }
+}
