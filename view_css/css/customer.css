@@ -507,3 +507,50 @@
   color: #666;
   font-weight: 300;
 }
+
+.clause_box {
+  display: block;
+  padding-top: 60px;
+}
+
+.clause_box .title {
+  display: block;
+  padding-bottom: 60px;
+}
+
+.clause_box .title strong {
+  display: block;
+  font-size: 40px;
+  color: #333;
+  font-weight: 300;
+}
+
+.clause_box .title span {
+  display: block;
+  padding-top: 40px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.clause_box article {
+  display: block;
+  padding-bottom: 40px;
+}
+
+.clause_box article .tit {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.clause_box article .con {
+  display: block;
+  font-size: 13px;
+  line-height: 24px;
+  color: #666;
+  font-weight: 400;
+  white-space: pre-wrap;
+  letter-spacing: -0.05em;
+}

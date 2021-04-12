@@ -222,9 +222,93 @@
                                             아래 버튼 의 data-target 의 #id 값을 경우에 따라 변경해주세요. 
                                             값에 따라 팝업이 열립니다. 
                                          -->
-                                        <button type="button" class="btn btn-primary pNumCheck" data-target="#modifynum">
+                                        <button type="button" class="btn btn-primary pNumCheck" data-target="#notPnum">
                                             <span class="glyphicon glyphicon-check"></span>
                                             <span>확인했습니다.</span>
+                                        </button>
+                                    </div>
+                                    <!-- //modal-footer -->
+                                </div>
+                                <!-- //dialog -->
+                            </div>
+                            <!-- //content -->
+                        </div>
+                        <!-- //modal -->
+
+                        
+
+                        <div class="modal fade scb_popup nborder" id="modifynum" role="dialog" aria-labelledby="내정보수정팝업" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" aria-label="close" class="close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <!-- //modal-header -->
+
+                                    <div class="modal-body">
+                                        <div class="scb_guide box text-center mb-40">
+                                            <span>시장적응형 AI 어드바이저 (안정형) <br>신청이 완료되었습니다.</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="scb_guide txt-s text-center mt-20">
+                                            <span>투자금액에 맞춰서 AI가 매매종목을 휴대폰으로 알려드립니다. <br>상세정보를 설정해주세요.</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="scb_input mt-40">
+                                            <dl>
+                                                <dt>폰번호</dt>
+                                                <dd>
+                                                    <form action="" class="form-inline">
+                                                        <div class="form-group">
+                                                            <label for="ch_num" class="sr-only">전화번호변경</label><input type="text" class="form-control" id="ch_num" placeholder="010-0000-0000">
+                                                        </div>
+                                                        <button type="button" class="btn btn-active" data-toggle="modal" data-target="#notPnum">변경</button>
+                                                    </form>
+                                                </dd>
+
+                                                <dt>투자금액</dt>
+                                                <dd>
+                                                    <form action="" class="form-inline">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="iv_price" placeholder="3000"><label for="iv_price">만원</label>
+                                                        </div>
+                                                    </form>
+                                                </dd>
+
+                                                <dt>관리 종목수</dt>
+                                                <dd>
+                                                    <form action="" class="form-inline">
+                                                        <div class="form-group">
+                                                            <select name="" id="" class="form-control">
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </div>
+                                                        <span>종목</span>
+                                                    </form>
+                                                </dd>
+
+                                                <dt>손절매</dt>
+                                                <dd>
+                                                    <form action="" class="form-inline">
+                                                        <div class="form-group">
+                                                            <select name="" id="" class="form-control">
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <!-- //modal-body -->
+
+                                    <div class="modal-footer text-center">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                            <span>저장하기</span>
                                         </button>
                                     </div>
                                     <!-- //modal-footer -->
@@ -268,7 +352,7 @@
                                                         <div class="form-group">
                                                             <label for="a_num" class="sr-only">인증번호입력</label><input type="text" class="form-control" id="a_num" placeholder="인증번호">
                                                         </div>
-                                                        <button type="submit" class="btn btn-active">인증</button>
+                                                        <button type="button" class="btn btn-active">인증</button>
                                                         <span class="time">05:00</span>
                                                     </form>
                                                 </dd>
@@ -280,88 +364,6 @@
                                     <div class="modal-footer text-center">
                                         <button type="button" class="btn btn-primary" data-dismiss="modal">
                                             <span>확인</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-footer -->
-                                </div>
-                                <!-- //dialog -->
-                            </div>
-                            <!-- //content -->
-                        </div>
-                        <!-- //modal -->
-
-                        <div class="modal fade scb_popup nborder" id="modifynum" role="dialog" aria-labelledby="내정보수정팝업" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" data-dismiss="modal" aria-label="close" class="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-header -->
-
-                                    <div class="modal-body">
-                                        <div class="scb_guide box text-center mb-40">
-                                            <span>시장적응형 AI 어드바이저 (안정형) <br>신청이 완료되었습니다.</span>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div class="scb_guide txt-s text-center mt-20">
-                                            <span>투자금액에 맞춰서 AI가 매매종목을 휴대폰으로 알려드립니다. <br>상세정보를 설정해주세요.</span>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div class="scb_input mt-40">
-                                            <dl>
-                                                <dt>폰번호</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <label for="ch_num" class="sr-only">전화번호변경</label><input type="text" class="form-control" id="ch_num" placeholder="010-0000-0000">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-active">변경</button>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>투자금액</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="iv_price" placeholder="3000"><label for="iv_price">만원</label>
-                                                        </div>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>관리 종목수</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <select name="" id="" class="form-control">
-                                                                <option value=""></option>
-                                                            </select>
-                                                        </div>
-                                                        <span>종목</span>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>손절매</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <select name="" id="" class="form-control">
-                                                                <option value=""></option>
-                                                            </select>
-                                                        </div>
-                                                    </form>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                    <!-- //modal-body -->
-
-                                    <div class="modal-footer text-center">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                            <span>저장하기</span>
                                         </button>
                                     </div>
                                     <!-- //modal-footer -->
