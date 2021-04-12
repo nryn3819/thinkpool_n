@@ -261,6 +261,7 @@
   font-weight: 300;
   height: 36px;
   border: 0;
+  float: left;
 }
 
 .board_sch .guide {
@@ -274,13 +275,15 @@
   font-weight: 500;
   border-radius: 20px;
   margin-left: 10px;
+  margin-top: 8px;
   cursor: pointer;
+  clear: none;
 }
 
 .board_sch .layer_guide {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   right: 300px;
   z-index: 99;
 }
@@ -296,7 +299,7 @@
   text-align: left;
   font-size: 13px;
   line-height: 18px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .board_sch .layer_guide .ly_close {
@@ -323,7 +326,7 @@
 
 .b_btn {
   height: 34px;
-  line-height: 30px;
+  line-height: 32px;
   border: 1px solid #dfdfdf;
   border-radius: 34px;
   padding: 0 11px;

@@ -155,652 +155,677 @@
 
                 <div id="content" class="sub nbg">
                     <!-- nbg 추가 -->
-                    <h3 class="sub-title">MY추천봇</h3>
+                    <nav id="subNav" class="leftNav" role="tabpanel">
+                        <h3 class="sr-only">뉴스네비게이션</h3>
+                        <ul role="tablist">
+                            <li class="active" role="presentation"><a href="#tab01" aria-controls="tab01" data-toggle="tab">My추천봇</a></li>
+                            <li class="" role="presentation"><a href="#tab02" aria-controls="tab02" data-toggle="tab">My AI어드바이저</a></li>
+                        </ul>
+                    </nav>
 
-                    <div class="sub-content">
+                    <div class="tab-content">
+                        <div id="tab01" class="tab-pane fade in active">
+                            <div class="sub-content clearfix">
                         
 
-                        <div class="adviser mt-40">
-                            <h4 class="sr-only">AI어드바이저란</h4>
-                            <div class="left">
-                                <div class="thumb">
-                                    <img src="" alt="">
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="right">
-                                <div class="info">
-                                    <div class="tit-lg">AI어드바이저 안정형</div>
-                                    <!-- //tit -->
-
-                                    <dl>
-                                        <dt>아이디</dt>
-                                        <dd>
-                                            <span>ilcoff**</span> <span>(네이버로그인)</span>
-                                        </dd>
-                                        <!-- //아이디 -->
-
-                                        <dt>알림받을 폰번호</dt>
-                                        <dd>
-                                            <span>010-1234-1234</span>
-                                            <button type="submit">변경하기</button>
-                                        </dd>
-                                        <!-- //전화번호 -->
-
-                                        <dt>가입서비스</dt>
-                                        <dd>
-                                            <span class="name">AI어드바이저 (안정형)</span>
-                                            <button type="submit">변경하기</button>
-                                        </dd>
-                                        <!-- //가입서비스 -->
-
-                                        <dt class="lst">이용기간</dt>
-                                        <dd class="lst">
-                                            <span>2020.05.04 ~ 2020.05.30</span>
-                                        </dd>
-                                        <!-- //이용기간 -->
-                                    </dl>
+                                <div class="adviser mt-40">
+                                    <h4 class="sr-only">AI어드바이저란</h4>
+                                    <div class="left">
+                                        <div class="thumb">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
                                     <!-- // -->
-
-                                </div>
-                                <!-- // -->
-                            </div>
-                            <!-- // -->
-                        </div>
-                        <!-- //adviser -->
-
-                        <!-- 구독하기 팝업 -->
-                        <div class="modal fade scb_popup nborder" id="subscribe" role="dialog" aria-labelledby="구독하기안내팝업" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" data-dismiss="modal" aria-label="close" class="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-header -->
-
-                                    <div class="modal-body">
-                                        <div class="scb_guide">
-                                            <ul>
-                                                <li><div>매월 자동 결제되는 <span class="up">'구독'</span>서비스 입니다.</div></li>
-                                                <li><div>언제든지 <span class="up">'구독 중단'</span>할 수 있습니다.</div></li>
-                                                <li><div><span class="up">24시간</span> 이내에 결제취소 가능합니다.(단, 월1회)</div></li>
-                                                <li><div>결제취소 시 <span class="up">1일 이용료와 취소수수료 10%가 부과</span>됩니다.</div></li>
-                                                <li><div>서비스 <a href="#">이용약관</a> 동의</div></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- //modal-body -->
-
-                                    <div class="modal-footer text-center">
-                                        <!-- 
-                                            아래 버튼 의 data-target 의 #id 값을 경우에 따라 변경해주세요. 
-                                            값에 따라 팝업이 열립니다. 
-                                         -->
-                                        <button type="button" class="btn btn-primary pNumCheck" data-target="#modifynum">
-                                            <span class="glyphicon glyphicon-check"></span>
-                                            <span>확인했습니다.</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-footer -->
-                                </div>
-                                <!-- //dialog -->
-                            </div>
-                            <!-- //content -->
-                        </div>
-                        <!-- //modal -->
-
-                        <div class="modal fade scb_popup nborder" id="notPnum" role="dialog" aria-labelledby="휴대폰번호입력팝업" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" data-dismiss="modal" aria-label="close" class="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-header -->
-
-                                    <div class="modal-body">
-                                        <div class="scb_guide text-center">
-                                            <span>매수&middot;매도 종목 알림을 받을 휴대폰 번호를 입력해주세요.</span>
-                                        </div>
-
-                                        <div class="scb_input mt-40">
+        
+                                    <div class="right">
+                                        <div class="info">
+                                            <div class="tit-lg">AI어드바이저 안정형</div>
+                                            <!-- //tit -->
+        
                                             <dl>
-                                                <dt>폰번호</dt>
+                                                <dt>아이디</dt>
                                                 <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <label for="p_num" class="sr-only">전화번호입력</label><input type="text" class="form-control" id="p_num" placeholder="010-0000-0000">
-                                                        </div>
-                                                        <button type="button" class="btn btn-active p_num_submit">인증번호받기</button>
-                                                    </form>
+                                                    <span>ilcoff**</span> <span>(네이버로그인)</span>
                                                 </dd>
-
-                                                <dt class="a_num_input">&nbsp;</dt>
-                                                <dd class="a_num_input">
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <label for="a_num" class="sr-only">인증번호입력</label><input type="text" class="form-control" id="a_num" placeholder="인증번호">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-active">인증</button>
-                                                        <span class="time">05:00</span>
-                                                    </form>
+                                                <!-- //아이디 -->
+        
+                                                <dt>알림받을 폰번호</dt>
+                                                <dd>
+                                                    <span>010-1234-1234</span>
+                                                    <button type="submit">변경하기</button>
                                                 </dd>
+                                                <!-- //전화번호 -->
+        
+                                                <dt>가입서비스</dt>
+                                                <dd>
+                                                    <span class="name">AI어드바이저 (안정형)</span>
+                                                    <button type="submit">변경하기</button>
+                                                </dd>
+                                                <!-- //가입서비스 -->
+        
+                                                <dt class="lst">이용기간</dt>
+                                                <dd class="lst">
+                                                    <span>2020.05.04 ~ 2020.05.30</span>
+                                                </dd>
+                                                <!-- //이용기간 -->
                                             </dl>
-                                        </div>
-                                    </div>
-                                    <!-- //modal-body -->
-
-                                    <div class="modal-footer text-center">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                            <span>확인</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-footer -->
-                                </div>
-                                <!-- //dialog -->
-                            </div>
-                            <!-- //content -->
-                        </div>
-                        <!-- //modal -->
-
-                        <div class="modal fade scb_popup nborder" id="modifynum" role="dialog" aria-labelledby="내정보수정팝업" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" data-dismiss="modal" aria-label="close" class="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-header -->
-
-                                    <div class="modal-body">
-                                        <div class="scb_guide box text-center mb-40">
-                                            <span>시장적응형 AI 어드바이저 (안정형) <br>신청이 완료되었습니다.</span>
+                                            <!-- // -->
+        
                                         </div>
                                         <!-- // -->
-
-                                        <div class="scb_guide txt-s text-center mt-20">
-                                            <span>투자금액에 맞춰서 AI가 매매종목을 휴대폰으로 알려드립니다. <br>상세정보를 설정해주세요.</span>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div class="scb_input mt-40">
-                                            <dl>
-                                                <dt>폰번호</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <label for="ch_num" class="sr-only">전화번호변경</label><input type="text" class="form-control" id="ch_num" placeholder="010-0000-0000">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-active">변경</button>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>투자금액</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="iv_price" placeholder="3000"><label for="iv_price">만원</label>
-                                                        </div>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>관리 종목수</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <select name="" id="" class="form-control">
-                                                                <option value=""></option>
-                                                            </select>
-                                                        </div>
-                                                        <span>종목</span>
-                                                    </form>
-                                                </dd>
-
-                                                <dt>손절매</dt>
-                                                <dd>
-                                                    <form action="" class="form-inline">
-                                                        <div class="form-group">
-                                                            <select name="" id="" class="form-control">
-                                                                <option value=""></option>
-                                                            </select>
-                                                        </div>
-                                                    </form>
-                                                </dd>
-                                            </dl>
-                                        </div>
                                     </div>
-                                    <!-- //modal-body -->
-
-                                    <div class="modal-footer text-center">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                            <span>저장하기</span>
-                                        </button>
-                                    </div>
-                                    <!-- //modal-footer -->
+                                    <!-- // -->
                                 </div>
-                                <!-- //dialog -->
-                            </div>
-                            <!-- //content -->
-                        </div>
-                        <!-- //modal -->
-
-                        <!-- //구독하기 팝업 -->
-
-
-                        <div class="sub-section allDetail mt-40">
-
-                            <div class="item_board_nav mb-40">
-                                <h4 class="sr-only">어드바이저 카테고리</h4>
-                                <ul class="nav nav-tabs">
-                                    <li role="presentation" class="active"><a href="#">내 계좌 성과</a></li>
-                                    <li role="presentation"><a href="#">알림 내역</a></li>
-                                    <li role="presentation"><a href="#">서비스결제내역</a></li>
-                                </ul>
-                            </div>
-                            <!-- // -->
-
-                            <div class="mybot-info">
-                                <div class="infobox">
-                                    <dl>
-                                        <dt>투자 시작일</dt>
-                                        <dd>
-                                            <span>2020.09.02</span>
-                                        </dd>
-                                        <!-- //투자 시작일 -->
-
-                                        <dt>투 자 금 액</dt>
-                                        <dd>
-                                            <span>1000만원</span>
-                                        </dd>
-                                        <!-- //투자금액 -->
-
-                                        <dt>투자 종목수</dt>
-                                        <dd>
-                                            <span>10종목</span>
-                                        </dd>
-                                        <!-- // 투자종목수 -->
-
-                                        <dt>손절</dt>
-                                        <dd>
-                                            <span>15%</span>
-
-                                            <div class="btn-group">
-                                                <button type="submit">설정변경</button>
-                                                <button type="submit">다시 시작하기</button>
+                                <!-- //adviser -->
+        
+                                <!-- 구독하기 팝업 -->
+                                <div class="modal fade scb_popup nborder" id="subscribe" role="dialog" aria-labelledby="구독하기안내팝업" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-label="close" class="close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                             </div>
-                                        </dd>
-                                        <!-- // 손절 -->
-
-                                    </dl>
-                                    <dl>
-
-                                        <dt>최근 변경일</dt>
-                                        <dd>
-                                            <span>2020.09.10</span>
-                                        </dd>
-                                        <!-- // 최근변경일 -->
-
-                                        <dt>현재 추천봇</dt>
-                                        <dd>
-                                            <a href="#">나폴레옹</a>,
-                                            <a href="#">데이알파</a>
-                                        </dd>
-                                        <!-- // 현재 추천봇 -->
-                                    </dl>
+                                            <!-- //modal-header -->
+        
+                                            <div class="modal-body">
+                                                <div class="scb_guide">
+                                                    <ul>
+                                                        <li><div>매월 자동 결제되는 <span class="up">'구독'</span>서비스 입니다.</div></li>
+                                                        <li><div>언제든지 <span class="up">'구독 중단'</span>할 수 있습니다.</div></li>
+                                                        <li><div><span class="up">24시간</span> 이내에 결제취소 가능합니다.(단, 월1회)</div></li>
+                                                        <li><div>결제취소 시 <span class="up">1일 이용료와 취소수수료 10%가 부과</span>됩니다.</div></li>
+                                                        <li><div>서비스 <a href="#">이용약관</a> 동의</div></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- //modal-body -->
+        
+                                            <div class="modal-footer text-center">
+                                                <!-- 
+                                                    아래 버튼 의 data-target 의 #id 값을 경우에 따라 변경해주세요. 
+                                                    값에 따라 팝업이 열립니다. 
+                                                 -->
+                                                <button type="button" class="btn btn-primary pNumCheck" data-target="#modifynum">
+                                                    <span class="glyphicon glyphicon-check"></span>
+                                                    <span>확인했습니다.</span>
+                                                </button>
+                                            </div>
+                                            <!-- //modal-footer -->
+                                        </div>
+                                        <!-- //dialog -->
+                                    </div>
+                                    <!-- //content -->
                                 </div>
-                                <!-- // -->
-
-                                <p>
-                                    ※ 아래 자료는 투자원금 3천만원, 최대 보유 종목 15개로 시뮬레이션한 결과입니다. 
-                                </p>
-                                <!-- // -->
-                            </div>
-                            <!-- // -->
-
-
-                            <div class="result">
-                                <h4 class="box-title">성과</h4>
-
-                                <div class="resultbox_w">
-                                    <div class="resultbox">
-                                        <span>1개월</span>
-                                        <strong class="up">5.26%</strong>
+                                <!-- //modal -->
+        
+                                <div class="modal fade scb_popup nborder" id="notPnum" role="dialog" aria-labelledby="휴대폰번호입력팝업" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-label="close" class="close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <!-- //modal-header -->
+        
+                                            <div class="modal-body">
+                                                <div class="scb_guide text-center">
+                                                    <span>매수&middot;매도 종목 알림을 받을 휴대폰 번호를 입력해주세요.</span>
+                                                </div>
+        
+                                                <div class="scb_input mt-40">
+                                                    <dl>
+                                                        <dt>폰번호</dt>
+                                                        <dd>
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <label for="p_num" class="sr-only">전화번호입력</label><input type="text" class="form-control" id="p_num" placeholder="010-0000-0000">
+                                                                </div>
+                                                                <button type="button" class="btn btn-active p_num_submit">인증번호받기</button>
+                                                            </form>
+                                                        </dd>
+        
+                                                        <dt class="a_num_input">&nbsp;</dt>
+                                                        <dd class="a_num_input">
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <label for="a_num" class="sr-only">인증번호입력</label><input type="text" class="form-control" id="a_num" placeholder="인증번호">
+                                                                </div>
+                                                                <button type="submit" class="btn btn-active">인증</button>
+                                                                <span class="time">05:00</span>
+                                                            </form>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <!-- //modal-body -->
+        
+                                            <div class="modal-footer text-center">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                    <span>확인</span>
+                                                </button>
+                                            </div>
+                                            <!-- //modal-footer -->
+                                        </div>
+                                        <!-- //dialog -->
                                     </div>
-                                    <!-- //resultbox -->
-                                    <div class="resultbox">
-                                        <span>3개월</span>
-                                        <strong class="up">15.26%</strong>
-                                    </div>
-                                    <!-- //resultbox -->
-                                    <div class="resultbox">
-                                        <span>총 누적</span>
-                                        <strong class="up">235.26%</strong>
-                                    </div>
-                                    <!-- //resultbox -->
-                                    <div class="resultbox">
-                                        <span>비교 수익률<br>코스피 대비</span>
-                                        <strong class="up">455.26%</strong>
-                                    </div>
-                                    <!-- //resultbox -->
+                                    <!-- //content -->
                                 </div>
-                                <!-- //resultbox_w -->
-                            </div>
-                            <!-- //result -->
-
-                            <div class="risk">
-                                <h4 class="box-title">리스크 스코어</h4>
-
-                                <div class="riskbox">
-                                    <img src="./img/sub/bot/risk.jpg" alt="리스크">
-                                    <!-- //차트가 들어갈수도 있음 -->
-                                </div>
-                            </div>
-                            <!-- //lisk -->
-
-                            <div class="per">
-                                <h4 class="box-title">수익률</h4>
-
-                                <div class="chartbox"></div>
-                                <!-- //chart -->
-                            </div>
-                            <!-- //per -->
-
-                            <div class="highreturn">
-
-                                <div class="box-title">최고 수익 종목</div>
-
-                                <div class="tablebox">
-                                    <div class="table_w">
-                                        <table width="100%" class="table table-striped table-hover">
-                                            <colgroup>
-                                                <col width="*">
-                                                <col width="21%">
-                                                <col width="21%">
-                                                <col width="21%">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">종목명</th>
-                                                    <th scope="col">
-                                                        누적수익률
-                                                    </th>
-                                                    <th scope="col">
-                                                        매수일
-                                                    </th>
-                                                    <th scope="col">
-                                                        매도일
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <a href="#">종목명종목명종목명</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="up">0.34%</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/02/22</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span>20/03/11</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <!-- //modal -->
+        
+                                <div class="modal fade scb_popup nborder" id="modifynum" role="dialog" aria-labelledby="내정보수정팝업" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-label="close" class="close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <!-- //modal-header -->
+        
+                                            <div class="modal-body">
+                                                <div class="scb_guide box text-center mb-40">
+                                                    <span>시장적응형 AI 어드바이저 (안정형) <br>신청이 완료되었습니다.</span>
+                                                </div>
+                                                <!-- // -->
+        
+                                                <div class="scb_guide txt-s text-center mt-20">
+                                                    <span>투자금액에 맞춰서 AI가 매매종목을 휴대폰으로 알려드립니다. <br>상세정보를 설정해주세요.</span>
+                                                </div>
+                                                <!-- // -->
+        
+                                                <div class="scb_input mt-40">
+                                                    <dl>
+                                                        <dt>폰번호</dt>
+                                                        <dd>
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <label for="ch_num" class="sr-only">전화번호변경</label><input type="text" class="form-control" id="ch_num" placeholder="010-0000-0000">
+                                                                </div>
+                                                                <button type="submit" class="btn btn-active">변경</button>
+                                                            </form>
+                                                        </dd>
+        
+                                                        <dt>투자금액</dt>
+                                                        <dd>
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" id="iv_price" placeholder="3000"><label for="iv_price">만원</label>
+                                                                </div>
+                                                            </form>
+                                                        </dd>
+        
+                                                        <dt>관리 종목수</dt>
+                                                        <dd>
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                                <span>종목</span>
+                                                            </form>
+                                                        </dd>
+        
+                                                        <dt>손절매</dt>
+                                                        <dd>
+                                                            <form action="" class="form-inline">
+                                                                <div class="form-group">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <!-- //modal-body -->
+        
+                                            <div class="modal-footer text-center">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                    <span>저장하기</span>
+                                                </button>
+                                            </div>
+                                            <!-- //modal-footer -->
+                                        </div>
+                                        <!-- //dialog -->
                                     </div>
-                                    <!-- //table -->
+                                    <!-- //content -->
                                 </div>
-                                <!-- //tablebox -->
-                            </div>
-
-                            <div class="item_w">
-                                <h4 class="sr-only">종목정보</h4>
-
-                                <div class="rmd_bot_tabw" role="tabpanel">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="presentation" class="active">
-                                            <a data-toggle="tab" aria-controls="tendency" href="#possesion">보유종목</a>
-                                        </li>
-                                        <li role="presentation">
-                                            <a data-toggle="tab" aria-controls="data" href="#sell">매도완료종목</a>
-                                        </li>
-                                        <li role="presentation">
-                                            <a data-toggle="tab" aria-controls="data" href="#highreturn">최고수익종목</a>
-                                        </li>
-                                    </ul>
-                                    <!-- //tab-list -->
-                                
+                                <!-- //modal -->
+        
+                                <!-- //구독하기 팝업 -->
+        
+        
+                                <div class="sub-section allDetail mt-40">
+        
+                                    <div class="item_board_nav mb-40">
+                                        <h4 class="sr-only">어드바이저 카테고리</h4>
+                                        <ul class="nav nav-tabs">
+                                            <li role="presentation" class="active"><a href="#tab001" data-toggle="tab" aria-controls="tab01" role="tab">내 계좌 성과</a></li>
+                                            <li role="presentation"><a href="#tab002" data-toggle="tab" aria-controls="tab02" role="tab">알림 내역</a></li>
+                                            <li role="presentation"><a href="#tab003" data-toggle="tab" aria-controls="tab03" role="tab">서비스결제내역</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // -->
+        
                                     <div class="tab-content">
-                                        <div id="possesion" class="tab-pane fade in active" role="tabpanel">
-                                            <div class="table_w">
-                                                <table width="100%" class="table table-striped table-hover">
-                                                    <colgroup>
-                                                        <col width="*">
-                                                        <col width="140">
-                                                        <col width="140">
-                                                        <col width="140">
-                                                        <col width="140">
-                                                        <col width="100">
-                                                        <col width="100">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">종목명</th>
-                                                            <th scope="col">최초매수일</th>
-                                                            <th scope="col">매수단가</th>
-                                                            <th scope="col">매도완료일</th>
-                                                            <th scope="col">매도단가</th>
-                                                            <th scope="col">투자기간</th>
-                                                            <th scope="col">수익률</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="tab-pane fade in active" role="tabpanel" id="tab001">
+                                            <div class="mybot-info">
+                                                <div class="infobox">
+                                                    <dl>
+                                                        <dt>투자 시작일</dt>
+                                                        <dd>
+                                                            <span>2020.09.02</span>
+                                                        </dd>
+                                                        <!-- //투자 시작일 -->
+                
+                                                        <dt>투 자 금 액</dt>
+                                                        <dd>
+                                                            <span>1000만원</span>
+                                                        </dd>
+                                                        <!-- //투자금액 -->
+                
+                                                        <dt>투자 종목수</dt>
+                                                        <dd>
+                                                            <span>10종목</span>
+                                                        </dd>
+                                                        <!-- // 투자종목수 -->
+                
+                                                        <dt>손절</dt>
+                                                        <dd>
+                                                            <span>15%</span>
+                
+                                                            <div class="btn-group">
+                                                                <button type="submit">설정변경</button>
+                                                                <button type="submit">다시 시작하기</button>
+                                                            </div>
+                                                        </dd>
+                                                        <!-- // 손절 -->
+                
+                                                    </dl>
+                                                    <dl>
+                
+                                                        <dt>최근 변경일</dt>
+                                                        <dd>
+                                                            <span>2020.09.10</span>
+                                                        </dd>
+                                                        <!-- // 최근변경일 -->
+                
+                                                        <dt>현재 추천봇</dt>
+                                                        <dd>
+                                                            <a href="#">나폴레옹</a>,
+                                                            <a href="#">데이알파</a>
+                                                        </dd>
+                                                        <!-- // 현재 추천봇 -->
+                                                    </dl>
+                                                </div>
+                                                <!-- // -->
+                
+                                                <p>
+                                                    ※ 아래 자료는 투자원금 3천만원, 최대 보유 종목 15개로 시뮬레이션한 결과입니다. 
+                                                </p>
+                                                <!-- // -->
                                             </div>
                                             <!-- // -->
-                                
-                                            <div class="paging text-center">
-                                                <nav>
-                                                    <ul class="pagination">
-                                                        <li class="disabled">
-                                                            <a href="#" aria-label="Previous">
-                                                                <span aria-hidden="true">&laquo;</span>
-                                                            </a>
+                
+                
+                                            <div class="result">
+                                                <h4 class="box-title">성과</h4>
+                
+                                                <div class="resultbox_w">
+                                                    <div class="resultbox">
+                                                        <span>1개월</span>
+                                                        <strong class="up">5.26%</strong>
+                                                    </div>
+                                                    <!-- //resultbox -->
+                                                    <div class="resultbox">
+                                                        <span>3개월</span>
+                                                        <strong class="up">15.26%</strong>
+                                                    </div>
+                                                    <!-- //resultbox -->
+                                                    <div class="resultbox">
+                                                        <span>총 누적</span>
+                                                        <strong class="up">235.26%</strong>
+                                                    </div>
+                                                    <!-- //resultbox -->
+                                                    <div class="resultbox">
+                                                        <span>비교 수익률<br>코스피 대비</span>
+                                                        <strong class="up">455.26%</strong>
+                                                    </div>
+                                                    <!-- //resultbox -->
+                                                </div>
+                                                <!-- //resultbox_w -->
+                                            </div>
+                                            <!-- //result -->
+                
+                                            <div class="risk">
+                                                <h4 class="box-title">리스크 스코어</h4>
+                
+                                                <div class="riskbox">
+                                                    <img src="./img/sub/bot/risk.jpg" alt="리스크">
+                                                    <!-- //차트가 들어갈수도 있음 -->
+                                                </div>
+                                            </div>
+                                            <!-- //lisk -->
+                
+                                            <div class="per">
+                                                <h4 class="box-title">수익률</h4>
+                
+                                                <div class="chartbox"></div>
+                                                <!-- //chart -->
+                                            </div>
+                                            <!-- //per -->
+                
+                                            <div class="highreturn">
+                
+                                                <div class="box-title">최고 수익 종목</div>
+                
+                                                <div class="tablebox">
+                                                    <div class="table_w">
+                                                        <table width="100%" class="table table-striped table-hover">
+                                                            <colgroup>
+                                                                <col width="*">
+                                                                <col width="21%">
+                                                                <col width="21%">
+                                                                <col width="21%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">종목명</th>
+                                                                    <th scope="col">
+                                                                        누적수익률
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        매수일
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        매도일
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <a href="#">종목명종목명종목명</a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span class="up">0.34%</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/02/22</span>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <span>20/03/11</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table -->
+                                                </div>
+                                                <!-- //tablebox -->
+                                            </div>
+                
+                                            <div class="item_w">
+                                                <h4 class="sr-only">종목정보</h4>
+                
+                                                <div class="rmd_bot_tabw" role="tabpanel">
+                                                    <ul class="nav nav-tabs" role="tablist">
+                                                        <li role="presentation" class="active">
+                                                            <a data-toggle="tab" aria-controls="tendency" href="#possesion">보유종목</a>
                                                         </li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li><a href="#">2</a></li>
-                                                        <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
-                                                        <li>
-                                                            <a href="#" aria-label="Next">
-                                                                <span aria-hidden="true">&raquo;</span>
-                                                            </a>
+                                                        <li role="presentation">
+                                                            <a data-toggle="tab" aria-controls="data" href="#sell">매도완료종목</a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a data-toggle="tab" aria-controls="data" href="#highreturn">최고수익종목</a>
                                                         </li>
                                                     </ul>
-                                                </nav>
+                                                    <!-- //tab-list -->
+                                                
+                                                    <div class="tab-content">
+                                                        <div id="possesion" class="tab-pane fade in active" role="tabpanel">
+                                                            <div class="table_w">
+                                                                <table width="100%" class="table table-striped table-hover">
+                                                                    <colgroup>
+                                                                        <col width="*">
+                                                                        <col width="140">
+                                                                        <col width="140">
+                                                                        <col width="140">
+                                                                        <col width="140">
+                                                                        <col width="100">
+                                                                        <col width="100">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">종목명</th>
+                                                                            <th scope="col">최초매수일</th>
+                                                                            <th scope="col">매수단가</th>
+                                                                            <th scope="col">매도완료일</th>
+                                                                            <th scope="col">매도단가</th>
+                                                                            <th scope="col">투자기간</th>
+                                                                            <th scope="col">수익률</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
+                                                                            <td class="text-center"><span>20/02/02</span></td>
+                                                                            <td class="text-center"><span>56,600</span></td>
+                                                                            <td class="text-center"><span>20/19/11</span></td>
+                                                                            <td class="text-center"><span>29,000</span></td>
+                                                                            <td class="text-center"><span>4</span></td>
+                                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- // -->
+                                                
+                                                            <div class="paging text-center">
+                                                                <nav>
+                                                                    <ul class="pagination">
+                                                                        <li class="disabled">
+                                                                            <a href="#" aria-label="Previous">
+                                                                                <span aria-hidden="true">&laquo;</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">4</a></li>
+                                                                        <li><a href="#">5</a></li>
+                                                                        <li>
+                                                                            <a href="#" aria-label="Next">
+                                                                                <span aria-hidden="true">&raquo;</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                            <!-- //paging -->
+                                                        </div>
+                                                        <!-- //tab-content -->
+                                                
+                                                        <div id="sell" class="tab-pane fade" role="tabpannel">2</div>
+                                                        <!-- //tab-content -->
+                
+                                                        <div id="highreturn" class="tab-pane fade" role="tabpannel">3</div>
+                                                    </div>
+                                                    <!-- //tab-content -->
+                                                
+                                                </div>
                                             </div>
-                                            <!-- //paging -->
+                                            <!-- //item_w -->
+                
+                                            <div class="sms_sample">
+                                                <h4 class="box-title">문자 알림 샘플</h4>
+                
+                                                <div class="sms_w">
+                                                    <div class="smsbox">
+                                                        <!-- 이미지 -->
+                                                    </div>
+                
+                                                    <!-- //smsbox -->
+                                                    <div class="smsbox">
+                                                        <!-- 이미지 -->
+                                                    </div>
+                
+                                                    <!-- //smsbox -->
+                                                    <div class="smsbox">
+                                                        <!-- 이미지 -->
+                                                    </div>
+                
+                                                    <!-- //smsbox -->
+                                                    <div class="smsbox">
+                                                        <!-- 이미지 -->
+                                                    </div>
+                
+                                                    <!-- //smsbox -->
+                                                </div>
+                                            </div>
+                                            <!-- //sms_sample -->
                                         </div>
-                                        <!-- //tab-content -->
-                                
-                                        <div id="sell" class="tab-pane fade" role="tabpannel">2</div>
-                                        <!-- //tab-content -->
-
-                                        <div id="highreturn" class="tab-pane fade" role="tabpannel">3</div>
+                                        <!-- // -->
+                                        <div class="tab-pane fade" role="tabpanel" id="tab002"></div>
+                                        <!-- // -->
+                                        <div class="tab-pane fade" role="tabpanel" id="tab003"></div>
+                                        <!-- // -->
                                     </div>
-                                    <!-- //tab-content -->
-                                
+        
+                                    
+        
                                 </div>
+                                <!-- //all_detail -->
+        
                             </div>
-                            <!-- //item_w -->
-
-                            <div class="sms_sample">
-                                <h4 class="box-title">문자 알림 샘플</h4>
-
-                                <div class="sms_w">
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                </div>
-                            </div>
-                            <!-- //sms_sample -->
-
+                            <!-- //sub-content -->
                         </div>
-                        <!-- //all_detail -->
+                        <!-- //tab01 -->
 
+                        <div id="tab02" class="tab-pane fade"></div>
+                        <!-- //tab02 -->
                     </div>
-                    <!-- //sub-content -->
-
+                    <!-- //tab - content -->
 
 
                 </div>

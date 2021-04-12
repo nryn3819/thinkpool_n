@@ -9,6 +9,97 @@
     }
     .modal-footer{
         border-top:0;
+        text-align:center;
+    }
+}
+.member_modal{
+    .modal-header{
+        h4{
+            font-size:20px;
+            font-weight:700;
+        }
+    }
+    .modal-dialog{
+        width:520px;
+        padding:40px 0;
+
+        .modal-input{
+            display:block;
+            width:100%;
+
+            .form-group{
+                display:block;
+                float:left;
+                clear:both;
+
+                label{
+                    width:130px;
+                    height:40px;
+                    line-height:40px;
+                    text-align:center;
+                    font-size:16px;
+                    color:#333;
+                    font-weight:300;
+                    float:left;
+                }
+                input[type="text"]{
+                    width:280px;
+                    height:40px;
+                    line-height:38px;
+                    border:1px solid #333;
+                    float:left;
+                    padding:0 10px;
+                    font-size:16px;
+                    color:#333;
+                    font-weight:400;
+
+                    &::placeholder{
+                        color:#999;
+                        font-weight:300;
+                    }
+
+                    &.pnum{
+                        width:204px;
+                    }
+                }
+                button{
+                    width:122px;
+                    height:40px;
+                    line-height:36px;
+                    border:1px solid #3E72ED;
+                    border-radius: 5px;
+                    text-align:center;
+                    font-size:14px;
+                    font-weight:300;
+                    color:#3E72ED;
+                    float:left;
+                    margin-left:10px;
+                    background:#fff;
+                    &:hover{
+                        background:#3E72ED;
+                        color:#fff;
+                        font-weight:400;
+                    }
+                }
+            }
+        }
+    }
+    .modal-footer{
+        padding-bottom:30px;
+        .btn{
+            width:120px;
+            height:40px;
+            line-height:38px;
+            border-radius: 40px;
+            padding:0;
+            margin:0 5px;
+            &-primary{
+                background:#3E72ED;
+            }
+            &-default{
+                background:#ebebeb;
+            }
+        }
     }
 }
 .modal-title.btitle{

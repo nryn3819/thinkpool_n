@@ -168,7 +168,7 @@
                                         <li role="presentation"><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">비밀번호 찾기</a></li>
                                         <li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">비밀번호 변경</a></li>
                                         <li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">회원정보 변경</a></li>
-                                        <li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">회원가입</a></li>
+                                        <li role="presentation"><a href="#tab05">회원가입</a></li>
                                         <li role="presentation"><a href="#tab06" aria-controls="tab06" role="tab" data-toggle="tab">회원탈퇴</a></li>
                                     </ul>
                                 </div>
@@ -184,13 +184,13 @@
                                         <div class="user_input">
                                             <form action="">
                                                 <div class="form-group">
-                                                    <label for="">이름</label>
-                                                    <input type="text" placeholder="가입시 등록한 이름을 입력하세요">
+                                                    <label for="" class="title">이름</label>
+                                                    <input type="text" class="form-control" placeholder="가입시 등록한 이름을 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                                 <div class="form-group">
-                                                    <label for="">비밀번호</label>
-                                                    <input type="password" placeholder="'-' 없이 번호만 입력하세요">
+                                                    <label for="" class="title">비밀번호</label>
+                                                    <input type="password" class="form-control" placeholder="'-' 없이 번호만 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                                 <button type="submit" class="btn btn-primary">아이디 찾기</button>
@@ -248,25 +248,25 @@
                                         <div class="user_input">
                                             <form action="">
                                                 <div class="form-group">
-                                                    <label for="">아이디</label>
-                                                    <input type="text" placeholder="아이디를 입력하세요">
+                                                    <label for="" class="title">아이디</label>
+                                                    <input type="text" class="form-control" placeholder="아이디를 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                                 <div class="form-group">
-                                                    <label for="">이름</label>
-                                                    <input type="text" placeholder="가입시 등록한 이름을 입력하세요">
+                                                    <label for="" class="title">이름</label>
+                                                    <input type="text" class="form-control" placeholder="가입시 등록한 이름을 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                                 <div class="form-group">
-                                                    <label for="">휴대폰 번호</label>
-                                                    <input class="pnum pnum-p" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
+                                                    <label for="" class="title">휴대폰 번호</label>
+                                                    <input class="pnum pnum-p form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
                                                     <button type="submit" class="clause_num">인증번호받기</button>
                                                 </div>
                                                 <!-- //group -->
 
                                                 <div class="form-group clause">
-                                                    <label for="">인증번호</label>
-                                                    <input class="pnum" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
+                                                    <label for="" class="title">인증번호</label>
+                                                    <input class="pnum form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="'-' 없이 번호만 입력하세요">
                                                     <button type="submit" class="clause_num">확인</button>
                                                 </div>
                                                 <!-- //group -->
@@ -317,13 +317,13 @@
                                         <div class="user_input">
                                             <form action="">
                                                 <div class="form-group">
-                                                    <label for="">현재비밀번호</label>
-                                                    <input type="text" placeholder="비밀번호를 입력하세요">
+                                                    <label for="" class="title">현재비밀번호</label>
+                                                    <input type="text" class="form-control" placeholder="비밀번호를 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                                 <div class="form-group">
-                                                    <label for="">새비밀번호</label>
-                                                    <input type="text" placeholder="새 비밀번호를 입력하세요">
+                                                    <label for="" class="title">새비밀번호</label>
+                                                    <input type="text" class="form-control" placeholder="새 비밀번호를 입력하세요">
                                                     <span class="up txt">
                                                         6~12자리 영문,숫자만 가능하며, 연속하여<br>
                                                         동일한 영문 또는 숫자3자리 이상 사용불가
@@ -331,14 +331,14 @@
                                                 </div>
                                                 <!-- //group -->
                                                 <div class="form-group">
-                                                    <label for="">새비밀번호를 다시한번 입력해주세요</label>
-                                                    <input type="text" placeholder="새 비밀번호를 다시한번 입력하세요">
+                                                    <label for="" class="title">새비밀번호 확인</label>
+                                                    <input type="text" class="form-control" placeholder="새 비밀번호를 다시한번 입력하세요">
                                                 </div>
                                                 <!-- //group -->
                                             </form>
 
 
-                                            <div class="btnbox">
+                                            <div class="btnbox mt-20">
                                                 <button type="button" class="btn btn-primary">변경완료</button>
                                             </div>
                                         </div>
@@ -346,13 +346,125 @@
                                     </div>
                                     <!-- //tab-pane -->
 
-                                    <div class="tab-pane fade" role="tabpanel" id="tab04">4</div>
+                                    <div class="tab-pane fade" role="tabpanel" id="tab04">
+                                        <div class="title">
+                                            <strong class="mem">회원정보 변경</strong>
+                                        </div>
+                                        <!-- //title -->
+
+                                        <div class="user_input">
+                                            <p>※ 회원정보 확인을 위해 비밀번호를 입력하세요.</p>
+
+                                            <form action="" class="mt-40">
+                                                <div class="form-group">
+                                                    <label for="" class="title">비밀번호</label>
+                                                    <input type="text" class="form-control" placeholder="비밀번호를 입력하세요">
+                                                </div>
+                                                <!-- //group -->
+                                            </form>
+
+                                            <form action="" class="mt-40">
+
+                                                <div class="form-group">
+                                                    <label for="" class="title">이름</label>
+                                                    <input type="text" class="form-control pnum" placeholder="이름을 입력하세요" value="홍길동" disabled >
+                                                    <button type="button" data-target="#name" data-toggle="modal">이름변경</button>
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group">
+                                                    <label for="" class="title">아이디</label>
+                                                    <input type="text" class="form-control" placeholder="아이디를 입력하세요" value="abcde" disabled>
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group">
+                                                    <label for="" class="title">필명</label>
+                                                    <input type="text" class="form-control pnum" placeholder="필명을 입력하세요" value="아무개아무개" disabled>
+                                                    <button type="button" data-target="#nick" data-toggle="modal">필명변경</button>
+
+                                                    <span class="txt mt-10">
+                                                        <em class="up">필명은 변경후 3개월간 변경불가.</em> <br>
+                                                        2~6자의 한글, 4~12자의 영문, 숫자만 가능 <br>
+                                                        최종 필명 변경일 : 2020/12/14
+                                                    </span>
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group">
+                                                    <label for="" class="title">휴대폰 번호</label>
+                                                    <input type="text" class="form-control pnum" placeholder="휴대폰번호를 입력하세요" value="010-555-6066" disabled>
+                                                    <button type="button" data-target="#number" data-toggle="modal">번호변경</button>
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group">
+                                                    <span class="title">이벤트,서비스 정보수신</span>
+                                                    <label class="radio-inline agcheck">
+                                                        <input type="radio" name="agree" id="rdo01" value="option1" checked> 동의
+                                                    </label>
+                                                    <label class="radio-inline agcheck">
+                                                        <input type="radio" name="agree" id="rdo02" value="option1"> 미동의
+                                                    </label>
+                                                </div>
+                                                <!-- //group -->
+                                            </form>
+
+
+                                            <div class="btnbox mt-20">
+                                                <button type="button" class="btn btn-primary">확인</button>
+                                            </div>
+                                        </div>
+                                        <!-- //user_input -->
+                                    </div>
                                     <!-- //tab-pane -->
 
-                                    <div class="tab-pane fade" role="tabpanel" id="tab05">5</div>
-                                    <!-- //tab-pane -->
+                                    <div class="tab-pane fade" role="tabpanel" id="tab06">
+                                        <div class="title">
+                                            <strong class="wrl">회원탈퇴</strong>
+                                        </div>
+                                        <!-- //title -->
+                                        <div class="top_txt">
+                                            <strong>
+                                                <span class="dn">wonna님</span> 씽크풀 회원탈퇴를 진행합니다.
+                                            </strong>
 
-                                    <div class="tab-pane fade" role="tabpanel" id="tab06">6</div>
+                                            <span>
+                                                회원탈퇴를 하시면 회원님이 보유하고 계신 <em class="up">씽크캐시 및 모든 데이터가 자동 소멸</em> 되오니, <br>
+                                                신중하게 생각하신 후 결정하시기 바랍니다. <br><br>
+
+                                                탈퇴후에는 현재 사용중이던 아이디로는 다시 가입하실 수 없으며, <br>
+                                                같은 필명으로는 한달동안 가입이 불가 합니다. <br><br>
+
+                                                필명변경을 원하시면 <em class="dn">고객센터 > 회원정보변경</em> 에서 변경 가능 합니다. <br>
+                                                감사합니다. 
+                                            </span>
+                                        </div>
+                                        <!-- //top_txt -->
+
+                                        <div class="user_input pt-40">
+
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="" class="title">비밀번호</label>
+                                                    <input type="text" class="form-control" placeholder="가입시 등록한 이름을 입력하세요.">
+                                                </div>
+                                                <!-- //group -->
+
+                                                <div class="form-group">
+                                                    <label for="" class="title">탈퇴사유</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <!-- //group -->
+                                            </form>
+
+                                            <div class="btnbox mt-20">
+                                                <button type="button" class="btn btn-primary">취소</button>
+                                                <button type="button" class="btn btn-default">탈퇴</button>
+                                            </div>
+                                        </div>
+                                        <!-- //user_input -->
+                                    </div>
                                     <!-- //tab-pane -->
 
                                 </div>
@@ -364,9 +476,113 @@
                     </div>
                     <!-- // -->
 
-
                 </div>
                 <!-- //content -->
+
+                <div class="modal fade nborder member_modal" id="name" tabindex="-1" role="dialog" arai-labelledby="" arai-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                                <h4 class="modal-title text-center">이름 변경</h4>
+                            </div>
+                            <!-- //header -->
+                            <div class="modal-body">
+                                <div class="modal-input text-center">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="">변경할 이름</label>
+                                            <input type="text">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                            <div class="modal-footer text-center">
+                                <button type="button" class="btn btn-primary">확인</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            </div>
+                            <!-- footer -->
+                        </div>
+                        <!-- //content -->
+                    </div>
+                    <!-- //dialog -->
+                </div>
+                <!-- //modal - name  -->
+
+                <div class="modal fade nborder member_modal" id="nick" tabindex="-1" role="dialog" arai-labelledby="" arai-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                                <h4 class="modal-title text-center">필명 변경</h4>
+                            </div>
+                            <!-- //header -->
+                            <div class="modal-body">
+                                <div class="modal-input text-center">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="">변경할 필명</label>
+                                            <input type="text">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                            <div class="modal-footer text-center">
+                                <button type="button" class="btn btn-primary">확인</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            </div>
+                            <!-- footer -->
+                        </div>
+                        <!-- //content -->
+                    </div>
+                    <!-- //dialog -->
+                </div>
+                <!-- //modal - nick  -->
+
+                <div class="modal fade nborder member_modal" id="number" tabindex="-1" role="dialog" arai-labelledby="" arai-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                                <h4 class="modal-title text-center">휴대폰번호 변경</h4>
+                            </div>
+                            <!-- //header -->
+                            <div class="modal-body">
+                                <div class="modal-input text-center">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="">변경할 전화번호</label>
+                                            <input type="text" placeholder="010-1234-1234" class="pnum">
+                                            <button>인증번호받기</button>
+                                        </div>
+                                        <!-- //group -->
+
+                                        <div class="form-group">
+                                            <label for=""></label>
+                                            <input type="text" placeholder="인증번호" class="pnum">
+                                            <button>인증</button>
+                                        </div>
+                                        <!-- //group -->
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                            <div class="modal-footer text-center">
+                                <button type="button" class="btn btn-primary">확인</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            </div>
+                            <!-- footer -->
+                        </div>
+                        <!-- //content -->
+                    </div>
+                    <!-- //dialog -->
+                </div>
+                <!-- //modal - nick  -->
 
             </div>
             <!-- //contianer -->

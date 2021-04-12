@@ -10,6 +10,117 @@
 
 .nborder .modal-footer {
   border-top: 0;
+  text-align: center;
+}
+
+.member_modal .modal-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.member_modal .modal-dialog {
+  width: 520px;
+  padding: 40px 0;
+}
+
+.member_modal .modal-dialog .modal-input {
+  display: block;
+  width: 100%;
+}
+
+.member_modal .modal-dialog .modal-input .form-group {
+  display: block;
+  float: left;
+  clear: both;
+}
+
+.member_modal .modal-dialog .modal-input .form-group label {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  float: left;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"] {
+  width: 280px;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #333;
+  float: left;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"]::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"]:-ms-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"]::-ms-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"]::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.member_modal .modal-dialog .modal-input .form-group input[type="text"].pnum {
+  width: 204px;
+}
+
+.member_modal .modal-dialog .modal-input .form-group button {
+  width: 122px;
+  height: 40px;
+  line-height: 36px;
+  border: 1px solid #3E72ED;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #3E72ED;
+  float: left;
+  margin-left: 10px;
+  background: #fff;
+}
+
+.member_modal .modal-dialog .modal-input .form-group button:hover {
+  background: #3E72ED;
+  color: #fff;
+  font-weight: 400;
+}
+
+.member_modal .modal-footer {
+  padding-bottom: 30px;
+}
+
+.member_modal .modal-footer .btn {
+  width: 120px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 40px;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.member_modal .modal-footer .btn-primary {
+  background: #3E72ED;
+}
+
+.member_modal .modal-footer .btn-default {
+  background: #ebebeb;
 }
 
 .modal-title.btitle {
@@ -310,4 +421,21 @@
 
 #cancel .modal-footer {
   border-top: 0;
+}
+
+.member_simple .modal-footer .btn {
+  height: 30px;
+  border: 1px solid #d7d7d7;
+  background: none;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  border-radius: 3px;
+}
+
+.member_simple .modal-footer .btn-primary {
+  background: #3E72ED;
+  color: #fff;
+  border: 0;
+  font-weight: 400;
 }

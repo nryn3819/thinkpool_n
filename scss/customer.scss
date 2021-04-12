@@ -158,6 +158,62 @@
                 padding-left:60px;
                 background:url(../img/bu_pw.png) no-repeat 0 50%;
             }
+            &.mem{
+                padding-left:60px;
+                background:url(../img/bu_mem.png) no-repeat 0 50%;
+            }
+            &.wrl{
+                padding-left:60px;
+                background:url(../img/bu_wrl.png) no-repeat 0 100%;
+            }
+            &.rpt{
+                padding-left:60px;
+                background:url(../img/bu_rpt.png) no-repeat 0 100%;
+            }
+        }
+    }
+
+    .top_txt{
+        display:block;
+        text-align:center;
+        width:100%;
+        margin-top:80px;
+
+        strong{
+            display:block;
+            font-size:22px;
+            font-weight:500;
+            width:100%;
+            span{
+                font-weight:500;
+            }
+        }
+        &>span{
+            display:block;
+            padding-top:40px;
+            font-size:16px;
+            line-height:26px;
+            color:#666;
+            font-weight:300;
+            width:100%;
+
+            em{
+                font-style:normal;
+            }
+        }
+        .txt{
+            display:block;
+            padding-top:40px;
+            font-size:16px;
+            line-height:30px;
+            color:#666;
+            font-weight:300;
+            width:100%;
+
+            a{
+                text-decoration: underline;
+            }
+
         }
     }
 
@@ -187,6 +243,9 @@
             font-weight:300;
             border-radius: 40px;
             margin:20px 10px;
+            &-long{
+                width:180px;
+            }
 
             &:focus{
                 outline:0;
@@ -204,6 +263,10 @@
     }
 
     .complete_massage{
+        display:block;
+        width:100%;
+        float:left;
+
         strong{
             display:block;
             text-align:center;
@@ -229,10 +292,17 @@
 
     .user_input{
         display:block;
-        width:100%;
+        width:500px;
+        margin:0 auto;
         padding-top:90px;
-        float:left;
         text-align:center;
+        clear:both;
+
+        p{
+            font-size:14px;
+            color:#666;
+            font-weight:300;
+        }
 
         form{
             display:inline-block;
@@ -263,37 +333,38 @@
                     font-weight:500;
                 }
 
-                label{
+                .title{
                     display:block;
-                    width:145px;
+                    width:165px;
                     line-height:40px;
                     font-size:16px;
                     color:#333;
                     font-weight:300;
                     float:left;
                     text-indent:5px;
+                    text-align:left;
                 }
-                input{
+                input[type="text"],input[type="password"]{
                     display:block;
-                    width:calc(100% - 145px);
+                    width:calc(100% - 175px);
                     height:40px;
                     float:left;
                     border:0;
                     padding:0 10px;
                     box-sizing:border-box;
-                    border-radius: 10px;
                     font-size:16px;
-                    color:#333;
-                    font-weight:300;
+                    box-shadow: none;
+                    color:#787878;
+                    font-weight:400;
 
                     &.pnum{
-                        width:calc(100% - 248px);
+                        width:calc(100% - 275px);
                     }
 
                     &:focus{
                         border:0;
                         outline:0;
-                        box-shadow: 0 0 5px rgba(62, 114, 237, .8);
+                        box-shadow: 0 0 6px rgba(62, 114, 237, .8);
                     }
 
                     &::placeholder{
@@ -301,9 +372,14 @@
                         color:#999;
                         font-weight:300;
                     }
+                    &:disabled{
+                        background:none;
+                        font-weight:300;
+                        color:#3e72ed;
+                    }
                 }
 
-                .clause_num{
+                button{
                     position:absolute;
                     top:10px;
                     right:5px;
@@ -325,12 +401,32 @@
 
                 .txt{
                     display:block;
-                    width:calc(100% - 145px);
+                    width:calc(100% - 175px);
                     float:right;
-                    padding:0 10px;
+                    padding:0;
                     font-size:14px;
-                    line-height:18px;
+                    line-height:20px;
+                    color:#666;
                     font-weight:300;
+                    em{
+                        font-style: normal;
+                    }
+                }
+
+                .agcheck{
+                    width:137px;
+                    height:40px;
+                    line-height:40px;
+                    font-size:16px;
+                    color:#333;
+                    font-weight:300;
+                    float:left;
+                    padding-left:50px;
+                    box-sizing:border-box;
+
+                    input[type="radio"]{
+                        margin-top:15px;
+                    }
                 }
             }
 

@@ -2117,6 +2117,7 @@
 }
 
 .item_board_nav .nav li:last-child a {
+  min-width: 158px;
   border-right: 1px solid #d6d6d6;
 }
 
