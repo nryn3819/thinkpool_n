@@ -21,6 +21,30 @@
             height:292px;
         }
     }
+
+    .btnbox{
+        display:block;
+        text-align:center;
+        clear:both;
+
+        .btn{
+            width:180px;
+            height:40px;
+            padding:0;
+            text-align:center;
+            font-size:16px;
+            font-weight:300;
+            border-radius: 40px;
+            border:0;
+            outline:0;
+
+            &-primary{
+                background:#3e72ed;
+                color:#fff;
+            }
+        
+        }
+    }
 }
 
 .section_content{
@@ -135,7 +159,7 @@
     width:100%;
     float:left;
     padding-top:125px;
-    padding-bottom:400px;
+    padding-bottom:200px;
 
     .title{
         display:block;
