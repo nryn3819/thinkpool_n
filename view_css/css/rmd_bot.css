@@ -680,6 +680,23 @@
   color: #666;
 }
 
+.sms_toggle .obj {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sms.collapse {
+  padding: 20px 0;
+}
+
+.sms.collapse span {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  line-height: 20px;
+}
+
 .bot_list_w {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -988,6 +1005,14 @@
   display: block;
   width: 668px;
   float: left;
+}
+
+.allDetail .result.adviser {
+  width: 100%;
+}
+
+.allDetail .result.adviser .resultbox {
+  width: 224px !important;
 }
 
 .allDetail .result .resultbox_w {

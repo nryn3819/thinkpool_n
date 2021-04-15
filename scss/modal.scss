@@ -133,8 +133,13 @@
 
             &.txt-s{
                 span{
+                    display:block;
                     font-size:14px;
                     line-height:30px;
+
+                    em{
+                        font-style:normal;
+                    }
                 }
             }
 
@@ -156,7 +161,7 @@
 
                     div{
                         display:inline-block;
-                        line-height:30px;
+                        line-height:36px;
                         font: {
                             size:16px;
                             weight:300;
@@ -164,8 +169,12 @@
                         color:#333;
 
                         &::before{
-                            content: '\00B7';
-                            padding-right:5px;
+                            display:block;
+                            width:26px;
+                            height:36px;
+                            content: '';
+                            background:url(../img/bu_scb.png) no-repeat 0 5px;
+                            float:left;
                         }
 
                         a{
@@ -178,9 +187,24 @@
         }
 
         .scb_input{
-            display:block;
+            display:inline-block;
+            width:100%;
+            text-align:Center;
+
+            &.short{
+                dl{
+                    width:320px;
+
+                    dd{
+                        width:220px;
+                    }
+                }
+            }
 
             dl{
+                display:inline-block;
+                width:450px;
+                text-align:left;
                 dt{
                     &.a_num_input{
                         display:none;
@@ -206,7 +230,7 @@
                     }
 
                     display:block;
-                    width:calc(100% - 100px);
+                    width:350px;
                     height:40px;
                     line-height:40px;
                     padding-left:15px;
@@ -223,6 +247,7 @@
                         border:1px solid #dfdfdf;
                         background:#f5f5f5;
                         padding:0 10px;
+                        cursor: pointer;
                     }
                     label,span{
                         height:40px;
@@ -266,9 +291,21 @@
             padding:0 40px;
             height:40px;
             line-height:38px;
+            outline:0;
+            border:0;
+
             &.btn-primary{
                 background:#3E72ED;
                 border-radius: 40px;
+            }
+
+            &.btn-default{
+                background:#ebebeb;
+                border-radius: 40px;
+                border:0;
+                span{
+                    color:#666;
+                }
             }
 
             span{

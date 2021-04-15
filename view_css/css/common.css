@@ -5077,6 +5077,23 @@ table {
   color: #666;
 }
 
+.sms_toggle .obj {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sms.collapse {
+  padding: 20px 0;
+}
+
+.sms.collapse span {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  line-height: 20px;
+}
+
 .bot_list_w {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5385,6 +5402,14 @@ table {
   display: block;
   width: 668px;
   float: left;
+}
+
+.allDetail .result.adviser {
+  width: 100%;
+}
+
+.allDetail .result.adviser .resultbox {
+  width: 224px !important;
 }
 
 .allDetail .result .resultbox_w {
@@ -5975,6 +6000,12 @@ table {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  clear: both;
+}
+
+.empty.mybot {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .empty-mysignal {
@@ -5994,12 +6025,12 @@ table {
 }
 
 .empty-mysignal button {
-  width: 205px;
+  min-width: 205px;
   height: 46px;
   line-height: 46px;
   border-radius: 46px;
   border: 0;
-  padding: 0;
+  padding: 0 15px;
   background: #e8e8e8;
   font-size: 16px;
   color: #333;
@@ -6026,7 +6057,7 @@ table {
 
 .empty.issue-empty button {
   display: block;
-  width: 115px;
+  min-width: 115px;
   height: 30px;
   line-height: 28px;
   float: none;
@@ -6035,7 +6066,7 @@ table {
   border-radius: 5px;
   font-size: 14px;
   color: #3e72ed;
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
 }
 
@@ -7264,7 +7295,7 @@ table {
   border: 1px solid #d7d7d7;
   border-radius: 5px;
   text-align: center;
-  padding: 22px 0 21px 0;
+  padding: 23px 0 22px 0;
 }
 
 .adviser .right {
@@ -8665,6 +8696,29 @@ table {
   height: 292px;
 }
 
+.customer .btnbox {
+  display: block;
+  text-align: center;
+  clear: both;
+}
+
+.customer .btnbox .btn {
+  width: 180px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 40px;
+  border: 0;
+  outline: 0;
+}
+
+.customer .btnbox .btn-primary {
+  background: #3e72ed;
+  color: #fff;
+}
+
 .section_content {
   position: relative;
   display: block;
@@ -8784,7 +8838,7 @@ table {
   width: 100%;
   float: left;
   padding-top: 125px;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
 }
 
 .customer .member_setting .title {
@@ -11602,8 +11656,13 @@ span.label.ico.ico10 {
 }
 
 .scb_popup .modal-body .scb_guide.txt-s span {
+  display: block;
   font-size: 14px;
   line-height: 30px;
+}
+
+.scb_popup .modal-body .scb_guide.txt-s span em {
+  font-style: normal;
 }
 
 .scb_popup .modal-body .scb_guide span {
@@ -11624,15 +11683,19 @@ span.label.ico.ico10 {
 
 .scb_popup .modal-body .scb_guide ul li div {
   display: inline-block;
-  line-height: 30px;
+  line-height: 36px;
   font-size: 16px;
   font-weight: 300;
   color: #333;
 }
 
 .scb_popup .modal-body .scb_guide ul li div::before {
-  content: '\00B7';
-  padding-right: 5px;
+  display: block;
+  width: 26px;
+  height: 36px;
+  content: '';
+  background: url(../img/bu_scb.png) no-repeat 0 5px;
+  float: left;
 }
 
 .scb_popup .modal-body .scb_guide ul li div a {
@@ -11641,7 +11704,23 @@ span.label.ico.ico10 {
 }
 
 .scb_popup .modal-body .scb_input {
-  display: block;
+  display: inline-block;
+  width: 100%;
+  text-align: Center;
+}
+
+.scb_popup .modal-body .scb_input.short dl {
+  width: 320px;
+}
+
+.scb_popup .modal-body .scb_input.short dl dd {
+  width: 220px;
+}
+
+.scb_popup .modal-body .scb_input dl {
+  display: inline-block;
+  width: 450px;
+  text-align: left;
 }
 
 .scb_popup .modal-body .scb_input dl dt {
@@ -11664,7 +11743,7 @@ span.label.ico.ico10 {
 
 .scb_popup .modal-body .scb_input dl dd {
   display: block;
-  width: calc(100% - 100px);
+  width: 350px;
   height: 40px;
   line-height: 40px;
   padding-left: 15px;
@@ -11687,6 +11766,7 @@ span.label.ico.ico10 {
   border: 1px solid #dfdfdf;
   background: #f5f5f5;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 .scb_popup .modal-body .scb_input dl dd label, .scb_popup .modal-body .scb_input dl dd span {
@@ -11727,11 +11807,23 @@ span.label.ico.ico10 {
   padding: 0 40px;
   height: 40px;
   line-height: 38px;
+  outline: 0;
+  border: 0;
 }
 
 .scb_popup .modal-footer button.btn-primary {
   background: #3E72ED;
   border-radius: 40px;
+}
+
+.scb_popup .modal-footer button.btn-default {
+  background: #ebebeb;
+  border-radius: 40px;
+  border: 0;
+}
+
+.scb_popup .modal-footer button.btn-default span {
+  color: #666;
 }
 
 .scb_popup .modal-footer button span {

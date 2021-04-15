@@ -345,6 +345,13 @@
         display: block;
         width: 668px;
         float: left;
+        &.adviser{
+            width:100%;
+
+            .resultbox{
+                width:224px !important;
+            }
+        }
 
         .resultbox_w {
             display: flex;

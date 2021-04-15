@@ -152,8 +152,13 @@
 }
 
 .scb_popup .modal-body .scb_guide.txt-s span {
+  display: block;
   font-size: 14px;
   line-height: 30px;
+}
+
+.scb_popup .modal-body .scb_guide.txt-s span em {
+  font-style: normal;
 }
 
 .scb_popup .modal-body .scb_guide span {
@@ -174,15 +179,19 @@
 
 .scb_popup .modal-body .scb_guide ul li div {
   display: inline-block;
-  line-height: 30px;
+  line-height: 36px;
   font-size: 16px;
   font-weight: 300;
   color: #333;
 }
 
 .scb_popup .modal-body .scb_guide ul li div::before {
-  content: '\00B7';
-  padding-right: 5px;
+  display: block;
+  width: 26px;
+  height: 36px;
+  content: '';
+  background: url(../img/bu_scb.png) no-repeat 0 5px;
+  float: left;
 }
 
 .scb_popup .modal-body .scb_guide ul li div a {
@@ -191,7 +200,23 @@
 }
 
 .scb_popup .modal-body .scb_input {
-  display: block;
+  display: inline-block;
+  width: 100%;
+  text-align: Center;
+}
+
+.scb_popup .modal-body .scb_input.short dl {
+  width: 320px;
+}
+
+.scb_popup .modal-body .scb_input.short dl dd {
+  width: 220px;
+}
+
+.scb_popup .modal-body .scb_input dl {
+  display: inline-block;
+  width: 450px;
+  text-align: left;
 }
 
 .scb_popup .modal-body .scb_input dl dt {
@@ -214,7 +239,7 @@
 
 .scb_popup .modal-body .scb_input dl dd {
   display: block;
-  width: calc(100% - 100px);
+  width: 350px;
   height: 40px;
   line-height: 40px;
   padding-left: 15px;
@@ -237,6 +262,7 @@
   border: 1px solid #dfdfdf;
   background: #f5f5f5;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 .scb_popup .modal-body .scb_input dl dd label, .scb_popup .modal-body .scb_input dl dd span {
@@ -277,11 +303,23 @@
   padding: 0 40px;
   height: 40px;
   line-height: 38px;
+  outline: 0;
+  border: 0;
 }
 
 .scb_popup .modal-footer button.btn-primary {
   background: #3E72ED;
   border-radius: 40px;
+}
+
+.scb_popup .modal-footer button.btn-default {
+  background: #ebebeb;
+  border-radius: 40px;
+  border: 0;
+}
+
+.scb_popup .modal-footer button.btn-default span {
+  color: #666;
 }
 
 .scb_popup .modal-footer button span {

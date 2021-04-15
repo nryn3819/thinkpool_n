@@ -427,6 +427,12 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  clear: both;
+}
+
+.empty.mybot {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .empty-mysignal {
@@ -446,12 +452,12 @@
 }
 
 .empty-mysignal button {
-  width: 205px;
+  min-width: 205px;
   height: 46px;
   line-height: 46px;
   border-radius: 46px;
   border: 0;
-  padding: 0;
+  padding: 0 15px;
   background: #e8e8e8;
   font-size: 16px;
   color: #333;
@@ -478,7 +484,7 @@
 
 .empty.issue-empty button {
   display: block;
-  width: 115px;
+  min-width: 115px;
   height: 30px;
   line-height: 28px;
   float: none;
@@ -487,7 +493,7 @@
   border-radius: 5px;
   font-size: 14px;
   color: #3e72ed;
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
 }
 

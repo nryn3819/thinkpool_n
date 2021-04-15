@@ -8,10 +8,11 @@ $(function(){
     
 
     $('.pNumCheck').on('click', function(){
-        var thisBtn = $(this);
+        var thisBtn = $(this),
+            thisModal = '#' + $(this).parents('.modal').attr('id');
 
-        $('#subscribe').modal('hide');
-        $('#subscribe').on('hidden.bs.modal', function(e){
+        $(thisModal).modal('hide');
+        $(thisModal).on('hidden.bs.modal', function(e){
             var nextModal = $(thisBtn).attr('data-target');
             $(nextModal).modal({
                 show : true,
@@ -22,4 +23,8 @@ $(function(){
         });
     });
     // 팝업내 팝업
+
+
+
+
 });
