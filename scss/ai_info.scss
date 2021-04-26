@@ -18,6 +18,10 @@
                 border-radius: 100%;
                 clear:both;
 
+                &.active a{
+                    border:5px solid #FFF39B;
+                }
+
                 a{
                     position: relative;
                     display:block;
