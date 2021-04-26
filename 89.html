@@ -150,26 +150,35 @@
 
                         <div class="sub-section">
                             <!-- 추천종목 -->
-                            <div class="ai_rmd">
+                            <div class="ai_rmd" role="tabpanel">
                                 
                                 <div class="left">
-                                    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-                                    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-                                    <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
-                                    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-                                    <div id="chartdiv"></div>
-                                    <script src="./js/myItemBubble.js"></script>
+                                    <ul class="" role="tablist">
+                                        <li role="presentation" class="active up">
+                                            <a href="#data00" arai-controls="data01" role="tab" data-toggle="tab" class="spin circle">
+                                                <span class="name">종목1</span>
+                                                <span class="per">63.0%</span>
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="dn pull-right">
+                                            <a href="#data01" arai-controls="data02" role="tab" data-toggle="tab" class="spin circle">
+                                                <span class="name">종목2</span>
+                                                <span class="per">-63.0%</span>
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="up">
+                                            <a href="#data02" arai-controls="data03" role="tab" data-toggle="tab" class="spin circle">
+                                                <span class="name">종목3</span>
+                                                <span class="per">63.0%</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- //left -->
 
                                 <div class="right">
-                                    <div class="itemRmdBox_w">
-                                        <div id="data00" class="itemRmdBox">
-                                            <img src="./img/sub/item/demo.jpg" alt="추천종목선택" width="100%">
-                                        </div>
-                                        <!-- //초기화면 -->
-
-                                        <div id="data01" class="itemRmdBox hidden">
+                                    <div class="itemRmdBox_w tab-content">
+                                        <div id="data00" role="tabpanel" class="itemRmdBox tab-pane fade in active">
                                             <div class="rmdBox">
                                                 <div class="rmd_info">
                                                     <div class="thumb">
@@ -215,14 +224,8 @@
                                                 <!-- //종목그래프 -->
                                             </div>
                                         </div>
-                                        <div id="data02" class="itemRmdBox hidden">02</div>
-                                        <div id="data03" class="itemRmdBox hidden">03</div>
-                                        <div id="data04" class="itemRmdBox hidden">04</div>
-                                        <div id="data05" class="itemRmdBox hidden">05</div>
-                                        <div id="data06" class="itemRmdBox hidden">06</div>
-                                        <div id="data07" class="itemRmdBox hidden">07</div>
-                                        <div id="data08" class="itemRmdBox hidden">08</div>
-                                        <div id="data09" class="itemRmdBox hidden">09</div>
+                                        <div id="data01" role="tabpanel" class="itemRmdBox tab-pane fade">02</div>
+                                        <div id="data02" role="tabpanel" class="itemRmdBox tab-pane fade">03</div>
                                     </div>
                                 </div>
                                 <!-- //right -->
