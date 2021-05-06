@@ -347,6 +347,19 @@
                     display:none;
                 }
 
+                textarea{
+                    display:block;
+                    width:calc(100% - 175px);
+                    min-height:40px;
+                    float:left;
+                    padding:5px;
+                    box-sizing:border-box;
+                    font-size:16px;
+                    box-shadow: none;
+                    color:#787878;
+                    font-weight:400;
+                }
+
                 #ViewTimer{
                     position:absolute;
                     display:none;
