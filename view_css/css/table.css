@@ -275,6 +275,16 @@
   text-overflow: ellipsis;
 }
 
+.table_w table tbody tr td .elipsis {
+  display: block;
+  width: 160px;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+
 .table_w table tbody tr td .btn {
   display: inline-block;
   height: 27px;

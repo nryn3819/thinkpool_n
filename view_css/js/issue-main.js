@@ -15,7 +15,7 @@ $(function(){
             slideMargin: 0,
             slideWidth: 958 / 6,
             startSlide : issueListIndex,
-            //infiniteLoop:false,
+            infiniteLoop:false,
             nextText: '>',
             prevText: '<',
             preventDefaultSwipeX: false,

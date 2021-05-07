@@ -4775,6 +4775,16 @@ table {
   text-overflow: ellipsis;
 }
 
+.table_w table tbody tr td .elipsis {
+  display: block;
+  width: 160px;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+
 .table_w table tbody tr td .btn {
   display: inline-block;
   height: 27px;
@@ -5588,8 +5598,44 @@ table {
   display: block;
   width: 100%;
   height: 335px;
-  background: #f7f7f7;
   margin-top: 20px;
+}
+
+.allDetail .per .chartbox .nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-bottom: 0;
+  margin-top: 5px;
+}
+
+.allDetail .per .chartbox .nav-tabs li {
+  float: none;
+  margin-bottom: 0;
+}
+
+.allDetail .per .chartbox .nav-tabs li.active a {
+  background: #f6f7f8;
+  color: #333;
+}
+
+.allDetail .per .chartbox .nav-tabs li a {
+  display: block;
+  width: 45px;
+  margin: 5px;
+  line-height: 20px;
+  height: 22px;
+  border: 1px solid #787878;
+  border-radius: 2px;
+  padding: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
 }
 
 .allDetail .highreturn {
@@ -9164,6 +9210,21 @@ table {
 
 .customer .member_setting .user_input form .form-group.clause {
   display: none;
+}
+
+.customer .member_setting .user_input form .form-group textarea {
+  display: block;
+  width: calc(100% - 175px);
+  min-height: 40px;
+  float: left;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #787878;
+  font-weight: 400;
 }
 
 .customer .member_setting .user_input form .form-group #ViewTimer {
