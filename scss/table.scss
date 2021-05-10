@@ -74,6 +74,14 @@
             border-radius: 34px;
             background:#fff;
             font-size:13px;
+
+            &-md{
+                height:36px;
+                line-height:34px;
+                border-radius:5px;
+                font-size:14px;
+                padding:0 25px;
+            }
     
             span{
                 color:#666;
@@ -106,10 +114,52 @@
             display:block;
             float:left;
             padding:3px 0 2px 0;
+
+            dl{
+                dt{
+                    display:block;
+                    height:36px;
+                    line-height:36px;
+                    font-size:14px;
+                    color:#333;
+                    font-weight:700;
+                    float:left;
+                }
+                dd{
+                    display:block;
+                    margin-left:10px;
+                    float:left;
+
+                    input[type="date"]{
+                        display:block;
+                        width:170px;
+                        background:#f6f7f8;
+                        border:1px solid #d6d6d6;
+                        border-radius: 5px;
+                        height:36px;
+                        line-height:36px;
+                        box-sizing:border-box;
+                        padding:0 10px;
+                        float:left;
+                        font-size:14px;
+                        font-weight:500;
+                        margin-right:10px;
+                        cursor:pointer;
+                    }
+
+                    button{
+                        display:block;
+                        float:left;
+                    }
+                }
+            }
         }
         .right{
             display:block;
             float:right;
+            &.lh36{
+                line-height:36px;
+            }
 
             .form-inline{
                 float:left;

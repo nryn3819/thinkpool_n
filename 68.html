@@ -231,17 +231,26 @@
                             <div class="b_trend_w mt-20">
 
                                 <div class="table_w mt-20">
-                                    <div class="check-radio">
-                                        <ul>
-                                            <li><input type="radio" name="chk_trend" id="chk01" checked><label for="chk01">당일</label></li>
-                                            <li><input type="radio" name="chk_trend" id="chk02"><label for="chk02">5일</label></li>
-                                            <li><input type="radio" name="chk_trend" id="chk03"><label for="chk03">20일</label></li>
-                                            <li><input type="radio" name="chk_trend" id="chk04"><label for="chk04">60일</label></li>
-                                        </ul>
+                                    <div class="tbl-top">
+                                        <div class="left">
+                                            <dl>
+                                                <dt>날짜별 찾기</dt>
+                                                <dd>
+                                                    <input type="date" name="" id="">
+                                                    <button type="button" class="btn btn-primary btn-md">조회</button>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //left -->
+    
+                                        <div class="right lh36">
+                                            <span>09/08 12:14 기준</span>
+                                        </div>
+                                        <!-- //right -->
                                     </div>
                                     <!-- // -->
 
-                                    <table class="table table-bordered small-line mt-20">
+                                    <table class="table table-bordered small-line mt-20 pull-left">
                                         <colgroup>
                                             <col width="*">
                                             <col width="150">
@@ -511,7 +520,8 @@
                                     <!-- //table -->
 
                                     <div class="guide pull-left">
-                                        <span>누적 거래원 산정 : 09/09기준 (코스콤에서 제공하는 일별 거래원 데이터에 의한 추정치임)</span>
+                                        <span>거래비중은 당일 총거래량 대비 순매매량의 비중임 (단, 장중에는 총거래량 대비 매수량,매도량의 비중)</span>
+                                        <span>각 거래원의 순매매량은 코스콤에서 제공하는 일별 거래원 데이터에 의한 추정치임</span>
                                     </div>
                                 </div>
                                 <!-- // -->

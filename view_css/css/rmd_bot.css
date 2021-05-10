@@ -137,6 +137,14 @@
   font-size: 13px;
 }
 
+.table_w .tbl-top .btn-md {
+  height: 36px;
+  line-height: 34px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0 25px;
+}
+
 .table_w .tbl-top .btn span {
   color: #666;
   font-weight: 300;
@@ -174,9 +182,52 @@
   padding: 3px 0 2px 0;
 }
 
+.table_w .tbl-top .left dl dt {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  float: left;
+}
+
+.table_w .tbl-top .left dl dd {
+  display: block;
+  margin-left: 10px;
+  float: left;
+}
+
+.table_w .tbl-top .left dl dd input[type="date"] {
+  display: block;
+  width: 170px;
+  background: #f6f7f8;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  height: 36px;
+  line-height: 36px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.table_w .tbl-top .left dl dd button {
+  display: block;
+  float: left;
+}
+
 .table_w .tbl-top .right {
   display: block;
   float: right;
+}
+
+.table_w .tbl-top .right.lh36 {
+  line-height: 36px;
 }
 
 .table_w .tbl-top .right .form-inline {
