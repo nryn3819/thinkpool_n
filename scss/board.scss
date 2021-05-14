@@ -216,16 +216,19 @@
 }
 
 .fav-item{
-    padding-left:30px;
-    background:url(../img/sub/item/ins_off.png) no-repeat 0 50%;
+    display:block;
+    width:27px;
+    height:20px;
+    background:url(../img/sub/item/ins_off.png) no-repeat 0 2px;
     background-size:auto 16px;
+    cursor:pointer;
+    float:left;
+
     &.active{
-        background:url(../img/sub/item/ins_on.png) no-repeat 0 50%;
+        background:url(../img/sub/item/ins_on.png) no-repeat 0 2px;
         background-size:auto 16px;
     }
 }
-
-span.fav-item{}
 
 .board_sch {
     position: relative;
