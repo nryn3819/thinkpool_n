@@ -7092,6 +7092,19 @@ table {
   color: #666;
 }
 
+.reload button {
+  border: 0;
+  background: #fff;
+  font-size: 14px;
+  color: #666;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reload button::before {
+  padding-right: 5px;
+}
+
 .news_w {
   position: relative;
 }
@@ -7395,6 +7408,52 @@ table {
   padding-left: 10px;
   color: #999;
   font-style: normal;
+}
+
+.aisignal_w .empty {
+  position: relative;
+  display: block;
+  min-height: 597px;
+}
+
+.aisignal_w .empty .direct {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+
+.aisignal_w .empty .direct .txt {
+  display: block;
+}
+
+.aisignal_w .empty .direct .txt span {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.aisignal_w .empty .direct .txt span em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aisignal_w .empty .direct .button button {
+  width: 178px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  margin-top: 20px;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background: #3e72ed;
 }
 
 .aisignal_w .chart_w {
@@ -9873,13 +9932,17 @@ table {
 }
 
 .fav-item {
-  padding-left: 30px;
-  background: url(../img/sub/item/ins_off.png) no-repeat 0 50%;
+  display: block;
+  width: 27px;
+  height: 20px;
+  background: url(../img/sub/item/ins_off.png) no-repeat 0 2px;
   background-size: auto 16px;
+  cursor: pointer;
+  float: left;
 }
 
 .fav-item.active {
-  background: url(../img/sub/item/ins_on.png) no-repeat 0 50%;
+  background: url(../img/sub/item/ins_on.png) no-repeat 0 2px;
   background-size: auto 16px;
 }
 
@@ -10213,6 +10276,15 @@ table {
 }
 
 .myItemList_w .myItemList .list strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.myItemList_w .myItemList .list a.tit {
   display: block;
   font-size: 14px;
   font-weight: 700;

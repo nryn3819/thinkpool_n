@@ -128,3 +128,16 @@
   font-weight: 300;
   color: #666;
 }
+
+.reload button {
+  border: 0;
+  background: #fff;
+  font-size: 14px;
+  color: #666;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reload button::before {
+  padding-right: 5px;
+}

@@ -202,13 +202,17 @@
 }
 
 .fav-item {
-  padding-left: 30px;
-  background: url(../img/sub/item/ins_off.png) no-repeat 0 50%;
+  display: block;
+  width: 27px;
+  height: 20px;
+  background: url(../img/sub/item/ins_off.png) no-repeat 0 2px;
   background-size: auto 16px;
+  cursor: pointer;
+  float: left;
 }
 
 .fav-item.active {
-  background: url(../img/sub/item/ins_on.png) no-repeat 0 50%;
+  background: url(../img/sub/item/ins_on.png) no-repeat 0 2px;
   background-size: auto 16px;
 }
 
@@ -542,6 +546,15 @@
 }
 
 .myItemList_w .myItemList .list strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.myItemList_w .myItemList .list a.tit {
   display: block;
   font-size: 14px;
   font-weight: 700;
