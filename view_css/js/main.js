@@ -145,6 +145,10 @@ $(function () {
         });
     });
 
+    $('.fav-item').on('click', function(){
+        $(this).toggleClass('active');
+    });
+
 
     //게시판 댓글
     $('.recmmt').on('click', function(){

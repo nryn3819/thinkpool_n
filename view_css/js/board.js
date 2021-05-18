@@ -14,6 +14,10 @@ $(function(){
             $('.layer_guide').fadeOut();
         });
     });
+
+    $('.fav-item').on('click', function(){
+        $(this).toggleClass('active');
+    });
     
 
 });
