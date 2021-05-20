@@ -10702,7 +10702,7 @@ table {
   padding-bottom: 10px;
 }
 
-.myItemList_w .myItemList .list span {
+.myItemList_w .myItemList .list span, .myItemList_w .myItemList .list a.news {
   display: block;
   width: 100%;
   font-size: 14px;
@@ -10712,7 +10712,7 @@ table {
   float: left;
 }
 
-.myItemList_w .myItemList .list span em {
+.myItemList_w .myItemList .list span em, .myItemList_w .myItemList .list a.news em {
   font-style: normal;
   color: #3e72ed;
 }
