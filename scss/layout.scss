@@ -59,6 +59,31 @@
   }
 }
 
+#agfooter{
+  display:block;
+  width:100%;
+  float:left;
+  text-align:center;
+  padding-bottom:100px;
+
+  address{
+    display:inline-block;
+    float:none;
+    font-size:13px;
+    color:#999;
+    text-align:300;
+    line-height:20px;
+  }
+
+  .flogo{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding-top:30px;
+  }
+
+}
+
 
 
 @import 'side';
