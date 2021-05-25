@@ -236,6 +236,9 @@
                 width: calc(100% - 117px);
                 height: 36px;
                 line-height: 26px;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
 
                 font : {
                     size: 15px;

@@ -26,12 +26,12 @@
         <![endif]-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
     <!-- bxslider -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- basic js -->
@@ -266,18 +266,26 @@
 
                                 <div class="chartbox">
                                     <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="c001"><img src="./img/demo.png" alt="데모1" width="100%">1</div>
-                                        <div role="tabpanel" class="tab-pane" id="c002"><img src="./img/demo.png" alt="데모2" width="100%">2</div>
-                                        <div role="tabpanel" class="tab-pane" id="c003"><img src="./img/demo.png" alt="데모3" width="100%">3</div>
-                                        <div role="tabpanel" class="tab-pane" id="c004"><img src="./img/demo.png" alt="데모4" width="100%">4</div>
-                                      </div>
+                                        <div role="tabpanel" class="tab-pane active" id="c001"><img src="./img/demo.png"
+                                                alt="데모1" width="100%">1</div>
+                                        <div role="tabpanel" class="tab-pane" id="c002"><img src="./img/demo.png"
+                                                alt="데모2" width="100%">2</div>
+                                        <div role="tabpanel" class="tab-pane" id="c003"><img src="./img/demo.png"
+                                                alt="데모3" width="100%">3</div>
+                                        <div role="tabpanel" class="tab-pane" id="c004"><img src="./img/demo.png"
+                                                alt="데모4" width="100%">4</div>
+                                    </div>
 
-                                      <ul class="nav nav-tabs" role="tablist" id="myTab">
-                                        <li role="presentation" class="active"><a href="#c001" aria-controls="home" role="tab" data-toggle="tab">1개월</a></li>
-                                        <li role="presentation"><a href="#c002" aria-controls="profile" role="tab" data-toggle="tab">3개월</a></li>
-                                        <li role="presentation"><a href="#c003" aria-controls="messages" role="tab" data-toggle="tab">6개월</a></li>
-                                        <li role="presentation"><a href="#c004" aria-controls="settings" role="tab" data-toggle="tab">1년</a></li>
-                                      </ul>
+                                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+                                        <li role="presentation" class="active"><a href="#c001" aria-controls="home"
+                                                role="tab" data-toggle="tab">1개월</a></li>
+                                        <li role="presentation"><a href="#c002" aria-controls="profile" role="tab"
+                                                data-toggle="tab">3개월</a></li>
+                                        <li role="presentation"><a href="#c003" aria-controls="messages" role="tab"
+                                                data-toggle="tab">6개월</a></li>
+                                        <li role="presentation"><a href="#c004" aria-controls="settings" role="tab"
+                                                data-toggle="tab">1년</a></li>
+                                    </ul>
                                 </div>
                                 <!-- //chart -->
                             </div>
@@ -395,7 +403,7 @@
                                                         <span>20/03/11</span>
                                                     </td>
                                                 </tr>
-                                                
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -415,96 +423,61 @@
                                         <li role="presentation">
                                             <a data-toggle="tab" aria-controls="data" href="#sell">매도완료종목</a>
                                         </li>
-                                        <li role="presentation">
-                                            <a data-toggle="tab" aria-controls="data" href="#highreturn">최고수익종목</a>
-                                        </li>
                                     </ul>
                                     <!-- //tab-list -->
-                                
+
                                     <div class="tab-content">
                                         <div id="possesion" class="tab-pane fade in active" role="tabpanel">
                                             <div class="table_w">
                                                 <table width="100%" class="table table-striped table-hover">
                                                     <colgroup>
                                                         <col width="*">
+                                                        <col width="165">
+                                                        <col width="165">
+                                                        <col width="165">
                                                         <col width="140">
                                                         <col width="140">
-                                                        <col width="140">
-                                                        <col width="140">
-                                                        <col width="100">
-                                                        <col width="100">
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">종목명</th>
-                                                            <th scope="col">최초매수일</th>
-                                                            <th scope="col">매수단가</th>
-                                                            <th scope="col">매도완료일</th>
-                                                            <th scope="col">매도단가</th>
-                                                            <th scope="col">투자기간</th>
+                                                            <th scope="col">최초 매수일</th>
+                                                            <th scope="col">평균매수단가</th>
+                                                            <th scope="col">현재가</th>
+                                                            <th scope="col">당일등락</th>
                                                             <th scope="col">수익률</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>932</span></td>
+                                                            <td class="text-center"><span>972</span></td>
+                                                            <td class="text-center"><span class="up">0.83</span></td>
+                                                            <td class="text-right"><span class="up">4.29%</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>1,185</span></td>
+                                                            <td class="text-center"><span>1,080</span></td>
+                                                            <td class="text-center"><span class="up">0.47</span></td>
+                                                            <td class="text-right"><span class="dn">-8.86%</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>35,550</span></td>
+                                                            <td class="text-center"><span>38,200</span></td>
+                                                            <td class="text-center"><span class="dn">-0.78</span></td>
+                                                            <td class="text-right"><span class="up">7.45%</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                             <!-- // -->
-                                
+
                                             <div class="paging text-center">
                                                 <nav>
                                                     <ul class="pagination">
@@ -529,14 +502,47 @@
                                             <!-- //paging -->
                                         </div>
                                         <!-- //tab-content -->
-                                
-                                        <div id="sell" class="tab-pane fade" role="tabpannel">2</div>
+
+                                        <div id="sell" class="tab-pane fade" role="tabpannel">
+                                            <div class="table_w">
+                                                <table width="100%" class="table table-striped table-hover">
+                                                    <colgroup>
+                                                        <col width="*">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="120">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">종목명</th>
+                                                            <th scope="col">최초매수일</th>
+                                                            <th scope="col">매수단가</th>
+                                                            <th scope="col">매도완료일</th>
+                                                            <th scope="col">매도단가</th>
+                                                            <th scope="col">수익률</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center"><a href="#">KTB투자증권</a></td>
+                                                            <td class="text-center"><span>2020/12/18</span></td>
+                                                            <td class="text-center"><span>3,335</span></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>6,150</span></td>
+                                                            <td class="text-right"><span class="up">84.41%</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                         <!-- //tab-content -->
 
-                                        <div id="highreturn" class="tab-pane fade" role="tabpannel">3</div>
+
                                     </div>
                                     <!-- //tab-content -->
-                                
+
                                 </div>
                             </div>
                             <!-- //item_w -->
