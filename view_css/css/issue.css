@@ -294,6 +294,10 @@
   color: #999;
 }
 
+.issue_info .tab-content .tab-pane#tab02 .table_w {
+  padding-top: 20px;
+}
+
 .issue-analysis .chartbox {
   display: block;
   min-height: 300px;
