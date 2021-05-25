@@ -71,6 +71,7 @@
 
 #subNav.leftNav ul li a {
   font-size: 24px;
+  cursor: pointer;
 }
 
 #subNav.garo {

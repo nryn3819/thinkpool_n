@@ -123,6 +123,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   float: left;
+  padding-right: 5px;
 }
 
 .newsList .list .title .label {

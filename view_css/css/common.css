@@ -487,7 +487,6 @@ table {
   position: relative;
   width: 100%;
   float: left;
-  overflow: hidden;
   background: #fff;
 }
 
@@ -506,7 +505,8 @@ table {
   width: 100%;
   height: 119px;
   margin: 0 auto;
-  border-bottom: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 #header_w #realheader #header {
@@ -1576,6 +1576,7 @@ table {
 
 #subNav.leftNav ul li a {
   font-size: 24px;
+  cursor: pointer;
 }
 
 #subNav.garo {
@@ -2499,8 +2500,12 @@ table {
 .left_item_list > .tab-content .item_w .con .chartbox {
   width: 580px;
   height: 315px;
-  background: #d7d7d7;
   float: left;
+}
+
+.left_item_list > .tab-content .item_w .con .chartbox img {
+  width: 100%;
+  max-height: 315px;
 }
 
 .left_item_list > .tab-content .item_w .con .info {
@@ -3600,7 +3605,10 @@ table {
   display: block;
   margin-top: 20px;
   min-height: 300px;
-  background: #f8f8f8;
+}
+
+.itemHomeBox .right .chartbox img {
+  width: 100%;
 }
 
 #itemTop {
@@ -4016,9 +4024,7 @@ table {
   height: 153px;
   overflow: hidden;
   text-align: center;
-  border: 1px solid #d7d7d7;
   border-radius: 5px;
-  padding: 5px 0 0 0;
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span {
@@ -6030,6 +6036,8 @@ table {
 
 .issue_info {
   display: block;
+  width: 100%;
+  float: left;
 }
 
 .issue_info .tab-content .tab-pane .chartbox {
@@ -6074,6 +6082,11 @@ table {
   width: 250px;
   height: 165px;
   background: #fff;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li .chartImg img {
+  width: 100%;
+  max-height: 165px;
 }
 
 .issue_info .tab-content .tab-pane .chartbox .date {
@@ -6761,6 +6774,7 @@ table {
   text-overflow: ellipsis;
   white-space: nowrap;
   float: left;
+  padding-right: 5px;
 }
 
 .newsList .list .title .label {
@@ -7267,6 +7281,11 @@ table {
   width: 670px;
   height: 300px;
   float: left;
+}
+
+.b_trend .left .chartbox img {
+  width: 100%;
+  max-height: 300px;
 }
 
 .b_trend .right {
@@ -12700,4 +12719,12 @@ span.label.ico.ico10 {
   color: #fff;
   border: 0;
   font-weight: 400;
+}
+
+.modal-footer .btn-sm {
+  min-width: 58px;
+}
+
+.modal-body {
+  padding: 30px 15px;
 }

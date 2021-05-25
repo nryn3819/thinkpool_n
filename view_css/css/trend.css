@@ -58,6 +58,11 @@
   float: left;
 }
 
+.b_trend .left .chartbox img {
+  width: 100%;
+  max-height: 300px;
+}
+
 .b_trend .right {
   display: block;
   width: calc(100% - 710px);

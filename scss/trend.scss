@@ -67,6 +67,13 @@
         width: 670px;
         height:300px;
         float:left;
+
+        .chartbox{
+            img{
+                width:100%;
+                max-height:300px;
+            }
+        }
     }
 
     .right{

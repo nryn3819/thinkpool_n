@@ -232,6 +232,8 @@
 
 .issue_info {
   display: block;
+  width: 100%;
+  float: left;
 }
 
 .issue_info .tab-content .tab-pane .chartbox {
@@ -276,6 +278,11 @@
   width: 250px;
   height: 165px;
   background: #fff;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li .chartImg img {
+  width: 100%;
+  max-height: 165px;
 }
 
 .issue_info .tab-content .tab-pane .chartbox .date {

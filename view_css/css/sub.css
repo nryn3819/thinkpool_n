@@ -71,6 +71,7 @@
 
 #subNav.leftNav ul li a {
   font-size: 24px;
+  cursor: pointer;
 }
 
 #subNav.garo {
@@ -994,8 +995,12 @@
 .left_item_list > .tab-content .item_w .con .chartbox {
   width: 580px;
   height: 315px;
-  background: #d7d7d7;
   float: left;
+}
+
+.left_item_list > .tab-content .item_w .con .chartbox img {
+  width: 100%;
+  max-height: 315px;
 }
 
 .left_item_list > .tab-content .item_w .con .info {
@@ -2095,7 +2100,10 @@
   display: block;
   margin-top: 20px;
   min-height: 300px;
-  background: #f8f8f8;
+}
+
+.itemHomeBox .right .chartbox img {
+  width: 100%;
 }
 
 #itemTop {
@@ -2511,9 +2519,7 @@
   height: 153px;
   overflow: hidden;
   text-align: center;
-  border: 1px solid #d7d7d7;
   border-radius: 5px;
-  padding: 5px 0 0 0;
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span {
@@ -4525,6 +4531,8 @@
 
 .issue_info {
   display: block;
+  width: 100%;
+  float: left;
 }
 
 .issue_info .tab-content .tab-pane .chartbox {
@@ -4569,6 +4577,11 @@
   width: 250px;
   height: 165px;
   background: #fff;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li .chartImg img {
+  width: 100%;
+  max-height: 165px;
 }
 
 .issue_info .tab-content .tab-pane .chartbox .date {
@@ -5256,6 +5269,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   float: left;
+  padding-right: 5px;
 }
 
 .newsList .list .title .label {
@@ -5762,6 +5776,11 @@
   width: 670px;
   height: 300px;
   float: left;
+}
+
+.b_trend .left .chartbox img {
+  width: 100%;
+  max-height: 300px;
 }
 
 .b_trend .right {

@@ -85,6 +85,7 @@
                 height:20px;
                 line-height:20px;
                 padding-right:10px;
+
                 strong{
                     display:block;
                     max-width:calc(100% - 250px);
@@ -95,6 +96,7 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     float:left;
+                    padding-right:5px;
                 }
                 .label{
                     height:20px;
