@@ -112,6 +112,10 @@
                     span {
                         color: #fc2f2f;
                     }
+
+                    &.on{
+                        background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+                    }
                 }
 
                 &.oppose {
@@ -119,6 +123,10 @@
 
                     span {
                         color: #3e72ed;
+                    }
+
+                    &.on{
+                        background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
                     }
                 }
             }

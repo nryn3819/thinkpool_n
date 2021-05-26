@@ -151,6 +151,10 @@ table {
   color: #447aec !important;
 }
 
+.gc {
+  color: #c8c8c8 !important;
+}
+
 .mt-0 {
   margin-top: 0px !important;
 }
@@ -2937,6 +2941,7 @@ table {
 }
 
 .modulebox .right {
+  position: relative;
   width: calc(100% - 285px);
   float: left;
 }
@@ -10970,8 +10975,16 @@ table {
   color: #fc2f2f;
 }
 
+.board_view_content .vote ul li.approve.on {
+  border: 1px solid #fc2f2f;
+}
+
 .board_view_content .vote ul li.oppose .count {
   color: #3e72ed;
+}
+
+.board_view_content .vote ul li.oppose.on {
+  border: 1px solid #3e72ed;
 }
 
 .board_view_content .vote ul li .count {
@@ -11292,6 +11305,43 @@ table {
   font-size: 14px;
   color: #666;
   float: right;
+}
+
+.user_latest {
+  display: block;
+  width: 100%;
+  float: left;
+  padding-bottom: 40px;
+}
+
+.user_latest strong {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+.user_latest ul {
+  display: block;
+  margin-top: 20px;
+}
+
+.user_latest ul li {
+  display: block;
+  width: 100%;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+}
+
+.user_latest ul li::before {
+  content: '⟩';
+  padding-right: 5px;
+}
+
+.user_latest ul li a {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
 }
 
 #user_class .modal-sm {
@@ -12008,12 +12058,20 @@ span.label.ico.ico10 {
   color: #fc2f2f;
 }
 
+.cmmtBox .vote ul li.approve.on {
+  background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+}
+
 .cmmtBox .vote ul li.oppose {
   background: url(../img/sub/board/oppose.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose span {
   color: #3e72ed;
+}
+
+.cmmtBox .vote ul li.oppose.on {
+  background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .declaration {

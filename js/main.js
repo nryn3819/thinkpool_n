@@ -177,6 +177,10 @@ $(function () {
         $(this).toggleClass('active');
     });
 
+    $('.vote li').on('click', function(){
+        $(this).toggleClass('on');
+    });
+
 
     //글쓰기 파일업로드
 

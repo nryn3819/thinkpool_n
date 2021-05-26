@@ -227,6 +227,7 @@
 }
 
 .modulebox .right {
+  position: relative;
   width: calc(100% - 285px);
   float: left;
 }

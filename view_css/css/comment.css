@@ -117,12 +117,20 @@
   color: #fc2f2f;
 }
 
+.cmmtBox .vote ul li.approve.on {
+  background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+}
+
 .cmmtBox .vote ul li.oppose {
   background: url(../img/sub/board/oppose.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose span {
   color: #3e72ed;
+}
+
+.cmmtBox .vote ul li.oppose.on {
+  background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .declaration {

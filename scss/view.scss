@@ -208,15 +208,25 @@
                 border-radius: 5px;
                 cursor: pointer;
 
+                
+
                 &.approve {
                     .count {
                         color: #fc2f2f;
+                    }
+
+                    &.on{
+                        border:1px solid #fc2f2f;
                     }
                 }
 
                 &.oppose {
                     .count {
                         color: #3e72ed;
+                    }
+
+                    &.on{
+                        border:1px solid #3e72ed;
                     }
                 }
 
@@ -548,6 +558,46 @@
             }
         }
     }
+}
+
+.user_latest{
+    display:block;
+    width:100%;
+    float:left;
+
+    padding-bottom:40px;
+
+    strong{
+        font-size:14px;
+        color:#333;
+        font-weight:400;
+    }
+
+    ul{
+        display:block;
+        margin-top:20px;
+
+        li{
+            display:block;
+            width:100%;
+            float:left;
+            height:24px;
+            line-height:24px;
+
+            &::before{
+                content: '⟩';
+                padding-right:5px;
+            }
+
+
+            a{
+                font-size:14px;
+                color:#666;
+                font-weight:300;
+            }
+        }
+    }
+
 }
 
 #user_class {
