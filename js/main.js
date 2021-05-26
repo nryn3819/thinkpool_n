@@ -195,8 +195,17 @@ $(function () {
 
     //추천종목 아이템리스트
 
+    var rmdItemList2 = $('.left_item li').length;
+
+    if(rmdItemList2 < 8){
+        for(var i = 0; i < (8 - rmdItemList2); i++){
+            $('.left_item').append("<li class='disabled'><a></a></li>");
+        }
+    }
+
     var rmdItemList = $('.left_item li').length;
-    if (rmdItemList > 9) {
+
+    if (rmdItemList >= 7) {
 
         var slider2 = $('.left_item').bxSlider({
             mode: 'vertical',
