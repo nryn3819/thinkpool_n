@@ -133,6 +133,16 @@
   font-weight: 700;
 }
 
+.issue_obj {
+  height: 60px;
+  line-height: 60px;
+  background: #3e73ed;
+}
+
+.issue_obj strong {
+  color: #fff;
+}
+
 .issue_top {
   display: block;
   clear: both;
