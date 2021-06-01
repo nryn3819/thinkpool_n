@@ -848,6 +848,23 @@
                                                                             <span>종목관련 내용 내용 내용</span>
                                                                         </td>
                                                                     </tr>
+                                                                    <tr class="active">
+                                                                        <td class="text-center">
+                                                                            <span>10:00</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a>종목명종목명종목</a>&nbsp;<span class="tgglyphi glyphicon glyphicon-picture" data-toggle="modal" data-target="#tblchart"></span>
+                                                                        </td>
+                                                                        <td class="text-right">
+                                                                            <span>1,000,000</span>
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <span class="up">10.3%</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>종목관련 내용 내용 내용</span>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -1920,11 +1937,11 @@
                                                             <table class="table table-hover mitem">
                                                                 <colgroup>
                                                                     <col width="8%">
-                                                                    <col width="12%">
                                                                     <col width="*">
-                                                                    <col width="15%">
-                                                                    <col width="15%">
-                                                                    <col width="15%">
+                                                                    <col width="17%">
+                                                                    <col width="17%">
+                                                                    <col width="17%">
+                                                                    <col width="17%">
                                                                     <col width="10%">
                                                                 </colgroup>
                                                                 <thead>
@@ -1961,13 +1978,13 @@
                                                                             <a href="#">종목명종목명</a>
                                                                         </td>
                                                                         <td class="text-center">
-                                                                            <span>아무개 대표이사 회장</span>
+                                                                            <span class="elipsis">아무개 대표이사 회장아무개 대표이사 회장</span>
                                                                         </td>
                                                                         <td class="text-center">
                                                                             <span>사실상지배주주</span>
                                                                         </td>
                                                                         <td class="text-center">
-                                                                            <span>제3자배정유상증자</span>
+                                                                            <span class="elipsis" title="제3자배정유상증자 제3자배정유상증자">제3자배정유상증자 제3자배정유상증자</span>
                                                                         </td>
                                                                         <td class="text-right">
                                                                             <span>8,067,305</span>
@@ -2311,7 +2328,21 @@
                                             <span>000000</span>
                                         </strong>
                                         <div class="tablechart mt-20">
-                                            차트이미지
+                                            <div role="tabpanel">
+
+                                                <!-- Nav tabs -->
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                  <li role="presentation" class="active"><a href="#tab01" aria-controls="5min" role="tab" data-toggle="tab">5분봉</a></li>
+                                                  <li role="presentation"><a href="#tab02" aria-controls="1day" role="tab" data-toggle="tab">일봉</a></li>
+                                                </ul>
+                                              
+                                                <!-- Tab panes -->
+                                                <div class="tab-content mt-10">
+                                                  <div role="tabpanel" class="tab-pane fade in active" id="tab01"><img src="./img/sub/p-chart.png" alt="" width="100%"></div>
+                                                  <div role="tabpanel" class="tab-pane fade " id="tab02"><img src="./img/sub/p-chart.png" alt="" width="100%"></div>
+                                                </div>
+                                              
+                                              </div>
                                         </div>
                                     </div>
                                     <!-- //modal-body -->

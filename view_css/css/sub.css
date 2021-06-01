@@ -4846,6 +4846,13 @@
   right: 0;
 }
 
+.mpa .info.date {
+  top: 2px;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+}
+
 .mpa .info span {
   font-size: 18px;
   font-weight: 300;
@@ -4853,10 +4860,103 @@
 }
 
 .mpa .chartbox {
+  position: relative;
   display: block;
   width: 100%;
   min-height: 225px;
-  margin-top: 10px;
+  margin-top: 30px;
+}
+
+.mpa .chartbox .nav {
+  border: 0;
+}
+
+.mpa .chartbox .nav li {
+  margin: 0;
+}
+
+.mpa .chartbox .nav li.active a {
+  border: 1px solid #447AEC;
+  background: #fff;
+  color: #3e72ed;
+}
+
+.mpa .chartbox .nav li a {
+  display: block;
+  width: 62px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 10px 0 0;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  font-size: 15px;
+  color: #333;
+  background: #f6f6f7;
+  font-weight: 300;
+}
+
+.mpa .chartbox .date {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
+.mpa .chartbox .chart-guide {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.mpa .chartbox .chart-guide ul {
+  display: block;
+}
+
+.mpa .chartbox .chart-guide ul li {
+  display: block;
+  float: left;
+  margin-right: 7px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+}
+
+.mpa .chartbox .chart-guide ul li:last-child {
+  margin-right: 0;
+}
+
+.mpa .chartbox .chart-guide ul li.list01::before {
+  font-size: 18px;
+  margin-right: 3px;
+  content: '•';
+  color: #7890D9;
+}
+
+.mpa .chartbox .chart-guide ul li.list02::before {
+  font-size: 18px;
+  margin-right: 3px;
+  content: '•';
+  color: #FB5360;
+}
+
+.mpa .chartbox .chart-guide ul li.list03::before {
+  font-size: 18px;
+  margin-right: 3px;
+  content: '•';
+  color: #4C84FF;
+}
+
+.mpa .chartbox .chart-guide ul li.list04::before {
+  font-size: 18px;
+  margin-right: 3px;
+  content: '•';
+  color: #56C319;
 }
 
 .idsView {
