@@ -26,12 +26,12 @@
         <![endif]-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
     <!-- bxslider -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- basic js -->
@@ -155,73 +155,75 @@
 
                 <div id="content" class="sub nbg">
                     <!-- nbg 추가 -->
-                    <h3 class="sub-title">추천봇전체보기</h3>
+                    <h3 class="sub-title">추천봇 상세보기</h3>
 
                     <div class="sub-content">
                         <h4 class="sr-only">추천봇 상세정보</h4>
 
-                        <div class="bot_detail">
-                            <div class="bot_title">
-                                <div class="thumb">
-                                    <img src="./img/bot_demo.png" alt="추천봇" width="82">
-                                </div>
-                                <!-- //thumb -->
-
-                                <div class="bot_name">나폴레옹</div>
-                                <!-- //bot_name -->
-                            </div>
-                            <!-- //bot_title -->
-
-                            <div class="bot_detail_info">
+                        <div class="sub-section">
+                            <div class="rmd-bot-cont pt-0">
                                 <div class="left">
-                                    <dl>
-                                        <dt>종목선정기준</dt>
-                                        <dd class="up">증권사 애널리스트 컨센서스 기반 시장주도주 추종형</dd>
+                                    <div class="bot">
+                                        <div class="name">
+                                            <em>추천봇</em> 
+                                            <strong>나폴레옹</strong>
+                                        </div>
+                                        <!-- //name -->
+                                        <div class="thumb">
+                                            <img src="" alt="썸네일">
+                                        </div>
+                                        <!-- //thumb -->
+                                    </div>
+                                    <!-- //bot -->
 
-                                        <dt>투자종목수</dt>
-                                        <dd>10종목</dd>
-
-                                        <dt>종목교체주기</dt>
-                                        <dd>1개월</dd>
-
-                                        <dt>수익률 상위종목</dt>
-                                        <dd>삼목에스폼 242.44%, 다우데이타 99.37%</dd>
-                                    </dl>
+                                    <div class="info">
+                                        <dl class="dl-horizontal">
+                                            <dt>누적 수익률</dt>
+                                            <dd><span class="up">290.0%</span></dd>
+                                            <dt>1개월 수익률</dt>
+                                            <dd><span class="dn">-1.8%</span></dd>
+                                            <dt>3개월 수익률</dt>
+                                            <dd><span class="up">30.0%</span></dd>
+                                            <dt>1년 수익률</dt>
+                                            <dd><span class="up">45.0%</span></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- //info -->
                                 </div>
                                 <!-- //left -->
 
                                 <div class="right">
-                                    <strong>서비스 제공 동의</strong>
-
-                                    <div class="txt">
-                                        모든추천복의 추전종목 조회 가능<br>
-                                        <span class="up">나폴레옹의 매수/매도 실시간 알림 제공</span><br>
-                                        알림 받을 추천봇 언제든지 변경 가능 <br>
-                                        매일 시황 분석 카카오톡 알림 제공
+                                    <div class="info">
+                                        <dl class="dl-horizontal">
+                                            <dt>추천봇 성향</dt> 
+                                            <dd>
+                                                실적모멘텀이 있으면서도 PER, PBR, ROA 등 지표에서 저평가 되어
+                                                있는 종목을 선정
+                                            </dd>
+                                            <dt>수익률 상위종목</dt>
+                                            <dd>삼목에스폼 242.44% 다우데이타 99.37%</dd>
+                                            <dt>투자종목수</dt>
+                                            <dd>10~20 종목</dd>
+                                            <dt>평균보유기간</dt>
+                                            <dd>16.1일</dd>
+                                            <dt>서비스 제공내용</dt>
+                                            <dd>나폴레옹의 매수/매도 알림 제공,모든 추천봇 종목조회 및 변경 가능</dd>
+                                        </dl>
                                     </div>
-                                    <!-- //txt -->
-
-                                    <div class="button">
-                                        <button class="btn btn-primary">
-                                            <span> 구독하기</span>
-                                        </button>
-                                        <!-- // -->
-                                        <button class="btn btn-default">
-                                            <span>이용안내</span>
-                                        </button>
-                                        <!-- // -->
+                                    <!-- //info -->
+                                    <div class="btn-box text-right">
+                                        <button class="btn btn-primary">구독하기</button>
+                                        <button class="btn btn-default">이용안내</button>
                                     </div>
-                                    <!-- //button -->
                                 </div>
                                 <!-- //right -->
-
                             </div>
-                            <!-- //bot_detail_info -->
+                            <!-- //rmd-bot-cont -->
                         </div>
-                        <!-- //bot_detail -->
+                        <!-- //sub-section -->
 
 
-                        <div class="sub-section allDetail">
+                        <div class="sub-section allDetail mt-40">
                             <div class="result">
                                 <h4 class="box-title">성과</h4>
 
@@ -242,7 +244,7 @@
                                     </div>
                                     <!-- //resultbox -->
                                     <div class="resultbox">
-                                        <span>비교 수익률<br>코스피 대비</span>
+                                        <span>비교 수익률</span>
                                         <strong class="up">455.26%</strong>
                                     </div>
                                     <!-- //resultbox -->
@@ -255,8 +257,8 @@
                                 <h4 class="box-title">리스크 스코어</h4>
 
                                 <div class="riskbox">
-                                    <img src="./img/sub/bot/risk.jpg" alt="리스크">
-                                    <!-- //차트가 들어갈수도 있음 -->
+                                    <img src="./img/sub/bot/0.jpg" alt="리스크">
+                                    <!-- //0~6 까지 있습니다. -->
                                 </div>
                             </div>
                             <!-- //lisk -->
@@ -266,18 +268,28 @@
 
                                 <div class="chartbox">
                                     <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="c001"><img src="./img/demo.png" alt="데모1" width="100%">1</div>
-                                        <div role="tabpanel" class="tab-pane" id="c002"><img src="./img/demo.png" alt="데모2" width="100%">2</div>
-                                        <div role="tabpanel" class="tab-pane" id="c003"><img src="./img/demo.png" alt="데모3" width="100%">3</div>
-                                        <div role="tabpanel" class="tab-pane" id="c004"><img src="./img/demo.png" alt="데모4" width="100%">4</div>
-                                      </div>
+                                        <img src="./img/sub/empty-chart.jpg" alt="">
+                                        
+                                        <div role="tabpanel" class="tab-pane" id="c001"><img src="./img/demo.png"
+                                                alt="데모1" width="100%">1</div>
+                                        <div role="tabpanel" class="tab-pane" id="c002"><img src="./img/demo.png"
+                                                alt="데모2" width="100%">2</div>
+                                        <div role="tabpanel" class="tab-pane" id="c003"><img src="./img/demo.png"
+                                                alt="데모3" width="100%">3</div>
+                                        <div role="tabpanel" class="tab-pane" id="c004"><img src="./img/demo.png"
+                                                alt="데모4" width="100%">4</div>
+                                    </div>
 
-                                      <ul class="nav nav-tabs" role="tablist" id="myTab">
-                                        <li role="presentation" class="active"><a href="#c001" aria-controls="home" role="tab" data-toggle="tab">1개월</a></li>
-                                        <li role="presentation"><a href="#c002" aria-controls="profile" role="tab" data-toggle="tab">3개월</a></li>
-                                        <li role="presentation"><a href="#c003" aria-controls="messages" role="tab" data-toggle="tab">6개월</a></li>
-                                        <li role="presentation"><a href="#c004" aria-controls="settings" role="tab" data-toggle="tab">1년</a></li>
-                                      </ul>
+                                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+                                        <li role="presentation" class="active"><a href="#c001" aria-controls="home"
+                                                role="tab" data-toggle="tab">1개월</a></li>
+                                        <li role="presentation"><a href="#c002" aria-controls="profile" role="tab"
+                                                data-toggle="tab">3개월</a></li>
+                                        <li role="presentation"><a href="#c003" aria-controls="messages" role="tab"
+                                                data-toggle="tab">6개월</a></li>
+                                        <li role="presentation"><a href="#c004" aria-controls="settings" role="tab"
+                                                data-toggle="tab">1년</a></li>
+                                    </ul>
                                 </div>
                                 <!-- //chart -->
                             </div>
@@ -285,7 +297,7 @@
 
                             <div class="highreturn">
 
-                                <div class="box-title">최고 수익 종목</div>
+                                <h4 class="box-title">최고 수익 종목</h4>
 
                                 <div class="tablebox">
                                     <div class="table_w">
@@ -395,7 +407,7 @@
                                                         <span>20/03/11</span>
                                                     </td>
                                                 </tr>
-                                                
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -415,96 +427,61 @@
                                         <li role="presentation">
                                             <a data-toggle="tab" aria-controls="data" href="#sell">매도완료종목</a>
                                         </li>
-                                        <li role="presentation">
-                                            <a data-toggle="tab" aria-controls="data" href="#highreturn">최고수익종목</a>
-                                        </li>
                                     </ul>
                                     <!-- //tab-list -->
-                                
+
                                     <div class="tab-content">
                                         <div id="possesion" class="tab-pane fade in active" role="tabpanel">
                                             <div class="table_w">
                                                 <table width="100%" class="table table-striped table-hover">
                                                     <colgroup>
                                                         <col width="*">
+                                                        <col width="165">
+                                                        <col width="165">
+                                                        <col width="165">
                                                         <col width="140">
                                                         <col width="140">
-                                                        <col width="140">
-                                                        <col width="140">
-                                                        <col width="100">
-                                                        <col width="100">
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">종목명</th>
-                                                            <th scope="col">최초매수일</th>
-                                                            <th scope="col">매수단가</th>
-                                                            <th scope="col">매도완료일</th>
-                                                            <th scope="col">매도단가</th>
-                                                            <th scope="col">투자기간</th>
+                                                            <th scope="col">최초 매수일</th>
+                                                            <th scope="col">평균매수단가</th>
+                                                            <th scope="col">현재가</th>
+                                                            <th scope="col">당일등락</th>
                                                             <th scope="col">수익률</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>932</span></td>
+                                                            <td class="text-center"><span>972</span></td>
+                                                            <td class="text-center"><span class="up">0.83</span></td>
+                                                            <td class="text-right"><span class="up">4.29%</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>1,185</span></td>
+                                                            <td class="text-center"><span>1,080</span></td>
+                                                            <td class="text-center"><span class="up">0.47</span></td>
+                                                            <td class="text-right"><span class="dn">-8.86%</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><a href="#">종목명종목명종목명</a></td>
-                                                            <td class="text-center"><span>20/02/02</span></td>
-                                                            <td class="text-center"><span>56,600</span></td>
-                                                            <td class="text-center"><span>20/19/11</span></td>
-                                                            <td class="text-center"><span>29,000</span></td>
-                                                            <td class="text-center"><span>4</span></td>
-                                                            <td class="text-right"><span class="up">1.36%</span></td>
+                                                            <td class="text-center"><a href="#">******</a></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>35,550</span></td>
+                                                            <td class="text-center"><span>38,200</span></td>
+                                                            <td class="text-center"><span class="dn">-0.78</span></td>
+                                                            <td class="text-right"><span class="up">7.45%</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                             <!-- // -->
-                                
+
                                             <div class="paging text-center">
                                                 <nav>
                                                     <ul class="pagination">
@@ -529,14 +506,47 @@
                                             <!-- //paging -->
                                         </div>
                                         <!-- //tab-content -->
-                                
-                                        <div id="sell" class="tab-pane fade" role="tabpannel">2</div>
+
+                                        <div id="sell" class="tab-pane fade" role="tabpannel">
+                                            <div class="table_w">
+                                                <table width="100%" class="table table-striped table-hover">
+                                                    <colgroup>
+                                                        <col width="*">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="160">
+                                                        <col width="120">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">종목명</th>
+                                                            <th scope="col">최초매수일</th>
+                                                            <th scope="col">매수단가</th>
+                                                            <th scope="col">매도완료일</th>
+                                                            <th scope="col">매도단가</th>
+                                                            <th scope="col">수익률</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center"><a href="#">KTB투자증권</a></td>
+                                                            <td class="text-center"><span>2020/12/18</span></td>
+                                                            <td class="text-center"><span>3,335</span></td>
+                                                            <td class="text-center"><span>2021/04/27</span></td>
+                                                            <td class="text-center"><span>6,150</span></td>
+                                                            <td class="text-right"><span class="up">84.41%</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                         <!-- //tab-content -->
 
-                                        <div id="highreturn" class="tab-pane fade" role="tabpannel">3</div>
+
                                     </div>
                                     <!-- //tab-content -->
-                                
+
                                 </div>
                             </div>
                             <!-- //item_w -->
@@ -545,26 +555,8 @@
                                 <h4 class="box-title">문자 알림 샘플</h4>
 
                                 <div class="sms_w">
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
-                                    <div class="smsbox">
-                                        <!-- 이미지 -->
-                                    </div>
-
-                                    <!-- //smsbox -->
+                                    <img src="./img/sms_adv.jpg" alt="어드바이저">
+                                    <!-- <img src="./img/sms_bot.jpg" alt="추천봇"> -->
                                 </div>
                             </div>
                             <!-- //sms_sample -->

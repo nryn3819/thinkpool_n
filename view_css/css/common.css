@@ -4452,7 +4452,6 @@ table {
 
 .rmd-bot-cont .right {
   display: block;
-  width: 738px;
   height: 200px;
   float: left;
   padding-left: 40px;
@@ -4512,6 +4511,32 @@ table {
 .rmd-bot-cont .graph .graph-box {
   display: block;
   width: calc(50% - 15px);
+}
+
+.rmd-bot-cont .btn-box {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.rmd-bot-cont .btn-box .btn {
+  display: inline-block;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0 20px;
+}
+
+.rmd-bot-cont .btn-box .btn-default {
+  background: #fff;
+  border: 1px solid #d7d7d7;
+}
+
+.rmd-bot-cont .btn-box .btn-primary {
+  background: #3e72ed;
+}
+
+.rmd-bot-cont .btn-box .btn:active, .rmd-bot-cont .btn-box .btn:focus, .rmd-bot-cont .btn-box .btn:visited {
+  outline: 0;
 }
 
 .bot-sch-w {
@@ -10444,6 +10469,55 @@ table {
   border-top: 0;
 }
 
+.board_tbl .table tbody tr td .nick.user_ico {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 27px;
+  background-image: url(../img/sub/board/user.png);
+  background-repeat: no-repeat;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl10 {
+  background-position: 0 0;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl9 {
+  background-position: 0 -22px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl8 {
+  background-position: 0 -44px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl7 {
+  background-position: 0 -66px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl6 {
+  background-position: 0 -88px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl5 {
+  background-position: 0 -110px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl4 {
+  background-position: 0 -132px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl3 {
+  background-position: 0 -154px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl2 {
+  background-position: 0 -176px;
+}
+
+.board_tbl .table tbody tr td .nick.ico_cl1 {
+  background-position: 0 -198px;
+}
+
 .board_tbl .table tbody tr td a {
   display: inline-block;
   height: 25px;
@@ -10506,17 +10580,6 @@ table {
 
 .board_tbl .table tbody tr td .label.label-empty {
   padding: 0;
-}
-
-.board_tbl .table tbody tr td .label.label-circle {
-  width: 22px;
-  height: 22px;
-  line-height: 22p;
-  border-radius: 22px;
-  margin-left: 0;
-  margin-right: 2px;
-  margin-top: 2px;
-  float: left;
 }
 
 .board_tbl .table tbody tr.blind td a {

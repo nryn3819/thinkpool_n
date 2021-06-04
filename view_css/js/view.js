@@ -27,4 +27,10 @@ $(function(){
         $(this).toggleClass('active');
     });
 
+    $('.vote li').on('click', function(){
+        $(this).toggleClass('on');
+    });
+
+
+
 });

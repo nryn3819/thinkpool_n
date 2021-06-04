@@ -536,7 +536,7 @@
 
     .right {
         display: block;
-        width:738px;
+        //width:738px;
         height:200px;
         float: left;
         padding-left:40px;
@@ -590,6 +590,30 @@
             display:block;
             width:calc(50% - 15px);
 
+        }
+    }
+    .btn-box{
+        display:block;
+        width:100%;
+        padding-top:10px;
+
+        .btn{
+            display:inline-block;
+            height:40px;
+            border-radius:40px;
+            padding: 0 20px;
+
+            &-default{
+                background:#fff;
+                border:1px solid #d7d7d7;
+            }
+            &-primary{
+                background:#3e72ed;
+            }
+
+            &:active,&:focus,&:visited{
+                outline:0;
+            }
         }
     }
 }

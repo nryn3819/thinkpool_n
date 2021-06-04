@@ -155,73 +155,75 @@
 
                 <div id="content" class="sub nbg">
                     <!-- nbg 추가 -->
-                    <h3 class="sub-title">추천봇전체보기</h3>
+                    <h3 class="sub-title">추천봇 상세보기</h3>
 
                     <div class="sub-content">
                         <h4 class="sr-only">추천봇 상세정보</h4>
 
-                        <div class="bot_detail">
-                            <div class="bot_title">
-                                <div class="thumb">
-                                    <img src="./img/bot_demo.png" alt="추천봇" width="82">
-                                </div>
-                                <!-- //thumb -->
-
-                                <div class="bot_name">나폴레옹</div>
-                                <!-- //bot_name -->
-                            </div>
-                            <!-- //bot_title -->
-
-                            <div class="bot_detail_info">
+                        <div class="sub-section">
+                            <div class="rmd-bot-cont pt-0">
                                 <div class="left">
-                                    <dl>
-                                        <dt>종목선정기준</dt>
-                                        <dd class="up">증권사 애널리스트 컨센서스 기반 시장주도주 추종형</dd>
+                                    <div class="bot">
+                                        <div class="name">
+                                            <em>추천봇</em> 
+                                            <strong>나폴레옹</strong>
+                                        </div>
+                                        <!-- //name -->
+                                        <div class="thumb">
+                                            <img src="" alt="썸네일">
+                                        </div>
+                                        <!-- //thumb -->
+                                    </div>
+                                    <!-- //bot -->
 
-                                        <dt>투자종목수</dt>
-                                        <dd>10종목</dd>
-
-                                        <dt>종목교체주기</dt>
-                                        <dd>1개월</dd>
-
-                                        <dt>수익률 상위종목</dt>
-                                        <dd>삼목에스폼 242.44%, 다우데이타 99.37%</dd>
-                                    </dl>
+                                    <div class="info">
+                                        <dl class="dl-horizontal">
+                                            <dt>누적 수익률</dt>
+                                            <dd><span class="up">290.0%</span></dd>
+                                            <dt>1개월 수익률</dt>
+                                            <dd><span class="dn">-1.8%</span></dd>
+                                            <dt>3개월 수익률</dt>
+                                            <dd><span class="up">30.0%</span></dd>
+                                            <dt>1년 수익률</dt>
+                                            <dd><span class="up">45.0%</span></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- //info -->
                                 </div>
                                 <!-- //left -->
 
                                 <div class="right">
-                                    <strong>서비스 제공 동의</strong>
-
-                                    <div class="txt">
-                                        모든추천복의 추전종목 조회 가능<br>
-                                        <span class="up">나폴레옹의 매수/매도 실시간 알림 제공</span><br>
-                                        알림 받을 추천봇 언제든지 변경 가능 <br>
-                                        매일 시황 분석 카카오톡 알림 제공
+                                    <div class="info">
+                                        <dl class="dl-horizontal">
+                                            <dt>추천봇 성향</dt> 
+                                            <dd>
+                                                실적모멘텀이 있으면서도 PER, PBR, ROA 등 지표에서 저평가 되어
+                                                있는 종목을 선정
+                                            </dd>
+                                            <dt>수익률 상위종목</dt>
+                                            <dd>삼목에스폼 242.44% 다우데이타 99.37%</dd>
+                                            <dt>투자종목수</dt>
+                                            <dd>10~20 종목</dd>
+                                            <dt>평균보유기간</dt>
+                                            <dd>16.1일</dd>
+                                            <dt>서비스 제공내용</dt>
+                                            <dd>나폴레옹의 매수/매도 알림 제공,모든 추천봇 종목조회 및 변경 가능</dd>
+                                        </dl>
                                     </div>
-                                    <!-- //txt -->
-
-                                    <div class="button">
-                                        <button class="btn btn-primary">
-                                            <span> 구독하기</span>
-                                        </button>
-                                        <!-- // -->
-                                        <button class="btn btn-default">
-                                            <span>이용안내</span>
-                                        </button>
-                                        <!-- // -->
+                                    <!-- //info -->
+                                    <div class="btn-box text-right">
+                                        <button class="btn btn-primary">구독하기</button>
+                                        <button class="btn btn-default">이용안내</button>
                                     </div>
-                                    <!-- //button -->
                                 </div>
                                 <!-- //right -->
-
                             </div>
-                            <!-- //bot_detail_info -->
+                            <!-- //rmd-bot-cont -->
                         </div>
-                        <!-- //bot_detail -->
+                        <!-- //sub-section -->
 
 
-                        <div class="sub-section allDetail">
+                        <div class="sub-section allDetail mt-40">
                             <div class="result">
                                 <h4 class="box-title">성과</h4>
 
@@ -242,7 +244,7 @@
                                     </div>
                                     <!-- //resultbox -->
                                     <div class="resultbox">
-                                        <span>비교 수익률<br>코스피 대비</span>
+                                        <span>비교 수익률</span>
                                         <strong class="up">455.26%</strong>
                                     </div>
                                     <!-- //resultbox -->
@@ -266,7 +268,9 @@
 
                                 <div class="chartbox">
                                     <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="c001"><img src="./img/demo.png"
+                                        <img src="./img/sub/empty-chart.jpg" alt="">
+                                        
+                                        <div role="tabpanel" class="tab-pane" id="c001"><img src="./img/demo.png"
                                                 alt="데모1" width="100%">1</div>
                                         <div role="tabpanel" class="tab-pane" id="c002"><img src="./img/demo.png"
                                                 alt="데모2" width="100%">2</div>
