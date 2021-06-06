@@ -73,11 +73,20 @@
         .text {
             display: block;
             font-size: 14px;
-            color: #666;
-            line-height: 18px;
+            color: #787878;
+            line-height: 22px;
+            font-weight:350;
 
             span {
                 cursor: pointer;
+            }
+            .recmmt{
+                display:inline-block;
+                height:15px;
+                padding-top:2px;
+                img{
+                    float:left;
+                }
             }
         }
 
@@ -85,7 +94,7 @@
 
     .vote {
         position: absolute;
-        top: 20px;
+        top: 15px;
         right: 50px;
 
         ul {
@@ -135,7 +144,7 @@
 
     .declaration {
         position: absolute;
-        top: 20px;
+        top: 15px;
         right: 0;
 
         span {

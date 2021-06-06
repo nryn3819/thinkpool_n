@@ -407,8 +407,8 @@ table {
 
 #allmenu .allmenu_wrap .allmenu_content .menu .menu_list .amenu ul li {
   display: block;
-  height: 20px;
-  line-height: 20px;
+  height: 22px;
+  line-height: 22px;
 }
 
 #allmenu .allmenu_wrap .allmenu_content .menu .menu_list .amenu ul li a {
@@ -4903,7 +4903,7 @@ table {
   padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #333;
   border-top: 1px solid #dfdfdf;
@@ -4921,7 +4921,7 @@ table {
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
@@ -5004,7 +5004,7 @@ table {
 }
 
 .table_w table.table-lft tbody tr th {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
   font-weight: 700;
   height: 47px;
@@ -5020,7 +5020,7 @@ table {
   height: 47px;
   line-height: 47px;
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
   font-weight: 300;
 }
@@ -12235,17 +12235,28 @@ span.label.ico.ico10 {
 .cmmtBox .cmmt_cont .text {
   display: block;
   font-size: 14px;
-  color: #666;
-  line-height: 18px;
+  color: #787878;
+  line-height: 22px;
+  font-weight: 350;
 }
 
 .cmmtBox .cmmt_cont .text span {
   cursor: pointer;
 }
 
+.cmmtBox .cmmt_cont .text .recmmt {
+  display: inline-block;
+  height: 15px;
+  padding-top: 2px;
+}
+
+.cmmtBox .cmmt_cont .text .recmmt img {
+  float: left;
+}
+
 .cmmtBox .vote {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 50px;
 }
 
@@ -12295,7 +12306,7 @@ span.label.ico.ico10 {
 
 .cmmtBox .declaration {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 0;
 }
 

@@ -3348,7 +3348,7 @@
   padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #333;
   border-top: 1px solid #dfdfdf;
@@ -3366,7 +3366,7 @@
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
@@ -3449,7 +3449,7 @@
 }
 
 .table_w table.table-lft tbody tr th {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
   font-weight: 700;
   height: 47px;
@@ -3465,7 +3465,7 @@
   height: 47px;
   line-height: 47px;
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
   font-weight: 300;
 }

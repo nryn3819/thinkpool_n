@@ -75,17 +75,28 @@
 .cmmtBox .cmmt_cont .text {
   display: block;
   font-size: 14px;
-  color: #666;
-  line-height: 18px;
+  color: #787878;
+  line-height: 22px;
+  font-weight: 350;
 }
 
 .cmmtBox .cmmt_cont .text span {
   cursor: pointer;
 }
 
+.cmmtBox .cmmt_cont .text .recmmt {
+  display: inline-block;
+  height: 15px;
+  padding-top: 2px;
+}
+
+.cmmtBox .cmmt_cont .text .recmmt img {
+  float: left;
+}
+
 .cmmtBox .vote {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 50px;
 }
 
@@ -135,7 +146,7 @@
 
 .cmmtBox .declaration {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 0;
 }
 
