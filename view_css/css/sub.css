@@ -3652,6 +3652,10 @@
   border-left: 0;
 }
 
+.table_w table.table-bordered tfoot tr td:last-child, .table_w table.table-bordered tfoot tr th:last-child {
+  border-right: 0;
+}
+
 .table_w table.table-bordered.tbnborder tbody tr:first-child td, .table_w table.table-bordered.tbnborder tbody tr:first-child th {
   border-top: 1px solid #666;
 }
@@ -4233,8 +4237,9 @@
 }
 
 .allDetail .per .chartbox .nav-tabs li.active a {
-  background: #f6f7f8;
-  color: #333;
+  background: #3e72ed;
+  color: #fff;
+  border: 1px solid #3e72ed;
 }
 
 .allDetail .per .chartbox .nav-tabs li a {

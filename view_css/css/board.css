@@ -394,7 +394,7 @@
 .b_btn span {
   display: block;
   height: 34px;
-  line-height: 30px;
+  line-height: 32px;
   padding: 0 5px;
   color: #333;
   font-size: 13px;
@@ -581,6 +581,10 @@
   border-bottom: 1px solid #d7d7d7;
   padding: 25px 0 15px 0;
   float: left;
+}
+
+.myItemList_w .myItemList .list:last-child {
+  border-bottom: 0;
 }
 
 .myItemList_w .myItemList .list strong {
@@ -1988,6 +1992,7 @@ span.label.ico.ico10 {
 
 .re_cmmt_input .inputBox .user_nick {
   display: block;
+  height: 14px;
   float: left;
   font-size: 14px;
   color: #333;

@@ -188,6 +188,7 @@
 
 .re_cmmt_input .inputBox .user_nick {
   display: block;
+  height: 14px;
   float: left;
   font-size: 14px;
   color: #333;

@@ -5207,6 +5207,10 @@ table {
   border-left: 0;
 }
 
+.table_w table.table-bordered tfoot tr td:last-child, .table_w table.table-bordered tfoot tr th:last-child {
+  border-right: 0;
+}
+
 .table_w table.table-bordered.tbnborder tbody tr:first-child td, .table_w table.table-bordered.tbnborder tbody tr:first-child th {
   border-top: 1px solid #666;
 }
@@ -5788,8 +5792,9 @@ table {
 }
 
 .allDetail .per .chartbox .nav-tabs li.active a {
-  background: #f6f7f8;
-  color: #333;
+  background: #3e72ed;
+  color: #fff;
+  border: 1px solid #3e72ed;
 }
 
 .allDetail .per .chartbox .nav-tabs li a {
@@ -10755,7 +10760,7 @@ table {
 .b_btn span {
   display: block;
   height: 34px;
-  line-height: 30px;
+  line-height: 32px;
   padding: 0 5px;
   color: #333;
   font-size: 13px;
@@ -10942,6 +10947,10 @@ table {
   border-bottom: 1px solid #d7d7d7;
   padding: 25px 0 15px 0;
   float: left;
+}
+
+.myItemList_w .myItemList .list:last-child {
+  border-bottom: 0;
 }
 
 .myItemList_w .myItemList .list strong {
@@ -12349,6 +12358,7 @@ span.label.ico.ico10 {
 
 .re_cmmt_input .inputBox .user_nick {
   display: block;
+  height: 14px;
   float: left;
   font-size: 14px;
   color: #333;
