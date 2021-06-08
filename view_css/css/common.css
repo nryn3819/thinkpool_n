@@ -8061,9 +8061,10 @@ table {
   display: block;
   margin-top: 20px;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 300;
   color: #666;
-  text-indent: 5px;
+  padding-left: 5px;
 }
 
 .mybot-info .infobox {
@@ -12186,6 +12187,14 @@ span.label.ico.ico10 {
 
 .cmmtBox .user_info {
   display: block;
+}
+
+.cmmtBox .user_info .label {
+  padding: 2px 3px;
+}
+
+.cmmtBox .user_info .label.primary {
+  background: #3e72ed;
 }
 
 .cmmtBox .user_info .user_nick {

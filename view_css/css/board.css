@@ -1828,6 +1828,14 @@ span.label.ico.ico10 {
   display: block;
 }
 
+.cmmtBox .user_info .label {
+  padding: 2px 3px;
+}
+
+.cmmtBox .user_info .label.primary {
+  background: #3e72ed;
+}
+
 .cmmtBox .user_info .user_nick {
   font-size: 14px;
   color: #333;

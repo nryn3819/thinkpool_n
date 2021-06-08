@@ -257,9 +257,10 @@
   display: block;
   margin-top: 20px;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 300;
   color: #666;
-  text-indent: 5px;
+  padding-left: 5px;
 }
 
 .mybot-info .infobox {

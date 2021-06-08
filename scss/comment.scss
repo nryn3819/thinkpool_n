@@ -26,6 +26,13 @@
     .user_info {
         display: block;
 
+        .label{
+            padding:2px 3px;
+            &.primary{
+                background:#3e72ed;
+            }
+        }
+
         .user_nick {
             font-size: 14px;
             color: #333;
