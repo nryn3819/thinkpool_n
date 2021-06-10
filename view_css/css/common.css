@@ -732,6 +732,7 @@ table {
 
 #wrap {
   width: 100%;
+  min-width: 1500px;
 }
 
 #container_w {
@@ -1670,9 +1671,11 @@ table {
 #subNav.garo ul li a .label {
   background: #3e72ed;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
-  padding: 0 3px;
+  padding: 2px 3px;
+  margin-right: 3px;
+  font-weight: 500;
 }
 
 #subNav.garo ul li a:hover {
@@ -6704,7 +6707,7 @@ table {
 .tab-sm .nav li {
   width: auto;
   height: 32px;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 .tab-sm .nav li:last-child {
@@ -6720,8 +6723,8 @@ table {
   content: '│';
   line-height: 17px;
   font-size: 15px;
-  color: #666;
-  padding: 2px 30px 0 0;
+  color: #cecece;
+  padding: 2px 15px 0 0;
   float: left;
 }
 
@@ -6777,14 +6780,14 @@ table {
   padding: 0;
   width: calc(100% - 15px);
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   color: #999;
 }
 
 .tab-sm.nborder .nav li a:hover, .tab-sm.nborder .nav li a:active {
   height: 19px;
   line-height: 19px;
-  font-size: 16px;
+  font-size: 14px;
   border-bottom: 0;
   color: #3E72ED;
   font-weight: 500;
@@ -6793,7 +6796,7 @@ table {
 .tab-sm.nborder .nav li.active a {
   height: 19px;
   line-height: 19px;
-  font-size: 16px;
+  font-size: 14px;
   border-bottom: 0;
   color: #3E72ED;
   font-weight: 500;
