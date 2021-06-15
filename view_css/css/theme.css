@@ -217,6 +217,14 @@
   clear: both;
 }
 
+.listContentView table {
+  border: 1px solid #ccc;
+}
+
+.listContentView table th, .listContentView table td {
+  border: 1px solid #ccc;
+}
+
 .listContentView .top {
   display: block;
 }

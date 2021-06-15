@@ -120,6 +120,15 @@
         weight:300;
     }
     color:#666;
+    
+
+    table{
+        border:1px solid #ccc;
+
+        th, td{
+            border:1px solid #ccc;
+        }
+    }
 }
 .reload{
 

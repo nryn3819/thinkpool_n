@@ -129,6 +129,14 @@
   color: #666;
 }
 
+.dcsContent table {
+  border: 1px solid #ccc;
+}
+
+.dcsContent table th, .dcsContent table td {
+  border: 1px solid #ccc;
+}
+
 .reload button {
   border: 0;
   background: #fff;

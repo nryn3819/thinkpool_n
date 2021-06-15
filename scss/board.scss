@@ -472,10 +472,14 @@
     padding-left: 230px;
     min-height: 124px;
     background: url(../img/sub/best.png) no-repeat 0 0;
-
     strong {
         display: block;
+        width:528px;
         float: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    
 
         font: {
             size: 24px;
@@ -512,7 +516,7 @@
     em {
         position: absolute;
         top: 10px;
-        right: 0;
+        right: 3px;
 
         font: {
             style: normal;

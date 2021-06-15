@@ -1555,6 +1555,80 @@ table {
   content: " →";
 }
 
+body, html {
+  height: 100%;
+}
+
+#error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#error .top {
+  display: block;
+  width: 100%;
+  padding: 0 10px 15px 10px;
+  text-align: center;
+  float: left;
+  border-bottom: 2px solid #000;
+}
+
+#error .top .left {
+  display: block;
+  float: left;
+}
+
+#error .top .right {
+  display: block;
+  float: right;
+}
+
+#error .top .right a {
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  color: #333;
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#error .con {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 35px 10px;
+}
+
+#error .con strong {
+  display: block;
+  font-size: 26px;
+  line-height: 33px;
+  color: #333;
+  font-weight: 700;
+}
+
+#error .con span {
+  padding-top: 40px;
+  display: block;
+  font-size: 16px;
+  color: #666;
+  line-height: 20px;
+  letter-spacing: -0.025em;
+}
+
 #subNav {
   position: relative;
   width: 100%;
@@ -2925,7 +2999,7 @@ table {
 }
 
 .third-table-box div .module-table tbody tr td {
-  height: 76px;
+  min-height: 76px;
 }
 
 .half-table-box div .module-table tbody tr td {
@@ -2954,6 +3028,26 @@ table {
 
 .btr-none {
   border-right: 0 !important;
+}
+
+.rdolist {
+  display: block;
+  margin: 10px 0;
+  float: left;
+}
+
+.rdolist li {
+  display: block;
+  margin-right: 15px;
+  float: left;
+}
+
+.rdolist li label {
+  padding-left: 5px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 300;
+  cursor: pointer;
 }
 
 .module-section {
@@ -7078,6 +7172,14 @@ table {
   clear: both;
 }
 
+.listContentView table {
+  border: 1px solid #ccc;
+}
+
+.listContentView table th, .listContentView table td {
+  border: 1px solid #ccc;
+}
+
 .listContentView .top {
   display: block;
 }
@@ -7338,6 +7440,14 @@ table {
   font-size: 15px;
   font-weight: 300;
   color: #666;
+}
+
+.dcsContent table {
+  border: 1px solid #ccc;
+}
+
+.dcsContent table th, .dcsContent table td {
+  border: 1px solid #ccc;
 }
 
 .reload button {
@@ -10824,7 +10934,11 @@ table {
 
 .bestList strong {
   display: block;
+  width: 528px;
   float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 24px;
   font-weight: 700;
   color: #333;
@@ -10853,7 +10967,7 @@ table {
 .bestList em {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 3px;
   font-style: normal;
   font-size: 14px;
   font-weight: 300;

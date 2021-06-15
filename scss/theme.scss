@@ -195,6 +195,14 @@
     display:block;
     clear:both;
 
+    table{
+        border:1px solid #ccc;
+
+        th,td{
+            border:1px solid #ccc;
+        }
+    }
+
     .top{
         display:block;
 

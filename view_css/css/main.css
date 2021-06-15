@@ -533,3 +533,77 @@
 .main-items-tab .more a::after {
   content: " →";
 }
+
+body, html {
+  height: 100%;
+}
+
+#error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#error .top {
+  display: block;
+  width: 100%;
+  padding: 0 10px 15px 10px;
+  text-align: center;
+  float: left;
+  border-bottom: 2px solid #000;
+}
+
+#error .top .left {
+  display: block;
+  float: left;
+}
+
+#error .top .right {
+  display: block;
+  float: right;
+}
+
+#error .top .right a {
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  color: #333;
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#error .con {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 35px 10px;
+}
+
+#error .con strong {
+  display: block;
+  font-size: 26px;
+  line-height: 33px;
+  color: #333;
+  font-weight: 700;
+}
+
+#error .con span {
+  padding-top: 40px;
+  display: block;
+  font-size: 16px;
+  color: #666;
+  line-height: 20px;
+  letter-spacing: -0.025em;
+}

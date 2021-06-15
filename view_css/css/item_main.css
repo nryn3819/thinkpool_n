@@ -162,7 +162,7 @@
 }
 
 .third-table-box div .module-table tbody tr td {
-  height: 76px;
+  min-height: 76px;
 }
 
 .half-table-box div .module-table tbody tr td {
@@ -191,6 +191,26 @@
 
 .btr-none {
   border-right: 0 !important;
+}
+
+.rdolist {
+  display: block;
+  margin: 10px 0;
+  float: left;
+}
+
+.rdolist li {
+  display: block;
+  margin-right: 15px;
+  float: left;
+}
+
+.rdolist li label {
+  padding-left: 5px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 300;
+  cursor: pointer;
 }
 
 .module-section {
