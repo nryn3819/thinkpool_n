@@ -773,9 +773,7 @@
 }
 
 .bot_list_w {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -796,6 +794,12 @@
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  float: left;
+}
+
+.bot_list_w .bot_w:nth-child(3n-1) {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .bot_list_w .bot_w .top {

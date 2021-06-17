@@ -119,7 +119,7 @@
   display: block;
   float: left;
   width: calc(100% - 260px);
-  height: 435px;
+  min-height: 435px;
 }
 
 .ai_rmd .right .itemRmdBox_w {
@@ -272,7 +272,7 @@
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_graph {
   display: block;
   width: 100%;
-  height: 220px;
+  min-height: 220px;
   margin-top: 20px;
   float: left;
   background: #f8f8f8;

@@ -262,6 +262,12 @@
   padding-left: 3px;
 }
 
+#header_w #realheader #header .info ul li span {
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+}
+
 #header_w #realheader #header .info ul li:first-child {
   padding-left: 0;
   margin-left: 0;
