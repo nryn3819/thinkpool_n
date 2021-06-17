@@ -79,7 +79,7 @@
 .main-issue {
   .left {
     width: 500px;
-    height: 450px;
+    min-height: 450px;
     float: left;
     padding-right: 15px;
 
@@ -90,7 +90,7 @@
 
   .right {
     width: calc(100% - 500px);
-    height: 450px;
+    min-height: 450px;
     float: left;
   }
 }

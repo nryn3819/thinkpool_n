@@ -829,7 +829,6 @@ table {
 #c_side .s_menu {
   display: block;
   width: 100%;
-  overflow: hidden;
   float: left;
 }
 
@@ -888,18 +887,28 @@ table {
 }
 
 #c_side .s_menu .s_list_w {
-  height: 440px;
+  display: block;
+  width: 100%;
+  float: left;
+  min-height: 54px;
+  max-height: 440px;
+}
+
+#c_side .s_menu .s_list_w .bx-viewport {
+  overflow-y: hidden !important;
+  overflow-x: visible !important;
 }
 
 #c_side .s_menu .s_list {
   display: block;
-  height: 440px;
+  width: 100%;
+  float: left;
 }
 
 #c_side .s_menu .s_list li {
+  position: relative;
   display: block;
   width: 100%;
-  overflow: hidden;
   border-bottom: 1px solid #dfdfdf;
   float: left;
   clear: both;
@@ -907,6 +916,36 @@ table {
 
 #c_side .s_menu .s_list li:last-child {
   border-bottom: 0;
+}
+
+#c_side .s_menu .s_list li:hover .popover {
+  position: absolute;
+  top: 34px;
+  left: 10px;
+  width: 130px;
+  display: inline-block;
+  background: none;
+  border: 0;
+  z-index: 999;
+}
+
+#c_side .s_menu .s_list li:hover .popover .popover-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  opacity: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+}
+
+#c_side .s_menu .s_list li:hover .popover .popover-content a {
+  font-size: 13px;
+  color: #333;
 }
 
 #c_side .s_menu .s_list .myItemList {
@@ -972,26 +1011,10 @@ table {
   color: #fc2f2f;
 }
 
-#c_side .s_menu .s_list .popover {
-  z-index: 99;
-}
-
-#c_side .s_menu .s_list .popover .popover-content {
-  padding: 2px 8px;
-}
-
-#c_side .s_menu .s_list .popover .popover-content a {
-  display: inline-block;
-  margin: 0 3px;
-  color: #666;
-  font-size: 12px;
-}
-
-#c_side .s_menu .s_list .popover .popover-content a:hover {
-  color: #000;
-}
-
 #c_side .s_menu .s_menu_control {
+  display: block;
+  float: left;
+  width: 100%;
   height: 42px;
   line-height: 42px;
   border-top: 1px solid #bdbdbd;
@@ -1107,7 +1130,7 @@ table {
 
 .main-issue .left {
   width: 500px;
-  height: 450px;
+  min-height: 450px;
   float: left;
   padding-right: 15px;
 }
@@ -1118,7 +1141,7 @@ table {
 
 .main-issue .right {
   width: calc(100% - 500px);
-  height: 450px;
+  min-height: 450px;
   float: left;
 }
 
@@ -7824,7 +7847,7 @@ body, html {
 }
 
 .aisignal_w .chart_w .chartbox {
-  min-height: 300px;
+  min-height: 410px;
   background: #f5f5f5;
 }
 
@@ -8425,6 +8448,13 @@ body, html {
 
 .usr-recomm li .usr_txt {
   display: block;
+  height: 58px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
   float: left;
   font-size: 15px;
   font-weight: 300;

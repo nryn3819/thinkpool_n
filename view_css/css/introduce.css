@@ -175,6 +175,13 @@
 
 .usr-recomm li .usr_txt {
   display: block;
+  height: 58px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
   float: left;
   font-size: 15px;
   font-weight: 300;

@@ -70,26 +70,7 @@ $(function () {
     });
 
     //우측메뉴 종목리스트 오버
-    $(".s_list a[data-toggle='popover']").popover({
-        trigger: 'manual',
-        html: true,
-        placement: 'left'
-    }).on('mouseenter', function () {
-        var _this = this;
-
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
-        });
-    }).on('mouseleave', function () {
-        var _this = this;
-
-        setTimeout(function () {
-            if (!$('.popover:hover').length) {
-                $(_this).popover('hide');
-            }
-        });
-    });
+    
 
     //우측메뉴 종목리스트 슬라이드
     var s_menuLenth = $('.s_m01 li').length;

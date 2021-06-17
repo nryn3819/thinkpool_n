@@ -7,7 +7,7 @@
   .s_menu {
     display: block;
     width: 100%;
-    overflow: hidden;
+    //overflow: hidden;
     float: left;
 
     &.s_m02 {
@@ -68,17 +68,29 @@
 
 
     .s_list_w {
-      height: 440px;
+      display:block;
+      width:100%;
+      float:left;
+      min-height:54px;
+      max-height: 440px;
+
+      .bx-viewport{
+        overflow-y:hidden !important;
+        overflow-x:visible !important;
+      }
     }
 
     .s_list {
       display: block;
-      height: 440px;
+      width:100%;
+      float:left;
+      //height: 440px;
 
       li {
+        position:relative;
         display: block;
         width: 100%;
-        overflow: hidden;
+        //overflow: hidden;
         border-bottom: 1px solid #dfdfdf;
         float: left;
         clear: both;
@@ -86,6 +98,36 @@
         &:last-child {
           border-bottom: 0;
         }
+
+        &:hover{
+          .popover{
+            position:absolute;
+            top:34px;
+            left:10px;
+            width:130px;
+            display:inline-block;
+            background:none;
+            border:0;
+            z-index:999;
+
+            .popover-content{
+              display:flex;
+              width:100%;
+              height:40px;
+              background:#fff;
+              opacity: 1;
+              justify-content: space-between;
+              border-radius:8px;
+
+              a{
+                font-size:13px;
+                color:#333;
+              }
+
+            }
+          }
+        }
+
       }
 
       .myItemList {
@@ -151,27 +193,13 @@
         }
       }
 
-      .popover {
-        z-index: 99;
-
-        .popover-content {
-          padding: 2px 8px;
-
-          a {
-            display: inline-block;
-            margin: 0 3px;
-            color: #666;
-            font-size: 12px;
-
-            &:hover {
-              color: #000;
-            }
-          }
-        }
-      }
+      
     }
 
     .s_menu_control {
+      display:block;
+      float:left;
+      width:100%;
       height: 42px;
       line-height: 42px;
       border-top: 1px solid #bdbdbd;
