@@ -1373,7 +1373,7 @@
 }
 
 .half-table-box div .module-table tbody tr td {
-  height: 58px;
+  min-height: 58px;
 }
 
 .btm-none {
@@ -1790,6 +1790,7 @@
 }
 
 .itemHomeBox {
+  position: relative;
   display: block;
   width: 100%;
 }
@@ -2433,6 +2434,7 @@
 
 .ai_rmd .left ul li.active.dn a {
   border: 5px solid #447AEB;
+  background: #fff;
 }
 
 .ai_rmd .left ul li.active.dn a .name {
@@ -3066,7 +3068,6 @@
   display: block;
   width: 720px;
   min-height: 430px;
-  background: #f5f5f5;
   float: right;
 }
 
@@ -4637,7 +4638,9 @@
   text-align: center;
   width: 300px;
   height: 240px;
-  background: #f5f5f5;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin-bottom: 25px;
 }
 
@@ -6199,7 +6202,6 @@
 
 .aisignal_w .chart_w .chartbox {
   min-height: 410px;
-  background: #f5f5f5;
 }
 
 .aisignal_w .info {

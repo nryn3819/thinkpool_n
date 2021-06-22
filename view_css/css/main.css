@@ -125,15 +125,21 @@
 }
 
 .main_issue_w .mainitem {
+  position: relative;
   display: block;
   overflow: hidden;
   margin-top: 30px;
   background: #f6f6f6;
   border-radius: 5px;
+  padding-left: 67px;
 }
 
 .main_issue_w .mainitem strong {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
+  width: 67px;
   height: 35px;
   line-height: 35px;
   text-indent: 15px;
@@ -141,6 +147,21 @@
   font-weight: 700;
   color: #333;
   float: left;
+}
+
+.main_issue_w .mainitem a {
+  display: block;
+  float: left;
+  font-size: 13px;
+  color: #999;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.main_issue_w .mainitem a::before {
+  content: '+';
 }
 
 .main_issue_w .mainitem dl {

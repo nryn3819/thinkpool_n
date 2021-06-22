@@ -44,6 +44,7 @@
 
 .ai_rmd .left ul li.active.dn a {
   border: 5px solid #447AEB;
+  background: #fff;
 }
 
 .ai_rmd .left ul li.active.dn a .name {
