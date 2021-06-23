@@ -235,6 +235,17 @@
         .module-table{
             tbody tr td{
                 min-height:58px;
+
+                &:nth-child(2n){
+                    a{
+                        display:block;
+                        width:100%;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        color:#666;
+                    }
+                }
             }
         }
     }

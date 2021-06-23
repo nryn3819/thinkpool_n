@@ -1231,6 +1231,15 @@
   min-height: 58px;
 }
 
+.half-table-box div .module-table tbody tr td:nth-child(2n) a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666;
+}
+
 .btm-none {
   border-bottom: 0 !important;
 }

@@ -1376,6 +1376,15 @@
   min-height: 58px;
 }
 
+.half-table-box div .module-table tbody tr td:nth-child(2n) a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666;
+}
+
 .btm-none {
   border-bottom: 0 !important;
 }
@@ -2543,6 +2552,7 @@
   height: 153px;
   overflow: hidden;
   text-align: center;
+  border: 1px solid #d7d7d7;
   border-radius: 5px;
 }
 
@@ -2602,6 +2612,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .info .con span em {
+  font-style: normal;
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .info .date {
@@ -2839,13 +2853,14 @@
   width: 220px;
   height: 200px;
   float: left;
-  background: #f6f6f6;
+  border: 1px solid #e1e1e1;
+  border-radius: 7px;
 }
 
 .rmd-bot-cont .left .bot {
   display: block;
   width: 100%;
-  height: 230px;
+  height: 200px;
   text-align: center;
   float: left;
 }
