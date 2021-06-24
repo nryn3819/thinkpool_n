@@ -361,6 +361,7 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 470px;
+  margin-left: 10px;
   float: left;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -402,7 +403,7 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 298px;
+  width: 288px;
   height: 15px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -445,6 +446,22 @@
   color: #3e72ed;
   padding-right: 32px;
   padding-left: 2px;
+}
+
+#header_w #realheader #header .nav .sch input:focus::-webkit-input-placeholder, #header_w #realheader #header .nav .sch input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus:-ms-input-placeholder, #header_w #realheader #header .nav .sch input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus::-ms-input-placeholder, #header_w #realheader #header .nav .sch input:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus::placeholder, #header_w #realheader #header .nav .sch input:focus::placeholder {
+  color: #fff;
 }
 
 #header_w #realheader #header .nav .sch input::-webkit-input-placeholder {

@@ -102,13 +102,17 @@
 }
 
 .main_issue_w {
+  position: relative;
   display: block;
   width: 100%;
 }
 
 .main_issue_w .title {
   display: block;
-  width: 100%;
+  width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 700;
   color: #333;
@@ -225,6 +229,18 @@
   padding-left: 5px;
 }
 
+.main_issue_w .more {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.main_issue_w .more a {
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
 .main-signal {
   display: block;
   width: 100%;
@@ -241,6 +257,10 @@
   width: calc(100% - 385px);
   float: left;
   padding-left: 50px;
+}
+
+.main-signal .right .table_w table {
+  margin-bottom: 0;
 }
 
 .main-signal .left .signal {
@@ -293,6 +313,7 @@
   display: block;
   width: 100%;
   padding-top: 10px;
+  font-size: 18px;
 }
 
 .main-signal .left .info {
@@ -324,7 +345,7 @@
 
 .main-signal .left .info ul li dl dt {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #333;
 }

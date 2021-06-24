@@ -660,6 +660,7 @@ table {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 470px;
+  margin-left: 10px;
   float: left;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -701,7 +702,7 @@ table {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 298px;
+  width: 288px;
   height: 15px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -744,6 +745,22 @@ table {
   color: #3e72ed;
   padding-right: 32px;
   padding-left: 2px;
+}
+
+#header_w #realheader #header .nav .sch input:focus::-webkit-input-placeholder, #header_w #realheader #header .nav .sch input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus:-ms-input-placeholder, #header_w #realheader #header .nav .sch input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus::-ms-input-placeholder, #header_w #realheader #header .nav .sch input:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+#header_w #realheader #header .nav .sch input:focus::placeholder, #header_w #realheader #header .nav .sch input:focus::placeholder {
+  color: #fff;
 }
 
 #header_w #realheader #header .nav .sch input::-webkit-input-placeholder {
@@ -1207,13 +1224,17 @@ table {
 }
 
 .main_issue_w {
+  position: relative;
   display: block;
   width: 100%;
 }
 
 .main_issue_w .title {
   display: block;
-  width: 100%;
+  width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 700;
   color: #333;
@@ -1330,6 +1351,18 @@ table {
   padding-left: 5px;
 }
 
+.main_issue_w .more {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.main_issue_w .more a {
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
 .main-signal {
   display: block;
   width: 100%;
@@ -1346,6 +1379,10 @@ table {
   width: calc(100% - 385px);
   float: left;
   padding-left: 50px;
+}
+
+.main-signal .right .table_w table {
+  margin-bottom: 0;
 }
 
 .main-signal .left .signal {
@@ -1398,6 +1435,7 @@ table {
   display: block;
   width: 100%;
   padding-top: 10px;
+  font-size: 18px;
 }
 
 .main-signal .left .info {
@@ -1429,7 +1467,7 @@ table {
 
 .main-signal .left .info ul li dl dt {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #333;
 }
@@ -1848,7 +1886,6 @@ body, html {
   font-size: 14px;
   color: #333;
   padding: 0 20px;
-  letter-spacing: -0.025em;
   font-weight: 300;
 }
 
@@ -4472,7 +4509,7 @@ body, html {
   padding: 0 0 17px 0;
   margin: 0;
   line-height: 17px;
-  font-size: 15px;
+  font-size: 16px;
   color: #666;
   font-weight: 300;
   float: left;
@@ -4876,10 +4913,10 @@ body, html {
 
 .pagination li.active a,
 .pagination li.active span {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
+  background: #3e72ed;
+  color: #fff;
   font-weight: 500;
+  border: 0;
 }
 
 .pagination li a {
@@ -4895,15 +4932,15 @@ body, html {
   border: 1px solid #fff;
 }
 
-.pagination li a:hover {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
+.pagination li a:hover, .pagination li a:focus, .pagination li a:active {
+  background: #3e72ed;
+  border: 0;
+  color: #fff;
   font-weight: 500;
 }
 
 .popover {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
   line-height: 23px;
@@ -4937,7 +4974,7 @@ body, html {
 }
 
 .check-radio ul li label {
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   font-weight: 300;
   padding-left: 5px;
@@ -4972,7 +5009,7 @@ body, html {
   margin-right: 8px;
   border-radius: 34px;
   background: #fff;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .table_w .tbl-top .btn-md {
@@ -5083,7 +5120,7 @@ body, html {
 
 .table_w .tbl-top .right > span {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
   padding-top: 10px;
@@ -5099,7 +5136,7 @@ body, html {
   display: block;
   height: 23px;
   line-height: 23px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #999;
 }
@@ -5122,7 +5159,7 @@ body, html {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: #999;
   font-weight: 300;
 }
@@ -5132,11 +5169,11 @@ body, html {
 }
 
 .table_w table thead tr th {
-  padding-top: 8px;
-  padding-bottom: 9px;
+  padding-top: 12px;
+  padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   color: #333;
   border-top: 1px solid #dfdfdf;
@@ -5154,7 +5191,7 @@ body, html {
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
@@ -5201,6 +5238,10 @@ body, html {
   outline: 0;
 }
 
+.table_w table tbody tr:hover th, .table_w table tbody tr:hover td {
+  background: #fafafc;
+}
+
 .table_w table.signal {
   border-top: 0;
 }
@@ -5209,7 +5250,7 @@ body, html {
   height: 38px;
   background: #f6f6f6;
   border-bottom: 0;
-  padding-top: 13px;
+  padding-top: 14px;
   padding-bottom: 12px;
 }
 
@@ -5237,7 +5278,7 @@ body, html {
 }
 
 .table_w table.table-lft tbody tr th {
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   font-weight: 700;
   height: 47px;
@@ -5253,7 +5294,7 @@ body, html {
   height: 47px;
   line-height: 47px;
   padding: 0 15px;
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   font-weight: 300;
 }
@@ -5289,7 +5330,7 @@ body, html {
 }
 
 .table_w table.table-nboder.l-boder tfoot tr th span, .table_w table.table-nboder.l-boder tfoot tr td span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
 }
@@ -5313,7 +5354,7 @@ body, html {
 .table_w table.table-nboder tbody tr th {
   border-bottom: 0;
   border-top: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   border-right: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
@@ -5423,15 +5464,15 @@ body, html {
 
 .table_w table.table-bordered tfoot tr td, .table_w table.table-bordered tfoot tr th {
   padding-top: 12px;
-  padding-bottom: 13px;
+  padding-bottom: 14px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 }
 
 .table_w table.table-bordered tfoot tr td span, .table_w table.table-bordered tfoot tr th span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #333;
 }
@@ -5587,7 +5628,7 @@ body, html {
 }
 
 .tbl-more span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
 }
@@ -6316,7 +6357,6 @@ body, html {
 }
 
 .issue_und .chartbox {
-  border: 1px solid #d7d7d7;
   min-height: 300px;
 }
 
@@ -6974,7 +7014,7 @@ body, html {
   padding: 0 0 17px 0;
   margin: 0;
   line-height: 17px;
-  font-size: 15px;
+  font-size: 16px;
   color: #666;
   font-weight: 300;
   float: left;

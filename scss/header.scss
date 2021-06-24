@@ -176,6 +176,7 @@
         .main_menu {
           display: inline-flex;
           width: 470px;
+          margin-left:10px;
           float: left;
           justify-content: space-around;
 
@@ -214,7 +215,7 @@
         //add_menu
         .add_menu {
           display: inline-flex;
-          width: 298px;
+          width: 288px;
           height: 15px;
           justify-content: space-around;
           margin-top: 12px;
@@ -254,6 +255,10 @@
             color: #3e72ed;
             padding-right: 32px;
             padding-left: 2px;
+
+            &:focus::placeholder, &:focus::placeholder{
+              color:#fff;
+            }
 
             &::placeholder {
               font-size: 15px;

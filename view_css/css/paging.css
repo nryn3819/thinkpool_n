@@ -38,10 +38,10 @@
 
 .pagination li.active a,
 .pagination li.active span {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
+  background: #3e72ed;
+  color: #fff;
   font-weight: 500;
+  border: 0;
 }
 
 .pagination li a {
@@ -57,9 +57,9 @@
   border: 1px solid #fff;
 }
 
-.pagination li a:hover {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
-  background: none;
+.pagination li a:hover, .pagination li a:focus, .pagination li a:active {
+  background: #3e72ed;
+  border: 0;
+  color: #fff;
   font-weight: 500;
 }

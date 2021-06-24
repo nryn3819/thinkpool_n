@@ -96,12 +96,16 @@
 }
 
 .main_issue_w {
+  position:relative;
   display: block;
   width: 100%;
 
   .title {
     display: block;
-    width: 100%;
+    width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     font: {
       size: 20px;
@@ -237,6 +241,17 @@
       }
     }
   }
+
+  .more{
+    position:absolute;
+    top:2px;
+    right:0;
+    a{
+      font-size:14px;
+      color:#999;
+      font-weight:300
+    }
+  }
 }
 
 .main-signal {
@@ -254,6 +269,10 @@
     width: calc(100% - 385px);
     float: left;
     padding-left: 50px;
+
+    .table_w table{
+      margin-bottom:0;
+    }
   }
 }
 
@@ -292,6 +311,7 @@
             display:block;
             width:100%;
             padding-top:10px;
+            font-size:18px;
           }
         }
       }
@@ -322,7 +342,7 @@
           dt{
             display:block;
             font: {
-              size:13px;
+              size:14px;
               weight: 300;
             }
             color:#333;

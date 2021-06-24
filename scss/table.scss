@@ -3,7 +3,7 @@
 
 .popover{
     font: {
-        size:13px;
+        size:14px;
         weight:300;
     }
     color:#666;
@@ -36,7 +36,7 @@
             }
 
             label{
-                font-size: 13px;
+                font-size: 14px;
                 color:#333;
                 font-weight:300;
                 padding-left:5px;
@@ -74,7 +74,7 @@
             margin-right:8px;
             border-radius: 34px;
             background:#fff;
-            font-size:13px;
+            font-size:14px;
 
             &-md{
                 height:36px;
@@ -177,7 +177,7 @@
 
             &>span{
                 display:block;
-                font-size:13px;
+                font-size:14px;
                 font-weight:300;
                 color:#666;
                 padding-top:10px;
@@ -195,7 +195,7 @@
             height:23px;
             line-height:23px;
             font: {
-                size:13px;
+                size:14px;
                 weight:300;
             }
             color:#999;
@@ -222,7 +222,7 @@
         position:absolute;
         top:0;
         right:0;
-        font-size:13px;
+        font-size:14px;
         color:#999;
         font-weight:300;
     }
@@ -235,14 +235,14 @@
         thead {
             tr th {
                 padding: {
-                    top: 8px;
-                    bottom: 9px;
+                    top: 12px;
+                    bottom: 13px;
                     left: 15px;
                     right: 15px;
                 }
 
                 font : {
-                    size: 13px;
+                    size: 14px;
                     weight: bold;
                 }
 
@@ -278,7 +278,7 @@
                 }
 
                 font: {
-                    size: 13px;
+                    size: 14px;
                     weight: 300;
                 }
 
@@ -322,6 +322,11 @@
                     }
                 }
             }
+            tr:hover{
+                th,td{
+                    background:#fafafc;
+                }
+            }
         }
 
         &.signal {
@@ -334,7 +339,7 @@
                     border-bottom: 0;
 
                     padding: {
-                        top: 13px;
+                        top: 14px;
                         bottom: 12px;
                     }
 
@@ -370,7 +375,7 @@
 
             tbody {
                 tr th {
-                    font-size: 13px;
+                    font-size: 14px;
                     color: #333;
                     font-weight: 700;
                     height: 47px;
@@ -385,7 +390,7 @@
                     height:47px;
                     line-height:47px;
                     padding:0 15px;
-                    font-size:13px;
+                    font-size:14px;
                     color:#666;
                     font-weight:300;
                 }
@@ -425,7 +430,7 @@
                         }
 
                         span{
-                            font-size:13px;
+                            font-size:14px;
                             font-weight:300;
                             color:#666;
                         }
@@ -455,7 +460,7 @@
                 th{
                     border-bottom:0;
                     border-top:0;
-                    font-size:13px;
+                    font-size:14px;
                     font-weight:300;
                     border-right:1px solid #dfdfdf;
                     border-left:1px solid #dfdfdf;
@@ -586,16 +591,16 @@
                     td,th{
                         padding: {
                             top: 12px;
-                            bottom:13px;
+                            bottom:14px;
                             left: 15px;
                             right: 15px;
                         }
-                        font-size: 13px;
+                        font-size: 14px;
                         font-weight:300;
 
                         span{
                             font: {
-                                size:13px;
+                                size:14px;
                                 weight:300;
                             }
                             color:#333;
@@ -772,7 +777,7 @@
     }
     span{
         font: {
-            size:13px;
+            size:14px;
             weight:300;
         }
         color:#666;

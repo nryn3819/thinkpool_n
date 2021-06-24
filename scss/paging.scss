@@ -49,11 +49,10 @@
 
             a,
             span {
-
-                border: 1px solid #3e72ed;
-                color: #3e72ed;
-                background: none;
+                background:#3e72ed;
+                color: #fff;
                 font-weight: 500;
+                border:0;
             }
         }
 
@@ -69,10 +68,10 @@
             margin: 0 5px;
             border: 1px solid #fff;
 
-            &:hover {
-                border: 1px solid #3e72ed;
-                color: #3e72ed;
-                background: none;
+            &:hover, &:focus, &:active {
+                background:#3e72ed;
+                border:0;
+                color: #fff;
                 font-weight: 500;
             }
         }
