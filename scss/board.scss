@@ -112,6 +112,7 @@
                     padding: 10px 0 10px 0;
                     border-bottom: 1px solid #dfdfdf;
                     border-top: 0;
+                    
 
                     .nick{
                         &.user_ico{
@@ -206,6 +207,7 @@
                         font-size: 13px;
                         color: #fff;
                         font-weight: 300;
+                        background-size:22px 220px;
 
                         &.label-ins {
                             background: #9ebcff;
@@ -547,7 +549,7 @@
         &.label.ico{
             width:42px;
             height:42px;
-            background-size:42px auto;
+            background-size:42px 440px;
         }
 
         &.user_class{

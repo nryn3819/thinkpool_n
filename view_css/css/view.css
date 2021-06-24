@@ -61,39 +61,39 @@
 }
 
 .board_view_info > .info .left .lev span.ico_cl9 {
-  background-position: 0 -22px;
+  background-position: 0 11%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl8 {
-  background-position: 0 -44px;
+  background-position: 0 22.3%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl7 {
-  background-position: 0 -66px;
+  background-position: 0 33.3%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl6 {
-  background-position: 0 -88px;
+  background-position: 0 44.3%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl5 {
-  background-position: 0 -110px;
+  background-position: 0 55.4%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl4 {
-  background-position: 0 -132px;
+  background-position: 0 66.8%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl3 {
-  background-position: 0 -154px;
+  background-position: 0 77.4%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl2 {
-  background-position: 0 -176px;
+  background-position: 0 88.5%;
 }
 
 .board_view_info > .info .left .lev span.ico_cl1 {
-  background-position: 0 -198px;
+  background-position: 0 100%;
 }
 
 .board_view_info > .info .left .lev span.label {
@@ -666,44 +666,44 @@ span.label.ico {
   float: left;
 }
 
-span.label.ico.ico01 {
+span.label.ico.ico_cl10 {
   background-position: 0 0;
 }
 
-span.label.ico.ico02 {
-  background-position: 0 -22px;
+span.label.ico.ico_cl9 {
+  background-position: 0 11%;
 }
 
-span.label.ico.ico03 {
-  background-position: 0 -44px;
+span.label.ico.ico_cl8 {
+  background-position: 0 22.3%;
 }
 
-span.label.ico.ico04 {
-  background-position: 0 -66px;
+span.label.ico.ico_cl7 {
+  background-position: 0 33.3%;
 }
 
-span.label.ico.ico05 {
-  background-position: 0 -88px;
+span.label.ico.ico_cl6 {
+  background-position: 0 44.3%;
 }
 
-span.label.ico.ico06 {
-  background-position: 0 -110px;
+span.label.ico.ico_cl5 {
+  background-position: 0 55.4%;
 }
 
-span.label.ico.ico07 {
-  background-position: 0 -132px;
+span.label.ico.ico_cl4 {
+  background-position: 0 66.8%;
 }
 
-span.label.ico.ico08 {
-  background-position: 0 -154px;
+span.label.ico.ico_cl3 {
+  background-position: 0 77.4%;
 }
 
-span.label.ico.ico09 {
-  background-position: 0 -176px;
+span.label.ico.ico_cl2 {
+  background-position: 0 88.5%;
 }
 
-span.label.ico.ico10 {
-  background-position: 0 -198px;
+span.label.ico.ico_cl1 {
+  background-position: 0 100%;
 }
 
 #user_class .modal-footer {
