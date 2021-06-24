@@ -1804,6 +1804,16 @@
   width: 100%;
 }
 
+.itemHomeBox.mod {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 40px;
+}
+
+.itemHomeBox.mod:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .itemHomeBox .left {
   display: block;
   width: 235px;
@@ -4697,7 +4707,6 @@
 .issue-analysis .chartbox {
   display: block;
   min-height: 300px;
-  background: #f7f7f7;
 }
 
 .latest-issue {
