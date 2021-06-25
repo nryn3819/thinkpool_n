@@ -127,14 +127,40 @@
     //background: #f8f8f8;
   }
 
+  .mi_tit{
+    display:block;
+    width:100%;
+    height:24px;
+    padding:0 3px;
+    overflow:hidden;
+
+    strong{
+      display:block;
+      float:left;
+      font-size:14px;
+      color:#333;
+      font-weight:700;
+      height:24px;
+      line-height:24px;
+    }
+    span{
+      float:right;
+      font-size:14px;
+      color:#999;
+      font-weight:300;
+      text-indent:5px;
+    }
+  }
+
   .mainitem {
     position:relative;
     display: block;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 10px;
     background: #f6f6f6;
     border-radius: 5px;
-    padding-left:67px;
+    padding:5px 10px;
+    //padding-left:67px;
 
     strong {
       position:absolute;
@@ -172,13 +198,14 @@
     dl {
       display: block;
       float: left;
+      margin-right:10px;
 
       dt {
         display: block;
-        height: 35px;
-        line-height: 35px;
+        height: 24px;
+        line-height: 24px;
+        text-indent:5px;
         float: left;
-        text-indent: 10px;
 
         font: {
           size: 14px;
@@ -190,8 +217,8 @@
 
       dd {
         display: block;
-        height: 35px;
-        line-height: 35px;
+        height: 24px;
+        line-height: 24px;
         float: left;
         text-indent: 3px;
 
@@ -250,6 +277,38 @@
       font-size:14px;
       color:#999;
       font-weight:300
+    }
+  }
+
+  .mi{
+    display:block;
+    height:24px;
+    line-height:24px;
+    &::before{
+      display:block;
+      content : '━';
+      font-size:12px;
+      font-weight:300;
+      line-height:24px;
+      float:left;
+    }
+    &.mi01::before{
+      color:#FC6C76;
+    }
+    &.mi02::before{
+      color:#1E56D1;
+    }
+    &.mi03::before{
+      color:#578CFF;
+    }
+    &.mi04::before{
+      color:#5DB1FF;
+    }
+    &.mi05::before{
+      color:#9BCFFF;
+    }
+    &.mi06::before{
+      color:#C2DDF5;
     }
   }
 }

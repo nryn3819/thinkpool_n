@@ -128,14 +128,40 @@
   min-height: 190px;
 }
 
+.main_issue_w .mi_tit {
+  display: block;
+  width: 100%;
+  height: 24px;
+  padding: 0 3px;
+  overflow: hidden;
+}
+
+.main_issue_w .mi_tit strong {
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  height: 24px;
+  line-height: 24px;
+}
+
+.main_issue_w .mi_tit span {
+  float: right;
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+  text-indent: 5px;
+}
+
 .main_issue_w .mainitem {
   position: relative;
   display: block;
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 10px;
   background: #f6f6f6;
   border-radius: 5px;
-  padding-left: 67px;
+  padding: 5px 10px;
 }
 
 .main_issue_w .mainitem strong {
@@ -171,14 +197,15 @@
 .main_issue_w .mainitem dl {
   display: block;
   float: left;
+  margin-right: 10px;
 }
 
 .main_issue_w .mainitem dl dt {
   display: block;
-  height: 35px;
-  line-height: 35px;
+  height: 24px;
+  line-height: 24px;
+  text-indent: 5px;
   float: left;
-  text-indent: 10px;
   font-size: 14px;
   font-weight: 300;
   color: #333;
@@ -186,8 +213,8 @@
 
 .main_issue_w .mainitem dl dd {
   display: block;
-  height: 35px;
-  line-height: 35px;
+  height: 24px;
+  line-height: 24px;
   float: left;
   text-indent: 3px;
   font-size: 14px;
@@ -239,6 +266,45 @@
   font-size: 14px;
   color: #999;
   font-weight: 300;
+}
+
+.main_issue_w .mi {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+}
+
+.main_issue_w .mi::before {
+  display: block;
+  content: '━';
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  float: left;
+}
+
+.main_issue_w .mi.mi01::before {
+  color: #FC6C76;
+}
+
+.main_issue_w .mi.mi02::before {
+  color: #1E56D1;
+}
+
+.main_issue_w .mi.mi03::before {
+  color: #578CFF;
+}
+
+.main_issue_w .mi.mi04::before {
+  color: #5DB1FF;
+}
+
+.main_issue_w .mi.mi05::before {
+  color: #9BCFFF;
+}
+
+.main_issue_w .mi.mi06::before {
+  color: #C2DDF5;
 }
 
 .main-signal {

@@ -818,8 +818,11 @@
   width: 140px;
   height: 125px;
   text-align: center;
-  padding-top: 25px;
   float: left;
+}
+
+.bot_list_w .bot_w .top .thumb img {
+  width: 100%;
 }
 
 .bot_list_w .btm {
