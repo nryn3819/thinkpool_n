@@ -263,9 +263,9 @@
 }
 
 .btn-group{
-    display:block;
+    display:inline-block;
+    width:100%;
     text-align:right;
-    overflow:hidden;
 
     button{
         float:right;

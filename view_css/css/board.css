@@ -1628,6 +1628,67 @@ span.label.ico.ico_cl1 {
   right: 0;
 }
 
+.share_pop2 {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: -400px;
+  width: 380px;
+  height: 154px;
+  border: 1px solid #d7d7d7;
+  padding: 15px 20px;
+  z-index: 99;
+  background: #fff;
+}
+
+.share_pop2 strong {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.share_pop2 .shareList {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.share_pop2 .shareList a {
+  display: block;
+  text-align: center;
+  margin: 0 14px;
+  float: left;
+}
+
+.share_pop2 .shareList a:first-child {
+  margin-left: 0;
+}
+
+.share_pop2 .shareList a:last-child {
+  margin-right: 0;
+}
+
+.share_pop2 .shareList a.kkost {
+  margin: 0;
+}
+
+.share_pop2 .shareList a span {
+  display: block;
+  font-size: 12px;
+  color: #333;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.share_pop2 .ly_close {
+  position: absolute;
+  top: -25px;
+  right: 0;
+}
+
 .filebox input[type="file"] {
   position: absolute;
   width: 1px;
