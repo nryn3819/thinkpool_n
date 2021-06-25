@@ -166,6 +166,7 @@
   color: #666;
   font-weight: 300;
   margin-left: 10px;
+  float: left;
 }
 
 .board_tbl .table tbody tr td a:hover {
@@ -212,15 +213,18 @@
 .board_tbl .table tbody tr td .label.label-rmd {
   border: 1px solid #fa5460;
   color: #fa5460;
+  float: left;
 }
 
 .board_tbl .table tbody tr td .label.label-blind {
   border: 1px solid #666;
   color: #666;
+  float: left;
 }
 
 .board_tbl .table tbody tr td .label.label-empty {
   padding: 0;
+  float: left;
 }
 
 .board_tbl .table tbody tr.blind td a {

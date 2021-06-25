@@ -112,6 +112,8 @@
                     padding: 10px 0 10px 0;
                     border-bottom: 1px solid #dfdfdf;
                     border-top: 0;
+
+                    
                     
 
                     .nick{
@@ -172,6 +174,7 @@
                         color: #666;
                         font-weight: 300;
                         margin-left: 10px;
+                        float:left;
 
                         &:hover {
                             border-bottom: 1px solid #333;
@@ -217,15 +220,18 @@
                         &.label-rmd {
                             border: 1px solid #fa5460;
                             color: #fa5460;
+                            float:left
                         }
 
                         &.label-blind {
                             border: 1px solid #666;
                             color: #666;
+                            float:left;
                         }
 
                         &.label-empty {
                             padding: 0;
+                            float:left;
                         }
 
                         
