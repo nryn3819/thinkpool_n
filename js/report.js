@@ -19,5 +19,8 @@ $(function(){
                 $(_this).popover('hide');
             }
         });
+    }).on("click", function(){
+        var _this = this;
+        $(_this).popover('hide');
     });
 });

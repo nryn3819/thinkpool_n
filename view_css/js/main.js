@@ -70,26 +70,7 @@ $(function () {
     });
 
     //우측메뉴 종목리스트 오버
-    $(".s_list a[data-toggle='popover']").popover({
-        trigger: 'manual',
-        html: true,
-        placement: 'left'
-    }).on('mouseenter', function () {
-        var _this = this;
-
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
-        });
-    }).on('mouseleave', function () {
-        var _this = this;
-
-        setTimeout(function () {
-            if (!$('.popover:hover').length) {
-                $(_this).popover('hide');
-            }
-        });
-    });
+    
 
     //우측메뉴 종목리스트 슬라이드
     var s_menuLenth = $('.s_m01 li').length;
@@ -99,7 +80,7 @@ $(function () {
 
         var slider = $('.s_m01 .s_list').bxSlider({
             mode: 'vertical',
-            control: false,
+            //control: false,
             pager: false,
             infiniteLoop: false,
             minSlides: 8,
@@ -160,6 +141,12 @@ $(function () {
         $('.share_pop').fadeIn();
         $('.share_pop').find('.ly_close').children('button').on('click', function(){
             $('.share_pop').fadeOut();
+        });
+    });
+    $('.btn-share2').on('click', function(){
+        $('.share_pop2').fadeIn();
+        $('.share_pop2').find('.ly_close').children('button').on('click', function(){
+            $('.share_pop2').fadeOut();
         });
     });
 
@@ -282,23 +269,28 @@ $(function () {
 
     //report
 
-    $(".table a[data-toggle='popover']").popover({
-        trigger: 'manual',
-        placement: 'bottom'
-    }).on('mouseenter', function () {
-        var _this = this;
-
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
-        });
-    }).on('mouseleave', function () {
-        var _this = this;
-
-        setTimeout(function () {
-            if (!$('.popover:hover').length) {
+    $(function(){
+        $(".table a[data-toggle='popover']").popover({
+            trigger: 'manual',
+            placement: 'bottom'
+        }).on('mouseenter', function () {
+            var _this = this;
+    
+            $(this).popover('show');
+            $('.popover').on('mouseleave', function () {
                 $(_this).popover('hide');
-            }
+            });
+        }).on('mouseleave', function () {
+            var _this = this;
+    
+            setTimeout(function () {
+                if (!$('.popover:hover').length) {
+                    $(_this).popover('hide');
+                }
+            });
+        }).on("click", function(){
+            var _this = this;
+            $(_this).popover('hide');
         });
     });
 

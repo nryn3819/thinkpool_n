@@ -13,6 +13,13 @@ $(function(){
         });
     });
 
+    $('.btn-share2').on('click', function () {
+        $('.share_pop2').fadeIn();
+        $('.share_pop2').find('.ly_close').children('button').on('click', function () {
+            $('.share_pop2').fadeOut();
+        });
+    });
+
     //운영배심원
     $('.btn-operjr').on('click', function () {
         $('.operjr_guide').fadeIn();

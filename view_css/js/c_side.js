@@ -37,7 +37,7 @@ $(function(){
 
         var slider = $('.s_m01 .s_list').bxSlider({
             mode: 'vertical',
-            control: false,
+            //control: false,
             pager: false,
             infiniteLoop: false,
             minSlides: 8,
