@@ -3764,6 +3764,11 @@ body, html {
   padding-right: 3px;
 }
 
+.itemHomeBox.mod:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .item_cdn {
   display: block;
   width: 100%;

@@ -701,6 +701,15 @@
   padding-right: 3px;
 }
 
+.itemHomeBox .module-tbl-guide {
+  top: 30px;
+}
+
+.itemHomeBox.mod:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .item_cdn {
   display: block;
   width: 100%;
