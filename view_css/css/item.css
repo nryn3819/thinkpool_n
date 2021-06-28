@@ -1763,6 +1763,10 @@
   padding-right: 3px;
 }
 
+.itemHomeBox .module-tbl-guide {
+  top: 30px;
+}
+
 .itemHomeBox.mod:first-child {
   border-top: 0;
   padding-top: 0;
@@ -2049,8 +2053,8 @@
 }
 
 #itemTop > .itemInfo .price span {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 33px;
+  font-weight: 700;
 }
 
 #itemTop > .itemInfo .per {
@@ -2060,6 +2064,25 @@
 
 #itemTop > .itemInfo .per span {
   font-size: 24px;
+  font-weight: 300;
+}
+
+#itemTop > .itemInfo .itemBadge {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+#itemTop > .itemInfo .itemBadge span {
+  display: block;
+  width: 62px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #999;
+  background: #f6f6f7;
   font-weight: 300;
 }
 
@@ -2279,4 +2302,47 @@
 
 .infoMn ul li a:focus {
   text-decoration: none;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid #d9d9d9;
+  padding: 8px;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  padding: 0 14px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
+.ui-menu .ui-menu-item-wrapper em {
+  float: left;
+  color: #666;
+  font-style: normal;
+}
+
+.ui-menu .ui-menu-item-wrapper em::first-letter {
+  font-weight: 700;
+  color: #447AEC;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active, .ui-menu .ui-menu-item-wrapper.ui-state-focus {
+  margin-left: 0;
+  border: 0;
+  color: #999;
+  font-weight: 300;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active em, .ui-menu .ui-menu-item-wrapper.ui-state-focus em {
+  float: left;
+  color: #666;
+  font-style: normal;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active em::first-letter, .ui-menu .ui-menu-item-wrapper.ui-state-focus em::first-letter {
+  font-weight: 700;
+  color: #447AEC;
 }
