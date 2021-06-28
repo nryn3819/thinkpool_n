@@ -1501,14 +1501,6 @@
   color: #333;
 }
 
-.module-content .title span {
-  display: block;
-  line-height: 28px;
-  font-size: 24px;
-  font-weight: 300;
-  color: #666;
-}
-
 .module-content .text {
   display: block;
 }
@@ -1813,8 +1805,8 @@
 }
 
 .itemHomeBox.mod {
-  border-top: 1px solid #d8d8d8;
-  padding-top: 40px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 40px;
 }
 
 .itemHomeBox.mod:first-child {
@@ -1905,6 +1897,10 @@
 .itemHomeBox .tab-content .guide span::before {
   content: '\00b7';
   padding-right: 3px;
+}
+
+.itemHomeBox .module-tbl-guide {
+  top: 30px;
 }
 
 .itemHomeBox.mod:first-child {
@@ -2193,8 +2189,8 @@
 }
 
 #itemTop > .itemInfo .price span {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 33px;
+  font-weight: 700;
 }
 
 #itemTop > .itemInfo .per {
@@ -2204,6 +2200,25 @@
 
 #itemTop > .itemInfo .per span {
   font-size: 24px;
+  font-weight: 300;
+}
+
+#itemTop > .itemInfo .itemBadge {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+#itemTop > .itemInfo .itemBadge span {
+  display: block;
+  width: 62px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #999;
+  background: #f6f6f7;
   font-weight: 300;
 }
 
@@ -2425,6 +2440,49 @@
   text-decoration: none;
 }
 
+.ui-widget.ui-widget-content {
+  border: 1px solid #d9d9d9;
+  padding: 8px;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  padding: 0 14px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+}
+
+.ui-menu .ui-menu-item-wrapper em {
+  float: left;
+  color: #666;
+  font-style: normal;
+}
+
+.ui-menu .ui-menu-item-wrapper em::first-letter {
+  font-weight: 700;
+  color: #447AEC;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active, .ui-menu .ui-menu-item-wrapper.ui-state-focus {
+  margin-left: 0;
+  border: 0;
+  color: #999;
+  font-weight: 300;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active em, .ui-menu .ui-menu-item-wrapper.ui-state-focus em {
+  float: left;
+  color: #666;
+  font-style: normal;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active em::first-letter, .ui-menu .ui-menu-item-wrapper.ui-state-focus em::first-letter {
+  font-weight: 700;
+  color: #447AEC;
+}
+
 .ai_rmd .left {
   display: block;
   width: 260px;
@@ -2584,7 +2642,9 @@
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span {
-  font-size: 12px;
+  display: block;
+  padding-top: 10px;
+  font-size: 14px;
   color: #333;
   font-weight: 300;
 }
@@ -4766,6 +4826,13 @@
   color: #fff;
 }
 
+.latest-issue p.guide {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+  padding: 15px 0;
+}
+
 .latest-issue .tab-content ul {
   display: block;
 }
@@ -4821,33 +4888,6 @@
 .latest-issue .more a::before {
   content: '+';
   padding-right: 5px;
-}
-
-.issue-relation .table_w table {
-  overflow: hidden;
-}
-
-.issue-relation .table_w table thead {
-  width: 100%;
-  float: left;
-}
-
-.issue-relation .table_w table thead tr {
-  display: table;
-  width: 100%;
-}
-
-.issue-relation .table_w table tbody {
-  float: left;
-  width: 100%;
-  height: 400px;
-  overflow-y: scroll !important;
-  overflow-x: hidden;
-}
-
-.issue-relation .table_w table tbody tr {
-  display: table;
-  width: 100%;
 }
 
 .empty {
@@ -7857,6 +7897,11 @@
 }
 
 .section_content ul.latest li a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   text-align: left;
   height: 24px;
   line-height: 24px;
