@@ -37,7 +37,7 @@
 }
 
 .pagination li.active a,
-.pagination li.active span {
+.pagination li.active span, .pagination li.active a:hover, .pagination li.active span:hover, .pagination li.active a:active, .pagination li.active span:active {
   background: #3e72ed;
   color: #fff;
   font-weight: 500;

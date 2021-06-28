@@ -48,7 +48,7 @@
         &.active {
 
             a,
-            span {
+            span, a:hover, span:hover, a:active, span:active {
                 background:#3e72ed;
                 color: #fff;
                 font-weight: 500;

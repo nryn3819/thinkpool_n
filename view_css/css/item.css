@@ -1227,6 +1227,15 @@
   min-height: 76px;
 }
 
+.third-table-box div .module-table tbody tr td:nth-child(2n) a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666;
+}
+
 .half-table-box div .module-table tbody tr td {
   min-height: 58px;
 }
@@ -2208,6 +2217,10 @@
   border: 1px solid #d6d6d6;
   background: #fff;
   padding: 0 15px;
+}
+
+.item_board_nav button:hover {
+  background: #fefdfb;
 }
 
 .item_board_nav button img {

@@ -1371,6 +1371,15 @@
   min-height: 76px;
 }
 
+.third-table-box div .module-table tbody tr td:nth-child(2n) a {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666;
+}
+
 .half-table-box div .module-table tbody tr td {
   min-height: 58px;
 }
@@ -2354,6 +2363,10 @@
   padding: 0 15px;
 }
 
+.item_board_nav button:hover {
+  background: #fefdfb;
+}
+
 .item_board_nav button img {
   float: left;
   margin-top: 10px;
@@ -3134,7 +3147,7 @@
 }
 
 .pagination li.active a,
-.pagination li.active span {
+.pagination li.active span, .pagination li.active a:hover, .pagination li.active span:hover, .pagination li.active a:active, .pagination li.active span:active {
   background: #3e72ed;
   color: #fff;
   font-weight: 500;
