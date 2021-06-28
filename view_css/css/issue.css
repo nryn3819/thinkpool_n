@@ -348,6 +348,13 @@
   color: #fff;
 }
 
+.latest-issue p.guide {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+  padding: 15px 0;
+}
+
 .latest-issue .tab-content ul {
   display: block;
 }
@@ -403,33 +410,6 @@
 .latest-issue .more a::before {
   content: '+';
   padding-right: 5px;
-}
-
-.issue-relation .table_w table {
-  overflow: hidden;
-}
-
-.issue-relation .table_w table thead {
-  width: 100%;
-  float: left;
-}
-
-.issue-relation .table_w table thead tr {
-  display: table;
-  width: 100%;
-}
-
-.issue-relation .table_w table tbody {
-  float: left;
-  width: 100%;
-  height: 400px;
-  overflow-y: scroll !important;
-  overflow-x: hidden;
-}
-
-.issue-relation .table_w table tbody tr {
-  display: table;
-  width: 100%;
 }
 
 .empty {

@@ -45,6 +45,14 @@
         }
     }
 
+    p.guide{
+    
+        font-size:14px;
+        color:#666;
+        font-weight:300;
+        padding:15px 0;
+    }
+
     .tab-content{
         ul{
             display:block;
@@ -104,34 +112,34 @@
 
 .issue-relation {
 
-    .table_w {
-        table {
-            overflow: hidden;
+    // .table_w {
+    //     table {
+    //         overflow: hidden;
 
-            thead {
-                width: 100%;
-                float: left;
+    //         thead {
+    //             width: 100%;
+    //             float: left;
 
-                tr {
-                    display: table;
-                    width: 100%;
-                }
-            }
+    //             tr {
+    //                 display: table;
+    //                 width: 100%;
+    //             }
+    //         }
 
-            tbody {
-                float: left;
-                width: 100%;
-                height: 400px;
-                overflow-y: scroll !important;
-                overflow-x: hidden;
+    //         tbody {
+    //             float: left;
+    //             width: 100%;
+    //             height: 400px;
+    //             overflow-y: scroll !important;
+    //             overflow-x: hidden;
 
-                tr {
-                    display: table;
-                    width: 100%;
-                }
-            }
-        }
-    }
+    //             tr {
+    //                 display: table;
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .empty{

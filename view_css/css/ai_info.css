@@ -158,7 +158,9 @@
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_info .thumb span {
-  font-size: 12px;
+  display: block;
+  padding-top: 10px;
+  font-size: 14px;
   color: #333;
   font-weight: 300;
 }

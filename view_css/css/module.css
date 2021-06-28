@@ -294,14 +294,6 @@
   color: #333;
 }
 
-.module-content .title span {
-  display: block;
-  line-height: 28px;
-  font-size: 24px;
-  font-weight: 300;
-  color: #666;
-}
-
 .module-content .text {
   display: block;
 }
