@@ -163,6 +163,7 @@
 .third-table-box div .module-table tbody tr td:nth-child(2n) a {
   display: block;
   width: 100%;
+  max-width: 110px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -172,6 +173,7 @@
 .half-table-box div .module-table tbody tr td:nth-child(2n) a {
   display: block;
   width: 100%;
+  max-width: 110px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
