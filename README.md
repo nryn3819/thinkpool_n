@@ -103,7 +103,7 @@
     <!-- 삭제 -->
 
     <tbody>
-      <tr class="success></tr>
+      <tr class="success"></tr>
     </tbody>
     <!-- 변경 -->
   ```
