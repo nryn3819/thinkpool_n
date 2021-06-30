@@ -1680,6 +1680,17 @@
   padding-top: 0;
 }
 
+.itemHomeBox.mod .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 300px;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .itemHomeBox .left {
   display: block;
   width: 235px;
