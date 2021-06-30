@@ -617,8 +617,8 @@ table {
 
 #header_w #realheader #header .info ul li span {
   font-size: 13px;
-  color: #666;
-  font-weight: 400;
+  color: #3e84ed;
+  font-weight: 500;
 }
 
 #header_w #realheader #header .info ul li:first-child {
@@ -850,7 +850,7 @@ table {
   border: 0;
   padding: 0;
   margin: 101px 0 0 0;
-  padding: 0 20px 60px;
+  padding: 0 20px 0px;
 }
 
 #container_banner {
@@ -1010,10 +1010,10 @@ table {
 
 #c_side .s_menu .s_list li:hover .popover {
   position: absolute;
-  top: 34px;
+  top: 40px;
   left: 10px;
   width: 130px;
-  display: inline-block;
+  display: block;
   background: none;
   border: 0;
   z-index: 999;
@@ -1034,8 +1034,10 @@ table {
 }
 
 #c_side .s_menu .s_list li:hover .popover .popover-content a {
+  display: block;
   font-size: 13px;
   color: #333;
+  float: left;
 }
 
 #c_side .s_menu .s_list .myItemList {
@@ -1448,6 +1450,7 @@ table {
 }
 
 .main-signal .left {
+  position: relative;
   display: block;
   width: 385px;
   float: left;
@@ -1574,6 +1577,22 @@ table {
 .main-signal .left .more a::after {
   content: '+';
   padding-right: 3px;
+}
+
+.main-signal .left .link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 236px;
+  z-index: 99;
+}
+
+.main-signal .left .link a {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 236px;
 }
 
 .tablechart .nav {
@@ -3224,10 +3243,6 @@ body, html {
   border-bottom: 0;
 }
 
-.third-table-box div .module-table tbody tr td {
-  min-height: 76px;
-}
-
 .third-table-box div .module-table tbody tr td:nth-child(2n) a {
   display: block;
   width: 100%;
@@ -3235,10 +3250,6 @@ body, html {
   overflow: hidden;
   white-space: nowrap;
   color: #666;
-}
-
-.half-table-box div .module-table tbody tr td {
-  min-height: 58px;
 }
 
 .half-table-box div .module-table tbody tr td:nth-child(2n) a {
@@ -3479,41 +3490,57 @@ body, html {
   clear: both;
   line-height: 34px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
   padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-s {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 30px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-xs {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 28px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-l {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 36px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-xl {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 38px;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt button {
@@ -3757,7 +3784,7 @@ body, html {
 }
 
 .itemHomeBox .module-tbl-guide {
-  top: 30px;
+  top: 7px;
 }
 
 .itemHomeBox.mod:first-child {
@@ -3856,7 +3883,7 @@ body, html {
 }
 
 .itemHomeBox .left .more a {
-  font-size: 12px;
+  font-size: 13px;
   color: #4c84ff;
   font-weight: 300;
 }
@@ -3898,6 +3925,7 @@ body, html {
 
 .itemHomeBox .left .item_tit strong {
   display: block;
+  font-size: 20px;
   margin-top: 20px;
 }
 
@@ -4017,7 +4045,7 @@ body, html {
 #itemTop {
   position: relative;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   overflow: hidden;
   padding: 0 20px;
 }
@@ -4265,7 +4293,7 @@ body, html {
 .infoMn {
   display: block;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   float: left;
   clear: both;
@@ -5035,7 +5063,7 @@ body, html {
   width: 100%;
   float: left;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .paging {
@@ -5081,9 +5109,9 @@ body, html {
   height: 34px;
   line-height: 32px;
   border: 0;
-  font-size: 13px;
-  color: #000;
-  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
   padding: 0;
   margin: 0 5px;
   border: 1px solid #fff;
@@ -5399,6 +5427,10 @@ body, html {
   background: #fafafc;
 }
 
+.table_w table-hover tbody tr:hover th, .table_w table-hover tbody tr:hover td {
+  background: #fafafc;
+}
+
 .table_w table.signal {
   border-top: 0;
 }
@@ -5466,18 +5498,18 @@ body, html {
   padding-right: 15px;
   padding-top: 4px;
   padding-bottom: 4px;
-  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
 }
 
-.table_w table.table-nboder.l-boder tbody tr th:first-child, .table_w table.table-nboder.l-boder tbody tr td:first-child {
-  border-left: 0;
+.table_w table.table-nboder.l-boder tbody tr th:last-child, .table_w table.table-nboder.l-boder tbody tr td:last-child {
+  border-right: 0;
 }
 
 .table_w table.table-nboder.l-boder tfoot tr th, .table_w table.table-nboder.l-boder tfoot tr td {
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border-bottom: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
 }
@@ -5548,9 +5580,19 @@ body, html {
   vertical-align: middle;
 }
 
-.table_w table.table-bordered.small-line tbody tr th, .table_w table.table-bordered.small-line tbody tr td {
+.table_w table.table-bordered.small-line tfoot tr th, .table_w table.table-bordered.small-line tfoot tr td {
+  padding-top: 10px;
+  padding-bottom: 11px;
+}
+
+.table_w table.table-bordered.small-line thead tr th, .table_w table.table-bordered.small-line thead tr td {
   padding-top: 11px;
   padding-bottom: 12px;
+}
+
+.table_w table.table-bordered.small-line tbody tr th, .table_w table.table-bordered.small-line tbody tr td {
+  padding-top: 10px;
+  padding-bottom: 11px;
 }
 
 .table_w table.table-bordered thead tr.sboder th {
@@ -7919,19 +7961,19 @@ body, html {
 
 .b_trend .left {
   display: block;
-  width: 670px;
-  height: 300px;
+  width: 673px;
+  height: 315px;
   float: left;
 }
 
 .b_trend .left .chartbox img {
   width: 100%;
-  max-height: 300px;
+  max-height: 315px;
 }
 
 .b_trend .right {
   display: block;
-  width: calc(100% - 710px);
+  width: calc(100% - 703px);
   height: 300px;
   float: right;
 }
@@ -10897,7 +10939,7 @@ body, html {
   color: #333;
   font-weight: 500;
   text-align: center;
-  padding: 15px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #000;
 }
 
@@ -10905,17 +10947,11 @@ body, html {
   background: #f1f5fc;
 }
 
-.board_tbl .table tbody tr.recomment {
-  background: #fafafc;
-}
-
 .board_tbl .table tbody tr td {
   font-size: 14px;
   color: #666;
   font-weight: 300;
-  height: 46px;
-  line-height: 25px;
-  padding: 10px 0 10px 0;
+  padding: 9px 0 10px 0;
   border-bottom: 1px solid #dfdfdf;
   border-top: 0;
 }
@@ -11049,6 +11085,10 @@ body, html {
 .board_tbl .table tbody tr.blind td a .blind {
   display: inline-block;
   color: #999;
+}
+
+.board_tbl .table-hover tbody tr:hover th, .board_tbl .table-hover tbody tr:hover td {
+  background: #fafafc;
 }
 
 .tbl-chart {
@@ -11819,12 +11859,16 @@ body, html {
   display: block;
   width: 30px;
   height: 30px;
-  line-height: 27px;
+  line-height: 28px;
   border: 1px solid #d7d7d7;
   text-align: center;
   font-size: 14px;
   color: #333;
   font-weight: 300;
+}
+
+.operationjuror dl dd ul li a:hover {
+  text-decoration: none;
 }
 
 .operationjuror dl dd ul li a:focus {
@@ -11836,8 +11880,10 @@ body, html {
 }
 
 .operationjuror dl dd ul li a.active {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
+  background: #3e72ed;
+  color: #fff;
+  font-weight: 400;
+  border: 0;
 }
 
 .operationjuror .operjr_guide {
@@ -12225,6 +12271,18 @@ span.label.ico.ico01 {
 #viewMore .modal-dialog .modal-body {
   padding: 0 40px;
   overflow: hidden;
+}
+
+#viewMore .modal-dialog .modal-body strong {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+#viewMore .modal-dialog .modal-body strong span {
+  font-size: 20px;
+  color: #3e72ed;
+  font-weight: 700;
 }
 
 #viewMore .modal-dialog .modal-body .board_tbl {
@@ -13703,4 +13761,16 @@ span.label.ico.ico01 {
 
 .modal-body {
   padding: 30px 15px;
+}
+
+#rtime .modal-content {
+  padding: 20px 40px 0;
+}
+
+#rtime .modal-header {
+  padding: 0;
+}
+
+#rtime .modal-body {
+  padding: 15px 0;
 }

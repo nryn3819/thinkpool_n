@@ -64,21 +64,20 @@ $(function () {
     //우측메뉴 높이값
     let sideTop = $('#content').offset();
     let headerH = $('#header_w').height();
-
-    $('#c_side').css({
-        top: sideTop.top - headerH  + 'px'
-    });
+        $('#c_side').css({
+            top: sideTop.top - headerH + 'px'
+        });
 
     //우측메뉴 종목리스트 오버
     
 
     //우측메뉴 종목리스트 슬라이드
-    var s_menuLenth = $('.s_m01 li').length;
+    const s_menuLenth = $('.s_m01 li').length;
 
     if (s_menuLenth > 8) {
-        $('.s_menu_control').removeClass('disabled')
+        $('.s_menu_control').removeClass('disabled');
 
-        var slider = $('.s_m01 .s_list').bxSlider({
+        const slider = $('.s_m01 .s_list').bxSlider({
             mode: 'vertical',
             //control: false,
             pager: false,

@@ -64,21 +64,21 @@
 
     .left{
         display:block;
-        width: 670px;
-        height:300px;
+        width: 673px;
+        height:315px;
         float:left;
 
         .chartbox{
             img{
                 width:100%;
-                max-height:300px;
+                max-height:315px;
             }
         }
     }
 
     .right{
         display:block;
-        width:calc(100% - 710px);
+        width:calc(100% - 703px);
         height:300px;
         float:right;
 

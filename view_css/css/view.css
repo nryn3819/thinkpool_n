@@ -378,12 +378,16 @@
   display: block;
   width: 30px;
   height: 30px;
-  line-height: 27px;
+  line-height: 28px;
   border: 1px solid #d7d7d7;
   text-align: center;
   font-size: 14px;
   color: #333;
   font-weight: 300;
+}
+
+.operationjuror dl dd ul li a:hover {
+  text-decoration: none;
 }
 
 .operationjuror dl dd ul li a:focus {
@@ -395,8 +399,10 @@
 }
 
 .operationjuror dl dd ul li a.active {
-  border: 1px solid #3e72ed;
-  color: #3e72ed;
+  background: #3e72ed;
+  color: #fff;
+  font-weight: 400;
+  border: 0;
 }
 
 .operationjuror .operjr_guide {
@@ -784,6 +790,18 @@ span.label.ico.ico01 {
 #viewMore .modal-dialog .modal-body {
   padding: 0 40px;
   overflow: hidden;
+}
+
+#viewMore .modal-dialog .modal-body strong {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+#viewMore .modal-dialog .modal-body strong span {
+  font-size: 20px;
+  color: #3e72ed;
+  font-weight: 700;
 }
 
 #viewMore .modal-dialog .modal-body .board_tbl {

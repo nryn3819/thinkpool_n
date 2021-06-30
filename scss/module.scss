@@ -209,46 +209,62 @@
 
             font: {
                 size: 24px;
-                weight:700;
+                weight:400;
             }
             color:#333;
             padding:0 0 5px 0;
 
             &-s{
                 display:block;
+                width:100%;
+                float:left;
+                clear:both;
                 line-height:30px;
                 font: {
                     size:20px;
-                    weight:700;
+                    weight:400;
                 }
                 color:#333;
+                padding:0 0 5px 0;
             }
             &-xs{
                 display:block;
+                width:100%;
+                float:left;
+                clear:both;
                 line-height:28px;
                 font: {
                     size:18px;
-                    weight:700;
+                    weight:400;
                 }
                 color:#333;
+                padding:0 0 5px 0;
             }
             &-l{
                 display:block;
+                width:100%;
+                float:left;
+                clear:both;
                 line-height:36px;
                 font: {
                     size:26px;
-                    weight:700;
+                    weight:400;
                 }
                 color:#333;
+                padding:0 0 5px 0;
             }
             &-xl{
                 display:block;
+                width:100%;
+                float:left;
+                clear:both;
                 line-height:38px;
                 font: {
                     size:28px;
-                    weight:700;
+                    weight:400;
                 }
                 color:#333;
+                padding:0 0 5px 0;
             }
         }
 

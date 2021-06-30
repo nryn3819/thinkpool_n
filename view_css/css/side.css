@@ -112,10 +112,10 @@
 
 #c_side .s_menu .s_list li:hover .popover {
   position: absolute;
-  top: 34px;
+  top: 40px;
   left: 10px;
   width: 130px;
-  display: inline-block;
+  display: block;
   background: none;
   border: 0;
   z-index: 999;
@@ -136,8 +136,10 @@
 }
 
 #c_side .s_menu .s_list li:hover .popover .popover-content a {
+  display: block;
   font-size: 13px;
   color: #333;
+  float: left;
 }
 
 #c_side .s_menu .s_list .myItemList {

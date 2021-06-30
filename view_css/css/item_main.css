@@ -161,10 +161,6 @@
   border-bottom: 0;
 }
 
-.third-table-box div .module-table tbody tr td {
-  min-height: 76px;
-}
-
 .third-table-box div .module-table tbody tr td:nth-child(2n) a {
   display: block;
   width: 100%;
@@ -172,10 +168,6 @@
   overflow: hidden;
   white-space: nowrap;
   color: #666;
-}
-
-.half-table-box div .module-table tbody tr td {
-  min-height: 58px;
 }
 
 .half-table-box div .module-table tbody tr td:nth-child(2n) a {
@@ -416,41 +408,57 @@
   clear: both;
   line-height: 34px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
   padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-s {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 30px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-xs {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 28px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-l {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 36px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt .title-xl {
   display: block;
+  width: 100%;
+  float: left;
+  clear: both;
   line-height: 38px;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
+  padding: 0 0 5px 0;
 }
 
 .module-tbl-txt button {
@@ -694,7 +702,7 @@
 }
 
 .itemHomeBox .module-tbl-guide {
-  top: 30px;
+  top: 7px;
 }
 
 .itemHomeBox.mod:first-child {
@@ -793,7 +801,7 @@
 }
 
 .itemHomeBox .left .more a {
-  font-size: 12px;
+  font-size: 13px;
   color: #4c84ff;
   font-weight: 300;
 }
@@ -835,6 +843,7 @@
 
 .itemHomeBox .left .item_tit strong {
   display: block;
+  font-size: 20px;
   margin-top: 20px;
 }
 

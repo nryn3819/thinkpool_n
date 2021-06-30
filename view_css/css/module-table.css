@@ -160,10 +160,6 @@
   border-bottom: 0;
 }
 
-.third-table-box div .module-table tbody tr td {
-  min-height: 76px;
-}
-
 .third-table-box div .module-table tbody tr td:nth-child(2n) a {
   display: block;
   width: 100%;
@@ -171,10 +167,6 @@
   overflow: hidden;
   white-space: nowrap;
   color: #666;
-}
-
-.half-table-box div .module-table tbody tr td {
-  min-height: 58px;
 }
 
 .half-table-box div .module-table tbody tr td:nth-child(2n) a {
