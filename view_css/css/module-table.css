@@ -93,7 +93,7 @@
 
 .dot .int {
   display: block;
-  height: 24px;
+  min-height: 24px;
   line-height: 24px;
   text-indent: 13px;
 }

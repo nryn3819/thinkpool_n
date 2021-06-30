@@ -184,15 +184,11 @@
     a{
       display:block;
       float:left;
-      font-size:13px;
-      color:#999;
-      height:35px;
-      line-height:35px;
-      margin-left:10px;
-      text-decoration: underline;
-      &::before{
-        content:'+';
-      }
+      font-size:14px;
+      font-weight:300;
+      color:#333;
+      height:24px;
+      line-height:24px;
     }
 
     dl {
@@ -509,6 +505,46 @@
     }
   }
 
+}
+
+
+.mainItemList{
+  display:block;
+  width:100%;
+  float:left;
+
+  li{
+    display:block;
+    width:49.5%;
+    height:35px;
+    line-height:35px;
+    float:left;
+    &:nth-child(2n){
+      float:right;
+    }
+
+    a{
+      span{
+        display:block;
+        font-size:14px;
+        color:#666;
+        font-weight:300;
+        float:left;
+        margin-left:5px;
+
+        &.obj{
+          width:104px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        &:first-child{
+          margin-left:0;
+        }
+      }
+    }
+  }
 }
 
 @import 'main-items';

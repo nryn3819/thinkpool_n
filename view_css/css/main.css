@@ -182,16 +182,11 @@
 .main_issue_w .mainitem a {
   display: block;
   float: left;
-  font-size: 13px;
-  color: #999;
-  height: 35px;
-  line-height: 35px;
-  margin-left: 10px;
-  text-decoration: underline;
-}
-
-.main_issue_w .mainitem a::before {
-  content: '+';
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  height: 24px;
+  line-height: 24px;
 }
 
 .main_issue_w .mainitem dl {
@@ -502,6 +497,44 @@
   margin-right: 5px;
   float: left;
   background: url(../img/sub/ncheck.png) no-repeat 0 50%;
+}
+
+.mainItemList {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.mainItemList li {
+  display: block;
+  width: 49.5%;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+
+.mainItemList li:nth-child(2n) {
+  float: right;
+}
+
+.mainItemList li a span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+  float: left;
+  margin-left: 5px;
+}
+
+.mainItemList li a span.obj {
+  width: 104px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mainItemList li a span:first-child {
+  margin-left: 0;
 }
 
 .main-items {

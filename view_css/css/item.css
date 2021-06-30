@@ -1156,7 +1156,7 @@
 
 .dot .int {
   display: block;
-  height: 24px;
+  min-height: 24px;
   line-height: 24px;
   text-indent: 13px;
 }
@@ -2039,7 +2039,6 @@
   position: relative;
   width: 100%;
   margin-top: 40px;
-  overflow: hidden;
   padding: 0 20px;
 }
 
