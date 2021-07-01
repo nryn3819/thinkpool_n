@@ -20,6 +20,13 @@
                 color:#999;
             }
         }
+        .table_w table.table-bordered.small-line tbody tr td, 
+        .table_w table.table-bordered.small-line tbody tr th{
+            padding: {
+                top:8px;
+                bottom:9px;
+            }
+        }
     }
 
     .guide {

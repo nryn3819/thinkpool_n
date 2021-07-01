@@ -99,7 +99,7 @@
 }
 
 .aisignal_w .top .right .date span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
 }
@@ -244,8 +244,8 @@
   border: 1px solid #dfdfdf;
   background: none;
   border-radius: 3px;
-  font-size: 12px;
-  color: #666;
+  font-size: 14px;
+  color: #333;
   font-weight: 300;
   padding: 0;
   margin: 0;

@@ -30,7 +30,7 @@
 
                     &.up a{
                         
-                            border:5px solid #FB535F;
+                            border:3px solid #FB535F;
                             background:#fff;
     
                             .name{
@@ -41,7 +41,7 @@
                             }
                     }
                     &.dn a{
-                            border:5px solid #447AEB;
+                            border:3px solid #447AEB;
                             background:#fff;
     
                             .name{
@@ -57,7 +57,7 @@
 
                 &.up a{
                     background:#FB535F;
-                    border:5px solid #FB535F;
+                    border:3px solid #FB535F;
                     &:hover{
                         background:#fff;
 
@@ -71,7 +71,7 @@
                 }
                 &.dn a{
                     background:#447AEB;
-                    border:5px solid #447AEB;
+                    border:3px solid #447AEB;
                     &:hover{
                         background:#fff;
 
@@ -116,8 +116,9 @@
     .right {
         display: block;
         float: left;
-        width: calc(100% - 260px);
+        width: 673px;
         min-height: 435px;
+        float:right;
 
         .itemRmdBox_w {
             position: relative;
@@ -125,7 +126,7 @@
             .itemRmdBox {
                 width: 100%;
                 overflow: hidden;
-                padding-left: 30px;
+                //padding-left: 30px;
 
                 .rmdBox {
                     display: block;
@@ -275,7 +276,7 @@
                     .rmd_graph{
                         display:block;
                         width:100%;
-                        min-height:220px;
+                        min-height:315px;
                         margin-top:20px;
                         float:left;
                         background:#f8f8f8;
@@ -498,7 +499,13 @@
                 }
             }
             .thumb{
+                display:inline-block;
+                width:125px;
                 margin-top:10px;
+
+                img{
+                    width:100%;
+                }
             }
         }
 

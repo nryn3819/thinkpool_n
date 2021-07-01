@@ -629,6 +629,19 @@
       flex-wrap: wrap;
 }
 
+.itemHomeBox.mod .left .item_tit span {
+  padding-bottom: 20px;
+}
+
+.itemHomeBox.mod .left .item_tit strong {
+  margin-top: 0;
+  line-height: 30px;
+}
+
+.itemHomeBox.mod .left .item_txt .txt {
+  line-height: 20px;
+}
+
 .itemHomeBox .left {
   display: block;
   width: 235px;
@@ -715,7 +728,7 @@
 }
 
 .itemHomeBox .module-tbl-guide {
-  top: 7px;
+  top: 0;
 }
 
 .itemHomeBox.mod:first-child {

@@ -21,6 +21,23 @@
             min-height:300px;
             align-content: space-between;
             flex-wrap: wrap;
+
+            .item_tit{
+                span{
+                    padding-bottom:20px;
+                }
+
+                strong{
+                    margin-top:0;
+                    line-height:30px;
+                }
+            }
+
+            .item_txt{
+                .txt{
+                    line-height:20px;
+                }
+            }
         }
     }
 
@@ -120,7 +137,7 @@
 
 
     .module-tbl-guide{
-        top:7px;
+        top:0;
     }
 }
 .itemHomeBox.mod:first-child{

@@ -46,26 +46,35 @@
     }
 
     p.guide{
-    
+        display:block;
+        width:100%;
         font-size:14px;
-        color:#666;
+        color:#999;
         font-weight:300;
         padding:15px 0;
+        border-bottom:1px solid #d6d6d6;
+        margin-bottom:15px;
+        float:left;
     }
 
     .tab-content{
+        display:block;
+        width:100%;
+        float:left;
+
         ul{
             display:block;
 
             li{
+                position:relative;
                 display:block;
-                margin-bottom:20px;
+                margin-bottom:35px;
 
                 .tit{
                     display:block;
                     a{
                         display:inline-block;
-                        max-width:100%;
+                        max-width:710px;
                         font-size:16px;
                         color:#3e72ed;
                         font-weight:300;
@@ -75,16 +84,20 @@
                         border-bottom:1px solid #3e72ed;
                     }
                     .date{
+                        position:absolute;
+                        top:0;
+                        right:0;
                         display:block;
-                        font-size:13px;
+                        font-size:14px;
+                        font-weight:300;
                         color:#999;
                         line-height:20px;
-                        padding-top:5px;
                     }
                 }
                 .txt{
                     font-size:14px;
                     color:#666;
+                    font-weight:300;
                     line-height:20px;
                     height:40px;
                 }

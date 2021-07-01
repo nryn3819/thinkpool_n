@@ -72,7 +72,7 @@ $(function () {
     
 
     //우측메뉴 종목리스트 슬라이드
-    var s_menuLenth = $('.s_m01 li').length;
+    const s_menuLenth = $('.s_m01 li').length;
 
     if (s_menuLenth > 8) {
         $('.s_menu_control').removeClass('disabled');
@@ -318,9 +318,17 @@ $(function () {
 
     //module
 
-    var moduleLeft = $('.modulebox').find('.left');
+
 
     $('.modulebox .left').each(function (index, item){
+        var moduleLeftHeight = $(item).next('.right').height();
+
+        $(item).height(moduleLeftHeight + 'px');
+    })
+
+    
+
+    $('.mod .left').each(function (index, item){
         var moduleLeftHeight = $(item).next('.right').height();
 
         $(item).height(moduleLeftHeight + 'px');

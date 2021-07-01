@@ -833,9 +833,11 @@
 
 .bot_list_w .bot_w .top .thumb {
   display: block;
-  width: 140px;
+  width: 125px;
   height: 125px;
   text-align: center;
+  margin-top: 15px;
+  margin-left: 12px;
   float: left;
 }
 
@@ -1186,7 +1188,7 @@
 
 .allDetail .per {
   display: block;
-  width: 460px;
+  width: 459px;
   min-height: 380px;
   float: left;
   margin-top: 40px;

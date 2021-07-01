@@ -35,6 +35,10 @@
         padding: 40px 35px 45px;
         overflow: hidden;
 
+        &.mainTopSection{
+            padding:20px 35px 23px;
+        }
+
         &.char {
             background: {
                 color: #fff;

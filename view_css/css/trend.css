@@ -21,6 +21,12 @@
   color: #999;
 }
 
+.b_trend_w .table_w .table_w table.table-bordered.small-line tbody tr td,
+.b_trend_w .table_w .table_w table.table-bordered.small-line tbody tr th {
+  padding-top: 8px;
+  padding-bottom: 9px;
+}
+
 .b_trend_w .guide {
   display: block;
   clear: both;

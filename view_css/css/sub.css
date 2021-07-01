@@ -1836,6 +1836,19 @@
       flex-wrap: wrap;
 }
 
+.itemHomeBox.mod .left .item_tit span {
+  padding-bottom: 20px;
+}
+
+.itemHomeBox.mod .left .item_tit strong {
+  margin-top: 0;
+  line-height: 30px;
+}
+
+.itemHomeBox.mod .left .item_txt .txt {
+  line-height: 20px;
+}
+
 .itemHomeBox .left {
   display: block;
   width: 235px;
@@ -1922,7 +1935,7 @@
 }
 
 .itemHomeBox .module-tbl-guide {
-  top: 7px;
+  top: 0;
 }
 
 .itemHomeBox.mod:first-child {
@@ -2183,7 +2196,8 @@
 #itemTop {
   position: relative;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 60px;
+  overflow: hidden;
   padding: 0 20px;
 }
 
@@ -2537,7 +2551,7 @@
 }
 
 .ai_rmd .left ul li.active.up a {
-  border: 5px solid #FB535F;
+  border: 3px solid #FB535F;
   background: #fff;
 }
 
@@ -2550,7 +2564,7 @@
 }
 
 .ai_rmd .left ul li.active.dn a {
-  border: 5px solid #447AEB;
+  border: 3px solid #447AEB;
   background: #fff;
 }
 
@@ -2564,7 +2578,7 @@
 
 .ai_rmd .left ul li.up a {
   background: #FB535F;
-  border: 5px solid #FB535F;
+  border: 3px solid #FB535F;
 }
 
 .ai_rmd .left ul li.up a:hover {
@@ -2581,7 +2595,7 @@
 
 .ai_rmd .left ul li.dn a {
   background: #447AEB;
-  border: 5px solid #447AEB;
+  border: 3px solid #447AEB;
 }
 
 .ai_rmd .left ul li.dn a:hover {
@@ -2626,8 +2640,9 @@
 .ai_rmd .right {
   display: block;
   float: left;
-  width: calc(100% - 260px);
+  width: 673px;
   min-height: 435px;
+  float: right;
 }
 
 .ai_rmd .right .itemRmdBox_w {
@@ -2637,7 +2652,6 @@
 .ai_rmd .right .itemRmdBox_w .itemRmdBox {
   width: 100%;
   overflow: hidden;
-  padding-left: 30px;
 }
 
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox {
@@ -2787,7 +2801,7 @@
 .ai_rmd .right .itemRmdBox_w .itemRmdBox .rmdBox .rmd_graph {
   display: block;
   width: 100%;
-  min-height: 220px;
+  min-height: 315px;
   margin-top: 20px;
   float: left;
   background: #f8f8f8;
@@ -3001,7 +3015,13 @@
 }
 
 .rmd-bot-cont .left .bot .thumb {
+  display: inline-block;
+  width: 125px;
   margin-top: 10px;
+}
+
+.rmd-bot-cont .left .bot .thumb img {
+  width: 100%;
 }
 
 .rmd-bot-cont .left .info {
@@ -4030,9 +4050,11 @@
 
 .bot_list_w .bot_w .top .thumb {
   display: block;
-  width: 140px;
+  width: 125px;
   height: 125px;
   text-align: center;
+  margin-top: 15px;
+  margin-left: 12px;
   float: left;
 }
 
@@ -4383,7 +4405,7 @@
 
 .allDetail .per {
   display: block;
-  width: 460px;
+  width: 459px;
   min-height: 380px;
   float: left;
   margin-top: 40px;
@@ -4868,10 +4890,21 @@
 }
 
 .latest-issue p.guide {
+  display: block;
+  width: 100%;
   font-size: 14px;
-  color: #666;
+  color: #999;
   font-weight: 300;
   padding: 15px 0;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 15px;
+  float: left;
+}
+
+.latest-issue .tab-content {
+  display: block;
+  width: 100%;
+  float: left;
 }
 
 .latest-issue .tab-content ul {
@@ -4879,8 +4912,9 @@
 }
 
 .latest-issue .tab-content ul li {
+  position: relative;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .latest-issue .tab-content ul li .tit {
@@ -4889,7 +4923,7 @@
 
 .latest-issue .tab-content ul li .tit a {
   display: inline-block;
-  max-width: 100%;
+  max-width: 710px;
   font-size: 16px;
   color: #3e72ed;
   font-weight: 300;
@@ -4900,16 +4934,20 @@
 }
 
 .latest-issue .tab-content ul li .tit .date {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: block;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 300;
   color: #999;
   line-height: 20px;
-  padding-top: 5px;
 }
 
 .latest-issue .tab-content ul li .txt {
   font-size: 14px;
   color: #666;
+  font-weight: 300;
   line-height: 20px;
   height: 40px;
 }
@@ -5465,7 +5503,7 @@
   border-radius: 34px;
   background: #f5f5f7;
   border: 1px solid #d7d7d7;
-  margin-left: 3px;
+  margin-left: 8px;
 }
 
 .btn-list {
@@ -5477,7 +5515,7 @@
   border: 1px solid #d7d7d7;
   font-size: 13px;
   color: #666;
-  margin-left: 3px;
+  margin-left: 8px;
 }
 
 .btn-white {
@@ -6071,6 +6109,12 @@
   color: #999;
 }
 
+.b_trend_w .table_w .table_w table.table-bordered.small-line tbody tr td,
+.b_trend_w .table_w .table_w table.table-bordered.small-line tbody tr th {
+  padding-top: 8px;
+  padding-bottom: 9px;
+}
+
 .b_trend_w .guide {
   display: block;
   clear: both;
@@ -6267,7 +6311,7 @@
 }
 
 .aisignal_w .top .right .date span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #666;
 }
@@ -6412,8 +6456,8 @@
   border: 1px solid #dfdfdf;
   background: none;
   border-radius: 3px;
-  font-size: 12px;
-  color: #666;
+  font-size: 14px;
+  color: #333;
   font-weight: 300;
   padding: 0;
   margin: 0;
@@ -6734,6 +6778,7 @@
 
 .mybot-info .infobox dl dd .btn-group {
   position: absolute;
+  width: auto;
   top: 5px;
   right: 0;
 }
@@ -8613,7 +8658,7 @@
   display: block;
   font-size: 15px;
   height: 20px;
-  line-height: 30px;
+  line-height: 25px;
   color: #666;
 }
 
@@ -8632,7 +8677,7 @@
   display: block;
   float: right;
   margin: 45px 95px 0 0;
-  width: 200px;
+  width: 250px;
   height: 70px;
   text-align: center;
   border: 0;
@@ -8739,7 +8784,7 @@
 .price_w .btm button {
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 250px;
   height: 70px;
   text-align: center;
   border: 0;
@@ -8830,6 +8875,10 @@
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   padding: 40px 35px 45px;
   overflow: hidden;
+}
+
+.sub-content .sub-section.mainTopSection {
+  padding: 20px 35px 23px;
 }
 
 .sub-content .sub-section.char {
