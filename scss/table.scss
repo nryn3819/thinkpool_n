@@ -261,16 +261,16 @@
                 td{
                     border-top:1px solid #666;
 
-                    .item{
-                        padding: {
-                            left: 15px;
-                        }
-                    }
+                    
                 }
             }
             tr td {
 
-                
+                .item{
+                    padding: {
+                        left: 15px;
+                    }
+                }
 
                 &.bdl{
                     border-left:1px solid #dfdfdf;

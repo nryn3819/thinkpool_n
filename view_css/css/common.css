@@ -5418,10 +5418,6 @@ body, html {
   border-top: 1px solid #666;
 }
 
-.table_w table tbody tr:first-child td .item {
-  padding-left: 15px;
-}
-
 .table_w table tbody tr td {
   padding-top: 12px;
   padding-bottom: 13px;
@@ -5431,6 +5427,10 @@ body, html {
   font-weight: 300;
   color: #666;
   border-bottom: 1px solid #dfdfdf;
+}
+
+.table_w table tbody tr td .item {
+  padding-left: 15px;
 }
 
 .table_w table tbody tr td.bdl {
