@@ -4391,6 +4391,11 @@ body, html {
   padding: 8px;
 }
 
+.ui-menu {
+  width: 100%;
+  float: left;
+}
+
 .ui-menu .ui-menu-item-wrapper {
   padding: 0 14px;
   height: 30px;
@@ -4416,6 +4421,7 @@ body, html {
   border: 0;
   color: #999;
   font-weight: 300;
+  background: #f1f2f3;
 }
 
 .ui-menu .ui-menu-item-wrapper.ui-state-active em, .ui-menu .ui-menu-item-wrapper.ui-state-focus em {
