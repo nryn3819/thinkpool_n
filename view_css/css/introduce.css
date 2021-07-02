@@ -123,11 +123,11 @@
 
 .signal_introduce .introduce .itd strong {
   display: block;
-  padding-top: 15px;
+  padding: 15px 0 20px 0;
   font-size: 30px;
   font-weight: bold;
   color: #333;
-  line-height: 48px;
+  line-height: 43px;
 }
 
 .signal_introduce .introduce .itd span {

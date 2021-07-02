@@ -17,6 +17,11 @@
     width: 100%;
     float: left;
     overflow: hidden;
+
+    &.topLine{
+        border-top:1px solid #000;
+        padding-top:20px;
+    }
 }
 
 .admin_notice {

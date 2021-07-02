@@ -10,6 +10,7 @@
         font-size:14px;
         color:#999;
         font-weight:300;
+        cursor:pointer;
     }
 
     strong{
@@ -259,7 +260,7 @@
                 width:100%;
 
                 ul{
-                    display:flex;
+                    display:block;
                     width:100%;
                     justify-content: space-between;
                     flex-wrap:wrap;
@@ -272,8 +273,12 @@
                         background:#fefefe;
                         border:1px solid #ccc;
                         border-radius: 5px;
+                        float:left;
                         margin: {
                             bottom:25px;
+                        }
+                        &:nth-child(3n-1){
+                            margin:0 29px;
                         }
 
                         strong{
@@ -290,13 +295,13 @@
                         .chartImg{
                             display:inline-block;
                             margin-top:15px;
-                            width:250px;
-                            height:165px;
+                            width:290px;
+                            height:auto;
                             background:#fff;
 
                             img{
                                 width:100%;
-                                max-height:165px;
+                                //max-height:165px;
                             }
                         }
                     }

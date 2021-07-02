@@ -2480,11 +2480,13 @@
 .ui-widget.ui-widget-content {
   border: 1px solid #d9d9d9;
   padding: 8px;
+  z-index: 998;
 }
 
 .ui-menu .ui-menu-item {
   width: 100%;
   float: left;
+  clear: left;
 }
 
 .ui-menu .ui-menu-item-wrapper {
@@ -2499,6 +2501,7 @@
 .ui-menu .ui-menu-item-wrapper em {
   float: left;
   color: #666;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -4611,6 +4614,7 @@ html .ui-button.ui-state-disabled:active {
   font-size: 14px;
   color: #999;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .ch_today strong {
@@ -4854,9 +4858,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .issue_info .tab-content .tab-pane .chartbox ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -4873,7 +4875,12 @@ html .ui-button.ui-state-disabled:active {
   background: #fefefe;
   border: 1px solid #ccc;
   border-radius: 5px;
+  float: left;
   margin-bottom: 25px;
+}
+
+.issue_info .tab-content .tab-pane .chartbox ul li:nth-child(3n-1) {
+  margin: 0 29px;
 }
 
 .issue_info .tab-content .tab-pane .chartbox ul li strong {
@@ -4888,14 +4895,13 @@ html .ui-button.ui-state-disabled:active {
 .issue_info .tab-content .tab-pane .chartbox ul li .chartImg {
   display: inline-block;
   margin-top: 15px;
-  width: 250px;
-  height: 165px;
+  width: 290px;
+  height: auto;
   background: #fff;
 }
 
 .issue_info .tab-content .tab-pane .chartbox ul li .chartImg img {
   width: 100%;
-  max-height: 165px;
 }
 
 .issue_info .tab-content .tab-pane .chartbox .date {
@@ -6983,11 +6989,11 @@ html .ui-button.ui-state-disabled:active {
 
 .signal_introduce .introduce .itd strong {
   display: block;
-  padding-top: 15px;
+  padding: 15px 0 20px 0;
   font-size: 30px;
   font-weight: bold;
   color: #333;
-  line-height: 48px;
+  line-height: 43px;
 }
 
 .signal_introduce .introduce .itd span {
@@ -7256,7 +7262,7 @@ html .ui-button.ui-state-disabled:active {
 
 .usrguide .box .svc_w .svcbox .right button {
   display: block;
-  width: 200px;
+  width: 250px;
   height: 70px;
   border-radius: 5px;
   border: 0;
@@ -8521,15 +8527,15 @@ html .ui-button.ui-state-disabled:active {
 
 .clause_box article .tit {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   font-weight: 500;
 }
 
 .clause_box article .con {
   display: block;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 26px;
   color: #666;
   font-weight: 400;
   white-space: pre-wrap;

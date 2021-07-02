@@ -583,15 +583,15 @@
 
 .clause_box article .tit {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   font-weight: 500;
 }
 
 .clause_box article .con {
   display: block;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 26px;
   color: #666;
   font-weight: 400;
   white-space: pre-wrap;
