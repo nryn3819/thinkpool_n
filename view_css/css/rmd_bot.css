@@ -267,6 +267,9 @@ html .ui-button.ui-state-disabled:active {
   top: 11px;
   left: 145px;
   color: #3272ed;
+  border: 0;
+  background: none;
+  padding: 0;
 }
 
 .table_w .tbl-top .left dl dd button {

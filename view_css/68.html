@@ -238,13 +238,13 @@
                                             <dl>
                                                 <dt>날짜별 찾기</dt>
                                                 <dd>
-                                                    <input type="text" id="datepicker">
-                                                    <span class="datebtn glyphicon glyphicon-calendar"></span>
+                                                    <input type="text" id="datepicker" disabled>
+                                                    <!-- <span class="datebtn glyphicon glyphicon-calendar"></span> -->
                                                     <button type="button" class="btn btn-primary btn-md pull-left">조회</button>
                                                     <script>
                                                         $( function() {
                                                             $.datepicker.setDefaults({
-                                                                dateFormat: 'yy-mm-dd',
+                                                                dateFormat: 'yy. mm. dd',
                                                                 prevText: '이전 달',
                                                                 nextText: '다음 달',
                                                                 monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
@@ -255,7 +255,11 @@
                                                                 showMonthAfterYear: true,
                                                                 yearSuffix: '년'
                                                             });
-                                                            $( "#datepicker" ).datepicker().datepicker("setDate", new Date());;
+                                                            $( "#datepicker" ).datepicker({
+                                                                showOn:'button'
+                                                            }).datepicker("setDate", new Date());
+
+                                                            $('.ui-datepicker-trigger').addClass('datebtn glyphicon glyphicon-calendar').text('');
                                                         } );
                                                     </script>
                                                 </dd>
