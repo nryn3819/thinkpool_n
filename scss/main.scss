@@ -538,9 +538,18 @@
           white-space: nowrap;
           overflow: hidden;
         }
+        &.per{
+          width:51px;
+        }
+        &.year{
+          width:39px;
+        }
 
         &:first-child{
           margin-left:0;
+        }
+        &:last-child{
+          width:49px !important;
         }
       }
     }

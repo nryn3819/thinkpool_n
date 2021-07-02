@@ -127,11 +127,12 @@
                     float:left;
                 }
                 dd{
+                    position:relative;
                     display:block;
                     margin-left:10px;
                     float:left;
 
-                    input[type="date"]{
+                    input[type="text"]{
                         display:block;
                         width:170px;
                         background:#f6f7f8;
@@ -140,12 +141,19 @@
                         height:36px;
                         line-height:36px;
                         box-sizing:border-box;
-                        padding:0 10px;
+                        padding:0 26px 0 20px;
                         float:left;
                         font-size:14px;
-                        font-weight:500;
+                        font-weight:400;
                         margin-right:10px;
                         cursor:pointer;
+                        color:#999;
+                    }
+                    .datebtn{
+                        position:absolute;
+                        top:11px;
+                        left:145px;
+                        color:#3272ed;
                     }
 
                     button{

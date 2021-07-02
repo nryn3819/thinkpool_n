@@ -2337,7 +2337,7 @@
   padding: 8px;
 }
 
-.ui-menu {
+.ui-menu .ui-menu-item {
   width: 100%;
   float: left;
 }

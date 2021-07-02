@@ -533,8 +533,20 @@
   overflow: hidden;
 }
 
+.mainItemList li a span.per {
+  width: 51px;
+}
+
+.mainItemList li a span.year {
+  width: 39px;
+}
+
 .mainItemList li a span:first-child {
   margin-left: 0;
+}
+
+.mainItemList li a span:last-child {
+  width: 49px !important;
 }
 
 .main-items {

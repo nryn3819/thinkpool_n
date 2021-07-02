@@ -1670,8 +1670,20 @@ table {
   overflow: hidden;
 }
 
+.mainItemList li a span.per {
+  width: 51px;
+}
+
+.mainItemList li a span.year {
+  width: 39px;
+}
+
 .mainItemList li a span:first-child {
   margin-left: 0;
+}
+
+.mainItemList li a span:last-child {
+  width: 49px !important;
 }
 
 .main-items {
@@ -4391,7 +4403,7 @@ body, html {
   padding: 8px;
 }
 
-.ui-menu {
+.ui-menu .ui-menu-item {
   width: 100%;
   float: left;
 }
@@ -5326,12 +5338,13 @@ body, html {
 }
 
 .table_w .tbl-top .left dl dd {
+  position: relative;
   display: block;
   margin-left: 10px;
   float: left;
 }
 
-.table_w .tbl-top .left dl dd input[type="date"] {
+.table_w .tbl-top .left dl dd input[type="text"] {
   display: block;
   width: 170px;
   background: #f6f7f8;
@@ -5341,12 +5354,20 @@ body, html {
   line-height: 36px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 10px;
+  padding: 0 26px 0 20px;
   float: left;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   margin-right: 10px;
   cursor: pointer;
+  color: #999;
+}
+
+.table_w .tbl-top .left dl dd .datebtn {
+  position: absolute;
+  top: 11px;
+  left: 145px;
+  color: #3272ed;
 }
 
 .table_w .tbl-top .left dl dd button {

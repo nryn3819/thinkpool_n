@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- basic css -->
     <link rel="stylesheet" href="scss/common.scss">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,6 +23,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <!-- bxslider -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -236,8 +238,26 @@
                                             <dl>
                                                 <dt>날짜별 찾기</dt>
                                                 <dd>
-                                                    <input type="date" name="" id="">
-                                                    <button type="button" class="btn btn-primary btn-md">조회</button>
+                                                    <input type="text" id="datepicker">
+                                                    <span class="datebtn glyphicon glyphicon-calendar"></span>
+                                                    <button type="button" class="btn btn-primary btn-md pull-left">조회</button>
+                                                    <script>
+                                                        $( function() {
+                                                            $.datepicker.setDefaults({
+                                                                dateFormat: 'yy-mm-dd',
+                                                                prevText: '이전 달',
+                                                                nextText: '다음 달',
+                                                                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                                                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                                                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                                                                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                                                                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                                                showMonthAfterYear: true,
+                                                                yearSuffix: '년'
+                                                            });
+                                                            $( "#datepicker" ).datepicker().datepicker("setDate", new Date());;
+                                                        } );
+                                                    </script>
                                                 </dd>
                                             </dl>
                                         </div>
