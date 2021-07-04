@@ -5583,11 +5583,12 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .table_w table.signal thead tr th {
-  height: 38px;
+  font-size: 15px;
+  font-weight: 300;
   background: #f6f6f6;
   border-bottom: 0;
-  padding-top: 14px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .table_w table.signal thead tr th:first-child {
@@ -5599,13 +5600,13 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .table_w table.signal tbody tr:first-child td {
-  padding-top: 24px;
+  padding-top: 20px;
 }
 
 .table_w table.signal tbody tr td {
   border-top: 0;
   border-bottom: 0;
-  padding-top: 8px;
+  padding-top: 7px;
   padding-bottom: 8px;
 }
 
@@ -7510,6 +7511,10 @@ html .ui-button.ui-state-disabled:active {
   background: #fff;
 }
 
+.topTheme.tab-sm.nborder .nav li {
+  height: 20px;
+}
+
 .themebox {
   width: 100%;
   overflow: hidden;
@@ -7530,11 +7535,13 @@ html .ui-button.ui-state-disabled:active {
 
 .themebox .left .date {
   position: absolute;
-  top: 64px;
+  top: 0;
   right: 0;
 }
 
 .themebox .left .date span {
+  display: block;
+  line-height: 26px;
   font-size: 13px;
   color: #999;
 }

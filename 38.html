@@ -161,7 +161,20 @@
                         <div class="sub-section">
                             <div class="themebox">
                                 <div class="left">
+                                    <div class="title">
+                                        <h4 class="sub-title">상위테마</h4>
+                                    </div>
+                                    <!-- // -->
 
+                                    <div class="chartbox mt-40">
+                                        <img data-v-117e50d6="" src="https://webchart.thinkpool.com/2021ReNew//ThemeRank/ThemeRank5.png" alt=" ">
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="date">
+                                        <span>10:40 기준</span>
+                                    </div>
+                                    <!-- // -->
                                 </div>
                                 <!-- //left -->
 
@@ -169,21 +182,58 @@
                                     <div class="topTheme tab-sm nborder" role="tabpanel">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li role="presentation" class="active">
-                                                <a href="#tt01" role="tab" data-toggle="tab" aria-controls="tt01">상위1</a>
+                                                <a href="#tt01" role="tab" data-toggle="tab" aria-controls="tt01">
+                                                    <span data-toggle="popover" data-container="body" data-content="테마명1">테마명1</span>
+                                                </a>
                                             </li>
                                             <li role="presentation">
-                                                <a href="#tt02" role="tab" data-toggle="tab" aria-controls="tt02">상위2</a>
+                                                <a href="#tt02" role="tab" data-toggle="tab" aria-controls="tt02">
+                                                    <span data-toggle="popover" data-container="body" data-content="테마명2">테마명2</span>
+                                                </a>
                                             </li>
                                             <li role="presentation">
-                                                <a href="#tt03" role="tab" data-toggle="tab" aria-controls="tt03">상위3</a>
+                                                <a href="#tt03" role="tab" data-toggle="tab" aria-controls="tt03">
+                                                    <span data-toggle="popover" data-container="body" data-content="테마명3">테마명3</span>
+                                                </a>
                                             </li>
                                             <li role="presentation">
-                                                <a href="#tt04" role="tab" data-toggle="tab" aria-controls="tt04">상위4</a>
+                                                <a href="#tt04" role="tab" data-toggle="tab" aria-controls="tt04">
+                                                    <span data-toggle="popover" data-container="body" data-content="테마명4">테마명4</span>
+                                                </a>
                                             </li>
                                             <li role="presentation">
-                                                <a href="#tt05" role="tab" data-toggle="tab" aria-controls="tt05">상위5</a>
+                                                <a href="#tt05" role="tab" data-toggle="tab" aria-controls="tt05">
+                                                    <span data-toggle="popover" data-container="body" data-content="테마명5">테마명5</span>
+                                                </a>
                                             </li>
                                         </ul>
+
+                                        <script>
+                                           $(function(){
+                                                $(".topTheme span[data-toggle='popover']").popover({
+                                                    trigger: 'manual',
+                                                    placement: 'top'
+                                                }).on('mouseenter', function () {
+                                                    var _this = this;
+                                            
+                                                    $(this).popover('show');
+                                                    $('.popover').on('mouseleave', function () {
+                                                        $(_this).popover('hide');
+                                                    });
+                                                }).on('mouseleave', function () {
+                                                    var _this = this;
+                                            
+                                                    setTimeout(function () {
+                                                        if (!$('.popover:hover').length) {
+                                                            $(_this).popover('hide');
+                                                        }
+                                                    });
+                                                }).on("click", function(){
+                                                    var _this = this;
+                                                    $(_this).popover('hide');
+                                                });
+                                            });
+                                        </script>
                                         <!-- //list -->
 
                                         <div class="tab-content mt-20">

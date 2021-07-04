@@ -1,6 +1,10 @@
 //테마 . 업종
 @import 'button';
-
+.topTheme.tab-sm.nborder{
+    .nav li{
+        height:20px;
+    }
+}
 .themebox{
     width:100%;
     overflow:hidden;
@@ -20,10 +24,12 @@
 
         .date{
             position:absolute;
-            top:64px;
+            top:0;
             right:0;
 
             span{
+                display:block;
+                line-height:26px;
                 font-size:13px;
                 color:#999;
             }

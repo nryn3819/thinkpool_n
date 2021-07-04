@@ -362,13 +362,14 @@
 
             thead {
                 tr th {
-                    height: 38px;
+                    font-size:15px;
+                    font-weight:300;
                     background: #f6f6f6;
                     border-bottom: 0;
 
                     padding: {
-                        top: 14px;
-                        bottom: 12px;
+                        top: 8px;
+                        bottom: 8px;
                     }
 
                     &:first-child {
@@ -383,7 +384,7 @@
 
             tbody {
                 tr:first-child td {
-                    padding-top: 24px;
+                    padding-top: 20px;
                 }
 
                 tr td {
@@ -391,7 +392,7 @@
                     border-bottom: 0;
 
                     padding : {
-                        top: 8px;
+                        top: 7px;
                         bottom: 8px;
                     }
                 }

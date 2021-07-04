@@ -284,11 +284,47 @@
 
                                 <div class="right">
                                     <div class="top">
-                                        <strong title="코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가">코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가</strong>
+                                        <strong class="iName" data-toggle="popover" data-container="body" data-content="코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가" >코로나 19 관련 종목으로 시장에서 주목, 최근 외국인의 매수세가매수세가</strong>
 
                                         <span>전일대비 상승세 전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세</span>
                                         <span>전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세</span>
                                         <span>전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비 상승세전일대비</span>
+
+
+                                        <style>
+                                            /* 
+                                             현재 페이지에서만 사용됩니다. 다른페에지에서 사용되지 않도록 유의해주세요
+                                             */
+                                            .popover{
+                                                width:auto;
+                                                max-width:1000px;
+                                            }
+                                        </style>
+
+                                        <script>
+                                            $(function(){
+                                                 $(".iName[data-toggle='popover']").popover({
+                                                     trigger: 'manual',
+                                                     placement: 'top'
+                                                 }).on('mouseenter', function () {
+                                                     var _this = this;
+                                             
+                                                     $(this).popover('show');
+                                                     $('.popover').on('mouseleave', function () {
+                                                         $(_this).popover('hide');
+                                                     });
+                                                 }).on('mouseleave', function () {
+                                                     var _this = this;
+                                             
+                                                     setTimeout(function () {
+                                                         if (!$('.popover:hover').length) {
+                                                             $(_this).popover('hide');
+                                                         }
+                                                     });
+                                                 })
+                                             });
+                                         </script>
+                                         <!-- //list -->
                                     </div>
 
                                     <div class="con">
