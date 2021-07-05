@@ -708,6 +708,13 @@
                     }
                     .tgglyphi{
                         cursor:pointer;
+                        &::before{
+                            display:block;
+                            content:'';
+                            width:16px;
+                            height:14px;
+                            background:url(../img/chart_icon.png) no-repeat 0 0;
+                        }
                     }
                 }
             }

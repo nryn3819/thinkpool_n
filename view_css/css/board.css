@@ -31,6 +31,7 @@
   float: left;
   overflow: hidden;
   margin-top: 10px;
+  margin-bottom: 35px;
   border-top: 1px solid #dfdfdf;
 }
 
@@ -75,7 +76,6 @@
   width: 100%;
   float: left;
   overflow: hidden;
-  margin-top: 35px;
 }
 
 .board_tbl .table {
