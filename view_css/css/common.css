@@ -3373,7 +3373,7 @@ body, html {
 }
 
 .modulebox .left {
-  width: 285px;
+  width: 284px;
   min-height: 250px;
   float: left;
   padding-right: 50px;
@@ -3388,7 +3388,7 @@ body, html {
 
 .modulebox .right {
   position: relative;
-  width: calc(100% - 285px);
+  width: 671px;
   float: left;
 }
 
