@@ -1675,15 +1675,11 @@ table {
 }
 
 .mainItemList li a span.year {
-  width: 39px;
+  width: 50px;
 }
 
 .mainItemList li a span:first-child {
   margin-left: 0;
-}
-
-.mainItemList li a span:last-child {
-  width: 49px !important;
 }
 
 .main-items {
@@ -2366,10 +2362,10 @@ body, html {
 .rmd_item_sch .button .btn-primary span.app::before {
   display: inline-block;
   content: 'bullet';
-  width: 25px;
+  width: 22px;
   background-image: url(../img/iso.png);
   background-repeat: no-repeat;
-  background-size: 18px 23px;
+  background-size: 15px auto;
   background-position: 0 50%;
   text-indent: -9999em;
 }
@@ -3126,6 +3122,7 @@ body, html {
   min-width: 970px;
   height: 90px;
   text-align: center;
+  float: left;
 }
 
 .module-table {
@@ -7569,13 +7566,21 @@ html .ui-button.ui-state-disabled:active {
 
 .themebox .right .date {
   position: absolute;
-  top: 64px;
+  top: 0;
   right: 0;
 }
 
 .themebox .right .date span {
   font-size: 13px;
   color: #999;
+}
+
+.topTheme ul li a span {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .themeNews {
@@ -7857,7 +7862,6 @@ html .ui-button.ui-state-disabled:active {
 
 .sectorbox .chartbox {
   width: 100%;
-  min-height: 500px;
   overflow: hidden;
   float: left;
   background: #f8f8f8;
@@ -8493,7 +8497,12 @@ html .ui-button.ui-state-disabled:active {
 
 .adviser .left .thumb {
   width: 100%;
+  min-height: 210px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
   text-align: center;
+  padding: 23px 0 22px 0;
 }
 
 .adviser .right {
@@ -13106,7 +13115,7 @@ span.label.ico.ico01 {
   font-size: 14px;
   color: #666;
   line-height: 22px;
-  font-weight: 350;
+  font-weight: 400;
 }
 
 .cmmtBox .cmmt_cont .text span {

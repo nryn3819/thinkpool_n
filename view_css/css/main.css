@@ -538,15 +538,11 @@
 }
 
 .mainItemList li a span.year {
-  width: 39px;
+  width: 50px;
 }
 
 .mainItemList li a span:first-child {
   margin-left: 0;
-}
-
-.mainItemList li a span:last-child {
-  width: 49px !important;
 }
 
 .main-items {

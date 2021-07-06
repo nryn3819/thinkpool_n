@@ -542,14 +542,14 @@
           width:51px;
         }
         &.year{
-          width:39px;
+          width:50px;
         }
 
         &:first-child{
           margin-left:0;
         }
         &:last-child{
-          width:49px !important;
+          //width:49px !important;
         }
       }
     }

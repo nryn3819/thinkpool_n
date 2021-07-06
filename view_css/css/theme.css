@@ -68,13 +68,21 @@
 
 .themebox .right .date {
   position: absolute;
-  top: 64px;
+  top: 0;
   right: 0;
 }
 
 .themebox .right .date span {
   font-size: 13px;
   color: #999;
+}
+
+.topTheme ul li a span {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .themeNews {
@@ -356,7 +364,6 @@
 
 .sectorbox .chartbox {
   width: 100%;
-  min-height: 500px;
   overflow: hidden;
   float: left;
   background: #f8f8f8;

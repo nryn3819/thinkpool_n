@@ -182,12 +182,12 @@
                 span.app::before {
                     display: inline-block;
                     content: 'bullet';
-                    width: 25px;
+                    width: 22px;
 
                     background: {
                         image: url(../img/iso.png);
                         repeat: no-repeat;
-                        size: 18px 23px;
+                        size: 15px auto;
                         position: 0 50%;
                     }
 
@@ -1022,4 +1022,5 @@
     min-width:970px;
     height: 90px;
     text-align:center;
+    float:left;
 }
