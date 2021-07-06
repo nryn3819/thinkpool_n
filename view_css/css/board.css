@@ -929,6 +929,12 @@
   border-radius: 34px;
 }
 
+.board_view_content .fontSize {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+
 .board_view_content .file {
   position: absolute;
   top: 30px;

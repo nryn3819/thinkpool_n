@@ -1203,7 +1203,6 @@
   margin: 0 auto;
   width: 100%;
   min-width: 970px;
-  height: 90px;
   text-align: center;
   float: left;
 }
@@ -1305,7 +1304,7 @@
   display: block;
   min-height: 24px;
   line-height: 24px;
-  text-indent: 13px;
+  padding-left: 13px;
 }
 
 .module-table tbody tr td.success {

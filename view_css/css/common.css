@@ -3120,7 +3120,6 @@ body, html {
   margin: 0 auto;
   width: 100%;
   min-width: 970px;
-  height: 90px;
   text-align: center;
   float: left;
 }
@@ -3222,7 +3221,7 @@ body, html {
   display: block;
   min-height: 24px;
   line-height: 24px;
-  text-indent: 13px;
+  padding-left: 13px;
 }
 
 .module-table tbody tr td.success {
@@ -12003,6 +12002,12 @@ html .ui-button.ui-state-disabled:active {
   background: #f7f7f7;
   border: 1px solid #d7d7d7;
   border-radius: 34px;
+}
+
+.board_view_content .fontSize {
+  position: absolute;
+  top: 25px;
+  right: 50px;
 }
 
 .board_view_content .file {
