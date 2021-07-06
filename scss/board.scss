@@ -2,7 +2,7 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .board_top_btn {
@@ -29,8 +29,8 @@
     width: 100%;
     float: left;
     overflow: hidden;
-    margin-top: 10px;
-    margin-bottom:35px;
+    margin-top: 20px;
+    margin-bottom:20px;
     border-top: 1px solid #dfdfdf;
 
 
@@ -78,7 +78,7 @@
     width: 100%;
     float: left;
     overflow: hidden;
-    //margin-top: 35px;
+    margin-top: 20px;
 
     .table {
         border-top: 1px solid #000;
@@ -103,6 +103,14 @@
                 &.info {
                     td {
                         background: #f1f5fc;
+                        &:nth-child(3n-1){
+                            a{
+                                font-weight:400;
+                            }
+                        }
+                        &:nth-child(5n){
+                            font-weight:300;
+                        }
                     }
                 }
 
@@ -280,6 +288,13 @@
 
 .tbl-chart{
     cursor:pointer;
+    &::before{
+        content:'';
+        display:block;
+        width:16px;
+        height:14px;
+        background:url(../img/chart_icon.png) no-repeat 0 0;
+    }
 }
 
 .fav-item{

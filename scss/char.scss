@@ -182,11 +182,12 @@
                 span.app::before {
                     display: inline-block;
                     content: 'bullet';
-                    width: 23px;
+                    width: 25px;
 
                     background: {
-                        image: url(../img/bu_appstore.png);
+                        image: url(../img/iso.png);
                         repeat: no-repeat;
+                        size: 18px 23px;
                         position: 0 50%;
                     }
 

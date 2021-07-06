@@ -29,7 +29,9 @@
         .label{
             padding:2px 3px;
             &.primary{
-                background:#3e72ed;
+                border:1px solid #3e72ed;
+                color:#3e72ed;
+                font-weight:300;
             }
         }
 
@@ -80,7 +82,7 @@
         .text {
             display: block;
             font-size: 14px;
-            color: #787878;
+            color: #666;
             line-height: 22px;
             font-weight:350;
 

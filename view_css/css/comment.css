@@ -33,7 +33,9 @@
 }
 
 .cmmtBox .user_info .label.primary {
-  background: #3e72ed;
+  border: 1px solid #3e72ed;
+  color: #3e72ed;
+  font-weight: 300;
 }
 
 .cmmtBox .user_info .user_nick {
@@ -83,7 +85,7 @@
 .cmmtBox .cmmt_cont .text {
   display: block;
   font-size: 14px;
-  color: #787878;
+  color: #666;
   line-height: 22px;
   font-weight: 350;
 }

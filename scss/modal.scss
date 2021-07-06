@@ -495,3 +495,29 @@
         padding:15px 0;
     }
 }
+
+.botchart{
+    .modal-dialog{
+        width:316px;
+    }
+
+    .modal-header{
+        strong{
+            display:block;
+            width:100%;
+            float:left;
+        }
+        span.chartGuide{
+            display:block;
+            width:100%;
+            padding-top:10px;
+            float:left;
+            font-size:14px;
+            color:#666;
+            font-weight:300;
+        }
+    }
+    .modal-body{
+        padding-top:10px;
+    }
+}

@@ -3,7 +3,7 @@
   display: block;
   overflow: hidden;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .board_top_btn {
@@ -30,8 +30,8 @@
   width: 100%;
   float: left;
   overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-top: 1px solid #dfdfdf;
 }
 
@@ -76,6 +76,7 @@
   width: 100%;
   float: left;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .board_tbl .table {
@@ -97,6 +98,14 @@
 
 .board_tbl .table tbody tr.info td {
   background: #f1f5fc;
+}
+
+.board_tbl .table tbody tr.info td:nth-child(3n-1) a {
+  font-weight: 400;
+}
+
+.board_tbl .table tbody tr.info td:nth-child(5n) {
+  font-weight: 300;
 }
 
 .board_tbl .table tbody tr td {
@@ -245,6 +254,14 @@
 
 .tbl-chart {
   cursor: pointer;
+}
+
+.tbl-chart::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/chart_icon.png) no-repeat 0 0;
 }
 
 .fav-item {
@@ -822,8 +839,8 @@
   font-size: 15px;
   line-height: 25px;
   color: #666;
-  font-weight: 300;
-  padding: 80px 0 100px 0;
+  font-weight: 400;
+  padding: 80px 0 60px 0;
 }
 
 .board_view_content .vote {
@@ -879,7 +896,7 @@
 .board_view_content .adText {
   display: block;
   width: 100%;
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -1968,7 +1985,9 @@ span.label.ico.ico01 {
 }
 
 .cmmtBox .user_info .label.primary {
-  background: #3e72ed;
+  border: 1px solid #3e72ed;
+  color: #3e72ed;
+  font-weight: 300;
 }
 
 .cmmtBox .user_info .user_nick {
@@ -2018,7 +2037,7 @@ span.label.ico.ico01 {
 .cmmtBox .cmmt_cont .text {
   display: block;
   font-size: 14px;
-  color: #787878;
+  color: #666;
   line-height: 22px;
   font-weight: 350;
 }

@@ -2366,9 +2366,10 @@ body, html {
 .rmd_item_sch .button .btn-primary span.app::before {
   display: inline-block;
   content: 'bullet';
-  width: 23px;
-  background-image: url(../img/bu_appstore.png);
+  width: 25px;
+  background-image: url(../img/iso.png);
   background-repeat: no-repeat;
+  background-size: 18px 23px;
   background-position: 0 50%;
   text-indent: -9999em;
 }
@@ -3363,6 +3364,7 @@ body, html {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   padding: 41px 36px 46px;
   overflow: hidden;
+  float: left;
 }
 
 .modulebox {
@@ -8512,9 +8514,25 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .adviser .right .info .tit-lg {
+  height: 34px;
+  line-height: 34px;
   font-size: 30px;
   font-weight: 700;
   padding-top: 5px;
+  float: left;
+}
+
+.adviser .right .info .tit-lg .btn-primary {
+  height: 34px;
+  line-height: 34px;
+  border: 0;
+  padding: 0;
+  margin-top: -3px;
+  width: 78px;
+  background: #3e72ed;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .adviser .right .info .txt {
@@ -8553,6 +8571,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   width: 100%;
   overflow: hidden;
+  float: left;
   margin-top: 30px;
 }
 
@@ -10859,6 +10878,8 @@ html .ui-button.ui-state-disabled:active {
 
 .sub-content {
   position: relative;
+  width: 100%;
+  float: left;
   clear: both;
 }
 
@@ -11045,7 +11066,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   overflow: hidden;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .board_top_btn {
@@ -11072,8 +11093,8 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   float: left;
   overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-top: 1px solid #dfdfdf;
 }
 
@@ -11118,6 +11139,7 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   float: left;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .board_tbl .table {
@@ -11139,6 +11161,14 @@ html .ui-button.ui-state-disabled:active {
 
 .board_tbl .table tbody tr.info td {
   background: #f1f5fc;
+}
+
+.board_tbl .table tbody tr.info td:nth-child(3n-1) a {
+  font-weight: 400;
+}
+
+.board_tbl .table tbody tr.info td:nth-child(5n) {
+  font-weight: 300;
 }
 
 .board_tbl .table tbody tr td {
@@ -11287,6 +11317,14 @@ html .ui-button.ui-state-disabled:active {
 
 .tbl-chart {
   cursor: pointer;
+}
+
+.tbl-chart::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/chart_icon.png) no-repeat 0 0;
 }
 
 .fav-item {
@@ -11864,8 +11902,8 @@ html .ui-button.ui-state-disabled:active {
   font-size: 15px;
   line-height: 25px;
   color: #666;
-  font-weight: 300;
-  padding: 80px 0 100px 0;
+  font-weight: 400;
+  padding: 80px 0 60px 0;
 }
 
 .board_view_content .vote {
@@ -11921,7 +11959,7 @@ html .ui-button.ui-state-disabled:active {
 .board_view_content .adText {
   display: block;
   width: 100%;
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -13010,7 +13048,9 @@ span.label.ico.ico01 {
 }
 
 .cmmtBox .user_info .label.primary {
-  background: #3e72ed;
+  border: 1px solid #3e72ed;
+  color: #3e72ed;
+  font-weight: 300;
 }
 
 .cmmtBox .user_info .user_nick {
@@ -13060,7 +13100,7 @@ span.label.ico.ico01 {
 .cmmtBox .cmmt_cont .text {
   display: block;
   font-size: 14px;
-  color: #787878;
+  color: #666;
   line-height: 22px;
   font-weight: 350;
 }
@@ -13967,4 +14007,28 @@ span.label.ico.ico01 {
 
 #rtime .modal-body {
   padding: 15px 0;
+}
+
+.botchart .modal-dialog {
+  width: 316px;
+}
+
+.botchart .modal-header strong {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.botchart .modal-header span.chartGuide {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  float: left;
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+
+.botchart .modal-body {
+  padding-top: 10px;
 }

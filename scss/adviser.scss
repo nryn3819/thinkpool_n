@@ -44,10 +44,28 @@
                 }
                 color:#333;
                 &-lg{
+                    height:34px;
+                    line-height:34px;
                     font-size:30px;
                     font-weight:700;
                     padding-top:5px;
+                    float:left;
+
+                    .btn-primary{
+                        height:34px;
+                        line-height:34px;
+                        border:0;
+                        padding:0;
+                        margin-top:-3px;
+                        width:78px;
+                        background:#3e72ed;
+                        color:#fff;
+                        font-weight:300;
+                        font-size:14px;
+                    }
                 }
+
+                
             }
 
             .txt{
@@ -91,6 +109,7 @@
                 display:block;
                 width:100%;
                 overflow:hidden;
+                float:left;
                 margin: {
                     top:30px;
                 }

@@ -300,9 +300,10 @@
 .rmd_item_sch .button .btn-primary span.app::before {
   display: inline-block;
   content: 'bullet';
-  width: 23px;
-  background-image: url(../img/bu_appstore.png);
+  width: 25px;
+  background-image: url(../img/iso.png);
   background-repeat: no-repeat;
+  background-size: 18px 23px;
   background-position: 0 50%;
   text-indent: -9999em;
 }
@@ -1297,6 +1298,7 @@
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   padding: 41px 36px 46px;
   overflow: hidden;
+  float: left;
 }
 
 .modulebox {

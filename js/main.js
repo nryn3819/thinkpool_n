@@ -87,7 +87,9 @@ $(function () {
             moveSlides: 1,
             nextText: '',
             prevText: '',
-            hideControlOnEnd: true
+            hideControlOnEnd: true,
+            touchEnabled: false,
+            oneToOneTouch: false
         });
 
         $('.s_menu_control .next').on('click', function(){
