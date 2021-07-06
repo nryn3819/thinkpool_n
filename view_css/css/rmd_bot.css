@@ -396,6 +396,10 @@ html .ui-button.ui-state-disabled:active {
   text-overflow: ellipsis;
 }
 
+.table_w table tbody tr td a.lg {
+  max-width: 550px;
+}
+
 .table_w table tbody tr td .elipsis {
   display: block;
   width: 160px;

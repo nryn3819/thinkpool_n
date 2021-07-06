@@ -311,6 +311,10 @@
                     overflow:hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+
+                    &.lg{
+                        max-width:550px;
+                    }
                 }
                 .elipsis{
                     display:block;
