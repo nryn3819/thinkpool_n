@@ -7114,7 +7114,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   width: 62px;
   height: 30px;
-  line-height: 30px;
+  line-height: 28px;
   text-align: center;
   margin: 0 10px 0 0;
   padding: 0;
@@ -7589,7 +7589,6 @@ html .ui-button.ui-state-disabled:active {
 
 .themeNews {
   display: block;
-  overflow: hidden;
 }
 
 .newsList {
