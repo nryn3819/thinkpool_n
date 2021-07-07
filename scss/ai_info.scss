@@ -389,9 +389,9 @@
 
                 dd {
                     display: block;
-                    margin: 0 0 20px 0;
-                    height: 20px;
-                    line-height: 20px;
+                    margin:0;
+                    //height: 20px;
+                    //line-height: 20px;
                     padding: 0;
                     float: left;
 
@@ -402,7 +402,8 @@
                         color: #666;
                         font-weight: 300;
                         float: left;
-                        padding-right: 15px;
+                        padding-right: 20px;
+                        margin:0 0 20px 0;
                     }
                 }
             }

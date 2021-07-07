@@ -4832,9 +4832,7 @@ body, html {
 
 .rmd_bot_tabw .tab-content .tab-pane dl dd {
   display: block;
-  margin: 0 0 20px 0;
-  height: 20px;
-  line-height: 20px;
+  margin: 0;
   padding: 0;
   float: left;
 }
@@ -4846,7 +4844,8 @@ body, html {
   color: #666;
   font-weight: 300;
   float: left;
-  padding-right: 15px;
+  padding-right: 20px;
+  margin: 0 0 20px 0;
 }
 
 .rmd_bot_tabw .rmd-bot-sch {
@@ -6067,7 +6066,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   width: 100%;
   float: left;
-  margin-top: 15px;
+  margin-top: 25px;
   text-align: center;
 }
 
