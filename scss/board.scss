@@ -256,6 +256,7 @@
                 }
 
                 &.blind {
+                    cursor:pointer;
                     td {
                         a {
                             border-bottom: 0;
@@ -694,6 +695,44 @@
                 color:#3e72ed;
             }
         }
+    }
+}
+
+#blind{
+    top:30%;
+
+    .modal{
+        &-dialog{
+            width:310px;
+            height:180px;
+        }
+
+        &-header{
+            padding:20px 25px;
+            border-bottom:0;
+
+            h4{
+                font-size:16px;
+                color:#666;
+                font-weight:700;
+            }
+        }
+
+        &-body{
+            padding:0 25px 20px 25px;
+
+            p{
+                font-size:13px;
+                color:#666;
+                font-weight:300;
+                line-height:18px;
+            }
+
+            a{
+                text-decoration: underline
+            }
+        }
+
     }
 }
 

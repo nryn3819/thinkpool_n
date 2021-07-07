@@ -11310,6 +11310,10 @@ html .ui-button.ui-state-disabled:active {
   float: left;
 }
 
+.board_tbl .table tbody tr.blind {
+  cursor: pointer;
+}
+
 .board_tbl .table tbody tr.blind td a {
   border-bottom: 0;
 }
@@ -11722,6 +11726,41 @@ html .ui-button.ui-state-disabled:active {
 .myItemList_w .myItemList .list span em, .myItemList_w .myItemList .list a.news em {
   font-style: normal;
   color: #3e72ed;
+}
+
+#blind {
+  top: 30%;
+}
+
+#blind .modal-dialog {
+  width: 310px;
+  height: 180px;
+}
+
+#blind .modal-header {
+  padding: 20px 25px;
+  border-bottom: 0;
+}
+
+#blind .modal-header h4 {
+  font-size: 16px;
+  color: #666;
+  font-weight: 700;
+}
+
+#blind .modal-body {
+  padding: 0 25px 20px 25px;
+}
+
+#blind .modal-body p {
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+#blind .modal-body a {
+  text-decoration: underline;
 }
 
 .board_view_info {
