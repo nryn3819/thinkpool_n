@@ -166,6 +166,8 @@
 
 .aisignal_w .info {
   display: block;
+  width: 100%;
+  float: left;
 }
 
 .aisignal_w .info p {
@@ -177,6 +179,7 @@
 }
 
 .aisignal_w .info .popover {
+  width: 250px;
   font-size: 14px;
   font-weight: 300;
   color: #333;

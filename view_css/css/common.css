@@ -8430,6 +8430,8 @@ html .ui-button.ui-state-disabled:active {
 
 .aisignal_w .info {
   display: block;
+  width: 100%;
+  float: left;
 }
 
 .aisignal_w .info p {
@@ -8441,6 +8443,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .aisignal_w .info .popover {
+  width: 250px;
   font-size: 14px;
   font-weight: 300;
   color: #333;
@@ -12562,6 +12565,22 @@ span.label.ico.ico02 {
 
 span.label.ico.ico01 {
   background-position: 0 99.6%;
+}
+
+#user_class .modal-body p {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+}
+
+#user_class .modal-body p a {
+  font-size: 13px;
+  color: #3e72ed;
+  font-weight: 300;
+}
+
+#user_class .modal-body p a::after {
+  content: "→";
 }
 
 #user_class .modal-footer {

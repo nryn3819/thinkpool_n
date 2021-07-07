@@ -176,6 +176,8 @@
 
     .info{
         display:block;
+        width:100%;
+        float:left;
 
         p{
             display:block;
@@ -186,6 +188,7 @@
         }
 
         .popover{
+            width:250px;
             font: {
                 size:14px;
                 weight:300;

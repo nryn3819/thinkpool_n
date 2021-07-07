@@ -778,6 +778,22 @@
             }
 
         }
+
+        p{
+            display:block;
+            width:100%;
+            padding-top:5px;
+
+            a{
+                font-size:13px;
+                color:#3e72ed;
+                font-weight:300;
+
+                &::after{
+                    content:"→"
+                }
+            }
+        }
     }
 
     .modal-footer {
