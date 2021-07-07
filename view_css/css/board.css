@@ -183,7 +183,7 @@
 
 .board_tbl .table tbody tr td a .obj {
   display: block;
-  max-width: 350px;
+  max-width: 430px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -216,6 +216,8 @@
 .board_tbl .table tbody tr td .label.label-ins {
   background: #9ebcff;
   margin-left: 0;
+  float: left;
+  margin-right: 8px;
 }
 
 .board_tbl .table tbody tr td .label.label-rmd {

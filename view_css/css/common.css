@@ -5531,6 +5531,11 @@ html .ui-button.ui-state-disabled:active {
   border-left: 1px solid #dfdfdf;
 }
 
+.table_w table tbody tr td .empty {
+  min-height: 350px;
+  vertical-align: middle;
+}
+
 .table_w table tbody tr td a {
   display: block;
   max-width: 280px;
@@ -11258,7 +11263,7 @@ html .ui-button.ui-state-disabled:active {
 
 .board_tbl .table tbody tr td a .obj {
   display: block;
-  max-width: 350px;
+  max-width: 430px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -11291,6 +11296,8 @@ html .ui-button.ui-state-disabled:active {
 .board_tbl .table tbody tr td .label.label-ins {
   background: #9ebcff;
   margin-left: 0;
+  float: left;
+  margin-right: 8px;
 }
 
 .board_tbl .table tbody tr td .label.label-rmd {

@@ -197,7 +197,7 @@
 
                         .obj {
                             display: block;
-                            max-width: 350px;
+                            max-width: 430px;
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             overflow: hidden;
@@ -230,6 +230,8 @@
                         &.label-ins {
                             background: #9ebcff;
                             margin-left: 0;
+                            float:left;
+                            margin-right:8px;
                         }
 
                         &.label-rmd {

@@ -385,6 +385,11 @@ html .ui-button.ui-state-disabled:active {
   border-left: 1px solid #dfdfdf;
 }
 
+.table_w table tbody tr td .empty {
+  min-height: 350px;
+  vertical-align: middle;
+}
+
 .table_w table tbody tr td a {
   display: block;
   max-width: 280px;
