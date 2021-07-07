@@ -11218,6 +11218,10 @@ html .ui-button.ui-state-disabled:active {
   background: #f1f5fc;
 }
 
+.board_tbl .table tbody tr.info td .obj {
+  font-weight: 500;
+}
+
 .board_tbl .table tbody tr.info td:nth-child(3n-1) a {
   font-weight: 400;
 }

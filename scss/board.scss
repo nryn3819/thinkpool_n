@@ -103,6 +103,9 @@
                 &.info {
                     td {
                         background: #f1f5fc;
+                        .obj{
+                            font-weight:500;
+                        }
                         &:nth-child(3n-1){
                             a{
                                 font-weight:400;
