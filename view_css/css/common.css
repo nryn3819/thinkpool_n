@@ -11063,14 +11063,14 @@ html .ui-button.ui-state-disabled:active {
 .sub-nm-box .left {
   position: relative;
   display: block;
-  width: calc(50% - 25px);
+  width: calc(50% - 20px);
   float: left;
 }
 
 .sub-nm-box .right {
   position: relative;
   display: block;
-  width: calc(50% - 25px);
+  width: calc(50% - 20px);
   float: right;
 }
 
@@ -14088,4 +14088,8 @@ span.label.ico.ico01 {
 
 .botchart .modal-body {
   padding-top: 10px;
+}
+
+#tblchart .modal-dialog {
+  width: 322px;
 }

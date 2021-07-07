@@ -521,3 +521,7 @@
 .botchart .modal-body {
   padding-top: 10px;
 }
+
+#tblchart .modal-dialog {
+  width: 322px;
+}
