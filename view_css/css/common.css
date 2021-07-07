@@ -151,6 +151,11 @@ table {
   color: #447aec !important;
 }
 
+.bold {
+  font-style: normal;
+  font-weight: 700 !important;
+}
+
 .gc {
   color: #c8c8c8 !important;
 }
@@ -5033,6 +5038,10 @@ body, html {
   float: left;
 }
 
+.rmd-bot-cont .right .info dl dd em {
+  font-style: normal;
+}
+
 .rmd-bot-cont .right .info {
   display: block;
   overflow: hidden;
@@ -5966,6 +5975,34 @@ html .ui-button.ui-state-disabled:active {
   border: 1px solid #CBCBCB;
   color: #999;
   line-height: 18px;
+}
+
+.label.label-sm {
+  display: inline-block;
+  width: 56px;
+  padding: 3px 5px 3px 5px;
+  text-indent: 0;
+  text-align: center;
+  float: none;
+  clear: left;
+}
+
+.label.label-sm.label-primary {
+  background: #3e72ed;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.label.label-sm.label-danger {
+  background: #FB535F;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.label.label-sm.label-default {
+  background: #CBCBCB;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .modal-body strong span {

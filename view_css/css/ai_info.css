@@ -584,6 +584,10 @@
   float: left;
 }
 
+.rmd-bot-cont .right .info dl dd em {
+  font-style: normal;
+}
+
 .rmd-bot-cont .right .info {
   display: block;
   overflow: hidden;

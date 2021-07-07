@@ -811,6 +811,35 @@
             line-height:18px;
         }
     }
+
+    
+
+    &.label-sm{
+        display:inline-block;
+        width:56px;
+        padding:3px 5px 3px 5px;
+        text-indent:0;
+        text-align:center;
+        float:none;
+        clear:left;
+
+        &.label-primary{
+            background:#3e72ed;
+            font-size:13px;
+            font-weight:400;
+        }
+        &.label-danger{
+            background:#FB535F;
+            font-size:13px;
+            font-weight:400;
+        }
+        &.label-default{
+            background:#CBCBCB;
+            font-size:13px;
+            font-weight:400;
+        }
+    }
+    
 }
 
 

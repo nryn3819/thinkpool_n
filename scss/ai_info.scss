@@ -543,6 +543,8 @@
                     float: left;
                     margin-bottom: 8px;
 
+                    
+
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -588,6 +590,10 @@
                 padding:0;
                 margin:0;
                 float:left;
+
+                em{
+                    font-style:normal;
+                }
             }
         }
 
