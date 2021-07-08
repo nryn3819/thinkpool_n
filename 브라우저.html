@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thinkpool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <div id="error_w">
+        <div id="error">
+            <div class="top">
+                <div class="left">
+                    <img src="./img/header/logo.png" alt="씽크풀">
+                </div>
+                <div class="right">
+                    <a href="#">씽크풀 홈</a>
+                </div>
+            </div>
+            <!-- //top -->
+
+            <div class="con">
+                <strong>
+                    접속하신 브라우저에서는 일부 서비스가 <br>
+                    원활하게 제공되지 않을 수 있습니다.
+                </strong>
+
+                <span>
+                    최신 버전 브라우저로 업데이트 해주세요.
+                </span>
+            </div>
+
+
+            <div class="btn-group">
+                <a href="#">크롬브라우저 설치하기</a>
+                <a href="#">IE 엣지 설치하기</a>
+            </div>
+            
+        </div>
+        <!-- //error -->
+    </div>
+
+
+    <style>
+        *{
+            font-size: 100%;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        body,
+        html {
+            height: 100%;
+            margin:0%;
+            padding:0;
+        }
+        #errow_w{
+            position:relative;
+            width:100%;
+            min-width:500px;
+            min-height:100%;
+            overflow:hidden;
+        }
+        #error {
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin:-150px 0 0 -250px;
+            width: 500px;
+            height:300px;
+        }
+
+        #error .top {
+            display: block;
+            width: 480px;
+            padding: 0 10px 15px 10px;
+            text-align: center;
+            float: left;
+            border-bottom: 2px solid #000;
+        }
+
+        #error .top .left {
+            display: block;
+            float: left;
+        }
+
+        #error .top .right {
+            display: block;
+            float: right;
+        }
+
+        #error .top .right a {
+            display: inline-block;
+            height: 23px;
+            line-height: 23px;
+            color: #333;
+            font-weight: 300;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+
+        #error .con {
+            display: block;
+            width: 480px;
+            float: left;
+            padding: 35px 10px 20px 10px;
+        }
+
+        #error .con strong {
+            display: block;
+            font-size: 26px;
+            line-height: 33px;
+            color: #333;
+            font-weight: 700;
+            text-align:center;
+        }
+
+        #error .con span {
+            padding-top: 40px;
+            display: block;
+            font-size: 16px;
+            color: #666;
+            line-height: 20px;
+            letter-spacing: -0.025em;
+            text-align:center;
+        }
+
+        #error .btn-group{
+            display:block;
+            width:410px;
+            padding:0 45px;
+            float:left;
+        }
+        #error .btn-group a{
+            display:block;
+            width:170px;
+            height:36px;
+            line-height:36px;
+            background:#000;
+            border-radius: 5px;
+            font-size:15px;
+            color:#fff;
+            font-weight:300;
+            text-align:center;
+            text-decoration: none;
+            float:left;
+            margin:0 17px 0 18px;
+        }
+    </style>
+</body>
+
+</html>

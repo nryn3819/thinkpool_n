@@ -1,3 +1,50 @@
+.browser_w{
+  position:relative;
+  width:100%;
+  height:80px;
+  background:#333B58;
+  text-align:center;
+  display:none;
+
+  .browser{
+    position:relative;
+    display:inline-block;
+    width:1030px;
+  }
+
+  .top_close{
+    position:absolute;
+    top:30px;
+    right:-200px;
+    color:#e8e8e8;
+    z-index:999;
+    height:18px;
+    line-height:18px;
+    font-size:13px;
+    font-weight:300;
+    font-style:normal;
+    cursor: pointer;
+
+    &::before{
+      background:none;
+      float:none;
+    }
+
+    &::after{
+      content:"X";
+      border:1px solid #e8e8e8;
+      height:18px;
+      line-height:18px;
+      text-align:center;
+      width:18px;
+      display:inline-block;
+      margin-left:10px;
+      background:none;
+      float:none;
+    }
+  }
+}
+
 #wrap {
   width: 100%;
   min-width:1100px;

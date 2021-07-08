@@ -6,8 +6,7 @@
         <title>thinkpool</title>
         <!-- font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
         <link
         rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -31,6 +30,29 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+        <div class="browser_w">
+            <div class="browser">
+                <img src="./img/browser.jpg" alt="최신버전" usemap="#chekforbrws">
+                <em class="top_close">오늘하루 이창을 열지 않음</em>
+            </div>
+
+            <map name="chekforbrws">
+                <area shape="rect" coords="816,24,916,57" href="#" alt="크롬최신버전">
+                <area shape="rect" coords="924,24,1024,57" href="#" alt="IE최신버전">
+            </map>
+
+            <script>
+                //윈도우 로딩후 브라우저 체크 이후 
+                $(window).on('load', function(){
+                    $('.browser_w').slideDown();
+                });
+                // 오늘하루 보지 않기 
+                $('.browser .top_close').on('click', function(){
+                    $('.browser_w').slideUp();
+                });
+            </script>
+        </div>
+        <!-- // -->
         <div id="wrap">
             <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
             <header id="header_w">
