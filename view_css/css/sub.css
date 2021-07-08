@@ -2200,6 +2200,7 @@
 #itemTop {
   position: relative;
   width: 100%;
+  min-height: 57px;
   margin-top: 60px;
   overflow: hidden;
   padding: 0 20px;
@@ -6603,10 +6604,6 @@ html .ui-button.ui-state-disabled:active {
   padding: 0;
 }
 
-.signalEmptySearch {
-  width: 400px !important;
-}
-
 .adviser {
   display: block;
   width: 100%;
@@ -7938,6 +7935,21 @@ html .ui-button.ui-state-disabled:active {
   color: #333;
   font-weight: 300;
   float: left;
+}
+
+.social .keyword .left .list ul li a em.up {
+  display: inline-block;
+  background: #fc2f2f;
+  color: #fff !important;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  width: 45px;
+  text-indent: 0;
+  font-size: 13px;
 }
 
 .social .keyword .left .list ul li.active a, .social .keyword .left .list ul li:hover a {
