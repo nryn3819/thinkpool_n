@@ -432,6 +432,10 @@
   font-weight: 300;
 }
 
+.main-signal .left .more a:hover {
+  text-decoration: none;
+}
+
 .main-signal .left .more a::after {
   content: '+';
   padding-right: 3px;

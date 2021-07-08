@@ -157,6 +157,16 @@
   overflow: hidden;
 }
 
+.adviser_bot p {
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-top: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+
 .adviser_bot .left {
   display: block;
   width: calc(100% - 200px);
@@ -253,16 +263,6 @@
   font-size: 14px;
   color: #666;
   font-weight: 300;
-}
-
-.adviser_bot p {
-  display: block;
-  width: 100%;
-  clear: both;
-  padding-top: 30px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #666;
 }
 
 .mybot-info {

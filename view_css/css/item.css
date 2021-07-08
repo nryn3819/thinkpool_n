@@ -1670,9 +1670,11 @@
   position: relative;
   display: block;
   width: 100%;
+  float: left;
 }
 
 .itemHomeBox.mod {
+  float: none;
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 40px;
 }
