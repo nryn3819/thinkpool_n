@@ -44,11 +44,15 @@
             <script>
                 //윈도우 로딩후 브라우저 체크 이후 
                 $(window).on('load', function(){
-                    $('.browser_w').slideDown();
+                    $('#wrap').stop().animate({
+                        'margin-top' : '80px'
+                    });
                 });
                 // 오늘하루 보지 않기 
                 $('.browser .top_close').on('click', function(){
-                    $('.browser_w').slideUp();
+                    $('#wrap').stop().animate({
+                        'margin-top' : '0'
+                    });
                 });
             </script>
         </div>
