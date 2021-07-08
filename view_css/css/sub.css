@@ -6603,6 +6603,10 @@ html .ui-button.ui-state-disabled:active {
   padding: 0;
 }
 
+.signalEmptySearch {
+  width: 400px !important;
+}
+
 .adviser {
   display: block;
   width: 100%;
@@ -6774,7 +6778,7 @@ html .ui-button.ui-state-disabled:active {
 
 .adviser_bot .left {
   display: block;
-  width: calc(100% - 200px);
+  width: calc(100% - 220px);
   float: left;
 }
 
@@ -6809,7 +6813,7 @@ html .ui-button.ui-state-disabled:active {
 .adviser_bot .right {
   display: block;
   width: 200px;
-  float: left;
+  float: right;
 }
 
 .adviser_bot .right .bot {
