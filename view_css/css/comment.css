@@ -32,10 +32,11 @@
   padding: 2px 3px;
 }
 
-.cmmtBox .user_info .label.primary {
+.cmmtBox .user_info .label-primary {
   border: 1px solid #3e72ed;
   color: #3e72ed;
-  font-weight: 300;
+  font-weight: 400;
+  background: #fff;
 }
 
 .cmmtBox .user_info .user_nick {

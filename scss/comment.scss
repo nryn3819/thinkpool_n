@@ -28,10 +28,11 @@
 
         .label{
             padding:2px 3px;
-            &.primary{
+            &-primary{
                 border:1px solid #3e72ed;
                 color:#3e72ed;
-                font-weight:300;
+                font-weight:400;
+                background:#fff;
             }
         }
 
