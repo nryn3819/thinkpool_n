@@ -153,6 +153,10 @@ table {
   border-spacing: 0;
 }
 
+.modal{
+  z-index:9999 !important;
+}
+
 .up {
   color: #fc2f2f !important;
 }

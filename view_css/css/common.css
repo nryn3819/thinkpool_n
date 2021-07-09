@@ -143,6 +143,10 @@ table {
   border-spacing: 0;
 }
 
+.modal {
+  z-index: 9999 !important;
+}
+
 .up {
   color: #fc2f2f !important;
 }
@@ -820,7 +824,6 @@ table {
   height: 80px;
   background: #333B58;
   text-align: center;
-  z-index: 1;
 }
 
 .browser_w .browser {
@@ -866,7 +869,6 @@ table {
   width: 100%;
   min-width: 1100px;
   height: auto;
-  z-index: 9;
 }
 
 #container_w {
@@ -5161,7 +5163,7 @@ body, html {
 .schItemBox .left {
   display: block;
   width: 200px;
-  min-height: 430px;
+  min-height: 450px;
   height: 100%;
   background: #f5f5f5;
   padding: 25px;
@@ -5209,6 +5211,13 @@ body, html {
   width: 720px;
   min-height: 430px;
   float: right;
+}
+
+.schItemBox .right .date {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  padding-top: 10px;
 }
 
 .board_pager {
@@ -6108,15 +6117,19 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .bot_list_w {
+  position: relative;
   display: block;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.bot_list_w .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
 }
 
 .bot_list_w .bot_w {
@@ -6424,6 +6437,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .allDetail .result {
+  position: relative;
   display: block;
   width: 668px;
   float: left;
@@ -6435,6 +6449,15 @@ html .ui-button.ui-state-disabled:active {
 
 .allDetail .result.adviser .resultbox {
   width: 224px !important;
+}
+
+.allDetail .result .date {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
 }
 
 .allDetail .result .resultbox_w {
@@ -6449,6 +6472,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .allDetail .result .resultbox_w .resultbox {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6467,6 +6491,7 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   line-height: 24px;
   text-align: center;
+  margin-top: -10px;
   font-size: 16px;
   font-weight: 300;
   color: #333;
@@ -6479,6 +6504,18 @@ html .ui-button.ui-state-disabled:active {
   font-size: 30px;
   font-weight: 700;
   padding-top: 20px;
+}
+
+.allDetail .result .resultbox_w .resultbox em {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  color: #999;
+  font-weight: 300;
 }
 
 .allDetail .risk {

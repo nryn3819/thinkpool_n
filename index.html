@@ -50,6 +50,7 @@
                 });
                 // 오늘하루 보지 않기 
                 $('.browser .top_close').on('click', function(){
+                    $('.browser_w').slideUp();
                     $('#wrap').stop().animate({
                         'margin-top' : '0'
                     });

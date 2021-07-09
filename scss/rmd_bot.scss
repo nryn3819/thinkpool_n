@@ -1,11 +1,19 @@
 @import "table";
 
 .bot_list_w {
+    position: relative;
     display: block;
     width: 100%;
-    justify-content: space-between;
-    align-content: space-around;
-    flex-wrap: wrap;
+    padding-top:10px;
+
+    .date{
+        position:absolute;
+        top:0;
+        right:0;
+        font-size:13px;
+        color:#999;
+        font-weight:300;
+    }
 
 
     .bot_w {
@@ -359,6 +367,7 @@
     width: 100%;
 
     .result {
+        position: relative;
         display: block;
         width: 668px;
         float: left;
@@ -368,6 +377,14 @@
             .resultbox{
                 width:224px !important;
             }
+        }
+        .date{
+            position:absolute;
+            top:15px;
+            right:5px;
+            font-size:13px;
+            color:#999;
+            font-weight:300;
         }
 
         .resultbox_w {
@@ -380,6 +397,7 @@
             }
 
             .resultbox {
+                position:relative;
                 display: flex;
                 width: 154px;
                 height: 183px;
@@ -393,6 +411,7 @@
                     width: 100%;
                     line-height: 24px;
                     text-align: center;
+                    margin-top:-10px;
 
                     font: {
                         size: 16px;
@@ -415,6 +434,18 @@
                     padding: {
                         top: 20px;
                     }
+                }
+
+                em{
+                    position:absolute;
+                    bottom:15px;
+                    width:100%;
+                    left:0;
+                    text-align:center;
+                    font-size:14px;
+                    font-style:normal;
+                    color:#999;
+                    font-weight:300;
                 }
             }
         }

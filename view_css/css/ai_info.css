@@ -648,7 +648,7 @@
 .schItemBox .left {
   display: block;
   width: 200px;
-  min-height: 430px;
+  min-height: 450px;
   height: 100%;
   background: #f5f5f5;
   padding: 25px;
@@ -696,4 +696,11 @@
   width: 720px;
   min-height: 430px;
   float: right;
+}
+
+.schItemBox .right .date {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  padding-top: 10px;
 }

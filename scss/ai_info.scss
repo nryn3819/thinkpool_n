@@ -652,7 +652,7 @@
     .left{
         display:block;
         width:200px;
-        min-height:430px;
+        min-height:450px;
         height:100%;
         background:#f5f5f5;
         padding:25px ;
@@ -707,5 +707,12 @@
         min-height:430px;
         //background:#f5f5f5;
         float:right;
+
+        .date{
+            font-size:13px;
+            color:#999;
+            font-weight:300;
+            padding-top:10px;
+        }
     }
 }
