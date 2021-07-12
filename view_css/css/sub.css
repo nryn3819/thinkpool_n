@@ -9093,6 +9093,10 @@ html .ui-button.ui-state-disabled:active {
   background-position: 0 100%;
 }
 
+.sub-content .sub-section .latest {
+  float: left;
+}
+
 .sub-content .sub-section.char_tab {
   position: relative;
 }

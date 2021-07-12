@@ -308,23 +308,29 @@
             height: 18px;
             line-height: 14px;
             padding: 0;
+            font-size:14px;
+            color:#999;
+            font-weight:300;
 
             a {
                 font-size: 14px;
                 color: #999;
-                font-weight: 300;
-                text-decoration: underline;
-                padding-right: 5px;
+                font-weight: 400;
+                padding-left:3px;
 
-                &:last-child {
-                    &::after {
-                        content: ''
-                    }
+                &:first-child{
+                    padding-left:0;
                 }
 
-                &::after {
-                    content: ',';
+                &::before{
+                    margin-left:3px;
+                    margin-top:4px;
+                    font-size:12px;
+                    color:#ccc;
+                    float:right;
                 }
+
+                
             }
         }
     }

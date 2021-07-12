@@ -1001,22 +1001,28 @@
   height: 18px;
   line-height: 14px;
   padding: 0;
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
 }
 
 .board_view_content .file dd a {
   font-size: 14px;
   color: #999;
-  font-weight: 300;
-  text-decoration: underline;
-  padding-right: 5px;
+  font-weight: 400;
+  padding-left: 3px;
 }
 
-.board_view_content .file dd a:last-child::after {
-  content: '';
+.board_view_content .file dd a:first-child {
+  padding-left: 0;
 }
 
-.board_view_content .file dd a::after {
-  content: ',';
+.board_view_content .file dd a::before {
+  margin-left: 3px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #ccc;
+  float: right;
 }
 
 .operationjuror {
