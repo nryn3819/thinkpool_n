@@ -3353,6 +3353,11 @@ html .ui-button.ui-state-disabled:active {
   font-weight: 500;
 }
 
+.ui-state-default.ui-state-active, .ui-state-default:hover {
+  background: #efefef !important;
+  color: #666 !important;
+}
+
 .popover {
   font-size: 14px;
   font-weight: 300;
@@ -3767,6 +3772,10 @@ html .ui-button.ui-state-disabled:active {
   border-right: 0;
 }
 
+.table_w table.table-nboder.l-boder tfoot tr:last-child th, .table_w table.table-nboder.l-boder tfoot tr:last-child td {
+  border-top: 0;
+}
+
 .table_w table.table-nboder.l-boder tfoot tr th, .table_w table.table-nboder.l-boder tfoot tr td {
   padding-left: 15px;
   padding-right: 15px;
@@ -3843,9 +3852,18 @@ html .ui-button.ui-state-disabled:active {
   border-bottom: 0;
 }
 
+.table_w table.table-bordered.small-line tfoot tr:last-child {
+  border-top: 0;
+}
+
+.table_w table.table-bordered.small-line tfoot tr.active th, .table_w table.table-bordered.small-line tfoot tr.active td {
+  border-left: 0;
+}
+
 .table_w table.table-bordered.small-line tfoot tr th, .table_w table.table-bordered.small-line tfoot tr td {
   padding-top: 10px;
   padding-bottom: 11px;
+  border-left: 0;
 }
 
 .table_w table.table-bordered.small-line thead tr th, .table_w table.table-bordered.small-line thead tr td {
@@ -3924,6 +3942,10 @@ html .ui-button.ui-state-disabled:active {
 
 .table_w table.table-bordered tbody tr th.buy, .table_w table.table-bordered tbody tr td.buy {
   background: #FCE7E7;
+}
+
+.table_w table.table-bordered tfoot tr:last-child th, .table_w table.table-bordered tfoot tr:last-child td {
+  border-top: 0;
 }
 
 .table_w table.table-bordered tfoot tr td, .table_w table.table-bordered tfoot tr th {
@@ -6542,7 +6564,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .aisignal_w .empty .direct .button button {
-  width: 178px;
+  width: 220px;
   height: 40px;
   line-height: 40px;
   padding: 0;

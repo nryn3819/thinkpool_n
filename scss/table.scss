@@ -463,6 +463,11 @@
                     }
                 }
                 tfoot tr{
+                    &:last-child{
+                        th,td{
+                            border-top:0;
+                        }
+                    }
                     th,td{
                         padding: {
                             left: 15px;
@@ -551,11 +556,20 @@
 
             &.small-line{
                 tfoot tr{
+                    &:last-child{
+                        border-top:0;
+                    }
+                    &.active{
+                        th,td{
+                            border-left:0;
+                        }
+                    }
                     th,td{
                         padding: {
                             top:10px;
                             bottom:11px;
                         }
+                        border-left:0;
                     }
                 }
                 thead tr{
@@ -655,6 +669,11 @@
 
             tfoot{
                 tr{
+                    &:last-child{
+                        th,td{
+                            border-top:0;
+                        }
+                    }
                     td,th{
                         padding: {
                             top: 12px;

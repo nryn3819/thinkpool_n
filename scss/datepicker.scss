@@ -37,3 +37,7 @@ html .ui-button.ui-state-disabled:active{
     color:#fff;
     font-weight:500;
 }
+.ui-state-default.ui-state-active, .ui-state-default:hover{
+    background:#efefef !important;
+    color:#666 !important;
+}
