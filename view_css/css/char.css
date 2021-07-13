@@ -693,6 +693,10 @@
   font-weight: 300;
 }
 
+.left_item_list .left_item_w .left_item li:hover a span.date.up, .left_item_list .left_item_w .left_item li.active a span.date.up {
+  color: #fff !important;
+}
+
 .left_item_list .left_item_w .left_item li.disabled, .left_item_list .left_item_w .left_item li.disabled.active, .left_item_list .left_item_w .left_item li.disabled:hover {
   pointer-events: none;
 }
@@ -782,7 +786,7 @@
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.buy strong {
-  color: #FFD6C0;
+  color: #fffcaa;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.sell {
@@ -790,7 +794,7 @@
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.sell strong {
-  color: #99E3FF;
+  color: #d0f2ff;
 }
 
 .left_item_list > .tab-content .item_w .top .cdn.pssn {

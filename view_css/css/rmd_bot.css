@@ -1280,7 +1280,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
   padding-top: 20px;
 }
@@ -1291,7 +1291,7 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   left: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   color: #999;
   font-weight: 300;
@@ -1339,7 +1339,7 @@ html .ui-button.ui-state-disabled:active {
           justify-content: center;
   width: 100%;
   border-bottom: 0;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .allDetail .per .chartbox .nav-tabs li {
@@ -1348,24 +1348,25 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .allDetail .per .chartbox .nav-tabs li.active a {
-  background: #3e72ed;
-  color: #fff;
+  background: #fff;
+  color: #3e72ed;
   border: 1px solid #3e72ed;
 }
 
 .allDetail .per .chartbox .nav-tabs li a {
   display: block;
-  width: 45px;
+  width: 62px;
   margin: 5px;
-  line-height: 20px;
-  height: 22px;
+  line-height: 28px;
+  height: 30px;
   border: 1px solid #787878;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 0;
   text-align: center;
   font-size: 13px;
   color: #666;
   font-weight: 300;
+  background: #f6f6f6;
 }
 
 .allDetail .highreturn {
@@ -1417,7 +1418,7 @@ html .ui-button.ui-state-disabled:active {
   display: block;
   width: 100%;
   float: left;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .allDetail .sms_sample .sms_w {
@@ -1428,7 +1429,7 @@ html .ui-button.ui-state-disabled:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .allDetail .sms_sample .sms_w .smsbox {

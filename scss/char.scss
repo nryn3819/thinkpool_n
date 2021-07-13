@@ -571,6 +571,7 @@
                     span {
                         &.date {
                             font-size: 13px;
+                            
                         }
 
                         &.item {
@@ -619,6 +620,10 @@
 
                         span {
                             font-weight: 300;
+
+                            &.date.up{
+                                color:#fff !important;
+                            }
                         }
                     }
                 }
@@ -719,14 +724,14 @@
 
                     &.buy {
                         strong{
-                            color:#FFD6C0;
+                            color:#fffcaa;
                         }
                         background: #7773F7;
                     }
 
                     &.sell {
                         strong{
-                            color:#99E3FF;
+                            color:#d0f2ff;
                         }
                         background: #7773F7;
                     }
