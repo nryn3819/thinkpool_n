@@ -528,3 +528,19 @@
         width:322px;
     }
 }
+
+#classGuidePop{
+    .modal-dialog{
+        width:722px;
+    }
+    .modal-content{
+        padding:40px;
+    }
+    .close{
+        position:absolute;
+        top:20px;
+        right:30px;
+        font-size:20px;
+        font-weight:500;
+    }
+}

@@ -5308,7 +5308,6 @@ body, html {
   padding: 1em .4em;
 }
 
-.ui-datepicker-calendar .ui-state-default,
 .ui-widget-content .ui-datepicker-calendar .ui-state-default,
 .ui-widget-header .ui-state-default,
 .ui-button,
@@ -12758,13 +12757,14 @@ span.label.ico.ico01 {
   padding-top: 5px;
 }
 
-#user_class .modal-body p a {
+#user_class .modal-body p a, #user_class .modal-body p span {
   font-size: 13px;
   color: #3e72ed;
   font-weight: 300;
+  cursor: pointer;
 }
 
-#user_class .modal-body p a::after {
+#user_class .modal-body p a::after, #user_class .modal-body p span::after {
   content: "→";
 }
 
@@ -14339,4 +14339,20 @@ span.label.ico.ico01 {
 
 #tblchart .modal-dialog {
   width: 322px;
+}
+
+#classGuidePop .modal-dialog {
+  width: 722px;
+}
+
+#classGuidePop .modal-content {
+  padding: 40px;
+}
+
+#classGuidePop .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+  font-weight: 500;
 }

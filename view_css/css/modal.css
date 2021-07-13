@@ -525,3 +525,19 @@
 #tblchart .modal-dialog {
   width: 322px;
 }
+
+#classGuidePop .modal-dialog {
+  width: 722px;
+}
+
+#classGuidePop .modal-content {
+  padding: 40px;
+}
+
+#classGuidePop .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}

@@ -790,10 +790,11 @@
             width:100%;
             padding-top:5px;
 
-            a{
+            a, span{
                 font-size:13px;
                 color:#3e72ed;
                 font-weight:300;
+                cursor:pointer;
 
                 &::after{
                     content:"→"

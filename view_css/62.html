@@ -25,12 +25,12 @@
         <![endif]-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
     <!-- bxslider -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- basic js -->
@@ -240,16 +240,24 @@
                     <div class="board">
                         <div class="board_top_btn">
                             <h4 class="sr-only">게시판버튼</h4>
-                            <button type="button" role="button" class="b_btn b_write pull-left"><span>글쓰기</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>답글</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>수정</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>삭제</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>인쇄</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_write pull-left"><span>글쓰기</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>답글</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>수정</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>삭제</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>인쇄</span></button>
                             <!-- //leftbutton -->
 
-                            <button type="button" role="button" class="b_btn b_normal pull-right"><span>목록</span></button>
-                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span alt="다음글">↓</span></button>
-                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span alt="이전글">↑</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-right"><span>목록</span></button>
+                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span
+                                    alt="다음글">↓</span></button>
+                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span
+                                    alt="이전글">↑</span></button>
                             <!-- //rightbutton -->
                         </div>
                         <!-- //board_top_btn -->
@@ -265,7 +273,7 @@
                                 <div class="left">
                                     <h4 class="sr-only">작성자 정보</h4>
                                     <div class="lev" data-toggle="modal" data-target="#user_class">
-                                        <span class="label ico_cl01" ></span>
+                                        <span class="label ico_cl01"></span>
                                         <span class="lv-text">장군</span>
                                     </div>
                                     <!-- //레벨 -->
@@ -297,12 +305,14 @@
 
 
                                 <!-- modal -->
-                                <div class="modal fade bs-example-modal-sm" id="user_class" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal fade bs-example-modal-sm" id="user_class" tabindex="-1" role="dialog"
+                                    aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
 
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             </div>
                                             <!-- //modal-header -->
 
@@ -406,13 +416,14 @@
                                                     </tbody>
                                                 </table>
                                                 <p class="text-right">
-                                                    <a href="#">등급제 자세히 보기</a>
+                                                    <span class="clickToClassGuide">등급제 자세히 보기</span>
                                                 </p>
                                             </div>
                                             <!-- //modal-body -->
 
                                             <div class="modal-footer text-center">
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-dismiss="modal">닫기</button>
                                             </div>
                                             <!-- //modal-footer -->
                                         </div>
@@ -421,15 +432,50 @@
                                 </div>
                                 <!-- //등급팝업 -->
 
-                                <div class="modal fade" id="viewMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                
+                                <!-- 등급제 안내 -->
+                                <div class="modal fade" id="classGuidePop" tabindex="-1" role="dialog"
+                                    aria-labelledby="등급제 안내" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <img src="./img/classGuide.jpg" alt="" usemap="#directLink">
+
+                                            <map name="directLink">
+                                                <area shape="rect" alt="종목토론 바로가기" title="" coords="516,628,573,646" href="#" targe="" />
+                                                <area shape="rect" alt="주식종합토론 바로가기" title="" coords="517,662,574,680" href="#" target="" />
+                                                <area shape="rect" alt="유머방 바로가기" title="" coords="517,696,572,713" href="#" target="" />
+                                                <area shape="rect" alt="정치방 바로가기" title="" coords="516,730,573,747" href="#" target="" />
+                                            </map>
+                                        </div>
+
+                                        <button class="close">&times;</button>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    $('.clickToClassGuide').on('click', function(){
+                                        $('#user_class').modal('hide').on('hidden.bs.modal', function(){
+                                            $('#classGuidePop').modal('show');
+                                        })
+                                    });
+                                    $('#classGuidePop .close').on('click', function(){
+                                        $('#classGuidePop').modal('hide');
+                                    });
+                                </script>
+                                <!-- //등급제안내 -->
+
+
+
+                                <div class="modal fade" id="viewMore" tabindex="-1" role="dialog"
+                                    aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                                        aria-hidden="true">&times;</span></button>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             </div>
                                             <!-- //modal-header -->
-                                            
+
                                             <div class="modal-body">
                                                 <strong><span>user nickname</span>님의 최근 글 보기</strong>
 
@@ -462,13 +508,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -477,19 +526,22 @@
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
                                                             <!-- //인기 -->
-                                                
+
                                                             <tr class="">
                                                                 <td class="text-center">11002325</td>
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -498,20 +550,25 @@
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
                                                             <!-- //일반 -->
-                                                
+
                                                             <tr class="recomment">
                                                                 <td class="text-center">11002325</td>
                                                                 <td>
-                                                                    <span class="label label-empty"><img src="./img/tbl_bullet_re.png" alt="recoment"></span>
+                                                                    <span class="label label-empty"><img
+                                                                            src="./img/tbl_bullet_re.png"
+                                                                            alt="recoment"></span>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -520,21 +577,25 @@
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
                                                             <!-- //답글 -->
-                                                
+
                                                             <tr class="">
                                                                 <td class="text-center">11002325</td>
                                                                 <td>
                                                                     <span class="label label-rmd">추천</span>
                                                                     <a href="#">
-                                                                        <span class="obj">게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이
+                                                                        <span class="obj">게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물
+                                                                            제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이 나옵니다.게시물 제목이
                                                                             나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -543,20 +604,23 @@
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
                                                             <!-- //일반 추천-->
-                                                
+
                                                             <tr class="blind">
                                                                 <td class="text-center">11002325</td>
                                                                 <td>
                                                                     <span class="label label-blind">블라인드</span>
                                                                     <a href="http://naver.com">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -565,19 +629,22 @@
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
                                                             <!-- //일반 블라인드 blind 시 링크삭제됩니다. -->
-                                                
+
                                                             <tr class="">
                                                                 <td class="text-center">11002325</td>
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -590,13 +657,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -609,13 +679,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -628,13 +701,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -647,13 +723,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -666,13 +745,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -685,13 +767,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -704,13 +789,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -723,13 +811,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -742,13 +833,16 @@
                                                                 <td>
                                                                     <a href="#">
                                                                         <span class="obj">게시물 제목이 나옵니다.</span>
-                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
+                                                                        <span class="blind">부적절한 게시물로 블라인드 처리된 글
+                                                                            입니다.</span>
                                                                         <span class="bagdg">20</span>
                                                                     </a>
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <div class="n_name">
-                                                                        <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
+                                                                        <span class="label label-circle"><img
+                                                                                src="./img/sub/board/user_ico.png"
+                                                                                alt="유저아이콘"></span>
                                                                         <span class="nick">0000123456@nv</span>
                                                                     </div>
                                                                 </td>
@@ -756,7 +850,7 @@
                                                                 <td class="text-center">123</td>
                                                                 <td class="text-center">12/22</td>
                                                             </tr>
-                                                
+
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -787,7 +881,8 @@
                                                 <!-- //pager -->
 
                                                 <div class="viewMore_guide">
-                                                    <p>최근 30일간 작성된 글입니다. 30일 추가 검색을 원하시면 <span class="dn">30일 더보기</span> 버튼을 클릭하세요.</p>
+                                                    <p>최근 30일간 작성된 글입니다. 30일 추가 검색을 원하시면 <span class="dn">30일 더보기</span>
+                                                        버튼을 클릭하세요.</p>
                                                     <button type="button btn-sm btn-default">30일 더보기</button>
                                                 </div>
 
@@ -795,7 +890,8 @@
                                             <!-- //modal-body -->
 
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-dismiss="modal">닫기</button>
                                             </div>
                                         </div>
                                         <!-- //modal-footer -->
@@ -815,15 +911,16 @@
                         <div class="board_view_content">
                             <div class="viewContent">
                                 <h4 class="sr-only">게시글 내용</h4>
-<!-- 공백이 없어야 합니다. 작성하는대로 나옵니다. -->
-10월 21일 씨에스윈드(112610)는 수주공시를 발표했다. <br>
-◆씨에스윈드 수주공시 개요 <br>
-- WIND TOWER 공급계약 체결 130.5억원 (매출액대비 1.6%)
-<br><br>
-씨에스윈드(112610)는 WIND TOWER 공급계약 체결에 관한 단일판매ㆍ공급계약체결(자율공시)을 21일에 공시했다. <br>
-계약 상대방은 Vestas Manufacturing A/S Vestas Wind Technology Vietnam LLC이고, 계약금액은 130.5억원 규모로 최근 씨에스윈드 매출액 <br>
-7,993.9억원 대비 약 1.6% 수준이다. 이번 계약의 기간은 2020년 10월 20일 부터 2021년 04월 02일까지로 약 5개월이다. <br>
-한편 이번 계약수주는 2020년 10월 20일에 체결된 것으로 보고되었다.
+                                <!-- 공백이 없어야 합니다. 작성하는대로 나옵니다. -->
+                                10월 21일 씨에스윈드(112610)는 수주공시를 발표했다. <br>
+                                ◆씨에스윈드 수주공시 개요 <br>
+                                - WIND TOWER 공급계약 체결 130.5억원 (매출액대비 1.6%)
+                                <br><br>
+                                씨에스윈드(112610)는 WIND TOWER 공급계약 체결에 관한 단일판매ㆍ공급계약체결(자율공시)을 21일에 공시했다. <br>
+                                계약 상대방은 Vestas Manufacturing A/S Vestas Wind Technology Vietnam LLC이고, 계약금액은 130.5억원 규모로
+                                최근 씨에스윈드 매출액 <br>
+                                7,993.9억원 대비 약 1.6% 수준이다. 이번 계약의 기간은 2020년 10월 20일 부터 2021년 04월 02일까지로 약 5개월이다. <br>
+                                한편 이번 계약수주는 2020년 10월 20일에 체결된 것으로 보고되었다.
 
                             </div>
                             <!-- //내용 -->
@@ -831,7 +928,8 @@
                             <div class="vote">
                                 <h4 class="sr-only">게시글 찬성/반대</h4>
                                 <ul>
-                                    <li class="approve on"><span class="count">12</span><span class="text">찬성</span></li>
+                                    <li class="approve on"><span class="count">12</span><span class="text">찬성</span>
+                                    </li>
                                     <li class="oppose"><span class="count">12</span><span class="text">반대</span></li>
                                 </ul>
                             </div>
@@ -843,7 +941,8 @@
 
                             <div class="share">
                                 <h4 class="sr-only">게시글 공유하기</h4>
-                                <button type="button" class="btn-share"><span><img src="./img/sub/board/share.png" alt="공유하기"></span></button>
+                                <button type="button" class="btn-share"><span><img src="./img/sub/board/share.png"
+                                            alt="공유하기"></span></button>
 
                                 <div class="share_pop">
                                     <h5 class="sr-only">공유하기</h5>
@@ -874,7 +973,8 @@
                                         </div>
                                     </div>
                                     <div class="ly_close">
-                                        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <button type="button" class="close" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
                                     </div>
                                 </div>
                                 <!-- //share_pop -->
@@ -882,17 +982,17 @@
                             <!-- //공유하기 -->
 
                             <div class="fontSize">
-                                <button class="btn-circle btn-font"><span><img src="/img/sub/btn/font.png" alt="글씨크기변경"></span></button>
+                                <button class="btn-circle btn-font"><span><img src="/img/sub/btn/font.png"
+                                            alt="글씨크기변경"></span></button>
                             </div>
-                            <!-- //폰트사이즈 -->
 
                             <div class="file">
                                 <dl class="dl-horizontal">
                                     <dt>첨부파일 : </dt>
                                     <dd>
-                                        <a href="#">abcdef.jpg</a>
-                                        <a href="#">abcdef.jpg</a>
-                                        <a href="#">abcdef.jpg</a>
+                                        <a href="#" class="glyphicon glyphicon-floppy-disk">abcdef.jpg</a>,
+                                        <a href="#" class="glyphicon glyphicon-floppy-disk">abcdef.jpg</a>,
+                                        <a href="#" class="glyphicon glyphicon-floppy-disk">abcdef.jpg</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -939,13 +1039,14 @@
                                         <br><br>
                                         운영배심원 4인이 글 내리기에 의견을 행사하게 되면 <br>
                                         해당 글의 추천수와 반대수를 비교하여 반대수가 <br>
-                                        추천수를 넘어서는 경우에는 해당 글이 블라인드 처리 <br> 
+                                        추천수를 넘어서는 경우에는 해당 글이 블라인드 처리 <br>
                                         됩니다.
                                     </div>
                                 </div>
 
                                 <div class="ly_close">
-                                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <button type="button" class="close" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
                                 </div>
                             </div>
                             <!-- //배심원 의견 -->
@@ -957,13 +1058,14 @@
                         </div>
                         <!-- //운영배심원의견 -->
 
-                        
+
                         <div class="comment_list">
                             <h4 class="sr-only">댓글목록</h4>
                             <div class="cmmt cmmtBox">
                                 <h5 class="sr-only">댓글</h5>
                                 <div class="user_info">
                                     <h6 class="sr-only">댓글작성자 정보</h6>
+                                    <span class="label label-primary">작성자</span>
                                     <span class="user_nick">0000123456@nv</span>
                                     <span class="user_ip">(222.222.222.222)</span>
                                     <span class="user_date">2010.01.01 10:10</span>
@@ -984,7 +1086,7 @@
 
                                         <span class="recmmt"><img src="./img/sub/board/recmmt.gif" alt="재댓글"></span>
                                     </div>
-                                    
+
                                 </div>
                                 <!-- //댓글내용 -->
 
@@ -1040,20 +1142,20 @@
                                     <!-- //삭제하기 -->
                                 </div>
                                 <!-- //유저정보 -->
-                                
+
                                 <div class="cmmt_cont">
                                     <h6 class="sr-only">댓글내용</h6>
                                     <div class="text">
                                         <em class="gc">thinkdev</em>&nbsp;
                                         AI투자플랫폼 관련해서 개발쪽에서 필요한 1차 코딩부분 공유해드립니다. <br>
                                         아래 순서대로 해주시고 그외 나머지부분은 다시 협의해서 순서를 정하면 될듯합니다.
-                                
+
                                         <span class="recmmt"><img src="./img/sub/board/recmmt.gif" alt="재댓글"></span>
                                     </div>
-                                
+
                                 </div>
                                 <!-- //댓글내용 -->
-                                
+
                                 <div class="vote">
                                     <h6 class="sr-only">댓글 찬성/반대</h6>
                                     <ul>
@@ -1062,7 +1164,7 @@
                                     </ul>
                                 </div>
                                 <!-- //찬반투표 -->
-                                
+
                                 <div class="declaration">
                                     <h6 class="sr-only">댓글 신고하기</h6>
                                     <span><img src="./img/sub/board/dcrt.png" alt="신고하기"></span>
@@ -1071,7 +1173,7 @@
 
                                 <div class="re_cmmt_input">
                                     <h6 class="sr-only">재댓글 작성하기</h6>
-                                
+
                                     <div class="inputBox">
                                         <span class="user_nick">0000123456@nv</span>
                                         <textarea class="form-control"></textarea>
@@ -1080,16 +1182,16 @@
                                         </span>
                                     </div>
                                     <!-- //댓글입력 -->
-                                
+
                                     <div class="btn">
                                         <button>등록</button>
                                         <button>취소</button>
                                     </div>
-                                
+
                                 </div>
                                 <!-- //재댓글 입력 -->
-                                
-                                
+
+
 
                             </div>
                             <!-- //재댓글 -->
@@ -1114,21 +1216,29 @@
 
                         <div class="board_btm_btn">
                             <h4 class="sr-only">게시판버튼</h4>
-                            <button type="button" role="button" class="b_btn b_write pull-left"><span>글쓰기</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>답글</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>수정</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>삭제</span></button>
-                            <button type="button" role="button" class="b_btn b_normal pull-left"><span>인쇄</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_write pull-left"><span>글쓰기</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>답글</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>수정</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>삭제</span></button>
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-left"><span>인쇄</span></button>
                             <!-- //leftbutton -->
-                        
-                            <button type="button" role="button" class="b_btn b_normal pull-right"><span>목록</span></button>
-                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span alt="다음글">↓</span></button>
-                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span alt="이전글">↑</span></button>
+
+                            <button type="button" role="button"
+                                class="b_btn b_normal pull-right"><span>목록</span></button>
+                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span
+                                    alt="다음글">↓</span></button>
+                            <button type="button" role="button" class="b_btn b_circle b_active pull-right"><span
+                                    alt="이전글">↑</span></button>
                             <!-- //rightbutton -->
                         </div>
                         <!-- //btn -->
 
-                        
+
                         <div class="latest_list">
                             <h4 class="sr-only">최신글리스트</h4>
                             <ul>
@@ -1227,9 +1337,10 @@
                 </div>
                 <!-- //container_banner -->
 
-                
+
                 <!-- modal 신고하기 -->
-                <div class="modal fade bs-example-modal-sm" id="dcr" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal fade bs-example-modal-sm" id="dcr" tabindex="-1" role="dialog"
+                    aria-labelledby="mySmallModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -1249,25 +1360,32 @@
                                 <div class="dcr_reason">
                                     <div class="ch_rdo">
                                         <label for="ch_dcr_rs01" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs01" value="option1" checked> 욕설/타인에 대한 비방
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs01" value="option1"
+                                                checked> 욕설/타인에 대한 비방
                                         </label>
                                         <label for="ch_dcr_rs02" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs02" value="option1"> 시비분쟁/스토킹
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs02" value="option1">
+                                            시비분쟁/스토킹
                                         </label>
                                         <label for="ch_dcr_rs03" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs03" value="option1"> 광고(돈벌기, 행운의편지 등)
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs03" value="option1">
+                                            광고(돈벌기, 행운의편지 등)
                                         </label>
                                         <label for="ch_dcr_rs04" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs04" value="option1"> 음란내용/선정성
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs04" value="option1">
+                                            음란내용/선정성
                                         </label>
                                         <label for="ch_dcr_rs05" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs05" value="option1"> 도배(같은 글 반복 게시)
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs05" value="option1"> 도배(같은
+                                            글 반복 게시)
                                         </label>
                                         <label for="ch_dcr_rs06" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs06" class="etc" value="option1"> 기타
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs06" class="etc"
+                                                value="option1"> 기타
                                         </label>
                                         <label for="ch_dcr_rs07" class="radio-inline">
-                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs07" value="option1"> 악성코드/바이러스 유포
+                                            <input type="radio" name="chDcrRsn" id="ch_dcr_rs07" value="option1">
+                                            악성코드/바이러스 유포
                                         </label>
                                     </div>
 
@@ -1295,7 +1413,7 @@
                     </div>
                 </div>
                 <!-- //modal -->
-                
+
 
             </div>
             <!-- //contianer -->

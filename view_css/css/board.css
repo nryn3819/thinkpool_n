@@ -1472,13 +1472,14 @@ span.label.ico.ico01 {
   padding-top: 5px;
 }
 
-#user_class .modal-body p a {
+#user_class .modal-body p a, #user_class .modal-body p span {
   font-size: 13px;
   color: #3e72ed;
   font-weight: 300;
+  cursor: pointer;
 }
 
-#user_class .modal-body p a::after {
+#user_class .modal-body p a::after, #user_class .modal-body p span::after {
   content: "→";
 }
 
