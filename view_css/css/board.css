@@ -186,12 +186,19 @@
 }
 
 .board_tbl .table tbody tr td a .obj {
+  position: relative;
   display: block;
-  max-width: 430px;
+  max-width: 410px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   float: left;
+}
+
+.board_tbl .table tbody tr td a .file {
+  color: #888;
+  font-weight: 300;
+  font-size: 12px;
 }
 
 .board_tbl .table tbody tr td a .blind {

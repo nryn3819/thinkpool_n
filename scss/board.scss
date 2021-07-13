@@ -199,12 +199,19 @@
                         }
 
                         .obj {
+                            position:relative;
                             display: block;
-                            max-width: 430px;
+                            max-width: 410px;
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             overflow: hidden;
                             float: left;
+                        }
+
+                        .file{
+                            color:#888;
+                            font-weight:300;
+                            font-size:12px;
                         }
 
                         .blind {
