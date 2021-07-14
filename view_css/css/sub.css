@@ -6815,10 +6815,6 @@ html .ui-button.ui-state-disabled:active {
   color: #666;
 }
 
-.adviser .right .info dl dd span.name {
-  text-decoration: underline;
-}
-
 .adviser .right .info dl dd button {
   display: inline-block;
   padding: 0;
