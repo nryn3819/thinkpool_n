@@ -8990,6 +8990,7 @@ html .ui-button.ui-state-disabled:active {
   width: auto;
   top: 49px;
   right: 0;
+  z-index: 99;
 }
 
 .mybot-info .infobox dl dd .btn-group button {
