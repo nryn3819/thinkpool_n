@@ -61,7 +61,7 @@
 
 #direct .modal-body .con ul li:first-child {
   width: 255px;
-  background-image: url(../img/bu_pop.jpg);
+  background-image: url(https://img.thinkpool.com/www/img/bu_pop.jpg);
   background-repeat: no-repeat;
   background-position: 100% 30%;
 }
@@ -175,7 +175,7 @@
   width: 100%;
   min-height: 95px;
   text-align: center;
-  background-image: url(../img/sub/item/rmd/bu_rassi.png);
+  background-image: url(https://img.thinkpool.com/www/img/sub/item/rmd/bu_rassi.png);
   background-repeat: no-repeat;
   background-position: 720px 0;
 }
@@ -291,7 +291,7 @@
   display: inline-block;
   content: 'bullet';
   width: 23px;
-  background-image: url(../img/bu_android.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_android.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
   text-indent: -9999em;
@@ -301,7 +301,7 @@
   display: inline-block;
   content: 'bullet';
   width: 22px;
-  background-image: url(../img/iso.png);
+  background-image: url(https://img.thinkpool.com/www/img/iso.png);
   background-repeat: no-repeat;
   background-size: 15px auto;
   background-position: 0 50%;
@@ -312,7 +312,7 @@
   display: inline-block;
   content: 'bullet';
   width: 20px;
-  background-image: url(../img/bu_dwn.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_dwn.png);
   background-repeat: no-repeat;
   background-position: 100% 50%;
   text-indent: -9999em;
@@ -329,7 +329,7 @@
   display: inline-block;
   content: 'bullet';
   width: 27px;
-  background-image: url(../img/bu_filesearch.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_filesearch.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
   text-indent: -9999em;
@@ -539,7 +539,7 @@
   width: 23px;
   height: 70px;
   text-indent: -9999em;
-  background-image: url(../img/bu_hold.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_hold.png);
   background-repeat: no-repeat;
   background-position: 100% 59%;
 }
@@ -768,7 +768,7 @@
   font-size: 36px;
   font-weight: bold;
   padding-top: 55px;
-  background-image: url(../img/bu_rassi.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_rassi.png);
   background-repeat: no-repeat;
   background-position: center 10px;
 }
@@ -994,7 +994,7 @@
   font-weight: 300;
   color: #333;
   padding-right: 20px;
-  background-image: url(../img/bu_img.png);
+  background-image: url(https://img.thinkpool.com/www/img/bu_img.png);
   background-repeat: no-repeat;
   background-position: 100% 80%;
 }
@@ -1811,7 +1811,7 @@
   width: 100%;
   min-height: 170px;
   border-radius: 5px;
-  background: #f9f9f9 url(../img/bu_item_cdn.png) no-repeat center 20px;
+  background: #f9f9f9 url(https://img.thinkpool.com/www/img/bu_item_cdn.png) no-repeat center 20px;
   text-align: center;
 }
 

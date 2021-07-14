@@ -770,7 +770,7 @@ html .ui-button.ui-state-disabled:active {
   content: '';
   width: 16px;
   height: 14px;
-  background: url(../img/chart_icon.png) no-repeat 0 0;
+  background: url(https://img.thinkpool.com/www/img/chart_icon.png) no-repeat 0 0;
 }
 
 .modal-index-table thead {

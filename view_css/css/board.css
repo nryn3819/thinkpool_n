@@ -126,7 +126,7 @@
   height: 22px;
   line-height: 22px;
   padding-left: 27px;
-  background-image: url(../img/sub/board/user.png);
+  background-image: url(https://img.thinkpool.com/www//img/sub/board/user.png);
   background-repeat: no-repeat;
 }
 
@@ -199,7 +199,7 @@
   display: inline-block;
   width: 20px;
   height: 11px;
-  background: url(../img/f_icon.gif) no-repeat 100% 0;
+  background: url(https://img.thinkpool.com/www//img/f_icon.gif) no-repeat 100% 0;
 }
 
 .board_tbl .table tbody tr td a .blind {
@@ -279,21 +279,21 @@
   display: block;
   width: 16px;
   height: 14px;
-  background: url(../img/chart_icon.png) no-repeat 0 0;
+  background: url(https://img.thinkpool.com/www//img/chart_icon.png) no-repeat 0 0;
 }
 
 .fav-item {
   display: block;
   width: 27px;
   height: 20px;
-  background: url(../img/sub/item/ins_off.png) no-repeat 0 2px;
+  background: url(https://img.thinkpool.com/www//img/sub/item/ins_off.png) no-repeat 0 2px;
   background-size: auto 16px;
   cursor: pointer;
   float: left;
 }
 
 .fav-item.active {
-  background: url(../img/sub/item/ins_on.png) no-repeat 0 2px;
+  background: url(https://img.thinkpool.com/www//img/sub/item/ins_on.png) no-repeat 0 2px;
   background-size: auto 16px;
 }
 
@@ -478,13 +478,13 @@
 .b_btn.b_write:hover span {
   color: #fff;
   font-weight: 500;
-  background: url(../img/btn_bullet_write_on.png) no-repeat 4px 50%;
+  background: url(https://img.thinkpool.com/www//img/btn_bullet_write_on.png) no-repeat 4px 50%;
 }
 
 .b_btn.b_write span {
   color: #3e72ed;
   padding: 0 5px 0 25px;
-  background: url(../img/btn_bullet_write.png) no-repeat 4px 50%;
+  background: url(https://img.thinkpool.com/www//img/btn_bullet_write.png) no-repeat 4px 50%;
 }
 
 .bestList {
@@ -493,7 +493,7 @@
   width: 100%;
   padding-left: 230px;
   min-height: 124px;
-  background: url(../img/sub/best.png) no-repeat 0 0;
+  background: url(https://img.thinkpool.com/www//img/sub/best.png) no-repeat 0 0;
 }
 
 .bestList strong {
@@ -559,7 +559,49 @@
 .myClassbox span.label.ico {
   width: 42px;
   height: 42px;
-  background-size: 42px 440px;
+  background-size: 42px 420px;
+  background-image: url(https://img.thinkpool.com/www//img/user_42.png);
+  background-repeat: no-repeat;
+}
+
+.myClassbox span.label.ico .ico_cl1 {
+  background-position: 0 0;
+}
+
+.myClassbox span.label.ico .ico_cl2 {
+  background-position: 0 10%;
+}
+
+.myClassbox span.label.ico .ico_cl3 {
+  background-position: 0 20%;
+}
+
+.myClassbox span.label.ico .ico_cl4 {
+  background-position: 0 30%;
+}
+
+.myClassbox span.label.ico .ico_cl5 {
+  background-position: 0 40%;
+}
+
+.myClassbox span.label.ico .ico_cl6 {
+  background-position: 0 50%;
+}
+
+.myClassbox span.label.ico .ico_cl7 {
+  background-position: 0 60%;
+}
+
+.myClassbox span.label.ico .ico_cl8 {
+  background-position: 0 70%;
+}
+
+.myClassbox span.label.ico .ico_cl9 {
+  background-position: 0 80%;
+}
+
+.myClassbox span.label.ico .ico_cl10 {
+  background-position: 0 100%;
 }
 
 .myClassbox span.user_class {
@@ -803,7 +845,7 @@
   width: 22px;
   margin: 0 10px 0 0;
   padding: 0;
-  background-image: url(../img/sub/board/user.png);
+  background-image: url(https://img.thinkpool.com/www/img/sub/board/user.png);
   background-repeat: no-repeat;
 }
 
@@ -1382,7 +1424,7 @@ span.label.ico {
   margin: 0;
   width: 22px;
   height: 22px;
-  background-image: url(../img/sub/board/user.png);
+  background-image: url(https://img.thinkpool.com/www/img/sub/board/user.png);
   background-repeat: no-repeat;
   float: left;
 }
@@ -2055,7 +2097,7 @@ span.label.ico.ico01 {
 
 .cmmtBox.re_cmmt {
   padding-left: 30px;
-  background: url(../img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
+  background: url(https://img.thinkpool.com/www/img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
 }
 
 .cmmtBox .user_info {
@@ -2166,7 +2208,7 @@ span.label.ico.ico01 {
 }
 
 .cmmtBox .vote ul li.approve {
-  background: url(../img/sub/board/approve.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/approve.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.approve span {
@@ -2174,11 +2216,11 @@ span.label.ico.ico01 {
 }
 
 .cmmtBox .vote ul li.approve.on {
-  background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/approve_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose {
-  background: url(../img/sub/board/oppose.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/oppose.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose span {
@@ -2186,7 +2228,7 @@ span.label.ico.ico01 {
 }
 
 .cmmtBox .vote ul li.oppose.on {
-  background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/oppose_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .declaration {

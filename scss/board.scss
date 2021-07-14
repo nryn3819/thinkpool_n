@@ -140,7 +140,7 @@
                             height:22px;
                             line-height:22px;
                             padding-left:27px;
-                            background-image: url(../img/sub/board/user.png);
+                            background-image: url(https://img.thinkpool.com/www//img/sub/board/user.png);
                             background-repeat: no-repeat;
                         }
                         &.ico_cl10 {
@@ -212,7 +212,7 @@
                             display:inline-block;
                             width:20px;
                             height:11px;
-                            background:url(../img/f_icon.gif) no-repeat 100% 0;
+                            background:url(https://img.thinkpool.com/www//img/f_icon.gif) no-repeat 100% 0;
                         }
 
                         .blind {
@@ -307,7 +307,7 @@
         display:block;
         width:16px;
         height:14px;
-        background:url(../img/chart_icon.png) no-repeat 0 0;
+        background:url(https://img.thinkpool.com/www//img/chart_icon.png) no-repeat 0 0;
     }
 }
 
@@ -315,13 +315,13 @@
     display:block;
     width:27px;
     height:20px;
-    background:url(../img/sub/item/ins_off.png) no-repeat 0 2px;
+    background:url(https://img.thinkpool.com/www//img/sub/item/ins_off.png) no-repeat 0 2px;
     background-size:auto 16px;
     cursor:pointer;
     float:left;
 
     &.active{
-        background:url(../img/sub/item/ins_on.png) no-repeat 0 2px;
+        background:url(https://img.thinkpool.com/www//img/sub/item/ins_on.png) no-repeat 0 2px;
         background-size:auto 16px;
     }
 }
@@ -507,14 +507,14 @@
             span {
                 color: #fff;
                 font-weight: 500;
-                background: url(../img/btn_bullet_write_on.png) no-repeat 4px 50%;
+                background: url(https://img.thinkpool.com/www//img/btn_bullet_write_on.png) no-repeat 4px 50%;
             }
         }
 
         span {
             color: #3e72ed;
             padding: 0 5px 0 25px;
-            background: url(../img/btn_bullet_write.png) no-repeat 4px 50%;
+            background: url(https://img.thinkpool.com/www//img/btn_bullet_write.png) no-repeat 4px 50%;
         }
     }
 }
@@ -525,7 +525,7 @@
     width: 100%;
     padding-left: 230px;
     min-height: 124px;
-    background: url(../img/sub/best.png) no-repeat 0 0;
+    background: url(https://img.thinkpool.com/www//img/sub/best.png) no-repeat 0 0;
     strong {
         display: block;
         width:528px;
@@ -601,7 +601,20 @@
         &.label.ico{
             width:42px;
             height:42px;
-            background-size:42px 440px;
+            background-size:42px 420px;
+            background-image:url(https://img.thinkpool.com/www//img/user_42.png);
+            background-repeat: no-repeat;
+
+            .ico_cl1{background-position: 0 0;}
+            .ico_cl2{background-position: 0 10%;}
+            .ico_cl3{background-position: 0 20%;}
+            .ico_cl4{background-position: 0 30%;}
+            .ico_cl5{background-position: 0 40%;}
+            .ico_cl6{background-position: 0 50%;}
+            .ico_cl7{background-position: 0 60%;}
+            .ico_cl8{background-position: 0 70%;}
+            .ico_cl9{background-position: 0 80%;}
+            .ico_cl10{background-position: 0 100%;}
         }
 
         &.user_class{

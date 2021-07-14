@@ -771,7 +771,7 @@ html .ui-button.ui-state-disabled:active {
   content: '';
   width: 16px;
   height: 14px;
-  background: url(../img/chart_icon.png) no-repeat 0 0;
+  background: url(https://img.thinkpool.com/www/img/chart_icon.png) no-repeat 0 0;
 }
 
 .modal-index-table thead {
@@ -1048,7 +1048,7 @@ html .ui-button.ui-state-disabled:active {
   content: '';
   width: 20px;
   height: 20px;
-  background: url(../img/sub/bot/bu_per.png) no-repeat 5px 6px;
+  background: url(https://img.thinkpool.com/www/img/sub/bot/bu_per.png) no-repeat 5px 6px;
   cursor: pointer;
 }
 
@@ -1472,7 +1472,7 @@ html .ui-button.ui-state-disabled:active {
   display: inline-block;
   width: 210px;
   height: 227px;
-  background: url(../img/sub/bot/bg_sms.jpg) no-repeat 0 0;
+  background: url(https://img.thinkpool.com/www/img/sub/bot/bg_sms.jpg) no-repeat 0 0;
   padding-top: 55px;
   padding-left: 26px;
   padding-right: 27px;

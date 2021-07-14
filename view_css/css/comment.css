@@ -21,7 +21,7 @@
 
 .cmmtBox.re_cmmt {
   padding-left: 30px;
-  background: url(../img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
+  background: url(https://img.thinkpool.com/www/img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
 }
 
 .cmmtBox .user_info {
@@ -132,7 +132,7 @@
 }
 
 .cmmtBox .vote ul li.approve {
-  background: url(../img/sub/board/approve.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/approve.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.approve span {
@@ -140,11 +140,11 @@
 }
 
 .cmmtBox .vote ul li.approve.on {
-  background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/approve_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose {
-  background: url(../img/sub/board/oppose.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/oppose.png) no-repeat 0 50%;
 }
 
 .cmmtBox .vote ul li.oppose span {
@@ -152,7 +152,7 @@
 }
 
 .cmmtBox .vote ul li.oppose.on {
-  background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
+  background: url(https://img.thinkpool.com/www/img/sub/board/oppose_on.png) no-repeat 0 50%;
 }
 
 .cmmtBox .declaration {

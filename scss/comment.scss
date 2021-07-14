@@ -20,7 +20,7 @@
 
     &.re_cmmt {
         padding-left: 30px;
-        background: url(../img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
+        background: url(https://img.thinkpool.com/www/img/sub/board/re_cmmt.gif) no-repeat 10px 21px;
     }
 
     .user_info {
@@ -126,26 +126,26 @@
                 }
 
                 &.approve {
-                    background: url(../img/sub/board/approve.png) no-repeat 0 50%;
+                    background: url(https://img.thinkpool.com/www/img/sub/board/approve.png) no-repeat 0 50%;
 
                     span {
                         color: #fc2f2f;
                     }
 
                     &.on{
-                        background: url(../img/sub/board/approve_on.png) no-repeat 0 50%;
+                        background: url(https://img.thinkpool.com/www/img/sub/board/approve_on.png) no-repeat 0 50%;
                     }
                 }
 
                 &.oppose {
-                    background: url(../img/sub/board/oppose.png) no-repeat 0 50%;
+                    background: url(https://img.thinkpool.com/www/img/sub/board/oppose.png) no-repeat 0 50%;
 
                     span {
                         color: #3e72ed;
                     }
 
                     &.on{
-                        background: url(../img/sub/board/oppose_on.png) no-repeat 0 50%;
+                        background: url(https://img.thinkpool.com/www/img/sub/board/oppose_on.png) no-repeat 0 50%;
                     }
                 }
             }
