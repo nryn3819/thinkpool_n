@@ -30,6 +30,37 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+
+        <div class="modal fade" id="e-pop">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <p><img src="./img/epop.jpg" alt="오픈이벤트"></p>
+                  <div class="btn-group">
+                      <button class="btn btn-default">자세히 알아보기</button>
+                      <button class="btn btn-primary">리뉴얼 이벤트 보기</button>
+                  </div>
+
+                  <div class="today">
+                      <div class="left">
+                          <label for="popcheck01"><input type="checkbox" id="popcheck01"><span>다시 보지 않음</span></label>
+                          <label for="popcheck02"><input type="checkbox" id="popcheck02"><span>오늘은 이 창 열지 않음</span></label>
+                      </div>
+                      <div class="close">
+                          <button data-dismiss="modal">닫기 &times;</button>
+                      </div>
+                  </div>
+              </div>
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <script>
+            $(function(){
+                $('#e-pop').modal('show');
+            });
+        </script>
+
+        <!-- //이벤트 팝업 -->
+
         <div class="browser_w">
             <div class="browser">
                 <img src="./img/browser.jpg" alt="최신버전" usemap="#chekforbrws">
