@@ -323,6 +323,19 @@
                     &.lg{
                         max-width:550px;
                     }
+                    &.report{
+                        width:auto;
+                        display:inline-block;
+                        float:left;
+                        max-width:358px;
+                        &-lg{
+                            width:auto;
+                            display:inline-block;
+                            float:left;
+                            max-width:468px;
+                        }
+                    }
+                    
                 }
                 .elipsis{
                     display:block;

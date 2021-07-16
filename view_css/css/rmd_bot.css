@@ -412,6 +412,20 @@ html .ui-button.ui-state-disabled:active {
   max-width: 550px;
 }
 
+.table_w table tbody tr td a.report {
+  width: auto;
+  display: inline-block;
+  float: left;
+  max-width: 358px;
+}
+
+.table_w table tbody tr td a.report-lg {
+  width: auto;
+  display: inline-block;
+  float: left;
+  max-width: 468px;
+}
+
 .table_w table tbody tr td .elipsis {
   display: block;
   width: 160px;
