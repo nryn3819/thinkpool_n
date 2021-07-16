@@ -209,6 +209,8 @@
                             white-space: nowrap;
                             overflow: hidden;
                             float: left;
+                            color:#333;
+                            font-weight:400;
                         }
 
                         .file{
@@ -238,7 +240,7 @@
                         line-height: 23px;
                         font-size: 13px;
                         color: #fff;
-                        font-weight: 300;
+                        font-weight: 400;
                         background-size:22px 220px;
 
                         &.label-ins {
@@ -256,7 +258,7 @@
 
                         &.label-blind {
                             border: 1px solid #666;
-                            color: #666;
+                            color: #333;
                             float:left;
                         }
 

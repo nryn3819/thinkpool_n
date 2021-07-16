@@ -1263,7 +1263,7 @@ table {
 
 .main-chart .info .con span {
   padding-left: 3px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -2128,7 +2128,7 @@ body, html {
   height: 35px;
   line-height: 35px;
   font-size: 18px;
-  color: #666;
+  color: #333;
   font-weight: 300;
 }
 
@@ -4421,7 +4421,7 @@ body, html {
   width: 100%;
   float: left;
   padding-top: 15px;
-  font-size: 11px;
+  font-size: 12px;
   color: #333;
   font-weight: 400;
   text-align: center;
@@ -11193,6 +11193,10 @@ html .ui-button.ui-state-disabled:active {
   padding-right: 15px;
 }
 
+body > .popover[role="tooltip"] {
+  max-width: 553px;
+}
+
 .sub-topbanner {
   display: block;
   width: 100%;
@@ -11431,6 +11435,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .admin_notice dt {
+  display: block;
   width: 110px;
   height: 41px;
   line-height: 40px;
@@ -11440,11 +11445,13 @@ html .ui-button.ui-state-disabled:active {
   font-weight: 500;
   text-align: left;
   text-indent: 25px;
+  float: left;
+  clear: left;
 }
 
 .admin_notice dd {
   display: block;
-  width: calc(100% - 110px);
+  width: 850px;
   height: 41px;
   line-height: 40px;
   border-bottom: 1px solid #dfdfdf;
@@ -11588,6 +11595,8 @@ html .ui-button.ui-state-disabled:active {
   white-space: nowrap;
   overflow: hidden;
   float: left;
+  color: #333;
+  font-weight: 400;
 }
 
 .board_tbl .table tbody tr td a .file {
@@ -11616,7 +11625,7 @@ html .ui-button.ui-state-disabled:active {
   line-height: 23px;
   font-size: 13px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
   background-size: 22px 220px;
 }
 
@@ -11635,7 +11644,7 @@ html .ui-button.ui-state-disabled:active {
 
 .board_tbl .table tbody tr td .label.label-blind {
   border: 1px solid #666;
-  color: #666;
+  color: #333;
   float: left;
 }
 
@@ -12328,7 +12337,7 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   font-size: 15px;
   line-height: 25px;
-  color: #666;
+  color: #333;
   font-weight: 400;
   padding: 80px 0 60px 0;
 }

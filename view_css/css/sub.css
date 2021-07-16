@@ -35,7 +35,7 @@
   height: 35px;
   line-height: 35px;
   font-size: 18px;
-  color: #666;
+  color: #333;
   font-weight: 300;
 }
 
@@ -2328,7 +2328,7 @@
   width: 100%;
   float: left;
   padding-top: 15px;
-  font-size: 11px;
+  font-size: 12px;
   color: #333;
   font-weight: 400;
   text-align: center;
@@ -9098,6 +9098,10 @@ html .ui-button.ui-state-disabled:active {
 .c_qna .panel-default .panel-heading .panel-title a span::before {
   content: 'Q';
   padding-right: 15px;
+}
+
+body > .popover[role="tooltip"] {
+  max-width: 553px;
 }
 
 .sub-topbanner {

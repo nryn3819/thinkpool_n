@@ -196,6 +196,8 @@
   white-space: nowrap;
   overflow: hidden;
   float: left;
+  color: #333;
+  font-weight: 400;
 }
 
 .board_tbl .table tbody tr td a .file {
@@ -224,7 +226,7 @@
   line-height: 23px;
   font-size: 13px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
   background-size: 22px 220px;
 }
 
@@ -243,7 +245,7 @@
 
 .board_tbl .table tbody tr td .label.label-blind {
   border: 1px solid #666;
-  color: #666;
+  color: #333;
   float: left;
 }
 
@@ -936,7 +938,7 @@
   width: 100%;
   font-size: 15px;
   line-height: 25px;
-  color: #666;
+  color: #333;
   font-weight: 400;
   padding: 80px 0 60px 0;
 }
