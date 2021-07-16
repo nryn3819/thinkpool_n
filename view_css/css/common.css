@@ -11208,7 +11208,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 body > .popover[role="tooltip"] {
-  max-width: 276px;
+  max-width: 416px;
 }
 
 .sub-topbanner {
