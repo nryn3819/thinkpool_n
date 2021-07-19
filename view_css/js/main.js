@@ -249,7 +249,7 @@ $(function () {
     $('.rb_info').popover({
         trigger: 'manual',
         html: true,
-        placement : 'bottom',
+        placement : 'right',
         container : '.aisignal_w .info'
     }).on('mouseenter', function () {
         var _this = this;
