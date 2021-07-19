@@ -90,6 +90,9 @@
   color: #666;
   font-weight: 300;
   text-indent: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
 }
 
 .aisignal_w .top .right .sch form input::-webkit-input-placeholder {
