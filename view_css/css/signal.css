@@ -12,6 +12,14 @@
   float: left;
 }
 
+.aisignal_w .top .left .item_cdn span {
+  width: 130px;
+}
+
+.aisignal_w .top .left .item_cdn strong {
+  margin-top: 10px;
+}
+
 .aisignal_w .top .left .button {
   width: 100%;
   text-align: center;
@@ -147,7 +155,7 @@
 
 .aisignal_w .top .right .txt {
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .aisignal_w .top .right .txt span {
@@ -332,6 +340,10 @@
   height: 55px;
   border-bottom: 1px solid #dfdfdf;
   text-align: center;
+}
+
+.aisignal_w .info .info_list > div:last-child {
+  border-bottom: 0;
 }
 
 .aisignal_w .info .info_list > div strong {
