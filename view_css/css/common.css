@@ -14386,11 +14386,17 @@ span.label.ico.ico01 {
 .scb_popup .modal-body .scb_input dl dd label, .scb_popup .modal-body .scb_input dl dd span {
   height: 40px;
   line-height: 40px;
-  margin-left: 15px;
+  margin-left: 10px;
   padding: 0;
   font-size: 16px;
   font-weight: 300;
   color: #333;
+  width: 120px;
+}
+
+.scb_popup .modal-body .scb_input dl dd label em, .scb_popup .modal-body .scb_input dl dd span em {
+  font-style: normal;
+  font-size: 13px;
 }
 
 .scb_popup .modal-body .scb_input dl dd span.time {

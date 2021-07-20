@@ -252,13 +252,19 @@
                     label,span{
                         height:40px;
                         line-height:40px;
-                        margin-left:15px;
+                        margin-left:10px;
                         padding:0;
                         font: {
                             size:16px;
                             weight:300;
                         }
                         color:#333;
+                        width:120px;
+
+                        em{
+                            font-style:normal;
+                            font-size:13px;
+                        }
                     }
                     span.time{
                         margin-left:5px;
