@@ -99,6 +99,20 @@
     margin:101px 0 0 0;
     padding:0 20px 0px;
 
+    .dcsbox{
+      sub-title{
+        margin-bottom:0;
+      }
+
+      .sub-section{
+        margin-top:20px !important;
+        margin-bottom:0 !important;
+      }
+      .mpa{
+        margin-top:0 !important;
+      }
+    }
+
     .sub-section{
       margin-top:0 !important;
     }
@@ -106,7 +120,7 @@
       margin-top:40px !important;
     }
     .sub-section.social{
-      margin-top:-20px !important;
+      //margin-top:-20px !important;
     }
   }
 }
