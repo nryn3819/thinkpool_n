@@ -36,9 +36,14 @@
     float:left;
     clear: both;
 
+    &>.module-section:first-child{
+        margin-top:0px !important;
+    }
+
     .sub-section {
         display: block;
         margin-top: 20px;
+        margin-bottom:20px;
         width: 100%;
         background: #fff;
         border: 1px solid #d6d6d6;
@@ -145,6 +150,7 @@
     font-size: 24px;
     color: #333;
     font-weight: 700;
+    margin-bottom:20px;
 
     em{
         font: {
