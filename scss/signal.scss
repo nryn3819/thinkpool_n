@@ -133,6 +133,7 @@
 
             .txt{
                 display:block;
+                //margin-top:10px;
 
                 span{
                     display:block;
@@ -329,7 +330,6 @@
                 height:50px;
                 border-bottom:1px solid #dfdfdf;
                 text-align:center;
-                float:left;
 
                 &:last-child{
                     border-bottom:0;
