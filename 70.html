@@ -354,9 +354,9 @@
 
                                 
 
-                                <div class="table_w mt-10">
+                                <div class="table_w signal_condition mt-10">
                                     <!-- <h4 class="sub-title-s">AI매매신호 내역</h4> -->
-
+                                    
                                     <table class="table table-hover mt-20">
                                         <colgroup>
                                             <col width="25%">
@@ -368,7 +368,14 @@
                                             <tr>
                                                 <th scope="col">일자</th>
                                                 <th scope="col">신호상태</th>
-                                                <th scope="col">신호발생가격</th>
+                                                <th scope="col">
+                                                    신호발생가격 
+                                                    <span class="overGuide" data-container=".signal_condition" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="
+                                                    액면분할, 액면병합 등으로 액면가가 변경되는 경우,
+                                                    액면가 변경 전에 매도가 완료된 신호발생가격은
+                                                    수정주가를 반영하지 않아 현재 주가와 차이가 날 수 있습니다.
+                                                    ">?</span>
+                                                </th>
                                                 <th scope="col">수익률</th>
                                             </tr>
                                         </thead>
@@ -487,6 +494,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <script>
+                                        $('.overGuide').popover()
+                                    </script>
                                 </div>
                                 <!-- //table -->
 
