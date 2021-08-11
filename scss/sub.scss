@@ -85,6 +85,65 @@
             border-bottom:1px solid #d7d7d7;
         }
     }
+
+    .content-guide{
+        position:absolute;
+        top:8px;
+        right:5px;
+        height:15px;
+        line-height:15px;
+
+        font-size:14px;
+        font-weight:300;
+        color:#666;
+
+        em{
+            display:inline-block;
+            width:15px;
+            height:15px;
+            line-height:15px;
+            background:#666;
+            text-align:center;
+            font-size:13px;
+            color:#fff;
+            font-weight:300;
+            font-style: normal;
+            border-radius: 2px;
+            cursor: pointer;
+
+            @at-root .popover{
+                
+                .txt{
+                    display:block;
+                    border-bottom:1px solid #dfdfdf;
+                    margin:0;
+                    padding-bottom:5px;
+    
+                    strong{
+                        display:block;
+                        width:100%;
+                        line-height:30px;
+                        font-weight:700;
+                        padding:3px 0;
+                    }
+                    span{
+                        display:block;
+                        width:100%;
+                        line-height:20px;
+
+                        em{
+                            font-style:normal;
+                        }
+                    }
+    
+                    &:last-child{
+                        border-bottom:0;
+                    }
+                }
+            
+            }
+        }
+    }
 }
 
 .sub-content-banner {
