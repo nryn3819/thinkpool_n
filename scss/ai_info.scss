@@ -1213,12 +1213,14 @@ p.tbl-guide{
                         }
 
                         &::after{
-                            content: '▸';
-                            font-size:20px;
-                            color:#3e72ed;
+                            content: '';
                             position:absolute;
-                            top:12px;
+                            top:15px;
                             right:-7px;
+                            display:block;
+                            width:7px;
+                            height:13px;
+                            background:url(../img/sub/algzm/active.png) no-repeat 0 0;
                             font-weight:bold;
                         }
                     }
@@ -1309,6 +1311,19 @@ p.tbl-guide{
                     color:#333;
                     font-weight:300;
                     padding-left:5px;
+
+                    span{
+                        display:inline-block;
+                        height:auto;
+                        line-height:21px;
+                        font-size:15px;
+                        &::before{
+                            content:'';
+                            padding:0;
+                            float:none;
+
+                        }
+                    }
                 }
             }
 
@@ -1602,12 +1617,16 @@ p.tbl-guide{
                         display: block;
 
                         font: {
-                            size: 13px;
+                            size: 12px;
                             weight: 300;
                         }
 
-                        color:#999;
+                        color:#666;
                         padding-top:10px;
+
+                        em{
+                            font-size:13px;
+                        }
                     }
                 }
             }
