@@ -536,6 +536,31 @@
         margin-top: 40px;
         float: left;
 
+        .table_w{
+            .table{
+                margin-bottom:0; 
+                thead tr{
+                    th,td{
+                        padding: {
+                            top: 11px;
+                            bottom:12px;
+                        }
+                    }
+                }
+                tbody tr{
+                    th,td{
+                        padding: {
+                            top: 13px;
+                            bottom:14px;
+                        }
+                    }
+                }
+            }
+        }
+        .paging{
+            margin-top:20px;
+        }
+
         .tablebox {
             display: block;
             width: 100%;

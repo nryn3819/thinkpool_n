@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thinkpool</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- basic css -->
+    <link rel="stylesheet" href="scss/common.scss">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <!-- bxslider -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- basic js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
+        <header id="header_w">
+            <div class="top_w">
+                <div class="top">
+                    <a href="javascript:;" class="top_close">닫기</a>
+                </div>
+                <!-- //top -->
+            </div>
+            <!-- //top_w -->
+
+            <div id="realheader">
+                <div id="header">
+                    <h1 class="logo"><a href="#">thinkpool</a></h1>
+                    <!-- //logo -->
+
+                    <div class="info">
+                        <h2 class="sr-only">사용자메뉴</h2>
+                        <ul>
+                            <!-- <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li> -->
+
+                            <li><a href="#" data-toggle="modal" data-target=".member_simple">필명필명필명(간편회원) <span
+                                        class="glyphicon glyphicon-cog"></span></a></li>
+                            <li><a href="#">필명필명필명 <span class="glyphicon glyphicon-cog"></span></a></li>
+                            <li><a href="#">로그아웃</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- //info -->
+                    <div class="modal fade bs-example-modal-sm member_simple" tabindex="-1" role="dialog"
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <span class="modal-text01 text-center">
+                                        이 서비스는 일반회원가입 후 <br>
+                                        이용 가능 합니다.
+                                    </span>
+                                </div>
+                                <!-- //modal-body -->
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary btn-sm">일반회원가입</button>
+                                    <button type="button" class="btn btn-default btn-sm"
+                                        data-dismiss="modal">취소</button>
+                                </div>
+                                <!-- //modal-footer -->
+
+                            </div>
+                            <!-- modal-content -->
+                        </div>
+                        <!-- modal-sm -->
+                    </div>
+                    <!-- //modal -->
+
+                    <nav class="nav">
+                        <h2 class="sr-only">네비게이션</h2>
+                        <button class="allmenu" data-toggle="modal" data-garget="#allmenu"><img
+                                src="img/header/allmenu.png" alt="전체메뉴"></button>
+
+                        <h3 class="sr-only">페이지메뉴</h3>
+                        <ul class="main_menu">
+                            <li><a href="#" class="active">AI정보분석</a></li>
+                            <li><a href="#">AI종목추천</a></li>
+                            <li><a href="#">AI매매신호</a></li>
+                            <li><a href="#">토론실</a></li>
+                            <li><a href="61.html">MY종목</a></li>
+                        </ul>
+
+                        <h3 class="sr-only">서비스페이지메뉴</h3>
+                        <ul class="add_menu">
+                            <li><a href="#">전문가방송</a></li>
+                            <li><a href="#">라씨트레이더</a></li>
+                            <li><a href="#">스탁론</a></li>
+                        </ul>
+
+                        <div class="sch">
+                            <h3 class="sr-only">종목검색</h3>
+                            <form class="form-inline" action="">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">종목검색</label>
+                                    <input type="text" placeholder="종목명/종목코드를 입력하세요">
+                                    <button type="submit" class="glyphicon glyphicon-search" title="검색"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                    <!-- //nav -->
+
+                </div>
+                <!-- //header -->
+
+            </div>
+            <!-- //realheader -->
+
+        </header>
+        <!-- //header_w -->
+
+
+        <section id="container_w">
+            <div id="container">
+                <h2 class="sr-only">본문내용</h2>
+
+                <nav id="subNav" class="garo">
+                    <ul>
+                        <li><a href="#" class="active">AI종목추천 홈</a></li>
+                        <li><a href="#">추천봇전체보기</a></li>
+                        <li><a href="#"><span class="label-primary label">적응형</span> AI어드바이저</a></li>
+                        <li><a href="#">나의추천봇</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                </nav>
+
+
+                
+
+                <div id="content" class="sub nbg">
+                    <!-- nbg 추가 -->
+                    <nav id="subNav" class="leftNav" role="tabpanel">
+                        <h3 class="sr-only">뉴스네비게이션</h3>
+                        <ul role="tablist">
+                            <li class="active" role="presentation"><a href="#tab01" aria-controls="tab01" data-toggle="tab">AI어드바이저 소개</a></li>
+                            <li class="" role="presentation"><a href="#tab02" aria-controls="tab02" data-toggle="tab">공격형AI어드바이저</a></li>
+                            <li class="" role="presentation"><a href="#tab03" aria-controls="tab03" data-toggle="tab">안정형AI어드바이저</a></li>
+                            <li class="" role="presentation"><a href="#tab04" aria-controls="tab04" data-toggle="tab">자주하는 질문</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="tab-content">
+                        <div id="tab01" class="tab-pane fade in active">
+
+                            <div class="sub-content mt-10">
+                                <div class="sub-section pt-0 pb-0">
+                                    <div class="alg_intro alg-adviser">
+                                        <div class="alg_int01">
+                                            <div class="txt">
+                                                <strong>
+                                                    <em>AI어드바이저 서비스</em>는
+                                                </strong>
+                                                <span>
+                                                    시장상황 따라 최적화된 <em>알고리즘을 AI 스스로 변경하면서</em><br>
+                                                    투자자가 지정한 투자금액을 <br>
+                                                    <em>종합적으로 관리해주는 서비스</em>입니다. <br>
+                                                    <em class="lite">(자동매매 서비스는 아닙니다. 매수/매도는 투자자가 직접 해야합니다)</em>
+                                                </span>
+                                                <em>
+                                                    AI어드바이저는 투자자 성향 및 계좌설정 조건에 따라 개인별 포트폴리오를 생성하여 <br>
+                                                    전체적인 포트폴리오 운영정보를 제공합니다.
+                                                </em>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="btnbox">
+                                                <button class="btn btn-alg01">서비스 이용방법</button>
+                                                <button class="btn btn-alg02">서비스 구독하기</button>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- //alg_int01 -->
+
+                                        <div class="alg_int02">
+                                            <div class="txt">
+                                                <span class="label label-alg">POINT 1</span>
+
+                                                <div class="alg-g">
+                                                    <span>AI가 다양한 시장변수들을 분석하여</span>
+                                                    <strong>
+                                                        <em>현재 상황에 가장 적합한 알고리즘을</em>
+                                                    </strong>
+                                                    <span>자동으로 선정해서 종목을 발굴합니다.</span>
+                                                </div>
+                                                <!-- //alg-g -->
+
+                                                <div class="alg-t">
+                                                    <a href="#">공격형 AI어드바이저 →</a>
+                                                    <a href="#">안정형 AI어드바이저  →</a>
+                                                </div>
+                                                <!-- //alg-t -->
+                                            </div>
+                                        </div>
+                                        <!-- //alg_int02 -->
+
+                                        <div class="alg_int03">
+                                            <div class="txt">
+                                                <span class="label label-alg">POINT 2</span>
+
+                                                <div class="alg-g">
+                                                    <span>투자금액, 투자종목수 등을 설정하면</span>
+                                                    <strong>
+                                                        <em>AI가 개인별 포트폴리오를 관리합니다.</em>
+                                                    </strong>
+                                                    <span>설정변경은 언제든지 가능합니다.</span>
+                                                </div>
+                                                <!-- //alg-g -->
+                                            </div>
+                                        </div>
+                                        <!-- //alg_int03 -->
+
+                                        <div class="alg_int04">
+                                            <div class="txt">
+                                                <span class="label label-alg">POINT 3</span>
+
+                                                <div class="alg-g">
+                                                    <span>AI가 투자자들 마다</span>
+                                                    <strong>
+                                                        <em>투자규모와 투자성향에 맞춰</em> 종목을 추천하고, <br>
+                                                        일별, 월별 <em>수익률을 개인별로 관리</em>합니다. 
+                                                    </strong>
+                                                </div>
+                                                <!-- //alg-g -->
+
+                                                <div class="alg-t">
+                                                    <a href="#">AI어드바이저의 매수/매도 종목 알림 →</a>
+                                                    <a href="#">알고리즘 변경 알림 →</a>
+                                                    <a href="#">수익률 알림 →</a>
+                                                </div>
+                                                <!-- //alg-t -->
+                                            </div>
+                                        </div>
+                                        <!-- //alg_int04 -->
+
+                                        <div class="alg_int05">
+                                            <div class="txt">
+                                                <span class="label label-alg">POINT 4</span>
+
+                                                <div class="alg-g">
+                                                    <span>알고리즘별 투자성과 화면에서</span>
+                                                    <strong>
+                                                        <em>모든 알고리즘의 추천 종목</em>을
+                                                    </strong>
+                                                    <span>확인할 수 있습니다.</span>
+                                                </div>
+                                                <!-- //alg-g -->
+
+                                                <div class="alg-t">
+                                                    <a href="#">알고리즘 전체보기 →</a>
+                                                </div>
+                                                <!-- //alg-t -->
+                                            </div>
+                                        </div>
+                                        <!-- //alg_int05 -->
+                                    </div>
+                                    <!-- //알고리즘 소개 -->
+                                </div>
+                                <!-- //sub-section -->
+
+                                <div class="sub-content mt-40">
+                                    <h3 class="sub-title">서비스 이용방법</h3>
+            
+                                    <div class="sub-section">
+                                        <div class="alg_c_guide alg-adviser">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="./img/sub/algzm/alg_c_a01.png" alt="어드바이저 선택하기"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="./img/sub/algzm/alg_c_a02.png" alt="어드바이저 서비스 구독하기"></a>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/sub/algzm/alg_c_a03.png" alt="카카오톡 받을 휴대폰번호 입력하기">
+                                                </li>
+                                                <li>
+                                                    <img src="./img/sub/algzm/alg_c_a04.png" alt="투자자금 종목수량 손절기준 ... 입력하기">
+                                                </li>
+                                                <li>
+                                                    <img src="./img/sub/algzm/alg_c_a05.png" alt="카카오톡으로 매수/매도 알림 나의수익률 알림받기">
+                                                </li>
+                                            </ul>
+            
+                                            <dl>
+                                                <dt>서비스 이용요금</dt>
+                                                <dd>
+                                                    <span>
+                                                        월 구독료 59,500원 (VAT포함) <br>
+                                                        ※ 매달 자동결제되는 구독서비스입니다.  자동결제를 원하지 않을 경우에는 언제든지 나의서비스 에서 [구독중단] 버튼을 눌러주세요.
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- //sub-content 알고리즘 소개 에서만 나옵니다. -->
+            
+                                <div class="sub-content mt-40">
+                                    <h3 class="sub-title">AI종목추천 서비스 비교</h3>
+            
+                                    <div class="sub-section">
+                                        <div class="table_w">
+                                            <table class="table">
+                                                <colgroup>
+                                                    <col width="135">
+                                                    <col width="410">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="row">분류</th>
+                                                        <th scope="row">AI알고리즘</th>
+                                                        <th scope="row">AI어드바이저</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">주요 서비스</td>
+                                                        <td class="bdl">
+                                                            <div class="alg-txt"><span>고객이 선택한 알고리즘의 매수/매도 종목을 카카오톡 알림으로 수신</span></div>
+                                                            <div class="alg-txt"><span>알림 받을 알고리즘 상시 변경 가능</span></div>
+                                                            <div class="alg-txt"><span>전체 ‘AI알고리즘’의 매수/매도 현황 조회 권한 제공 (공통)</span></div>
+                                                        </td>
+                                                        <td class="bdl">
+                                                            <div class="alg-txt">
+                                                                <span>개인의 투자 성향(안정형, 공격형)에 따라 AI가 선택한 알고리즘으로 개인별 맞춤 포트폴리오 관리 (<em class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>포트폴리오란?</strong>
+                                                                        <span>
+                                                                            설정에 따라 AI가 개인별로 관리하면서 <br>
+                                                                            투자시점에 맞춰 제공하는 종목 및 비중을 <br>
+                                                                            말합니다.
+                                                                        </span>
+                                                                    </>
+                                                                    ">포트폴리오란?</em>)</span>
+                                                                <span>- 매매종목 및 비중을 카카오톡 알림으로 수신</span>
+                                                                <span>- 시장상황에 맞추어 AI가 최적의 알고리즘으로 자동 변경</span>
+                                                            </div>
+                                                            <div class="alg-txt"><span>투자금액, 포트폴리오 종목수, 손절선 등을 선택/변경 가능</span></div>
+                                                            <div class="alg-txt"><span>전체 ‘AI알고리즘’의 매수/매도 현황 조회 권한 제공 (공통)</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">부가 기능</td>
+                                                        <td class="bdl">
+                                                            <div class="alg-txt2">
+                                                                <strong>투자매력도 TOP3 종목 알림</strong>
+                                                                <span>
+                                                                    선택한 알고리즘에서 추천한 종목 중, 아직 투자 매력이 높아 <br>
+                                                                    당일 매수해도 괜찮은 종목을 매일 8:30분에 알림으로 <br>
+                                                                    제공합니다.
+                                                                </span>
+                                                            </div>
+            
+                                                            <div class="alg-txt2">
+                                                                <strong>AI알고리즘 특징주 알림(공통)</strong>
+                                                                <span>
+                                                                    전체 알고리즘에서 추천한 종목 중, 투자매력이 남아 추가 <br>
+                                                                    상승이 가능하다고 판단되는 종목을 매일 14시에 알림으로 <br>
+                                                                    제공합니다. 
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="bdl">
+                                                            <div class="alg-txt2">
+                                                                <strong>AI알고리즘 특징주 알림(공통)</strong>
+                                                                <span>
+                                                                    전체 알고리즘에서 추천한 종목 중, 투자매력이 남아 추가 상승이 <br>
+                                                                    가능하다고 판단되는 종목을 매일 14시에 알림으로 제공합니다.
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_w -->
+            
+                                        <div class="rmdalgzm">
+                                            <strong>이런 분들께 추천합니다.</strong>
+            
+                                            <div class="left rambox">
+                                                <strong>AI알고리즘은?</strong>
+            
+                                                <div class="box">
+                                                    <strong>
+                                                        내가 고른 알고리즘으로 추출한 <br>
+                                                        매수/매도 종목을 카카오톡 알림으로 편하게<br>
+                                                        받아서 투자하고 싶은 분
+                                                    </strong>
+                                                    <span>
+                                                        내가 선택한 알고리즘 외에도 다른 알고리즘의 종목도 <br>
+                                                        다 볼 수 있으니 언제든 알고리즘을 바꿔서 카카오톡 알림만 <br>
+                                                        잘 수신하면 끝!
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- //left -->
+            
+                                            <div class="right rambox">
+                                                <strong>AI어드바이저는?</strong>
+            
+                                                <div class="box">
+                                                    <strong>
+                                                        나에게 맞는 알고리즘을 고르기도 어렵고<br>
+                                                        매수/매도 종목도 얼마를 어떻게 사고 팔아야 <br>
+                                                        할지도 잘 모르겠다는 분
+                                                    </strong>
+                                                    <span>
+                                                        투자성향만 고르고 투자금액과 종목수, 손절선 정도만 <br>
+                                                        정해주면 AI가 최적의 알고리즘을 골라 어떤 종목을 <br>
+                                                        얼마나 살지 카카오톡으로 알려주니 너무 편함!
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- //right -->
+            
+                                        </div>
+                                    </div>
+                                    <!-- //sub-section -->
+                                </div>
+                                <!-- //sub-content -->
+            
+            
+                                <div class="sub-content mt-40">
+                                    <div class="sub-section mt-0">
+                                        <div class="alg_btn_guide">
+                                            <strong>AI와 함께하는 과학적인 투자세상, 씽크풀 AI알고리즘과 함께 손쉽게 투자하세요</strong>
+            
+                                            <div class="btnbox">
+                                                <button class="btn btn-alg03">안정형AI어드바이저</button>
+                                                <button class="btn btn-alg03">공격형AI어드바이저</button>
+                                                <button class="btn btn-alg04">서비스 구독하기</button>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- //sub-section -->
+                                </div>
+                                <!-- //sub-content 알고리즘 소개 에서만 나옵니다. -->
+                                
+                            </div>
+                        </div>
+                        <!-- //tab01 -->
+
+                        <div id="tab02" class="tab-pane fade">
+                            <div class="sub-content mt-10">
+                                <div class="sub-section">
+
+                                    <div class="algzm">
+
+                                        <div class="rmd-alg-cont pt-0">
+                                            <div class="left">
+                                                <div class="alg o-top" data-toggle="popover" data-content="
+                                                    <div class='txt'>
+                                                        <strong>공격형은</strong>
+                                                        <span>
+                                                            기대 위험을 최소화함과 동시에 시장대비 초과 <br>
+                                                            수익을 목표로 하는 알고리즘입니다.
+                                                        </span>
+                                                    </div>
+                                                ">
+                                                    <img src="./img/sub/algzm/summary3_2.png" alt="투자성향 공격형">
+                                                </div>
+                                                <!-- //bot -->
+                                            </div>
+                                            <!-- //left -->
+                                            
+                                            <div class="right">
+                                                <div class="cont">
+                                                    나폴레옹은 머신러닝 테크닉을 이용하여 위험자산간의 배분 및 위험자산과 안전 자산간의 배분이 균형을 이루 <br>
+                                                    는 포트폴리오로 구성하여 시장의 전 국면에 대응 하는 알고리즘
+                                                </div>
+                                                <!-- //내용 -->
+            
+                                                <div class="b-data">
+                                                    <div class="guide">
+                                                        <dl>
+                                                            <dt>현재사용중인 알고리즘 :</dt>
+                                                            <dd class="dn">몬테나</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <!-- //guide -->
+            
+                                                    <div class="box">
+                                                        <div class="left">
+                                                            <ul>
+                                                                <li><span><img src="./img/sub/algzm/profit_re1.png" alt="수익성"></span></li>
+                                                                <li><span><img src="./img/sub/algzm/rick_re1.png" alt="안전성"></span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- //수익성&안전성 -->
+            
+                                                        <div class="right">
+                                                            <strong>투자수익률</strong>
+                                                            <ul>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>1개월 수익률은?</strong>
+                                                                        <span>
+                                                                            AI종목추천 신호에 따라 수익금을 재투자했을 경우, <br>
+                                                                            <em class='up'>1개월</em> 동안 기록한 수익률은 <em class='up'>+6.6%</em>입니다. 
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액 - 1개월전 잔고금액)/1개월전 잔고금액x100
+                                                                    </div>
+                                                                " ><span class="up">+6.3%</span><em>1개월</em></li>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>3개월 수익률은?</strong>
+                                                                        <span>
+                                                                            AI종목추천 신호에 따라 수익금을 재투자했을 경우, <br>
+                                                                            <em class='up'>3개월</em> 동안 기록한 수익률은 <em class='up'>+6.6%</em>입니다. 
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액 - 3개월전 잔고금액)/3개월전 잔고금액x100
+                                                                    </div>
+                                                                " ><span class="up">+26.38%</span><em>3개월</em></li>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>총누적수익률은?</strong>
+                                                                        <span>
+                                                                            <em class='up'>2017년 01월 02일</em> 부터 AI종목추천 신호에 따라 수익 <br>
+                                                                            금을 재투자했을 경우 수익률은 <em class='up'>+377.89%</em> 입니다.
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액-투자금액)/투자금액x100
+                                                                    </div>
+                                                                " ><span class="up">+629.39%</span><em>총누적</em></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- //투자수익률 -->
+                                                    </div>
+                                                    <!-- //box -->
+
+                                                    <div class="alg-btn">
+                                                        <button class="btn btn-primary"><span>구독하기</span></button>
+                                                        <!-- // btn-primary -->
+                                                    </div>
+                                                </div>
+                                                <!-- //기초데이터 -->
+            
+                                                <div class="date">기준 10/20 10:00</div>
+                                                <!-- //일자 -->
+                                            </div>
+                                            <!-- //right -->
+            
+                                            
+                                            <!-- //chartbox -->
+            
+                                        </div>
+                                        <!-- rmd-alg-cont -->
+                                    </div>
+                                    <!-- //알고리즘 -->
+
+                                </div>
+                                <!-- //sub-section -->
+                            </div>
+                            <!-- //sub-content -->
+
+                            <div class="sub-content mt-20">
+                                <div class="sub-section">
+
+                                    <div class="allDetail pull-left">
+                                        <div class="simule">
+                                            ※ 아래 자료는 투자원금 3천만원, 최대 보유 종목 15개로 <em class="up">시뮬레이션</em>한 결과입니다.
+                                        </div>
+                                        <!-- //simule -->
+                                        
+                                        <div class="per mt-0">
+                                            <h4 class="box-title">수익률</h4>
+                                            <div class="chartbox">
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" id="c001" class="tab-pane active">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/1M_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="1개월" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c002" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/3M_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="3개월" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c003" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/1Y_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="1년" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c004" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/T_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="총누적" width="100%">
+                                                    </div>
+                                                </div>
+                                                <!-- //tab-content -->
+
+                                                <ul role="tablist" id="myTab" class="nav nav-tabs">
+                                                    <li role="presentation" class="active">
+                                                        <a href="#c001" aria-controls="home" role="tab" data-toggle="tab">1개월</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c002" aria-controls="profile" role="tab" data-toggle="tab">3개월</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c003" aria-controls="messages" role="tab" data-toggle="tab">1년</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c004" aria-controls="settings" role="tab" data-toggle="tab">총누적</a>
+                                                    </li>
+                                                </ul>
+                                                <!-- //tablist -->
+                                            </div>
+                                            <!-- //chartbox -->
+                                        </div>
+                                        <!-- //per -->
+
+                                        <div class="highreturn mt-0">
+                                            <h4 class="box-title">최고 수익 종목</h4>
+
+                                            <div class="table_w mt-20">
+                                                <table width="100%" class="table table-hover mitem">
+                                                    <colgroup>
+                                                        <col width="*">
+                                                        <col width="25%">
+                                                        <col width="21%">
+                                                        <col width="21%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">종목명</th>
+                                                            <th scope="col">누적수익률 (%)</th>
+                                                            <th scope="col">매수일</th>
+                                                            <th scope="col">매도일</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table_w -->
+
+                                            <div class="paging text-center">
+                                                <ul class="pagination mg-0">
+                                                    <li><a href="#" class=""><span aria-hidden="true">‹</span></a></li>
+                                                    <li class="active"><a href="#" class="">1</a></li>
+                                                    <li class=""><a href="#" class="">2</a></li>
+                                                    <li class=""><a href="#" class="">3</a></li>
+                                                    <li><a href="#" class=""><span aria-hidden="true">›</span></a></li>
+                                                </ul>
+                                                <!-- //pagination -->
+                                            </div>
+                                            <!-- //paging -->
+
+                                        </div>
+                                        <!-- //highreturn -->
+
+                                    </div>
+                                    <!-- //allDetail -->
+
+                                    <div class="issue_info mt-60 clearfix pull-left">
+                                        <div role="tabpanel" class="rmd_bot_tabw">
+                                            <ul role="tablist" class="nav nav-tabs">
+                                                <li role="presentation" class="active"><a data-toggle="tab" aria-controls="tab0101" href="#tab0101">신호 현황</a></li>
+                                                <li role="presentation" class=""><a data-toggle="tab" aria-controls="tab0102" href="#tab0102"> 보유 종목 </a></li>
+                                                <li role="presentation" class=""><a data-toggle="tab" aria-controls="tab0103" href="#tab0103"> 매도 완료 종목 </a></li>
+                                            </ul>
+
+                                            <p class="tbl-guide up mt-30">※ 종목명은 구독 후 확인할 수 있습니다.</p>
+
+                                            <div class="tab-content mt-20">
+
+                                                <div id="tab0101" role="tabpanel" class="tab-pane fade in active">
+                                                    <div class="table_w">
+                                                        <table width="100%" class="table table-hover">
+                                                            <colgroup>
+                                                                <col width="195">
+                                                                <col width="175">
+                                                                <col width="*">
+                                                                <col width="200">
+                                                                <col width="200">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">발생일자</th>
+                                                                    <th scope="col">신호상태</th>
+                                                                    <th scope="col">종목명</th>
+                                                                    <th scope="col">신호가격</th>
+                                                                    <th scope="col">투자비중</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="paging text-center">
+                                                            <h4 class="sr-only">이슈 연관종목 페이지네이션</h4>
+                                                            <nav>
+                                                                <ul class="pagination">
+                                                                    <li style="display: none;"><a href="javascript:;"><span aria-hidden="true">«</span></a></li>
+                                                                    <li class="active"><a href="javascript:;">1</a></li>
+                                                                    <li class=""><a href="javascript:;">2</a></li>
+                                                                    <li class=""><a href="javascript:;">3</a></li>
+                                                                    <li class=""><a href="javascript:;">4</a></li>
+                                                                    <li class=""><a href="javascript:;">5</a></li>
+                                                                    <li><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
+                                                                </ul>
+                                                            </nav>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab0102" role="tabpanel" class="tab-pane fade in">
+                                                    <!---->
+                                                </div>
+                                                <div id="tab0103" role="tabpanel" class="tab-pane fade in">
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //sub-section -->
+                            </div>
+                        </div>
+                        <!-- //tab02 -->
+
+                        <div id="tab03" class="tab-pane fade">
+
+                            <div class="sub-content mt-10">
+                                <div class="sub-section">
+
+                                    <div class="algzm">
+
+                                        <div class="rmd-alg-cont pt-0">
+                                            <div class="left">
+                                                <div class="alg o-top" data-toggle="popover" data-content="
+                                                    <div class='txt'>
+                                                        <strong>안정형은</strong>
+                                                        <span>
+                                                            기대 위험을 최소화함과 동시에 시장대비 초과 <br>
+                                                            수익을 목표로 하는 알고리즘입니다.
+                                                        </span>
+                                                    </div>
+                                                ">
+                                                    <img src="./img/sub/algzm/summary3_1.png" alt="투자성향 안정형">
+                                                </div>
+                                                <!-- //bot -->
+                                            </div>
+                                            <!-- //left -->
+                                            
+                                            <div class="right">
+                                                <div class="cont">
+                                                    나폴레옹은 머신러닝 테크닉을 이용하여 위험자산간의 배분 및 위험자산과 안전 자산간의 배분이 균형을 이루 <br>
+                                                    는 포트폴리오로 구성하여 시장의 전 국면에 대응 하는 알고리즘
+                                                </div>
+                                                <!-- //내용 -->
+            
+                                                <div class="b-data">
+                                                    <div class="guide">
+                                                        <dl>
+                                                            <dt>현재사용중인 알고리즘 :</dt>
+                                                            <dd class="dn">몬테나</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <!-- //guide -->
+            
+                                                    <div class="box">
+                                                        <div class="left">
+                                                            <ul>
+                                                                <li><span><img src="./img/sub/algzm/profit_re1.png" alt="수익성"></span></li>
+                                                                <li><span><img src="./img/sub/algzm/rick_re1.png" alt="안전성"></span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- //수익성&안전성 -->
+            
+                                                        <div class="right">
+                                                            <strong>투자수익률</strong>
+                                                            <ul>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>1개월 수익률은?</strong>
+                                                                        <span>
+                                                                            AI종목추천 신호에 따라 수익금을 재투자했을 경우, <br>
+                                                                            <em class='up'>1개월</em> 동안 기록한 수익률은 <em class='up'>+6.6%</em>입니다. 
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액 - 1개월전 잔고금액)/1개월전 잔고금액x100
+                                                                    </div>
+                                                                " ><span class="up">+6.3%</span><em>1개월</em></li>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>3개월 수익률은?</strong>
+                                                                        <span>
+                                                                            AI종목추천 신호에 따라 수익금을 재투자했을 경우, <br>
+                                                                            <em class='up'>3개월</em> 동안 기록한 수익률은 <em class='up'>+6.6%</em>입니다. 
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액 - 3개월전 잔고금액)/3개월전 잔고금액x100
+                                                                    </div>
+                                                                " ><span class="up">+26.38%</span><em>3개월</em></li>
+                                                                <li class="o-top" data-toggle="popover" data-content="
+                                                                    <div class='txt'>
+                                                                        <strong>총누적수익률은?</strong>
+                                                                        <span>
+                                                                            <em class='up'>2017년 01월 02일</em> 부터 AI종목추천 신호에 따라 수익 <br>
+                                                                            금을 재투자했을 경우 수익률은 <em class='up'>+377.89%</em> 입니다.
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class='txt'>
+                                                                        (현재 잔고금액-투자금액)/투자금액x100
+                                                                    </div>
+                                                                " ><span class="up">+629.39%</span><em>총누적</em></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- //투자수익률 -->
+                                                    </div>
+                                                    <!-- //box -->
+
+                                                    <div class="alg-btn">
+                                                        <button class="btn btn-primary"><span>구독하기</span></button>
+                                                        <!-- // btn-primary -->
+                                                    </div>
+                                                </div>
+                                                <!-- //기초데이터 -->
+            
+                                                <div class="date">기준 10/20 10:00</div>
+                                                <!-- //일자 -->
+                                            </div>
+                                            <!-- //right -->
+            
+                                            
+                                            <!-- //chartbox -->
+            
+                                        </div>
+                                        <!-- rmd-alg-cont -->
+                                    </div>
+                                    <!-- //알고리즘 -->
+
+                                </div>
+                                <!-- //sub-section -->
+                            </div>
+                            <!-- //sub-content -->
+
+                            <div class="sub-content mt-20">
+                                <div class="sub-section">
+
+                                    <div class="allDetail pull-left">
+                                        <div class="simule">
+                                            ※ 아래 자료는 투자원금 3천만원, 최대 보유 종목 15개로 <em class="up">시뮬레이션</em>한 결과입니다.
+                                        </div>
+                                        <!-- //simule -->
+
+                                        <div class="per mt-0">
+                                            <h4 class="box-title">수익률</h4>
+                                            <div class="chartbox">
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" id="c001" class="tab-pane active">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/1M_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="1개월" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c002" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/3M_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="3개월" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c003" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/1Y_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="1년" width="100%">
+                                                    </div>
+                                                    <div role="tabpanel" id="c004" class="tab-pane">
+                                                        <img src="https://webchart.thinkpool.com/2021ReNew/AITrading/T_00000037.png" onerror="this.src='https://img.thinkpool.com/www/img/sub/empty-chart.jpg'" alt="총누적" width="100%">
+                                                    </div>
+                                                </div>
+                                                <!-- //tab-content -->
+
+                                                <ul role="tablist" id="myTab" class="nav nav-tabs">
+                                                    <li role="presentation" class="active">
+                                                        <a href="#c001" aria-controls="home" role="tab" data-toggle="tab">1개월</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c002" aria-controls="profile" role="tab" data-toggle="tab">3개월</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c003" aria-controls="messages" role="tab" data-toggle="tab">1년</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#c004" aria-controls="settings" role="tab" data-toggle="tab">총누적</a>
+                                                    </li>
+                                                </ul>
+                                                <!-- //tablist -->
+                                            </div>
+                                            <!-- //chartbox -->
+                                        </div>
+                                        <!-- //per -->
+
+                                        <div class="highreturn mt-0">
+                                            <h4 class="box-title">최고 수익 종목</h4>
+
+                                            <div class="table_w mt-20">
+                                                <table width="100%" class="table table-hover mitem">
+                                                    <colgroup>
+                                                        <col width="*">
+                                                        <col width="25%">
+                                                        <col width="21%">
+                                                        <col width="21%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">종목명</th>
+                                                            <th scope="col">누적수익률 (%)</th>
+                                                            <th scope="col">매수일</th>
+                                                            <th scope="col">매도일</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">디지아이</td>
+                                                            <td class="text-center">
+                                                                <span class="up">+201.86%</span>
+                                                            </td>
+                                                            <td class="text-center"><span>2020/09/25</span></td>
+                                                            <td class="text-center"><span>2021/07/19</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table_w -->
+
+                                            <div class="paging text-center">
+                                                <ul class="pagination mg-0">
+                                                    <li><a href="#" class=""><span aria-hidden="true">‹</span></a></li>
+                                                    <li class="active"><a href="#" class="">1</a></li>
+                                                    <li class=""><a href="#" class="">2</a></li>
+                                                    <li class=""><a href="#" class="">3</a></li>
+                                                    <li><a href="#" class=""><span aria-hidden="true">›</span></a></li>
+                                                </ul>
+                                                <!-- //pagination -->
+                                            </div>
+                                            <!-- //paging -->
+
+                                        </div>
+                                        <!-- //highreturn -->
+
+                                    </div>
+                                    <!-- //allDetail -->
+
+                                    <div class="issue_info mt-60 clearfix pull-left">
+                                        <div role="tabpanel" class="rmd_bot_tabw">
+                                            <ul role="tablist" class="nav nav-tabs">
+                                                <li role="presentation" class="active"><a data-toggle="tab" aria-controls="tab0101" href="#tab0101">신호 현황</a></li>
+                                                <li role="presentation" class=""><a data-toggle="tab" aria-controls="tab0102" href="#tab0102"> 보유 종목 </a></li>
+                                                <li role="presentation" class=""><a data-toggle="tab" aria-controls="tab0103" href="#tab0103"> 매도 완료 종목 </a></li>
+                                            </ul>
+
+                                            <p class="tbl-guide up mt-30">※ 종목명은 구독 후 확인할 수 있습니다.</p>
+
+                                            <div class="tab-content mt-20">
+
+                                                <div id="tab0101" role="tabpanel" class="tab-pane fade in active">
+                                                    <div class="table_w">
+                                                        <table width="100%" class="table table-hover">
+                                                            <colgroup>
+                                                                <col width="195">
+                                                                <col width="175">
+                                                                <col width="*">
+                                                                <col width="200">
+                                                                <col width="200">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">발생일자</th>
+                                                                    <th scope="col">신호상태</th>
+                                                                    <th scope="col">종목명</th>
+                                                                    <th scope="col">신호가격</th>
+                                                                    <th scope="col">투자비중</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">11/26</td>
+                                                                    <td class="text-center up bold">매수</td>
+                                                                    <td class="text-left">삼성바이오</td>
+                                                                    <td class="text-right">56,000</td>
+                                                                    <td class="text-center">5.00%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="paging text-center">
+                                                            <h4 class="sr-only">이슈 연관종목 페이지네이션</h4>
+                                                            <nav>
+                                                                <ul class="pagination">
+                                                                    <li style="display: none;"><a href="javascript:;"><span aria-hidden="true">«</span></a></li>
+                                                                    <li class="active"><a href="javascript:;">1</a></li>
+                                                                    <li class=""><a href="javascript:;">2</a></li>
+                                                                    <li class=""><a href="javascript:;">3</a></li>
+                                                                    <li class=""><a href="javascript:;">4</a></li>
+                                                                    <li class=""><a href="javascript:;">5</a></li>
+                                                                    <li><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
+                                                                </ul>
+                                                            </nav>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab0102" role="tabpanel" class="tab-pane fade in">
+                                                    <!---->
+                                                </div>
+                                                <div id="tab0103" role="tabpanel" class="tab-pane fade in">
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //sub-section -->
+                            </div>
+                            <!-- //Sub-content -->
+                        </div>
+                        <!-- //tab03 -->
+                        
+                        <div id="tab04" class="tab-pane fade">
+                            <div class="sub-content mt-10 clearfix">
+                                <div class="sub-section">
+        
+                                    <div class="panel-group qna" id="accordion" role="tablist" aria-multiselectable="true">
+        
+                                        <!--
+                                            **사용법**
+                                            1. 제목
+                                                - panel-heading의 id값 hd01 ~ 넣어주세요.
+                                                - a태그 : href 값은 panel-collapse의 id값 이 됩니다.
+                                            2. 내용
+                                                - panel-collapse aria-labelledby 의 값을 달리 해주세요.
+                                                - 내용이 열린상태를 보여주고 싶을때에는 panel-collapse 에 in 클래스를 추가해주세요.
+                                         -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="hd01">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#acd01" aria-expanded="false" aria-controls="acd01">
+                                                        <span>라씨 매매비서는 어떤 서비스인가요?</span>
+                                                    </a>
+                                                    <!-- //collapse -->
+                                                </h4>
+                                                <!-- //h4-title -->
+                                            </div>
+                                            <!-- //panel-haeding -->
+        
+                                            <div id="acd01" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="질문1">
+                                                <div class="panel-body">
+                                                    <span>
+                                                        라씨매매비서는 인공지능로봇이 코스피, 코스닥 전종목은 물론, ETF까지 개별 매매신호를 발생시켜 <br>
+                                                        매매타이밍에 도움을 드리는 서비스 입니다.  <br><br>
+                                                        
+                                                        개별 매수가에 따른 개인 맞춤형 매도신호 발생은 물론, <br>
+                                                        소셜지수 및 뜨는 이슈, 종목관련 놓쳐서는 안될 주요 정보까지 실시간 알람으로 받아 볼 수 있습니다. 
+                                                    </span>
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //panel-collapse -->
+                                        </div>
+                                        <!-- //panel -->
+        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="hd02">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#acd02" aria-expanded="false" aria-controls="acd02">
+                                                        <span>AI매매신호는 언제 발생하나요?</span>
+                                                    </a>
+                                                    <!-- //collapse -->
+                                                </h4>
+                                                <!-- //h4-title -->
+                                            </div>
+                                            <!-- //panel-haeding -->
+        
+                                            <div id="acd02" class="panel-collapse collapse" role="tabpanel" aria-labelledby="질문2">
+                                                <div class="panel-body">
+                                                    <span>
+                                                        AI매매신호는 정해진 시각에 발생하는 것이 아닌 인공지능이 종목별로 분석한 최적의 매매타이밍에 실시간으로 제공됩니다. <br><br>
+                                                        AI매매신호는 AI매매신호 페이지에서 전체 발생내역을 확인하실 수 있으며, 보유 종목 혹은 관심 종목을 포켓에 등록해 놓으면 정확한 매매타이밍과 매매가를 실시간 푸시 알림으로 전송해드립니다. <br><br>
+                                                        종목 등록 한번으로 내 종목의 AI매매신호를 실시간으로 받아보세요.
+                                                    </span>
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //panel-collapse -->
+                                        </div>
+                                        <!-- //panel -->
+        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="hd03">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#acd03" aria-expanded="false" aria-controls="acd03">
+                                                        <span>AI매매신호 특징이 뭔가요?</span>
+                                                    </a>
+                                                    <!-- //collapse -->
+                                                </h4>
+                                                <!-- //h4-title -->
+                                            </div>
+                                            <!-- //panel-haeding -->
+        
+                                            <div id="acd03" class="panel-collapse collapse" role="tabpanel" aria-labelledby="질문3">
+                                                <div class="panel-body">
+                                                    <span>
+                                                        라씨 매매비서가 제공하는 AI매매신호는 과거 5년, 10억건 이상의 빅데이터를 기반으로 종목별 매매신호 서비스 입니다. <br>
+                                                        코스피, 코스닥은 물론 ETF까지 전종목에 대한 실시간 매수/매도 시그널을 정확한 시점과 가격으로 제시해 드립니다. <br><br>
+                                                        
+                                                        AI의 완성도는 물론 투자자가 실전 매매에서 쉽게 활용할 수 있도록 활용성에 중점을 두어 누구나 쉽게 AI매매신호를 따라 매매할 수 있도록 구성하였습니다.
+                                                    </span>
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //panel-collapse -->
+                                        </div>
+                                        <!-- //panel -->
+        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="hd04">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#acd04" aria-expanded="false" aria-controls="acd04">
+                                                        <span>AI매매신호의 평균 적중률과 보유 기간은 어떻게 되나요?</span>
+                                                    </a>
+                                                    <!-- //collapse -->
+                                                </h4>
+                                                <!-- //h4-title -->
+                                            </div>
+                                            <!-- //panel-haeding -->
+        
+                                            <div id="acd04" class="panel-collapse collapse" role="tabpanel" aria-labelledby="질문4">
+                                                <div class="panel-body">
+                                                    <span>
+                                                        라씨 매매비서는 10만 번 이상의 매매로 쌓아올린 데이터로 적중률 68%에 달하는 고도화된 AI매매신호 로직을 구축했습니다. <br>
+                                                        ( 시작일: 2014/ 10/ 16, 종료일: 2020/ 05/ 11) <br><br>
+                                                        AI매매신호는 투자자들이 실전 매매에 쉽게 활용 가능한 중기형 시그널로 대부분 2주 이내 매매 완료되나 변동성이 적을수록 보유기간은 증가합니다. <br><br>
+                                         
+                                                        종목별 연평균 수익률이 18.7%에 달하며 평균 7회 매매를 실행합니다.
+                                                    </span>
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //panel-collapse -->
+                                        </div>
+                                        <!-- //panel -->
+        
+                                    </div>
+                                    <!-- //panel-group -->
+        
+                                    <div class="hspace100"></div>
+        
+                                </div>
+                                <!-- //sub-section -->
+        
+                            </div>
+                            <!-- //sub-content -->
+                        </div>
+                        <!-- //tab04 -->
+                    </div>
+                    <!-- //tab - content -->
+
+                    <div class="hspace100"></div>
+
+
+                </div>
+                <!-- //content -->
+
+            </div>
+            <!-- //contianer -->
+
+            <aside id="c_side">
+                <h2 class="sr-only">사이드메뉴</h2>
+                <div class="s_menu s_m01">
+                    <div class="title_s">나의종목 <a href="#" class="setting glyphicon glyphicon-cog" title="설정"></a></div>
+
+                    <div class="s_list_w">
+                        <ul class="s_list">
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자</span>
+                                    <em class="per up">+12.5%</em>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자</span>
+                                    <em class="per dn">+12.5%</em>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자</span>
+                                    <em class="per dn">+12.5%</em>
+                                </a>
+                            </li>
+
+                            <li class="ad">
+                                <a href="#" class="adtext">[이벤트] 수익률 2배!</a>
+                            </li>
+
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자</span>
+                                    <em class="per up">+12.5%</em>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자</span>
+                                    <em class="per dn">+12.5%</em>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자여섯</span>
+                                    <em class="per up">+12.5%</em>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="myItemList" data-toggle="popover"
+                                    data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                    <span class="name" title="종목명">삼성전자여섯일곱</span>
+                                    <span class="own">보유중<em class="badge">AI</em></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //list -->
+
+                    <div class="s_menu_control disabled">
+                        <a href="javascript:;" class="prev" role="button">
+                            <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                            <span class="sr-only">이전</span>
+                        </a>
+                        <a href="javascript:;" class="next" role="button">
+                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                            <span class="sr-only">다음</span>
+                        </a>
+                    </div>
+                    <!-- //s_menu control list 가 8개 이상일때 활성화됨 -->
+
+                </div>
+                <!-- //s_menu s_m01-->
+
+                <div class="s_menu s_m02">
+                    <div class="tab_title" role="tabpanel">
+                        <ul role="tablist" id="myTab">
+                            <li role="presentation" class="active"><a href="#popular" aria-controls="popular item"
+                                    role="tab" data-toggle="tab">인기토론</a></li>
+                            <li role="presentation"><a href="#topsch" aria-controls="top seach" role="tab"
+                                    data-toggle="tab">검색상위</a></li>
+                        </ul>
+                    </div>
+                    <!-- //tab -->
+
+                    <div class="tab-content">
+
+                        <div role="tabpanel" class="tab-pane fade in active" id="popular">
+                            <ul class="s_list">
+                                <li class="list">
+                                    <a href="#" class="myItemList" data-toggle="popover"
+                                        data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                        <span class="name" title="종목명">삼성전자1</span>
+                                        <em class="per up">+12.5%</em>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" class="myItemList" data-toggle="popover"
+                                        data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                        <span class="name" title="종목명">삼성전자</span>
+                                        <em class="per dn">+12.5%</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //인기토론 -->
+
+                        <div role="tabpanel" class="tab-pane fade" id="topsch">
+                            <ul class="s_list">
+                                <li class="list">
+                                    <a href="#" class="myItemList" data-toggle="popover"
+                                        data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                        <span class="name" title="종목명">삼성전자2</span>
+                                        <em class="per up">+12.5%</em>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" class="myItemList" data-toggle="popover"
+                                        data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                                        <span class="name" title="종목명">삼성전자</span>
+                                        <em class="per dn">+12.5%</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //검색상위 -->
+
+
+                    </div>
+                    <!-- //tab-content -->
+                </div>
+                <!-- //s_m02 -->
+
+                <div class="side_banner">
+                    <a href="#"><img src="./img/header/demo_banner.jpg" alt="배너데모"></a>
+                </div>
+
+
+            </aside>
+            <!-- //c_side -->
+        </section>
+        <!-- //container -->
+
+        <footer id="footer_w">
+            <h2 class="sr-only">하단영역</h2>
+            <div id="realfooter">
+                <div class="fmenu">
+                    <h3 class="sr-only">약관및지원메뉴</h3>
+                    <ul>
+                        <li><a href="#">서비스 약관/정책</a></li>
+                        <li><a href="#">원격지원</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">회사소개</a></li>
+                    </ul>
+                </div>
+                <!-- //fmenu -->
+
+                <div class="fsite">
+                    <h3 class="sr-only">관련사이트이동</h3>
+                    <div class="dropup">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-expanded="true">
+                            패밀리사이트
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">로그인도용방지</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">카드터치인증</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">기업씽크풀</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">씽크풀 공식블로그</a></li>
+                        </ul>
+                    </div>
+                    <!-- //d_down -->
+                </div>
+                <!-- //fsite -->
+
+                <address>
+                    <h3 class="sr-only"></h3>
+                    <p>
+                        씽크풀사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 그 이용에 따르는 책임은 이용자 본인에게 있습니다. <br>
+                        또한 이용자는 본 정보를 무단 복사, 전재 할 수 없습니다. <br>
+                        <em>㈜씽크풀</em> 서울시 영등포구 국제금융로 70, 15층 (여의도동, 미원빌딩)
+                        <span class="copy">
+                            Copyright since 1999 &copy; ThinkPool Co.,Ltd. All Rights Reserved
+                        </span>
+                    </p>
+                </address>
+                <!-- //address -->
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <div id="allmenu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="allmenyLabel"
+            aria-hidden="hidden">
+            <h2 class="sr-only">사이트전체메뉴</h2>
+            <div class="allmenu_wrap modal-dialog">
+                <div class="allmenu_header">
+                    <strong>전체메뉴보기</strong>
+                    <button class="close" data-dismiss="modal" aria-label="Close"><img
+                            src="img/header/allmenu_close.png" title="닫기"></button>
+                </div>
+                <!-- //allmenu_header -->
+
+                <div class="allmenu_content">
+                    <div class="menu">
+                        <ul>
+                            <li class="menu_list">
+                                <div class="amenu thumb m01">
+                                    <strong>AI정보분석</strong>
+                                    <ul>
+                                        <li><a href="#">AI정보분석 홈</a></li>
+                                        <li><a href="#">이슈</a></li>
+                                        <li><a href="#">주요지수</a></li>
+                                        <li><a href="#">투자자별매매동향</a></li>
+                                        <li><a href="#">업종/테마</a></li>
+                                        <li><a href="#">시세분석(특징주)</a></li>
+                                        <li><a href="#">뉴스</a></li>
+                                        <li><a href="#">공시</a></li>
+                                        <li><a href="#">리포트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu thumb m02">
+                                    <strong>AI종목추천</strong>
+                                    <ul>
+                                        <li><a href="#">AI종목추천 홈</a></li>
+                                        <li><a href="#">AI추천봇 전체보기</a></li>
+                                        <li><a href="#">(적응형)AI어드바이저</a></li>
+                                        <li><a href="#">MY추천봇</a></li>
+                                        <li><a href="#">이용안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu thumb m03">
+                                    <strong>AI매매신호</strong>
+                                    <ul>
+                                        <li><a href="#">AI매매신호 홈</a></li>
+                                        <li><a href="#">나의 AI매매신호</a></li>
+                                        <li><a href="#">서비스 이용안내</a></li>
+                                        <li><a href="#">AI매매신호 안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu">
+                                    <strong>토론실</strong>
+                                    <ul>
+                                        <li><a href="#">소셜분석</a></li>
+                                        <li><a href="#">증권가속보</a></li>
+                                        <li><a href="#">주식종합토론</a></li>
+                                        <li><a href="#">유머방</a></li>
+                                        <li><a href="#">정치방</a></li>
+                                    </ul>
+                                </div>
+                                <div class="amenu">
+                                    <strong>고객센터</strong>
+                                    <ul>
+                                        <li><a href="#">고객센터 홈</a></li>
+                                        <li><a href="#">회원정보관리</a></li>
+                                        <li><a href="#">공지사항 및 이용문의</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu">
+                                    <strong>MY종목홈</strong>
+                                    <ul>
+                                        <li><a href="#">MY종목홈</a></li>
+                                    </ul>
+                                </div>
+                                <div class="amenu">
+                                    <strong>기타</strong>
+                                    <ul>
+                                        <li><a href="#">원격지원</a></li>
+                                        <li><a href="#">회사소개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //menu -->
+
+                    <div class="side">
+                        <div class="side01">
+                            <ul>
+                                <li><a href="#">증권방송</a></li>
+                                <li><a href="#">라씨트레이더</a></li>
+                                <li><a href="#">스탁론</a></li>
+                            </ul>
+                        </div>
+                        <div class="side02">
+                            <strong>패밀리 사이트</strong>
+                            <ul>
+                                <li><a href="#">로그인도용방지</a></li>
+                                <li><a href="#">카드터치인증</a></li>
+                                <li><a href="#">라씨매매비서</a></li>
+                                <li><a href="#">씽크풀 공식 블로그</a></li>
+                                <li><a href="#">기업 씽크풀</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //side -->
+                </div>
+                <!-- //allmenu_content -->
+
+            </div>
+            <!-- //allmenu_wrap -->
+        </div>
+        <!-- 
+            //위치는 어디에 두어도 상관없음 작업시 주석 삭제
+         -->
+        <!-- //allmenu -->
+
+
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
