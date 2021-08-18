@@ -96,6 +96,8 @@
                     </div>
                     <!-- //modal -->
 
+
+
                     <nav class="nav">
                         <h2 class="sr-only">네비게이션</h2>
                         <button class="allmenu" data-toggle="modal" data-garget="#allmenu"><img
@@ -253,14 +255,34 @@
                                                 <!-- //alg-g -->
 
                                                 <div class="alg-t">
-                                                    <a href="#">AI어드바이저의 매수/매도 종목 알림 →</a>
-                                                    <a href="#">알고리즘 변경 알림 →</a>
-                                                    <a href="#">수익률 알림 →</a>
+                                                    <a href="javascript:;" data-toggle="modal" data-target="#algzm_sms">AI어드바이저의 매수/매도 종목 알림 →</a>
+                                                    <a href="javascript:;" data-toggle="modal" data-target="#algzm_sms">알고리즘 변경 알림 →</a>
+                                                    <a href="javascript:;" data-toggle="modal" data-target="#algzm_sms">수익률 알림 →</a>
                                                 </div>
                                                 <!-- //alg-t -->
                                             </div>
                                         </div>
                                         <!-- //alg_int04 -->
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="algzm_sms" tabindex="-1" role="dialog" aria-labelledby="AI알고리즘 안내 문자 샘플" aria-hidden="true">
+                                            <div class="modal-dialog" style="width:959px;margin-top:200px;">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">AI알고리즘 안내 문자 샘플</h4>
+                                                    </div>
+                                                    <!-- //header -->
+                                                    <div class="modal-body" style="padding:0;">
+                                                        <img src="./img/sub/algzm/algzm_sns.png" alt="문자샘플" width="100%">
+                                                    </div>
+                                                    <!-- //body -->
+                                                </div>
+                                                <!-- //content -->
+                                            </div>
+                                            <!-- //dialog -->
+                                        </div>
+                                        <!-- //modal -->
 
                                         <div class="alg_int05">
                                             <div class="txt">
@@ -508,7 +530,7 @@
                                                     <div class="guide">
                                                         <dl>
                                                             <dt>현재사용중인 알고리즘 :</dt>
-                                                            <dd class="dn">몬테나</dd>
+                                                            <dd><span class="dn btm">몬테나</span></dd>
                                                         </dl>
                                                     </div>
                                                     <!-- //guide -->
@@ -893,7 +915,7 @@
                                                     <div class="guide">
                                                         <dl>
                                                             <dt>현재사용중인 알고리즘 :</dt>
-                                                            <dd class="dn">몬테나</dd>
+                                                            <dd><span class="dn btm">몬테나</span></dd>
                                                         </dl>
                                                     </div>
                                                     <!-- //guide -->

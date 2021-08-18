@@ -432,13 +432,13 @@
                     }
 
                     padding: {
-                        top: 20px;
+                        top: 10px;
                     }
                 }
 
                 em{
                     position:absolute;
-                    bottom:15px;
+                    bottom:35px;
                     width:100%;
                     left:0;
                     text-align:center;
@@ -645,6 +645,7 @@
     display: block;
     height:24px;
     line-height:24px;
+    text-indent: 3px;
 
     font: {
         size: 20px;

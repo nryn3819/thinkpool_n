@@ -395,7 +395,7 @@
                         }
                         li{
                             display:block;
-                            width:104px;
+                            width:103px;
                             height:105px !important;
                             float:left;
                             text-align:center;
@@ -947,6 +947,15 @@ p.tbl-guide{
         width:673px;
         float:right;
 
+        &>strong{
+            display:block;
+            width:100%;
+            font-size:20px;
+            color:#333;
+            font-weight:700;
+            padding-top:10px;
+        }
+
         .cont{
             display:block;
             width:100%;
@@ -972,8 +981,14 @@ p.tbl-guide{
                 float:left;
 
                 dl{
+                    display:block;
+                    float:left;
+                    clear:left;
+
                     dt{
                         display:block;
+                        height:28px;
+                        line-height:28px;
                         float:left;
                         font-size:15px;
                         color:#333;
@@ -981,10 +996,44 @@ p.tbl-guide{
                     }
                     dd{
                         display:block;
+                        height:28px;
+                        line-height:28px;
                         float:left;
                         font-size:15px;
                         font-weight:300;
                         padding-left:5px;
+
+                        span.btm{
+                            border-bottom:1px solid #3e72ed;
+                        }
+
+                        span{
+                            display:inline-block;
+                            height:28px;
+                            line-height:28px;
+                            font-size:15px;
+                            font-weight:300;
+                            &::before{
+                                content:'';
+                                padding:0;
+                            }
+                        }
+
+                        .btn-primary{
+                            padding:0;
+                            height:28px;
+                            width:75px;
+                            border:1px solid #3e72ed;
+                            border-radius: 5px;
+                            background:#fff;
+                            color:#3e72ed;
+                            margin-left:10px;
+                            font-weight:300;
+
+                            &:focus,&:active{
+                                outline:0;
+                            }
+                        }
                     }
                 }
             }
@@ -1038,7 +1087,7 @@ p.tbl-guide{
                         font-size:15px;
                         color:#333;
                         font-weight:300;
-                        margin:14px 0 0 21px;
+                        margin:0 0 0 21px;
                     }
 
                     ul{
@@ -1104,6 +1153,22 @@ p.tbl-guide{
                 position:absolute;
                 top:-10px;
                 right:0;
+
+                &-block{
+                    position:static;
+                    display:block;
+                    top:0;
+                    float:left;
+                    margin-top:25px;
+                    width:100%;
+                    text-align:right;
+
+                    .btn{
+                        display:inline-block !important;
+                        width:170px !important;
+                        float:none !important;
+                    }
+                }
 
                 .btn{
                     display:block;
@@ -1804,6 +1869,7 @@ p.tbl-guide{
                 a{
                     float:right;
                     clear:right;
+                    cursor:pointer;
                 }
             }
         }
@@ -2240,5 +2306,41 @@ p.tbl-guide{
 
     em{
         font-style:normal;
+    }
+}
+
+.algzm_nomem{
+    display:block;
+    width:100%;
+    text-align:center;
+
+    p{
+        font-size:20px;
+        font-weight:300;
+        color:#666;
+    }
+
+    .button{
+        display:block;
+        margin-top:40px;
+
+        .btn{
+            display:inline-block;
+            width:210px;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+            border-radius: 40px;
+            font-size:16px;
+            color:#fff;
+            font-weight:300;
+            background:#3e72ed;
+            padding:0;
+            border:0;
+            margin:0 8px;
+            &:active,&:focus{
+                outline:0;
+            }
+        }
     }
 }

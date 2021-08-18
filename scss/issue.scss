@@ -203,6 +203,9 @@
                 background:#3e72ed;
                 color:#fff;
             }
+            &:focus,&:active{
+                outline:0;
+            }
         }
     }
 
