@@ -678,6 +678,14 @@
     }
   }
 }
+.main_tbl_obj{
+  display:block;
+  width:105px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
 
 @import 'main-items';
 @import 'error';
