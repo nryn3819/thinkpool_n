@@ -1718,6 +1718,16 @@ p.tbl-guide {
     padding-bottom: 45px;
     margin-top: 40px;
   }
+
+
+  .tab-pane{
+    .alg_btn_guide{
+      margin-top:80px;
+      border-top:1px solid #d6d6d6;
+      padding-top:60px;
+      padding-bottom:60px;
+    }
+  }
 }
 .alg_intro {
   display: block;
@@ -2036,6 +2046,13 @@ p.tbl-guide {
   width: 100%;
   float: left;
 
+  .sub-title{
+    padding:30px 0 20px 0;
+    border-bottom:1px solid #d6d6d6;
+    margin-bottom:40px;
+    float:left;
+  }
+
   &.alg-adviser {
     ul {
       width: 926px;
@@ -2098,6 +2115,13 @@ p.tbl-guide {
       }
     }
   }
+}
+
+.alg_c_sv{
+  display:block;
+  width:100%;
+  float:left;
+  margin-top:80px;
 }
 
 .alg-txt {
