@@ -38,6 +38,22 @@
 </head>
 
 <body>
+
+    <div class="msgAlarm">
+        <div class="alert alert-info alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <a href="#">새로운 쪽지가 도착했습니다.</a>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.msgAlarm').stop().animate({
+                bottom : 0
+            });
+        });
+    </script>
+    <!-- //쪽지알람 -->
+    
     <div id="wrap">
         <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
         <header id="header_w">
@@ -62,7 +78,15 @@
 
                             <li><a href="#" data-toggle="modal" data-target=".member_simple">필명필명필명(간편회원) <span
                                         class="glyphicon glyphicon-cog"></span></a></li>
-                            <li><a href="#">필명필명필명 <span class="glyphicon glyphicon-cog"></span></a></li>
+                            <li>
+                                <a href="#">필명필명필명</a>
+                                <a href="#" class="msgicon">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </a>
+                                <a href="#" class="msgicon on">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </a>
+                            </li>
                             <li><a href="#">로그아웃</a></li>
 
                         </ul>
@@ -232,8 +256,7 @@
                             <li role="presentation"><a href="#">종목인기글</a></li>
                             <li role="presentation"><a href="#">소셜분석</a></li>
                         </ul>
-                        <button type="button" class="btn btn-default"><img src="./img/sub/item/btn_bullet_naver.png"
-                                alt="네이버">종목토론</button>
+                        <button type="button" class="btn btn-primary">쪽지함</button>
                     </div>
                     <!-- //page_nav -->
 
@@ -275,6 +298,7 @@
                                     <div class="lev" data-toggle="modal" data-target="#user_class">
                                         <span class="label ico_cl01"></span>
                                         <span class="lv-text">장군</span>
+                                        
                                     </div>
                                     <!-- //레벨 -->
 
@@ -287,6 +311,10 @@
                                         <!-- //작성글더보기 -->
                                     </div>
                                     <!-- //유저정보 -->
+
+                                    <div class="sformsg">
+                                        <span class="glyphicon glyphicon-envelope"></span><a href="#">쪽지보내기</a>
+                                    </div>
                                 </div>
                                 <!-- //left -->
 

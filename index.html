@@ -61,6 +61,21 @@
 
         <!-- //이벤트 팝업 -->
 
+        <div class="msgAlarm">
+            <div class="alert alert-info alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <a href="#">새로운 쪽지가 도착했습니다.</a>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                $('.msgAlarm').stop().animate({
+                    bottom : 0
+                });
+            });
+        </script>
+        <!-- //쪽지알람 -->
+
         <div class="browser_w">
             <div class="browser">
                 <img src="./img/browser.jpg" alt="최신버전" usemap="#chekforbrws">
@@ -116,8 +131,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">필명필명필명
-                                        <span class="glyphicon glyphicon-cog"></span>
+                                    <a href="#">필명필명필명</a>
+                                    <a href="#" class="msgicon on">
+                                        <span class="glyphicon glyphicon-envelope"></span>
                                     </a>
                                 </li>
                                 <li>

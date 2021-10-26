@@ -173,104 +173,107 @@
                             <div class="item_board_nav mt-40">
                                 <h4 class="sr-only">나의활동카테고리</h4>
                                 <ul class="nav nav-tabs">
-                                    <li role="presentation" class="active"><a href="#">내글보기</a></li>
+                                    <li role="presentation" ><a href="#">내글보기</a></li>
                                     <li role="presentation"><a href="#">답글알림</a></li>
-                                    <li role="presentation"><a href="#">쪽지함</a></li>
+                                    <li role="presentation" class="active"><a href="#">쪽지함</a></li>
                                 </ul>
                             </div>
                             <!-- //item_board_nav -->
 
-                            <div class="board_tbl">
-                                <h4 class="sr-only">게시글리스트</h4>
-                                <table class="table table-hover">
-                                    <colgroup>
-                                        <col width="116">
-                                        <col width="*">
-                                        <col width="160">
-                                        <col width="95">
-                                        <col width="50">
-                                        <col width="80">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">구분/종목</th>
-                                            <th scope="col">제목</th>
-                                            <th scope="col">필명</th>
-                                            <th scope="col">날짜</th>
-                                            <th scope="col">조회</th>
-                                            <th scope="col">추천/반대</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>    
-                                        <tr class="">
-                                            <td class="text-left">
-                                                &nbsp;&nbsp;&nbsp;
-                                                <span>삼성전자</span>
-                                            </td>
-                                            <td>
-                                                <a href="#">
-                                                    <span class="obj">게시물 제목이 나옵니다.</span>
-                                                    <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="n_name">
-                                                    <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
-                                                    <span class="nick">0000123456@nv</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">23:30</td>
-                                            <td class="text-center">123</td>
-                                            <td class="text-center">12/22</td>
-                                        </tr>
-                                        <!-- //일반 -->
-    
-                                        <tr class="">
-                                            <td class="text-left">
-                                                &nbsp;&nbsp;&nbsp;
-                                                <span>삼성전자</span>
-                                            </td>
-                                            <td>
-                                                <a href="#">
-                                                    <span class="obj">게시물 제목이 나옵니다.</span>
-                                                    <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="n_name">
-                                                    <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
-                                                    <span class="nick">0000123456@nv</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">23:30</td>
-                                            <td class="text-center">123</td>
-                                            <td class="text-center">12/22</td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
+                            <div class="dcsbox tab-sm mt-40">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#">받은쪽지</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">보낸쪽지</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">쪽지보내기</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- //board_tbl -->
+                            <!-- // -->
 
-                            <div class="paging text-center">
-                                <ul class="pagination">
-                                    <li>
-                                      <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                      </a>
-                                    </li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                      <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                      </a>
-                                    </li>
-                                  </ul>
+                            <div class="msgBoard">
+                                <div class="board_top_btn mt-40">
+                                    <h4 class="sr-only">게시판버튼</h4>
+                                    <button type="button" class="btn btn-primary pull-left">전체선택</button>
+                                    <button type="button" class="btn btn-default pull-left">선택삭제</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="board_tbl">
+                                    <h4 class="sr-only">쪽지함리스트</h4>
+                                    <table class="table table-striped pull-left">
+                                        <colgroup>
+                                            <col width="7%">
+                                            <col width="*">
+                                            <col width="25%">
+                                            <col width="15%">
+                                            <col width="15%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" colspan="2">내용</th>
+                                                <th scope="col">보낸사람</th>
+                                                <th scope="col">받은시간</th>
+                                                <th scope="col">확인시간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" class="msgcheck"></td>
+                                                <td><a href="#" class="elipsis">안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.</a></td>
+                                                <td class="text-center"><a href="#">씽크지기</a></td>
+                                                <td class="text-center">2021.02.02 12:11</td>
+                                                <td class="text-center">2021.02.02 12:11</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" class="msgcheck"></td>
+                                                <td><a href="#" class="elipsis">안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.안녕하세요 어쩌고 저쩌고 쪽지 내용입니다.</a></td>
+                                                <td class="text-center"><a href="#">씽크지기</a></td>
+                                                <td class="text-center">2021.02.02 12:11</td>
+                                                <td class="text-center dn">미열람</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // -->
+
+                                <div class="board_btm_btn mt-10">
+                                    <h4 class="sr-only">게시판버튼</h4>
+                                    <button type="button" class="btn btn-primary pull-left">전체선택</button>
+                                    <button type="button" class="btn btn-default pull-left">선택삭제</button>
+                                    <span class="pull-right">최대보관기간:3개월</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="paging text-center">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- // -->
+
                             </div>
+                            <!-- // -->
 
                         </div>
                         <!-- //section -->

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
         integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- basic css -->
-    <link rel="stylesheet" href="scss/common.scss">
+    <link rel="stylesheet" href="css/common.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -173,107 +173,62 @@
                             <div class="item_board_nav mt-40">
                                 <h4 class="sr-only">나의활동카테고리</h4>
                                 <ul class="nav nav-tabs">
-                                    <li role="presentation" class="active"><a href="#">내글보기</a></li>
+                                    <li role="presentation" ><a href="#">내글보기</a></li>
                                     <li role="presentation"><a href="#">답글알림</a></li>
-                                    <li role="presentation"><a href="#">쪽지함</a></li>
+                                    <li role="presentation" class="active"><a href="#">쪽지함</a></li>
                                 </ul>
                             </div>
                             <!-- //item_board_nav -->
 
-                            <div class="board_tbl">
-                                <h4 class="sr-only">게시글리스트</h4>
-                                <table class="table table-hover">
-                                    <colgroup>
-                                        <col width="116">
-                                        <col width="*">
-                                        <col width="160">
-                                        <col width="95">
-                                        <col width="50">
-                                        <col width="80">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">구분/종목</th>
-                                            <th scope="col">제목</th>
-                                            <th scope="col">필명</th>
-                                            <th scope="col">날짜</th>
-                                            <th scope="col">조회</th>
-                                            <th scope="col">추천/반대</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>    
-                                        <tr class="">
-                                            <td class="text-left">
-                                                &nbsp;&nbsp;&nbsp;
-                                                <span>삼성전자</span>
-                                            </td>
-                                            <td>
-                                                <a href="#">
-                                                    <span class="obj">게시물 제목이 나옵니다.</span>
-                                                    <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="n_name">
-                                                    <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
-                                                    <span class="nick">0000123456@nv</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">23:30</td>
-                                            <td class="text-center">123</td>
-                                            <td class="text-center">12/22</td>
-                                        </tr>
-                                        <!-- //일반 -->
-    
-                                        <tr class="">
-                                            <td class="text-left">
-                                                &nbsp;&nbsp;&nbsp;
-                                                <span>삼성전자</span>
-                                            </td>
-                                            <td>
-                                                <a href="#">
-                                                    <span class="obj">게시물 제목이 나옵니다.</span>
-                                                    <span class="blind">부적절한 게시물로 블라인드 처리된 글 입니다.</span>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="n_name">
-                                                    <span class="label label-circle"><img src="./img/sub/board/user_ico.png" alt="유저아이콘"></span>
-                                                    <span class="nick">0000123456@nv</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">23:30</td>
-                                            <td class="text-center">123</td>
-                                            <td class="text-center">12/22</td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //board_tbl -->
-
-                            <div class="paging text-center">
-                                <ul class="pagination">
-                                    <li>
-                                      <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                      </a>
+                            <div class="dcsbox tab-sm mt-40">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#">받은쪽지</a>
                                     </li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                      <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                      </a>
+                                    <li class="">
+                                        <a href="#">보낸쪽지</a>
                                     </li>
-                                  </ul>
+                                    <li class="">
+                                        <a href="#">쪽지보내기</a>
+                                    </li>
+                                </ul>
                             </div>
+                            <!-- // -->
 
+                            <div class="msgBoard">
+                                
+                                <div class="msgInfo mt-20">
+                                    <dl>
+                                        <dt>보낸사람</dt>
+                                        <dd>씽크지기</dd>
+
+                                        <dt>발송시간</dt>
+                                        <dd>2021.02.02 12:05</dd>
+                                    </dl>
+                                    <button class="btn btn-primary pull-right">답장보내기</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="msgCont mt-20">
+                                    쪽지 내용입니다. 어쩌고 저쩌고 쪽지 내용입니다. <br>
+                                    어쩌고 저쩌고 쪽지 내용입니다. 어쩌고 저쩌고 쪽지 내용입니다. <br>
+                                    어쩌고 저쩌고 쪽지 내용입니다. 어쩌고 저쩌고 쪽지 내용입니다. 어쩌고 저쩌고 
+                                </div>
+                                <!-- // -->
+                                <div class="board_btm_btn text-center mt-20">
+                                    <h4 class="sr-only">게시판버튼</h4>
+                                    <button type="button" class="btn btn-default pull-none">목록</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="hspace100"></div>
+
+                            </div>
+                            <!-- // -->
+                            
                         </div>
                         <!-- //section -->
+
 
                         <div class="modal fade bs-example-modal-sm" id="user_class" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
