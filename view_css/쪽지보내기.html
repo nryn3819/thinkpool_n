@@ -195,14 +195,16 @@
                             </div>
                             <!-- // -->
 
-                            <div class="msgBoard mt-20">
+                            <div class="msgBoard mt-20 pull-left">
                                 <div class="addSend">
-                                    <dl>
-                                        <dt>받는사람</dt>
-                                        <dd><input type="text" name="" id="" class="form-control"> <button class="btn btn-primary">추가</button> <span>(최대 10명)</span></dd>
-                                    </dl>
+                                    <div class="addSendInput">
+                                        <dl>
+                                            <dt>받는사람 필명</dt>
+                                            <dd><input type="text" name="" id="" class="form-control" placeholder="필명을 정확히 입력해 주세요."> <button class="btn btn-primary">+ 추가</button> <span>(최대 10명)</span></dd>
+                                        </dl>
+                                    </div>
 
-                                    <div class="addList mt-20">
+                                    <div class="addList mt-40">
                                         <ul>
                                             <li><span>씽크지기</span><button>&times;</button></li>
                                             <li><span>씽크지기1</span><button>&times;</button></li>
@@ -219,8 +221,8 @@
                                 </div>
                                 <!-- // -->
 
-                                <div class="lstnick mt-20">
-                                    <h4 class="sub-title-s dn">최근에 보낸쪽지 필명 <em>(필명을 클릭하시면 받는사람에 추가됩니다.)</em></h4>
+                                <div class="lstnick mt-40">
+                                    <h4 class="sub-title-s">최근에 보낸쪽지 필명 <em>(필명을 클릭하시면 받는사람에 추가됩니다.)</em></h4>
 
                                     <div class="lstList mt-20">
                                         <ul>
@@ -240,10 +242,11 @@
                                 </div>
                                 <!-- // -->
 
-                                <div class="msginput mt-20">
-                                    <span class="pull-right">0/2,000</span>
+                                <div class="msginput">
+                                    <span class="pull-right">0/2000byte</span>
+                                    <p class="up text-left">※ 스팸 및 악의적인 쪽지 발송시 씽크풀 이용이 제한 될 수 있습니다.</p>
 
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="※ 스팸 및 악의적인 쪽지 발송시 씽크풀 이용이 제한 될 수 있습니다."></textarea>
+                                    <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
 
                                     <button class="btn btn-primary">쪽지보내기</button>
                                 </div>

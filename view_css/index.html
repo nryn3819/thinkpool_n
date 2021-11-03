@@ -6,8 +6,7 @@
         <title>thinkpool</title>
         <!-- font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
         <link
         rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -31,36 +30,57 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+
         <div class="modal fade" id="e-pop">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <p><img src="./img/epop.jpg" alt="오픈이벤트"></p>
-                    <div class="btn-group">
-                        <button class="btn btn-default">자세히 알아보기</button>
-                        <button class="btn btn-primary">리뉴얼 이벤트 보기</button>
-                    </div>
-  
-                    <div class="today">
-                        <div class="left">
-                            <label for="popcheck01"><input type="checkbox" id="popcheck01"><span>다시 보지 않음</span></label>
-                            <label for="popcheck02"><input type="checkbox" id="popcheck02"><span>오늘은 이 창 열지 않음</span></label>
-                        </div>
-                        <div class="close">
-                            <button data-dismiss="modal">닫기 &times;</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-  
-          <script>
-              $(function(){
-                  $('#e-pop').modal('show');
-              });
-          </script>
-  
-          <!-- //이벤트 팝업 -->
-          <div class="browser_w">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <p><img src="./img/epop.jpg" alt="오픈이벤트"></p>
+                  <div class="btn-group">
+                      <button class="btn btn-default">자세히 알아보기</button>
+                      <button class="btn btn-primary">리뉴얼 이벤트 보기</button>
+                  </div>
+
+                  <div class="today">
+                      <div class="left">
+                          <label for="popcheck01"><input type="checkbox" id="popcheck01"><span>다시 보지 않음</span></label>
+                          <label for="popcheck02"><input type="checkbox" id="popcheck02"><span>오늘은 이 창 열지 않음</span></label>
+                      </div>
+                      <div class="close">
+                          <button data-dismiss="modal">닫기 &times;</button>
+                      </div>
+                  </div>
+              </div>
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <script>
+            $(function(){
+                $('#e-pop').modal('show');
+            });
+        </script>
+
+        <!-- //이벤트 팝업 -->
+
+        <div class="msgAlarm">
+            <p>쪽지가 도착했습니다.</p>
+            <a href="#">→쪽지함 이동</a>
+            <a class="close_m">&times;</a>
+        </div>
+        <script>
+            $(function(){
+                $('.msgAlarm').stop().animate({
+                    bottom : '30px'
+                });
+                $('.msgAlarm .close_m').on('click', function(){
+                    $('.msgAlarm').fadeOut().css({
+                        bottom : '-150px'
+                    });
+                });
+            });
+        </script>
+        <!-- //쪽지알람 -->
+
+        <div class="browser_w">
             <div class="browser">
                 <img src="./img/browser.jpg" alt="최신버전" usemap="#chekforbrws">
                 <em class="top_close">오늘하루 이창을 열지 않음</em>
@@ -88,7 +108,6 @@
             </script>
         </div>
         <!-- // -->
-          
         <div id="wrap">
             <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
             <header id="header_w">
@@ -109,16 +128,20 @@
                             <h2 class="sr-only">사용자메뉴</h2>
                             <ul>
                                 <!-- <li><a href="#">로그인</a></li>
-                                                            <li><a href="#">회원가입</a></li> -->
+                                    <li><a href="#">회원가입</a></li> -->
+                                <li>
+                                    <a href="#" class="msgicon">
+                                        <img src="./img/msg.png" alt="">
+                                        <img src="./img/msg_n.png" alt="">
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#" data-toggle="modal" data-target=".member_simple">필명필명필명(간편회원)
                                         <span class="glyphicon glyphicon-cog"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">필명필명필명
-                                        <span class="glyphicon glyphicon-cog"></span>
-                                    </a>
+                                    <a href="#">필명필명필명</a>
                                 </li>
                                 <li>
                                     <a href="#">로그아웃</a>
@@ -202,13 +225,31 @@
             <section id="container_w">
                 <div id="container">
                     <h2 class="sr-only">본문내용</h2>
-                    <div
-                        id="content" class="sub nbg mt-20">
+                    <nav id="subNav" class="garo"><ul><li data-v-39c5b1aa=""><a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active active" data-v-39c5b1aa=""><!---->
+                        AI정보분석 홈
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/sise" data-v-39c5b1aa="" class=""><!---->
+                        시세분석
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/issue" data-v-39c5b1aa="" class=""><!---->
+                        이슈분석
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/supply" data-v-39c5b1aa="" class=""><!---->
+                        수급분석
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/theme/" data-v-39c5b1aa="" class=""><!---->
+                        테마/업종
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/notice" data-v-39c5b1aa="" class=""><!---->
+                        공시분석
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/report" data-v-39c5b1aa="" class=""><!---->
+                        리포트분석
+                      </a></li><li data-v-39c5b1aa=""><a href="/analysis/news" data-v-39c5b1aa="" class=""><!---->
+                        뉴스
+                      </a></li></ul></nav>
+
+                      
+                    <div id="content" class="sub nbg mt-80">
                         <!-- nbg 추가 -->
                         <h3 class="sr-only">AI추천종목</h3>
                         <div class="sub-content">
                             <h4 class="sr-only">코스피/코스닥</h4>
-                            <div class="sub-section mt-80 mainTopSection">
+                            <div class="sub-section mt-0 mainTopSection">
                                 <div class="main-chart">
                                     <div class="left left-chart">
                                         <div class="info">
@@ -422,7 +463,7 @@
                                                                 <tr>
                                                                     <td>
                                                                         <a href="#">
-                                                                            <span>종목명종목명종목</span>
+                                                                            <span class="main_tbl_obj">종목명종목명종목종목</span>
                                                                         </a>
                                                                     </td>
                                                                     <td class="text-right">

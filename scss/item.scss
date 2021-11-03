@@ -261,6 +261,19 @@
                 outline:0;
             }
         }
+        &.btn-massage{
+            font : {
+                size:16px;
+                weight:300;
+            }
+            color:#333;
+            padding:0 25px 0 45px;
+            background:url(../img/pMsg.png) no-repeat 20px 10px;
+            background-size:17px auto;
+            &:focus{
+                outline:0;
+            }
+        }
         &.btn-primary{
             top:2px;
             height:46px;

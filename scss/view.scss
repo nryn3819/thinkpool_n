@@ -115,11 +115,22 @@
                     }
                 }
 
+                a.msg{
+                    display:inline-block;
+                    font-size:13px;
+                    color:#666;
+                    padding-left:15px;
+                    background:url(../img/msg.png) no-repeat 0 0;
+                    background-size:20px auto;
+                    text-decoration: none;
+                }
+
                 a {
                     display: inline-block;
                     font-size: 13px;
                     color: #3e72ed;
                     text-decoration: underline;
+                    margin-left:5px;
                 }
             }
         }

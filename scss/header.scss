@@ -115,17 +115,20 @@
 
             a {
               display: inline-block;
-              height: 15px;
-              line-height: 15px;
+              height: 26px;
+              line-height: 26px;
               font-size: 13px;
               color: #888;
               font-weight: 300;
 
               span{
-                line-height:15px;
+                line-height:26px;
                 font-size:13px;
                 color:#666;
                 padding-left:3px;
+              }
+              img{
+                float:left;
               }
             }
             span{
@@ -146,6 +149,8 @@
             &::before {
               padding-right: 6px;
               content: '\00B7';
+              float:left;
+              margin-top:5px;
             }
           }
         }
