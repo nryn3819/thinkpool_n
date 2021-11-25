@@ -7,6 +7,7 @@
         padding-top:40px;
 
         &.box01{
+            position:relative;
             min-height:180px;
             background:url(https://img.thinkpool.com/www/img/sub/usrguide/boxbg.png) no-repeat 675px 8px;
 
@@ -25,6 +26,14 @@
                         color:#7874F7;
                     }
                 }
+            }
+
+            .itemGuideBnr{
+                position:absolute;
+                top:-20px;
+                right:31px;
+                border-radius: 5px;
+                overflow:hidden;
             }
 
             .box-title{
