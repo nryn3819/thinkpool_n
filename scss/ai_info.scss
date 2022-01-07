@@ -2373,3 +2373,53 @@ p.tbl-guide {
     }
   }
 }
+
+#endGuide{
+  .modal-header{
+    display:block;
+    border-bottom:0;
+    padding:10px 20px;
+  }
+  .modal-body{
+    display:block;
+    overflow:hidden;
+    padding:10px 30px;
+
+    strong{
+      display:block;
+      width:100%;
+      float:left;
+      font-size:20px;
+      color:#333;
+    }
+
+    span{
+      display:block;
+      width:100%;
+      float:left;
+      margin:30px 0 0 0;
+      font-size:16px;
+      line-height:26px;
+
+      em{
+        font-style:normal;
+      }
+    }
+  }
+  .modal-footer{
+    display:block;
+    border-top:0;
+    padding:30px 30px 55px 30px;
+    text-align:center;
+
+    button{
+      border:0;
+      padding:0 30px;
+      height:40px;
+      border-radius: 40px;
+      background:#3e72ed;
+      font-size:16px;
+      line-height:40px;
+    }
+  }
+}

@@ -193,7 +193,7 @@
 
                                             <div class="btnbox">
                                                 <button class="btn btn-alg01">서비스 이용방법</button>
-                                                <button class="btn btn-alg02">서비스 구독하기</button>
+                                                <button data-toggle="modal" data-target="#endGuide" class="btn btn-alg02">서비스 구독하기</button>
                                             </div>
                                             <!-- // -->
                                         </div>
@@ -483,7 +483,7 @@
             
                                             <div class="btnbox">
                                                 <button class="btn btn-alg03">알고리즘전체보기</button>
-                                                <button class="btn btn-alg04">서비스 구독하기</button>
+                                                <button data-toggle="modal" data-target="#endGuide" class="btn btn-alg04">서비스 구독하기</button>
                                             </div>
                                         </div>
                                         <!-- // -->
@@ -1446,6 +1446,42 @@
             //위치는 어디에 두어도 상관없음 작업시 주석 삭제
          -->
         <!-- //allmenu -->
+
+
+        <div id="endGuide" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="서비스종료안내">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <!-- //modal-header -->
+
+                    <div class="modal-body text-center">
+                        <strong>AI어드바이저 신규가입 중단안내</strong>
+
+                        <span class="text-center">
+                            <em class="dn">서비스 업그레이드 예정</em>으로 <em class="up">신규가입이 중단</em>되었습니다. <br>
+                            새로운 알고리즘 서비스로 찾아 뵙겠습니다.
+                        </span>
+
+                        <span>
+                            &#8251; 현재 'AI알고리즘' 서비스는 정상적으로 이용이 가능하오니<br>
+                            신규가입을 원하시는 분들은 <br>
+                            'AI알고리즘' 서비스를 이용하시기 바랍니다.
+                        </span>
+                    </div>
+                    <!-- //modal-body -->
+
+                    <div class="modal-footer text-center">
+                        <button class="btn btn-primary">AI알고리즘 바로가기</button>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- //modal-content -->
+            </div>
+            <!-- //modal-diaolg -->
+        </div>
+        <!-- //modal -->
 
 
     </div>
