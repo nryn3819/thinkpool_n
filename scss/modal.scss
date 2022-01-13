@@ -551,3 +551,54 @@
     }
 }
 
+
+#paytonotice{
+    margin-top:200px;
+    .modal-header{
+        border-bottom:0;
+        padding:10px 15px;
+    }
+
+    .modal-body{
+        text-align:Center;
+
+        strong{
+            display:block;
+            width:100%;
+
+            font-size:24px;
+            color:#333;
+            font-weight:700;
+        }
+
+        span{
+            display:block;
+            width:100%;
+            font-size:16px;
+            line-height:30px;
+            font-weight:300;
+
+            margin-top:20px;
+
+            em{
+                font-style:normal;
+            }
+        }
+    }
+
+    .modal-footer{
+        text-align:Center;
+        border-top:0;
+        padding-bottom:50px;
+
+        button{
+            width:165px;
+            height:40px;
+            border-radius: 40px;
+            font-size:16px;
+            border:0;
+            background:#3E72ED;
+        }
+    }
+}
+

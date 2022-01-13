@@ -264,3 +264,49 @@
 
     }
 }
+
+//팝업
+#svguide{
+    margin-top:300px;
+
+    .modal-content{
+        width:470px;
+    }
+
+    .modal-header{
+        border-bottom:0;
+        padding:15px 15px 0 15px;
+    }
+    .modal-body{
+
+        .svguide_txt{
+            text-align:center;
+            font-size:16px;
+            color:#333;
+            font-weight:300;
+            line-height:30px;
+
+            em{
+                font-style:normal;
+            }
+        }
+    }
+    .modal-footer{
+        text-align:center !important;
+        border-top:0;
+        padding-bottom:30px;
+
+        button{
+            width:125px;
+            height:40px;
+            border-radius: 40px;
+            padding:0;
+            border:0;
+            font-size:16px;
+
+            &.btn-primary{
+                background:#3272ed;
+            }
+        }
+    }
+}
