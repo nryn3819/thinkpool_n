@@ -1,0 +1,24 @@
+//navigation
+.globalNavigation {
+    display: flex;
+    width: 100%;
+    min-width:360px;
+    max-width:480px;
+    padding: 0 18px;
+    margin:14px 0 0 0;
+    justify-content: space-around;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    a{
+        height:37px;
+        line-height:37px;
+        font-size:15px;
+        color:#000;
+
+        &.active{
+            font-weight:700;
+            border-bottom:2px solid #000;
+        }
+    }
+}

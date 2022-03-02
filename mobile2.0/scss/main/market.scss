@@ -1,0 +1,136 @@
+//market
+.market{
+    
+    .marketList{
+        padding:0 17px;
+
+        .list{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:10px 0 11px 0;
+            border-bottom:1px solid #e2e2e2;
+
+            &:last-child{
+                border-bottom:0;
+            }
+
+            .leftDate{
+                display:flex;
+                justify-content: center;
+                align-items: stretch;
+                flex-wrap: wrap;
+                width:45px;
+                height:51px;
+
+                span{
+                    display:inline-block;
+                    font-size:16px;
+                    color:#999;
+                    height:23px;
+                    line-height:23px;
+                    font-weight:400;
+
+                    &.pvl{
+                        margin-top:5px;
+                    }
+                }
+            }
+
+
+            .left{
+                display:block;
+                width:calc(100% - 77px);
+
+                &-sec{
+                    width:calc(100% - 77px - 45px);
+                }
+
+                .top{
+                    width:100%;
+                    min-height:23px;
+                    line-height:23px;
+
+                    .date{
+                        font-size:16px;
+                        color:#999;
+                        font-weight:400;
+                    }
+                    .pvl{
+                        font-size:16px;
+                        color:#999;
+                        font-weight:400;
+                    }
+
+                    .nameObj{
+                        font-size:16px;
+                        color:#000;
+                        font-weight:700;
+                    }
+                }
+                
+                .btm{
+                    width:100%;
+                    min-height:23px;
+                    line-height:23px;
+                    padding-top:5px;
+
+                    .contxt{
+                        font-size:14px;
+                        color:#000;
+                    }
+                }
+            }
+            .right{
+                display:block;
+                width:66px;
+
+                .per{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width:100%;
+                    min-height:18px;
+                    max-height:30px;
+                    box-sizing: content-box;
+                    background:#cbcbcb;
+                    font-size:12px;
+                    color:#fff;
+                    padding:3px 0;
+                    text-align:center;
+                    border-radius: 3px;
+
+                    &.up{
+                        background:#FF414F;
+                    }
+                    &.dn{
+                        background:#5367FF;
+                    }
+                    
+                    span{
+                        display:block;
+                        width:100%;
+                        height:15px;
+                        line-height:15px;
+                        font-weight:300;
+                    }
+                    em{
+                        display:block;
+                        width:100%;
+                        height:15px;
+                        line-height:15px;
+                        font-weight:700;
+                    }
+                }
+            }
+
+            &-market{
+                .right{
+                    width:56px;
+                }
+            }
+
+        }
+    }
+}

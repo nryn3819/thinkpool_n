@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle subTitle text-truncate">
+                        <strong>기관관심이슈</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn subSch">
+                        <button type="button" class="schButton">종목검색</button>
+                    </div>
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section section-npd">
+                    <h3 class="visually-hidden">기관관심이슈</h3>
+                    <!-- issue.scss -->
+                    <div class="main-issue rpl-17 rpr-17">
+                        <nav>
+                            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="issue01" type="button" role="tab" aria-controls="기관" aria-selected="true">기관</button>
+                                <button class="nav-link" id="issue02" type="button" role="tab" aria-controls="외국인" aria-selected="false">외국인</button>
+                            </div>
+                        </nav>
+                        <!-- // -->
+
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="tab01" role="tabpanel" aria-labelledby="기관">
+                                <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+                            </div>
+                        </div>
+                        <!-- //tab-content -->
+                    </div>
+                    <!-- // -->
+
+                    <div style="width:100%">
+                        <div class="itemUpdate nbdtm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                            </svg>
+                            <span>12/31 12:30</span>
+                        </div>
+
+                        <div class="issue-tbl-box">
+                            <div class="tbl-guide">&middot; [기관 순매수 비중이 높은 종목]이 많은 이슈</div>
+                            <table class="table table-custom-bordered">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="70%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">이슈</th>
+                                        <th scope="col">기관 매수비중 상위종목</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">산소<br>측정기</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br text-center"><span class="text-truncate fw-bold">메타버스</span></th>
+                                        <td>
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>,
+                                            <span>삼성전자</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="issue-alarm rmt-25">
+                        <div class="alarm ai">
+                            <span>최근 3일이내  AI가 추천한 종목이 <em class="dn">3개</em> <br> 있습니다.</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="alarm rs">
+                            <span>최근 3일이내  매수신호가 발생한 종목이 <br><em class="dn">3개</em> 있습니다.</span>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                    
+                </section>
+
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

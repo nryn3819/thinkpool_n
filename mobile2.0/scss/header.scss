@@ -1,0 +1,51 @@
+//header
+#header {
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    width:100%;
+    border-bottom: 1px solid #d6d6d6;
+    background:#fff;
+    z-index:99;
+    overflow:hidden;
+
+    &.item{
+        padding-bottom:14px;
+        border-bottom:1px solid #d6d6d6;
+    }
+}
+.logo{
+    width:32px;
+    height:20px;
+
+    a{
+        width:100%;
+        height:20px;
+        float:left;
+
+        img{
+            float:left;
+        }
+    }
+}
+#top{
+    display:flex;
+    width:100%;
+    height:20px;
+    justify-content: space-between;
+    align-content: center;
+    padding:0 18px;
+    margin-top:14px;
+}
+
+.allNav{
+    display: flex;
+    width:100%;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+@import './header/topSch.scss';
+@import './header/sideMenu.scss';
+@import './header/globalNavigation.scss';
+@import './header/headerClss.scss';

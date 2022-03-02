@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+
+//변수
+
+$miniMobile: 360px;
+$desktop : 719px;
+
+@mixin mini {
+    @media (max-width: $miniMobile) {
+        @content;
+    }
+}
+
+@mixin web {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+
+
+* {
+    @include mobile {
+        -ms-overflow-style: none;
+        /* IE, Edge */
+        scrollbar-width: 0;
+
+        /* Firefox */
+        //scrollbar-height: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+
+.two_line {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+em {
+    font-style: normal;
+}
+
+.up {
+    color: #FF4150;
+}
+
+.dn {
+    color: #5367FF;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: -9999em;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+b, strong{
+    font-weight: 700 !important;
+}
+
+.noMargin {
+    margin: 0 !important;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.noBorder {
+    border: 0 !important;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+
+
+//   section
+.section {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+
+    &-basic {
+        padding: 22px 17px;
+    }
+
+    &-item {
+        padding: 0;
+
+        &-home {
+            padding: 0 17px;
+        }
+    }
+
+    &-npd {
+        padding: 22px 0;
+
+        .title {
+            padding-left: 17px
+        }
+
+        .title-bullet {
+            padding-left: 39px;
+        }
+
+        .shorcutBtn {
+            padding: 0 17px;
+        }
+    }
+}
+
+
+//시간
+.upTime {
+    position: absolute;
+    top: 24px;
+    right: 17px;
+    height: 16px;
+    line-height: 16px;
+    text-align: right;
+    font-size: 13px;
+    color: #999;
+
+    @include mini {
+        right: 10px;
+        font-size: 11px;
+    }
+}
+
+//latest
+.latest {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        height: 45px;
+        line-height: 45px;
+        padding: 0;
+        border-bottom: 1px solid #E2E2E2;
+        font-size: 16px;
+        color: #000;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &-m {
+        padding: 16px 0 0 0;
+    }
+}
+
+
+//radio
+.radionCheckingBox {
+    padding: 10px 17px 0;
+
+    .form-check-inline {
+
+        margin-right: 15px;
+
+        input[type='radio'] {
+            width: 20px;
+            height: 20px;
+        }
+
+        label {
+            margin: .2em 0 0 .5em;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #000;
+        }
+
+    }
+}
+
+// btn
+
+.btn {
+    &-outline {
+
+        &-detail {
+            height: 37px !important;
+            padding: 0 !important;
+            border-radius: 4px !important;
+            border: 1px solid #d5d5d5 !important;
+            font-size: 14px !important;
+            color: #000 !important;
+            background: #fff;
+        }
+    }
+
+    &-customOutline {
+
+        &-primary {
+            padding: 0 13px !important;
+            height: 18px !important;
+            border-radius: 18px !important;
+            font-size: 10px !important;
+            font-weight: 300 !important;
+            margin: 0 !important;
+            border: 1px solid #5368FF !important;
+            color: #5368FF !important;
+        }
+    }
+}
+
+
+
+
+.itemUpdate {
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: right;
+    margin: 5px 17px 0;
+    padding: 10px 0;
+    box-sizing: content-box;
+    color: #989898;
+
+    &.nbdtm{
+        border-bottom:0;
+    }
+
+    span {
+        font-size: 13px;
+        color: #999;
+    }
+}
+
+.ab-price {
+    top: 22px;
+    right: 17px;
+
+    span {
+        font-weight: 700;
+
+        &:first-child {
+            font-size: 16px;
+            color: #000;
+        }
+
+        &:nth-child(2n) {
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+
+
+
+@import 'mpsize.scss'; //마진패딩값
+@import 'layout.scss'; //레이아웃
+@import 'title.scss'; //타이틀
+@import 'main.scss'; //메인
+@import 'sub.scss'; //서브
+@import 'fadeinout.scss'; //페이드 인 아웃
+@import 'modal.scss'; // 모달
+@import 'table.scss'; // 테이블
+@import 'swiper.scss'; // 스와이프
+@import 'nav.scss'; //마진패딩값

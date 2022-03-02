@@ -1,0 +1,2843 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="main.html" class="float-start"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                    </div>
+                    <!-- //logo -->
+                
+                    <div class="topSch">
+                        <h3 class="visually-hidden">종목검색영역</h3>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
+                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                        </div>
+                    </div>
+                    <!-- //sch -->
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+
+
+                <div class="allNav">
+                    <menu class="globalNavigation float-start">
+                        <h3 class="visually-hidden">네비게이션</h3>
+                        <a href="#" class="active">AI분석</a>
+                        <a href="#">AI추천</a>
+                        <a href="#">라씨매매신호</a>
+                        <a href="#">AI속보</a>
+                        <a href="#">토론실</a>
+                    </menu>
+                    <!-- //gloabal navi -->
+                </div>
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+                <section class="section section-item">
+                    <h3 class="visually-hidden">나의종목</h3>
+                    <!-- item.scss -->
+                    <!-- 
+                        좋아요 있는 박스 item-lg 클래스
+                        좋아요 없는 박스 item-sm 클래스 
+                        a태그 쓰기 싫어서 onclick 넣어두었는데 
+                        버튼 링크 타듯이 만들어주셔도 되고 
+                        a태그로 묶어도 됩니다. 
+                     -->
+                    <div id="myItem">
+                        <div class="myItemList">
+                            <div class="myItemBox title shadow-sm" onclick="location.href='./itemhome.html' ">
+                                <div>
+                                    <strong>MY</strong>
+                                    <span>종목</span>
+                                </div>
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                                <span class="name text-truncate">KOSPI</span>
+                                <!-- //종목명 -->
+                                <span class="price">2,920.2</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <!-- <span class="fav">
+                                    <em class="active"></em>
+                                </span> -->
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            
+                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                                <span class="name text-truncate">KOSDAQ</span>
+                                <!-- //종목명 -->
+                                <span class="price">920.2</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <!-- <span class="fav">
+                                    <em></em>
+                                </span> -->
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">LG에너지솔라솔라</span>
+                                <!-- //종목명 -->
+                                <span class="price">234,000</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav active">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+
+                            <!-- <div class="myItemBox item item-null">
+                                <span class="null">
+                                    최근 조회 종목이 없습니다.
+                                </span>
+                            </div> -->
+                            <!-- //item -->
+
+                            <!-- 
+                                ((template 수 + 1 ) * 100)
+                             -->
+                        </div>
+                    </div>
+                    <!-- //myItem -->
+                </section>
+                <!-- // 나의종목-->
+
+                <section class="section section-basic rmt-8">
+                    <h3 class="visually-hidden">이슈분석</h3>
+                    <!-- issue.scss -->
+                    <div class="main-issue">
+                        <nav>
+                            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                                <button class="nav-link active">AI이슈포착</button>
+                                <button class="nav-link" onclick="loaction.href='기관관심이슈.html'">기관이슈</button>
+                                <button class="nav-link" onclick="loaction.href='기관관심이슈.html'">외국인이슈</button>
+                            </div>
+                        </nav>
+                        <!-- // -->
+
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane show active" >
+                                <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+                            </div>
+                        </div>
+                        <!-- //tab-content -->
+                    </div>
+
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail" onclick="location.href='최근이슈.html'">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- //바로가기 -->
+                </section>
+                <!-- // 이슈-->
+                <div class="modal fade custom-modal1" id="issueModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="이슈팝업" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!-- //header -->
+                            
+                            <div class="modal-body">
+                                <h5 class="rmTitle text-truncate"><em class="dn">수소</em> 검색빈도 및 종목 누적 등락률</h5>
+                                <div class="issue-obj text-truncate">문 대통령 '2050년 100% 청정수고 전환 정부 2050년 정부 청정수고</div>
+                                <div class="rmCont noBorder">
+
+                                    <div class="issue-chart rmt-25">
+                                        <img src="./img/pop_demo_chart.png" alt="" class="img-fluid">
+                                    </div>
+                                    <!-- //issue-chart -->
+
+                                    <div class="issue-list rmt-25">
+                                        <strong class="title">주요종목</strong>
+
+                                        <div class="mainListTable rmt-10">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="itemObj text-truncate">삼성전자삼성전자삼성전자삼성전자삼성전자</span>
+                                                        </th>
+                                                        <td class="text-end" width="70">
+                                                            <span class="per up">+2.5%</span>
+                                                        </td>
+                                                        <td class="text-end" width="70">
+                                                            <span class="state state-per st01">+27.2%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- //template -->
+                
+                                                    <tr>
+                                                        <th>
+                                                            <span class="itemObj text-truncate">sk하이닉스</span>
+                                                        </th>
+                                                        <td class="text-end">
+                                                            <span class="per dn">71,500</span>
+                                                        </td>
+                                                        <td class="text-end" width="57">
+                                                            <span class="state state-per st02">+27.2%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="itemObj">셀트리온</span>
+                                                        </th>
+                                                        <td class="text-end">
+                                                            <span class="per up">117,500</span>
+                                                        </td>
+                                                        <td class="text-end" width="57">
+                                                            <span class="state state-per st03">8.2%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="itemObj">삼성중공우</span>
+                                                        </th>
+                                                        <td class="text-end">
+                                                            <span class="per dn">3,000</span>
+                                                        </td>
+                                                        <td class="text-end" width="57">
+                                                            <span class="state state-per st01">+27.3%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="itemObj">아모레퍼시픽</span>
+                                                        </th>
+                                                        <td class="text-end">
+                                                            <span class="per">94,000</span>
+                                                        </td>
+                                                        <td class="text-end" width="57">
+                                                            <span class="state state-per st03">27%</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //mainListTable -->
+                                    </div>
+                                    <!-- //issue-list -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                    <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- //이슈 모달 -->
+
+                <section class="section section-basic rmt-8">
+                    <h3 class="title title-bullet title-bullet-rassi">라씨매매신호</h3>
+
+                    <div class="s_signal">
+                        <div class="result">
+                            <div class="s_result">
+                                <span class="sig">매수</span>
+                                <span class="amount">21종목</span>
+                            </div>
+                            <!-- //매수신호결과 -->
+
+                            <div class="s_result">
+                                <span class="sig">매도</span>
+                                <span class="amount">123종목</span>
+                            </div>
+                            <!-- 매도신호결과 -->
+                        </div>
+                        <!-- //매도 매수 신호결과 -->
+
+                        <div class="mainListTable rmt-10">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <span class="itemObj text-truncate">삼성전자삼성전자삼성전자삼성전자삼성전자</span>
+                                        </th>
+                                        <td class="text-end" width="70">
+                                            <span class="per up">+2.5%</span>
+                                        </td>
+                                        <td class="text-end" width="57">
+                                            <span class="state st01">보유</span>
+                                        </td>
+                                    </tr>
+                                    <!-- //template -->
+
+                                    <tr>
+                                        <th>
+                                            <span class="itemObj text-truncate">sk하이닉스</span>
+                                        </th>
+                                        <td class="text-end">
+                                            <span class="per dn">-2.5%</span>
+                                        </td>
+                                        <td class="text-end" width="57">
+                                            <span class="state st02">매도</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="itemObj">셀트리온</span>
+                                        </th>
+                                        <td class="text-end">
+                                            <span class="per up">+2.5%</span>
+                                        </td>
+                                        <td class="text-end" width="57">
+                                            <span class="state st03">매수</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="itemObj">삼성중공우</span>
+                                        </th>
+                                        <td class="text-end">
+                                            <span class="per dn">-2.5%</span>
+                                        </td>
+                                        <td class="text-end" width="57">
+                                            <span class="state st04">관망</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="itemObj">아모레퍼시픽</span>
+                                        </th>
+                                        <td class="text-end">
+                                            <span class="per">2.5%</span>
+                                        </td>
+                                        <td class="text-end" width="57">
+                                            <span class="state st03">매수</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //리스트 -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- //바로가기 -->
+                </section>
+                <!-- // 라씨매매신호-->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title title-bullet title-bullet-ai"><span>AI추천</span> BEST 수익률<em> (최근 30일)</em></h3>
+
+                    <div class="ai_best">
+                        <div class="list">
+                            <h4 class="visually-hidden">베스트 수익률 리스트</h4>
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠신라젠신라신라젠신라젠</strong>
+                                    <span class="per d-block text-center up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="state">보유중</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="state">관망중</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="d-block">12.23 매도가 1,999,999</span>
+                                        <span class="state">관망중</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="state">관망중</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                        <span class="state">관망중</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
+                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
+                                    <span class="d-block text-center per up">+28.2%</span>
+                                    <div class="record text-center">
+                                        <span class="">12.2 매수가 50,000</span>
+                                        <span class="">12.23 매도가 1,999,999</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                        </div>
+                    </div>
+                    <!-- //ai_best -->
+
+                    <div class="upTime">
+                        12/4 14:00
+                    </div>
+                    <!-- //upTime -->
+
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- // 베스트수익률-->
+
+                <section class="section">
+                    <h3 class="visually-hidden">광고영역</h3>
+                    <a href="#bnr1"><img src="./img/demoBnr.png" alt="광고" class="img-fluid"></a>
+                </section>
+                <!-- // 광고영역-->
+
+                <section class="section section-basic">
+                    <h3 class="title">AI속보</h3>
+
+                    <div class="latest latest-m">
+                        <ul>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                            <li class="text-truncate">10일, 거래소 기관 순매도상위에 전기,전자 업종 10일, 거래소 기관 순매도상위에 전기,전자 업종</li>
+                        </ul>
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- // 속보-->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title">주말특징주</h3>
+
+                    <!-- 
+                        ** tab script 사용을 하지 않으려면 **
+                        li>button 에서 id, data-항목,aria-항목 을 전부 지워주세요
+                        .tab-pane 의 .fade 항목을 전부 삭제 해주세요.
+                     -->
+
+                    <div class="market">
+                        <div class="ch_tab ch_tab01">
+                            <ul class="nav nav-round" role="tablist" style="min-width:587px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="mwktab01" data-bs-toggle="pill" data-bs-target="#mwktab01c" type="button" role="tab" aria-controls="매수비중 상위" aria-selected="true">매수비중 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mwktab02" data-bs-toggle="pill" data-bs-target="#mwktab02c" type="button" role="tab" aria-controls="주요기관 순매수상위" aria-selected="false">주요기관 순매수상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mwktab03" data-bs-toggle="pill" data-bs-target="#mwktab03c" type="button" role="tab" aria-controls="목표가높음" aria-selected="false">목표가높음</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mwktab04" data-bs-toggle="pill" data-bs-target="#mwktab04c" type="button" role="tab" aria-controls="수주공시" aria-selected="false">수주공시</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mwktab05" data-bs-toggle="pill" data-bs-target="#mwktab05c" type="button" role="tab" aria-controls="투자공시" aria-selected="false">투자공시</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // -->
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="mwktab01c" role="tabpanel" aria-labelledby="매수비중 상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataW11" value="기관" checked>
+                                        <label class="form-check-label" for="dataW11">기관 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataW12" value="외국인">
+                                        <label class="form-check-label" for="dataW12">기관 코스닥</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataW13" value="외국인">
+                                        <label class="form-check-label" for="dataW13">외국인 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataW14" value="외국인">
+                                        <label class="form-check-label" for="dataW14">외국인 코스닥</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+
+                                <div class="marketList">
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>매수비중</span>
+                                                <em>+1.2%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>매수비중</span>
+                                                <em>+1.2%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>매수비중</span>
+                                                <em>+1.2%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>매수비중</span>
+                                                <em>+1.2%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>매수비중</span>
+                                                <em>+1.2%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>최근 5일 동안 기관, 외국인의 매수비중이 높은 종목입니다. </em></span>
+                                    <span class="d-block"><em>매수비중은 (5일간 순매수량)/(상장주식수) 입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 매수비중 상위 -->
+
+                            <div class="tab-pane fade" id="mwktab02c" role="tabpanel" aria-labelledby="주요기관 순매수상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio2" id="dataW21" value="연기금" checked>
+                                        <label class="form-check-label" for="dataW21">연기금</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradio2" id="dataW22" value="투자">
+                                        <label class="form-check-label" for="dataW22">투자</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="mwkradi2o" id="dataW23" value="사모펀드">
+                                        <label class="form-check-label" for="dataW23">사모펀드</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>4.5억</em>
+                                                <span>순매수</span>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>4.5억</em>
+                                                <span>순매수</span>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>4.5억</em>
+                                                <span>순매수</span>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>4.5억</em>
+                                                <span>순매수</span>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>4.5억</em>
+                                                <span>순매수</span>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>최근 5일동안 주요기관의 순매수금액이 큰 종목입니다. </em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mwktab03c" role="tabpanel" aria-labelledby="목표가높음">
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>(11/24) 현대차와 공동 개발한 '센서 클리닝' 세계 최초 주율주행차 주율주행차 주율주 세계 최초 주율주행차 주율주행차 주율주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>최근 5일 동안 발표한 증권사 리포트 중, 목표가와 현재가의 괴리율이 큰 리포트입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 목표가 높음-->
+
+                            <div class="tab-pane fade" id="mwktab04c" role="tabpanel" aria-labelledby="수주공시">
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">142억</span>
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <span>괴리움</span>
+                                                <em>175%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>금주에 발표한 수주공시 중, 매출액 대비 계약금액의 비율이 높은 공시 입니다.</em></span>
+                                    <span><em class="st_gd"></em><em class="pptnudn">를 누르면 공시 원본을 확인할 수 있습니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mwktab05c" role="tabpanel" aria-labelledby="투자공시">
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>2,090억</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>2,090억</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>2,090억</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>2,090억</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                    <div class="list list-Week">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                                <div class="contxt text-truncate">
+                                                    <span>- 하나은행 전산역무 도급계약</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>2,090억</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span><em class="st_gd"></em><em class="pptnudn">는 신규 투자 금액입니다.</em></span>
+                                    <span><em class="st_gd"></em><em class="pptnudn">를 누르면 공시 원본을 확인할 수 있습니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+                        <div class="shorcutBtn d-grid gap-2 rmt-20">
+                            <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                        </div>
+                        <!-- // -->
+
+
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- //주말특징주 -->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title">시장특징주</h3>
+
+                    <div class="market">
+                        <div class="ch_tab .ch_tab01">
+                            <ul class="nav nav-round" role="tablist" style="min-width:467px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="mktab01" data-bs-toggle="pill" data-bs-target="#mktab01c" type="button" role="tab" aria-controls="pills-home" aria-selected="true">이슈종목</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mktab02" data-bs-toggle="pill" data-bs-target="#mktab02c" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">신고가</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mktab03" data-bs-toggle="pill" data-bs-target="#mktab03c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">상한가</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mktab04" data-bs-toggle="pill" data-bs-target="#mktab04c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">거래비중</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mktab05" data-bs-toggle="pill" data-bs-target="#mktab05c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">시간외 급등</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="itemUpdate">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                            </svg>
+                            <span>12/31 12:30</span>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="mktab01c" role="tabpanel" aria-labelledby="이슈종목">
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="pvl">(잠정)</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="pvl">(잠정)</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="pvl">(잠정)</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                </div>
+                                <!-- //marketList -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mktab02c" role="tabpanel" aria-labelledby="신고가">
+                                <div class="marketList">
+
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span><em>종목 아래 텍스트는 해당 종목과 관련해서 최근에 화제가 됐던 기사 제목 입니다.</em></span>
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mktab03c" role="tabpanel" aria-labelledby="상한가">
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/29</span>
+                                                <span class="pvl">(잠정)</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span><em>종목 아래 텍스트는 해당 종목과 관련해서 최근에 화제가 됐던 기사 제목 입니다.</em></span>
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mktab04c" role="tabpanel" aria-labelledby="거래비중 상위">
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>거래비중</span>
+                                                    <span class="up">158.8%</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span><em>종목 아래 텍스트는 해당 종목과 관련해서 최근에 화제가 됐던 기사 제목 입니다.</em></span>
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="tab-pane fade" id="mktab05c" role="tabpanel" aria-labelledby="시간외 급등">
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <!-- <span class="pvl"></span> -->
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>시간외거래량</span>
+                                                    <span class="up">100,625주</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span><em class="st_gd"></em><em class="pptnudn">는 시간외거래 등락률입니다.</em></span>
+                                    <span><em>시간외거래 종료 후 업데이트 됩니다.</em></span>
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;+</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- //시장특징주 -->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title">수급분석</h3>
+
+                    <div class="market">
+                        <div class="ch_tab">
+                            <ul class="nav nav-round" role="tablist" style="width:680px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="msdtab01" data-bs-toggle="pill" data-bs-target="#msdtab01c" type="button" role="tab" aria-controls="매수비중" aria-selected="true">매수비중 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab02" data-bs-toggle="pill" data-bs-target="#msdtab02c" type="button" role="tab" aria-controls="순매수" aria-selected="false">순매수 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab03" data-bs-toggle="pill" data-bs-target="#msdtab03c" type="button" role="tab" aria-controls="순매수신규" aria-selected="false">순매수 상위 신규진입</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab04" data-bs-toggle="pill" data-bs-target="#msdtab04c" type="button" role="tab" aria-controls="주요기관" aria-selected="false">주요기관 순매수 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab05" data-bs-toggle="pill" data-bs-target="#msdtab05c" type="button" role="tab" aria-controls="연속순매수" aria-selected="false">연속순매수</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="msdtab01c" role="tabpanel" aria-labelledby="매수비중내용">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion1" id="data0211" value="기관" checked>
+                                        <label class="form-check-label" for="data0211">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion1" id="data0212" value="외국인">
+                                        <label class="form-check-label" for="data0212">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>매수비중</span>
+                                                    <span class="up">158.8%</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 매수비중상위-->
+
+                            <div class="tab-pane fade" id="msdtab02c" role="tabpanel" aria-labelledby="순매수 상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0221" value="기관" checked>
+                                        <label class="form-check-label" for="data0221">기관 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0222" value="외국인">
+                                        <label class="form-check-label" for="data0222">기관 코스닥</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0223" value="외국인">
+                                        <label class="form-check-label" for="data0223">외국인 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0224" value="외국인">
+                                        <label class="form-check-label" for="data0224">외국인 코스닥</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">413억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 순매수상위-->
+
+                            <div class="tab-pane fade" id="msdtab03c" role="tabpanel" aria-labelledby="순매수 상위 신규진입">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion3" id="data0231" value="기관" checked>
+                                        <label class="form-check-label" for="data0231">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion3" id="data0232" value="외국인">
+                                        <label class="form-check-label" for="data0232">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">413억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 순매수 상위 신규-->
+
+                            <div class="tab-pane fade" id="msdtab04c" role="tabpanel" aria-labelledby="주요기관 순매수 상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0241" value="기관" checked>
+                                        <label class="form-check-label" for="data0241">연기금</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0242" value="외국인">
+                                        <label class="form-check-label" for="data0242">투신</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0243" value="외국인">
+                                        <label class="form-check-label" for="data0243">사모펀드</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">43억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 주요기관 순매수 상위-->
+
+                            <div class="tab-pane fade" id="msdtab05c" role="tabpanel" aria-labelledby="연속순매수">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion5" id="data0251" value="기관" checked>
+                                        <label class="form-check-label" for="data0251">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion5" id="data0252" value="외국인">
+                                        <label class="form-check-label" for="data0252">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">11일</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 연속순매수-->
+                        </div>
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- //수급분석 -->
+
+                <section class="section">
+                    <h3 class="visually-hidden">광고영역</h3>
+                    <a href="#bnr2"><img src="./img/demoBnr.png" alt="광고" class="img-fluid"></a>
+                </section>
+                <!-- // -->
+
+                <section class="section section-npd">
+                    <h3 class="title">리포트분석</h3>
+
+                    <div class="market">
+                        <div class="ch_tab">
+                            <ul class="nav nav-round" role="tablist" style="width:749px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="mrptab01" data-bs-toggle="pill" data-bs-target="#mrptab01c" type="button" role="tab" aria-controls="신규" aria-selected="true">신규리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab02" data-bs-toggle="pill" data-bs-target="#mrptab02c" type="button" role="tab" aria-controls="목표가상향" aria-selected="false">목표가상향</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab03" data-bs-toggle="pill" data-bs-target="#mrptab03c" type="button" role="tab" aria-controls="기관 관심리포트" aria-selected="false">기관 관심리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab04" data-bs-toggle="pill" data-bs-target="#mrptab04c" type="button" role="tab" aria-controls="연기금 관심리포트" aria-selected="false">연기금 관심리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab05" data-bs-toggle="pill" data-bs-target="#mrptab05c" type="button" role="tab" aria-controls="증권사 관심종목" aria-selected="false">증권사 관심종목</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab06" data-bs-toggle="pill" data-bs-target="#mrptab06c" type="button" role="tab" aria-controls="목표가 높음" aria-selected="false">목표가 높음</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // -->
+
+
+                        <div class="itemUpdate">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                            </svg>
+                            <span>12/31 12:30</span>
+                        </div>
+                        <!-- //업데이트시간 -->
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="mrptab01c" role="tabpanel" aria-labelledby="신규">
+
+                                <div class="marketList">
+                                    <div class="list list-report" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">신규리포트는 증권사에서 '신규매수'의견을 제시한 리포트입니다.</span>
+                                </div>
+                                <!-- //guide -->
+
+
+                                
+
+
+                            </div>
+                            <!-- // 신규리포트-->
+
+                            <div class="tab-pane fade" id="mrptab02c" role="tabpanel" aria-labelledby="목표가상향">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 증권사에서 최근 3개월이내에 발표한 리포트 중, 직전 목표가 대비 목표가가 상향된 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 목표가상향-->
+
+                            <div class="tab-pane fade" id="mrptab03c" role="tabpanel" aria-labelledby="기관 관심리포트">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">리포트 발표 당일 기관의 순매수량이 큰 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 기관관심리포트-->
+
+                            <div class="tab-pane fade" id="mrptab04c" role="tabpanel" aria-labelledby="연기금 관심리포트">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">리포트 발표 당일 연기금의 순매수량이 큰 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 연기금관심리포트-->
+
+                            <div class="tab-pane fade" id="mrptab05c" role="tabpanel" aria-labelledby="증권사관심">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 날짜에 많은 증권사에서 리포트를 발표한 종목입니다. </span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 증권사관심종목-->
+
+                            <div class="tab-pane fade" id="mrptab06c" role="tabpanel" aria-labelledby="목표가높음">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 날짜에 발표한 리포트 중, 목표가와 현재가의 괴리율이 큰 리포트입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- // 리포트분석-->
+                <div class="modal fade custom-modal1" id="reportModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title" id="">
+                                    <h5 class="rmTitle text-truncate">[삼성전자] 탐방노트: <br> 편견의 거미줄을 벗어나</h5>
+
+                                    <div class="rmInfo">
+                                        <span>하나금융투자</span>
+                                        <span>2020-09-02</span>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!-- //header -->
+                            
+                            <div class="modal-body">
+                                <div class="rmCont">
+
+                                    <div class="sgn">
+                                        <span>목표가 : 89,000원</span>
+                                        <span>투자의견 : BUY</span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="text">
+반도체, 디스플레이, 
+태양전지용 증착장비 공급사 주성엔지니어링은 
+2016년부터 2018년까지 
+2천억 원 후반 수준의 매출(2016년 2,680억 원, 
+2017년 2,727억 원, 2018년 2,630억 원)을 
+이어가다가 2019년과 2020년에 각각 2,546억 원,
+1,186억 원으로 매출 감소세를 보이며 
+외국인 투자자들의 관심권에서 벗어났다. 
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                    <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- //리포트 모달 -->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title">공시분석</h3>
+
+                    <div class="annce">
+                        <div class="ch_tab">
+                            <ul class="nav nav-round disableList" role="tablist" >
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >수주공시</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >지분공시</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >신규 투자공시</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >전환사채공시</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >실적공시(잠정)</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >실적공시(확정)</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                    <!-- <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div> -->
+                    <!-- // -->
+                </section>
+                <!-- // 공시분석-->
+
+                <section class="section section-npd rmt-8">
+                    <h3 class="title">실적속보</h3>
+
+                    <div class="news">
+                        <div class="ch_tab">
+                            <ul class="nav nav-round disableList"  role="tablist" >
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab">어닝서프라이즈</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link disable" type="button" role="tab">3년최고영업이익</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                    <!-- <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div> -->
+                    <!-- // -->
+                </section>
+                <!-- // 실적속보-->
+
+                <section class="section section-basic rmt-8">
+                    <h3 class="title">씽크풀 유투브</h3>
+
+                    <div class="video">
+                        <div class="videoList">
+                            <div class="card card-video">
+                                <div class="thumb"><img src="" alt="demo" class="img-fluid"><em class="play"><img src="./img/bu_play.png" alt="플레이이미지" class="img-fluid"></em></div>
+                                <div class="txt">
+                                    <div class="cont">AI이슈포착 특징주 분석, 와이지엔터테인먼트, 하이브</div>
+                                    <div class="info">10/29 14:00</div>
+                                </div>
+                            </div>
+                            <!-- //card -->
+                            <div class="card card-video">
+                                <div class="thumb"><img src="" alt="demo" class="img-fluid"><em class="play"><img src="./img/bu_play.png" alt="플레이이미지" class="img-fluid"></em></div>
+                                <div class="txt">
+                                    <div class="cont">AI이슈포착 특징주 분석, 와이지엔터테인먼트, 하이브</div>
+                                    <div class="info">10/29 14:00</div>
+                                </div>
+                            </div>
+                            <!-- //card -->
+                            <div class="card card-video">
+                                <div class="thumb"><img src="" alt="demo" class="img-fluid"><em class="play"><img src="./img/bu_play.png" alt="플레이이미지" class="img-fluid"></em></div>
+                                <div class="txt">
+                                    <div class="cont">AI이슈포착 특징주 분석, 와이지엔터테인먼트, 하이브</div>
+                                    <div class="info">10/29 14:00</div>
+                                </div>
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <!-- //videoList -->
+                        
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- // -->
+
+            </main>
+            <!-- //container -->
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle subTitle text-truncate">
+                        <strong>리포트분석</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn subSch">
+                        <button type="button" class="schButton">종목검색</button>
+                    </div>
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+                    <div class="pageTopSch">
+                        <div class="input-group">
+                            <input type="text" class="" placeholder="종목 검색" aria-label="종목 검색" aria-describedby="종목검색">
+                            <button class="btn noMargin noPadding" type="button" id="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <!-- //검색 -->
+
+                <section class="section section-npd">
+
+                    <div class="market">
+                        <div class="ch_tab rpt-0">
+                            <ul class="nav nav-round" role="tablist" style="width:749px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="mrptab01" data-bs-toggle="pill" data-bs-target="#mrptab01c" type="button" role="tab" aria-controls="신규" aria-selected="true">신규리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab02" data-bs-toggle="pill" data-bs-target="#mrptab02c" type="button" role="tab" aria-controls="목표가상향" aria-selected="false">목표가상향</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab03" data-bs-toggle="pill" data-bs-target="#mrptab03c" type="button" role="tab" aria-controls="기관 관심리포트" aria-selected="false">기관 관심리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab04" data-bs-toggle="pill" data-bs-target="#mrptab04c" type="button" role="tab" aria-controls="연기금 관심리포트" aria-selected="false">연기금 관심리포트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab05" data-bs-toggle="pill" data-bs-target="#mrptab05c" type="button" role="tab" aria-controls="증권사 관심종목" aria-selected="false">증권사 관심종목</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mrptab06" data-bs-toggle="pill" data-bs-target="#mrptab06c" type="button" role="tab" aria-controls="목표가 높음" aria-selected="false">목표가 높음</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // -->
+
+
+                        <div class="itemUpdate">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                            </svg>
+                            <span>12/31 12:30</span>
+                        </div>
+                        <!-- //업데이트시간 -->
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="mrptab01c" role="tabpanel" aria-labelledby="신규">
+
+                                <div class="marketList">
+                                    <div class="list list-report" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">신규리포트는 증권사에서 '신규매수'의견을 제시한 리포트입니다.</span>
+                                </div>
+                                <!-- //guide -->
+
+
+                                
+
+
+                            </div>
+                            <!-- // 신규리포트-->
+
+                            <div class="tab-pane fade" id="mrptab02c" role="tabpanel" aria-labelledby="목표가상향">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 증권사에서 최근 3개월이내에 발표한 리포트 중, 직전 목표가 대비 목표가가 상향된 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 목표가상향-->
+
+                            <div class="tab-pane fade" id="mrptab03c" role="tabpanel" aria-labelledby="기관 관심리포트">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">리포트 발표 당일 기관의 순매수량이 큰 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 기관관심리포트-->
+
+                            <div class="tab-pane fade" id="mrptab04c" role="tabpanel" aria-labelledby="연기금 관심리포트">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">리포트 발표 당일 연기금의 순매수량이 큰 종목입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 연기금관심리포트-->
+
+                            <div class="tab-pane fade" id="mrptab05c" role="tabpanel" aria-labelledby="증권사관심">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 날짜에 많은 증권사에서 리포트를 발표한 종목입니다. </span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 증권사관심종목-->
+
+                            <div class="tab-pane fade" id="mrptab06c" role="tabpanel" aria-labelledby="목표가높음">
+                                <div class="marketList">
+                                    <div class="list list-report">
+                                        <div class="left">
+                                            <div class="top text-truncate">
+                                                <span class="date">01/30</span>
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block">해당 날짜에 발표한 리포트 중, 목표가와 현재가의 괴리율이 큰 리포트입니다.</span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                    </div>
+                    <!-- // -->
+                </section>
+                <!-- //리스트 -->
+
+
+                <div class="modal fade custom-modal1" id="reportModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title" id="">
+                                    <h5 class="rmTitle">[삼성전자] 탐방노트: <br> 편견의 거미줄을 벗어나</h5>
+
+                                    <div class="rmInfo">
+                                        <span>하나금융투자</span>
+                                        <span>2020-09-02</span>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!-- //header -->
+                            
+                            <div class="modal-body">
+                                <div class="rmCont">
+
+                                    <div class="sgn">
+                                        <span>목표가 : 89,000원</span>
+                                        <span>투자의견 : BUY</span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="text">
+반도체, 디스플레이, 
+태양전지용 증착장비 공급사 주성엔지니어링은 
+2016년부터 2018년까지 
+2천억 원 후반 수준의 매출(2016년 2,680억 원, 
+2017년 2,727억 원, 2018년 2,630억 원)을 
+이어가다가 2019년과 2020년에 각각 2,546억 원,
+1,186억 원으로 매출 감소세를 보이며 
+외국인 투자자들의 관심권에서 벗어났다. 
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                    <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                </div>
+                            </div>
+                            <!-- //body -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- //리포트 모달 -->
+
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

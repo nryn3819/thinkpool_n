@@ -1,0 +1,44 @@
+// 헤더타이틀
+.headerTitle{
+    width:calc(100% - 87px);
+    height:20px;
+    line-height:20px;
+    margin-left:25px;
+    text-align:left;
+    float:left;
+    font-size:16px;
+    color:#000;
+    font-weight:700 !important;
+    float:left;
+
+    &.subTitle{
+        text-align:center;
+    }
+}
+.subSchBtn{
+    float:left;
+    button{
+        width:20px;
+        border:0;
+        padding:0;
+        margin:0;
+        text-indent:-9999em;
+        background:url('../img/ico-sch.svg') no-repeat 0 50%;
+    }
+
+    &.subSch{
+        margin-right:18px;
+    }
+}
+// 이전페이지
+.pageBack{
+    button{
+        padding:0;
+        margin:0;
+        border:0;
+        background:url('../img/backpage.svg') no-repeat 0 50%;
+        text-indent:-9999em;
+        width:40px;
+        background-size:10px auto;
+    }
+}
