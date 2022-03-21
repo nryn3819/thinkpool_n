@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>즐겨찾기</strong>
+                        <em class="up">(Beta)</em>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+                
+                <section class="section section-basic">
+                    <div class="bookmark">
+                        <div class="guide">
+                            <span>자주 이용하는 서비스를 선택하고 순서를 변경해주세요.</span>
+                            <em>( <img src="./img/bu_bookmark.png" width="19"> 버튼을 꾹 눌러서 움직이면 순서를 변경할 수  있습니다. )</em>
+                        </div>
+                        <div class="list rmt-20">
+                            <div class="list-order">
+                                <span>사용</span>
+                                <span>서비스명</span>
+                                <span>순서</span>
+                            </div>
+
+                            <div id="bmkGroup" class="list-group col">
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label active" for="bmk01">
+                                            <input type="checkbox" class="form-check-input" id="bmk01" checked>
+                                            네이버 종목홈 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label active" for="bmk02">
+                                            <input type="checkbox" class="form-check-input" id="bmk02" checked>
+                                            네이버종목분석 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label active" for="bmk03">
+                                            <input type="checkbox" class="form-check-input" id="bmk03" checked>
+                                            유투브 종목검색 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label active" for="bmk04">
+                                            <input type="checkbox" class="form-check-input" id="bmk04" checked>
+                                            <img src="./img/playstore.png" alt="" width="12" class="gplstore"> 키움증권 영웅문S 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="bmk05" >
+                                            <input type="checkbox" class="form-check-input" id="bmk05">
+                                            <img src="./img/playstore.png" alt="" width="12" class="gplstore"> 대신증권 CYBOS Touch 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="bmk06">
+                                            <input type="checkbox" class="form-check-input" id="bmk06">
+                                            <img src="./img/playstore.png" alt="" width="12" class="gplstore"> 미래에셋증권 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="bmk07">
+                                            <input type="checkbox" class="form-check-input" id="bmk07">
+                                            네이버 토론실 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="bmk08">
+                                            <input type="checkbox" class="form-check-input" id="bmk08">
+                                            팍스넷 토론실 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="bmk09">
+                                            <input type="checkbox" class="form-check-input" id="bmk09">
+                                            씽크풀 유투브 
+                                            <em class="toucharea">
+                                                <img src="./img/bu_bookmark.png" alt="순서변경" width="19">
+                                            </em>
+                                        </label>
+                                    </div>
+                                    <!-- // check 시 label 에 active 클래스 주세요 -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                            <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
+                            <script>
+                                new Sortable(bmkGroup, {
+                                    animation: 150,
+                                    ghostClass: 'blue-background-class'
+                                });
+                            </script>
+                            <!-- //drag js -->
+
+                        </div>
+                        <div class="btm-guide rmt-10">
+                            <span><img src="./img/playstore.png" alt="플레이스토어" width="12">은 안드로이드만 지원합니다.</span>
+                            <span>원하는 서비스가 없으면 <button type="button">[요청하기]</button> 를 눌러주세요.</span>
+                        </div>
+
+                        <div class="btn text-center rmt-25">
+                            <button type="button">저장하기</button>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                </section>
+                <!-- // -->
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

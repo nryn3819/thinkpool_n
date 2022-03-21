@@ -1,0 +1,49 @@
+
+.item-home-navi{
+    position:sticky;
+    top:48px;
+    width:100%;
+    background:#252F56;
+    height:52px;
+    padding:13px 17px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index:98;
+    float:none;
+
+    
+    .nav{
+        height:17px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-item{
+
+        .nav-link{
+            font-size:15px;
+            color:#9BA3C6;
+            padding:0;
+            float:left;
+
+            &.active{
+                color:#fff;
+                font-weight:700;
+            }
+        }
+
+        button{
+            border:0;
+            background:none;
+            margin:0;
+            padding:0;
+            font-size:15px;
+            color:#9BA3C6;
+
+            &::before{
+                content:'|';
+                color:#9BA3C6;
+                padding-right:17px;
+            }
+        }
+    }
+}

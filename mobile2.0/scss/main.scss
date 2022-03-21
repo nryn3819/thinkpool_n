@@ -1,3 +1,4 @@
+@import 'variable.scss';
 //main
 
 //tab 
@@ -7,8 +8,6 @@
     overflow-y: hidden;
     padding:20px 0 10px;
 }
-
-
 
 //mainColumnGuideBox
 .mainColumnGuideBox {
@@ -43,6 +42,11 @@
                 }
             }
         }
+    }
+    &.tblBtm{
+        border-top:0 !important;
+        margin: 0 !important;
+        padding:0 !important;
     }
 
     span {
@@ -104,10 +108,12 @@
     }
 }
 
-@import './main/item.scss';
-@import './main/signal.scss';
-@import './main/issue.scss';
-@import './main/market.scss';
-@import './main/aibest.scss';
+@import './main/item.scss'; //종목정보
+@import './main/signal.scss'; // 라씨매매신호
+@import './main/aibest.scss'; //베스트수익률
+@import './main/issue.scss'; // 이슈
+@import './main/market.scss'; //특징주
+@import './main/report.scss'; //리포트분석
 @import './main/snd.scss';
 @import './main/video.scss';
+@import './main/table.scss';

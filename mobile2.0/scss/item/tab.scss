@@ -1,0 +1,100 @@
+.chart-tab{
+    margin-top:20px;
+
+    &.nmg{
+        width:100%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        &-4{
+            .nav-item{
+                margin:0;
+                min-width:72px;
+
+                button{
+                    width:100%;
+                    padding:0 10px;
+                    height:33px;
+                    border-radius: 0;
+                    border-right:0;
+                    
+
+                    &.active{
+                        border:1px solid #5368FF;
+                        background:#5368FF;
+                        color:#fff;
+                        font-weight:700;
+                    }
+                }
+
+                &:first-child{
+                    button{
+                        padding-left: 15px;
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+
+                &:last-child{
+                    button{
+                        padding-right:15px;
+                        border-radius: 0 5px 5px 0;
+                        border-right:1px solid #CFD3D9;
+                    }
+                }
+            }
+        }
+
+        .nav-item{
+            width:calc(100% / 6);
+            margin:0 ;
+
+            &:first-child{
+                button{
+                    border-radius: 5px 0 0 5px;
+                }
+            }
+            &:last-child{
+                button{
+                    border-radius: 0 5px 5px 0;
+                    border-right:1px solid #CFD3D9;
+                }
+            }
+            button{
+                width:100%;
+                padding:0;
+                height:33px;
+                border-radius: 0;
+                border-right:0;
+                
+
+                &.active{
+                    border:1px solid #5368FF;
+                    background:#5368FF;
+                    color:#fff;
+                    font-weight:700;
+                }
+            }
+        }
+    }
+
+    .nav-item{
+        margin-right:6px;
+
+        button{
+            min-width:48px;
+            height:33px;
+            padding:0 14px;
+            border:1px solid #CFD3D9;
+            border-radius: 5px;
+            font-size:14px;
+            color:#000;
+            background:#fff;
+
+            &.active{
+                border:1px solid #5368FF;
+                color:#5368FF;
+                font-weight:700;
+            }
+        }
+    }
+}

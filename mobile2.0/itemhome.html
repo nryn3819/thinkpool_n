@@ -29,7 +29,7 @@
                     </div>
                     <!-- //이전페이지 -->
                 
-                    <div class="headerTitle text-truncate">
+                    <div class="headerTitle text-truncate subTitle">
                         <strong>네오위즈</strong>
                     </div>
                     <!-- //종목명 -->
@@ -78,10 +78,10 @@
                     <div id="myItem">
                         <div class="myItemList">
                             <div class="myItemBox title shadow-sm">
-                                <a href="종목홈.html">
+                                <div>
                                     <strong>MY</strong>
                                     <span>종목</span>
-                                </a>
+                                </div>
                             </div>
                             <!-- //item -->
 
@@ -91,10 +91,6 @@
                                 </span>
                             </div>
                             <!-- //item -->
-
-                            <!-- 
-                                ((template 수 + 1 ) * 100)
-                             -->
                         </div>
                     </div>
                     <!-- //myItem -->
@@ -130,7 +126,7 @@
                 </section>
                 <!-- // -->
 
-                <section class="section noMargin rpb-25">
+                <section class="section noMargin">
                     <div class="item-home-navi">
                         <ul class="nav" style="width:373px">
                             <li class="nav-item">
@@ -155,10 +151,13 @@
                         </ul>
                     </div>
                     <!-- // -->
-
                     <div class="item-home-signal shadow-sm">
-                        <div class="state st01"></div>
-                        <!-- //01~05 -->
+                        <div class="state">
+                            <em><img src="./img/bu_rassi.png" alt="" class="img-fluid"></em>
+                            <span>보유중</span>
+                        </div>
+                        <!-- // -->
+
                         <div class="info">
                             <div class="signal_info">
                                 라씨매매신호 <span class="date">11/09</span> <span class="sig up">매수</span>신호 발생
@@ -182,6 +181,114 @@
                     </div>
                     <!-- // -->
 
+                    <div class="item-home-signal shadow-sm">
+                        <div class="state">
+                            <em><img src="./img/bu_rassi.png" alt="" class="img-fluid"></em>
+                            <span>관망중</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="info">
+                            <div class="signal_info">
+                                라씨매매신호 <span class="date">11/09</span> <span class="sig dn">매도</span>신호 발생
+                            </div>
+                            <!-- //신호정보 -->
+
+                            <div class="pnd">
+                                <div class="price">
+                                    신호가 <span>28,300</span>원
+                                </div>
+                                <!-- //prcie -->
+
+                                <div class="date">
+                                    보유기간 <span>1</span>일
+                                </div>
+                                <!-- //date -->
+
+                            </div>
+                            <!-- //가격&기간 -->
+                        </div>
+                    </div>
+                    <!-- //전체링크걸어주세요 -->
+
+                    <div class="item-home-signal shadow-sm">
+                        <div class="state">
+                            <em><img src="./img/bu_rassi.png" alt="" class="img-fluid"></em>
+                            <span>오늘매수</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="info">
+                            <div class="signal_info">
+                                라씨매매신호 <span class="date">11/09</span> <span class="sig up">매수</span>신호 발생
+                            </div>
+                            <!-- //신호정보 -->
+
+                            <div class="pnd">
+                                <div class="price">
+                                    신호가 <span>28,300</span>원
+                                </div>
+                                <!-- //prcie -->
+                            </div>
+                            <!-- //가격&기간 -->
+                        </div>
+                    </div>
+
+                    <div class="item-home-signal shadow-sm">
+                        <div class="state">
+                            <em><img src="./img/bu_rassi.png" alt="" class="img-fluid"></em>
+                            <span>오늘매도</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="info">
+                            <div class="signal_info">
+                                라씨매매신호 <span class="date">11/09</span> <span class="sig up">매수</span>신호 발생
+                            </div>
+                            <!-- //신호정보 -->
+
+                            <div class="pnd">
+                                <div class="price">
+                                    신호가 <span>28,300</span>원
+                                </div>
+                                <!-- //prcie -->
+
+                                <div class="date">
+                                    보유기간 <span>1</span>일
+                                </div>
+                                <!-- //date -->
+
+                            </div>
+                            <!-- //가격&기간 -->
+                        </div>
+                    </div>
+
+                    <div class="item-home-signal shadow-sm">
+                        <div class="state">
+                            <em><img src="./img/bu_rassi.png" alt="" class="img-fluid"></em>
+                            <span>보유중</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="info">
+                            <div class="signal_info">
+                                <span class="per">셀트리온 매매 적중률 +70.8%</span>
+                            </div>
+                            <!-- //신호정보 -->
+
+                            <div class="pnd">
+                                <div class="price">
+                                    최대수익률 <span class="up">30.7%</span>원 누적수익률 <span class="up">+131.4%</span>
+                                </div>
+                                <!-- //prcie -->
+
+                            </div>
+                            <!-- //가격&기간 -->
+                        </div>
+                    </div>
+
+                    <!-- /////////////// 신호 /////////////////// -->
+
                     <div class="item-home-box shadow-sm">
                         <p>
                             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box01" aria-expanded="false" aria-controls="수급분석박스">
@@ -202,35 +309,152 @@
                                 </div>
                                 <!-- //최신소식 -->
 
-                                <div class="chartbox">
+                                <div class="chartbox rmt-20">
                                     <ul class="nav chart-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active " id="cht01" data-bs-toggle="pill" data-bs-target="#chart0101" type="button" role="tab" aria-controls="표" aria-selected="true">표</button>
+                                            <button class="nav-link active " type="button">표</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="cht02" data-bs-toggle="pill" data-bs-target="#chart0102" type="button" role="tab" aria-controls="매매강도" aria-selected="false">매매강도</button>
+                                            <button class="nav-link" type="button">매매강도</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht03" data-bs-toggle="pill" data-bs-target="#chart0102" type="button" role="tab" aria-controls="누적순매매" aria-selected="false">누적순매매</button>
+                                            <button class="nav-link" type="button">누적순매매</button>
                                         </li>
                                     </ul>
                                     <!-- //버튼탭 -->
-
-                                    <div class="radionCheckingBox rmt-10">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data01" value="기관" checked="">
-                                            <label class="form-check-label" for="data01">기관</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data02" value="외국인">
-                                            <label class="form-check-label" for="data02">외국인</label>
-                                        </div>
-                                    </div>
-                                    <!-- //라디오체크 -->
                                     
                                     <div class="tab-content rmt-10" id="chart-img">
-                                        <div class="tab-pane fade show active" id="chart0101" role="tabpanel" aria-labelledby="표">
-                                            <div class="chart">
+                                        <div class="tab-pane active" >
+                                            <div class="rmt-20">
+                                                <table class="table table-custom-borderless">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">날짜</th>
+                                                            <th scope="col">종가</th>
+                                                            <th scope="col">외국인</th>
+                                                            <th scope="col">기관</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span class="date">21/10/21</span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span>
+                                                                    1,140,000 <br>
+                                                                    ▲ 1,200
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">
+                                                                    -140,000 <br>
+                                                                    22.27%
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">-40,000</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span class="date">21/10/21</span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span>
+                                                                    1,140,000 <br>
+                                                                    ▲ 1,200
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">
+                                                                    -140,000 <br>
+                                                                    22.27%
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">-40,000</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span class="date">21/10/21</span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span>
+                                                                    1,140,000 <br>
+                                                                    ▲ 1,200
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">
+                                                                    -140,000 <br>
+                                                                    22.27%
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">-40,000</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span class="date">21/10/21</span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span>
+                                                                    1,140,000 <br>
+                                                                    ▲ 1,200
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">
+                                                                    -140,000 <br>
+                                                                    22.27%
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">-40,000</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span class="date">21/10/21</span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span>
+                                                                    1,140,000 <br>
+                                                                    ▲ 1,200
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">
+                                                                    -140,000 <br>
+                                                                    22.27%
+                                                                </span>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="dn">-40,000</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane active">
+
+                                            <div class="radionCheckingBox">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data01" value="기관" checked="">
+                                                    <label class="form-check-label" for="data01">기관</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data02" value="외국인">
+                                                    <label class="form-check-label" for="data02">외국인</label>
+                                                </div>
+                                            </div>
+                                            <!-- //라디오체크 -->
+
+                                            <div class="chart rmt-20">
                                                 <img src="./img/demoChart.png" alt="차트" class="img-fluid">
                                             </div>
 
@@ -238,11 +462,29 @@
                                                 <input type="range" class="form-range" min="0" max="1" step="0.1" id="range01">
                                                 <label for="range01" class="form-label">매매비중 0.2%이상</label>
                                             </div>
-
-
                                         </div>
-                                        <div class="tab-pane fade" id="chart0102" role="tabpanel" aria-labelledby="매매강도">...</div>
-                                        <div class="tab-pane fade" id="chart0103" role="tabpanel" aria-labelledby="누적순매매">...</div>
+
+                                        <div class="tab-pane active">
+                                            <div class="radionCheckingBox">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data021" value="기관" checked="">
+                                                    <label class="form-check-label" for="data021">1개월</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data022" value="외국인">
+                                                    <label class="form-check-label" for="data022">3개월</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data023" value="외국인">
+                                                    <label class="form-check-label" for="data023">1년</label>
+                                                </div>
+                                            </div>
+                                            <!-- //라디오체크 -->
+
+                                            <div class="chart rmt-20">
+                                                <img src="./img/demoChart.png" alt="차트" class="img-fluid">
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- //탭컨텐츠 -->
 
@@ -290,31 +532,31 @@
                                 </div>
                                 <!-- // -->
 
-                                <div class="chartbox">
+                                <div class="chartbox rmt-20">
                                     <ul class="nav nmg chart-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active " id="cht0201" data-bs-toggle="pill" data-bs-target="#chart0201" type="button" role="tab" aria-controls="표" aria-selected="true">일봉</button>
+                                            <button class="nav-link active ">일봉</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0202" data-bs-toggle="pill" data-bs-target="#chart0202" type="button" role="tab" aria-controls="매매강도" aria-selected="false">주봉</button>
+                                            <button class="nav-link " >주봉</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0203" data-bs-toggle="pill" data-bs-target="#chart0202" type="button" role="tab" aria-controls="누적순매매" aria-selected="false">월봉</button>
+                                            <button class="nav-link ">월봉</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0203" data-bs-toggle="pill" data-bs-target="#chart0202" type="button" role="tab" aria-controls="누적순매매" aria-selected="false">5분봉</button>
+                                            <button class="nav-link ">5분봉</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0203" data-bs-toggle="pill" data-bs-target="#chart0202" type="button" role="tab" aria-controls="누적순매매" aria-selected="false">매물대</button>
+                                            <button class="nav-link ">매물대</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0203" data-bs-toggle="pill" data-bs-target="#chart0202" type="button" role="tab" aria-controls="누적순매매" aria-selected="false">주체별</button>
+                                            <button class="nav-link ">주체별</button>
                                         </li>
                                     </ul>
                                     <!-- //버튼탭 -->
 
                                     <div class="tab-content" id="chart-img">
-                                        <div class="tab-pane fade show active" id="chart0101" role="tabpanel" aria-labelledby="표">
+                                        <div class="tab-pane active">
                                             <div class="itemTitle rmt-20">
                                                 <span class="name">삼성전자</span><span class="inum">12345</span>
                                             </div>
@@ -323,10 +565,9 @@
                                             <div class="chart rmt-5">
                                                 <img src="./img/demo_chart02.png" alt="" class="img-fluid">
                                             </div>
-
                                         </div>
-                                        <div class="tab-pane fade" id="chart0102" role="tabpanel" aria-labelledby="매매강도">...</div>
-                                        <div class="tab-pane fade" id="chart0103" role="tabpanel" aria-labelledby="누적순매매">...</div>
+                                        <div class="tab-pane "></div>
+                                        <div class="tab-pane "></div>
                                     </div>
                                     <!-- //탭컨텐츠 -->
                                 </div>
@@ -345,14 +586,99 @@
                     <!-- //차트분석 -->
 
                     <div class="item-home-box shadow-sm">
+
                         <p>
-                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box03" aria-expanded="false" aria-controls="종목요약분석">
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box03" aria-expanded="false" aria-controls="종목요약정보">
                                 종목요약정보
                             </button>
                         </p>
+
                         <div class="collapse" id="box03">
-                            <div class="card card-body">
-                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                            <div class="item-summary">
+
+                                <div class="guide">
+                                    <span class="fw-bold">온라인게임 개발 및 버플리싱 전문업체</span>
+                                    <span>코스닥/디지털컨텐츠</span>
+                                    <span>관련테마 : <em>모바일게임(스마트폰)</em><em>게임</em></span>
+                                    <span>관련이슈 : <em>게임</em><em>웹툰</em><em>크래프톤</em></span>
+                                </div>
+                                <!-- // -->
+                                
+                                <div class="itemInfo rmt-20">
+                                    <table class="table table-custom-sbordered">
+                                        <tbody>
+                                            <tr>
+                                                <th>현재가</th>
+                                                <td class="text-end"><span>1,240,500</span></td>
+                                                <th>거래량</th>
+                                                <td class="text-end"><span>1,240,500</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>전일대비</th>
+                                                <td class="text-end"><span>▲ 1,200</span></td>
+                                                <th>전일대비</th>
+                                                <td class="text-end"><span class="dn">-2.18%</span></td>
+                                            </tr>
+                                            <tr class="bordered">
+                                                <th>등락율</th>
+                                                <td class="text-end"><span class="dn">-2.18%</span></td>
+                                                <th>거래대금</th>
+                                                <td class="text-end"><span>41,941백만</span></td>
+                                            </tr>
+                                            <!-- //라인 -->
+                                            <tr>
+                                                <th>시가</th>
+                                                <td class="text-end"><span class="up">1,240,200</span></td>
+                                                <th>1개월수익률</th>
+                                                <td class="text-end"><span>-2.18%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>고가</th>
+                                                <td class="text-end"><span class="up">240,500</span></td>
+                                                <th>3개월수익률</th>
+                                                <td class="text-end"><span>32.18%</span></td>
+                                            </tr>
+                                            <tr class="bordered">
+                                                <th>저가</th>
+                                                <td class="text-end"><span class="dn">220,500</span></td>
+                                                <th>연초대비</th>
+                                                <td class="text-end"><span>62.18%</span></td>
+                                            </tr>
+                                            <!-- //라인 -->
+                                            <tr>
+                                                <th>RER</th>
+                                                <td class="text-end"><span>1,240,500</span></td>
+                                                <th>외인보유</th>
+                                                <td class="text-end"><span>2,204천</span></td>
+                                            </tr>
+                                            <tr class="bordered">
+                                                <th>EPS</th>
+                                                <td class="text-end"><span>230,500</span></td>
+                                                <th>외인비율</th>
+                                                <td class="text-end"><span>32.18%</span></td>
+                                            </tr>
+                                            <!-- //라인 -->
+                                            <tr>
+                                                <th>시가총액</th>
+                                                <td class="text-end"><span>6,200억</span></td>
+                                                <th>상장주식수</th>
+                                                <td class="text-end"><span>2,200만주</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>시총순위</th>
+                                                <td class="text-end"><span>코스닥 118위</span></td>
+                                                <th>액면가</th>
+                                                <td class="text-end"><span>500원</span></td>
+                                            </tr>
+                                            <tr class="bordered">
+                                                <th>결산월</th>
+                                                <td class="text-end"><span>12월</span></td>
+                                                <th>자본금</th>
+                                                <td class="text-end"><span>1,200억</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -375,16 +701,16 @@
                                 <div class="news">
                                     <ul class="nav rmt-0 chart-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="cht0301" data-bs-toggle="pill" data-bs-target="#chart0301" type="button" role="tab" aria-controls="최신기사" aria-selected="true">최신기사</button>
+                                            <button class="nav-link">최신기사</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="cht0302" data-bs-toggle="pill" data-bs-target="#chart0302" type="button" role="tab" aria-controls="키워드" aria-selected="false">키워드</button>
+                                            <button class="nav-link active">키워드</button>
                                         </li>
                                     </ul>
                                     <!-- //버튼탭 -->
 
                                     <div class="tab-content rmt-10" id="">
-                                        <div class="tab-pane fade show active" id="chart0301" role="tabpanel" aria-labelledby="최신기사">
+                                        <div class="tab-pane active">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
@@ -412,7 +738,11 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="tab-pane fade" id="chart0302" role="tabpanel" aria-labelledby="키워드">...</div>
+                                        <div class="tab-pane">
+                                            <div class="rmt-10 float-start">
+                                                <img src="./img/keyword.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- //탭컨텐츠 -->
 
@@ -431,12 +761,49 @@
                     <div class="item-home-box shadow-sm">
                         <p>
                             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box05" aria-expanded="false" aria-controls="공시">
-                                공시
+                                공시요약
                             </button>
                         </p>
                         <div class="collapse" id="box05">
                             <div class="card card-body">
-                                
+                                <div class="news rmt-50">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="txt text-truncate">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                            <span class="date">14:35</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //list -->
+                                <div class="ab-btn">
+                                    <button type="button">전자공시&nbsp;&nbsp;〉</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                                </div>
+                                <!-- // -->
                             </div>
                         </div>
                     </div>
@@ -453,10 +820,10 @@
 
                                 <div class="latest">
                                     <div>
-                                        <span class="d-block text-truncate">내용내용내용내용내용내용내용내용내용내용내용내용</span><span class="clss d-block text-truncate">소셜분석</span>
+                                        <span class="date">10.26</span><span class="d-block text-truncate">내용내용내용내용내용내용내용내용내용내용내용내용</span>
                                     </div>
                                     <div>
-                                        <span class="d-block text-truncate">내용내용내용내용내용내용내용내용내용내용내용내용</span><span class="clss d-block text-truncate">소셜분석</span>
+                                        <span class="date">12.12</span><span class="d-block text-truncate">내용내용내용내용내용내용내용내용내용내용내용내용</span>
                                     </div>
                                 </div>
                                 <!-- //  -->
@@ -464,19 +831,53 @@
                                 <div class="social">
                                     <ul class="nav rmt-20 chart-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active btn btn-outline-primary" id="cht0601" data-bs-toggle="pill" data-bs-target="#chart0601" type="button" role="tab" aria-controls="소셜트렌드" aria-selected="true">소셜트렌드</button>
+                                            <button class="nav-link active btn btn-outline-primary" type="button" role="tab">소셜트렌드</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link btn btn-outline-primary" id="cht0602" data-bs-toggle="pill" data-bs-target="#chart0602" type="button" role="tab" aria-controls="최신글" aria-selected="false">최신글</button>
+                                            <button class="nav-link btn btn-outline-primary" type="button" role="tab">최신글</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link btn btn-outline-primary" id="cht0603" data-bs-toggle="pill" data-bs-target="#chart0602" type="button" role="tab" aria-controls="네이버" aria-selected="false">네이버</button>
+                                            <button class="nav-link btn btn-outline-primary" type="button" role="tab">네이버</button>
                                         </li>
                                     </ul>
                                     <!-- //버튼탭 -->
 
                                     <div class="tab-content rmt-10" id="">
-                                        <div class="tab-pane fade show active" id="chart0601" role="tabpanel" aria-labelledby="소셜트렌드">
+                                        <div class="tab-pane active" role="tabpanel" aria-labelledby="소셜트렌드">
+                                            <div class="list-group">
+                                                <a href="#" class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                                <a class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                                <a class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                                <a class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                                <a class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                                <a class="list-group-item">
+                                                    <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                                    <span class="d-block text-truncate date">14:35</span>
+                                                </a>
+                                            </div>
+                                            <!-- // a태그 사용시 예시 -->
+
+                                            <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                                            </div>
+                                            <!-- //바로가기 -->
+                                        </div>
+                                        <div class="tab-pane " role="tabpanel" aria-labelledby="최신글">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
@@ -503,18 +904,18 @@
                                                     <span class="d-block text-truncate date">14:35</span>
                                                 </li>
                                             </ul>
+
+                                            <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                                            </div>
+                                            <!-- //바로가기 -->
                                         </div>
-                                        <div class="tab-pane fade" id="chart0602" role="tabpanel" aria-labelledby="최신글">...</div>
-                                        <div class="tab-pane fade" id="chart0603" role="tabpanel" aria-labelledby="네이버">...</div>
+                                        <div class="tab-pane " role="tabpanel" aria-labelledby="네이버"></div>
                                     </div>
                                     <!-- //탭컨텐츠 -->
                                 </div>
                                 <!-- //social -->
 
-                                <div class="shorcutBtn d-grid gap-2 rmt-20">
-                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
-                                </div>
-                                <!-- //바로가기 -->
                             </div>
                         </div>
                     </div>
@@ -523,26 +924,287 @@
                     <div class="item-home-box shadow-sm">
                         <p>
                             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box07" aria-expanded="false" aria-controls="이슈테마">
-                                이슈테마
+                                연관테마
                             </button>
                         </p>
                         <div class="collapse" id="box07">
                             <div class="card card-body">
-                                
+                                <div class="c-theme">
+                                    <strong class="d-block title">홈쇼핑</strong>
+                                    <div id="myItem">
+                                        <div class="myItemList">
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                        </div>
+                                    </div>
+                                    <div class="ab-btn more">
+                                        <button type="button">더보기&nbsp;&nbsp;〉</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="c-theme">
+                                    <strong class="d-block title">미디어 - 드라마 - 영화 제작</strong>
+                                    <div id="myItem">
+                                        <div class="myItemList">
+                                            <!-- //item -->
+                                            <div class="myItemBox item item-xlg shadow-sm" onclick="location.href='itemhome.html'">
+                                                <span class="name text-truncate">종목명종목명종목명</span>
+                                                <!-- //종목명 -->
+                                                <span class="price">4,500</span>
+                                                <!-- //가격 -->
+                                                <span class="und">
+                                                    <em class="up">▲ 1,500</em>
+                                                </span>
+                                                <!-- //등락률 -->
+                                                <span class="per">
+                                                    <em class="up">+3.2%</em>
+                                                </span>
+                                                <!-- //퍼센트 -->
+                                            </div>
+                                            <!-- //item -->
+                                        </div>
+                                    </div>
+                                    <div class="ab-btn more">
+                                        <button type="button">더보기&nbsp;&nbsp;〉</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
                             </div>
                         </div>
                     </div>
-                    <!-- //이슈테마 -->
+                    <!-- //연관테마 -->
 
                     <div class="item-home-box shadow-sm">
                         <p>
                             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#box08" aria-expanded="false" aria-controls="공매도">
-                                공매도
+                                대차거래/공매도
                             </button>
                         </p>
                         <div class="collapse" id="box08">
                             <div class="card card-body">
-                                
+                                <div class="lns">
+                                    <ul class="nav rmt-0 chart-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active btn btn-outline-primary" type="button" role="tab">대차거래</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link btn btn-outline-primary" type="button" role="tab">공매도</button>
+                                        </li>
+                                    </ul>
+                                    <!-- // -->
+
+                                    <div class="tab-content rmt-20">
+                                        <div class="tab-pane active">
+                                            <table class="table table-custom-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="row">일자</th>
+                                                        <th scope="row">체결</th>
+                                                        <th scope="row">상환</th>
+                                                        <th scope="row">잔고</th>
+                                                        <th scope="row">잔고금(억)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="mainColumnGuideBox tabInBtm tblBtm">
+                                                <span class="d-block"><em>해당 정보는 참고용이며, 제공되는 정보 이용에 따른 책임은 이용자 본인 에게 있습니다. </em></span>
+                                            </div>
+
+                                            <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="tab-pane">
+                                            <table class="table table-custom-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="row">일자</th>
+                                                        <th scope="row">거래량</th>
+                                                        <th scope="row">공매도량</th>
+                                                        <th scope="row">매매비중</th>
+                                                        <th scope="row">금액(억)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="date">10/12</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">2,140,000</span></td>
+                                                        <td class="text-end"><span class="">200</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="mainColumnGuideBox tabInBtm tblBtm">
+                                                <span class="d-block"><em>해당 정보는 참고용이며, 제공되는 정보 이용에 따른 책임은 이용자 본인 에게 있습니다. </em></span>
+                                            </div>
+
+                                            <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;〉</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
                             </div>
                         </div>
                     </div>
@@ -558,10 +1220,10 @@
                             <div class="card card-body">
                                 <div class="latest">
                                     <div>
-                                        <span class="d-block text-truncate">22일 삼성전자, 목표가 상위 종목 TOP122일 삼성전자, 목표가 상위 종목 TOP1</span>
+                                        <span class="date">10.26</span><span class="d-block text-truncate">22일 삼성전자, 목표가 상위 종목 TOP122일 삼성전자, 목표가 상위 종목 TOP1</span>
                                     </div>
                                     <div>
-                                        <span class="d-block text-truncate">22일 삼성전자, 목표가 상위 종목 TOP122일 삼성전자, 목표가 상위 종목 TOP1</span>
+                                        <span class="date">10.26</span><span class="d-block text-truncate">22일 삼성전자, 목표가 상위 종목 TOP122일 삼성전자, 목표가 상위 종목 TOP1</span>
                                     </div>
                                 </div>
                                 <!-- //  -->
@@ -569,16 +1231,19 @@
                                 <div class="report">
                                     <ul class="nav chart-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="cht0601" data-bs-toggle="pill" data-bs-target="#chart0901" type="button" role="tab" aria-controls="통계" aria-selected="true">통계</button>
+                                            <button class="nav-link" type="button" role="tab">통계</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="cht0602" data-bs-toggle="pill" data-bs-target="#chart0902" type="button" role="tab" aria-controls="최신" aria-selected="false">최신</button>
+                                            <button class="nav-link active" type="button" role="tab">최신</button>
                                         </li>
                                     </ul>
                                     <!-- //버튼탭 -->
 
                                     <div class="tab-content rmt-10">
-                                        <div class="tab-pane fade show active" id="chart0601" role="tabpanel" aria-labelledby="통계">
+                                        <div class="tab-pane" id="chart0601" role="tabpanel" aria-labelledby="통계">
+                                            
+                                        </div>
+                                        <div class="tab-pane active" id="chart0602" role="tabpanel" aria-labelledby="최신">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
@@ -612,7 +1277,6 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="tab-pane fade" id="chart0602" role="tabpanel" aria-labelledby="최신">...</div>
                                     </div>
                                     <!-- //탭컨텐츠 -->
                                 </div>
@@ -642,7 +1306,41 @@
                         </p>
                         <div class="collapse" id="box10">
                             <div class="card card-body">
-                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <div class="latest">
+                                    <div>
+                                        <span><em class="date">10.26</em>22일 삼성전자, 목표가 상위 종목 TOP122일 삼성전자, 목표가 상위 종목 TOP1</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="dvm">
+                                    <ul class="nav chart-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" type="button" role="tab">연간</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" type="button" role="tab">분기</button>
+                                        </li>
+                                    </ul>
+                                    <!-- //버튼탭 -->
+
+                                    <div class="tab-content rmt-20">
+                                        <div class="tab-pane active">
+                                            <img src="./img/dvmchart.png" alt="" class="img-fluid">
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="tab-pane"></div>
+                                    </div>
+
+                                    <div class="ab-btn doc">
+                                        <button type="button">최신사업보고서</button>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- // -->
+
                             </div>
                         </div>
                     </div>
@@ -656,11 +1354,63 @@
                         </p>
                         <div class="collapse" id="box11">
                             <div class="card card-body">
-                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                
+                                <div class="yvm">
+                                    <div class="guide">
+                                        <span class="fw-bold yvm_title">코로나의약품 수출입통계 <em>*영업이익밀접</em></span>
+                                        <span class="d-block">연관테마: <em>자동차</em></span>
+                                        <span class="d-block">연관업종: <em>제조</em></span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div id="carouselChart" class="carousel carousel-dark slide rmt-20 rpb-48" data-bs-ride="carousel">
+
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselChart" data-bs-slide-to="0" class="active" aria-current="true" aria-label="">1</button>
+                                            <button type="button" data-bs-target="#carouselChart" data-bs-slide-to="1" aria-label="">2</button>
+                                            <button type="button" data-bs-target="#carouselChart" data-bs-slide-to="2" aria-label="">3</button>
+                                            <span>&nbsp;/ 3</span>
+                                        </div>
+                                        <!-- // -->
+                                    
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active" data-bs-interval="10000">
+                                                <img src="./img/dvmchart.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="10000">
+                                                <img src="./img/dvmchart.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="10000">
+                                                <img src="./img/dvmchart.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselChart" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <!-- //prev -->
+
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselChart" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                        <!-- //next -->
+                                    </div>
+                                    <!-- //carousel -->
+
+                                    <script>
+                                        
+                                    </script>
+                                </div>
+                                <!-- // -->
                             </div>
                         </div>
                     </div>
                     <!-- //연관지표 -->
+
+                    <div class="hspace50"></div>
 
                 </section>
                 <!-- // -->
@@ -699,6 +1449,7 @@
             
         </div>
         <!-- /wrap -->
+
         <!-- bootstrap js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- //bootstrap js -->

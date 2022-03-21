@@ -1,6 +1,6 @@
 // 헤더타이틀
 .headerTitle{
-    width:calc(100% - 87px);
+    width:calc(100% - 117px);
     height:20px;
     line-height:20px;
     margin-left:25px;
@@ -11,8 +11,14 @@
     font-weight:700 !important;
     float:left;
 
+    em{
+        font-size:14px;
+        font-weight:400;
+    }
+
     &.subTitle{
         text-align:center;
+        margin:0;
     }
 }
 .subSchBtn{
@@ -40,5 +46,12 @@
         text-indent:-9999em;
         width:40px;
         background-size:10px auto;
+        z-index:100;
+    }
+}
+.rightBtn{
+    a{
+        font-size:14px;
+        color:#000;
     }
 }

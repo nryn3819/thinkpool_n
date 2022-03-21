@@ -1,0 +1,105 @@
+.board{
+
+
+    //종목홈 뷰
+    &-item{
+        header{
+            position: relative;
+            display:block;
+            width:100%;
+            padding-bottom:15px;
+            border-bottom:1px solid #cacaca;
+
+            .board-title{
+                display:block;
+                font-size:19px;
+                --lh: 1.75rem;
+                line-height: var(--lh);
+            }
+
+            .board-date{
+                display:block;
+                height:15px;
+                line-height:15px;
+
+                em{
+                    font-size:13px;
+                    color:#999;
+                    font-weight:300;
+
+                    &:first-child{
+                        &::after{
+                            content:'|';
+                            padding-left:5px;
+                        }
+                    }
+                }
+            }
+
+            .board-top-btn{
+                position:absolute;
+                bottom:10px;
+                right:0;
+
+                button{
+                    box-sizing:border-box;
+                    width:26px;
+                    height:26px;
+                    text-align:center;
+                    border-radius: 26px;
+                    border:1px solid #ccc;
+                    background:#f5f5f7;
+                    margin:0;
+                    padding:3px;
+
+                    &:last-child{
+                        padding:3px 5px;
+                    }
+
+                    img,svg{
+                        float:left;
+                    }
+
+                    em{
+                        position:absolute;
+                        top:0;
+                        left:-9999em;
+                    }
+                }
+            }
+
+
+        }
+
+        .viewContent{
+            padding:10px 0;
+            font-size:16px;
+            color:#000;
+            line-height:26px;
+        }
+
+        footer{
+            border-top:1px solid #cacaca;
+            padding-top:20px;
+
+            .btn-group{
+                display:block;
+                text-align:center;
+            }
+
+            .tag-group{
+                a{
+                    display:block;
+                    margin-right:15px;
+                    float:left;
+                    font-size:13px;
+                    color:#5368FF;
+
+                    &::before{
+                        content:'#';
+                    }
+                }
+            }
+        }
+    }
+}

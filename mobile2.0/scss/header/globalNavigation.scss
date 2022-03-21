@@ -2,8 +2,6 @@
 .globalNavigation {
     display: flex;
     width: 100%;
-    min-width:360px;
-    max-width:480px;
     padding: 0 18px;
     margin:14px 0 0 0;
     justify-content: space-around;
@@ -20,5 +18,13 @@
             font-weight:700;
             border-bottom:2px solid #000;
         }
+    }
+}
+
+.allNav.aiitem{
+    justify-content: flex-start;
+    
+    .globalNavigation{
+        min-width:480px;
     }
 }

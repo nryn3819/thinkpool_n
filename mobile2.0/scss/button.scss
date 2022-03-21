@@ -1,0 +1,58 @@
+// btn
+
+.btn {
+    &-outline {
+
+        &-detail {
+            height: 37px !important;
+            padding: 0 !important;
+            border-radius: 4px !important;
+            border: 1px solid #d5d5d5 !important;
+            font-size: 14px !important;
+            color: #000 !important;
+            background: #fff;
+        }
+    }
+
+    &-custom{
+        &-white{
+            min-width:147px;
+            height:37px !important;
+            padding:0 26px !important;
+            border:1px solid #d5d5d5 !important;
+            outline:0 !important;
+            font-size:16px !important;
+            border-radius: 37px !important;
+            margin:0 10px;
+
+            svg{
+                margin-top:-2px;
+                color:#989898;
+            }
+        }
+        &-share{
+            height:37px;
+            line-height:37px;
+            padding:0 8px;
+            border-radius: 5px;
+            background:#F1F3F7;
+            font-size:13px;
+            color:#000;
+            border:0;
+        }
+    }
+
+    &-customOutline {
+
+        &-primary {
+            padding: 0 13px !important;
+            height: 18px !important;
+            border-radius: 18px !important;
+            font-size: 10px !important;
+            font-weight: 300 !important;
+            margin: 0 !important;
+            border: 1px solid #5368FF !important;
+            color: #5368FF !important;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.pageTopSch {
+  background: #F2F3F7;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pageTopSch .input-group {
+  width: 234px;
+  height: 35px;
+  background: #fff;
+  border-radius: 35px;
+  padding: 0 15px;
+}
+
+.pageTopSch .input-group input[type="text"] {
+  width: 186px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+}
+
+.pageTopSch .input-group button {
+  line-height: 35px;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+}
+
+.pageTopSch .input-group button:focus, .pageTopSch .input-group button:active, .pageTopSch .input-group button:visited {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+}
+
+.pageTopSch .input-group button svg {
+  float: left;
+}
