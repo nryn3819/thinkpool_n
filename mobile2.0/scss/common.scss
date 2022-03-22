@@ -2,6 +2,7 @@
 //변수
 @import 'variable.scss';
 
+
 * {
     @include mobile {
         -ms-overflow-style: none;
