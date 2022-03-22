@@ -110,5 +110,7 @@ b, strong{
 @import 'sub.scss'; //서브
 @import 'mpsize.scss'; //마진패딩값
 @import 'hspace.scss'; //빈칸높이값
+@import 'fsize.scss'; //폰트사이즈
 @import 'board.scss'; //게시판
-@import 'paging.scss'; //게시판 123
+@import 'paging.scss'; //페이징
+

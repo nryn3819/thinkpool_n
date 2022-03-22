@@ -94,44 +94,12 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <!-- //control -->
-                        <div class="swiper-pagination"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
                         <!-- //pagination -->
 
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="issueList">
-                                    <div class="card card-issue" onclick="location.href='이슈선택.html'">
-                                        <div class="thumb"><img src="./img/demo_issue.png" alt="demo" class="img-fluid"></div>
-                                        <div class="txt">
-                                            <div class="obj">원전</div>
-                                            <div class="cont">AI이슈포착 특징주 분석, 와이지엔터테인먼트, 하이브</div>
-                                        </div>
-                                        <div class="list">
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                        </div>
-                                    </div>
-                                    <!-- //card -->
-
-                                    <div class="card card-issue" onclick="location.href='이슈선택.html'">
-                                        <div class="thumb"><img src="./img/demo_issue.png" alt="demo" class="img-fluid"></div>
-                                        <div class="txt">
-                                            <div class="obj">원전</div>
-                                            <div class="cont">AI이슈포착 특징주 분석, 와이지엔터테인먼트, 하이브</div>
-                                        </div>
-                                        <div class="list">
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                            <span>종목명종목명 <em class="up">+4.83%</em></span>
-                                        </div>
-                                    </div>
-                                    <!-- //card -->
-
                                     <div class="card card-issue" onclick="location.href='이슈선택.html'">
                                         <div class="thumb"><img src="./img/demo_issue.png" alt="demo" class="img-fluid"></div>
                                         <div class="txt">
@@ -771,6 +739,7 @@
                     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
                     <script>
                         const swiper = new Swiper(".mySwiper", {
+                            autoHeight: true,
                             navigation: {
                                 nextEl: ".swiper-button-next",
                                 prevEl: ".swiper-button-prev",
