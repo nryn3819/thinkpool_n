@@ -2,7 +2,6 @@
 //변수
 @import 'variable.scss';
 
-
 * {
     @include mobile {
         -ms-overflow-style: none;
@@ -114,4 +113,4 @@ b, strong{
 @import 'fsize.scss'; //폰트사이즈
 @import 'board.scss'; //게시판
 @import 'paging.scss'; //페이징
-
+@import 'offcanvas.scss'; //페이징
