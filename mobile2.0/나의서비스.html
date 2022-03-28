@@ -30,7 +30,7 @@
                     <!-- //이전페이지 -->
                 
                     <div class="headerTitle subTitle text-truncate">
-                        <strong>AI 추천</strong>
+                        <strong>AI 종목추천</strong>
                     </div>
                     <!-- //종목명 -->
 
@@ -69,10 +69,10 @@
                 <!-- //top -->
 
                 <div class="allNav">
-                    <menu class="globalNavigation float-start">
+                    <menu class="globalNavigation float-start" style="width:460px">
                         <h3 class="visually-hidden">네비게이션</h3>
-                        <a href="#" class="active">AI추천홈</a>
-                        <a href="#">오늘의종목</a>
+                        <a href="#" >AI추천홈</a>
+                        <a href="#" >오늘의종목</a>
                         <a href="#">종목추천</a>
                         <a href="#">포트폴리오</a>
                         <a href="#">나의서비스</a>
@@ -87,389 +87,667 @@
             <main id="container" class="clearfix">
                 <h2 class="visually-hidden">본문영역</h2>
 
-                <section class="section section-basic">
-                    <h3 class="title">오늘의종목 Pick</h3>
-
-                    <div class="item-pick rmt-10">
-                        <div id="aiitemcarosel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">11</button>
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="1" aria-label="Slide 2">22</button>
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="2" aria-label="Slide 3">33</button>
-                            </div>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                  <div class="card-item">
-                                      <div class="name">
-                                          <strong>삼성전자</strong>
-                                          <span>000000</span>
-                                      </div>
-                                      <div class="price">
-                                          <strong>59,000</strong>
-                                          <span>+3.2%</span>
-                                      </div>
-                                      <div class="btnbox">
-                                          <button>투자포인트<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                      <div class="og-guide">휴대폰 및 가전제품 제조&middot;판매 기업</div>
-                                      <div class="tag">
-                                          <span>폴더블</span>
-                                          <span>냉장고</span>
-                                          <span>세탁기</span>
-                                          <span>스마트폰</span>
-                                      </div>
-                                      <div class="price2">
-                                          <span>증권사목표가</span>
-                                          <span>90,000원</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-
-                              <div class="carousel-item">
-                                  <div class="card-item card-item-sv">
-                                      <div class="txt">
-                                        AI알고리즘이  매일아침 5종목을 추천합니다. <br>
-                                        종목탐색의 용도로 활용할 수 있습니다. <br>
-                                        (종목추천 또는 포트폴리오 가입시 무료제공)
-                                      </div>
-                                      <div class="btnbox">
-                                          <button>서비스 자세히보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-                              <div class="carousel-item">
-                                  <div class="card-item card-item-ev">
-                                      <div class="txt">
-                                          <span>오픈이벤트</span>
-                                          <strong>첫달 5,500원</strong>
-                                          <em>(1인1회 한정)</em>
-                                      </div>
-
-                                      <div class="btnbox">
-                                          <button>이벤트보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-                            </div>
-                            <!-- // -->
-                        </div>
+                <section class="section noPadding">
+                    <div class="msvc-nav-w">
+                        <nav class="msvc-nav">
+                            <a class="nav-link active" aria-current="page" href="#">투자종목</a>
+                            <a class="nav-link" href="#">알림내역</a>
+                            <a class="nav-link" href="#">결재내역</a>
+                        </nav>
                     </div>
-                </section>
 
-                <section class="section section-npd rmt-8">
-                    <h3 class="title title-bullet title-bullet-ai"><span>AI추천</span> BEST 수익률<em> (최근 30일)</em></h3>
-
-                    <div class="ai_best">
-                        <div class="list">
-                            <h4 class="visually-hidden">베스트 수익률 리스트</h4>
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠신라젠신라신라젠신라젠</strong>
-                                    <span class="per d-block text-center up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">보유중</span>
-                                    </div>
-
-                                </div>
+                    <div class="pf_w">
+                        <div class="top">
+                            <div class="txt">
+                                <span>나의 포트폴리오</span>
+                                <strong class="dn">단기수익형</strong>
                             </div>
-                            <!-- // -->
 
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
+                            <div class="btnbox">
+                                <button class="float-start guidebtn">이용방법</button>
+                                <button class="float-end refresh">
+                                    <img src="./img/refresh.png" alt="새로고침" width="12"> 12/12 14:00
+                                </button>
                             </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="d-block">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.2 매수가 50,000</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                        </div>
-                    </div>
-                    <!-- //ai_best -->
-
-                    <div class="upTime">
-                        12/4 14:00
-                    </div>
-                    <!-- //upTime -->
-
-                    <div class="shorcutBtn d-grid gap-2 rmt-20">
-                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
-                    </div>
-                    <!-- // -->
-                </section>
-
-                <section class="section">
-                    <h3 class="visually-hidden">광고영역</h3>
-                    <a href="#bnr1"><img src="./img/demoBnr.png" alt="광고" class="img-fluid"></a>
-                </section>
-
-                <section class="section section-basic">
-                    <h3 class="title">따라하기쉬운 포트폴리오</h3>
-
-                    <div class="fpbox rmt-25">
-                        <div class="fptitle">
-                           <a href="#">단기수익형 포트폴리오</a>
-                        </div>
-
-                        <div class="m-per rmt-10">
-                            <div>
-                                <strong class="up">+000.0%</strong>
-                                <span>최근 1개월 수익률</span>
-                            </div>
-                            <div>
-                                <strong class="up">+000.0%</strong>
-                                <span>최근 3개월 수익률</span>
-                            </div>
-                            <div>
-                                <strong class="up">+000.0%</strong>
-                                <span>최근 1년 수익률</span>
-                            </div>
-                        </div>
-
-                        <div class="m-chart rmt-20">
-                            <div id="monthchart" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1개월">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="3개월">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1년">
-                                  </div>
-                                </div>
-                              </div>
                         </div>
                         <!-- // -->
 
-                        <div class="m-list-w w-100 rmt-10 float-start">
+                        <div class="tab-w noPadding">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link active" aria-current="page" href="#">보유종목</a>
+                                </li>
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link" href="#">매수종목</a>
+                                  <span class="circle-badge bg-red">
+                                    <span class="">N</span>
+                                  </span>
+                                </li>
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link" href="#">매도종목</a>
+                                </li>
+                            </ul>
+                            <!-- // -->
 
-                            <div class="m-list rmt-10 float-start">
-                                <div class="list">
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
+                            <!-- <ul class="nav nav-tabs fth">
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link" aria-current="page" href="#">보유종목</a>
+                                </li>
+                                <li class="nav-item position-relative">
+                                    <a class="nav-link" aria-current="page" href="#">보유종목2</a>
+                                  </li>
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link" href="#">매수종목</a>
+                                  <span class="circle-badge bg-red">
+                                    <span class="">N</span>
+                                  </span>
+                                </li>
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link active" href="#">매도종목</a>
+                                </li>
+                            </ul> -->
+                            <!-- // -->
+
+                            <div class="tab-content rmt-25">
+                                <div class="tab-pane active">
+
+                                    <div class="h_per">
+                                        <strong>보유종목 수익률</strong>
+
+                                        <div class="dl_list">
+                                            <dl>
+                                                <dt>총매입</dt>
+                                                <dd>5,000,000</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>평가손익</dt>
+                                                <dd>5,000,000</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>총평가</dt>
+                                                <dd>5,000,000</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>수익률</dt>
+                                                <dd class="up">+12.2%</dd>
+                                            </dl>
                                         </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
+
+                                        <span class="guide">입력한 매수가와 보유수량을 기준으로 계산됩니다.</span>
+
+                                        <div id="pop-guide">
+                                            <span>매수/매도 알림시 자동으로 보유종목에 추가/삭제됩니다.</span>
+                                            <span>내가 매수하지 않은 종목은 ‘삭제’ 할 수 있습니다.</span>
+                                            <span>‘수량’을 입력한 종목의 수익률을 자동으로 계산 합니다.</span>
+            
+                                            <div class="close">
+                                                <button id="btnfadeOut">&times;</button>
+                                            </div>
                                         </div>
-                                        <!-- // -->
+
+                                        <script type="text/javascript">
+                                            var opacity = 0;
+                                            var intervalID= 0;
+                                             
                                         
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
+                                            //순수 자바스크립트 클릭 이벤트 Fsade out 실행
+                                            document.getElementById('btnfadeOut').addEventListener('click', function() {
+                                                intervalID = setInterval(hide, 20);
+                                            });
+                                            
+                                            //순수 자바스크립트 클릭 이벤트 Fade in
+                                            // document.getElementById('btnfadeIn').addEventListener('click', function() {
+                                            //     intervalID = setInterval(show,200);
+                                            //});
+                                         
+                                            function hide(){
+                                                var div = document.getElementById("pop-guide");
+                                                opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+                                                
+                                                if(opacity>0){
+                                                    //Fade out 핵심 부분
+                                                    opacity = opacity-0.1;
+                                                    div.style.opacity=opacity;
+                                                    //img.style.opacity=opacity;
+                                                }
+                                                else{
+                                                    clearInterval(intervalID);
+                                                }
+                                            }
+                                            
+                                            // function show(){
+                                            //     var div = document.getElementById("pop-guide");
+                                            //     opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+                                                
+                                            //     if(opacity<1){
+                                            //         //Fade in 핵심 부분
+                                            //         opacity = opacity+0.1;
+                                            //         div.style.opacity=opacity;
+                                            //         //img.style.opacity=opacity;
+                                            //     }
+                                            //     else{
+                                            //         clearInterval(intervalID);
+                                            //     }
+                                            // }
+                                            
+                                        </script>
+                                    </div>
+                                    <!-- //보유종목 -->
+
+                                    <div class="board board-tbl rmt-25">
+                                        <div class="top">
+                                            <button>선택삭제</button>
                                         </div>
+                                        <!-- // -->
+                                        <div class="tbl rmt-20">
+                                            <table class="table table-custom-sm" style="width:425px">
+                                                <colgroup>
+                                                    <col width="40">
+                                                    <col width="*">
+                                                    <col width="70">
+                                                    <col width="88">
+                                                    <col width="60">
+                                                    <col width="60">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">선택</th>
+                                                        <th scope="col">종목명</th>
+                                                        <th scope="col">현재가</th>
+                                                        <th scope="col">매수가</th>
+                                                        <th scope="col">수익률</th>
+                                                        <th scope="col">수량</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <input type="checkbox" class="form-check-input">
+                                                        </td>
+                                                        <td class="text-start">
+                                                            롯데정밀화학
+                                                        </td>
+                                                        <td class="text-end">
+                                                            1,223,000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,223,000" style="width:100%">
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="up">91.4%</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input type="text" disabled value="1,002" style="width:100%">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="btm">
+                                             <button>선택삭제</button>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="save rmt-25">
+                                            <button class="btn-custom-primary">저장하기</button>
+                                        </div>
+                                        <!-- // -->
                                     </div>
                                     <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
+
                                 </div>
-                                <!-- //최근매수종목 -->
-                            </div>
-                            <!-- // -->
+                                <!-- // -->
 
-                            <div class="m-list rmt-10 float-start">
+                                <div class="tab-pane active">
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
 
-                                <div class="list">
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- // -->
+
+                                    <div class="rdnItem-w bg-point">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="shorcutBtn d-grid gap-2 rmt-20 rpl-17 rpr-17">
+                                        <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                    </div>
+
                                 </div>
-                                <!-- //최근매도종목 -->
-                            </div>
-                            <!-- // -->
+                                <!-- //매수 -->
 
-                            <div class="shorcutBtn d-grid gap-2 rmt-20">
-                                <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                <div class="tab-pane position-relative active rpt-50">
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span> <span class="circle-bullet bg-red"><span>N</span></span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w bg-point">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="bullet">수급특징주</div>
+                                                <div class="name"><span>삼성전자</span></div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="shorcutBtn d-grid gap-2 rmt-20 rpl-17 rpr-17">
+                                        <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="selectRdn">
+                                        <select class="form-select">
+                                            <option selected>수익률순</option>
+                                            <option value="1">최신순</option>
+                                        </select>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- //매도 -->
                             </div>
-                            <!-- // -->
+
                         </div>
-                        <!-- // -->
+
                     </div>
+
+                    <div class="hspace50"></div>
                 </section>
 
             </main>

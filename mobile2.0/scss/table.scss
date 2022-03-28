@@ -180,5 +180,38 @@
                 }
             }
         }
+        &-sm{
+            border:0 !important;
+
+            thead{
+                border:0 !important; 
+
+                tr{
+                    th{
+                        font-size:13px;
+                        color:#000;
+                        height:40px;
+                        border-top:1px solid #000;
+                        border-bottom:1px solid #000;
+                        font-weight:400;
+                        text-align:center;
+                        background:#f5f5f5;
+                    }
+                }
+            }
+            tbody{
+                border:0 !important; 
+                
+                tr{
+                    td{
+                        height:40px;
+                        border-bottom:1px solid #cacaca;
+                        font-size:13px;
+                        color:#000;
+                        text-align:center;
+                    }
+                }
+            }
+        }
     }
 }

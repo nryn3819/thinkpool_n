@@ -102,4 +102,50 @@
             }
         }
     }
+
+
+    //ai종목추천 나의 서비스
+    &-tbl{
+        padding:0 17px;
+        
+        .top, .btm{
+            display:block;
+            width:100%;
+
+            button{
+                display:inline-block;
+                width:67px;
+                height:28px;
+                line-height:26px;
+                padding:0;
+                text-align:center;
+                border:1px solid #cacaca;
+                background:#fff;
+                border-radius: 5px;
+                font-size:14px;
+                color:#000;
+            }
+        }
+
+        .save{
+            display:block;
+            width:100%;
+            float:left;
+
+            text-align:center;
+
+            button{
+                
+            }
+        }
+
+        .tbl{
+            display:block;
+            width:100%;
+            overflow-x:auto;
+            overflow-y:hidden;
+            float:left;
+        }
+
+    }
 }

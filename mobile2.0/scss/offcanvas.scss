@@ -1,7 +1,107 @@
-.offcanvas{
-    &-top{
-        &.search{
-            height:100%;
+$customColor:#5368FF;
+
+.offcanvas-top{
+    &.search{
+        height:100%;
+
+
+        .offcanvas{
+            &-header{
+                border-bottom:1px solid #5368FF;
+
+                .off-sch{
+                    width:calc(100% - 74px);
+
+                    input{
+                        border-radius: 0 !important;
+                        outline:0 !important;
+
+                        &:focus, &:active {
+                            outline:0;
+                        }
+                    }
+
+                    button{
+                        background:url(../img/b-sch.png) no-repeat 0 0;
+                        background-size:20px auto;
+                    }
+                }
+            }
+            &-body{
+                .off-basic{
+                    .tag{
+                        display:block;
+                        width:100%;
+
+                        span{
+                            font-size:16px;
+                            color:#5368FF;
+                            padding-right:5px;
+
+                            &:last-child{
+                                padding-right:0;
+                            }
+
+                            &::before{
+                                content:'#';
+                            }
+                        }
+                    }
+
+                    .schTop{
+                        display:block;
+                        width:100%;
+                        padding-bottom:10px;
+                        border-bottom:1px solid #cacaca;
+                        
+                        span{
+                            display:inline-block;
+                            font-size:16px;
+                            color:#000;
+                            padding-right:5px;
+                            padding-bottom:10px;
+
+                            &:last-child{
+                                padding-right:0;
+                            }
+                        }
+                    }
+
+                    .latest{
+                        display:block;
+                        width:100%;
+
+                        strong{
+                            display:block;
+                            font-size:16px;
+                            color:#000;
+                            font-weight:700;
+                        }
+
+                        span{
+                            display:block;
+                            font-size:16px;
+                            color:#000;
+                            margin-top:10px;
+                            padding-left:10px;
+
+                            &.tag::before{
+                                content:'#';
+                            }
+                            
+                            &:first-child{
+                                margin-top:15px;
+                            }
+
+                            em{
+                                font-size:16px;
+                                color:#999;
+                            }
+                        }
+                    }
+                }
+            }
         }
+
     }
 }

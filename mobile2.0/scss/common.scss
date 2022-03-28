@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 //변수
 @import 'variable.scss';
+
 
 * {
     @include mobile {
@@ -9,6 +11,7 @@
         scrollbar-width: 0;
 
         /* Firefox */
+
         //scrollbar-height: none; /* Firefox */
         &::-webkit-scrollbar {
             display: none;
@@ -94,8 +97,6 @@ b, strong{
     font-weight: 300;
 }
 
-
-
 @import 'layout.scss'; //레이아웃
 @import 'title.scss'; //타이틀
 @import 'section.scss'; // section박스
@@ -114,3 +115,11 @@ b, strong{
 @import 'board.scss'; //게시판
 @import 'paging.scss'; //페이징
 @import 'offcanvas.scss'; //페이징
+@import 'autocomplete.scss'; //페이징
+@import 'badge.scss'; //뱃지
+
+
+
+
+
+

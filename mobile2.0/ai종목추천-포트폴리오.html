@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="toplogo">
+                        <a href="#"><img src="./img/toplogo.png" alt="씽크풀로고" width="32" class="float-start"></a>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle subTitle text-truncate">
+                        <strong>AI 종목추천</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn subSch">
+                        <button type="button" class="schButton">종목검색</button>
+                    </div>
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+
+                <div class="allNav">
+                    <menu class="globalNavigation float-start" style="width:460px">
+                        <h3 class="visually-hidden">네비게이션</h3>
+                        <a href="#" >AI추천홈</a>
+                        <a href="#" >오늘의종목</a>
+                        <a href="#">종목추천</a>
+                        <a href="#" class="active">포트폴리오</a>
+                        <a href="#">나의서비스</a>
+                        <a href="#">이용안내</a>
+                    </menu>
+                    <!-- //gloabal navi -->
+                </div>
+                <!-- // -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+                    <div class="msvc-nav-w">
+                        <nav class="msvc-nav" style="width:525px">
+                            <a class="nav-link active" aria-current="page" href="#">단기안정형</a>
+                            <a class="nav-link" href="#">단기수익형</a>
+                            <a class="nav-link" href="#">장기안정형</a>
+                            <a class="nav-link" href="#">장기수익형</a>
+                            <a class="nav-link" href="#">고수익형</a>
+                        </nav>
+                    </div>
+                    <!-- // -->
+                </section>
+
+                <section class="section section-basic position-relative">
+                    <h3 class="title">포트폴리오수익률 <img src="./img/bu_pf.png" alt="안내" width="16"></h3>
+
+                    <div class="fpbox rmt-15">
+
+                        <div class="m-per rmt-10">
+                            <div>
+                                <strong class="up">+000.0%</strong>
+                                <span>최근 1개월 수익률</span>
+                            </div>
+                            <div>
+                                <strong class="up">+000.0%</strong>
+                                <span>최근 3개월 수익률</span>
+                            </div>
+                            <div>
+                                <strong class="up">+000.0%</strong>
+                                <span>최근 1년 수익률</span>
+                            </div>
+                        </div>
+
+                        <div class="m-chart rmt-20">
+                            <div id="monthchart" class="carousel slide pointer-event" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1개월">
+                                  </div>
+                                  <div class="carousel-item active carousel-item-start">
+                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="3개월">
+                                  </div>
+                                  <div class="carousel-item carousel-item-next carousel-item-start">
+                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1년">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="rule-btn">
+                            <button>운영원칙</button>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </section>
+
+                <section class="section noPadding">
+
+                    <div class="rdn-btnbox rpt-25">
+                        <button class="btn-custom-alarm"><img src="./img/alarm.png" alt="" width="16"> 수급특징주 알림받기</button>
+                        <button class="btn-custom-svc">서비스소개</button>
+                    </div>
+                    <!-- // -->
+
+                    <div class="pf_w rmt-20">
+                        <div class="top">
+                            <div class="btnbox">
+                                <button class="float-end refresh">
+                                    <img src="./img/refresh.png" alt="새로고침" width="12"> 12/12 14:00
+                                </button>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="tab-w noPadding">
+                            <ul class="nav nav-tabs tth">
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link" aria-current="page" href="#">매수종목</a>
+                                </li>
+                                <li class="nav-item position-relative">
+                                  <a class="nav-link active" href="#">매도종목</a>
+                                  <span class="circle-badge bg-red">
+                                    <span class="">N</span>
+                                  </span>
+                                </li>
+                            </ul>
+                            <!-- // -->
+
+
+                            <div class="tab-content rmt-25">
+                                <div class="tab-pane active">
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="section-inline-ad rmt-0">
+                                        <img src="./img/demoBnr.png" alt="" class="img-fluid">
+                                        <!-- // 인라인광고 -->
+                                    </div>
+
+                                    <div class="rdnItem-w bg-point">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="shorcutBtn d-grid gap-2 rmt-20 rpl-17 rpr-17">
+                                        <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                    </div>
+
+                                    <div class="today-guide text-start rpt-10 rpr-17 rpl-17" dir="ltr">
+                                        <span>초보 투자자도 쉽고 안정적으로 따라할 수 있는 서비스입니다. </span>
+                                        <span>AI알고리즘이 추천한 종목을 투자금의 10%씩 매수 하고, 알고리즘이 알려주는 타이밍에 매도하면 됩니다.</span>
+                                        <span>AI알고리즘 보유종목은 10개 이하로 관리됩니다.  (단 고수익형 제외)</span>
+                                    </div>
+
+                                </div>
+                                <!-- // -->
+                                <div class="tab-pane show"></div>
+                                <!-- // -->
+                                <div class="tab-pane show"></div>
+                                <!-- // -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hspace50"></div>
+                </section>
+
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

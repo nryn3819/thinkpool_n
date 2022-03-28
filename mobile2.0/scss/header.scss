@@ -9,9 +9,22 @@
     z-index:99;
     overflow:hidden;
 
-    &.item{
+    &.item, &.sub{
         padding-bottom:14px;
         border-bottom:1px solid #d6d6d6;
+
+        &.sch{
+            border-bottom:1px solid #5367ff;
+
+            .topSch{
+                .input-group{
+                    .schButton{
+                        background:url(../img/b-sch.png) no-repeat 0 0;
+                        background-size:20px auto;
+                    }
+                }
+            }
+        }
     }
 
     .centerHeader{
@@ -52,10 +65,9 @@
 }
 
 .allNav{
-    display: flex;
+    display: block;
     width:100%;
     overflow-x: auto;
-    justify-content: center;
 }
 
 @import './header/topSch.scss';

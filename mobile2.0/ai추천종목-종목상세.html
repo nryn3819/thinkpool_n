@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>종목명종목명</strong>
+                        <em class="up"></em>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+                
+                <section class="section section-nbg">
+
+                    <div class="item-dtl">
+                        <div class="txt">
+                            중대형주 종목추천 알고리즘 <br>
+                            <span class="up">12월 3일 매수</span> 추천
+                        </div>
+
+                        <div class="per rmt-20">
+                            <div>
+                                <span>매수가</span>
+                                <strong>154,000</strong>
+                            </div>
+                            <div>
+                                <span>목표가</span>
+                                <strong>154,000</strong>
+                            </div>
+                            <div>
+                                <span>수익률</span>
+                                <strong>
+                                    +16.2%
+                                    <span>달성중</span>
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="guide rmt-20">
+                            종목 추천 후 1일이 경과했습니다. <br>
+                            아래 정보는 실시간으로 반영 되어서, 추천 당시와 상황이 다를수 있습니다.
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm">
+                        <div class="top">
+                            <div class="title up">70,000원 (+2.3%)</div>
+                            <div class="date">12/13 14:00</div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="con">
+
+                            <div class="item-summary noPadding">
+                                <div class="guide">
+                                    <div class="fw-bold">기업개요 :<span>카카오톡 모바일 간편결제 서비스 제공 기업</span></div>
+                                    <div>관련테마 :<span><em>모바일게임(스마트폰)</em><em>게임</em><em>게임</em><em>게임</em></span></div>
+                                    <div>관련이슈 :<span><em>게임</em><em>웹툰</em><em>크래프톤</em></span></div>
+                                </div>
+                            </div>
+
+                            <div class="chartbox rmt-20">
+                                <ul class="nav nmg chart-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active ">일봉</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link ">주봉</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link ">월봉</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link ">5분봉</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link ">매물대</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link ">주체별</button>
+                                    </li>
+                                </ul>
+                                <!-- //버튼탭 -->
+
+                                <div class="tab-content" id="chart-img">
+                                    <div class="tab-pane active">
+                                        <div class="itemTitle rmt-20">
+                                            <span class="name">삼성전자</span><span class="inum">12345</span>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="chart rmt-5">
+                                            <img src="./img/demo_chart02.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane "></div>
+                                    <div class="tab-pane "></div>
+                                </div>
+                                <!-- //탭컨텐츠 -->
+                            </div>
+                            <div class="shorcutBtn d-grid gap-2 rpt-20">
+                                <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">투자포인트</div>
+                        </div>
+                        <div class="con">
+                            <div class="textSlide">
+                                <div id="point" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#point" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#point" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#point" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            1금번 실적발표 이후 메모리 업체의 가파른 주가 반등이 발생하고 있음. 메모리 가격 3분기 피크 아웃에 대한 우려감 보다는 짧고 완만한 조정 이후 발생할 구조적인 업황 반등을 바라볼 때가 된것으로 판단됨. 메모리 업체의 낮은 재고수준과 디지털 시대 개화에 따른 구조적인 메모리 수요 증가로 금번 DRAM 가격 하락은 
+                                        </div>
+                                        <!-- // -->
+                                        <div class="carousel-item">
+                                            2금번 실적발표 이후 메모리 업체의 가파른 주가 반등이 발생하고 있음. 메모리 가격 3분기 피크 아웃에 대한 우려감 보다는 짧고 완만한 조정 이후 발생할 구조적인 업황 반등을 바라볼 때가 된것으로 판단됨. 메모리 업체의 낮은 재고수준과 디지털 시대 개화에 따른 구조적인 메모리 수요 증가로 금번 DRAM 가격 하락은 
+                                        </div>
+                                        <!-- // -->
+                                        <div class="carousel-item">
+                                            3금번 실적발표 이후 메모리 업체의 가파른 주가 반등이 발생하고 있음. 메모리 가격 3분기 피크 아웃에 대한 우려감 보다는 짧고 완만한 조정 이후 발생할 구조적인 업황 반등을 바라볼 때가 된것으로 판단됨. 메모리 업체의 낮은 재고수준과 디지털 시대 개화에 따른 구조적인 메모리 수요 증가로 금번 DRAM 가격 하락은 
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">수급 분석</div>
+                        </div>
+                        <div class="con">
+                            <div class="chartbox rmt-0">
+                                <ul class="nav chart-tab rmt-0" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active " type="button">표</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" type="button">차트</button>
+                                    </li>
+                                </ul>
+                                <!-- //버튼탭 -->
+                                
+                                <div class="tab-content rmt-10" id="chart-img">
+                                    <div class="tab-pane active">
+                                        <div class="rmt-20">
+                                            <table class="table table-custom-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">날짜</th>
+                                                        <th scope="col">종가</th>
+                                                        <th scope="col">외국인</th>
+                                                        <th scope="col">기관</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="date">21/10/21</span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span>
+                                                                1,140,000 <br>
+                                                                ▲ 1,200
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">
+                                                                -140,000 <br>
+                                                                22.27%
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">-40,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="date">21/10/21</span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span>
+                                                                1,140,000 <br>
+                                                                ▲ 1,200
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">
+                                                                -140,000 <br>
+                                                                22.27%
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">-40,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="date">21/10/21</span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span>
+                                                                1,140,000 <br>
+                                                                ▲ 1,200
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">
+                                                                -140,000 <br>
+                                                                22.27%
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">-40,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="date">21/10/21</span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span>
+                                                                1,140,000 <br>
+                                                                ▲ 1,200
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">
+                                                                -140,000 <br>
+                                                                22.27%
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">-40,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="date">21/10/21</span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span>
+                                                                1,140,000 <br>
+                                                                ▲ 1,200
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">
+                                                                -140,000 <br>
+                                                                22.27%
+                                                            </span>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            <span class="dn">-40,000</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane active">
+
+                                        <div class="radionCheckingBox">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data01" value="기관" checked="">
+                                                <label class="form-check-label" for="data01">1개월</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data02" value="외국인">
+                                                <label class="form-check-label" for="data02">3개월</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="checkingForDataOpion" id="data03" value="외국인">
+                                                <label class="form-check-label" for="data03">1년</label>
+                                            </div>
+                                        </div>
+                                        <!-- //라디오체크 -->
+
+                                        <div class="chart rmt-20">
+                                            <img src="./img/demoChart.png" alt="차트" class="img-fluid">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- //탭컨텐츠 -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">최근 실적</div>
+                        </div>
+                        <div class="con">
+
+                            <div class="dvm">
+                                <ul class="nav chart-tab rmt-0" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" type="button" role="tab">연간</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" type="button" role="tab">분기</button>
+                                    </li>
+                                </ul>
+                                <!-- //버튼탭 -->
+
+                                <div class="tab-content rmt-20">
+                                    <div class="tab-pane active">
+                                        <img src="./img/dvmchart.png" alt="" class="img-fluid">
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="tab-pane"></div>
+                                </div>
+
+                                <div class="ab-btn doc top-0">
+                                    <button type="button">최신사업보고서</button>
+                                </div>
+                                <!-- // -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">최신 AI속보</div>
+                        </div>
+                        <div class="con rpt-10">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="d-block text-truncate txt"><em class="date">11/23</em> [투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
+                                </a>
+                            </div>
+                            <div class="shorcutBtn d-grid gap-2 rpt-20">
+                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">최근 종목 특이사항</div>
+                        </div>
+                        <div class="con rpt-0">
+                            <div class="timeLine">
+                                <div class="box">
+                                    <div class="title">2021/10/03 (목)</div>
+
+                                    <div class="list">
+                                        <span class="time">12:00</span>
+                                        <span class="txt">외국인 순매수 상위 랭킹  내용이 길면 줄바뀜이 생길수 있음</span>
+                                    </div>
+
+                                    <div class="list">
+                                        <span class="time">12:00</span>
+                                        <span class="txt">외국인 순매수 상위 랭킹</span>
+                                    </div>
+
+                                    <div class="list">
+                                        <span class="time">12:00</span>
+                                        <span class="txt">외국인 순매수 상위 랭킹</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="box rmt-20">
+                                    <div class="title">2021/10/03 (목)</div>
+
+                                    <div class="list">
+                                        <span class="time">12:00</span>
+                                        <span class="txt">외국인 순매수 상위 랭킹  내용이 길면 줄바뀜이 생길수 있음</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="box rmt-20">
+                                    <div class="title">2021/10/03 (목)</div>
+
+                                    <div class="list">
+                                        <span class="time">12:00</span>
+                                        <span class="txt">외국인 순매수 상위 랭킹  내용이 길면 줄바뀜이 생길수 있음</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <div class="shorcutBtn d-grid gap-2">
+                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="ai-dtl-box shadow-sm rmt-15">
+                        <div class="top">
+                            <div class="title">최근 이 종목을 매매했던 AI알고리즘</div>
+                        </div>
+                        <div class="con">
+
+                            <div class="alg-list">
+                                <div class="list">
+                                    <div class="alg-name">
+                                        단기수익형 포트폴리오
+                                    </div>
+
+                                    <div class="info">
+                                        카카오페이 <span class="up">12월 3일 매수</span> 후 보유중
+                                    </div>
+
+                                    <div class="per">
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- // -->
+
+                                <div class="list rmt-40">
+                                    <div class="alg-name">
+                                        수익추구형 포트폴리오
+                                    </div>
+
+                                    <div class="info">
+                                        카카오페이 <span class="dn">12월 3일 매도</span> 수익률 +2.3%
+                                    </div>
+
+                                    <div class="per">
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- // -->
+
+                                <div class="list rmt-40">
+                                    <div class="alg-name">
+                                        수익추구형 포트폴리오
+                                    </div>
+
+                                    <div class="info">
+                                        카카오페이 <span class="up">12월 3일 매수</span> 후 보유중
+                                    </div>
+
+                                    <div class="per">
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+
+                                        <div>
+                                            <strong class="up">+128.2%</strong>
+                                            <span>최근 1개월 수익률</span>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- // -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="hspace50"></div>
+                </section>
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

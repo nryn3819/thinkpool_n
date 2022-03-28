@@ -1,0 +1,25 @@
+//공통
+
+.board{
+    display:block;
+    width:100%;
+
+    &-top{
+        padding:0 17px;
+        overflow:hidden;
+    }
+
+    &-bottom{
+        padding:0 17px;
+        overflow:hidden;
+    }
+
+    &-sch{
+        padding:0 17px;
+    }
+    
+}
+
+@import './list.scss'; //리스트
+@import './view.scss'; //읽기
+@import './write.scss'; //쓰기
