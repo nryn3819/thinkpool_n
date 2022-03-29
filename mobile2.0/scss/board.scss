@@ -146,6 +146,31 @@
             overflow-y:hidden;
             float:left;
         }
+        .tbl-guide{
+            display:block;
+            width:100%;
+            margin-top:10px;
+            float:left;
+
+            div{
+                display:block;
+                width:100%;
+                &::before{
+                    content:'\00b7';
+                    display:block;
+                    float:left;
+                    color:#999;
+                }
+                span{
+                    display:block;
+                    width:calc(100% - 10px);
+                    float:left;
+                    margin-left:5px;
+                    font-size:13px;
+                    color:#999;
+                }
+            }
+        }
 
     }
 }
