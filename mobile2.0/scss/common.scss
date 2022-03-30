@@ -96,6 +96,12 @@ b, strong{
 .text-light {
     font-weight: 300;
 }
+.dropdown-divider{
+    width:100%;
+    background:#d5d5d7;
+    position:static;
+    left:0;
+}
 
 @import 'layout.scss'; //레이아웃
 @import 'title.scss'; //타이틀
@@ -117,5 +123,8 @@ b, strong{
 @import 'offcanvas.scss'; //페이징
 @import 'autocomplete.scss'; //페이징
 @import 'badge.scss'; //뱃지
+
+
+
 
 

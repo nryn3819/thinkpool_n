@@ -4,6 +4,12 @@
 html,body{
     background:#f6f6f7;
 }
+.modal-open{
+    padding-right:0 !important;
+}
+.modal{
+    padding-right:0 !important;
+}
 
 @media screen and (min-width: 720px){
     #wrap{

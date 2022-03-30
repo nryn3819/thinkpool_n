@@ -3,20 +3,78 @@
 .board{
     display:block;
     width:100%;
+    overflow:hidden;
 
     &-top{
         padding:0 17px;
-        overflow:hidden;
+        width:100%;
+        float:left;
+
+        .btn-group{
+            float:left;
+
+            button{
+                height:33px;
+                line-height:31px;
+                border:1px solid #d5d5d5;
+                padding: 0 10px 0 15px;
+                font-size:14px;
+                float:left;
+                border-radius: 0 5px 5px 0;
+                border-left:0;
+            }
+
+            ul{
+                padding:0.5rem;
+                border-radius: 0;
+
+                background:#f5f5f5;
+                li{
+                    button{
+                        border:0;
+                        background:none;
+                    }
+                }
+
+            }
+        }
     }
 
-    &-bottom{
+    &-btm{
+        width:100%;
         padding:0 17px;
         overflow:hidden;
+        float:left;
     }
 
     &-sch{
-        padding:0 17px;
+        display:flex;
+        justify-content: flex-start;
+        padding:0 34px;
+        width:100%;
+        float:left;
+
+        .form-select{
+            width:auto;
+            border-radius: 0.25em 0 0 0.25em;
+        }
+
+        .input-group{
+            width:calc(100% - 80px);
+
+            input.form-control{
+                border-radius: 0 0.25em 0.25em 0;
+                margin-left:-1px;
+            }
+
+            button{
+                border:1px solid #ced4da !important;
+                padding-right:.8em !important;
+            }
+        }
     }
+
+    
     
 }
 

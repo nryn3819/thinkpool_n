@@ -51,7 +51,7 @@
             color:#fff;
             border-radius: 37px;
             border:0;
-        }ㅅ
+        }
         &-white{
             min-width:147px;
             height:37px !important;
@@ -79,6 +79,48 @@
         }
 
         &-board{
+            height:33px;
+            line-height:31px;
+            font-size:14px;
+
+            &.write{
+                border:1px solid #5368FF;
+                background:url(../img/bu_write.png) no-repeat 13px 50%;
+                background-size:16px auto;
+                padding:0 13px 0 36px;
+                color:#000;
+                font-weight:700;
+                font-size:14px;
+            }
+
+            &.pagetop{
+                padding:0 13px 0 30px;
+                background:url(../img/buTop.png) no-repeat 13px 50%;
+                background-size:10px auto;
+                color:#000;
+                font-size:14px;
+                border:1px solid #d5d5d5;
+                border-radius: 5px;
+            }
+
+            &.mini{
+                border:1px solid #d5d5d5;
+                float:left;
+                padding:0 10px;
+                border-radius:0;
+                font-size:14px;
+
+                &:first-child{
+                    border-radius: 5px 0 0 5px;
+                    border-right:0;
+                }
+                &.active{
+                    border:1px solid #5368FF;
+                    background:#5368FF;
+                    color:#fff;
+                    font-weight:700;
+                }
+            }
         }
     }
 
