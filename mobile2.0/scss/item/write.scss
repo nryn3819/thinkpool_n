@@ -1,0 +1,93 @@
+.board-write{
+    display:block;
+    width:100%;
+    float:left;
+    padding:25px 17px;
+    background:#fff;
+
+    .obj{
+        display:block;
+        width:100%;
+        height:40px;
+        line-height:40px;
+        padding:0 15px;
+        font-size:15px;
+        color:#000;
+        border:1px solid #5469FF;
+
+        &::placeholder{
+            color:#999;
+        }
+    }
+    textarea{
+        display:block;
+        width:100%;
+        height:200px;
+        line-height:21px;
+        padding:5px 15px;
+        font-size:15px;
+        color:#000;
+        border:1px solid #5469FF;
+
+        &::placeholder{
+            color:#999;
+        }
+    }
+}
+
+.write-guide{
+    display:block;
+    float:left;
+    padding:0 17px;
+
+    strong{
+        display:block;
+        width:100%;
+        font-size:14px;
+        color:#000;
+        font-weight:700;
+        float:left;
+    }
+
+    span{
+        display:block;
+        width:100%;
+        font-size:14px;
+        min-height:18px;
+        line-height:18px;
+        float:left;
+    }
+}
+
+.hidden-guide{
+    padding:0 17px;
+    width:100%;
+
+    .top{
+        display:block;
+        width:100%;
+
+        button{
+            width:100%;
+            height:37px;
+            border:1px solid #d5d5d5;
+            border-radius: 5px;
+            background:#fff;
+            
+            &::after{
+                content:'';
+            }
+        }
+    }
+
+    .collapse, .collapsing{
+        .card.card-body{
+            padding:17px 0;
+            border:0;
+
+            .write-guide{
+                padding:0;
+            }
+        }
+    }
+}

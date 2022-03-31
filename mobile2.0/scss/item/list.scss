@@ -144,3 +144,57 @@
         padding:10px;
     }
 }
+
+.addmem-w{
+    padding:25px 17px;
+    background:#F2F3F7;
+
+    .addmem-txt{
+        display:block;
+        width:100%;
+        font-size:15px;
+        color:#000;
+        line-height:21px;
+        letter-spacing: -0.025em;
+    }
+
+    .addmem-sch{
+        display:block;
+        margin:25px auto 0;
+        width:234px;
+        height:35px;
+        border-radius: 35px;
+        background:#fff;
+        padding:0 15px;
+
+        input{
+            display:block;
+            width:183px;
+            height:35px;
+            line-height:35px;
+            border:0;
+            font-size:15px;
+            color:#000;
+            float:left;
+
+            &:active, &:focus{
+                outline:0;
+                border:0;
+            }
+
+            &::placeholder{
+                color:#999;
+            }
+        }
+        button{
+            display:block;
+            width:20px;
+            height:20px;
+            padding:0;
+            margin:7px 0 8px 0;
+            border:0;
+            background:none;
+            float:left;
+        }
+    }
+}

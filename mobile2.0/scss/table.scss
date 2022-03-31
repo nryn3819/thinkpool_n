@@ -231,6 +231,24 @@
                             font-size:14px;
                             color:#999;
                         }
+
+                        .delete{
+                            display:inlin-block;
+                            height:28px;
+                            line-height:26px;
+                            border:1px solid #d6d6d6;
+                            border-radius: 5px;
+                            padding:0 13px;
+                            margin:0;
+                            font-size:14px;
+                            color:#000;
+                            background:#fff;
+
+                            &::before{
+                                content:'\00d7';
+                                color:#999;
+                            }
+                        }
                     }
                 }
             }
