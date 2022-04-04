@@ -15,6 +15,14 @@
     }
 
     &-custom{
+        &.doneradius{
+            border-radius: 5px !important;
+        }
+        &.caromini{
+            padding:0 18px;
+        }
+        
+
         &-alarm{
             height:36px;
             line-height:36px;
@@ -43,7 +51,6 @@
         &-primary{
             height:37px;
             line-height:37px;
-            border:0;
             padding:0 28px;
             color:#fff;
             background:#5567FD;
@@ -51,6 +58,17 @@
             color:#fff;
             border-radius: 37px;
             border:0;
+            
+        }
+        &-default{
+            height:37px;
+            line-height:35px;
+            padding:0 28px;
+            color:#000;
+            background:#fff;
+            border:1px solid #d5d5d5;
+            font-size:16px;
+            border-radius: 37px;
         }
         &-white{
             min-width:147px;
@@ -82,6 +100,25 @@
             height:33px;
             line-height:31px;
             font-size:14px;
+            border:1px solid #d5d5d5;
+            border-radius: 5px;
+            padding:0 13px;
+            background:#fff;
+
+            &.up{
+                width:58px;
+                padding:0 10px;
+                text-align:right;
+                background:url(../img/bu-up.png) no-repeat 10px 50%;
+                background-size:16px auto;
+            }
+            &.dn{
+                width:58px;
+                padding:0 10px;
+                text-align:right;
+                background:url(../img/bu-dn.png) no-repeat 10px 50%;
+                background-size:16px auto;
+            }
 
             &.write{
                 border:1px solid #5368FF;
@@ -91,6 +128,11 @@
                 color:#000;
                 font-weight:700;
                 font-size:14px;
+
+                &-mini{
+                    background:none;
+                    padding:0 13px;
+                }
             }
 
             &.pagetop{
