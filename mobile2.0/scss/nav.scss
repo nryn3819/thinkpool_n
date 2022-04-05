@@ -8,13 +8,15 @@
 
     &.nav-round {
         display: inline-block;
-        width: 100%;
+        width: 100% !important;
+        min-width:100% !important;
         padding: 0 17px;
+        overflow:auto;
+        white-space: nowrap;
 
         .nav-item {
-            display: block;
+            display: inline-block;
             margin-right: 6px;
-            float: left;
 
             &:last-child {
                 margin-right: 0;

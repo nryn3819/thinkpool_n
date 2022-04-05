@@ -69,7 +69,7 @@
                 <!-- //top -->
 
                 <div class="allNav">
-                    <menu class="globalNavigation float-start" style="width:520px">
+                    <menu class="globalNavigation float-start">
                         <h3 class="visually-hidden">네비게이션</h3>
                         <a href="#" >AI추천홈</a>
                         <a href="#" >오늘의종목</a>
@@ -104,7 +104,7 @@
                             </div>
 
                             <div class="btnbox">
-                                <button class="float-start guidebtn">이용방법</button>
+                                <button id="btnfadeIn" class="float-start guidebtn">이용방법</button>
                                 <button class="float-end refresh">
                                     <img src="./img/refresh.png" alt="새로고침" width="12"> 12/12 14:00
                                 </button>
@@ -196,9 +196,9 @@
                                             });
                                             
                                             //순수 자바스크립트 클릭 이벤트 Fade in
-                                            // document.getElementById('btnfadeIn').addEventListener('click', function() {
-                                            //     intervalID = setInterval(show,200);
-                                            //});
+                                            document.getElementById('btnfadeIn').addEventListener('click', function() {
+                                                intervalID = setInterval(show,20);
+                                            });
                                          
                                             function hide(){
                                                 var div = document.getElementById("pop-guide");
@@ -215,24 +215,30 @@
                                                 }
                                             }
                                             
-                                            // function show(){
-                                            //     var div = document.getElementById("pop-guide");
-                                            //     opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+                                            function show(){
+                                                var div = document.getElementById("pop-guide");
+                                                opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
                                                 
-                                            //     if(opacity<1){
-                                            //         //Fade in 핵심 부분
-                                            //         opacity = opacity+0.1;
-                                            //         div.style.opacity=opacity;
-                                            //         //img.style.opacity=opacity;
-                                            //     }
-                                            //     else{
-                                            //         clearInterval(intervalID);
-                                            //     }
-                                            // }
+                                                if(opacity<1){
+                                                    //Fade in 핵심 부분
+                                                    opacity = opacity+0.1;
+                                                    div.style.opacity=opacity;
+                                                    //img.style.opacity=opacity;
+                                                }
+                                                else{
+                                                    clearInterval(intervalID);
+                                                }
+                                            }
                                             
                                         </script>
                                     </div>
                                     <!-- //보유종목 -->
+
+                                    <div class="tit-guide rmt-10">
+                                        직전 알고리즘(단기수익형)에 남아있던 종목입니다. <br>
+                                        매도신호 알림을 받으면, 목록에서 삭제됩니다.
+                                    </div>
+                                    <!-- // -->
 
                                     <div class="board board-tbl rmt-25">
                                         <div class="top">

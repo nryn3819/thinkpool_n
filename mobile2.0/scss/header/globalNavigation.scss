@@ -1,18 +1,24 @@
 //navigation
 .globalNavigation {
-    display: inline-flex;
-    min-width:365px;
+    display:block;
     padding: 0 18px;
     margin:14px 0 0 0;
-    justify-content: space-around;
-    overflow-x: auto;
-    overflow-y: hidden;
+    white-space: nowrap;
+    overflow:auto;
 
     a{
         height:37px;
         line-height:37px;
         font-size:15px;
         color:#000;
+        margin:0 5px;
+
+        &:first-child{
+            margin-left:0;
+        }
+        &:last-child{
+            margin-right:0;
+        }
 
         &.active{
             font-weight:700;

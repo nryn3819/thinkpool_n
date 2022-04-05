@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>나의활동</strong>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+                    <div class="active-w">
+                        <div class="my-class">
+                            <span class="cls cls-01">활동등급 :</span>
+                            <span>&nbsp; <em class="dn">평민</em> (점수 10점)</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="pf_w">
+                            <div class="tab-w noPadding rmt-25">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item position-relative">
+                                      <a class="nav-link active" aria-current="page" href="#">쪽지함</a>
+
+                                      <span class="circle-badge bg-red">
+                                        <span class="">N</span>
+                                      </span>
+                                      <!-- // -->
+                                    </li>
+
+                                    <li class="nav-item position-relative">
+                                      <a class="nav-link" href="#">답글알림</a>
+                                    </li>
+
+                                    <li class="nav-item position-relative">
+                                      <a class="nav-link" href="#">내글보기</a>
+                                    </li>
+
+                                </ul>
+
+                                <div class="tab-content rmt-25">
+                                    <div class="ch_tab rpt-0">
+                                        <ul class="nav nav-round" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" type="button" >받은쪽지</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" type="button">보낸쪽지</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" type="button">쪽지보내기</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="tab-pane active">
+
+                                        <div class="board rpt-10">
+                                            <div class="board-top clearfix float-start">
+                                                <button class="btn-custom-board float-start">선택글삭제</button>
+                                                <span class="float-start">안읽은 쪽지 <em class="dn">23</em>건</span>
+                                                <button class="btn-custom-board float-end">차단필명</button>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="rpt-15 rpl-17 rpr-17 float-start w-100">
+                                                <table class="table table-custom-borderless" width="100%">
+                                                    <colgroup>
+                                                        <col width="30">
+                                                        <col width="82">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"><input type="checkbox" name="" id=""></th>
+                                                            <th scope="col">보낸사람</th>
+                                                            <th scope="col">내용/받은시간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="board-btm clearfix">
+                                                <button class="btn-custom-board float-start">선택글 삭제</button>
+                                                <span class="float-end">최대 보관 기간 : 3개월</span>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="shorcutBtn d-block w-100 rpl-17 rpr-17 rmt-20 float-start">
+                                                <button class="btn-outline-detail w-100">더보기&nbsp;&nbsp;+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //받은쪽지 -->
+
+                                    <div class="tab-pane active">
+                                        <div class="board rpt-10">
+                                            <div class="board-top clearfix float-start">
+                                                <button class="btn-custom-board float-start">선택글삭제</button>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="rpt-15 rpl-17 rpr-17 float-start w-100">
+                                                <table class="table table-custom-borderless" width="100%">
+                                                    <colgroup>
+                                                        <col width="30">
+                                                        <col width="82">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"><input type="checkbox" name="" id=""></th>
+                                                            <th scope="col">보낸사람</th>
+                                                            <th scope="col">내용/받은시간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="dn">(미열람)</em></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="">02/23 13:40</em></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="">02/23 13:40</em></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="">02/23 13:40</em></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="">02/23 13:40</em></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <input type="checkbox" name="" id="">
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <span class="text-truncate name">마포대교가마포대교마포대교가마포대교</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="d-block">
+                                                                    무궁화꽃이 피었습니다 무궁화꽃이 피었습니다. 가나다라마...
+                                                                </span>
+                                                                <span class="date d-block rpt-5">받음:02/23 13:39 확인:<em class="">02/23 13:40</em></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="board-btm clearfix">
+                                                <button class="btn-custom-board float-start">선택글 삭제</button>
+                                                <span class="float-end">최대 보관 기간 : 3개월</span>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="shorcutBtn d-block w-100 rpl-17 rpr-17 rmt-20 float-start">
+                                                <button class="btn-outline-detail w-100">더보기&nbsp;&nbsp;+</button>
+                                            </div>
+                                        </div>
+                                        <!-- //board -->
+
+                                        <div class="board rpt-10">
+                                            <div class="board-top clearfix float-start">
+                                                <button class="btn-custom-board write write-mini float-start">답장보내기</button>
+                                                <button class="btn-custom-board float-end">목록</button>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="viewMsg rpt-20">
+                                                <div class="top">
+                                                    <span class="d-block">받는사람 : 필명은여섯자</span>
+                                                    <span class="d-block">확인시간 : <em class="dn">(미열람)</em></span>
+                                                    <span class="d-block">보낸시간 : <em>2022/02/23 13:31</em></span>
+                                                </div>
+                                                <!-- // -->
+                                                <div class="con">
+                                                    비디아이가 삼천포 화력 5·6호기 환경 설비 개선공사와 관련해 발주처인 한국남동발전(남동발전)으로부터 받은 계약해지
+                                                    통보에 대해 코로나로 인한 공사 지연과 경영권 분쟁 등 해지 요인에 대해 소명했으며 양사가 원
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- //board -->
+                                        
+                                    </div>
+                                    <!-- //보낸쪽지 -->
+
+                                    <div class="tab-pane active">
+
+                                        <div class="nickSch">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="받는사람 필명을 입력하세요.(최대10명)" aria-describedby="button-addon2">
+                                                <button class="btn btn-primary" type="button" id="button-addon2">추가</button>
+                                            </div>
+
+                                            <div class="latest-nick">
+                                                <em>최근에 쪽지 보낸 필명을 누르면 받는사람에 추가됩니다.</em>
+
+                                                <div>
+                                                    <span>홍길동</span>
+                                                    <span>커피대마왕</span>
+                                                    <span>아메리카노</span>
+                                                    <span>홍길동</span>
+                                                    <span>커피대마왕</span>
+                                                    <span>아메리카노</span>
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //latest -->
+
+                                        </div>
+                                        <!-- //sch -->
+
+                                        <div class="rsvnick">
+                                            <strong>받는사람 <span>(최대10명)</span></strong>
+
+                                            <div>
+                                                <span>닉네임1</span>
+                                                <span>닉네임121</span>
+                                                <span>닉네임13</span>
+                                                <span>닉네임145</span>
+                                                <span>닉네임1123</span>
+                                            </div>
+                                        </div>
+                                        <!-- //rsv -->
+
+                                        <div class="send">
+                                            <strong>보내는 내용 <span>(0/200)</span></strong>
+
+                                            <div class="text-center">
+                                                <textarea class="text-start w-100" name="" id="" cols="30" rows="10" placeholder="※ 스팸 및 악의적인 쪽지 발송시 씽크풀 이용이 제한될수 있습니다. "></textarea>
+
+                                                <button class="btn-custom-board write write-mini">쪽지보내기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //쪽지보내기 -->
+
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- //tab-w -->
+
+                        </div>
+                        <!-- // -->
+
+                        <div class="hspace50"></div>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

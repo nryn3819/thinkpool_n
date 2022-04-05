@@ -157,26 +157,44 @@
                         color:#000;
                         font-weight:400;
                         vertical-align: middle;
+
+                        span.itemObj{
+                            display:block;
+                            width:100%;
+    
+                            @include mini {
+                                max-width:83px;
+                            }
+                            @include mobile {
+                                max-width:120px;
+                            }
+                            @include web {
+                                max-width:140px;
+                            }
+                        }
+
+                        span.name{
+                            display:block;
+                            width:100%;
+                            max-width:70px;
+                        }
                     }
                     span{
                         &.date{
                             color:#999;
+                            border:0 !important;
+                        }
+                        &.per{
+                            color:#999;
+                            &.up{
+                                color:#FF4150;
+                            }
+                            &.dn{
+                                color:#5368FF;
+                            }
                         }
                     }
-                    th span.itemObj{
-                        display:block;
-                        width:100%;
-
-                        @media (max-width:320px) {
-                            max-width:83px;
-                        }
-                        @media (max-width:375px) {
-                            max-width:120px;
-                        }
-                        @media (max-width: 425px) {
-                            max-width:140px;
-                        }
-                    }
+                    
                 }
             }
         }

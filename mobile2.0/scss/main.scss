@@ -4,9 +4,9 @@
 //tab 
 .ch_tab{
     width:100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow:auto;
     padding:20px 0 10px;
+    white-space:nowrap;
 }
 
 //mainColumnGuideBox

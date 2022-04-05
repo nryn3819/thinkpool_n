@@ -62,7 +62,7 @@
                                 <!-- //제목 -->
 
                                 <div class="info">
-                                    <div class="level cls cls-01">
+                                    <div class="level cls cls-10">
                                     </div>
                                     <!-- // -->
                                     <div class="info-txt">
@@ -257,163 +257,109 @@
                             </div>
                             <!-- //board-btn-group -->
 
-                            <div class="opn-btn-group">
-                                <div class="txt" data-bs-toggle="modal" data-bs-target="#opn-guide">
-                                    운영배심원 의견 
-                                </div>
-                                <!-- // -->
-
-                                <div class="btnbox">
-                                    <button class="active">글</button>
-                                    <button>내</button>
-                                    <button>리</button>
-                                    <button>기</button>
-                                </div>
-                                <!-- // -->
-
-                                <div class="called">
-                                    <span data-bs-toggle="modal" data-bs-target="#calleduser">신고</span>
-                                </div>
-                                <!-- // -->
-
-                                <!-- Modal -->
-                                <div class="modal fade custom-modal1" id="opn-guide" data-bs-backdrop="static" tabindex="-1" aria-labelledby="운영배심원의견" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <!-- // -->
-                                            <div class="modal-body">
-                                                <div class="opn-guide">
-                                                    <strong>운영배심원 의련이란?</strong>
-
-                                                    <span>
-                                                        게시판 활동 내용에 따라 매월 새롭게 선덩되는 운영
-                                                        배심원(15인 이하)이 의견을 행사할 수 있습니다. <br><br>
-                                                        운영배심원 4인이 글내리기에 의견을 행사하게 되면 
-                                                        해당글의 추천수와 반대수를 비교하여 반대수가 추천수를
-                                                        넘어서는 경우에는 해당글이 블라인드 처리 됩니다. <br><br>
-
-                                                        <em>
-                                                            ※ <br>
-                                                            본 기능은 시험적용으로 추후 운영방침이 개선 될 수 있습니다. 
-                                                        </em>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- //body -->
-                                        </div>
-                                        <!-- // content -->
-                                    </div>
-                                    <!-- // dialog -->
-                                </div>
-                                <!-- // -->
-
-                                <!-- Modal -->
-                                <div class="modal fade custom-modal1" id="calleduser" data-bs-backdrop="static" tabindex="-1" aria-labelledby="게시물신고" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <!-- // -->
-                                            <div class="modal-body">
-                                                <div class="colled-w">
-                                                    <div class="top">
-                                                        <strong>게시물 신고하기</strong>
-                                                        <span><em class="dn">에너지만땅</em>님 게시물 신고 이유를 남겨주세요.</span>
-                                                    </div>
-                                                    <!-- // -->
-
-                                                    <div class="ch-reason rmt-25">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist01" checked>
-                                                            <label class="form-check-label" for="reasonlist01">
-                                                            욕설/타인에 대한 비방
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist02">
-                                                            <label class="form-check-label" for="reasonlist02">
-                                                            광고(돈벌기, 행운의편지 등)
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist03">
-                                                            <label class="form-check-label" for="reasonlist03">
-                                                            도배(같은 글 반복 게시)
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist04">
-                                                            <label class="form-check-label" for="reasonlist04">
-                                                            악성코드/바이러스 유포
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist05">
-                                                            <label class="form-check-label" for="reasonlist05">
-                                                            시비분쟁/스토킹
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist06">
-                                                            <label class="form-check-label" for="reasonlist06">
-                                                            음란내용/선정성
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist07">
-                                                            <label class="form-check-label" for="reasonlist07">
-                                                            기타
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-                                                        <div class="form-floating">
-                                                            <textarea class="form-control" placeholder="기타사유를 작성해주세요" id="etcContent" style="height: 62px"></textarea>
-                                                            <label for="etcContent">기타사유</label>
-                                                        </div>
-                                                    </div>
-                                                    <!-- // -->
-
-                                                    <div class="colled-guide">
-                                                        ※ <br>
-                                                        부당한 신고일 경우 신고자의 활동이 제한될 수 있으니 신중하게 결정해 주세요.
-                                                    </div>
-                                                    <!-- // -->
-                                                </div>
-                                                <!-- //colled-w -->
-                                            </div>
-                                            <!-- // body -->
-
-                                            <div class="modal-footer">
-                                                <button class="btn-custom-primary">확인</button>
-                                                <button class="btn-custom-default" data-bs-dismiss="modal">취소</button>
-                                            </div>
-                                            <!-- //footer -->
-                                        </div>
-                                        <!-- // content-->
-                                    </div>
-                                    <!-- //dialog -->
-                                </div>
-                                <!-- // modal -->
-
-                                
+                            <div class="called-btn text-end rpt-15">
+                                <button data-bs-toggle="modal" data-bs-target="#calleduser">신고하기</button>
                             </div>
-                            <!-- //opn-btn-group -->
+                            <!-- Modal -->
+                            <div class="modal fade custom-modal1" id="calleduser" data-bs-backdrop="static" tabindex="-1" aria-labelledby="게시물신고" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="modal-body">
+                                            <div class="colled-w">
+                                                <div class="top">
+                                                    <strong>게시물 신고하기</strong>
+                                                    <span><em class="dn">에너지만땅</em>님 게시물 신고 이유를 남겨주세요.</span>
+                                                </div>
+                                                <!-- // -->
+
+                                                <div class="ch-reason rmt-25">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist01" checked>
+                                                        <label class="form-check-label" for="reasonlist01">
+                                                        욕설/타인에 대한 비방
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist02">
+                                                        <label class="form-check-label" for="reasonlist02">
+                                                        광고(돈벌기, 행운의편지 등)
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist03">
+                                                        <label class="form-check-label" for="reasonlist03">
+                                                        도배(같은 글 반복 게시)
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist04">
+                                                        <label class="form-check-label" for="reasonlist04">
+                                                        악성코드/바이러스 유포
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist05">
+                                                        <label class="form-check-label" for="reasonlist05">
+                                                        시비분쟁/스토킹
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist06">
+                                                        <label class="form-check-label" for="reasonlist06">
+                                                        음란내용/선정성
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="reason" id="reasonlist07">
+                                                        <label class="form-check-label" for="reasonlist07">
+                                                        기타
+                                                        </label>
+                                                    </div>
+                                                    <!-- // -->
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control" placeholder="기타사유를 작성해주세요" id="etcContent" style="height: 62px"></textarea>
+                                                        <label for="etcContent">기타사유</label>
+                                                    </div>
+                                                </div>
+                                                <!-- // -->
+
+                                                <div class="colled-guide">
+                                                    ※ <br>
+                                                    부당한 신고일 경우 신고자의 활동이 제한될 수 있으니 신중하게 결정해 주세요.
+                                                </div>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- //colled-w -->
+                                        </div>
+                                        <!-- // body -->
+
+                                        <div class="modal-footer">
+                                            <button class="btn-custom-primary">확인</button>
+                                            <button class="btn-custom-default" data-bs-dismiss="modal">취소</button>
+                                        </div>
+                                        <!-- //footer -->
+                                    </div>
+                                    <!-- // content-->
+                                </div>
+                                <!-- //dialog -->
+                            </div>
+                            <!-- // modal -->
                         </div>
                         <!-- // -->
 

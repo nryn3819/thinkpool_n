@@ -26,12 +26,14 @@
                 
                 .level{
                     display:block;
+                    height:38px;
+                    width:38px;
                     float:left;
                 }
                 .info-txt{
                     display:block;
                     float:left;
-                    padding-left:10px;
+                    padding-left:6px;
 
                     .name{
                         display:block;
@@ -138,7 +140,7 @@
 
         .board-top-btn{
             position:absolute;
-            top:-22px;
+            top:-35px;
             right:17px;
 
             button{
@@ -302,19 +304,19 @@
     width:100%;
     float:left;
     border-top:8px solid #f6f6f7;
-    padding:20px 0;
+    padding:20px 17px;
 }
 .board-btn-group{
-    padding:0 17px;
+    //padding:0 17px;
 }
 .opn-btn-group{
     display:flex;
-    width:calc(100% - 34px);
+    width:100%;
     background:#f7f7f7;
     height:40px;
     line-height:40px;
     padding:0 15px;
-    margin:10px 17px 0;
+    margin:10px 0 0;
     justify-content: space-between;
     align-content: center;
 
@@ -506,19 +508,19 @@
         .list{
             display:block;
             width:100%;
-            padding:10px 0;
+            padding:15px 0;
             border-bottom:1px solid #cacaca;
             float:left;
 
             &.re{
                 padding-left:20px;
-                background:url(../img/bu-re-list.png) no-repeat 2px 11px;
+                background:url(../img/bu-re-list.png) no-repeat 2px 16px;
                 background-size:10px auto;
             }
 
             &.del{
-                height:47px;
-                line-height:26px;
+                height:55px;
+                line-height:24px;
                 text-align:center;
 
                 span{
@@ -660,6 +662,20 @@
         }
     }
 
+}
+
+.called-btn{
+    display:block;
+    width:100%;
+
+    button{
+        padding:0;
+        margin:0;
+        border:0;
+        background:none;
+        font-size:15px;
+        color:#666;
+    }
 }
 
 // 신고하기 팝업
