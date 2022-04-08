@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>나의태그</strong>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                    <div class="rightBtn stg">
+                        <a href="#">
+                            설정
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="%23000" class="bi bi-gear float-end rmt-2 rml-3" viewBox="0 0 16 16">
+                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                          </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+                    <div class="mytag page">
+                        <div class="list">
+                            <!-- <div class="my">MY태그 ></div> -->
+                            <!-- <div class="empty">태그없음</div> -->
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section noPadding">
+                    <div class="board">
+
+                        <div class="list list-news"><!-- 게시판이랑 다릅니다. -->
+
+                            <div class="list-group">
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                        <span class="tag float-start">#태그명</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                
+                                <div class="section-inline-ad">
+                                    <img src="./img/demoBnr.png" alt="" class="img-fluid">
+                                    <!-- // 인라인광고 -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                        <span class="tag float-start">#태그명</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                        <span class="tag float-start">#태그명</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                        <span class="tag float-start">#태그명</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                        <span class="tag float-start">#태그명</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                </div>
+                                <!-- // -->
+
+                            </div>
+                            <!-- //게시글 -->
+                        </div>
+                        <!-- //list -->
+
+                        <div class="list-guide list-group-news rmt-20">
+                            <div><span>시장의 흐름과 특징 종목들을 파악하는데 도움이 되는 AI속보입니다.</span></div>
+                            <div><span>이 정보는 <em class="tp">씽크풀앱</em>이나 <em class="tg">씽크풀텔레그램</em>에서 실시 간 으로 FEED 받을 수 있습니다. </span></div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <div class="hspace50"></div>
+                </section>
+
+            </main>
+            <!-- //container -->
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

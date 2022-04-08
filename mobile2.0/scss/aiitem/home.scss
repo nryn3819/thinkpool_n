@@ -2,7 +2,7 @@
 
 .card-item{
     position: relative;
-    display:block;
+    display:flex;
     width:100%;
     max-width:350px;
     height:170px;
@@ -12,15 +12,16 @@
     background-repeat: no-repeat;
     background-position: center 100%;
     background-size:350px auto;
-    padding:20px;
+    padding:0 20px;
     margin:0 auto;
-
-    @include mini{
-        padding:10px;
-    }
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap:wrap;
 
     .name{
         display:block;
+        width:100%;
         float:left;
         clear:left;
         height:20px;
@@ -37,6 +38,7 @@
 
     .price{
         display:block;
+        width:100%;
         float:left;
         clear:left;
         height:27px;
@@ -52,7 +54,7 @@
     }
     .price2{
         position: absolute;
-        top:20px;
+        top:25px;
         right:22px;
         font-size:13px;
         color:#fff;
@@ -67,6 +69,7 @@
 
     .btnbox{
         display:block;
+        width:100%;
         height:20px;
         float:left;
         clear:left;
@@ -124,7 +127,7 @@
 
         .txt{
             display:block;
-            margin-top:10px;
+            //margin-top:10px;
             width:100%;
             float:left;
 
@@ -251,6 +254,10 @@
                 font-weight:700;
                 height:25px;
                 line-height:25px;
+
+                @include mini{
+                    font-size:18px;
+                }
             }
             span{
                 font-size:13px;
@@ -258,6 +265,10 @@
                 font-weight:400;
                 display:block;
                 margin-top:15px;
+                
+                @include mini{
+                    font-size:11px;
+                }
             }
 
             &:nth-child(2n){
@@ -313,16 +324,21 @@
             height:90px;
 
             .itemcard{
-                display:block;
+                display:flex;
                 width:225px;
                 height:90px;
                 margin-right:10px;
                 border:1px solid #d5d5d5;
                 border-radius: 10px;
                 padding:15px;
+                flex-wrap:wrap;
+                align-items: center;
+                align-content: center;
+                justify-content: flex-start;
 
                 .name{
                     height:18px;
+                    line-height:18px;
                     font-size:16px;
                     color:#000;
                     font-weight:700;
@@ -334,15 +350,17 @@
                 }
                 .guide{
                     height:15px;
+                    line-height:15px;
                     font-size:13px;
                     color:#000;
-                    margin-top:5px;
+                    margin-top:3px;
                 }
                 .info{
                     height:15px;
+                    line-height:15px;
                     font-size:13px;
                     color:#999;
-                    margin-top:10px;
+                    margin-top:7px;
                 }
                 
                 &:last-child{

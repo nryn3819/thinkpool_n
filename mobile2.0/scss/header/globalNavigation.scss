@@ -1,10 +1,12 @@
 //navigation
 .globalNavigation {
-    display:block;
+    display:flex;
+    min-width:100%;
     padding: 0 18px;
     margin:14px 0 0 0;
     white-space: nowrap;
     overflow:auto;
+    justify-content: space-between;
 
     a{
         height:37px;

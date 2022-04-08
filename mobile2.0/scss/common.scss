@@ -102,8 +102,6 @@ b, strong{
     position:static;
     left:0;
 }
-
-
 .custom-switch-check{
     position:relative;
     display:inline-block;
@@ -171,6 +169,10 @@ b, strong{
 }
 
 
+
+
+
+
 @import 'layout.scss'; //레이아웃
 @import 'title.scss'; //타이틀
 @import 'section.scss'; // section박스
@@ -191,6 +193,9 @@ b, strong{
 @import 'offcanvas.scss'; //페이징
 @import 'autocomplete.scss'; //페이징
 @import 'badge.scss'; //뱃지
+
+
+
 
 
 

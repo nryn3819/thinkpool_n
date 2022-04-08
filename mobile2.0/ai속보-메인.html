@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="main.html" class="float-start"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                    </div>
+                    <!-- //logo -->
+                
+                    <div class="topSch">
+                        <h3 class="visually-hidden">종목검색영역</h3>
+                        <div class="input-group" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <input type="text" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon" disabled>
+                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                        </div>
+                        <!-- // -->
+
+                        <div class="offcanvas offcanvas-top search" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                <!-- // -->
+                                <div class="off-sch">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="종목명 / 종목코드 / 키워드">
+                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="offcanvas-body">
+                                <div class="off-basic">
+                                    <div class="tag">
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                    </div>
+                                    <!-- //최근이슈 -->
+
+                                    <div class="schTop rmt-20">
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                    </div>
+                                    <!-- //검색상위종목 -->
+
+                                    <div class="latest rmt-20">
+                                        <strong>최근 검색어</strong>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span class="tag">면세점</span>
+                                    </div>
+                                    <!-- //최근검색어 -->
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- //sch -->
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+
+
+                <div class="allNav">
+                    <menu class="globalNavigation float-start">
+                        <h3 class="visually-hidden">네비게이션</h3>
+                        <a href="#" class="active">AI분석</a>
+                        <a href="#">AI추천</a>
+                        <a href="#">라씨매매신호</a>
+                        <a href="#">AI속보</a>
+                        <a href="#">토론실</a>
+                    </menu>
+                    <!-- //gloabal navi -->
+                </div>
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+                <section class="section section-item">
+                    <h3 class="visually-hidden">나의종목</h3>
+                    <!-- item.scss -->
+                    <!-- 
+                        좋아요 있는 박스 item-lg 클래스
+                        좋아요 없는 박스 item-sm 클래스 
+                        a태그 쓰기 싫어서 onclick 넣어두었는데 
+                        버튼 링크 타듯이 만들어주셔도 되고 
+                        a태그로 묶어도 됩니다. 
+                     -->
+                    <div id="myItem">
+                        <div class="myItemList">
+                            <div class="myItemBox title shadow-sm" onclick="location.href='./itemhome.html' ">
+                                <div>
+                                    <strong>MY</strong>
+                                    <span>종목</span>
+                                </div>
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                                <span class="name text-truncate">KOSPI</span>
+                                <!-- //종목명 -->
+                                <span class="price">2,920.2</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <!-- <span class="fav">
+                                    <em class="active"></em>
+                                </span> -->
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            
+                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                                <span class="name text-truncate">KOSDAQ</span>
+                                <!-- //종목명 -->
+                                <span class="price">920.2</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <!-- <span class="fav">
+                                    <em></em>
+                                </span> -->
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">LG에너지솔라솔라</span>
+                                <!-- //종목명 -->
+                                <span class="price">234,000</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav active">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+                            <div class="myItemBox item item-lg shadow-sm" onclick="location.href='itemhome.html'">
+                                <span class="name text-truncate">종목명종목명종목명</span>
+                                <!-- //종목명 -->
+                                <span class="price">4,500</span>
+                                <!-- //가격 -->
+                                <span class="per">
+                                    <em class="up">+3.2%</em>
+                                </span>
+                                <!-- //퍼센트 -->
+                                <span class="fav">
+                                    <em></em>
+                                </span>
+                                <!-- //좋아요 -->
+                            </div>
+                            <!-- //item -->
+
+                            <!-- <div class="myItemBox item item-null">
+                                <span class="null">
+                                    최근 조회 종목이 없습니다.
+                                </span>
+                            </div> -->
+                            <!-- //item -->
+
+                            <!-- 
+                                ((template 수 + 1 ) * 100)
+                             -->
+                        </div>
+                    </div>
+                    <!-- //myItem -->
+                </section>
+                <!-- // 나의종목-->
+
+                <section class="section noPadding">
+                    <div class="mytag">
+                        <div class="list">
+                            <div class="my">MY태그 ></div>
+                            <!-- <div class="empty">태그없음</div> -->
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                            <button>#태그명</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section noPadding">
+                    <div class="board">
+
+                        <div class="list list-news"><!-- 게시판이랑 다릅니다. -->
+
+                            <div class="list-group">
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                
+                                <div class="section-inline-ad">
+                                    <img src="./img/demoBnr.png" alt="" class="img-fluid">
+                                    <!-- // 인라인광고 -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="new">NEW</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="date float-start">2021/02/12 09:00</span>
+                                        <span class="nickname float-start rpr-5">라씨로</span>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+
+                                <div class="shorcutBtn d-grid gap-2">
+                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                </div>
+                                <!-- // -->
+
+                            </div>
+                            <!-- //게시글 -->
+                        </div>
+                        <!-- //list -->
+
+                        <div class="list-guide list-group-news rmt-20">
+                            <div><span>시장의 흐름과 특징 종목들을 파악하는데 도움이 되는 AI속보입니다.</span></div>
+                            <div><span>이 정보는 <em class="tp">씽크풀앱</em>이나 <em class="tg">씽크풀텔레그램</em>에서 실시 간 으로 FEED 받을 수 있습니다. </span></div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <div class="hspace50"></div>
+                </section>
+
+            </main>
+            <!-- //container -->
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

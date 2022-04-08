@@ -236,6 +236,22 @@
                         text-align:center;
                         vertical-align: middle;
 
+                        .talkObj{
+                            display:block;
+                            width:100%;
+                            float:left;
+                            .date{
+                                padding-right:5px;
+                            }
+                        }
+                        .talkCon{
+                            float:left;
+                            width:100%;
+                            margin-top:10px;
+                            padding:20px 10px 20px 60px;
+                            background:#f6f6f7;
+                        }
+
                         .date{
                             color:#999;
                         }
