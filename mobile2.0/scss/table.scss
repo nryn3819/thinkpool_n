@@ -199,6 +199,52 @@
             }
         }
         &-sm{
+
+            &.carou{
+                tbody{
+                    tr{
+                        th,td{
+                            padding:15px 7px;
+                            border:1px solid #cacaca;
+                            font-weight:400;
+                        }
+                        th{
+                            font-size:14px;
+                            color:#000;
+                            background:#F3F3F3;
+                            border-left:0;
+                            text-align:center;
+                        }
+                        td{
+                            border-right:0;
+
+                            strong{
+                                display:block;
+                                width:100%;
+                                font-size:14px;
+                                line-height:20px;
+                                color:#000;
+                                font-weight:400 !important;
+                            }
+                            span{
+                                display:block;
+                                width:100%;
+                                font-size:14px;
+                                color:#999;
+                                line-height:20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.vtop{
+                thead,tbody{
+                    th,td{
+                        vertical-align: top !important;
+                    }
+                }
+            }
             border:0 !important;
 
             thead{
@@ -282,6 +328,27 @@
                                 content:'\00d7';
                                 color:#999;
                             }
+                        }
+                        .tag{
+                            display:block;
+                            width:100%;
+                            text-align:center;
+                            padding:0 0 5px 0;
+                            font-size:13px;
+                            color:#5368FF;
+
+                            &::before{
+                                content:'#';
+                            }
+                            span{
+                                display:block;
+                                float:left;
+                            }
+                        }
+                        .guide{
+                            font-size:13px;
+                            color:#000;
+                            line-height:19px;
                         }
                     }
                 }

@@ -235,8 +235,13 @@
     .all-tag{
         display:block;
         width:100%;
+        text-align:Center;
 
-        
+        a{
+            font-size:16px;
+            color:#5368ff;
+            font-weight:700;
+        }
     }
 
     .addmem-sch{

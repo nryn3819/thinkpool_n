@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>태그 전체설정</strong>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                    <div class="rightBtn">
+                        <a href="#" class="app">앱다운로드</a>
+                    </div>
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+
+                    <div class="board board-tbl">
+
+                        <div class="list-guide list-group-news rmt-25">
+                            <div><span>MY태그는 최대 25개 까지 등록할 수 있습니다.</span></div>
+                        </div>
+
+                        <div class="ch_tab">
+                            <ul class="nav nav-round2">
+                                <li class="nav-item">
+                                    <button class="nav-link active" type="button">수급</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">공시</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">리포트</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">시세</button>
+                                </li>
+
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">시황</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">테마</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button">실적</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tbl rmt-15">
+                            <table class="table-custom-sm" width="100%">
+                                <colgroup>
+                                    <col width="110">
+                                    <col width="*">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">태그/MY태그</th>
+                                        <th scope="col">설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">장중수급포착</div>
+                                            <button class="btn-custom-outline add">추가</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">장중수급포착</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">외인10일이상 <br>연속순매수</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">외인10일이상 <br>연속순매수</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">외인10일이상 <br>연속순매수</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">외인10일이상 <br>연속순매수</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tag">외인10일이상 <br>연속순매수</div>
+                                            <button class="btn-custom-outline rmv">삭제</button>
+                                        </td>
+                                        <td class="text-start">
+                                            <div class="guide">
+                                                장중에 외인기관 동시 순매수, 연속순매수, 대량 순매수가 발생한 종목을 분석해서 제공
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="hspace50"></div>
+                </section>
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

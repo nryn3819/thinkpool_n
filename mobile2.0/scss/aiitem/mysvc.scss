@@ -285,6 +285,7 @@
 
     &.hide{
         left:-9999em !important;
+        
     }
     
     
@@ -334,6 +335,11 @@
         align-content: center;
         align-items: center;
 
+        &.cn{
+            padding:10px 20px;
+            min-height:87px;
+        }
+
         .txt{
             width:260px;
 
@@ -341,17 +347,35 @@
                 display:block;
                 font-size:13px;
                 color:#000;
+
+                &.date{
+                    font-size:14px;
+                    line-height:20px;
+                }
+                &.guide{
+                    font-size:16px;
+                    line-height:22px;
+                }
             }
             strong{
                 display:block;
                 font-size:16px;
                 color:#5567FD;
                 font-weight:700;
+                &.cn-tit{
+                    color:#000;
+                    height:20px;
+                    line-height:20px;
+                }
             }
         }
         .button{
             display:block;
             width:30px;
+
+            &.cancel{
+                width:auto;
+            }
 
             a{
                 display:inline-block;
@@ -394,4 +418,10 @@
             }
         }
     }
+}
+
+.paytolist{
+    display:block;
+    width:100%;
+    padding:22px 17px;
 }

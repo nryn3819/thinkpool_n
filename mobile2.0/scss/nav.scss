@@ -6,6 +6,53 @@
         padding-bottom: 20px;
     }
 
+    &.nav-round2{
+        display:flex;
+        width:100%;
+        overflow:auto;
+        white-space: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap:nowrap;
+
+        .nav-item {
+            margin-right: 6px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .nav-link {
+                display: inline-block;
+                width: auto;
+                padding: 0 16px;
+                height: 35px;
+                line-height: 35px;
+                border-radius: 35px;
+                border: 0;
+                outline: 0;
+                background: #F1F3F7;
+                font-size: 14px;
+                color: #000;
+
+                &.active {
+                    color: #fff;
+                    background: #3D4665;
+                    font-weight: 700;
+                }
+
+                &.disable {
+                    line-height: 33px;
+                    border: 1px solid #5368FF;
+                    background: #fff;
+                    color: #5368FF;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
     &.nav-round {
         display: inline-block;
         width: 100% !important;

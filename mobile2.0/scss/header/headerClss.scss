@@ -61,5 +61,16 @@
         color:#000;
         display:block;
         float:left;
+
+        &.app{
+            width:80px;
+            height:20px;
+            line-height:20px;
+            border-radius: 20px;
+            font-size:13px;
+            color:#000;
+            text-align:center;
+            background:#F0F2F6;
+        }
     }
 }

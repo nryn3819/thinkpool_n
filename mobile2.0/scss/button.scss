@@ -11,7 +11,7 @@
             font-size: 14px !important;
             color: #000 !important;
             background: #fff;
-        }
+        }            
     }
 
     &-custom{
@@ -20,6 +20,59 @@
         }
         &.caromini{
             padding:0 18px;
+        }
+
+        &-outline{
+            &.add{
+                height: 28px;
+                line-height:26px;
+                padding:0;
+                border:1px solid #5368FF;
+                border-radius: 3px;
+                font-size:14px;
+                padding:0 10px;
+                color:#000;
+                background:#fff;
+
+                &::before{
+                    content: '\002b';
+                    color:#5368FF;
+                    padding-right:5px;
+                    font-size:15px;
+                    height:26px;
+                    line-height:26px;
+                    float:left;
+                }
+            }
+            &.rmv{
+                height: 28px;
+                line-height:26px;
+                padding:0;
+                border-radius: 3px;
+                font-size:14px;
+                padding:0 10px;
+                color:#000;
+                background:#fff;
+                border:1px solid #D5D5D5;
+
+                &::before{
+                    content: '\00d7';
+                    font-size:15px;
+                    height:26px;
+                    line-height:26px;
+                    float:left;
+                }
+            }
+            &.cancel{
+                height:29px;
+                line-height:27px;
+                border:1px solid #5368FF;
+                padding:0 10px;
+                font-size:14px;
+                color:#5368FF;
+                border-radius: 29px;
+                background:#fff;
+            }
         }
         
 
