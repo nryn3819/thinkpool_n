@@ -5,6 +5,8 @@
 
 
 * {
+    image-rendering: pixelated;
+
     @include mobile {
         -ms-overflow-style: none;
         /* IE, Edge */
@@ -17,6 +19,15 @@
             display: none;
         }
     }
+}
+
+
+img[src$=".gif"], img[src$=".png"] {
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 
 
@@ -168,17 +179,12 @@ b, strong{
     }
 }
 
-
-
-
-
-
 @import 'layout.scss'; //레이아웃
 @import 'title.scss'; //타이틀
 @import 'section.scss'; // section박스
 @import 'fadeinout.scss'; //페이드 인 아웃
 @import 'modal.scss'; // 모달
-@import 'table.scss'; // 테이블
+@import 'table.scss'; // 테이블 
 @import 'swiper.scss'; // 스와이프
 @import 'nav.scss'; //마진패딩값
 @import 'button.scss'; //버튼
@@ -193,3 +199,9 @@ b, strong{
 @import 'offcanvas.scss'; //페이징
 @import 'autocomplete.scss'; //페이징
 @import 'badge.scss'; //뱃지
+
+
+
+
+
+

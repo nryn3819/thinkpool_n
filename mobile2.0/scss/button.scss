@@ -72,6 +72,15 @@
                 color:#5368FF;
                 border-radius: 29px;
                 background:#fff;
+
+                &.sm{
+                    font-size:10px;
+                    font-weight:300;
+                    padding:0 12px;
+                    height:16px;
+                    border-radius: 16px;
+                    line-height:14px;
+                }
             }
         }
         
@@ -111,6 +120,12 @@
             color:#fff;
             border-radius: 37px;
             border:0;
+            
+
+            
+            &.square{
+                border-radius: 3px;
+            }
             
         }
         &-default{

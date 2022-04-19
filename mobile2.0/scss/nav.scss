@@ -98,4 +98,33 @@
             }
         }
     }
+
+    &.nav-round3{
+        display:flex;
+        width:100%;
+        justify-content: center;
+
+        .nav-item{
+            margin:0 5px;
+
+            .nav-link{
+                display:block;
+                width:90px;
+                height:35px;
+                line-height:33px;
+                background:#fff;
+                border:1px solid #d5d5d5;
+                font-size:14px;
+                padding:0;
+                border-radius: 35px;;
+                color:#000;
+
+                &.active{
+                    background:#5368FF;
+                    border:1px solid #5368FF;
+                    color:#fff;
+                }
+            }
+        }
+    }
 }
