@@ -1,6 +1,10 @@
 // btn
 
 .btn {
+    &:focus, &:active, &:hover{
+        outline:0 !important;
+        box-shadow: none !important;
+    }
     &-outline {
 
         &-detail {

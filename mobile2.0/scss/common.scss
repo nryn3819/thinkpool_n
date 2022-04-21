@@ -179,6 +179,15 @@ b, strong{
     }
 }
 
+.fs15{font-size: 15px;}
+
+button, input, select{
+    &:active,&:focus, &:visited{
+        outline:0 !important;
+        box-shadow:none !important;
+    }
+}
+
 @import 'layout.scss'; //레이아웃
 @import 'title.scss'; //타이틀
 @import 'section.scss'; // section박스
@@ -199,7 +208,6 @@ b, strong{
 @import 'offcanvas.scss'; //페이징
 @import 'autocomplete.scss'; //페이징
 @import 'badge.scss'; //뱃지
-
 
 
 

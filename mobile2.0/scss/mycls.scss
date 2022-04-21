@@ -216,6 +216,16 @@
     padding:25px 17px 0;
     float:left;
 
+    &>strong{
+        font-size:15px;
+
+        span{
+            font-size:14px;
+            color:#666;
+            font-weight:400;
+        }
+    }
+
     textarea{
         border:1px solid #5469ff;
         padding:10px;

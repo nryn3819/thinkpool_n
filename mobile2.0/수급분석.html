@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle subTitle text-truncate">
+                        <strong>수급분석</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn subSch">
+                        <button type="button" class="schButton">종목검색</button>
+                    </div>
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div>
+                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Dropdown button
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section section-npd">
+
+                    <div class="market">
+                        <div class="ch_tab">
+                            <ul class="nav nav-round" role="tablist" style="width:680px">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab01" data-bs-toggle="pill" data-bs-target="#msdtab01c" type="button" role="tab" aria-controls="매수비중" aria-selected="false">매수비중 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab02" data-bs-toggle="pill" data-bs-target="#msdtab02c" type="button" role="tab" aria-controls="순매수" aria-selected="false">순매수 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab03" data-bs-toggle="pill" data-bs-target="#msdtab03c" type="button" role="tab" aria-controls="순매수신규" aria-selected="false">순매수 상위 신규진입</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="msdtab04" data-bs-toggle="pill" data-bs-target="#msdtab04c" type="button" role="tab" aria-controls="주요기관" aria-selected="false">주요기관 순매수 상위</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="msdtab05" data-bs-toggle="pill" data-bs-target="#msdtab05c" type="button" role="tab" aria-controls="연속순매수" aria-selected="true">연속순매수</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade" id="msdtab01c" role="tabpanel" aria-labelledby="매수비중내용">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion1" id="data0211" value="기관" checked="">
+                                        <label class="form-check-label" for="data0211">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion1" id="data0212" value="외국인">
+                                        <label class="form-check-label" for="data0212">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span>매수비중</span>
+                                                    <span class="up">158.8%</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 매수비중상위-->
+
+                            <div class="tab-pane fade" id="msdtab02c" role="tabpanel" aria-labelledby="순매수 상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0221" value="기관" checked="">
+                                        <label class="form-check-label" for="data0221">기관 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0222" value="외국인">
+                                        <label class="form-check-label" for="data0222">기관 코스닥</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0223" value="외국인">
+                                        <label class="form-check-label" for="data0223">외국인 코스피</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion2" id="data0224" value="외국인">
+                                        <label class="form-check-label" for="data0224">외국인 코스닥</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">413억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 순매수상위-->
+
+                            <div class="tab-pane fade" id="msdtab03c" role="tabpanel" aria-labelledby="순매수 상위 신규진입">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion3" id="data0231" value="기관" checked="">
+                                        <label class="form-check-label" for="data0231">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion3" id="data0232" value="외국인">
+                                        <label class="form-check-label" for="data0232">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">413억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 순매수 상위 신규-->
+
+                            <div class="tab-pane fade" id="msdtab04c" role="tabpanel" aria-labelledby="주요기관 순매수 상위">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0241" value="기관" checked="">
+                                        <label class="form-check-label" for="data0241">연기금</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0242" value="외국인">
+                                        <label class="form-check-label" for="data0242">투신</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion4" id="data0243" value="외국인">
+                                        <label class="form-check-label" for="data0243">사모펀드</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">43억</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 주요기관 순매수 상위-->
+
+                            <div class="tab-pane fade active show" id="msdtab05c" role="tabpanel" aria-labelledby="연속순매수">
+                                <div class="radionCheckingBox">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion5" id="data0251" value="기관" checked="">
+                                        <label class="form-check-label" for="data0251">기관</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="checkingForDataOpion5" id="data0252" value="외국인">
+                                        <label class="form-check-label" for="data0252">외국인</label>
+                                    </div>
+                                </div>
+                                <!-- //ch_data -->
+        
+                                <div class="mainColumnAlramBox rmt-20">
+                                    <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
+                                </div>
+                                <!-- // -->
+        
+                                <div class="itemUpdate">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                
+                                <div class="marketList">
+                                    <div class="list list-market">
+                                        <div class="leftDate">
+                                            <span class="date">01/11</span>
+                                            <span class="pvl">(잠정)</span>
+                                        </div>
+                                        <div class="left left-sec">
+                                            <div class="top text-truncate">
+                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
+                                                <!-- //종목명 -->
+                                            </div>
+                                            <!-- // left-top -->
+
+                                            <div class="btm">
+                                                <div class="contxt text-truncate">
+                                                    <span class="up">11일</span>
+                                                    <span>순매수</span>
+                                                </div>
+                                                <!-- //내용 -->
+                                            </div>
+                                            <!-- //left-btm -->
+                                        </div>
+                                        <!-- //left -->
+
+                                        <div class="right">
+                                            <div class="per up">
+                                                <em>+27.0%</em>
+                                            </div>
+                                            <!-- //블릿 -->
+                                        </div>
+                                        <!-- //right -->
+
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //marketList -->
+
+                                <div class="mainColumnGuideBox tabInBtm">
+                                    <span class="d-block"><em>매매비중은 (순매수량)/(상장주식수) 입니다.</em></span>
+                                    <span class="d-block"><em>잠정데이터는 증권사에서 장중에 가집계한 데이터를 기반으로 추정한 값입니다.</em></span>
+                                </div>
+                                <!-- //guide -->
+                            </div>
+                            <!-- // 연속순매수-->
+                        </div>
+                    </div>
+                    <!-- // -->
+                    <div class="shorcutBtn d-grid gap-2 rmt-20">
+                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                    </div>
+                    <!-- // -->
+                </section>
+
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>

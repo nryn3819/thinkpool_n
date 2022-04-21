@@ -197,91 +197,7 @@
 .issue-chart{
     padding:0 17px;
 
-    .chart_ex{
-        display:flex;
-        width:100%;
-        background:#F6F6F7;
-        padding:10px;
-        justify-content: flex-start;
-        flex-wrap:wrap;
-        align-items: center;
-        align-content: center;
-
-        &>div{
-            display:block;
-            height:23px;
-            line-height:23px;
-            font-size:13px;
-            color:#999;
-            margin-right:15px;
-
-            span{
-                display:block;
-                float:left;
-            }
-
-            &.cht01::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#FB6B77;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-            &.cht02::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#1D5BCD;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-            &.cht03::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#1D5BCD;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-            &.cht04::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#72B7FC;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-            &.cht05::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#A1D2FD;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-            &.cht06::before{
-                content:'';
-                display:block;
-                width:14px;
-                height:3px;
-                background:#C2DEF4;
-                margin-top:10px;
-                margin-right:10px;
-                float:left;
-            }
-        }
-    }
+    
 }
 
 .issue-alarm{
@@ -359,5 +275,91 @@
         font-size:13px;
         color:#999;
         padding:5px 0 10px 0;
+    }
+}
+
+.chart_ex{
+    display:flex;
+    width:100%;
+    background:#F6F6F7;
+    padding:10px;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    align-items: center;
+    align-content: center;
+
+    &>div{
+        display:block;
+        height:23px;
+        line-height:23px;
+        font-size:13px;
+        color:#999;
+        margin-right:15px;
+
+        span{
+            display:block;
+            float:left;
+        }
+
+        &.cht01::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#FB6B77;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
+        &.cht02::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#1D5BCD;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
+        &.cht03::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#1D5BCD;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
+        &.cht04::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#72B7FC;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
+        &.cht05::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#A1D2FD;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
+        &.cht06::before{
+            content:'';
+            display:block;
+            width:14px;
+            height:3px;
+            background:#C2DEF4;
+            margin-top:10px;
+            margin-right:10px;
+            float:left;
+        }
     }
 }
