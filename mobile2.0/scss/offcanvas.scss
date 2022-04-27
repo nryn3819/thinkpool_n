@@ -1,107 +1,158 @@
 $customColor:#5368FF;
 
-.offcanvas-top{
-    &.search{
-        height:100%;
+.searcharea{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:#fff;
+    z-index:-1;
+    opacity: 0;
+
+    &.sch-show{
+        opacity: 1;
+        z-index:10025;
+    }
 
 
-        .offcanvas{
-            &-header{
-                border-bottom:1px solid #5368FF;
+    &-header{
+        display:flex;
+        height:44px;
+        padding:0 17px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        border-bottom:1px solid #5368FF;
 
-                .off-sch{
-                    width:calc(100% - 74px);
+        .searcharea-sch{
+            width:calc(100% - 74px);
 
-                    input{
-                        border-radius: 0 !important;
-                        outline:0 !important;
+            input{
+                width: calc(100% - 40px);
+                height: 20px;
+                border-radius: 0 !important;
+                outline:0 !important;
+                border:0;
+                font-size: 16px;
+                padding: 0 10px;
+                background: none;
 
-                        &:focus, &:active {
-                            outline:0;
-                        }
+                &:focus, &:active {
+                    outline:0;
+                }
+            }
+
+            .schButton{
+                display: block;
+                width: 20px;
+                height: 20px;
+                background:url(../img/b-sch.png) no-repeat 0 0;
+                background-size:20px auto;
+                margin-top: -1px !important;
+                float: left;
+            }
+        }
+    }
+    &-body{
+        padding:20px 17px;
+        .off-basic{
+            .tag{
+                display:block;
+                width:100%;
+
+                span{
+                    font-size:16px;
+                    color:#5368FF;
+                    padding-right:5px;
+
+                    &:last-child{
+                        padding-right:0;
                     }
 
-                    button{
-                        background:url(../img/b-sch.png) no-repeat 0 0;
-                        background-size:20px auto;
+                    &::before{
+                        content:'#';
                     }
                 }
             }
-            &-body{
-                .off-basic{
-                    .tag{
-                        display:block;
-                        width:100%;
 
-                        span{
-                            font-size:16px;
-                            color:#5368FF;
-                            padding-right:5px;
+            .schTop{
+                display:block;
+                width:100%;
+                padding-bottom:10px;
+                border-bottom:1px solid #cacaca;
+                
+                span{
+                    display:inline-block;
+                    font-size:16px;
+                    color:#000;
+                    padding-right:5px;
+                    padding-bottom:10px;
 
-                            &:last-child{
-                                padding-right:0;
-                            }
+                    &:last-child{
+                        padding-right:0;
+                    }
+                }
+            }
 
-                            &::before{
-                                content:'#';
-                            }
-                        }
+            .latest{
+                display:block;
+                width:100%;
+
+                strong{
+                    display:block;
+                    font-size:16px;
+                    color:#000;
+                    font-weight:700;
+                }
+
+                span{
+                    display:block;
+                    font-size:16px;
+                    color:#000;
+                    margin-top:10px;
+                    padding-left:10px;
+
+                    &.tag::before{
+                        content:'#';
+                    }
+                    
+                    &:first-child{
+                        margin-top:15px;
                     }
 
-                    .schTop{
-                        display:block;
-                        width:100%;
-                        padding-bottom:10px;
-                        border-bottom:1px solid #cacaca;
-                        
-                        span{
-                            display:inline-block;
-                            font-size:16px;
-                            color:#000;
-                            padding-right:5px;
-                            padding-bottom:10px;
-
-                            &:last-child{
-                                padding-right:0;
-                            }
-                        }
-                    }
-
-                    .latest{
-                        display:block;
-                        width:100%;
-
-                        strong{
-                            display:block;
-                            font-size:16px;
-                            color:#000;
-                            font-weight:700;
-                        }
-
-                        span{
-                            display:block;
-                            font-size:16px;
-                            color:#000;
-                            margin-top:10px;
-                            padding-left:10px;
-
-                            &.tag::before{
-                                content:'#';
-                            }
-                            
-                            &:first-child{
-                                margin-top:15px;
-                            }
-
-                            em{
-                                font-size:16px;
-                                color:#999;
-                            }
-                        }
+                    em{
+                        font-size:16px;
+                        color:#999;
                     }
                 }
             }
         }
+    }
 
+}
+
+.favtop{
+    display:block;
+    width:100%;
+    line-height:33px;
+
+    strong{
+        font-size:16px;
+    }
+}
+.favitemlist{
+    display:block;
+    width:100%;
+    margin-top:25px;
+    border-top:1px solid #cacaca;
+    padding:20px 10px;
+
+    div{
+        margin-bottom:10px;
+
+        label>em{
+            color:#999;
+        }
     }
 }

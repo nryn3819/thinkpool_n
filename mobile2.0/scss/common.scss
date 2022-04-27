@@ -4,7 +4,7 @@
 @import 'variable.scss';
 
 
-* {
+* { 
     image-rendering: pixelated;
 
     @include mobile {
@@ -180,6 +180,7 @@ b, strong{
 }
 
 .fs15{font-size: 15px;}
+.fs14{font-size: 14px;}
 
 button, input, select{
     &:active,&:focus, &:visited{
@@ -208,8 +209,3 @@ button, input, select{
 @import 'offcanvas.scss'; //페이징
 @import 'autocomplete.scss'; //페이징
 @import 'badge.scss'; //뱃지
-
-
-
-
-
