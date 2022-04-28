@@ -1,3 +1,5 @@
+@import "variable.scss";
+
 $customColor:#5368FF;
 
 .searcharea{
@@ -10,6 +12,12 @@ $customColor:#5368FF;
     background:#fff;
     z-index:-1;
     opacity: 0;
+
+    @include web{
+        width:720px;
+        left:50%;
+        margin-left:-360px;
+    }
 
     &-main{
         top:48px;
@@ -25,12 +33,20 @@ $customColor:#5368FF;
 
     &-header{
         display:flex;
-        height:44px;
+        height:49px;
         padding:0 17px;
         justify-content: space-between;
         align-items: center;
         align-content: center;
         border-bottom:1px solid #5368FF;
+
+        .logo{
+            margin:3px 0 0 0;
+
+            img{
+                float:left;
+            }
+        }
 
         .searcharea-sch{
             width:calc(100% - 74px);

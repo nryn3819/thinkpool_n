@@ -115,6 +115,7 @@
 
         .bar {
             transform: rotatey(180deg) rotatex(360deg);
+            width:22px;
 
             &:first-child {
                 transform: rotate(-45deg);
