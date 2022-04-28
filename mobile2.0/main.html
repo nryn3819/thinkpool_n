@@ -25,34 +25,24 @@
                 <div id="top" class="float-start">
                     <div class="logo">
                         <h3 class="visually-hidden">로고</h3>
-                        <a href="main.html" class="float-start"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                        <a href="main.html" class="float-start h-logo h-show"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                        <div class="pageBack h-hide">
+                            <button type="button" onclick="history.back()">이전페이지</button>
+                        </div>
                     </div>
                     <!-- //logo -->
                 
                     <div class="topSch">
                         <h3 class="visually-hidden">종목검색영역</h3>
-                        <div class="input-group" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                            <input type="text" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon" disabled>
+                        <div class="input-group">
+                            <input type="text" id="hd_sch" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
                             <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
                         </div>
                         <!-- // -->
 
-                        <div class="offcanvas offcanvas-top search" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                            <div class="offcanvas-header">
-                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
-                                <!-- // -->
-                                <div class="off-sch">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="종목명 / 종목코드 / 키워드">
-                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <!-- // -->
+                        <div class="searcharea searcharea-main" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
 
-                            <div class="offcanvas-body">
+                            <div class="searcharea-body">
                                 <div class="off-basic">
                                     <div class="tag">
                                         <span>태그명</span>
@@ -94,7 +84,17 @@
                 
                     <div id="sideMenu">
                         <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
 
                         <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
                             <div class="offcanvas-header">
@@ -151,6 +151,29 @@
                         </aside>
                     </div>
                     <!-- //sideMenu -->
+
+                    <script>
+                        document.getElementById('hd_sch').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.add('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+                            document.querySelector('.h-logo').classList.remove('h-show');
+                            document.querySelector('.h-logo').classList.add('h-hide');
+                            document.querySelector('.pageBack').classList.remove('h-hide');
+                            document.querySelector('.pageBack').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = 'checked';
+                        });
+                        document.querySelector('.sch-hide').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+                    </script>
                 </div>
                 <!-- //top -->
 

@@ -23,7 +23,7 @@
 }
 .subSchBtn{
     float:left;
-    button{
+    .schButton{
         width:20px;
         border:0;
         padding:0;
@@ -71,6 +71,64 @@
             color:#000;
             text-align:center;
             background:#F0F2F6;
+        }
+    }
+}
+
+
+.sideMenuBtn{
+    .menu {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        transform: translate(0, 0);
+        cursor: pointer;
+        transition: 0.5s ease;
+        //height: 50px;
+
+        &:hover .bar {
+            //box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+        }
+        
+        .bar {
+            width: 20px;
+            height: 2px;
+            background: #000;
+            //box-shadow: 1px 1px 3px RGBa(0, 0, 0, 1);
+            border-radius: 2px;
+            transition: 0.4s ease;
+          
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+    }
+    
+    #sdmnu {
+        position: absolute;
+        left: -999px;
+        top: -999px;
+    }
+    #sdmnu:checked + .menu {
+        transform: translate(-50%,-50%) rotatey(180deg);
+        margin-left:10px;
+
+        .bar {
+            transform: rotatey(180deg) rotatex(360deg);
+
+            &:first-child {
+                transform: rotate(-45deg);
+                margin-top: 15px;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                margin-top: -9px;
+                transform: rotate(45deg);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ $customColor:#5368FF;
 
 .searcharea{
     position:fixed;
+    display:none;
     width:100%;
     height:100%;
     top:0;
@@ -10,7 +11,13 @@ $customColor:#5368FF;
     z-index:-1;
     opacity: 0;
 
+    &-main{
+        top:48px;
+        border-top:1px solid #5368FF;
+    }
+
     &.sch-show{
+        display:block;
         opacity: 1;
         z-index:10025;
     }

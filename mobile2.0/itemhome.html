@@ -36,33 +36,171 @@
                     <!-- //종목명 -->
 
                     <div class="subSchBtn">
-                        <button type="button" class="schButton">종목검색</button>
+                        <button type="button" id="opensch" class="schButton">종목검색</button>
+
+
+                        <div class="searcharea">
+                            <div class="searcharea-header">
+                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                <!-- // -->
+                                <div class="searcharea-sch">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="종목명 / 종목코드 / 키워드" id="inputsch">
+                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <button type="button" class="btn-close text-reset sch-hide"></button>
+                            </div>
+                            <!-- // -->
+    
+                            <div class="searcharea-body">
+                                <div class="favtop">
+                                    <strong>인기 관심종목</strong>
+    
+                                    <button class="btn-custom-board float-end">
+                                        선택종목 추가 +
+                                    </button>
+                                </div>
+    
+                                <div class="favitemlist">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999001" name="favcheck" class="form-check-input">
+                                        <label for="999001" class="form-check-label">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999002" name="favcheck" class="form-check-input">
+                                        <label for="999002">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999003" name="favcheck" class="form-check-input">
+                                        <label for="999003">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999004" name="favcheck" class="form-check-input">
+                                        <label for="999004">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999005" name="favcheck" class="form-check-input">
+                                        <label for="999005">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999006" name="favcheck" class="form-check-input">
+                                        <label for="999006">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999007" name="favcheck" class="form-check-input">
+                                        <label for="999007">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999008" name="favcheck" class="form-check-input">
+                                        <label for="999008">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+    
+                        <script>
+                            document.getElementById('opensch').addEventListener('click', function(){
+    
+                                document.querySelector('.searcharea').classList.add('sch-show')
+    
+                                document.getElementById('inputsch').focus();
+                                document.getElementById('inputsch').value = "";
+                            });
+    
+    
+                            document.querySelector('.sch-hide').addEventListener('click', function(){
+    
+                                document.querySelector('.searcharea').classList.remove('sch-show')
+                            });
+    
+    
+                        </script>
                     </div>
                 
                     <div id="sideMenu">
                         <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
 
                         <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                              </div>
-                              <div class="offcanvas-body">
-                                <div>
-                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="" alt="logo"></div>
+                                    <div class="app">
+                                        <button>앱다운로드</button>
+                                    </div>
                                 </div>
-                                <div class="dropdown mt-3">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <div class="before">
+                                        <button>로그인</button>
+                                        <button>회원가입</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="after">
+                                        <div class="tpo">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
                                 </div>
-                              </div>
+                                <!-- // -->
+
+                                <div class="allmenulist">
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="">
+                                            Toggle width collapse
+                                        </button>
+                                        <div class="collapse" id="amn01">
+                                            <ul>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </aside>
                     </div>
                     <!-- //sideMenu -->

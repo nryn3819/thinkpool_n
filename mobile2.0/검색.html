@@ -21,63 +21,29 @@
             <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
             <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
             <!-- header - header.scss -->
-            <header id="header" class="clearfix sub sch">
+            <header id="header" class="clearfix">
                 <h2 class="visually-hidden">상단영역</h2>
                 <div id="top" class="float-start">
-                    <div class="pageBack">
-                        <button type="button" onclick="history.back()">이전페이지</button>
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="main.html" class="float-start h-logo h-hide"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                        <div class="pageBack h-show">
+                            <button type="button" onclick="history.back()">이전페이지</button>
+                        </div>
                     </div>
-                    <!-- //이전페이지 -->
+                    <!-- //logo -->
                 
                     <div class="topSch">
                         <h3 class="visually-hidden">종목검색영역</h3>
-                        <div class="input-group" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                            <input type="text" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon" disabled>
-                            <button class="btn-img schButton" type="button" id="button-addon"><i class="bi bi-search"></i></button>
+                        <div class="input-group">
+                            <input type="text" id="hd_sch" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
+                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
                         </div>
                         <!-- // -->
 
-                        <div class="offcanvas offcanvas-top search" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                            <div class="offcanvas-header">
-                                <div class="logo"><img src="./img/logo.png" alt="" width="32" class="float-start"></div>
-                                <!-- // -->
-                                <div class="off-sch">
-                                    <div class="input-group">
-                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.6/autoComplete.min.js"></script>
+                        <div class="searcharea searcharea-main" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
 
-                                        <input id="autoComplete" class="form-control" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
-                                        <button class="btn-img schButton" type="button" id="button-addon"><i class="bi bi-search"></i></button>
-                                        <script>
-                                            //https://tarekraafat.github.io/autoComplete.js
-
-                                            const autoCompleteJS = new autoComplete({
-                                                placeHolder: "종목명 / 종목코드 / 키워드",
-                                                data: {
-                                                    src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
-                                                    cache: true,
-                                                },
-                                                resultItem: {
-                                                    highlight: true
-                                                },
-                                                events: {
-                                                    input: {
-                                                        selection: (event) => {
-                                                            const selection = event.detail.selection.value;
-                                                            autoCompleteJS.input.value = selection;
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                        </script>
-
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <!-- // -->
-
-                            <div class="offcanvas-body">
+                            <div class="searcharea-body">
                                 <div class="off-basic">
                                     <div class="tag">
                                         <span>태그명</span>
@@ -119,34 +85,117 @@
                 
                     <div id="sideMenu">
                         <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
 
                         <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                              </div>
-                              <div class="offcanvas-body">
-                                <div>
-                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="" alt="logo"></div>
+                                    <div class="app">
+                                        <button>앱다운로드</button>
+                                    </div>
                                 </div>
-                                <div class="dropdown mt-3">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <div class="before">
+                                        <button>로그인</button>
+                                        <button>회원가입</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="after">
+                                        <div class="tpo">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
                                 </div>
-                              </div>
+                                <!-- // -->
+
+                                <div class="allmenulist">
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="">
+                                            Toggle width collapse
+                                        </button>
+                                        <div class="collapse" id="amn01">
+                                            <ul>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </aside>
                     </div>
                     <!-- //sideMenu -->
+
+                    <script>
+                        document.getElementById('hd_sch').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.add('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+
+
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+
+                            document.forms.sidemenu.tgle.checked = 'checked';
+                        });
+                        document.querySelector('.sch-hide').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+
+
+                            document.querySelector('.h-logo').classList.remove('h-show');
+                            document.querySelector('.h-logo').classList.add('h-hide');
+                            document.querySelector('.pageBack').classList.remove('h-hide');
+                            document.querySelector('.pageBack').classList.add('h-show');
+                            
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+                    </script>
                 </div>
                 <!-- //top -->
 
+
+                <div class="allNav">
+                    <menu class="globalNavigation float-start">
+                        <h3 class="visually-hidden">네비게이션</h3>
+                        <a href="#" class="active">AI분석</a>
+                        <a href="#">AI추천</a>
+                        <a href="#">라씨매매신호</a>
+                        <a href="#">AI속보</a>
+                        <a href="#">토론실</a>
+                    </menu>
+                    <!-- //gloabal navi -->
+                </div>
             </header>
             <!-- // -->
 
