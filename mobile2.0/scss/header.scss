@@ -71,10 +71,14 @@
 }
 
 .allNav{
+    position: sticky;
+    top:48px;
+    left:0;
     display: block;
     width:100%;
     overflow-x: auto;
     background:#fff;
+    z-index:9;
 }
 
 

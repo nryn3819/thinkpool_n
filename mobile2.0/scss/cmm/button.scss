@@ -256,6 +256,60 @@
                 }
             }
         }
+
+        &-rassi{
+            width:100%;
+            min-width:225px;
+            height:42px;
+            border:0;
+            border-radius: 42px;
+            margin-top:10px;
+            background:#3F4565;
+
+            span{
+                display:inline-block;
+                height:42px;
+                line-height:42px;
+                font-size:16px;
+                color:#fff;
+            }
+
+            &.web{
+                background:#5367FF;
+
+                span::before{
+                    display:block;
+                    width:23px;
+                    height:42px;
+                    content:' ';
+                    background:url(../img/bu-rassi.png) no-repeat 0 50%;
+                    background-size:17px auto;
+                    float:left;
+                }
+            }
+            &.and{
+                span::before{
+                    display:block;
+                    width:20px;
+                    height:42px;
+                    content:' ';
+                    background:url(../img/bu-and.png) no-repeat 0 50%;
+                    background-size:15px auto;
+                    float:left;
+                }
+            }
+            &.ios{
+                span::before{
+                    display:block;
+                    width:21px;
+                    height:42px;
+                    content:' ';
+                    background:url(../img/bu-ios.png) no-repeat 0 50%;
+                    background-size:16px auto;
+                    float:left;
+                }
+            }
+        }
     }
 
     &-customOutline {
