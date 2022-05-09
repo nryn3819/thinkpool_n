@@ -131,6 +131,16 @@
                 border-radius: 3px;
             }
             
+            &.outline{
+                background:#fff;
+                border:1px solid #5367ff;
+                color:#5368FF;
+                font-size:14px;
+                padding:0;
+                text-align:center;
+                border-radius: 5px;
+            }
+            
         }
         &-default{
             height:37px;

@@ -1,0 +1,52 @@
+.rassi-visual{
+    position:relative;
+    width:100%;
+    height:auto;
+
+    .txt{
+        position:absolute;
+        top:10.2%;
+        left:8.5%;
+
+        strong{
+            display:block;
+            font-size:30px;
+            color:#000;
+            font-weight:700;
+
+            em{
+                color:#9494F3;
+                font-weight:700;
+            }
+        }
+
+        span{
+            display:block;
+            font-size:20px;
+            color:#000;
+            line-height:30px;
+            margin-top:10px;
+        }
+    }
+    .button{
+        position:absolute;
+        width:63%;
+        bottom:9%;
+        left:18.5%;
+
+        button{
+            width:100%;
+            min-width:225px;
+            height:42px;
+            border:0;
+            border-radius: 42px;
+            margin-top:10px;
+            background:#3F4565;
+
+            span{
+                font-size:16px;
+                color:#fff;
+            }
+        }
+    }
+}

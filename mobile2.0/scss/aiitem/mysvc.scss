@@ -109,37 +109,13 @@
         }
 
         .nav.nav-tabs{
-            display:block;
+            display:table;
             width:100%;
             border:0 !important;
-
-            &.fth{
-                .nav-item{
-                    width:25% !important;
-
-                    &:last-child{
-                        .nav-link{
-                            border-right:1px solid #cacaca;
-                        }
-                    }
-                }
-            }
-            &.tth{
-                .nav-item{
-                    width:50% !important;
-
-                    &:last-child{
-                        .nav-link{
-                            border-right:1px solid #cacaca;
-                        }
-                    }
-                }
-            }
+            table-layout:fixed;
 
             .nav-item{
-                display:block;
-                float:left;
-                width:33%;
+                display:table-cell;
 
                 .nav-link{
                     display:block;
@@ -163,7 +139,6 @@
                     }
                 }
                 &:nth-child(2n){
-                    width:34%;
 
                     .nav-link{
                         border-left:0;

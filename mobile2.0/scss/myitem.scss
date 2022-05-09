@@ -26,17 +26,17 @@
         }
 
         .on{
-            display:block;
+            display:none;
         }
         .off{
-            display:none;
+            display:block;
         }
         &.off{
             .on{
-                display:none;
+                display:block;
             }
             .off{
-                display:block;
+                display:none;
             }
         }
     }

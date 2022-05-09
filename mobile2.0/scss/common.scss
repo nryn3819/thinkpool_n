@@ -188,26 +188,30 @@ button, input, select{
         box-shadow:none !important;
     }
 }
-
+// 레이아웃
 @import 'layout.scss'; //레이아웃
-@import 'title.scss'; //타이틀
 @import 'section.scss'; // section박스
-@import 'fadeinout.scss'; //페이드 인 아웃
-@import 'modal.scss'; // 모달
-@import 'table.scss'; // 테이블 
-@import 'swiper.scss'; // 스와이프
-@import 'nav.scss'; //마진패딩값
-@import 'button.scss'; //버튼
-@import 'etc.scss'; //기타
 @import 'main.scss'; //메인
 @import 'sub.scss'; //서브
-@import 'mpsize.scss'; //마진패딩값
-@import 'hspace.scss'; //빈칸높이값
-@import 'fsize.scss'; //폰트사이즈
-@import 'board.scss'; //게시판
-@import 'paging.scss'; //페이징
-@import 'offcanvas.scss'; //페이징
-@import 'autocomplete.scss'; //페이징
-@import 'badge.scss'; //뱃지
+
+// 공통
+@import './cmm/title.scss'; //타이틀
+@import './cmm/fadeinout.scss'; //페이드 인 아웃
+@import './cmm/modal.scss'; // 모달
+@import './cmm/nav.scss'; //마진패딩값
+@import './cmm/table.scss'; // 테이블 
+@import './cmm/swiper.scss'; // 스와이프
+@import './cmm/button.scss'; //버튼
+@import './cmm/etc.scss'; //기타
+@import './cmm/hspace.scss'; //빈칸높이값
+@import './cmm/badge.scss'; //뱃지
+@import './cmm/autocomplete.scss'; //페이징
+@import './cmm/offcanvas.scss'; //페이징
+@import './cmm/paging.scss'; //페이징
+@import './cmm/board.scss'; //게시판
+@import './cmm/fsize.scss'; //폰트사이즈
+@import './cmm/mpsize.scss'; //마진패딩값
+
+
 
 
