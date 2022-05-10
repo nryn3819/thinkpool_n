@@ -1,0 +1,55 @@
+.guidetxt{
+    display:block;
+    padding:15px 0;
+    overflow:hidden;
+
+    &>div{
+        display:block;
+        width:100%;
+        padding-bottom:10px;
+        float:left;
+
+        &::before{
+            content:'\00b7';
+            padding-right:5px;
+            display:block;
+            float:left;
+        }
+
+        span{
+            display:block;
+            width:calc(100% - 10px);
+            font-size:15px;
+            color:#000;
+            line-height:17px;
+            float:left;
+
+            em.dut{
+                font-size:13px;
+                color:#999;
+            }
+        }
+    }
+
+    &.sm{
+        &>div{
+            &::before{
+                color:#999;
+            }
+            span{
+                font-size:13px;
+                color:#999;
+            }
+        }
+    }
+}
+
+.example{
+    display:block;
+
+    span{
+        display:block;
+        font-size:13px;
+        color:#999;
+    }
+}
