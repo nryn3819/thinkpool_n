@@ -337,14 +337,25 @@
                 <section class="section section-basic">
                     <h3 class="title">서비스 가입 현황</h3>
 
-                    <div class="notJoin-msvc rmt-25">
-                        <div class="ai-bnr cn shadow-sm">
+                    <div class="notJoin-msvc rpt-10">
+                        <div class="ai-bnr cn shadow-sm rmt-15">
                             <div class="txt">
                                 <strong class="cn-tit">무제한 라씨매매신호<br>서비스 가입중</strong>
                                 <span class="date rmt-5">이용기간 <br> 2022/02/28 ~ 2020/11/20</span>
                             </div>
                             <div class="button cancel">
-                                <button class="btn-custom-outline cancel">해지하기</button>
+                                <button class="btn-custom-outline cancel" data-bs-toggle="modal" data-bs-target="#cancel1">해지하기</button>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="ai-bnr cn shadow-sm rmt-15">
+                            <div class="txt">
+                                <strong class="cn-tit">무제한 라씨매매신호<br>서비스 해지</strong>
+                                <span class="date rmt-5">이용기간 <br> 2022/02/28 ~ 2020/11/20</span>
+                            </div>
+                            <div class="button cancel">
+                                <button class="btn-custom-outline cancel" data-bs-toggle="modal" data-bs-target="#rejoin1">재가입하기</button>
                             </div>
                         </div>
                         <!-- // -->
@@ -355,7 +366,7 @@
                                 <span class="guide rmt-5">010-1234-1234</span>
                             </div>
                             <div class="button cancel">
-                                <button class="btn-custom-outline cancel">변경하기</button>
+                                <button class="btn-custom-outline cancel" data-bs-toggle="modal" data-bs-target="#change1">변경하기</button>
                             </div>
                         </div>
                         <!-- // -->
@@ -370,6 +381,163 @@
                         </div>
                         <!-- // -->
                     </div>
+
+
+                    <div class="modal fade custom-modal1" id="change1" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="modal-basic-text text-center">
+                                        알림받을 휴대폰 번호를 입력해주세요.
+                                    </div>
+
+                                    <div class="userNumInput rmt-20">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="폰번호 - 제외" aria-label="휴대폰번호" aria-describedby="num1">
+                                            <button class="" type="button" id="num1">인증번호받기</button>
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="인증번호" aria-label="인증번호입력" aria-describedby="num2">
+                                            <button class="" type="button" id="num2">인증받기</button>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-default" data-bs-dismiss="modal">닫기</button>
+                                    <button class="btn-custom-primary" data-bs-target="#change2" data-bs-toggle="modal">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 변경하기 - 인증  -->
+
+                    <div class="modal fade custom-modal1" id="change2" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center">
+                                        변경되었습니다.
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //  변경하기 -완료 -->
+
+                    <div class="modal fade custom-modal1" id="cancel1" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center">
+                                        무제한 라씨매매신호 서비스를 <br>
+                                        해지하겠습니까?
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-default" data-bs-dismiss="modal">아니요</button>
+                                    <button class="btn-custom-primary" data-bs-toggle="modal" data-bs-target="#cancel2" style="width:100px">예</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //  해지하기 -확인 -->
+
+                    <div class="modal fade custom-modal1" id="cancel2" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center">
+                                        해지가 완료되어 <br>
+                                        더 이상 결제되지 않습니다.
+                                        <br><br>
+                                        서비스가 개시된 월에 대한 환불 금액은 없으며, <br>
+                                        이용만료일까지 서비스 이용이 가능합니다.
+                                        <br><br>
+
+                                        이용만료일: 2022/02/01
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //  해지하기 -완료 -->
+
+                    <div class="modal fade custom-modal1" id="rejoin1" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center">
+                                        라씨매매신호 서비스가 <br>
+                                        2022.01.03 이용 만료될 예정입니다. <br><br>
+
+                                        정기결제를 재개하시겠습니까? 
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-bs-toggle="modal" data-bs-target="#rejoin2" style="width:100px">예</button>
+                                    <button class="btn-custom-default" data-bs-dismiss="modal">아니요</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //  해지하기 -확인 -->
+
+                    <div class="modal fade custom-modal1" id="rejoin2" aria-hidden="true" aria-labelledby="" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center">
+                                        라씨매매신호서비스 정기결제가 <br>
+                                        재개됐습니다. <br><br>
+
+                                        다음결제예정일 : 2022.01.03 <br>
+                                        결제예정금액 : 59,400원
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //  해지하기 -완료 -->
+
+
+
                 </section>
                 <!-- // -->
 
@@ -424,6 +592,22 @@
 
                 </section>
                 <!-- // -->
+
+                <section class="section section-basic">
+                    <div class="empty payto">
+                        <span>
+                            휴대폰자동결제를 이용하는 경우 <br>
+                            결제내역 조회 및 서비스 해지는 <br>
+                            PC버전에서 확인가능합니다. 
+                        </span>
+
+                        <button class="btn-custom-primary">PC버전 바로가기</button>
+                    </div>
+                    <!-- // 
+                    넣을곳을 몰라 따로 만들었습니다. 
+                    아무곳에나 넣으셔도 됩니다.
+                    -->
+                </section>
                 
 
             </main>
