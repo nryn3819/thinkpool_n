@@ -8,10 +8,11 @@
     overflow-y:hidden;
 
     .msvc-nav{
-        display:inline-block;
+        display:inline-flex;
+        justify-content: center;
 
         a.nav-link{
-            display:inline-block;
+            display:block;
             width:90px;
             height:35px;
             line-height:33px;

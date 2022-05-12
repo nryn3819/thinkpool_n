@@ -70,13 +70,14 @@
             }
         }
         .info{
-            height:18px;
-            line-height:18px;
+            min-height:18px;
+            line-height:16px;
             font-size:14px;
             color:#000;
+            padding-top:3px;
         }
         .tag{
-            margin-top:5px;
+            margin-top:10px;
             overflow:hidden;
 
             span{

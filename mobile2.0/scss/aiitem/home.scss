@@ -108,6 +108,7 @@
     }
     .tag{
         display:block;
+        width:100%;
         float:left;
         clear:left;
         font-size:13px;
@@ -207,6 +208,8 @@
         border-radius: 10px;
         border:0;
         background:#E5E6EC;
+        text-indent:-9999em;
+
     }
     .carousel-indicators .active{
         background:#5368FF;
@@ -354,6 +357,9 @@
                     font-size:13px;
                     color:#000;
                     margin-top:3px;
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
                 .info{
                     height:15px;
