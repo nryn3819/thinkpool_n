@@ -6,14 +6,13 @@
     width:100%;
     min-height:48px;
     background:#fff;
-    z-index:99;
+    z-index:100;
     overflow:hidden;
-    box-shadow: 0 1px 1px rgba(214,214,214,1)!important;
 
 
     &.item, &.sub{
         //padding-bottom:14px;
-        //border-bottom:1px solid #d6d6d6;
+        border-bottom:1px solid #d6d6d6;
 
         &.sch{
             border-bottom:1px solid #5367ff;
@@ -81,7 +80,7 @@
     overflow-x: auto;
     background:#fff;
     z-index:99;
-    box-shadow: 0 1px 1px rgba(214,214,214,1)!important;
+    border-bottom:1px solid #d6d6d6;
 
 }
 
