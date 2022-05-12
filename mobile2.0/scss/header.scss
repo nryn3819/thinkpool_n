@@ -8,6 +8,8 @@
     background:#fff;
     z-index:99;
     overflow:hidden;
+    box-shadow: 0 1px 1px rgba(214,214,214,1)!important;
+
 
     &.item, &.sub{
         //padding-bottom:14px;
@@ -78,7 +80,9 @@
     width:100%;
     overflow-x: auto;
     background:#fff;
-    z-index:9;
+    z-index:99;
+    box-shadow: 0 1px 1px rgba(214,214,214,1)!important;
+
 }
 
 
