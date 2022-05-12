@@ -1,3 +1,5 @@
+@import '../variable.scss';
+
 //sideMenu
 #sideMenu .sideMenuBtn{
     position:relative;
@@ -9,7 +11,13 @@
 #sideContent{
     width:70%;
     min-width:272px;
+    max-width:500px;
     border:0;
+    
+    @include web{
+        right:50%;
+        margin-right:-350px;
+    }
 
     .offcanvas-header{
         padding:10px 17px;

@@ -114,6 +114,7 @@
             width:100%;
             border:0 !important;
             table-layout:fixed;
+            border-collapse:collapse;
 
             .nav-item{
                 display:table-cell;
@@ -139,19 +140,19 @@
                         z-index:99;
                     }
                 }
-                &:nth-child(2n){
+                // &:nth-child(2n){
 
-                    .nav-link{
-                        border-left:0;
-                        border-right:0;
-                        border-bottom:1px solid #5568FD;
+                //     .nav-link{
+                //         border-left:0;
+                //         border-right:0;
+                //         border-bottom:1px solid #5568FD;
 
-                        &.active{
-                            border:1px solid #5568FD;
-                            border-bottom:0;
-                        }
-                    }
-                }
+                //         &.active{
+                //             border:1px solid #5568FD;
+                //             border-bottom:0;
+                //         }
+                //     }
+                // }
             }
         }
 
