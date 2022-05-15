@@ -111,10 +111,11 @@
 
         .nav.nav-tabs{
             display:table;
-            width:100%;
+            width:calc(100% - 34px);
             border:0 !important;
             table-layout:fixed;
             border-collapse:collapse;
+            margin:0 17px;
 
             .nav-item{
                 display:table-cell;
