@@ -101,7 +101,7 @@
         text-align:Center;
         margin-top:20px;
 
-        button{
+        button[data-bs-toggle]{
             width:200px;
             height:40px;
             border:0;
