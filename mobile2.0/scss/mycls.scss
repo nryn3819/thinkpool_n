@@ -239,3 +239,74 @@
         }
     }
 }
+
+.rdname{
+    display:block;
+    overflow:hidden;
+
+    input{
+        display:block;
+        width:calc(100% - 74px);
+        height:40px;
+        border:1px solid #5469ff;
+        border-right:0;
+        float:left;
+        padding:0 10px;
+
+        &::placeholder{
+            color:#999;
+        }
+    }
+    button{
+        display:block;
+        width:74px;
+        height:40px;
+        line-height:40px;
+        text-align:center;
+        background:#5469ff;
+        font-size:15px;
+        color:#fff;
+        font-weight:700;
+        border:0;
+        float:left;
+    }
+
+}
+
+.rdnamelist{
+    display:block;
+    width:100%;
+    min-height:144px;
+    padding:15px;
+    border:1px solid #5469ff;
+
+    &>span{
+        display:block;
+        width:100%;
+        font-size:15px;
+        color:#999;
+    }
+
+    ul{
+        display:block;
+        list-style-type: none;
+        padding:0;
+
+        li{
+            display:inline-block;
+            list-style: none;
+            padding-right:5px;
+            line-height:25px;
+
+            span{
+                font-size:15px;
+                color:#5469ff;
+                &::after{
+                    content:'\00d7';
+                    color:#999;
+                    padding-left:3px;
+                }
+            }
+        }
+    }
+}
