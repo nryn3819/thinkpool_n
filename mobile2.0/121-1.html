@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+                
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>이벤트</strong>
+                    </div>
+                    <!-- //종목명  헤더가 바뀝니다. -->
+
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noMargin">
+
+                    <div class="section-inline-ad rmt-30">
+                        <img src="./img/demoBnr.png" alt="" class="img-fluid">
+                        <!-- // 인라인광고 -->
+                    </div>
+
+                    <div class="board rmt-25">
+                        <div class="board-top">
+                            <button class="btn btn-custom-board write float-start">글쓰기</button>
+
+                            
+                        </div>
+                        <!-- //top -->
+
+                        <div class="list">
+                            <div class="fixed-group">
+                                <div class="post">
+                                    <span class="badge bg-custom-primary">이벤트</span>
+                                    <span class="obj">이벤트를합니다이벤트를합니다이벤트 를합니다 이벤트를합니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post">
+                                    <span class="badge bg-custom-primary">주주연대</span>
+                                    <span class="obj">이벤트를합니다이벤트를합니다이벤트 를합니다 이벤트를합니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post">
+                                    <span class="badge bg-custom-primary">주주연대</span>
+                                    <span class="obj">이벤트를합니다이벤트를합니다이벤트 를합니다 이벤트를합니다.</span>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- //고정게시글 -->
+
+                            <div class="list-group">
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="badge bg-custom-danger">인기글</span>
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="recount">[13]</span>
+                                        <span class="file"><img src="./img/file.png" alt="첨부파일" width="15"></span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="nickname float-start rpr-5">열세자리유저닉네임1234</span>
+                                        <span class="date float-start">02/12 09:00</span>
+
+                                        <div class="info float-end">
+                                            <span>조회 <em>9999</em></span>
+                                            <span>추/반 <em>999/999</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post">
+                                    <div class="top">
+                                        <span class="badge bg-custom-danger">추천</span>
+                                        <span class="obj">가나다라마바사아자차카타파하</span>
+                                        <span class="recount">[13]</span>
+                                        <span class="file"><img src="./img/file.png" alt="첨부파일" width="15"></span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="nickname float-start rpr-5">열세자리유저닉네임1234</span>
+                                        <span class="date float-start">02/12 09:00</span>
+
+                                        <div class="info float-end">
+                                            <span>조회 <em>9999</em></span>
+                                            <span>추/반 <em>999/999</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post blind" data-bs-toggle="modal" data-bs-target="#blind-guide">
+                                    <div class="top">
+                                        <span class="badge bg-custom-default">블라인드</span>
+                                        <span class="obj">블라인드 된 글입니다.</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="nickname float-start rpr-5">열세자리유저닉네임1234</span>
+                                        <span class="date float-start">02/12 09:00</span>
+
+                                        <div class="info float-end">
+                                            <span>조회 <em>9999</em></span>
+                                            <span>추/반 <em>999/999</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post blind">
+                                    <div class="top">
+                                        <span class="badge bg-custom-default">삭제글</span>
+                                        <span class="obj">삭제된 글입니다.</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="nickname float-start rpr-5">열세자리유저닉네임1234</span>
+                                        <span class="date float-start">02/12 09:00</span>
+
+                                        <div class="info float-end">
+                                            <span>조회 <em>9999</em></span>
+                                            <span>추/반 <em>999/999</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="post re">
+                                    <div class="top">
+                                        <span class="obj">오늘 상가면 치킨쏨!! 줄을 서시오~</span>
+                                    </div>
+                                    <div class="btm">
+                                        <span class="nickname float-start rpr-5">열세자리유저닉네임1234</span>
+                                        <span class="date float-start">02/12 09:00</span>
+
+                                        <div class="info float-end">
+                                            <span>조회 <em>9999</em></span>
+                                            <span>추/반 <em>999/999</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+
+                                <div class="shorcutBtn d-grid gap-2 rmt-20 noPadding">
+                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+                                </div>
+
+                            </div>
+                            <!-- //게시글 -->
+
+                            <div class="modal fade custom-modal1" id="blind-guide" tabindex="-1" aria-labelledby="블라이드안내문" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="modal-body">
+                                            <div class="blind-guide-txt text-center">
+                                                이 글은 반대가 찬성보다 50표 이상으로 <br>
+                                                블라인드처리 되었습니다. <br><br>
+                                                커뮤니티 활도에 참고 부탁드립니다. <br><br>
+                                                블라인드 처리 시간 : <em class="dn">02/22 14:10</em>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="blind-guide-btn text-center rpt-25 rpb-25">
+                                                <button class="btn-custom-primary">확인</button>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                            </div>
+                            <!-- //modal -->
+                        </div>
+                        <!-- //list -->
+
+                        <div class="board-btm rmt-25">
+                            <button class="btn btn-custom-board write float-start">글쓰기</button>
+                            <button class="btn btn-custom-board pagetop float-end">맨위로</button>
+                        </div>
+                        <!-- //btm -->
+                        <script>
+                            const wtop = document.querySelector('.pagetop');
+                    
+                            wtop.addEventListener('click', function() {
+                                window.scrollTo(0 , 0);
+                            });
+                        </script>
+                        <div class="board-sch rmt-25 clearfix">
+                            <select name="" id="" class="form-select">
+                                <option value="">필명</option>
+                                <option value="">제목</option>
+                            </select>
+                            <div class="input-group">
+                                <input type="text" class="form-control" style="background:#f5f5f5;">
+                                <button class="btn btn-outline-secondary" type="button"><img src="./img/ico-sch.svg" alt="검색" width="15" class="float-start"></button>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="step-rule rpt-20">
+                            <span data-bs-toggle="modal" data-bs-target="#ruleforstep">운영배심원 선출 규칙 및 이달의 운영배심원 보기&nbsp;〉</span>
+
+                            <div class="modal fade custom-modal1" id="ruleforstep" tabindex="-1" aria-labelledby="블라이드안내문" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="modal-body">
+                                            <div class="step-w text-start">
+                                                <div class="rmTitle"><strong class="dn">2월</strong> 운영배심원</div>
+
+                                                <div class="step-list-box rmt-20">
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                    <span>배심원</span>
+                                                </div>
+
+                                                <div class="rmTitle rmt-25">운영배심원 선출</div>
+
+                                                <div class="step-list-txt rmt-20">
+                                                    매월1일 새벽 1시에 ‘전월 1일~말일’ 까지 글쓴이 (ID기준) <br>
+                                                    별로 추천수-반대수를 구하여 추천이 많은 15인을 <br>
+                                                    운영 배심원으로 선출 합니다. <br>
+                                                    이때, 합계된 추천수가 30개가 넘지 않으면 <br>
+                                                    운영배심원으로 선정되지 않습니다. <br><br>
+                                                    운영배심원으로 선출될 경우 활동기간은 <br>
+                                                    해당월 1개월간 이며, 운영배심원 활동은 <br>
+                                                    의무 활동이 아닙니다. 참여 여부는 운영배심원으로 <br>
+                                                    선정되신 분의 판단에 따라 하시면 됩니다. <br><br>
+                                                    활동 내용(글쓰기+추천수)에 따라 연속적으로 <br>
+                                                    운영배심원 에 선출되실 수 있습니다. <br><br>
+                                                    더욱 자세한 설명은 PC웹사이트에서 확인 해 주시기 바랍니다.  
+                                                </div>
+                                                <div class="hspace50"></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                            </div>
+                            <!-- //modal -->
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="hspace50 clearfix"></div>
+
+                </section>
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>
