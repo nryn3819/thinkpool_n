@@ -1,0 +1,288 @@
+@import 'default.scss'; //일반 회원가입
+@import 'simple.scss'; // 간편 회원가입
+
+section.try{
+    .member-title{
+        strong{
+            display:block;
+            width:100%;
+            font-weight:700 !important;
+            padding:80px 0 0 0;
+            background:url(../img/member/po_caution.png) no-repeat center top;
+            background-size:72px auto;
+            font-size:25px;
+        }
+    }
+    .try-title{
+        display:block;
+        min-height:85px;
+        background:#f3f3f3 url(../img/member/po_caution_b.png) no-repeat 45px 50%;
+        background-size:58px auto;
+        padding:20px 30px 20px 120px;
+        font-size:15px;
+        color:#666;
+
+        span{
+            display:block;
+        }
+    }
+}
+section.join{
+    display:block;
+    width:100%;
+    padding-top:40px;
+    min-height:400px;
+
+    .login-title{
+        display:block;
+        width:100%;
+        padding:10px 25px;
+        font-size:18px;
+        color:#666;
+        font-weight:700;
+        background:url(../img/member/bu_mb_tit.png) no-repeat 0 50%;
+        background-size:20px auto;
+        border-bottom: 1px solid #a1a1a1;
+    }
+
+
+    @at-root .user-input-info{
+        display:block;
+        width:100%;
+
+        .info{
+            .input-list{
+                &>div{
+                    display:flex;
+                    width:100%;
+                    justify-content:space-between;
+
+                    &>label{
+                        display:block;
+                        width:100px;
+                        height:42px;
+                        line-height:42px;
+                        font-size:15px;
+                        color:#666;
+                    }
+                    &>div{
+                        display:flex;
+                        justify-content: space-between;
+                        width:calc(100% - 100px);
+                        min-height:42px;
+                        border-bottom:1px solid #3E72ED;
+                        flex-wrap:wrap;
+
+                        .invalid-feedback{
+                            font-size:13px;
+                        }
+
+                        .invalid-tooltip{
+                            right:0;
+                        }
+
+                        &.num{
+                            .invalid-tooltip{
+                                right:auto;
+                                left:100px;
+                            }
+                        }
+                    }
+                    input.form-control, textarea.form-control{
+                        display:block;
+                        height:38px;
+                        line-height:19px;
+                        border:0;
+                        padding:9px 2.25em 8px 0.5em;
+                        margin-top:1px;
+                        font-size:15px;
+
+                        &:disabled{
+                            background:none;
+                        }
+
+                        &::placeholder{
+                            font-size:12px;
+                            line-height:34px;
+                        }
+
+                        &.is-valid{
+                            //border:1px solid #198754;
+                        }
+                        &.is-invalid{
+                            //border:0;
+                            border:1px solid #dc3545;
+                            border-radius: 5px;
+                        }
+
+                        &.telnum{
+                            width:calc(100% - 84px);
+                        }
+                        &.cnum{
+                            width:140px;
+                        }
+                    }
+                    .valid-feedback,.invalid-feedback{
+                        width:100%;
+                    }
+                }
+            }
+            .eventCheck{
+                display:block;
+                width:100%;
+                padding-left: 105px;
+                border-bottom:1px solid #a1a1a1;
+
+                .form-check{
+                    width:100%;
+                    height:42px;
+                    padding-top:10px;
+
+                    .form-check-label{
+                        font-size:15px;
+                        color:#444;
+                        font-weight:500;
+                    }
+                    .form-check-input{
+                        margin-top:5px;
+                    }
+                }
+            }
+        }
+
+        .guide{
+            display:block;
+            width:100%;
+            padding:15px 5px 0 5px;
+
+            p{
+                font-size:15px;
+                color:#666;
+
+                a{
+
+                    color:#3E72ED;
+                    border-bottom:1px solid #3E72ED;
+                    padding:0 1px;
+                }
+            }
+        }
+    }
+}
+
+.btn-clause-num{
+    display:block;
+    width:auto;
+    height:27px;
+    line-height:15px;
+    padding:5px;
+    margin-top:8px;
+    border-radius: 3px;
+    font-size:13px;
+    color:#333;
+    border:1px solid #d6d6d6;
+    background:#fff;
+    font-weight:300 !important;
+
+    &.lg{
+        display:block;
+        width:116px;
+        height:32px;
+        line-height:30px;
+        border:1px solid #5367FF;
+        font-size:15px;
+        color:#3E72ED;
+        padding:0;
+        border-radius: 5px;
+    }
+    &.sm{
+        display:block;
+        height:32px;
+        line-height:30px;
+        border:1px solid #5367FF;
+        font-size:15px;
+        color:#3E72ED;
+        padding:0 15px;
+        border-radius: 5px;
+        margin-top:6px;
+    }
+
+    &.black{
+        background:#000;
+        border:0;
+        color:#fff;
+        line-height:17px;
+    }
+}
+
+.submit-btn{
+    display:flex;
+    width:100%;
+    padding:0 10px;
+    margin-top:30px;
+    justify-content: space-around;
+
+    button{
+        width:48%;
+        height:54px;
+        border:0;
+        padding:0;
+        font-size:20px;
+        color:#fff;
+        font-weight:500;
+        text-align:center;
+
+        &.submit{
+            background:#3E72ED;
+        }
+        &.cancel{
+            background:#000;
+        }
+    }
+}
+.member-footer{
+    display:block;
+    width:100%;
+    padding:50px 0;
+    background:#fff;
+    text-align:center;
+    
+    img{
+        width:180px;
+    }
+}
+
+.clear-btn{
+    button{
+        height:54px;
+        width:48%;
+        border:0;
+        padding:0;
+        font-size:20px;
+        color:#fff;
+        font-weight:500;
+        text-align:center;
+        background:#3E72ED;
+
+        &.black{
+            background:#000;
+        }
+    }
+}
+
+.simple-guide{
+    display:block;
+    width:100%;
+    padding:10px 0 10px 50px;
+    border-top:1px solid #d6d6d6;
+    min-height:35px;
+    background:url(../img/member/bu_guide.png) no-repeat 8px 50%;
+    background-size:34px auto;
+
+    span{
+        display:block;
+        font-size:14px;
+        color:#666;
+        line-height:18px;
+    }
+}

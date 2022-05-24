@@ -1,0 +1,43 @@
+
+//title
+.title{
+    display:block;
+    height:18px;
+    line-height:18px;
+    font-size:16px;
+    font-weight:700;
+    margin:0;
+    padding:0;
+
+    span{
+        color:#5368FF
+    }
+    em{
+        font-size:13px;
+        font-weight:400;
+    }
+
+    &-bullet{
+        padding-left:22px;
+        //메인라씨
+        &-rassi{
+            background:url(../img/bu_tit_rassi.png) no-repeat 0 50%;
+            background-size: 15px 15px;
+        }
+        //메인 ai신호
+        &-ai{
+            background:url(../img/bu_tit_ai.png) no-repeat 17px 50%;
+            background-size: 15px 15px;
+        }
+    }
+}
+
+.tit-guide{
+    display:block;
+    width:100%;
+    padding:0 17px;
+    font-size:13px;
+    color:#999;
+    min-height: 34px;
+    line-height:17px;
+}
