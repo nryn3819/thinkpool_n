@@ -61,6 +61,15 @@
         overflow:auto;
         white-space: nowrap;
 
+        &.theme{
+            .nav-item{
+                .nav-link{
+                    display:block;
+                    width:100px;
+                }
+            }
+        }
+
         .nav-item {
             display: inline-block;
             margin-right: 6px;
