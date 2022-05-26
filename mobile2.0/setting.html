@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="main.html" class="float-start h-logo h-show"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
+                        <div class="pageBack h-hide">
+                            <button type="button" class="sch-hide2">이전페이지</button>
+                        </div>
+                    </div>
+                    <!-- //logo -->
+                
+                    <div class="topSch">
+                        <h3 class="visually-hidden">종목검색영역</h3>
+                        <div class="input-group">
+                            <input type="text" id="hd_sch" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
+                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                        </div>
+                        <!-- // -->
+
+                        <div class="searcharea searcharea-main" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+
+                            <div class="searcharea-body">
+                                <div class="off-basic">
+                                    <div class="tag">
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                    </div>
+                                    <!-- //최근이슈 -->
+
+                                    <div class="schTop rmt-20">
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                        <span>검색상위종목</span>
+                                    </div>
+                                    <!-- //검색상위종목 -->
+
+                                    <div class="latest rmt-20">
+                                        <strong>최근 검색어</strong>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span>최근검색어 <em>(000000)</em></span>
+                                        <span class="tag">면세점</span>
+                                    </div>
+                                    <!-- //최근검색어 -->
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- //sch -->
+                
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
+                                    <div class="app">
+                                        <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <!-- <div class="before">
+                                        <button class="btn-custom-primary" style="width:120px">로그인</button>
+                                        <button class="btn-custom-default" style="width:120px">회원가입</button>
+                                    </div> -->
+                                    <!-- // -->
+
+                                    <div class="after">
+                                        <div class="top">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함 <span class="badge">4</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="allmenulist">
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="">
+                                            AI분석
+                                        </button>
+                                        <div class="collapse" id="amn01">
+                                            <ul>
+                                                <li><a href="#">AI분석홈</a></li>
+                                                <li><a href="#">시세분석</a></li>
+                                                <li><a href="#">이슈분석</a></li>
+                                                <li><a href="#">수급분석</a></li>
+                                                <li><a href="#">테마분석</a></li>
+                                                <li><a href="#">공시분석</a></li>
+                                                <li><a href="#">리포트분석</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="">
+                                            AI추천
+                                        </button>
+                                        <div class="collapse" id="amn02">
+                                            <ul>
+                                                <li><a href="#">AI종목추천홈</a></li>
+                                                <li><a href="#">오늘의종목</a></li>
+                                                <li><a href="#">종목추천</a></li>
+                                                <li><a href="#">포트폴리오</a></li>
+                                                <li><a href="#">나의서비스</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="">
+                                            라씨신호
+                                        </button>
+                                        <div class="collapse" id="amn03">
+                                            <ul>
+                                                <li><a href="#">라씨매매신호홈</a></li>
+                                                <li><a href="#">서비스소개</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">나의신호</a></li>
+                                                <li><a href="#">(앱다운로드)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="">
+                                            AI속보
+                                        </button>
+                                        <div class="collapse" id="amn04">
+                                            <ul>
+                                                <li><a href="#">주요속보</a></li>
+                                                <li><a href="#">수급</a></li>
+                                                <li><a href="#">테마</a></li>
+                                                <li><a href="#">리포트</a></li>
+                                                <li><a href="#">실적</a></li>
+                                                <li><a href="#">공시</a></li>
+                                                <li><a href="#">태그전체보기</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="">
+                                            토론실
+                                        </button>
+                                        <div class="collapse" id="amn05">
+                                            <ul>
+                                                <li><a href="#">토론실홈</a></li>
+                                                <li><a href="#">증권가속보</a></li>
+                                                <li><a href="#">특징주포착</a></li>
+                                                <li><a href="#">주식종합토론</a></li>
+                                                <li><a href="#">유머방</a></li>
+                                                <li><a href="#">정치방</a></li>
+                                                <li><a href="#">나의활동</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="">
+                                            더보기
+                                        </button>
+                                        <div class="collapse" id="amn06">
+                                            <ul>
+                                                <li><a href="#">공지사항 및 문의</a></li>
+                                                <li><a href="#">회원정보관리</a></li>
+                                                <li><a href="#">약관및정책</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="sfmenu">
+                                    <button class="btn-custom-primary outline">블로그</button>
+                                    <button class="btn-custom-primary outline">텔레그램</button>
+                                    <button class="btn-custom-primary outline">유투브</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="other rmt-25 text-center">
+                                    <button class="btn-custom-default">PC버전으로 보기</button>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+
+                    <script>
+                        document.getElementById('hd_sch').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.add('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+                            document.querySelector('.h-logo').classList.remove('h-show');
+                            document.querySelector('.h-logo').classList.add('h-hide');
+                            document.querySelector('.pageBack').classList.remove('h-hide');
+                            document.querySelector('.pageBack').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = 'checked';
+                        });
+
+                        document.querySelector('.sch-hide').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+
+                        document.querySelector('.sch-hide2').addEventListener('click', function(){
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+                    </script>
+                </div>
+                <!-- //top -->
+                
+            </header>
+            <!-- // -->
+            <div class="allNav">
+                <menu class="globalNavigation float-start">
+                    <h3 class="visually-hidden">네비게이션</h3>
+                    <a href="#" class="active">AI분석</a>
+                    <a href="#">AI추천</a>
+                    <a href="#">라씨매매신호</a>
+                    <a href="#">AI속보</a>
+                    <a href="#">토론실</a>
+                </menu>
+                <!-- //gloabal navi -->
+            </div>
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+
+                    <div id="sttg-box" class="show">
+                        <div class="sttg-w">
+                            <div class="guide">
+                                <strong><em>홈화면</em> 바로가기 설정</strong>
+                                <span>
+                                    홈화면 바로가기를 설정하시면,<br>
+                                    메인 화면에서 내가 바로 동하고자 하는 <br>
+                                    페이지를 링크 할 수 있습니다. 
+                                </span>
+                                <ul>
+                                    <li><em>1</em><span>관심종목을 등록하세요.</span></li>
+                                    <li><em>2</em><span>종목을 고르고 (1종목)</span></li>
+                                    <li><em>3</em><span>항목을 고르고 (1항목)</span></li>
+                                    <li><em>4</em><span>저장하세요.</span></li>
+                                </ul>
+                                <div class="bullet">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- // -->
+                            <div class="step">
+                                <div class="top">
+                                    <span class="bullet">STEP 1</span>
+                                    <span class="tit">
+                                        종목 고르기
+                                        <em>종목명을 터치하세요.</em>
+                                    </span>
+                                </div>
+                                <!-- // -->
+                                <div class="cont">
+                                    <div class="obj rmt-25">
+                                        <span>나의 종목 등록하기</span>
+                                    </div>
+                                    <ul class="vertical">
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="active">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                        <li><button class="">종목명종목명</button></li>
+                                    </ul>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                            <div class="step rmt-8">
+                                <div class="top">
+                                    <span class="bullet">STEP 2</span>
+                                    <span class="tit">
+                                        항목 고르기
+                                        <em>항목명을 터치하세요.</em>
+                                    </span>
+                                </div>
+                                <div class="cont">
+                                    <ul class="caro">
+                                        <li><button>시세보기</button></li>
+                                        <li><button>뉴스보기</button></li>
+                                        <li><button>공시보기</button></li>
+                                        <li><button>매매신호보기</button></li>
+                                        <li><button class="active">토론 게시판보기</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // -->
+                            <div class="step rmt-8">
+                                <div class="top">
+                                    <span class="bullet">STEP 1</span>
+                                    <span class="tit">
+                                        설정을 저장합니다.
+                                    </span>
+                                </div>
+                                <div class="cont">
+                                    <div class="save rmt-25">
+                                        <button class="btn-custom-primary square">설정 저장</button>
+                                        <div class="guide rmt-10">설정 저장하신 후 언제라도 다시 수정하여 적용 할 수 있습니다.</div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- //설정화면 -->
+                </section>
+                <!-- // -->
+
+            </main>
+            <!-- //container -->
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                    </span>
+                </div>
+            </footer>
+            
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>
