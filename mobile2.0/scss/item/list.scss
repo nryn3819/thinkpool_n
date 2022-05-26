@@ -53,8 +53,13 @@
                 float:left;
 
                 span{
-                    float:left;
-                    margin-right:5px;
+                    padding-right:5px;
+                }
+
+                .item{
+                    min-height:20px;
+                    line-height:20px;
+                    font-size:16px;
                 }
 
                 .obj{
@@ -62,6 +67,10 @@
                     line-height:20px;
                     font-size:16px;
                     color:#000;
+
+                    &.eiei{
+                        width:calc(100% - 115px);
+                    }
                 }
                 .recount{
                     min-height:20px;
@@ -70,11 +79,10 @@
                     color:#5368ff;
                 }
                 .file{
+                    display:inline-block;
                     height:20px;
                     line-height:20px;
                     vertical-align: middle;
-                    padding-top:3px;
-
                     img{
                         float:left;
                     }

@@ -57,6 +57,10 @@ em {
     color: #5367FF;
 }
 
+.gry {
+    color: #999;
+}
+
 hr {
     margin: 0;
     padding: 0;
@@ -207,3 +211,4 @@ input::placeholder{
 @import './cmm/board.scss'; //게시판
 @import './cmm/fsize.scss'; //폰트사이즈
 @import './cmm/mpsize.scss'; //마진패딩값
+

@@ -1,6 +1,6 @@
 .rule-btn{
     position:absolute;
-    top:22px;
+    top:0;
     right:17px;
 
     button{
@@ -74,7 +74,7 @@
                 float:left;
                 
                 span{
-                    width:calc(100% - 10px);
+                    width:calc(100% - 20px);
                     line-height:20px;
                     font-size:16px;
                     color:#999;
@@ -107,7 +107,7 @@
                 line-height:20px;
                 font-size:16px;
                 color:#000;
-                width:calc(100% - 10px);
+                width:calc(100% - 20px);
                 float:left;
             }
 
