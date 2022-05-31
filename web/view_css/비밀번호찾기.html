@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>thinkpool</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link
+        rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        <!-- basic css -->
+        <link rel="stylesheet" href="./css/common.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <!-- bxslider -->
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <!-- basic js -->
+        <!-- <script src="js/main.js"></script> -->
+    </head>
+    <body>
+
+    <div id="app">
+        <div id="member">
+            <header id="member-header">
+                <div class="hbtn">
+                    <a href="#" class="backpage"></a>
+                </div>
+                <div class="htitle">비밀번호 찾기</div>
+            </header>
+            <!-- // -->
+            <main id="member-container">
+
+                <section class="member idpw">
+                    
+                    <div class="member-title">
+                        <strong>비밀번호 찾기</strong>
+                    </div>
+                    <!-- // -->
+
+                    <div class="user-input-info">
+                        <div class="info">
+                            <div class="input-list">
+                                <form action="" class="form-horizontal">
+                                    <div class="form-group has-success">
+                                        <label for="" class="control-label">아이디</label>
+                                        <input type="text" class="form-control" name="" id="" placeholder="아이디를 입력하세요.">
+                                        <span id="" class="help-block">정확히 입력해주세요.</span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-group has-success">
+                                        <label for="" class="control-label">이름</label>
+                                        <input type="text" class="form-control" name="" id="" placeholder="가입시 등록한 이름을 입력하세요.">
+                                        <span id="" class="help-block">정확히 입력해주세요.</span>
+                                    </div>
+                                    <!-- // -->
+
+
+                                    <div class="form-group">
+                                        <label for="" class="control-label">휴대폰번호</label>
+                                        <input type="tel" class="form-control" name="" id="" placeholder="‘-’ 없이 번호만 입력하세요." pattern="[0-1]{3}-[0-0]{4}-[0-0]{4}">
+                                        <button type="button" class="btn-custom-outline square primary ml-120"  data-toggle="modal" data-target="#modal33">인증번호 받기</button>
+                                        <span id="" class="help-block">잘못된 휴대폰번호 입니다.</span>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-group has-error">
+                                        <label for="" class="control-label">인증번호 입력</label>
+                                        <input type="number" min="0000" max="9999" class="form-control num" name="" id="" placeholder="인증번호 입력">
+                                        <button type="button" class="btn-custom-outline square primary ml-10" data-toggle="modal" data-target="#modal1">확인</button>
+                                        <span id="" class="help-block">인증번호가 다릅니다.</span>
+                                    </div>
+                                    <!-- // -->
+
+                                    
+                                </form>
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+                    </div>
+
+                    <div class="pw-guide">
+                        <div><span>비밀번호찾기에 어려움이 있으시면 고객센터 1666-6300 으로 연락주시기 바랍니다.</span></div>
+                        <div><span>네이버로그인 회원은 이용이 불가 합니다.</span></div>
+                    </div>
+
+                    <div class="button text-center mt-60">
+                        <button class="btn-custom-primary member">확인</button>
+                    </div>
+                    <!-- // -->
+
+                    <div class="modal fade custom-modal1" id="modal1">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center mt-20">
+                                        인증이 완료되었습니다.
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-dismiss="modal" style="width:103px;">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="modal fade custom-modal1" id="modal2">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center mt-20">
+                                        없는 정보이거나 입력한 정보가 맞지 않습니다.
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-dismiss="modal" style="width:103px;">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="modal fade custom-modal1" id="modal33">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text text-center mt-20">
+                                        카카오톡으로 인증번호가 전송되었습니다. <br>
+                                        카카오톡이 없으시면 SMS문자로 전송 됩니다.
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center cm-footer">
+                                    <button class="btn-custom-primary" data-dismiss="modal" style="width:103px;">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="member-footer text-center mt-60">
+                        <img src="./img/sub/member/logo.png" alt="하단로고" class="" width="180px"> 
+                    </div>
+
+                </section>
+                <!-- // -->
+
+            </main>
+        </div>
+        <!-- /wrap -->
+    </div>
+    <!-- //app -->
+
+    
+    
+  </body>
+</html>
