@@ -211,6 +211,10 @@
                                 }
                                 .help-block{
                                     display:block;
+                                    em{
+                                        font-style:normal;
+                                        color:#333;
+                                    }
                                 }
                             }
                         }
