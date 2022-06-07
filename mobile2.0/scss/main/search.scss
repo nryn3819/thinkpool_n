@@ -59,13 +59,12 @@
                 display:block;
                 float:left;
                 content:'\00B7';
-                padding-right:5px;
             }
 
             div{
                 display:block;
-                width:calc(100% - 10px);
-                float:left;
+                width:calc(100% - 12px);
+                float:right;
             }
 
             .key-con{

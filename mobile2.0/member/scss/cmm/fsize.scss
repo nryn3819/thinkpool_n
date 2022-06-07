@@ -1,5 +1,0 @@
-@for $i from 1 to 999{
-    .fs#{$i}{
-        font-size:($i + px) !important;
-    }
-}
