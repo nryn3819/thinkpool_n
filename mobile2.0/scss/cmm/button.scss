@@ -140,12 +140,6 @@
                 padding:0;
                 text-align:center;
                 border-radius: 5px;
-
-                @media (max-width:425px){
-                    width:40%;
-                    height:38px;
-                    font-size:16px;
-                }
             }
 
             &.member{
