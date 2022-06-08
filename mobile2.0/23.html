@@ -101,6 +101,25 @@
 설득의 주요 논지가 될 것'이라고 덧붙였다.
 
 [김경택 기자 kissmaycry@mkinternet.com]</div>
+
+<script>
+    const fsize = document.querySelector('.fontSize');
+    const vcont = document.querySelector('.viewContent');
+    const maxSize = 22;
+
+    fsize.addEventListener('click', function() {
+        const changeSize = document.defaultView.getComputedStyle(vcont).getPropertyValue("font-size");
+
+        if( parseInt(changeSize) < maxSize){
+            vcont.style.fontSize = parseInt(changeSize) + 2 + 'px';
+            vcont.style.lineHeight = parseInt(changeSize) + 12 + 'px';
+        }else if(parseInt(changeSize) >= maxSize){
+            vcont.style.fontSize = '16px';
+            vcont.style.lineHeight = '26px';
+        }
+        
+    })
+</script>
                         <!-- // -->
                         <footer class="board-footer">
                             <div class="btn-group">
