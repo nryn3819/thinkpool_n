@@ -33,7 +33,7 @@ $customColor:#5368FF;
 
     &-header{
         display:flex;
-        height:49px;
+        height:48px;
         padding:0 18px;
         justify-content: space-between;
         align-items: center;
@@ -49,7 +49,7 @@ $customColor:#5368FF;
         }
 
         .searcharea-sch{
-            width:calc(100% - 74px);
+            width:calc(100% - 72px);
 
             input{
                 width: calc(100% - 40px);
@@ -72,9 +72,14 @@ $customColor:#5368FF;
                 height: 20px;
                 background:url(../img/b-sch.png) no-repeat 0 0;
                 background-size:20px auto;
-                margin-top: -1px !important;
+                margin-top: -.5px !important;
                 float: left;
             }
+        }
+        &>.btn-close{
+            padding:0;
+            width:20px;
+            height:20px;
         }
     }
     &-body{
