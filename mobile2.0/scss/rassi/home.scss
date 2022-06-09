@@ -113,6 +113,10 @@
                 font-weight:300;
                 font-size:14px;
             }
+            &:disabled{
+                opacity: 1;
+                -webkit-text-fill-color: inherit
+            }
         }
 
         button{

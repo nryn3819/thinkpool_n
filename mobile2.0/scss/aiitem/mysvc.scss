@@ -316,6 +316,13 @@
         &.cn{
             padding:10px 20px;
             min-height:87px;
+
+            .txt{
+                width:calc(100% - 55px);
+            }
+            .button.cancel{
+                width:55px;
+            }
         }
 
         .txt{
