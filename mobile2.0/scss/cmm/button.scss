@@ -150,7 +150,7 @@
                 padding:0;
                 font-weight:300 !important;
 
-                @media (max-width:425px){
+                @media (min-width:425px){
                     width:40%;
                     height:38px;
                     font-size:16px;
