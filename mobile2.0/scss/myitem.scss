@@ -100,6 +100,7 @@
         }
 
         .listicon{
+            position: relative;
             display:block;
             float:left;
             border:1px solid #cacaca;
@@ -111,6 +112,23 @@
             vertical-align: middle;
             background-color:#fff;
             margin-left:5px;
+
+            &.new{
+                &::after{
+                    position: absolute;
+                    top:-7px;
+                    right:-3px;
+                    width: 18px;
+                    height:18px;
+                    line-height:18px;
+                    background:#FE4251;
+                    font-size:12px;
+                    font-weight:500;
+                    color:#fff;
+                    content:'N';
+                    border-radius: 100%;
+                }
+            }
 
             &.lico01{
                 background-image:url(../img/miico02.png);
