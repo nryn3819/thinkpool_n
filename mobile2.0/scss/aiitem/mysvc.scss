@@ -314,14 +314,15 @@
         align-items: center;
 
         &.cn{
-            padding:10px 20px;
+            padding:10px 15px;
             min-height:87px;
 
             .txt{
-                width:calc(100% - 55px);
+                width:calc(100% - 65px);
             }
             .button.cancel{
-                width:55px;
+                width:65px;
+                text-align:right;
             }
         }
 
