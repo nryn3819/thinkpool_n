@@ -1,3 +1,5 @@
+@import "variable.scss";
+
 .myitemlistw{
     display:block;
     width:100%;
@@ -131,19 +133,19 @@
             }
 
             &.lico01{
-                background-image:url(../img/miico02.png);
+                background-image:url(#{$imgUrlSv}/miico02.png);
                 background-repeat:no-repeat;
                 background-position:3px 5px;
                 background-size:21px auto;
             }
             &.lico02{
-                background-image:url(../img/miico01.png);
+                background-image:url(#{$imgUrlSv}/miico01.png);
                 background-repeat:no-repeat;
                 background-position:4px 4px;
                 background-size:20px auto;
             }
             &.lico03{
-                background-image:url(../img/miico03.png);
+                background-image:url(#{$imgUrlSv}/miico03.png);
                 background-repeat:no-repeat;
                 background-position:4px 4px;
                 background-size:20px auto;
@@ -167,11 +169,11 @@
         font-size:14px;
 
         &:first-child{
-            background:#fff url(../img/ico-stg.png) no-repeat 65px 50%;
+            background:#fff url(#{$imgUrlSv}/ico-stg.png) no-repeat 65px 50%;
             background-size:17px auto;
         }
         &:last-child{
-            background:#fff url(../img/ico-alram.png) no-repeat 65px 50%;
+            background:#fff url(#{$imgUrlSv}/ico-alram.png) no-repeat 65px 50%;
             background-size:16px auto;
         }
     }

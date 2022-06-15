@@ -1,3 +1,4 @@
+@import '../variable.scss';
 //topSch
 .btn-img {
     border: 0;
@@ -31,7 +32,7 @@
     display:block;
     width: 20px;
     height: 20px;
-    background: url(../img/ico-sch.svg) no-repeat 0 0;
+    background: url(#{$imgUrlSv}/ico-sch.svg) no-repeat 0 0;
     margin-top:-1px !important;
     float:left;
 }

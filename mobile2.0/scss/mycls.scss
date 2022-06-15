@@ -1,3 +1,5 @@
+@import "variable.scss";
+
 .active-w{
     display:block;
     width:100%; 
@@ -27,34 +29,34 @@
                 background-size:38px auto !important;
 
                 &-01{
-                    background:url(../img/cls.png) no-repeat 0 -345px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -345px;
                 }
                 &-02{
-                    background:url(../img/cls.png) no-repeat 0 -307px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -307px;
                 }
                 &-03{
-                    background:url(../img/cls.png) no-repeat 0 -268px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -268px;
                 }
                 &-04{
-                    background:url(../img/cls.png) no-repeat 0 -239px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -239px;
                 }
                 &-05{
-                    background:url(../img/cls.png) no-repeat 0 -201px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -201px;
                 }
                 &-06{
-                    background:url(../img/cls.png) no-repeat 0 -153px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -153px;
                 }
                 &-07{
-                    background:url(../img/cls.png) no-repeat 0 -115px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -115px;
                 }
                 &-08{
-                    background:url(../img/cls.png) no-repeat 0 -77px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -77px;
                 }
                 &-09{
-                    background:url(../img/cls.png) no-repeat 0 -38px;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -38px;
                 }
                 &-10{
-                    background:url(../img/cls.png) no-repeat 0 0;
+                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 0;
                 }
             }
         }

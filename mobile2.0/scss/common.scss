@@ -126,7 +126,7 @@ b, strong{
             line-height:24px;
             float:left;
             background-color:#EBEBEB;
-            background-image:url(../img/switch-off.png);
+            background-image:url(#{$imgUrlSv}/switch-off.png);
             background-repeat: no-repeat;
             background-position: 7px 50%;
             background-size:18px auto;
@@ -158,7 +158,7 @@ b, strong{
 
         &:checked + label{
             background-color:#EDF0FF;
-            background-image:url(../img/switch-on.png);
+            background-image:url(#{$imgUrlSv}/switch-on.png);
             background-repeat: no-repeat;
             background-position: 35px 50%;
             background-size:18px auto;
@@ -210,4 +210,3 @@ input::placeholder{
 @import './cmm/board.scss'; //게시판
 @import './cmm/fsize.scss'; //폰트사이즈
 @import './cmm/mpsize.scss'; //마진패딩값
-

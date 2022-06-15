@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .msvc-nav-w{
     display:block;
     width:100%;
@@ -370,7 +371,7 @@
                 line-height:30px;
                 text-align:center;
                 border-radius: 100%;
-                background:#5567Fd url(../img/bu_rarw_xl.png) no-repeat center 50%;
+                background:#5567Fd url(#{$imgUrlSv}/bu_rarw_xl.png) no-repeat center 50%;
                 background-size:15px auto;
                 text-indent:-9999em;
             }

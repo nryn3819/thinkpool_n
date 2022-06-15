@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .rassiTop{
     position: relative;
     display:block;
@@ -15,7 +16,7 @@
             font-size:24px;
             color:#fff;
             font-weight:700;
-            background:url(../img/rassilogo.png) no-repeat center 20px;
+            background:url(#{$imgUrlSv}/rassilogo.png) no-repeat center 20px;
             background-size:54px auto;
             text-align:Center;
         }
@@ -76,7 +77,7 @@
             &:first-child{
                 .app{
                     button{
-                        background:url(../img/app_and.png) no-repeat 0 50%;
+                        background:url(#{$imgUrlSv}/app_and.png) no-repeat 0 50%;
                         background-size:22px auto;
                     }
                 }
@@ -84,7 +85,7 @@
             &:last-child{
                 .app{
                     button{
-                        background:url(../img/app_app.png) no-repeat 0 50%;
+                        background:url(#{$imgUrlSv}/app_app.png) no-repeat 0 50%;
                         background-size:22px auto;
                     }
                 }
@@ -240,7 +241,7 @@
     text-align:center;
     margin-top:20px;
     padding-top:32px;
-    background:url(../img/rassilogo.png) no-repeat center top;
+    background:url(#{$imgUrlSv}/rassilogo.png) no-repeat center top;
     background-size:27px auto;
     font-size:20px;
     color:#7874F7;

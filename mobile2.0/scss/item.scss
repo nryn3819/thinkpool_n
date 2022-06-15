@@ -28,7 +28,7 @@
             font-weight:700;
             text-indent:5%;
             text-align:left;
-            background:url('../img/bu_itembox.png') no-repeat 95% 50%;
+            background:url('#{$imgUrlSv}/bu_itembox.png') no-repeat 95% 50%;
             background-size:12px auto;
 
             &:hover,&:focus,&:visited{

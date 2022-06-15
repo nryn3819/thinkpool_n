@@ -1,3 +1,5 @@
+@import 'variable.scss';
+
 .customerList{
     display:block;
     width:100%;
@@ -33,7 +35,7 @@
                     width:100%;
                     font-size:15px;
                     color:#000;
-                    background:url(../img/link-dct.jpg) no-repeat 100% 50%;
+                    background:url(#{$imgUrlSv}/link-dct.jpg) no-repeat 100% 50%;
                     background-size:6px auto;
                 }
             }

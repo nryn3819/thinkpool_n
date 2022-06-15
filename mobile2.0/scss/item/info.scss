@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .item-home-info{
     position:relative;
     display:flex;
@@ -58,7 +59,7 @@
         width:45px;
         height:37px;
         padding-top:24px;
-        background:url('../img/fav.png') no-repeat center top;
+        background:url('#{$imgUrlSv}/fav.png') no-repeat center top;
         background-size:20px auto;
         text-align:center;
 
@@ -68,7 +69,7 @@
         }
 
         &.active{
-            background:url('../img/favOn.png') no-repeat center top;
+            background:url('#{$imgUrlSv}/favOn.png') no-repeat center top;
             background-size:20px auto;
         }
     }

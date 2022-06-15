@@ -1,4 +1,4 @@
-
+@import '../variable.scss';
 //title
 .title{
     display:inline-block;
@@ -22,12 +22,12 @@
         padding-left:22px;
         //메인라씨
         &-rassi{
-            background:url(../img/bu_tit_rassi.png) no-repeat 0 50%;
+            background:url(#{$imgUrlSv}/bu_tit_rassi.png) no-repeat 0 50%;
             background-size: 15px 15px;
         }
         //메인 ai신호
         &-ai{
-            background:url(../img/bu_tit_ai.png) no-repeat 17px 50%;
+            background:url(#{$imgUrlSv}/bu_tit_ai.png) no-repeat 17px 50%;
             background-size: 15px 15px;
         }
     }

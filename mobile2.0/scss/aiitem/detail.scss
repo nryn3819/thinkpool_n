@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .item-dtl{
     display:block;
     padding:20px 0;
@@ -222,7 +223,7 @@
                         padding-right:15px;
                         color:#fff;
                         font-size:13px;
-                        background:url(../img/bu_rarw.png) no-repeat 100% 50%;
+                        background:url(#{$imgUrlSv}bu_rarw.png) no-repeat 100% 50%;
                         background-size:12px auto;
                     }
                 }
@@ -264,7 +265,7 @@
     position: relative;
     width:100%;
     padding:27px 0;
-    background:url(../img/bgTimeline.png) repeat-y 10px 0;
+    background:url(#{$imgUrlSv}bgTimeline.png) repeat-y 10px 0;
     
 
     .box{
@@ -276,7 +277,7 @@
             height:20px;
             line-height:20px;
             background-color: #fff;
-            background-image:url(../img/bu_timeline.png);
+            background-image:url(#{$imgUrlSv}bu_timeline.png);
             background-repeat: no-repeat;
             background-position: 0 50%;
             background-size:19px auto;

@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .board{
 
     .reading{
@@ -212,7 +213,7 @@
 
                 &.msg{
                     padding-left:15px;
-                    background:url(../img/bu_msg.png) no-repeat 0 50%;
+                    background:url(#{$imgUrlSv}/bu_msg.png) no-repeat 0 50%;
                     background-size:12px auto;
                 }
             }
@@ -232,12 +233,12 @@
                 border-radius: 5px;
                 font-size:14px;
                 padding:0 28px 0 13px;
-                background:url(../img/btn-fav.png) no-repeat 97px 50%;
+                background:url(#{$imgUrlSv}/btn-fav.png) no-repeat 97px 50%;
                 background-size:12px auto;
 
                 &.active{
                     border:1px solid #5368FF;
-                    background:url(../img/btn-fav-on.png) no-repeat 97px 50%;
+                    background:url(#{$imgUrlSv}/btn-fav-on.png) no-repeat 97px 50%;
                     background-size:12px auto;
                 }
             }
@@ -324,7 +325,7 @@
         font-size:13px;
         color:#999;
         padding-right:25px;
-        background:url(../img/bu-opn.png) no-repeat 100% 50%;
+        background:url(#{$imgUrlSv}/bu-opn.png) no-repeat 100% 50%;
         background-size:20px auto;
     }
 
@@ -514,7 +515,7 @@
 
             &.re{
                 padding-left:20px;
-                background:url(../img/bu-re-list.png) no-repeat 2px 16px;
+                background:url(#{$imgUrlSv}/bu-re-list.png) no-repeat 2px 16px;
                 background-size:10px auto;
             }
 

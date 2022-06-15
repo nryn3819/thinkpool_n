@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .topNavPf{
     padding:20px 0 20px 0;
     background:#F6F6F8;
@@ -17,7 +18,7 @@
     &.pftop{
         background:#36363E;
         strong{
-            background-image:url(../img/aipftop.png);
+            background-image:url(#{$imgUrlSv}/aipftop.png);
             background-repeat: no-repeat;
             background-size:68px auto;
             background-position:100% top;
@@ -33,7 +34,7 @@
         color:#fff;
         line-height:30px;
         font-weight:400;
-        background-image:url(../img/aivisualtop.png);
+        background-image:url(#{$imgUrlSv}/aivisualtop.png);
         background-position:100% 11px;
         background-repeat: no-repeat;
         background-size:108px auto;
@@ -70,7 +71,7 @@
             width:15px;
             height:10px;
             content:'';
-            background:url(../img/bu-modal-check.png) no-repeat 0 0;
+            background:url(#{$imgUrlSv}/bu-modal-check.png) no-repeat 0 0;
             background-size:12px auto;
             vertical-align: top;
             margin-top:7px;
@@ -135,7 +136,7 @@
     display:block;
     width:238px;
     min-height:347px;
-    background:url(../img/bghp.png) no-repeat 0 0;
+    background:url(#{$imgUrlSv}/bghp.png) no-repeat 0 0;
     background-size:100% 327px;
     margin:20px auto 0;
     padding:29px 8px 20px 12px;

@@ -1,3 +1,5 @@
+@import '../variable.scss';
+
 .rassi-visual{
     position:relative;
     width:100%;
@@ -170,7 +172,7 @@
                     width:17px;
                     height:20px;
                     content:' ';
-                    background:url(../img/bu-check.png) no-repeat 0 50%;
+                    background:url(#{$imgUrlSv}/bu-check.png) no-repeat 0 50%;
                     background-size:12px auto;
                     float:left;
                 }

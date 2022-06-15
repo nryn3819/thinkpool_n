@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .board{
     .list{
         display:block;
@@ -35,7 +36,7 @@
 
             &.re{
                 padding-left:40px;
-                background:url(../img/listRe.png) no-repeat 0 13px;
+                background:url(#{$imgUrlSv}/listRe.png) no-repeat 0 13px;
                 background-size:34px auto;
             }
 
@@ -155,12 +156,12 @@
                     border-bottom:1px solid #cacaca;
                     &.tp{
                         padding-left:25px;
-                        background:url(../img/bu_tp.png) no-repeat 0 50%;
+                        background:url(#{$imgUrlSv}/bu_tp.png) no-repeat 0 50%;
                         background-size:20px auto;
                     }
                     &.tg{
                         padding-left:17px;
-                        background:url(../img/bu_tg.png) no-repeat 0 50%;
+                        background:url(#{$imgUrlSv}/bu_tg.png) no-repeat 0 50%;
                         background-size:13px auto;
                     }
                 }

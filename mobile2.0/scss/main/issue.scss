@@ -1,4 +1,4 @@
-
+@import '../variable.scss';
 //issue
 .main-issue{
     nav{
@@ -220,7 +220,7 @@
             content:'ai';
             width:24px;
             height:24px;
-            background:url(../img/bu_tit_ai.png) no-repeat 0 50%;
+            background:url(#{$imgUrlSv}/bu_tit_ai.png) no-repeat 0 50%;
             background-size:16px auto;
             float:left;
             text-indent:-9999em;
@@ -230,7 +230,7 @@
             content:'ai';
             width:24px;
             height:24px;
-            background:url(../img/bu_tit_rassi.png) no-repeat 0 50%;
+            background:url(#{$imgUrlSv}/bu_tit_rassi.png) no-repeat 0 50%;
             background-size:16px auto;
             float:left;
             text-indent:-9999em;

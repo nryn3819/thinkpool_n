@@ -1,3 +1,4 @@
+@import '../variable.scss';
 .ainews{
     padding-bottom:20px; 
     
@@ -12,7 +13,7 @@
             width:14px;
             height:14px;
             border-radius: 3px;
-            background:url(../img/bu_ai.png) no-repeat 0 0;
+            background:url(#{$imgUrlSv}/bu_ai.png) no-repeat 0 0;
             background-size:14px auto;
             margin:3px 5px 0 0;
             float:left;
