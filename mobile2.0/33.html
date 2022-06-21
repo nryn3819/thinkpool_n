@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <script>
        const titClick = function(){
            window.scrollTo(0 , 0)
@@ -99,14 +102,10 @@
                     <h3 class="title">오늘의종목 Pick</h3>
 
                     <div class="item-pick rmt-10">
-                        <div id="aiitemcarosel" class="carousel slide pointer-event" data-bs-ride="carousel" data-bs-interval="8000">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#aiitemcarosel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
+                        <div id="aiitemcarosel" class="swiper">
+                            
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide active">
                                   <div class="card-item">
                                       <div class="name">
                                           <strong>삼성전자</strong>
@@ -134,7 +133,7 @@
                               </div>
                               <!-- // -->
 
-                              <div class="carousel-item">
+                              <div class="swiper-slide">
                                   <div class="card-item card-item-sv">
                                       <div class="txt">
                                         AI알고리즘이  매일아침 5종목을 추천합니다. <br>
@@ -147,7 +146,7 @@
                                   </div>
                               </div>
                               <!-- // -->
-                              <div class="carousel-item">
+                              <div class="swiper-slide">
                                   <div class="card-item card-item-ev">
                                       <div class="txt">
                                           <span>오픈이벤트</span>
@@ -161,9 +160,28 @@
                                   </div>
                               </div>
                               <!-- // -->
+
                             </div>
                             <!-- // -->
+
+                            <div class="swiper-pagination">
+                            </div>
                         </div>
+                        <script>
+                            var swiper = new Swiper("#aiitemcarosel", {
+                              spaceBetween: 30,
+                              loop: true,
+                              centeredSlides: true,
+                              autoplay: {
+                                delay: 6000,
+                                disableOnInteraction: false,
+                              },
+                              pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                              },
+                            });
+                          </script>
                     </div>
                 </section>
 
@@ -304,7 +322,9 @@
 
                 <section class="section">
                     <h3 class="visually-hidden">광고영역</h3>
-                    <a href="#bnr1"><img src="./img/demoBnr.png" alt="광고" class="img-fluid"></a>
+                    <div class="first-bnr-ad text-center rmt-0">
+                        <img src="./img/aibnr2.png" alt="오픈이벤트" class="img-fluid">
+                    </div>
                 </section>
 
                 <section class="section section-basic">
@@ -331,23 +351,39 @@
                         </div>
 
                         <div class="m-chart rmt-20">
-                            <div id="monthchart" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#monthchart" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
+                            <div id="monthchart" class="swiper">
+                                
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide active">
                                     <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1개월">
                                   </div>
-                                  <div class="carousel-item">
+                                  <div class="swiper-slide">
                                     <img src="./img/demo-m-chart.png" class="d-block w-100" alt="3개월">
                                   </div>
-                                  <div class="carousel-item">
+                                  <div class="swiper-slide">
                                     <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1년">
                                   </div>
                                 </div>
+
+                                <div class="swiper-pagination rmt-10">
+                                </div>
+
+                                <script>
+                                    var swiper = new Swiper("#monthchart", {
+                                      spaceBetween: 30,
+                                      loop: true,
+                                      centeredSlides: true,
+                                      autoplay: {
+                                        delay: 4000,
+                                        disableOnInteraction: false,
+                                      },
+                                      pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                      },
+                                    });
+                                  </script>
+
                               </div>
                         </div>
                         <!-- // -->

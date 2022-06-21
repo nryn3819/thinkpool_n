@@ -13,8 +13,8 @@
         justify-content: center;
 
         a.nav-link{
-            display:block;
-            width:90px;
+            display:inline-block;
+            min-width:90px;
             height:35px;
             line-height:33px;
             border:1px solid #d5d5d5;
@@ -22,7 +22,7 @@
             font-size:14px;
             color:#000;
             font-weight:400;
-            padding:0;
+            padding:0 8px;
             margin:0 4px;
             float:none;
             background:#fff;

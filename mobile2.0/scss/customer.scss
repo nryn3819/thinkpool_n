@@ -42,3 +42,19 @@
         }
     }
 }
+.customer-txt{
+    display:block;
+    width:100%;
+    font-size:16px;
+    line-height:24px;
+
+    p{
+        display:block;
+        width:100%;
+        margin-bottom:25px;
+
+        em{
+            border-bottom:1px solid #5368FF;
+        }
+    }
+}

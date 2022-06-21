@@ -1,7 +1,9 @@
 //table
 @import '../variable.scss';
 
-
+table tbody tr td a{
+    color:#000;
+}
 .table{
     &-custom{
         &-bordered{
@@ -59,6 +61,7 @@
                     th span.itemObj{
                         display:block;
                         width:100%;
+                        color:#000;
 
                         @media (max-width:320px) {
                             max-width:83px;
@@ -161,6 +164,7 @@
                         span.itemObj{
                             display:block;
                             width:100%;
+                            color:#000;
     
                             @include mini {
                                 max-width:83px;
@@ -353,7 +357,8 @@
                             line-height:19px;
                         }
                         .name{
-                            max-width:170px;
+                            max-width:166px;
+                            color:#000;
                         }
                     }
                 }

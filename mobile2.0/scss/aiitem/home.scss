@@ -1,5 +1,10 @@
 @import "../variable.scss";
 
+#aiitemcarosel{
+    .swiper-pagination{
+        margin-top:10px !important;
+    }
+}
 .card-item{
     position: relative;
     display:flex;
