@@ -1,0 +1,106 @@
+//공통
+@import '../variable.scss';
+.board{
+    display:block;
+    width:100%;
+    overflow:hidden;
+
+    &-top{
+        padding:0 17px;
+        width:100%;
+        float:left;
+
+        &>span{
+            display:block;
+            height:33px;
+            line-height:33px;
+            font-size:15px;
+            padding-left:10px;
+        }
+
+        .btn-group{
+            float:left;
+
+            &.end{
+                &>button{
+                    border-left:1px solid #d5d5d5;
+                    border-radius: 5px;
+                }
+            }
+
+            button{
+                height:33px;
+                line-height:31px;
+                border:1px solid #d5d5d5;
+                padding: 0 10px 0 15px;
+                font-size:14px;
+                float:left;
+                border-radius: 0 5px 5px 0;
+                border-left:0;
+            }
+
+            ul{
+                padding:0.5rem;
+                border-radius: 0;
+
+                background:#f5f5f5;
+                li{
+                    button{
+                        border:0;
+                        background:none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-btm{
+        width:100%;
+        padding:0 17px;
+        overflow:hidden;
+        float:left;
+
+        &>span{
+            display:block;
+            height:33px;
+            line-height:33px;
+            font-size:13px;
+            color:#999;
+        }
+    }
+
+    &-sch{
+        display:flex;
+        justify-content: flex-start;
+        padding:0 34px;
+        width:100%;
+        float:left;
+
+        .form-select{
+            width:auto;
+            border-radius: 0.25em 0 0 0.25em;
+        }
+
+        .input-group{
+            width:calc(100% - 80px);
+
+            input.form-control{
+                border-radius: 0 0.25em 0.25em 0;
+                margin-left:-1px;
+            }
+
+            button{
+                border:1px solid #ced4da !important;
+                padding-right:.8em !important;
+            }
+        }
+    }
+
+    
+    
+}
+
+@import './list.scss'; //리스트
+@import './view.scss'; //읽기
+@import './write.scss'; //쓰기

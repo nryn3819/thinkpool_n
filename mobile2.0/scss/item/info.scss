@@ -1,0 +1,76 @@
+@import '../variable.scss';
+.item-home-info{
+    position:relative;
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+    width:100%;
+    padding:20px 17px;
+    min-height:120px;
+    background:#f6f6f8;
+    
+
+    .date{
+        width:100%;
+        height:15px;
+        line-height:15px;
+        font-size:13px;
+        color:#999;
+    }
+    .pnp{
+        width:100%;
+        .price{
+            font-size:30px;
+            color:#000;
+            font-weight:700;
+        }
+        .per{
+            font-size:13px;
+            font-weight:700;
+        }
+    }
+    .tag{
+        width:100%;
+        min-height:15px;
+        line-height:15px;
+
+        a{
+            color:#000;
+            font-size:13px;
+        }
+        span{
+            font-size:13px;
+            color:#999;
+            margin-left:18px;
+
+            &::before{
+                font-size:13px;
+                content:'#';
+                font-weight:300;
+                color:#5368FF;
+                padding-right:2px;
+            }
+        }
+    }
+    .fav{
+        position:absolute;
+        top:24px;
+        right:17px;
+        width:45px;
+        height:37px;
+        padding-top:24px;
+        background:url('#{$imgUrlSv}/fav.png') no-repeat center top;
+        background-size:20px auto;
+        text-align:center;
+
+        span{
+            font-size:11px;
+            color:#999;
+        }
+
+        &.active{
+            background:url('#{$imgUrlSv}/favOn.png') no-repeat center top;
+            background-size:20px auto;
+        }
+    }
+}

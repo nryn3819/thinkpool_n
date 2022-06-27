@@ -1,0 +1,48 @@
+@import '../variable.scss';
+.pprn{
+    height:70px;
+    border-radius:5px;
+    background:#F5F5F9;
+    padding:0 18px;
+
+    &.ct-range{
+        position:relative;
+        height:64px;
+
+        input[type="range"]{
+            margin-top:5px;
+        }
+        label{
+            font-weight:700;
+        }
+        .min{
+            position:absolute;
+            top:28px;
+            left:18px;
+            font-size:11px;
+            color:#999;
+            font-weight:300;
+        }
+        .max{
+            position:absolute;
+            top:28px;
+            right:18px;
+            font-size:11px;
+            color:#999;
+            font-weight:300;
+        }
+    }
+
+    input[type="range"]{
+        margin-top:10px;
+        width:100%;
+        float:left;
+    }
+    label{
+        height:15px;
+        line-height:15px;
+        margin:0 !important;
+        font-size:13px;
+        color:#000;
+    }
+}

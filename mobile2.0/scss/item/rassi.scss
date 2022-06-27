@@ -1,0 +1,192 @@
+@import '../variable.scss';
+.rassi{
+    //today
+    &-today{
+        position:relative;
+        display:flex;
+        width:100%;
+        flex-wrap:nowrap;
+        justify-content: flex-start;
+
+
+        //state
+        .state{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;
+            margin-left:13px;
+
+            width:51px;
+            height:51px;
+            background:#7773F7;
+            border-radius: 51px;
+
+            em{
+                display:block;
+                height:18px;
+                line-height:18px;
+                margin-top:-5px;
+            }
+
+            span{
+                display:block;
+                height:15px;
+                line-height:15px;
+                font-size:13px;
+                color:#fff;
+                font-weight:700;
+                letter-spacing: -0.075em;
+                margin-top:-15px;
+            }
+            
+        }
+
+        //info
+        .info{
+            display:block;
+            padding-left:35px;
+
+            dl{
+                dt{
+                    display:block;
+                    min-height:22px;
+                    line-height:22px;
+                    float:left;
+                    clear:left;
+                    font-size:15px;
+                    color:#000;
+                    margin:0;
+                    padding:0 5px 0 0 ;
+                    font-weight:400;
+
+                }
+                dd{
+                    display:block;
+                    min-height:22px;
+                    line-height:22px;
+                    float:left;
+                    font-size:15px;
+                    color:#000;
+                    margin:0;
+                    padding:0;
+
+                    span{
+                        font-weight:700;
+
+                        &.date{
+                            color:#999;
+                            font-weight:400;
+                        }
+                    }
+                }
+            }
+        }
+
+        //alarm
+
+        .alarm{
+            position:absolute;
+            top:57px;
+            left:0;
+
+            button{
+                width:80px;
+                height:28px;
+                line-height:28px;
+                border:1px solid #5368FF;
+                border-radius: 5px;
+                text-align:center;
+                font-size:14px;
+                color:#5368FF;
+                font-weight:700;
+                background:#fff;
+                box-sizing: content-box;
+                padding:0;
+                margin:0;
+            }
+        }
+    }
+
+    //blind
+    &-blind{
+        position:relative;
+
+        .guide{
+            position:absolute;
+            display:flex;
+            top:73px;
+            left:0;
+            width:100%;
+            flex-wrap: wrap;
+            text-align:center;
+            justify-content: center;
+
+            span{
+                display:block;
+                width:100%;
+                font-size:16px;
+                color:#fff;
+                line-height:19px;
+            }
+            button{
+                margin-top:20px;
+                height:39px;
+                padding:0 17px;
+
+                font-size:16px;
+                color:#fff;
+                border-radius: 39px;
+                background:#5567FD;
+                border:0;
+            }
+        }
+    }
+}
+
+.pf-info{
+    overflow:hidden;
+
+    dl{
+        border-top:1px solid #cacaca;
+
+        dt{
+            display:block;
+            width:23%;
+            height:41px;
+            line-height:41px;
+            border-bottom:1px solid #cacaca;
+            font-size:13px;
+            color:#000;
+            font-weight:400;
+            float:left;
+            padding:0 0 0 10px;
+            margin:0;
+        }
+        dd{
+            display:block;
+            width:27%;
+            height:41px;
+            line-height:41px;
+            border-bottom:1px solid #cacaca;
+            float:left;
+            padding:0 10px 0 0;
+            color:#000;
+            text-align:right;
+            margin:0;
+
+            span{
+                font-size:13px;
+                font-weight:700;
+            }
+
+            &.br{
+                border-right:1px solid #cacaca;
+            }
+        }
+    }
+}
+
+.rassi-section{
+    padding:0 17px;
+}

@@ -1,0 +1,60 @@
+@import 'variable.scss';
+
+.customerList{
+    display:block;
+    width:100%;
+    padding:25px 10px;
+
+    &>div{
+
+        strong{
+            display:block;
+            width:100%;
+            font-size:16px;
+            color:#000;
+            font-weight:700;
+        }
+
+        ul{
+            display:block;
+            width:100%;
+            padding:0;
+            list-style: none;
+            margin-top:18px;
+            border-top:1px solid #000;
+
+            li{
+                list-style: none;
+                height:50px;
+                line-height:50px;
+                border-bottom:1px solid #d6d6d6;
+                padding:0 5px;
+                
+                a{
+                    display:block;
+                    width:100%;
+                    font-size:15px;
+                    color:#000;
+                    background:url(#{$imgUrlSv}/link-dct.jpg) no-repeat 100% 50%;
+                    background-size:6px auto;
+                }
+            }
+        }
+    }
+}
+.customer-txt{
+    display:block;
+    width:100%;
+    font-size:16px;
+    line-height:24px;
+
+    p{
+        display:block;
+        width:100%;
+        margin-bottom:25px;
+
+        em{
+            border-bottom:1px solid #5368FF;
+        }
+    }
+}
