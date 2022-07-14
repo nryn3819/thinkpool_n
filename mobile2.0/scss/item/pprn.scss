@@ -7,7 +7,8 @@
 
     &.ct-range{
         position:relative;
-        height:64px;
+        height:90px;
+        padding-top:25px;
 
         input[type="range"]{
             margin-top:5px;
@@ -17,19 +18,20 @@
         }
         .min{
             position:absolute;
-            top:28px;
-            left:18px;
+            top:52px;
+            left:38px;
             font-size:11px;
             color:#999;
             font-weight:300;
         }
         .max{
             position:absolute;
-            top:28px;
-            right:18px;
+            top:52px;
+            right:38px;
             font-size:11px;
             color:#999;
             font-weight:300;
+            text-align: right;
         }
     }
 
@@ -39,8 +41,11 @@
         float:left;
     }
     label{
+        position: absolute;
+        top:8px;
         height:15px;
         line-height:15px;
+        display:inline-block;
         margin:0 !important;
         font-size:13px;
         color:#000;

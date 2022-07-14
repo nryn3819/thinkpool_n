@@ -3,12 +3,12 @@
 
     height:20px;
     line-height:18px !important;
-    width:60px;
+    min-width:60px;
     text-align:center;
     font-size:13px !important;
     border-radius: 5px !important;
     background:#fff;
-    padding:0 !important;
+    padding:0 7px !important;
     font-weight:400 !important;
 
     &.bg-custom{

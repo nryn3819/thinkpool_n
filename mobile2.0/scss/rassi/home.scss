@@ -203,7 +203,7 @@
             width:calc(100% - 175px);
             color:#000;
             padding-left:10px;
-            font-weight:700;
+            //font-weight:700;
         }
         .info{
             display:block;
@@ -222,11 +222,11 @@
                 display:block;
                 height:24px;
                 line-height:24px;
-                font-size:12px;
+                font-size:14px;
                 color:#000;
 
                 em{
-                    font-size:15px;
+                    font-size:16px;
                     font-weight:700;
                 }
             }
