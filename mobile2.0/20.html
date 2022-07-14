@@ -660,8 +660,27 @@
                                 <!-- //최신소식 -->
 
                                 <div id="" class="pprn rmt-20 ct-range">
-                                    <input type="range" class="form-range" min="200000" max="413500" step="10000" id="range02" width="100%" value="300500" disabled>
-                                    <label for="range02" class="form-label d-block text-center">300,500 <span class="up">+1.2%</span></label>
+                                    <input type="range" class="form-range" min="200000" max="413500" step="10000" id="range02" width="100%" value="313500" disabled>
+                                    <label for="range02" class="form-label ct-label">300,500 <span class="up">+1.2%</span></label>
+
+                                    <script>
+                                        // 정확한 모습은 collapse 부분에 show 를 넣어서 박스를 오픈 상태로 보면 나옵니다. 
+                                        // 스크립트 사용시 오픈상태와 비오픈상태에서 값이 달라집니다. 
+
+                                        const ctBullet = document.getElementById('range02'); // input 아이디값 가져오기
+                                        const ctLabel = document.querySelector('.ct-label'); // 현재가 가져오기
+                                        const ctBulletWidth = document.body.offsetWidth - 102; // input 길이값
+                                        const labelPosition = (ctBulletWidth / (ctBullet.max - ctBullet.min)); // value 값 1 을 px로 환산
+                                        const labelLeft = Math.floor(labelPosition * (ctBullet.value - ctBullet.min)) ; // value 값을 px로 환산
+
+                                        if(labelLeft < document.querySelector('.ct-label').offsetWidth){ // 환산값이 현재가의 width 값 보다 작을경우 left 고정
+                                            ctLabel.style.left = '18px';
+                                        }else if(labelLeft > ctBulletWidth - document.querySelector('.ct-label').offsetWidth){ // 환산값이 (총 길이 - 현재가의 width) 보다 큰경우 right 고정
+                                            ctLabel.style.right = '18px';
+                                        }else{ // 나머지 위치 
+                                            ctLabel.style.left = labelLeft - (document.querySelector('.ct-label').offsetWidth/2) + 'px'; 
+                                        }
+                                    </script>
 
                                     <span class="min">
                                         200,000 <br>
@@ -1387,7 +1406,7 @@
                                         </div>
                                         <div class="tab-pane active" id="chart0602" role="tabpanel" aria-labelledby="최신">
                                             <ul class="list-group">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#reportModal">
                                                     <span class="d-block text-truncate txt">[투데이리포트]삼성전자, “3분기 잠정 삼성전자, “3분기 잠정 삼성전자, “3분기 잠정</span>
                                                     <span class="d-block text-truncate corp">흥국생명</span>
                                                     <span class="d-block text-truncate date">14:35</span>
@@ -1431,6 +1450,60 @@
                             </div>
                         </div>
                         <!-- // -->
+
+                        <div class="modal fade custom-modal1" id="reportModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <!-- //header -->
+                                    
+                                    <div class="modal-body">
+                                        <div class="modal-title" id="">
+                                            <h5 class="rmTitle text-truncate">[삼성전자] 탐방노트: <br> 편견의 거미줄을 벗어나</h5>
+        
+                                            <div class="rmInfo">
+                                                <span>하나금융투자</span>
+                                                <span>2020-09-02</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+        
+                                        <div class="rmCont">
+        
+                                            <div class="sgn">
+                                                <span>목표가 : 89,000원</span>
+                                                <span>투자의견 : BUY</span>
+                                            </div>
+                                            <!-- // -->
+        
+                                            <div class="text">
+        반도체, 디스플레이, 
+        태양전지용 증착장비 공급사 주성엔지니어링은 
+        2016년부터 2018년까지 
+        2천억 원 후반 수준의 매출(2016년 2,680억 원, 
+        2017년 2,727억 원, 2018년 2,630억 원)을 
+        이어가다가 2019년과 2020년에 각각 2,546억 원,
+        1,186억 원으로 매출 감소세를 보이며 
+        외국인 투자자들의 관심권에서 벗어났다. 
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+        
+                                        <div class="shorcutBtn d-grid gap-2 rmt-20">
+                                            <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                        </div>
+                                    </div>
+                                    <!-- //body -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- //리포트 모달 -->
                     </div>
                     <!-- //리포트분석 -->
 
@@ -1520,7 +1593,7 @@
                                                 <!-- // -->
                                                 <img src="./img/dvmchart.png" alt="" class="img-fluid rmt-20">
 
-                                                <div class="ab-btn rmt-20">
+                                                <div class="ab-btn doc rmt-20">
                                                     <button type="button">지표상세&nbsp;&nbsp;〉</button>
                                                 </div>
                                             </div>
