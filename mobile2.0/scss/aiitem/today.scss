@@ -1,8 +1,8 @@
 @import '../variable.scss';
 .itemView{
     display:block;
-    border-top:1px solid #cacaca;
-    padding:20px 0;
+    border-bottom:1px solid #cacaca;
+    padding:20px 0 10px 0;
 
     &:first-child{
         border-top:0;
@@ -75,6 +75,9 @@
             color:#000;
             padding-top:5px;
         }
+    }
+    .shorcutBtn{
+        margin-bottom:10px;
     }
 
 }
