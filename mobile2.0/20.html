@@ -645,7 +645,7 @@
                                 차트분석
                             </button>
                         </p>
-                        <div class="collapse" id="box02">
+                        <div class="collapse show" id="box02">
                             <div class="card card-body">
 
 
@@ -669,7 +669,7 @@
 
                                         const ctBullet = document.getElementById('range02'); // input 아이디값 가져오기
                                         const ctLabel = document.querySelector('.ct-label'); // 현재가 가져오기
-                                        const ctBulletWidth = document.body.offsetWidth - 102; // input 길이값
+                                        const ctBulletWidth = document.querySelector('#wrap').offsetWidth - 102; // input 길이값
                                         const labelPosition = (ctBulletWidth / (ctBullet.max - ctBullet.min)); // value 값 1 을 px로 환산
                                         const labelLeft = Math.floor(labelPosition * (ctBullet.value - ctBullet.min)) ; // value 값을 px로 환산
 
