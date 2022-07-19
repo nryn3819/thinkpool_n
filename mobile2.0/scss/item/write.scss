@@ -84,9 +84,9 @@
                 border-top:2px solid #999;
                 border-right:2px solid #999;
                 display:inline-block;
-                transform: rotate(135deg);
+                transform: rotate(315deg);
                 position:absolute;
-                top:13px;
+                top:15px;
                 left:50%;
                 margin-left:75px;
             }
@@ -96,11 +96,11 @@
                 height:8px;
                 border-top:2px solid #999;
                 border-right:2px solid #999;
+                transform: rotate(135deg);
                 display:inline-block;
-                transform: rotate(315deg);
                 transition: 0.15s;
                 position:absolute;
-                top:15px;
+                top:13px;
                 left:50%;
                 margin-left:75px;
             }

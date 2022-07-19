@@ -51,12 +51,59 @@
                         </div>
 
                         <div class="board-btm">
-                            <input type="file" id="imgfile">
-                            <label for="imgfile" class="btn btn-custom-board image float-start">이미지 첨부</label>
+                            <input type="file" id="file-input" accept='image/gif, image/jpeg, image/png' multiple>
+                            <label for="file-input" class="btn btn-custom-board image float-start">이미지 첨부</label>
                             <button class="btn btn-custom-board write float-end">글쓰기</button>
                         </div>
+                        <div id="preview"></div>
+                        <script>
 
-                        <div class="write-guide rmt-30">
+                            const handler = {
+                                init() {
+                                    const fileInput = document.querySelector('#file-input');
+                                    const preview = document.querySelector('#preview');
+                                    fileInput.addEventListener('change', () => {  
+                                        console.dir(fileInput)                  
+                                        const files = Array.from(fileInput.files)
+                                        files.forEach(file => {
+                                            preview.innerHTML += `
+                                            <p id="${file.lastModified}">
+                                                <span>${file.name}</span>
+                                                <button data-index='${file.lastModified}' class='file-remove'>&times;</button>
+                                            </p>`;
+                                            });
+                                        });
+                                    },
+                            
+                                    removeFile: () => {
+                                        document.addEventListener('click', (e) => {
+                                            if(e.target.className !== 'file-remove') return;
+                                            const removeTargetId = e.target.dataset.index;
+                                            const removeTarget = document.getElementById(removeTargetId);
+                                            const files = document.querySelector('#file-input').files;
+                                            const dataTranster = new DataTransfer();
+                                
+                                            // document.querySelector('#file-input').files =
+                                            // Array.from(files).filter(file => file.lastModified !== removeTarget);
+
+                                            Array.from(files)
+                                            .filter(file => file.lastModified != removeTargetId)
+                                            .forEach(file => {
+                                                dataTranster.items.add(file);
+                                            });
+
+                                            document.querySelector('#file-input').files = dataTranster.files;
+
+                                            removeTarget.remove();
+                                        })
+                                    }
+                                }
+
+                                handler.init()
+                                handler.removeFile()
+                        </script>
+
+                        <div class="write-guide rmt-15">
                             <strong>이미지 첨부 안내</strong>
                             <span class="rmt-5">1. 용량은 이미지당 5MB 이하 제한입니다. </span>
                             <span>2. 첨부 가능한 이미지 개수는 5개 입니다. </span>
