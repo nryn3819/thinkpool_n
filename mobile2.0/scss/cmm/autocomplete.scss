@@ -33,3 +33,21 @@
         }
     }
 }
+
+#autoComplete_list_2{
+    background:#fff;
+    list-style:none;
+    left:0 !important;
+    width: 100% !important;
+    max-width:720px;
+    margin:0 auto;
+    padding:15px 25px !important;
+    min-height:200px;
+    border-bottom:1px solid #f5f5f5;
+
+    li > .ui-menu-item-wrapper{
+        background:none;
+        color:#5367ff;
+        font-weight:700;
+    }
+}

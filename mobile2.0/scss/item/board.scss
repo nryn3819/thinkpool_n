@@ -56,6 +56,7 @@
     }
 
     &-btm{
+        position:relative;
         width:100%;
         padding:0 17px;
         overflow:hidden;
@@ -67,6 +68,15 @@
             line-height:33px;
             font-size:13px;
             color:#999;
+        }
+
+        input[type="file"]{
+            position:absolute;
+            top:0;
+            left:-9999em;
+        }
+        label.image{
+            line-height:31px;
         }
     }
 
