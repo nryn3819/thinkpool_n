@@ -99,6 +99,20 @@
             color:#fff;
             vertical-align: middle;
 
+            &.active{
+                border:1px solid #5368FF;
+                line-height:34px;
+                color:#5368FF;
+                background:#fff;
+                padding:0 12px;
+
+                .on{display:none;}
+                .off{display:inline-block;}
+            }
+
+            .on{display:inline-block;}
+            .off{display:none;}
+
             img{
                 float:left;
                 margin:10px 5px 0 0;

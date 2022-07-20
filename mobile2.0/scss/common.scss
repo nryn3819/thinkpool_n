@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 //변수
 @import 'variable.scss';
 
@@ -184,6 +185,10 @@ button, input, select{
 
 input::placeholder{
     color:#999 !important;
+}
+
+.brd-top-8{
+    border-top:8px solid #f6f6f7;
 }
 
 // 레이아웃
