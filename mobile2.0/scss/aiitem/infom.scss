@@ -123,6 +123,12 @@
         }
     }
 }
+.section > .first-bnr-ad,.section-inline-ad .first-bnr-ad{
+    padding-bottom:0;
+}
+.section.noPadding .first-bnr-ad{
+    padding-bottom:15px;
+}
 
 .first-bnr-ad{
     margin:0 auto;

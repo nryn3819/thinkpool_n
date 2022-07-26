@@ -224,6 +224,13 @@
     }
 }
 
+.bglogo{
+    position:absolute;
+    top:15px;
+    left:50px;
+    //background:#fff;
+}
+
 
 @import './item/info.scss';  //종목정보
 @import './item/navi.scss'; //종목홈 메뉴

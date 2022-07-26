@@ -6,11 +6,12 @@
     
 
     .list{
-        display:flex;
+        display:block;
         width:100%;
-        justify-content: flex-start;
+        //justify-content: flex-start;
         padding:13px 0;
         border-bottom:1px solid #e2e2e2;
+        overflow:hidden;
 
         &:first-child{
             border-top:1px solid #e2e2e2;
@@ -30,6 +31,7 @@
         display:block;
         width:36px;
         padding-left:5px;
+        float:left;
         
         img{
             float:left;
@@ -53,7 +55,8 @@
     }
     .item{
         display:block;
-        width:calc(100% - 186px);
+        width:calc(100% - 190px);
+        float:left;
 
         .name{
             line-height:18px;
@@ -72,11 +75,14 @@
     }
     .button{
         display:block;
-        width:150px;
-        padding-top:3px;
+        //width:150px;
+        padding:3px 2px 0 2px;
+        float:Right;
+        text-align:right;
+
 
         .cdn{
-            display:block;
+            display:inline-block;
             width:43px;
             height:24px;
             line-height:24px;
@@ -103,7 +109,7 @@
 
         .listicon{
             position: relative;
-            display:block;
+            display:inline-block;
             float:left;
             border:1px solid #cacaca;
             border-radius: 5px;

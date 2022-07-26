@@ -49,5 +49,17 @@
     a{
         float:right;
         color:#000;
+        &::after{
+            display:block;
+            content:'';
+            width:7px;
+            height:7px;
+            border-top:1px solid #000;
+            border-right:1px solid #000;
+            float:right;
+            transform:rotate(45deg);
+            margin-top:8px;
+            //margin-left:3px;
+        }
     }
 }

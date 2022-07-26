@@ -13,11 +13,16 @@
 
     
     .nav{
-        height:17px;
-        justify-content: space-between;
-        align-items: center;
+        width:100%;
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space: nowrap;
+        flex-wrap:nowrap;
     }
     .nav-item{
+        display:block;
+        float:left;
+        margin-right:10px;
 
         .nav-link{
             font-size:15px;
@@ -38,6 +43,7 @@
             padding:0;
             font-size:15px;
             color:#9BA3C6;
+            float:left;
 
             &::before{
                 content:'|';

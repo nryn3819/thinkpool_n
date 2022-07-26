@@ -132,7 +132,8 @@
 
                         .badge{
                             padding:0 !important;
-                            width:18px;
+                            //width:18px;
+                            min-width:18px !important;
                             height:18px;
                             border-radius: 18px !important;
                             background:#FF414F;

@@ -25,6 +25,10 @@
                 background:#f8f8f8;
                 border-radius: 5px;
 
+                &>img{
+                    height:61px;
+                }
+
                 .play{
                     position: absolute;
                     top:50%;
