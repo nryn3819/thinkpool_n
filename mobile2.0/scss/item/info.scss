@@ -33,10 +33,15 @@
         width:100%;
         min-height:15px;
         line-height:15px;
+        padding-top:5px;
 
         a{
             color:#000;
             font-size:13px;
+
+            &:first-child{
+                border-bottom:1px solid #000;
+            }
         }
         span{
             font-size:13px;

@@ -131,6 +131,22 @@
 }
 
 .board{
+    &-tbl{
+        .list-group-news{
+            
+            padding:0 !important;
+            overflow:hidden !important;
+
+            div{
+                &::before{
+                    padding-right:0 !important;
+                }
+                span{
+                    float:right !important;
+                }
+            }
+        }
+    }
     .list{
         &-news{
             .list-group{

@@ -15,7 +15,7 @@
             flex-wrap:wrap;
             justify-content: center;
             align-items:center;
-            margin-left:13px;
+            margin-left:33px;
 
             width:51px;
             height:51px;
@@ -47,7 +47,7 @@
         //info
         .info{
             display:block;
-            padding-left:35px;
+            padding-left:55px;
 
             dl{
                 dt{
@@ -83,6 +83,23 @@
                     }
                 }
             }
+
+            .empty{
+                display: flex;
+                width:100%;
+                height:88px;
+                align-items: center;
+                align-content: center;
+
+                p{
+                    display:block;
+                    padding: 0;
+                    margin:0;
+                    font-size:16px;
+                    color:#999;
+                    line-height:24px;
+                }
+            }
         }
 
         //alarm
@@ -90,7 +107,7 @@
         .alarm{
             position:absolute;
             top:57px;
-            left:0;
+            left:20px;
 
             button{
                 width:80px;

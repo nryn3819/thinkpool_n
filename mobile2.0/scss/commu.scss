@@ -2,4 +2,14 @@
     display:block;
     width:100%;
     padding:0 17px;
+
+    div{
+        .table-custom-borderless{
+            thead, tbody{
+                tr th, tr td{
+                    padding:0.5em !important;
+                }
+            }
+        }
+    }
 }
