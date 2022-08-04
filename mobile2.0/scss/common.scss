@@ -191,6 +191,9 @@ input::placeholder{
 .brd-top-8{
     border-top:8px solid #f6f6f7;
 }
+.position-fixed{
+    z-index:1000;
+}
 
 // 레이아웃
 @import 'layout.scss'; //레이아웃

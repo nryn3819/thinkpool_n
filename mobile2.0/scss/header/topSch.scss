@@ -17,13 +17,16 @@
         width:calc(100% - 40px);
         height:20px;
         border:0;
-        font-size:16px;
-        padding:0 10px;
+        font-size:15px;
+        padding:0 10px 0 40px;
         background:none;
 
         &:active, &:focus{
             outline:0 !important;
             border:0 !important;
+        }
+        &::placeholder{
+            color:#cacaca;
         }
     }
 }

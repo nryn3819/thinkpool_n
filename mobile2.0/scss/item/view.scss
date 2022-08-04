@@ -119,6 +119,11 @@
             }
         }
 
+        a{
+            word-break: break-all;
+            white-space: normal;
+        }
+
         .viewContentBtn{
             display:block;
             width:100%;
@@ -342,7 +347,7 @@
     height:40px;
     line-height:40px;
     padding:0 15px;
-    margin:10px 0 0;
+    margin:25px 0 0;
     justify-content: space-between;
     align-content: center;
 

@@ -260,42 +260,52 @@
         }
     }
     .m-per{
-        display:block;
+        display:flex;
+        justify-content: space-between;
         float:left;
         width:100%;
 
         div{
             display:block;
-            width:33%;
+            width:98px;
             float:left;
             //padding:0 5px;
             text-align:center;
 
-            strong{
-                display:block;
-                font-size:23px;
-                font-weight:700;
-                height:25px;
-                line-height:25px;
-
-                @include mini{
-                    font-size:18px;
-                }
-            }
             span{
                 font-size:13px;
                 color:#999;
-                font-weight:400;
                 display:block;
-                margin-top:15px;
-                
-                @include mini{
-                    font-size:11px;
+                width:100%;
+                float:left;
+            }
+
+            strong{
+                display:block;
+                width:100%;
+                font-size:23px;
+                font-weight:700;
+                float:left;
+            }
+
+            .box{
+                display:inline-block;
+                width:98px;
+                background:#f6f6f7;
+                border-radius: 5px;
+                padding:5px 0;
+                float:none;
+                margin-top:5px;
+
+                span{
+                    font-size:13px;
+                    color:#000;
                 }
             }
 
             &:nth-child(2n){
-                width:34%;
+                width:122px;
+                padding:0 12px;
                 border-left:1px solid #d6d6d6;
                 border-right:1px solid #d6d6d6;
             }

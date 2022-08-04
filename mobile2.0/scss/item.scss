@@ -66,6 +66,10 @@
                 span{
                     display:block;
 
+                    &.txt{
+                        width:calc(100% - 100px);
+                    }
+
                     &.date{
                         text-align:right;
                         min-width:40px;

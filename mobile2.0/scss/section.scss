@@ -6,6 +6,13 @@
     background: #fff;
     border:0 !important;
 
+    .empty{
+        font-size:14px;
+        color:#999;
+        padding:25px 0;
+        text-align:center;
+    }
+
     &-basic {
         padding: 22px 17px;
     }

@@ -24,10 +24,12 @@
             margin-right:0;
         }
 
-        &.active{
+        &.active, &:hover{
             font-weight:700;
             border-bottom:2px solid #000;
+            color:#000;
         }
+        
     }
 }
 

@@ -23,42 +23,6 @@
             &:first-child{
                 padding-left:48px;
             }
-
-
-            @at-root .cls{
-                background-size:38px auto !important;
-
-                &-01{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -345px;
-                }
-                &-02{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -307px;
-                }
-                &-03{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -268px;
-                }
-                &-04{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -239px;
-                }
-                &-05{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -201px;
-                }
-                &-06{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -153px;
-                }
-                &-07{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -115px;
-                }
-                &-08{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -77px;
-                }
-                &-09{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 -38px;
-                }
-                &-10{
-                    background:url(#{$imgUrlSv}/cls.png) no-repeat 0 0;
-                }
-            }
         }
     }
 }
@@ -154,7 +118,7 @@
         &>div{
             display:flex;
             width:100%;
-            justify-content: space-between;
+            justify-content:flex-start;
             flex-wrap: wrap;
             padding-top:10px;
 
@@ -164,7 +128,7 @@
                 color:#5568FD;
                 line-height:17px;
                 border-bottom:1px solid #5568FD;
-                margin:4px 0 5px 0;
+                margin:4px 10px 5px 0;
             }
         }
     }
