@@ -1,1 +1,147 @@
-.ainews{padding-bottom:20px}.ainews-guide{padding:0 17px;font-size:13px;color:#999}.ainews-guide::before{display:inline-block;content:'';width:14px;height:14px;border-radius:3px;background:url(https://img.thinkpool.com/www/mobile/img/bu_ai.png) no-repeat 0 0;background-size:14px auto;margin:3px 5px 0 0;float:left}.ainews .list{display:block;padding:0 0 0;margin:0 17px;border-top:1px solid #e2e2e2;overflow:hidden}.ainews .list-inline-ad{margin:15px 0 0 0;padding:0;border-top:0}.ainews .list .list-show{display:block;padding:15px 0}.ainews .list .list-show .obj{height:18px;line-height:18px;color:#000}.ainews .list .list-show .date{font-size:13px;color:#999;padding-top:5px}.ainews .list .list-summary .card{background:#f6f6f8;border:0;border-top:1px solid #e2e2e2;padding:20px 15px}.ainews .list .list-summary .card .title{font-size:16px;color:#5388ff;font-weight:700;padding:0}.ainews .list .list-summary .card .txt{line-height:21px;font-size:15px;color:#000}.ainews .list .list-summary .card .txt span{display:block;min-height:21px;line-height:21px;padding-bottom:5px}.ainews .list .list-summary .card .txt span:first-child{padding-top:10px}.ainews .list .list-summary .card .date{padding-top:5px;color:#999;font-size:13px}
+.mytag {
+  display: block;
+  width: 100%;
+  background: #F2F3F7;
+  padding: 15px 0;
+}
+.mytag .anmtag {
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+  margin-top: 15px;
+  color: #999;
+  font-size: 15px;
+}
+.mytag .anmtag span {
+  font-size: 15px;
+  color: #999;
+}
+.mytag .anmtag span.mtag {
+  color: #000;
+}
+.mytag .anmtag span.mtag::before {
+  content: "#";
+}
+.mytag .anmtag span.add {
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+}
+.mytag .anmtag span.add em {
+  color: #5368FF;
+  border-bottom: 1px solid #5368FF;
+}
+.mytag .anmtag span.add::after {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  content: "";
+  background: url(https://img.thinkpool.com/www/mobile/img/tag-add.png) no-repeat 0 50%;
+  background-size: 18px auto;
+  width: 20px;
+  height: 20px;
+}
+.mytag .anmtag span.rmv {
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+}
+.mytag .anmtag span.rmv em {
+  color: #5368FF;
+  border-bottom: 1px solid #5368FF;
+}
+.mytag .anmtag span.rmv::after {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  content: "";
+  background: url(https://img.thinkpool.com/www/mobile/img/tag-rmv.png) no-repeat 0 50%;
+  background-size: 18px auto;
+  width: 20px;
+  height: 20px;
+}
+.mytag.page {
+  padding: 25px 0;
+}
+.mytag .list {
+  display: flex;
+  width: 100%;
+  padding: 0 17px;
+  justify-content: space-between;
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.mytag .list .my {
+  display: inline-block;
+  min-width: 85px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 5px;
+  background: #3D4565;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin-right: 5px;
+}
+.mytag .list .empty {
+  display: inline-block;
+  min-width: calc(100% - 95px);
+  height: 33px;
+  line-height: 31px;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  color: #999;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+.mytag .list button {
+  display: inline-block;
+  height: 33px;
+  line-height: 31px;
+  padding: 0 13px;
+  border: 1px solid #5368FF;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #5368FF;
+  margin: 0 5px;
+  background: #fff;
+}
+.mytag .list button:last-child {
+  margin-right: 0;
+}
+
+.board-tbl .list-group-news {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.board-tbl .list-group-news div::before {
+  padding-right: 0 !important;
+}
+.board-tbl .list-group-news div span {
+  float: right !important;
+}
+.board .list-news .list-group {
+  padding: 0;
+}
+.board .list-news .list-group .post {
+  width: calc(100% - 34px);
+  margin: 0 17px;
+}
+.board .list-news .list-group .post:first-child {
+  border-top: 0;
+}
+.board .list-news .list-group .post .top .new {
+  font-size: 13px;
+  color: #E73B84;
+}
+.board .list-news .list-group .section-inline-ad {
+  margin-top: 0;
+}
+.board .list-news .list-group .shorcutBtn {
+  padding: 0 17px;
+}
+.board .list-group-news {
+  padding: 0 17px;
+}

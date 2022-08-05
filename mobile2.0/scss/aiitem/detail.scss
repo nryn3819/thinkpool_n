@@ -368,7 +368,7 @@
 
             div{
                 display:block;
-                width:90px;
+                width:33%;
                 float:left;
                 //padding:0 5px;
                 text-align:center;
@@ -384,7 +384,7 @@
                 strong{
                     display:block;
                     width:100%;
-                    font-size:23px;
+                    font-size:20px;
                     font-weight:700;
                     float:left;
                 }
@@ -405,7 +405,7 @@
                 }
     
                 &:nth-child(2n){
-                    width:110px;
+                    width:34%;
                     padding:0 10px;
                     border-left:1px solid #d6d6d6;
                     border-right:1px solid #d6d6d6;

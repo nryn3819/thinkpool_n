@@ -1,1 +1,45 @@
-.section{position:relative;display:block;width:100%;background:#fff;border:0 !important}.section-basic{padding:22px 17px}.section-item{padding:0}.section-item-home{padding:0 17px}.section-npd{padding:22px 0}.section-npd .title{padding-left:17px}.section-npd .title-bullet{padding-left:39px}.section-npd .shorcutBtn{padding:0 17px}.section-nbg{padding:22px 17px;background:none}.section.noBg{background:none !important}.modal-body .shorcutBtn{padding:0 !important}
+.section {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 0 !important;
+}
+.section .empty {
+  font-size: 14px;
+  color: #999;
+  padding: 25px 0;
+  text-align: center;
+}
+.section-basic {
+  padding: 22px 17px;
+}
+.section-item {
+  padding: 0;
+}
+.section-item-home {
+  padding: 0 17px;
+}
+.section-npd {
+  padding: 22px 0;
+}
+.section-npd .title {
+  padding-left: 17px;
+}
+.section-npd .title-bullet {
+  padding-left: 39px;
+}
+.section-npd .shorcutBtn {
+  padding: 0 17px;
+}
+.section-nbg {
+  padding: 22px 17px;
+  background: none;
+}
+.section.noBg {
+  background: none !important;
+}
+
+.modal-body .shorcutBtn {
+  padding: 0 !important;
+}

@@ -6,74 +6,76 @@
     background:#F2F3F7;
     padding:15px 0;
 
-    &.page{
-        padding: 25px 0;
+    .anmtag{
+        display:block;
+        width:100%;
+        padding:0 17px;
+        margin-top:15px;
+        color:#999;
+        font-size:15px;
 
-        .anmtag{
-            display:block;
-            width:100%;
-            padding:0 17px;
-            margin-top:15px;
-            color:#999;
+        span{
             font-size:15px;
+            color:#999;
 
-            span{
-                font-size:15px;
-                color:#999;
+            &.mtag{
+                color:#000;
 
-                &.mtag{
-                    color:#000;
+                &::before{
+                    content:'#';
+                }
+            }
 
-                    &::before{
-                        content:'#';
-                    }
+            &.add{
+                position:relative;
+                display:inline-block;
+                padding-right:25px;
+
+                em{
+                    color:#5368FF;
+                    border-bottom:1px solid #5368FF;
                 }
 
-                &.add{
-                    position:relative;
-                    display:inline-block;
-                    padding-right:25px;
+                &::after{
+                    position: absolute;
+                    top: 3px;
+                    right:0;
+                    content: '';
+                    background:url(#{$imgUrlSv}/tag-add.png) no-repeat 0 50%;
+                    background-size:18px auto;
+                    width:20px;
+                    height:20px;
+                }
+            }
 
-                    em{
-                        color:#5368FF;
-                        border-bottom:1px solid #5368FF;
-                    }
+            &.rmv{
+                position:relative;
+                display:inline-block;
+                padding-right:25px;
 
-                    &::after{
-                        position: absolute;
-                        top: 3px;
-                        right:0;
-                        content: '';
-                        background:url(#{$imgUrlSv}/tag-add.png) no-repeat 0 50%;
-                        background-size:18px auto;
-                        width:20px;
-                        height:20px;
-                    }
+                em{
+                    color:#5368FF;
+                    border-bottom:1px solid #5368FF;
                 }
 
-                &.rmv{
-                    position:relative;
-                    display:inline-block;
-                    padding-right:25px;
-
-                    em{
-                        color:#5368FF;
-                        border-bottom:1px solid #5368FF;
-                    }
-
-                    &::after{
-                        position: absolute;
-                        top: 3px;
-                        right:0;
-                        content: '';
-                        background:url(#{$imgUrlSv}/tag-rmv.png) no-repeat 0 50%;
-                        background-size:18px auto;
-                        width:20px;
-                        height:20px;
-                    }
+                &::after{
+                    position: absolute;
+                    top: 3px;
+                    right:0;
+                    content: '';
+                    background:url(#{$imgUrlSv}/tag-rmv.png) no-repeat 0 50%;
+                    background-size:18px auto;
+                    width:20px;
+                    height:20px;
                 }
             }
         }
+    }
+
+    &.page{
+        padding: 25px 0;
+
+        
     }
 
     .list{

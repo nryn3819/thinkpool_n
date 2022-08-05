@@ -14,7 +14,7 @@
         <link
         rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
         <!-- basic css -->
-        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="./css/common.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -53,9 +53,40 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
+        <div class="modal fade" id="open-pop">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="top">
+                        <em>모바일씽크풀 오픈</em>
+                        <strong>씽크풀 AI와 함께<br>쉽고 빠른 투자!</strong>
+                        <span>이제 씽크풀이 과학적인 정보 분석으로 <br>바쁜 투자자들의 합리적이고 빠른 의사결정을 돕겠습니다.</span>
+                    </div>
+
+                    <div class="cont">
+                        <div><span>AI 실시간 이슈포착</span><em>AI분석</em></div>
+                        <div><span>투자 유망 종목 매일 무료 제공</span><em>AI추천</em></div>
+                        <div><span>최적의 매매 타이밍 제시</span><em>라씨매매신호</em></div>
+                        <div><span>내 종목 실시간 요약, 특이사항 포착</span><em>MY종목</em></div>
+                        <div><span>궁금한 관련주 즉시 검색</span><em>통합검색</em></div>
+                    </div>
+    
+                    <div class="openPopBtn">
+                        <button>더 자세히 보기</button>
+                    </div>
+    
+                    <div class="p-close">
+                        <input type="checkbox" name="" id="closeOpenPop">
+                        <label for="closeOpenPop">일주일간 보지 않기</label>
+                        <button class="closeOpenPopBtn" data-dismiss="modal">&times;</button>
+                    </div>
+                </div>
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
         <script>
             $(function(){
                 $('#e-pop').modal('show');
+                $('#open-pop').modal('show');
             });
         </script>
 
@@ -136,11 +167,11 @@
                                     </a>
                                     <a href="#" class="msgicon">
                                         <img src="./img/msg.png" alt="">
-                                        <img src="./img/msg_n.png" alt="">
+                                        <img src="./img/msg.gif" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#"><span class="dn">필명필명필명</span></a>
+                                    <span>필명필명필명</span>
                                 </li>
                                 <li>
                                     <a href="#">로그아웃</a>
