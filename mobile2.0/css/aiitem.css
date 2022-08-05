@@ -265,7 +265,7 @@
 }
 .fpbox .m-per div:nth-child(2n) {
   width: 34%;
-  padding: 0 12px;
+  padding: 0 7px;
   border-left: 1px solid #d6d6d6;
   border-right: 1px solid #d6d6d6;
 }
@@ -1438,7 +1438,7 @@
 .alg-list .list .per div strong {
   display: block;
   width: 100%;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 700;
   float: left;
 }
