@@ -93,6 +93,8 @@
             line-height:22px;
             padding-bottom:50px;
 
+            overflow: auto;
+
             img{
                 max-width:100%;
             }
@@ -144,8 +146,17 @@
                 padding:0;
                 margin:0 2px;
 
-                &:active, &:visited, &:focus{
-                    border:1px solid #5368FF;
+                &.reco{
+                    &.on{
+                        background:#FFF2F3;
+                        border:1px solid #FF4150;
+                    }
+                }
+                &.oppo{
+                    &.on{
+                        background:#F0F4FF;
+                        border:1px solid #5368FF;
+                    }
                 }
 
                 span{

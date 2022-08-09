@@ -2534,7 +2534,7 @@ html, body {
   width: 100%;
   background: #252F56;
   height: 52px;
-  padding: 13px 17px;
+  padding: 0 17px;
   overflow-x: auto;
   overflow-y: hidden;
   z-index: 98;
@@ -2557,6 +2557,8 @@ html, body {
   color: #9BA3C6;
   padding: 0;
   float: left;
+  height: 48px;
+  line-height: 48px;
 }
 .item-home-navi .nav-item .nav-link.active {
   color: #fff;
@@ -2570,6 +2572,7 @@ html, body {
   font-size: 15px;
   color: #9BA3C6;
   float: left;
+  height: 48px;
 }
 .item-home-navi .nav-item button::before {
   content: "|";
@@ -3384,6 +3387,10 @@ html, body {
 }
 .board #preview p span {
   display: block;
+  width: calc(100% - 30px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   float: left;
 }
 .board #preview p button {
@@ -3467,6 +3474,9 @@ html, body {
   width: 100%;
   float: left;
 }
+.board .list .post .top a:visited .obj, .board .list .post .top a:focus .obj {
+  color: #999 !important;
+}
 .board .list .post .top span {
   padding-right: 5px;
 }
@@ -3480,6 +3490,10 @@ html, body {
   line-height: 20px;
   font-size: 16px;
   color: #000;
+}
+.board .list .post .top .obj.aipost {
+  max-width: calc(100% - 76px);
+  padding-right: 3px;
 }
 .board .list .post .top .obj.eiei {
   width: calc(100% - 115px);
@@ -3770,6 +3784,7 @@ html, body {
   color: #000;
   line-height: 22px;
   padding-bottom: 50px;
+  overflow: auto;
 }
 .board .reading .viewContent img {
   max-width: 100%;
@@ -3818,7 +3833,12 @@ html, body {
   padding: 0;
   margin: 0 2px;
 }
-.board .reading .viewContentBtn button:active, .board .reading .viewContentBtn button:visited, .board .reading .viewContentBtn button:focus {
+.board .reading .viewContentBtn button.reco.on {
+  background: #FFF2F3;
+  border: 1px solid #FF4150;
+}
+.board .reading .viewContentBtn button.oppo.on {
+  background: #F0F4FF;
   border: 1px solid #5368FF;
 }
 .board .reading .viewContentBtn button span {
@@ -7670,15 +7690,15 @@ html, body {
   float: left;
   text-align: left;
   padding-left: 5px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .nper {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
 }
 .nper em {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -9354,12 +9374,20 @@ table tbody tr td a {
   background: url(https://img.thinkpool.com/www/mobile/img/bu-up.png) no-repeat 10px 50%;
   background-size: 16px auto;
 }
+.btn-custom-board.up.on {
+  background-color: #FFF2F3;
+  border: 1px solid #FF4150;
+}
 .btn-custom-board.dn {
   width: 58px;
   padding: 0 10px;
   text-align: right;
   background: url(https://img.thinkpool.com/www/mobile/img/bu-dn.png) no-repeat 10px 50%;
   background-size: 16px auto;
+}
+.btn-custom-board.dn.on {
+  background-color: #F0F4FF;
+  border: 1px solid #5368FF;
 }
 .btn-custom-board.write {
   border: 1px solid #5368FF;
@@ -60136,4 +60164,8 @@ table tbody tr td a {
 #openAppPop .modal-content {
   border: 1px solid #cacaca;
   margin-top: 70px;
+}
+
+html, body {
+  scroll-behavior: auto !important;
 }

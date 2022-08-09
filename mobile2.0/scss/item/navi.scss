@@ -5,7 +5,7 @@
     width:100%;
     background:#252F56;
     height:52px;
-    padding:13px 17px;
+    padding:0 17px;
     overflow-x: auto;
     overflow-y: hidden;
     z-index:98;
@@ -29,6 +29,8 @@
             color:#9BA3C6;
             padding:0;
             float:left;
+            height:48px;
+            line-height:48px;
 
             &.active{
                 color:#fff;
@@ -44,6 +46,7 @@
             font-size:15px;
             color:#9BA3C6;
             float:left;
+            height:48px;
 
             &::before{
                 content:'|';

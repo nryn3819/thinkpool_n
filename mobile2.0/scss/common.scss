@@ -355,4 +355,6 @@ input::placeholder{
         margin-top:70px;
     }
 }
-
+html,body{
+    scroll-behavior:auto !important;
+}

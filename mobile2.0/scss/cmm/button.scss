@@ -241,6 +241,11 @@
                 text-align:right;
                 background:url(#{$imgUrlSv}/bu-up.png) no-repeat 10px 50%;
                 background-size:16px auto;
+
+                &.on{
+                    background-color:#FFF2F3;
+                    border:1px solid #FF4150;
+                }
             }
             &.dn{
                 width:58px;
@@ -248,6 +253,11 @@
                 text-align:right;
                 background:url(#{$imgUrlSv}/bu-dn.png) no-repeat 10px 50%;
                 background-size:16px auto;
+
+                &.on{
+                    background-color:#F0F4FF;
+                    border:1px solid #5368FF;
+                }
             }
 
             &.write{

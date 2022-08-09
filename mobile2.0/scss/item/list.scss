@@ -60,6 +60,12 @@
                 width:100%;
                 float:left;
 
+                a:visited, a:focus{
+                    .obj{
+                        color:#999 !important;
+                    }
+                }
+
                 span{
                     padding-right:5px;
                 }
@@ -75,6 +81,11 @@
                     line-height:20px;
                     font-size:16px;
                     color:#000;
+
+                    &.aipost{
+                        max-width:calc(100% - 76px);
+                        padding-right:3px;
+                    }
 
                     &.eiei{
                         width:calc(100% - 115px);
