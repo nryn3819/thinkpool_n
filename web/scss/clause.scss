@@ -605,7 +605,7 @@ table {
     .item_board_nav .nav.nav-tabs{
         display:block;
         width:100%;
-        border-bottom:1px solid #d6d6d6;
+        border-bottom:0;
         overflow:hidden;
         
         li{
@@ -616,6 +616,9 @@ table {
 
             &:first-child, &:nth-child(4n){
                 margin-left:0;
+            }
+            &:nth-child(4n),&:nth-child(5n){
+              border-bottom:1px solid #d6d6d6
             }
 
             &:last-child{
