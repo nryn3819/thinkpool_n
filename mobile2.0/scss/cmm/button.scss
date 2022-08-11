@@ -138,8 +138,11 @@
             color:#fff;
             border-radius: 37px;
             border:0;
-            
 
+            &.sm{
+                padding:0 20px;
+                line-height:35px;
+            }
             
             &.square{
                 border-radius: 3px;

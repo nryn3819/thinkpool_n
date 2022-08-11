@@ -224,10 +224,29 @@
     }
 }
 
+.box-center{
+    margin:0 auto;
+}
+
+.modal-basic-stext{
+    display:block;
+    width:100%;
+    font-size:14px;
+    color:#000;
+    line-height:22px;
+    padding:0 10px;
+    overflow:hidden;
+    text-align:left;
+}
+
 .dot-text{
     display:block;
     width:100%;
     padding:0 20px;
+
+    &.page-box{
+        width:300px;
+    }
 
     div{
         display:block;
