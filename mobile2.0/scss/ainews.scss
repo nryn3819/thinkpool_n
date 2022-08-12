@@ -158,6 +158,10 @@
                     width:calc(100% - 34px);
                     margin:0 17px;
 
+                    &:active{
+                        background:#e2e2e2;
+                    }
+
                     &:first-child{
                         border-top:0;
                     }

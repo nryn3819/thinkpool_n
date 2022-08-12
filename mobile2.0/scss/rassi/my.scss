@@ -151,4 +151,32 @@
             line-height:38px;
         }
     }
+    .input-guide{
+        display:block;
+        width:100%;
+        padding-top:20px;
+        overflow:hidden;
+
+        &>div{
+            display:block;
+            font-size:15px;
+            color:#999;
+            float:left;
+            overflow:hidden;
+            margin-bottom:5px;
+
+            &::before{
+                display:block;
+                float:left;
+                content:'※';
+                padding-right:5px;
+            }
+
+            span{
+                display:block;
+                width:calc(100% - 20px);
+                float:left;
+            }
+        }
+    }
 }

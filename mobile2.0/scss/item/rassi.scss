@@ -205,6 +205,40 @@
         }
     }
 }
+.pf-guide{
+    display:block;
+    width:100%;
+    background:#f6f6f6;
+    overflow: hidden;
+    padding:15px;
+    margin-top:10px;
+
+    &>div{
+        display:block;
+        width:100%;
+        margin-bottom:15px;
+
+        &:last-child{
+            margin-bottom:0;
+        }
+
+        strong{
+            display:block;
+            width:100%;
+            font-size:13px;
+            color:#999;
+            font-weight:700;
+        }
+
+        span{
+            display:block;
+            width:100%;
+            font-size:13px;
+            color:#999;
+            line-height:18px;
+        }
+    }
+}
 
 .rassi-section{
     padding:0 17px;

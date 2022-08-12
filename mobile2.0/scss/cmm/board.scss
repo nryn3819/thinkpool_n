@@ -1,6 +1,33 @@
 @import '../variable.scss';
 .board{
 
+    &-guide{
+        display:block;
+        width:100%;
+        padding-bottom:20px;
+        overflow:hidden;
+
+        &>div{
+            &::before{
+                display:block;
+                float:left;
+                content:'※';
+                padding-right:5px;
+            }
+            display:block;
+            font-size:15px;
+            color:#999;
+            float:left;
+            overflow:hidden;
+            margin-bottom:5px;
+
+            span{
+                display:block;
+                width:calc(100% - 20px);
+                float:left;
+            }
+        }
+    }
 
     //종목홈 뷰
     &-item{

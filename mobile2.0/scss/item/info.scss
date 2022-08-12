@@ -57,6 +57,26 @@
             }
         }
     }
+    .graph{
+        position:absolute;
+        top:24px;
+        right:60px;
+        width:45px;
+        height:37px;
+        padding-top:24px;
+        background:url('#{$imgUrlSv}/ico_chart.png') no-repeat center top;
+        background-size:20px auto;
+        text-align:center;
+
+        span{
+            font-size:11px;
+            color:#999;
+            display:block;
+            width:100%;
+            float:left;
+            text-align:center;
+        }
+    }
     .fav{
         position:absolute;
         top:24px;
@@ -71,6 +91,10 @@
         span{
             font-size:11px;
             color:#999;
+            display:block;
+            width:100%;
+            float:left;
+            text-align:center;
         }
 
         &.active{

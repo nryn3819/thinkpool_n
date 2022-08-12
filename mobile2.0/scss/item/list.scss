@@ -27,6 +27,10 @@
             border-top:1px solid #e2e2e2;
             padding:13px 0;
 
+            &:active{
+                background:#e2e2e2;
+            }
+
             &.empty{
                 height:160px;
                 display:flex;
