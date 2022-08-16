@@ -333,9 +333,6 @@ table {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-
-
-
 @import 'header';
 @import 'layout';
 @import 'main';
@@ -343,5 +340,4 @@ table {
 @import 'board';
 @import 'footer';
 @import 'modal';
-
-
+@import 'clause';
