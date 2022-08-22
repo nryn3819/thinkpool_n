@@ -2423,3 +2423,50 @@ p.tbl-guide {
     }
   }
 }
+
+
+.newsvguide{
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:100px 0 80px 0;
+
+  .tit{
+    display:block;
+    font-size:26px;
+    color:#333;
+    font-weight:700;
+  }
+  .txt{
+    display:block;
+    font-size:20px;
+    color:#333;
+    line-height:35px;
+    font-weight:300;
+    padding-top:55px;
+
+    span{
+      display:block;
+    }
+
+    .ready{
+      color:#7874F7;
+      padding-top:40px;
+    }
+  }
+  .btn{
+    padding-top:135px;
+    button{
+      height:50px;
+      line-height:50px;
+      padding:0 70px;
+      border-radius: 50px;
+      background:#7874F7;
+      border:0;
+      padding:0 70px;
+      font-size:18px;
+      color:#fff;
+      font-weight:700;
+    }
+  }
+}
