@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- common.css -->
     <link rel="stylesheet" href="./css/common.css">
     <!-- Bootstrap CSS -->
@@ -45,10 +45,22 @@
                 <section class="section noPadding">
                     <div class="board">
 
+                        
+
                         <div class="board-write">
                             <input type="text" name="" id="" class="obj" placeholder="제목을 작성하세요.">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="내용을 작성하세요." class="rmt-20"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="내용을 작성하세요." class="rmt-20 writerArea"></textarea>
                         </div>
+                        <script>
+                            //화면이동 제어 
+                            const writerArea = document.querySelector('.writerArea');
+
+                            writerArea.addEventListener('click', function(){
+                                const target = document.querySelector('.board');
+
+                                target.scrollIntoView(true);
+                            });
+                        </script>
 
                         <div class="board-btm">
                             <input type="file" id="file-input" accept='image/gif, image/jpeg, image/png' multiple>
