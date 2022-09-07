@@ -15,7 +15,9 @@
 
     <!-- 오픈팝업 -->
 
-    <div class="modal fade" id="openPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+
+    <!-- <div class="modal fade" id="openPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
@@ -50,11 +52,11 @@
             </div>
           </div>
         </div>
-      </div>
+    </div> -->
     <!-- 오픈팝업 -->
 
     <!-- 앱오픈팝업 -->
-    <div class="modal fade custom-modal1" id="openAppPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade custom-modal1" id="openAppPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -73,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
         <script>
         const openModal1 = new bootstrap.Modal(document.getElementById('openPop'), {})
         openModal1.show()
@@ -532,107 +534,202 @@
                 <!-- // 나의종목-->
 
                 <section class="section noPadding rmt-8">
-                    <div class="itemCdn">  
-                        <div class="name">
-                            <a href="#">
-                                <strong>싸이맥스</strong>
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-                                </svg>
-                                </span>
-                            </a>
-                        </div>
+                    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-                        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                        <div class="cont mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <span class="txt d-block text-truncate">현재 <em class="up">매수</em> 시그널 상태 입니다.</span>
-                                    <span class="info">
-                                        <em class="price">18,900</em>
-                                        <em class="date">04/19 15:00</em>
-                                    </span>
-                                </div>
-                                <!-- // -->
-
-                                <div class="swiper-slide">
-                                    <span class="txt d-block text-truncate">[03/11] (주)싸이맥스 대표이사변경</span>
-                                </div>
-                                <!-- // -->
-
-                                <div class="swiper-slide">
-                                    <span class="txt d-block text-truncate">[03/11] 증권가속보</span>
-                                    <span class="txt2 d-block text-truncate">차트분석-주가 상승 중, 단기간 골든크로스 형성 골든크로스 형성</span>
-                                </div>
-                                <!-- //slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="per up">
-                                        <strong>18,900 <span>▲200 +1.07%</span></strong>
-                                        <span class="txt2 d-block text-truncate">(20분지연)</span>
+                    <div class="cdnSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="itemCdn vertical">
+                                    <div class="name">
+                                        <a href="#">
+                                            <strong><img src="./img/bu_tit_ai.png" alt="" class="float-start" width="18"><span class="float-start">AI속보</span></strong>
+                                        </a>
                                     </div>
+            
+                                    <div class="cont mySwiper2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:11</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:12</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:13</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:14</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:15</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:16</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:10</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:10</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:10</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                            <div class="swiper-slide">
+                                                <div class="d-block text-truncate"><em>16:10</em><span>[모멘텀특징주] 오늘 지투파워(25.7%) 한국맥널티(-7.1%)</span></div>
+                                            </div>
+                                            <!-- //slide -->
+                                        </div>
+                                        <!-- //swiper-wrapper -->
+                                    </div>
+                                    <!-- //mySwiper2 -->
                                 </div>
                                 <!-- // -->
                             </div>
-                        </div>
-                        <!-- 
-                            //cont demo
+                            <!-- // -->
 
-                            <span class="txt d-block text-truncate">현재 <em class="up">매수</em> 시그널 상태 입니다.</span>
-                            //일반텍스트 상단
-
-                            <span class="txt d-block text-truncate">현재 <em class="dn">매도</em> 시그널 상태 입니다.</span>
-                            //일반텍스트 상단
-
-                            <span class="info">
-                                <em class="price">18,900</em>
-                                <em class="date">04/19 15:00</em>
-                            </span>
-                            //가격및 시간
-
-                            <span class="txt2 d-block text-truncate">차트분석-주가 상승 중, 단기간 골든크로스 형성 골든크로스 형성</span>
-                            //일반 텍스트 하단
-
-                            <div class="per up">
-                                <strong>18,900 <span>▲200 +1.07%</span></strong>
+                            <div class="swiper-slide">
+                                <div class="itemCdn">  
+                                    <div class="name">
+                                        <a href="#">
+                                            <strong>싸이맥스</strong>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                                            </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+            
+                                    <div class="cont mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <span class="txt d-block text-truncate">현재 <em class="up">매수</em> 시그널 상태 입니다.</span>
+                                                <span class="info">
+                                                    <em class="price">18,900</em>
+                                                    <em class="date">04/19 15:00</em>
+                                                </span>
+                                            </div>
+                                            <!-- // -->
+            
+                                            <div class="swiper-slide">
+                                                <span class="txt d-block text-truncate">[03/11] (주)싸이맥스 대표이사변경</span>
+                                            </div>
+                                            <!-- // -->
+            
+                                            <div class="swiper-slide">
+                                                <span class="txt d-block text-truncate">[03/11] 증권가속보</span>
+                                                <span class="txt2 d-block text-truncate">차트분석-주가 상승 중, 단기간 골든크로스 형성 골든크로스 형성</span>
+                                            </div>
+                                            <!-- //slide -->
+            
+                                            <div class="swiper-slide">
+                                                <div class="per up">
+                                                    <strong>18,900 <span>▲200 +1.07%</span></strong>
+                                                    <span class="txt2 d-block text-truncate">(20분지연)</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- 
+                                        //cont demo
+            
+                                        <span class="txt d-block text-truncate">현재 <em class="up">매수</em> 시그널 상태 입니다.</span>
+                                        //일반텍스트 상단
+            
+                                        <span class="txt d-block text-truncate">현재 <em class="dn">매도</em> 시그널 상태 입니다.</span>
+                                        //일반텍스트 상단
+            
+                                        <span class="info">
+                                            <em class="price">18,900</em>
+                                            <em class="date">04/19 15:00</em>
+                                        </span>
+                                        //가격및 시간
+            
+                                        <span class="txt2 d-block text-truncate">차트분석-주가 상승 중, 단기간 골든크로스 형성 골든크로스 형성</span>
+                                        //일반 텍스트 하단
+            
+                                        <div class="per up">
+                                            <strong>18,900 <span>▲200 +1.07%</span></strong>
+                                        </div>
+                                        //상승률
+            
+                                        demo 내용을 조합하면 됩니다.
+                                     -->
+                                    <!-- //cont -->
+            
+                                    <button class="sttg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                        </svg>
+                                    </button>
+                                    <!-- //설정 바로가기 입니다. 
+                                    -->
+            
+            
+                                </div>
+                                <!-- // -->
                             </div>
-                            //상승률
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
 
-                            demo 내용을 조합하면 됩니다.
-                         -->
-                        <!-- //cont -->
-
-                        <!-- Swiper JS -->
-                        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-                        <!-- Initialize Swiper -->
-                        <script>
-                            const swiper = new Swiper(".mySwiper", {
-                                direction: "vertical",
-                                loop: true,
-                                autoplay: {
-                                    delay: 8000,
-                                    disableOnInteraction: false,
-                                },
-                            });
-
-                        //https://codesandbox.io/s/v2olkf?file=/src/App.vue
-                        //vue 소스링크
-                        </script>
-
-                        <button class="sttg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-                            </svg>
-                        </button>
-                        <!-- //설정 바로가기 입니다. 
-                        -->
-
-
+                        <div class="swp-guide">
+                            <img src="./img/swpguide.png" alt="" width="308">
+                            <a href="javascript:;" class="gde-close">&times;</a>
+                        </div>
                     </div>
-                    <!-- // -->
+
+                    
+
+                    <!-- Swiper JS -->
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        const swiper = new Swiper(".mySwiper", {
+                            direction: "vertical",
+                            loop: true,
+                            autoplay: {
+                                delay: 8000,
+                                disableOnInteraction: false,
+                            },
+                        });
+
+                        const swiper3 = new Swiper(".mySwiper2", {
+                            direction: "vertical",
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                            loop: true,
+                            autoplay: {
+                                delay: 7500,
+                                disableOnInteraction: false,
+                            },
+                        });
+
+                        const swiper2 = new Swiper(".cdnSwiper", {});
+
+                        const swpClose = document.querySelector('.swp-guide');
+
+                        swpClose.addEventListener('click', function(){
+                            swpClose.style.display = 'none';
+                        });
+
+
+                    //https://codesandbox.io/s/v2olkf?file=/src/App.vue
+                    //vue 소스링크
+                    </script>
                 </section>
                 <!-- // -->
 
@@ -651,7 +748,26 @@
 
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane show active" >
+                                <!-- 차트박스 위 -->
+                                <div class="toast bbchart show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <strong class="me-auto">버블차트를 터치해서 관련 종목을 확인하세요.</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">&times;</button>
+                                    </div>
+                                </div>
+                                <!-- //차트박스 위 -->
+
                                 <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+
+                                <!-- 차트박스 아래 -->
+                                <div class="refresh">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                    </svg>
+                                    <span>12/31 12:30</span>
+                                </div>
+                                <!-- //차트박스 아래 -->
                             </div>
                         </div>
                         <!-- //tab-content -->
@@ -3272,6 +3388,20 @@
         <!-- //bootstrap js -->
     </div>
     <!-- //app -->
+
+    
+
+    <script>
+
+        const offhide = document.querySelector('.offhide');
+
+        const bsOffcanvas1 = new bootstrap.Offcanvas(document.getElementById('sideContent'), {})
+        offhide.addEventListener('click', function(){
+            bsOffcanvas1.hide()
+        });
+
+        
+        </script>
 
     
     

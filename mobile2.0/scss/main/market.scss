@@ -159,6 +159,26 @@
                         font-weight:700;
                     }
                 }
+                .like{
+                    display:block;
+                    width:20px;
+
+                    button{
+                        display:inline-block;
+                        width:20px;
+                        height:20px;
+                        padding:0;
+                        border:0;
+                        background:url('#{$imgUrlSv}/fav.png') no-repeat center 50%;
+                        background-size:20px auto;
+                        text-indent:-9999em;
+
+                        &.active{
+                            background:url('#{$imgUrlSv}/favOn.png') no-repeat center 50%;
+                            background-size:20px auto;
+                        }
+                    }
+                }
             }
 
             &-market{
@@ -194,6 +214,10 @@
             font-size:16px;
             color:#000;
             width:100%;
+
+            a,span{
+                color:#000;
+            }
         }
         .tag{
             display:block;
