@@ -1,0 +1,22 @@
+$miniMobile: 359px;
+$desktop : 719px;
+
+@mixin mini {
+    @media (max-width: $miniMobile) {
+        @content;
+    }
+}
+
+@mixin web {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+$imgUrlSv : "https://img.thinkpool.com/www/mobile/img";
