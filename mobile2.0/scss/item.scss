@@ -154,6 +154,7 @@
     position:relative;
     display:block;
     width:100%;
+    padding-top:20px;
 
     &>div{
         display:block;
@@ -163,15 +164,15 @@
 
     .pr{
         position:absolute;
-        top:-23px;
+        top:-5px;
         right:3px;
-        font-size:14px;
-        color:#666;
+        font-size:13px;
+        color:#999;
     }
 
     .snd_tbl_left{
         display:block;
-        width:140px;
+        width:128px;
         float:left;
 
         table{
@@ -188,13 +189,13 @@
     }
     .snd_tbl_right{
         display:block;
-        width:calc(100% - 140px);
+        width:calc(100% - 128px);
         overflow-x:auto;
         float:left;
 
         div{
             display:block;
-            width:540px;
+            width:432px;
             float:left;
         }
 
