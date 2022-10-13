@@ -57,6 +57,35 @@
                 font-weight:700;
             }
         }
+        .more{
+            position:absolute;
+            top:20px;
+            right:17px;
+
+            a{
+                font-size:14px;
+                color:#7F8EB1;
+                float:left;
+
+                span{
+                    display:block;
+                    float:left;
+                }
+
+                &::after{
+                    content:'';
+                    border-top:1px solid #7F8EB1;
+                    border-right:1px solid #7F8EB1;
+                    width:6px;
+                    height:6px;
+                    transform: rotate(45deg);
+                    display:block;
+                    float:left;
+                    margin-top:7px;
+                    margin-left:5px;
+                }
+            }
+        }
         .cont{
             padding:0;
 
