@@ -222,6 +222,40 @@
             }
         }
     }
+
+    div{
+        display:block;
+        width:100%;
+
+        span{
+            display:block;
+            float:left;
+            font-weight:400;
+
+            &:last-child{
+                width:calc(100% - 20px);
+                float:right;
+            }
+        }
+    }
+}
+
+.modal-basic-link{
+    display:block;
+    width:100%;
+    padding:0 10px;
+    float:left;
+
+    a{
+        display:block;
+        border-bottom:1px solid #5568FD;
+        font-weight:400;
+        padding:3px 0;
+        clear:left;
+        float:left;
+        margin-bottom:5px;
+        font-size:16px;
+    }
 }
 
 .box-center{

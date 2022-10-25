@@ -48,6 +48,11 @@
             color:#666;
             font-weight:500;
         }
+        &:nth-child(2n){
+            font-size:12px;
+            color:#888;
+            padding-top:5px;
+        }
         &:last-child{
             font-size:12px;
             color:#888;
