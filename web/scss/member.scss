@@ -273,6 +273,39 @@
                 display:block;
                 width:100%;
 
+                &.bg-box{
+                    display:block;
+                    background: #f3f3f3;
+                    width:100%;
+                    padding:20px 15px;
+                    overflow:hidden;
+
+                    dl{
+                        display:block;
+                        width:100%;
+
+                        dt{
+                            display:block;
+                            float:left;
+                            clear:left;
+                            height:30px;
+                            line-height:30px;
+                            font-size:16px;
+                        }
+                        dd{
+                            display:block;
+                            float:left;
+                            height:30px;
+                            line-height:30px;
+                            font-size:16px;
+
+                            em{
+                                font-style:normal;
+                            }
+                        }
+                    }
+                }
+
                 &.userid{
                     display:block;
                     width:100%;
@@ -320,7 +353,7 @@
                 span{
                     display:block;
                     text-align:center;
-                    font-size:15px;
+                    font-size:16px;
                     line-height:25px;
                     font-weight:300;
 
