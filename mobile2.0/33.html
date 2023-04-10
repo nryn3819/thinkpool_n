@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,572 +9,922 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-    <script>
-       const titClick = function(){
-           window.scrollTo(0 , 0)
-       }
-
-    </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <title>씽크풀</title>
-  </head>
-  <body>
+</head>
 
-    <div id="app">
-        <div id="wrap">
-            <h1 class="visually-hidden">씽크풀</h1>
-            <h2 class="visually-hidden">Title for screen readers</h2>
-            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
-            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
-            <!-- header - header.scss -->
-            <header id="header" class="clearfix">
-                <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
-                    
-                    <div class="toplogo">
-                        <a href="#"><img src="./img/toplogo.png" alt="씽크풀로고" width="32" class="float-start"></a>
-                    </div>
-                    <!-- //이전페이지 -->
-                
-                    <div class="headerTitle subTitle text-truncate">
-                        <strong onclick="titClick();">AI 종목추천</strong>
-                    </div>
-                    <!-- //종목명 -->
+<body>
 
-                    <div class="subSchBtn subSch">
-                        <button type="button" class="schButton">종목검색</button>
-                    </div>
-                
-                    <div id="sideMenu">
-                        <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+    <body>
 
-                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                              </div>
-                              <div class="offcanvas-body">
-                                <div>
-                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        <div id="app">
+            <div id="wrap">
+                <h1 class="visually-hidden">씽크풀</h1>
+                <h2 class="visually-hidden">Title for screen readers</h2>
+                <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+                <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+                <!-- header - header.scss -->
+                <header id="header" class="clearfix">
+                    <h2 class="visually-hidden">상단영역</h2>
+                    <div id="top" class="float-start">
+
+                        <div class="toplogo">
+                            <a href="#"><img src="./img/toplogo.png" alt="씽크풀로고" width="32" class="float-start"></a>
+                        </div>
+                        <!-- //이전페이지 -->
+
+                        <div class="headerTitle subTitle text-truncate">
+                            <strong onclick="titClick();">AI 종목추천</strong>
+                        </div>
+                        <!-- //종목명 -->
+
+                        <div class="subSchBtn subSch">
+                            <button type="button" class="schButton">종목검색</button>
+                        </div>
+
+                        <div id="sideMenu">
+                            <h3 class="visually-hidden">사이드메뉴열기</h3>
+                            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
-                                <div class="dropdown mt-3">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Some text as placeholder. In real life you can have the elements you have chosen.
+                                        Like, text, images, lists, etc.
+                                    </div>
+                                    <div class="mt-3 dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                            Dropdown button
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                              </div>
-                        </aside>
+                            </aside>
+                        </div>
+                        <!-- //sideMenu -->
                     </div>
-                    <!-- //sideMenu -->
-                </div>
-                <!-- //top -->
+                    <!-- //top -->
 
-                <div class="allNav">
-                    <menu class="globalNavigation">
-                        <h3 class="visually-hidden">네비게이션</h3>
-                        <a href="#" class="active">AI추천홈</a>
-                        <a href="#">오늘의종목</a>
-                        <a href="#">종목추천</a>
-                        <a href="#">포트폴리오</a>
-                        <a href="#">나의서비스</a>
-                        <a href="#">이용안내</a>
-                    </menu>
-                    <!-- //gloabal navi 
+                    <div class="allNav">
+                        <menu class="globalNavigation">
+                            <h3 class="visually-hidden">네비게이션</h3>
+                            <a href="#" class="active">AI추천홈</a>
+                            <a href="#">오늘의종목</a>
+                            <a href="#">종목추천</a>
+                            <a href="#">포트폴리오</a>
+                            <a href="#">나의서비스</a>
+                            <a href="#">이용안내</a>
+                        </menu>
+                        <!-- //gloabal navi 
                         ai item 추가
                     -->
-                </div>
-                <!-- // -->
-            </header>
-            <!-- // -->
-
-            <main id="container" class="clearfix">
-                <h2 class="visually-hidden">본문영역</h2>
-
-                <section class="section section-npd">
-                    <h3 class="title">오늘의종목 Pick</h3>
-
-                    <div class="item-pick rmt-10">
-                        <div id="aiitemcarosel" class="swiper">
-                            
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide active">
-                                  <div class="card-item">
-                                      <div class="name">
-                                          <strong>삼성전자</strong>
-                                          <span>000000</span>
-                                      </div>
-                                      <div class="price">
-                                          <strong>59,000</strong>
-                                          <span>+3.2%</span>
-                                      </div>
-                                      <div class="btnbox">
-                                          <button>투자포인트<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                      <div class="og-guide">휴대폰 및 가전제품 제조&middot;판매 기업</div>
-                                      <div class="tag">
-                                          <span>폴더블</span>
-                                          <span>냉장고</span>
-                                          <span>세탁기</span>
-                                          <span>스마트폰</span>
-                                      </div>
-                                      <div class="price2">
-                                          <span>증권사목표가</span>
-                                          <span>90,000원</span>
-                                      </div>
-                                      <!-- 202220627 추가 -->
-                                      <div class="backImg">
-                                        <img src="https://img.thinkpool.com/www/mobile/img/card-item.png" alt="" width="100%">
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-
-                              <div class="swiper-slide">
-                                  <div class="card-item card-item-sv">
-                                      <div class="txt">
-                                        AI알고리즘이  매일아침 5종목을 추천합니다. <br>
-                                        종목탐색의 용도로 활용할 수 있습니다. <br>
-                                        (종목추천 또는 포트폴리오 가입시 무료제공)
-                                      </div>
-                                      <div class="btnbox">
-                                          <button>서비스 자세히보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-                              <div class="swiper-slide">
-                                  <div class="card-item card-item-ev">
-                                      <div class="txt">
-                                          <span>오픈이벤트</span>
-                                          <strong>첫달 5,500원</strong>
-                                          <em>(1인1회 한정)</em>
-                                      </div>
-
-                                      <div class="btnbox">
-                                          <button>이벤트보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- // -->
-
-                            </div>
-                            <!-- // -->
-
-                            <div class="swiper-pagination">
-                            </div>
-                        </div>
-                        <script>
-                            var swiper = new Swiper("#aiitemcarosel", {
-                              spaceBetween: 30,
-                              loop: true,
-                              centeredSlides: true,
-                              autoplay: {
-                                delay: 6000,
-                                disableOnInteraction: false,
-                              },
-                              pagination: {
-                                el: ".swiper-pagination",
-                                clickable: true,
-                              },
-                            });
-                          </script>
-                    </div>
-                </section>
-
-                <section class="section section-npd rmt-8">
-                    <h3 class="title title-bullet title-bullet-ai"><span>AI추천</span> BEST 수익률<em> (최근 30일)</em></h3>
-
-                    <div class="ai_best">
-                        <div class="list">
-                            <h4 class="visually-hidden">베스트 수익률 리스트</h4>
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠신라젠신라신라젠신라젠</strong>
-                                    <span class="per d-block text-center up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">보유중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="d-block">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                        <span class="state">관망중</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <span class="card-subtitle d-block text-center">중대형주 추천</span>
-                                    <strong class="card-title d-block text-truncate text-center">신라젠</strong>
-                                    <span class="d-block text-center per up">+28.2%</span>
-                                    <div class="record text-center">
-                                        <span class="">12.2 매수가 50,000</span>
-                                        <span class="">12.23 매도가 1,999,999</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- // -->
-
-                        </div>
-                    </div>
-                    <!-- //ai_best -->
-
-                    <div class="upTime">
-                        12/4 14:00
-                    </div>
-                    <!-- //upTime -->
-
-                    <div class="shorcutBtn d-grid gap-2 rmt-20">
-                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
                     </div>
                     <!-- // -->
-                </section>
+                </header>
+                <!-- // -->
 
-                <section class="section">
-                    <h3 class="visually-hidden">광고영역</h3>
-                    <div class="first-bnr-ad text-center rmt-0">
-                        <img src="./img/aibnr2.png" alt="오픈이벤트" class="img-fluid">
-                    </div>
-                </section>
+                <main id="container" class="clearfix">
+                    <h2 class="visually-hidden">본문영역</h2>
 
-                <section class="section section-basic">
-                    <h3 class="title">따라하기쉬운 포트폴리오</h3>
+                    <section class="section section-npd">
+                        <h3 class="title">오늘의종목 Pick</h3>
 
-                    <div class="fpbox rmt-25">
-                        <div class="fptitle">
-                           <a href="#">단기수익형 포트폴리오</a>
-                        </div>
+                        <div class="item-pick rmt-10">
+                            <div id="aiitemcarosel" class="swiper">
 
-                        <div class="m-per rmt-20">
-                            <div>
-                                <span>코스피대비<br>3개월 수익률</span>
-                                <strong class="up">+999.9%</strong>
-                                <div class="box">
-                                    <span>AI <em class="up">+999.99%</em></span>
-                                    <span>코스피 <em class="dn">-999.99%</em></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>코스피대비<br>6개월 수익률</span>
-                                <strong class="up">+999.9%</strong>
-                                <div class="box">
-                                    <span>AI <em class="up">+999.99%</em></span>
-                                    <span>코스피 <em class="dn">-999.99%</em></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>코스피대비<br>1년 수익률</span>
-                                <strong class="up">+999.9%</strong>
-                                <div class="box">
-                                    <span>AI <em class="up">+999.99%</em></span>
-                                    <span>코스피 <em class="dn">-999.99%</em></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-chart rmt-20">
-                            <div id="monthchart" class="swiper">
-                                
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide active">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1개월">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="3개월">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1년">
-                                  </div>
-                                </div>
+                                    <div class="swiper-slide active">
+                                        <div class="card-item">
+                                            <div class="name">
+                                                <strong>삼성전자</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <div class="price">
+                                                <strong>59,000</strong>
+                                                <span>+3.2%</span>
+                                            </div>
+                                            <div class="btnbox">
+                                                <button>투자포인트<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
+                                            </div>
+                                            <div class="og-guide">휴대폰 및 가전제품 제조&middot;판매 기업</div>
+                                            <div class="tag">
+                                                <span>폴더블</span>
+                                                <span>냉장고</span>
+                                                <span>세탁기</span>
+                                                <span>스마트폰</span>
+                                            </div>
+                                            <div class="price2">
+                                                <span>증권사목표가</span>
+                                                <span>90,000원</span>
+                                            </div>
+                                            <!-- 202220627 추가 -->
+                                            <div class="backImg">
+                                                <img src="https://img.thinkpool.com/www/mobile/img/card-item.png" alt="" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
 
-                                <div class="swiper-pagination rmt-10">
-                                </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-item card-item-sv">
+                                            <div class="txt">
+                                                AI알고리즘이 매일아침 5종목을 추천합니다. <br>
+                                                종목탐색의 용도로 활용할 수 있습니다. <br>
+                                                (종목추천 또는 포트폴리오 가입시 무료제공)
+                                            </div>
+                                            <div class="btnbox">
+                                                <button>서비스 자세히보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="swiper-slide">
+                                        <div class="card-item card-item-ev">
+                                            <div class="txt">
+                                                <span>오픈이벤트</span>
+                                                <strong>첫달 5,500원</strong>
+                                                <em>(1인1회 한정)</em>
+                                            </div>
 
-                                <script>
-                                    var swiper = new Swiper("#monthchart", {
-                                      spaceBetween: 30,
-                                      loop: true,
-                                      centeredSlides: true,
-                                      autoplay: {
-                                        delay: 4000,
+                                            <div class="btnbox">
+                                                <button>이벤트보기<img src="./img/bu-aibtn.png" alt="bullet" width="12"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                </div>
+                                <!-- // -->
+
+                                <div class="swiper-pagination">
+                                </div>
+                            </div>
+                            <script>
+                                const swiper = new Swiper("#aiitemcarosel", {
+                                    spaceBetween: 30,
+                                    loop: true,
+                                    centeredSlides: true,
+                                    autoplay: {
+                                        delay: 6000,
                                         disableOnInteraction: false,
-                                      },
-                                      pagination: {
+                                    },
+                                    pagination: {
                                         el: ".swiper-pagination",
                                         clickable: true,
-                                      },
-                                    });
-                                  </script>
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </section>
 
-                              </div>
+                    <section class="section section-npd rmt-8 feature">
+                        <div class="feature-head">
+                            <h3 class=""><span>AI특징주 포착</span>전일 시간외 급등주</h3>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#feature-pop">포착성과 〉</button>
+                        </div>
+                        <div class="feature-body">
+                            <div class="swiper feature-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">시간외 거리 1,244,568주 시간외 거리 1,244,568주 시간외 거리 1,244,568주</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span><em>시간외</em>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+
+
+
+                            <script>
+                                const swiper1 = new Swiper('.feature-swiper', {
+                                    spaceBetween: 20,
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                    },
+                                });
+                            </script>
+                        </div>
+
+                        <!--modal-->
+                        <div class="modal fade" id="feature-pop" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    <div>
+                                        <div class="modal-title">
+                                            시간외 급등주
+                                        </div>
+                                        <div class="modal-sub">
+                                            시간외 거래 급등주는 익일 매수 종목을 발굴할 때 참고할 수 있습니다.
+                                            장마감 후 호재성 기사가 발표된 기업이 시간외 단일가 거래에서 강세를
+                                            나타내는 경우가 종종 있습니다.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="modal-title">
+                                            시간외 급등주 최근 수익률
+                                        </div>
+                                        <div class="modal-sub2">
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--modal-->
+                    </section>
+
+                    <section class="section section-npd rmt-8">
+                        <h3 class="title title-bullet title-bullet-ai"><span>AI추천</span> BEST 수익률<em> (최근 30일)</em></h3>
+
+                        <div class="ai_best">
+                            <div class="list">
+                                <h4 class="visually-hidden">베스트 수익률 리스트</h4>
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠신라젠신라신라젠신라젠</strong>
+                                        <span class="text-center per d-block up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="state">보유중</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="state">관망중</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="d-block">12.23 매도가 1,999,999</span>
+                                            <span class="state">관망중</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="state">관망중</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                            <span class="state">관망중</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="shadow-sm card">
+                                    <div class="card-body">
+                                        <span class="text-center card-subtitle d-block">중대형주 추천</span>
+                                        <strong class="text-center card-title d-block text-truncate">신라젠</strong>
+                                        <span class="text-center d-block per up">+28.2%</span>
+                                        <div class="text-center record">
+                                            <span class="">12.2 매수가 50,000</span>
+                                            <span class="">12.23 매도가 1,999,999</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                            </div>
+                        </div>
+                        <!-- //ai_best -->
+
+                        <div class="upTime">
+                            12/4 14:00
+                        </div>
+                        <!-- //upTime -->
+
+                        <div class="gap-2 shorcutBtn d-grid rmt-20">
+                            <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
                         </div>
                         <!-- // -->
+                    </section>
 
-                        <div class="m-list-w w-100 rmt-10 float-start">
+                    <section class="section">
+                        <h3 class="visually-hidden">광고영역</h3>
+                        <div class="text-center first-bnr-ad rmt-0">
+                            <img src="./img/aibnr2.png" alt="오픈이벤트" class="img-fluid">
+                        </div>
+                    </section>
 
-                            <div class="m-list rmt-10 float-start">
-                                <div class="list">
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
-                                        </div>
+                    <section class="section section-basic">
+                        <h3 class="title">따라하기쉬운 포트폴리오</h3>
+
+                        <div class="fpbox rmt-25">
+                            <div class="fptitle">
+                                <a href="#">단기수익형 포트폴리오</a>
+                            </div>
+
+                            <div class="m-per rmt-20">
+                                <div>
+                                    <span>코스피대비<br>3개월 수익률</span>
+                                    <strong class="up">+999.9%</strong>
+                                    <div class="box">
+                                        <span>AI <em class="up">+999.99%</em></span>
+                                        <span>코스피 <em class="dn">-999.99%</em></span>
                                     </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="up">12.1 매수</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
                                 </div>
-                                <!-- //최근매수종목 -->
+                                <div>
+                                    <span>코스피대비<br>6개월 수익률</span>
+                                    <strong class="up">+999.9%</strong>
+                                    <div class="box">
+                                        <span>AI <em class="up">+999.99%</em></span>
+                                        <span>코스피 <em class="dn">-999.99%</em></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>코스피대비<br>1년 수익률</span>
+                                    <strong class="up">+999.9%</strong>
+                                    <div class="box">
+                                        <span>AI <em class="up">+999.99%</em></span>
+                                        <span>코스피 <em class="dn">-999.99%</em></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-chart rmt-20">
+                                <div id="monthchart" class="swiper">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide active">
+                                            <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1개월">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/demo-m-chart.png" class="d-block w-100" alt="3개월">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/demo-m-chart.png" class="d-block w-100" alt="1년">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-pagination rmt-10">
+                                    </div>
+
+                                    <script>
+                                        const swiper2 = new Swiper("#monthchart", {
+                                            spaceBetween: 30,
+                                            loop: true,
+                                            centeredSlides: true,
+                                            autoplay: {
+                                                delay: 4000,
+                                                disableOnInteraction: false,
+                                            },
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                clickable: true,
+                                            },
+                                        });
+                                    </script>
+
+                                </div>
                             </div>
                             <!-- // -->
 
-                            <div class="m-list rmt-10 float-start">
+                            <div class="m-list-w w-100 rmt-10 float-start">
 
-                                <div class="list">
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
+                                <div class="m-list rmt-10 float-start">
+                                    <div class="list">
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="up">12.1 매수</span>
+                                            </div>
                                         </div>
                                         <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="up">12.1 매수</span>
+                                            </div>
                                         </div>
                                         <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="up">12.1 매수</span>
+                                            </div>
                                         </div>
+                                        <!-- // -->
                                     </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <div class="itemcard shadow-sm float-start">
-                                        <div class="name">
-                                            <strong>종목명종목명</strong>
-                                            <span>000000</span>
-                                        </div>
-                                        <!-- // -->
-                                        <div class="guide">
-                                            국내 대한민국 도시가스 공급 업체
-                                        </div>
-                                        <!-- // -->
-                                        
-                                        <div class="info">
-                                            <span class="">12.1 매도</span>
-                                            <span>10,0000</span>
-                                            <span class="up">+192.2% 수익</span>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
+                                    <!-- //최근매수종목 -->
                                 </div>
-                                <!-- //최근매도종목 -->
-                            </div>
-                            <!-- // -->
+                                <!-- // -->
 
-                            <div class="shorcutBtn d-grid gap-2 rmt-20">
-                                <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                <div class="m-list rmt-10 float-start">
+
+                                    <div class="list">
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="">12.1 매도</span>
+                                                <span>10,0000</span>
+                                                <span class="up">+192.2% 수익</span>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="">12.1 매도</span>
+                                                <span>10,0000</span>
+                                                <span class="up">+192.2% 수익</span>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="shadow-sm itemcard float-start">
+                                            <div class="name">
+                                                <strong>종목명종목명</strong>
+                                                <span>000000</span>
+                                            </div>
+                                            <!-- // -->
+                                            <div class="guide">
+                                                국내 대한민국 도시가스 공급 업체
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="info">
+                                                <span class="">12.1 매도</span>
+                                                <span>10,0000</span>
+                                                <span class="up">+192.2% 수익</span>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- //최근매도종목 -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="gap-2 shorcutBtn d-grid rmt-20">
+                                    <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                </div>
+                                <!-- // -->
                             </div>
                             <!-- // -->
                         </div>
-                        <!-- // -->
+                    </section>
+
+                    <section class="section section-npd rmt-8 feature">
+                        <div class="feature-head">
+                            <h3 class=""><span>AI특징주 포착</span>포탈 인기 검색 신규 등장</h3>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#feature-pop2">포착성과 〉</button>
+                        </div>
+                        <div class="feature-body">
+                            <div class="swiper feature-swiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="feature-box">
+                                            <div class="feabox-left">
+                                                <div><span>3/26 </span>이트론</div>
+                                                <div class="feabox-bot text-truncate">(3/24) 15%강세...2차전지 장비 공급 계약 15%강세...2차전지 장비 공급 계약</div>
+                                            </div>
+                                            <div class="feabox-right">
+                                                <div class="feabox-right-txt"><span>+8.2%</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+
+
+
+                            <script>
+                                const swiper3 = new Swiper('.feature-swiper2', {
+                                    spaceBetween: 20,
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                    },
+                                });
+                            </script>
+                        </div>
+
+                        <!--modal-->
+                        <div class="modal fade" id="feature-pop2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    <div>
+                                        <div class="modal-title">
+                                            포탈 인기 검색 신규 등장
+                                        </div>
+                                        <div class="modal-sub">
+                                            주요 포탈사이트 인기 검색에 신규로 등장한 종목입니다. 검색 빈도가
+                                            높은 종목은 많은 거래량을 동반하여 강세를 나타내는 경우가 종종 있습니다.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="modal-title">
+                                            포착 종목 주요 성과
+                                        </div>
+                                        <div class="modal-sub2">
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    <em>3/27</em>
+                                                    이트론이트론이트론이트론이트론이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    <em>3/27</em>
+                                                    이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                            <div class="sub2-box">
+                                                <div class="sub2-box-name text-truncate">
+                                                    <em>3/27</em>
+                                                    이트론
+                                                </div>
+                                                <div>
+                                                    <span>5일 누적수익률 &nbsp;&nbsp;</span>
+                                                    <strong>+19.08%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--modal-->
+                    </section>
+
+                </main>
+
+                <footer id="footer" class="clearfix">
+                    <menu id="fmenu">
+                        <figure class="figure">
+                            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                            <figcaption class="text-center figure-caption rmt-7">로그인</figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                            <figcaption class="text-center figure-caption rmt-7">PC버전</figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                            <figcaption class="text-center figure-caption">씽크풀앱<br>다운로드</figcaption>
+                        </figure>
+                    </menu>
+
+                    <menu id="fmenu2">
+                        <a href="#">고객센터</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </menu>
+
+                    <div class="copyright">
+                        <span class="d-block">@Thinkpool</span>
+                        <span class="d-block">
+                            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                        </span>
                     </div>
-                </section>
+                </footer>
 
-            </main>
+            </div>
+            <!-- /wrap -->
+            <!-- bootstrap js -->
 
-            <footer id="footer" class="clearfix">
-                <menu id="fmenu">
-                    <figure class="figure">
-                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
-                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
-                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
-                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
-                    </figure>
-                </menu>
 
-                <menu id="fmenu2">
-                    <a href="#">고객센터</a>
-                    <a href="#">이용약관</a>
-                    <a href="#">개인정보처리방침</a>
-                </menu>
-
-                <div class="copyright">
-                    <span class="d-block">@Thinkpool</span>
-                    <span class="d-block">
-                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
-                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
-                    </span>
-                </div>
-            </footer>
-            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <!-- //bootstrap js -->
         </div>
-        <!-- /wrap -->
-        <!-- bootstrap js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <!-- //bootstrap js -->
-    </div>
-    <!-- //app -->
+        <!-- //app -->
 
-    
-    
-  </body>
+
+
+    </body>
+
 </html>

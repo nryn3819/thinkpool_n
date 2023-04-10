@@ -1,0 +1,169 @@
+#wrap{
+  #container{
+    .feature{
+      div.feature-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 0px 17px;
+
+        h3{
+          font-size: 16px;
+          margin: 0;
+          line-height: 20px;
+          font-weight: 700;
+
+          span{
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            color: #5368ff;
+          }
+        }
+        button{
+          position: absolute;
+          right: 10px;
+          border: none;
+          background: none;
+          padding: 0;
+          margin: 0;
+          font-size: 13px;
+          color: #999;
+        }
+      }
+      .modal{
+        .modal-dialog{
+          padding: 0px 17px;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 720px;
+
+          .modal-content{
+            border: none;
+            padding: 40px 30px;
+            border-radius: 16px;
+
+            button.btn-close{
+              position: absolute;
+              right: 15px;
+              top: 15px;
+            }
+            div {
+              .modal-title {
+                font-size: 16px;
+                font-weight: 700;
+                color: #070910;
+                margin-bottom: 15px;
+              }
+
+              .modal-sub {
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 30px;
+              }
+            }
+            div{
+              .modal-sub2{
+                .sub2-box{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background: #f5f6fa;
+                  border-radius: 6px;
+                  padding: 6px 12px;
+                  margin-bottom: 5px;
+
+                  div.sub2-box-name{
+                    width: calc(100% - 170px);
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #070910;
+
+                    em{
+                      color: #999;
+                      font-size: 13px;
+                    }
+                  }
+                  div{
+                    span{
+                      font-weight: 500;
+                      font-size: 13px;
+                      color: #999;
+                    }
+                    strong{
+                      font-size: 16px;
+                      font-weight: 700;
+                      color: #fc525b;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .feature-body{
+        padding: 22px 17px 0;
+
+        .feature-box{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          background: #f7f7f7;
+          border-radius: 12px;
+          margin-bottom: 10px;
+
+          .feabox-left{
+            width: 74%;
+          }
+
+          div{
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+
+            div{
+              span{
+                color: #999;
+                font-weight: 400;
+              }
+            }
+            .feabox-bot{
+              font-weight: 400;
+              font-size: 13px;
+            }
+          }
+          .feabox-right{
+            width: 20%;
+
+            .feabox-right-txt{
+              font-size: 14px;
+              font-weight: 400;
+              text-align: center;
+              float: right;
+
+              span{
+                font-weight: 700;
+                display: block;
+                background: #ff4150;
+                color: #fff;
+                border-radius: 6px;
+                padding: 6px 0;
+                width: 70px;
+
+                em{
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-slide .feature-box:last-child{
+  margin-bottom: 0 !important;
+}
