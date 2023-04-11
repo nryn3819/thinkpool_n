@@ -61090,7 +61090,7 @@ table tbody tr td a {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 0px 17px;
+  padding-bottom: 22px;
 }
 #wrap #container .feature div.feature-head h3 {
   font-size: 16px;
@@ -61106,7 +61106,7 @@ table tbody tr td a {
 }
 #wrap #container .feature div.feature-head button {
   position: absolute;
-  right: 10px;
+  right: 0;
   border: none;
   background: none;
   padding: 0;
@@ -61171,12 +61171,13 @@ table tbody tr td a {
   color: #fc525b;
 }
 #wrap #container .feature .feature-body {
-  padding: 22px 17px 0;
+  padding: 0px 17px;
 }
 #wrap #container .feature .feature-body .feature-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 85px;
   padding: 15px;
   background: #f7f7f7;
   border-radius: 12px;
