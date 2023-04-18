@@ -63,7 +63,7 @@
   margin-bottom: 5px;
 }
 #wrap #container .feature .modal .modal-dialog .modal-content div .modal-sub2 .sub2-box div.sub2-box-name {
-  width: calc(100% - 170px);
+  width: calc(100% - 133px);
   font-size: 16px;
   font-weight: 400;
   color: #070910;
@@ -123,7 +123,6 @@
 #wrap #container .feature .feature-body .feature-box .feabox-right .feabox-right-txt span {
   font-weight: 700;
   display: block;
-  background: #ff4150;
   color: #fff;
   border-radius: 6px;
   padding: 6px 0;
@@ -135,4 +134,12 @@
 
 .swiper-slide .feature-box:last-child {
   margin-bottom: 0 !important;
+}
+
+.up-bg {
+  background: #ff4150;
+}
+
+.down-bg {
+  background: #5367FF;
 }
