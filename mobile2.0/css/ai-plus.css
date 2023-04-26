@@ -127,6 +127,7 @@
   border-radius: 6px;
   padding: 6px 0;
   width: 70px;
+  background: #CBCBCB;
 }
 #wrap #container .feature .feature-body .feature-box .feabox-right .feabox-right-txt span em {
   font-weight: 400;
@@ -137,9 +138,9 @@
 }
 
 .up-bg {
-  background: #ff4150;
+  background: #ff4150 !important;
 }
 
 .down-bg {
-  background: #5367FF;
+  background: #5367FF !important;
 }
