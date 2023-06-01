@@ -141,7 +141,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 163px;
+  max-height: 163px;
   padding: 20px 15px 30px;
   overflow:hidden;
 
@@ -152,11 +152,18 @@
     width: 100%;
     height: 100%;
     z-index: 10;
+
+    img{
+        width:100%;
+        height:100%;
+    }
   }
   .bnr-img {
     position: relative;
     display: block;
     width: 100%;
+    max-width:330px;
+    margin:0 auto;
     height: auto;
     z-index: 20;
   }
