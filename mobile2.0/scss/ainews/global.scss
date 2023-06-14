@@ -130,6 +130,8 @@
   padding: 5px 7px;
   border-radius: 0 0 6px 6px;
   display: none;
+  max-height: 520px;
+  overflow-y: auto;
 
   .autocomplete-suggestion {
     display: flex;
@@ -138,6 +140,10 @@
     border-bottom: 1px solid #efefef;
     gap: 15px;
     padding: 4px 3px 6px 3px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
 
     &::after {
       content: "";

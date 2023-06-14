@@ -258,9 +258,11 @@
                         <div class="beta">
                             <em>Beta</em>
                         </div>
+                        <!-- //베타 블릿 -->
                         <script>
                             // opensch클릭시 beta 가리기, 닫기 버튼 클릭시 beta 보이기
                             // 임시방편 이므로 vue 로 변경해도 됩니다.(권장)
+                            // sideMenu 클릭시 beta 가리기, 닫을시(offcanvas-backdrop 클릭) 보이기
 
                             const betaBullet = document.querySelector('.beta');
                             const hiddenArea = document.querySelector('.searcharea');
@@ -274,6 +276,19 @@
                             document.querySelector('.sch-hide').addEventListener('click', () => {
                                 betaBullet.style.display = 'block';
                             });
+
+                            const sideM = document.getElementById("sideMenu");
+                            sideM.addEventListener('click', () => {
+                                const ofcs = document.querySelector('.offcanvas');
+                                if (ofcs.classList.contains('show')) {
+                                    betaBullet.style.display = 'none';
+                                } else {
+                                    betaBullet.style.display = 'block';
+                                }
+                            })
+                            document.getElementsByClassName('.offcanvas-backdrop').addEventListener('click', () => {
+                                betaBullet.style.display = 'block';
+                            })
                         </script>
                         <!-- beta표시 -->
                         <form action="">
@@ -300,6 +315,19 @@
 
                                     term = term.toLowerCase();
                                     const choices = [
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
+                                        ["나스닥", "LMAT", "르메트르 베스클러"],
                                         ["나스닥", "LMAT", "르메트르 베스클러"],
                                         ["나스닥", "LMAT", "르메트르 베스클러"],
                                         ["나스닥", "LMAT", "르메트르 베스클러"]
