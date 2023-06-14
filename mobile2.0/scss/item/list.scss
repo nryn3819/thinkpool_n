@@ -113,8 +113,14 @@
           color: #000;
 
           &.aipost {
+            display: flex;
             max-width: calc(100% - 38px);
             padding-right: 3px;
+            align-items: center;
+
+            span {
+              padding-right: 0;
+            }
           }
 
           &.eiei {
@@ -154,10 +160,9 @@
         padding-top: 8px;
         float: left;
 
-        &.gbl{
-
-          span{
-            padding-right:7px;
+        &.gbl {
+          span {
+            padding-right: 7px;
           }
         }
 
