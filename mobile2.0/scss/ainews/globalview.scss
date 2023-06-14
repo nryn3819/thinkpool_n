@@ -1,8 +1,9 @@
 .gblbox {
   display: block;
   width: 100%;
-  float: left;
+
   padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .infoguide {
@@ -45,4 +46,84 @@
   line-height: 25px;
   font-weight: 500;
   color: #333;
+}
+
+.gblview {
+  display: block;
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+
+  .ogl-link {
+    display: block;
+    width: 100%;
+    float: left;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #666;
+      word-wrap: break-word;
+      white-space: wrap;
+      margin-top: 10px;
+      text-decoration: underline !important;
+    }
+  }
+
+  .textcontent {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    float: left;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500 !important;
+      color: #333;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #666;
+      padding-top: 10px;
+    }
+  }
+
+  .gbl-v-chart {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      color: #333;
+      font-weight: 500 !important;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      padding-top: 10px;
+    }
+  }
 }
