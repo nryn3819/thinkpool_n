@@ -339,7 +339,7 @@
                                 renderItem: function (item, search) {
                                     search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&amp;");
                                     const re = new RegExp("(" + search.split(" ").join("|") + ")", "gi");
-                                    return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + "<em>" + item[0] + "</em>" + "<div><span class='nick'>" + item[1].replace(re, "<em>$1</em>") + "</span>" + "<span>" + item[2] + "</span>" + "</div>" + "</div>";
+                                    return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + "<em>" + item[0] + "</em>" + "<div><span class='nick'>" + item[1].replace(re, "<em>$1</em>") + "</span>" + "<span>" + "<em>" + item[2] + "</em>" + "</span>" + "</div>" + "</div>";
                                 },
                                 onSelect: function (e, term, item) {
                                     console.log('Item "' + item.getAttribute("data-number") + " (" + item.getAttribute("data-lang") + ')" selected by ' + (e.type == "keydown" ? "pressing enter" : "mouse click") + ".");
