@@ -33,6 +33,12 @@
     &:hover {
       color: #000;
     }
+
+    &.glbNews{
+      display:flex;
+      align-items:center;
+      gap:3px;
+    }
   }
 }
 
@@ -49,15 +55,14 @@
 }
 
 .beta {
-  position: fixed;
-  top: 41px;
-  width: 28px;
-  height: 15px;
+  display:block;
+  width: 28px !important;
+  height: 15px !important;
   line-height: 15px;
   text-align: Center;
   background: #5368ff;
   border-radius: 4px;
   font-size: 10px;
   color: #fff;
-  z-index: 100;
+  margin-top:1px;
 }

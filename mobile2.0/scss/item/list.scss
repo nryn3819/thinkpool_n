@@ -113,7 +113,7 @@
           color: #000;
 
           &.aipost {
-            display: flex;
+            display: block;
             max-width: calc(100% - 38px);
             padding-right: 3px;
             align-items: center;
@@ -163,6 +163,11 @@
         &.gbl {
           span {
             padding-right: 7px;
+
+            &.itemname {
+              display: inline-block;
+              max-width: calc(100% - 164px);
+            }
           }
         }
 

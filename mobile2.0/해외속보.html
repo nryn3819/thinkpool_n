@@ -241,7 +241,7 @@
                 <menu class="globalNavigation float-start">
                     <h3 class="visually-hidden">네비게이션</h3>
                     <a href="/news/breakingNews" class="" aria-current="page"><span>주요속보</span></a>
-                    <a href="" class="active glbNews" aria-current="page"><span>해외</span></a>
+                    <a href="" class="active glbNews" aria-current="page"><span>해외</span><em class="beta">Beta</em></a>
                     <a href="/news/supply" class=""><span>수급</span></a> <a href="/news/theme" class=""><span> 테마</span></a>
                     <a href="/news/report" class=""><span>리포트</span></a> <a href="/news/record" class=""><span>실적</span></a>
                     <a href="/news/notice" class=""><span>공시</span></a> <a href="/news/item" class=""><span>종목</span></a>
@@ -255,42 +255,6 @@
                 <section class="section noPadding">
 
                     <div class="sch-gbl">
-                        <div class="beta">
-                            <em>Beta</em>
-                        </div>
-                        <!-- //베타 블릿 -->
-                        <script>
-                            // opensch클릭시 beta 가리기, 닫기 버튼 클릭시 beta 보이기
-                            // 임시방편 이므로 vue 로 변경해도 됩니다.(권장)
-                            // sideMenu 클릭시 beta 가리기, 닫을시(offcanvas-backdrop 클릭) 보이기
-
-                            const betaBullet = document.querySelector('.beta');
-                            const hiddenArea = document.querySelector('.searcharea');
-
-                            betaBullet.style.left = document.querySelector('.glbNews').getBoundingClientRect().left + 1 + 'px';
-                            // 여기까지는 필수로 들어가야 하는 스크립트입니다.
-
-                            document.getElementById('opensch').addEventListener('click', () => {
-                                betaBullet.style.display = 'none';
-                            });
-                            document.querySelector('.sch-hide').addEventListener('click', () => {
-                                betaBullet.style.display = 'block';
-                            });
-
-                            const sideM = document.getElementById("sideMenu");
-                            sideM.addEventListener('click', () => {
-                                const ofcs = document.querySelector('.offcanvas');
-                                if (ofcs.classList.contains('show')) {
-                                    betaBullet.style.display = 'none';
-                                } else {
-                                    betaBullet.style.display = 'block';
-                                }
-                            })
-                            document.querySelector('.offcanvas-backdrop').addEventListener('click', () => {
-                                betaBullet.style.display = 'block';
-                            })
-                        </script>
-                        <!-- beta표시 -->
                         <form action="">
                             <input id="globalItemSch" type="text" placeholder="어떤 미국주식이 궁금하신가요? 종목명, 심볼검색">
                             <button type="submit" class="gblItemSch">
@@ -371,156 +335,19 @@
                                     <div class="top">
                                         <div class="obj aipost text-truncate float-start">
                                             <span class="float-start rmr-5">
-                                                <img src="https://img.thinkpool.com/www/mobile/img/bu_ai.png" alt="" width="14px" class="float-start rmt-2">
+                                                <img src="https://img.thinkpool.com/www/mobile/img/bu_ai.png" alt="" width="14px" class="float-start rmt-3">
                                             </span>
-                                            가나다라마바사아자차카타파하
+                                            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
                                         </div>
                                         <span class="new float-start">NEW</span>
                                     </div>
                                     <div class="btm gbl">
                                         <span class="date float-start">2021/02/12 09:00</span>
                                         <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
+                                        <span class="itemname text-truncate float-start">가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</span>
                                     </div>
                                 </div>
                                 <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post empty sm">
-                                    <span>
-                                        # <em>MSFT / 마이크로소프트</em> 과(와) 관련된<br>
-                                        최근 컨텐츠가 없습니다.
-                                    </span>
-                                </div>
 
 
                                 <!-- 
@@ -552,149 +379,20 @@
                                     <div class="top">
                                         <div class="obj aipost text-truncate float-start">
                                             <span class="float-start rmr-5">
-                                                <img src="https://img.thinkpool.com/www/mobile/img/bu_ai.png" alt="" width="14px" class="float-start rmt-2">
+                                                <img src="https://img.thinkpool.com/www/mobile/img/bu_ai.png" alt="" width="14px" class="float-start rmt-3">
                                             </span>
-                                            가나다라마바사아자차카타파하
+                                            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
                                         </div>
                                         <span class="new float-start">NEW</span>
                                     </div>
                                     <div class="btm gbl">
                                         <span class="date float-start">2021/02/12 09:00</span>
                                         <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
+                                        <span class="itemname text-truncate float-start">가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</span>
                                     </div>
                                 </div>
-                                <!-- // -->
 
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="post">
-                                    <div class="top">
-                                        <div class="obj aipost text-truncate float-start">가나다라마바사아자차카타파하</div>
-                                        <span class="new float-start">NEW</span>
-                                    </div>
-                                    <div class="btm gbl">
-                                        <span class="date float-start">2021/02/12 09:00</span>
-                                        <span class="nickname float-start be">LOPE</span>
-                                        <span class="itemname float-start">그랜드 캐니언 에듀케이션</span>
-                                    </div>
-                                </div>
-                                <!-- // -->
+                                
 
                                 <div class="post empty sm">
                                     <span>
