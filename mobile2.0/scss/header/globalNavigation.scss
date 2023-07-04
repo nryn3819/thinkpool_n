@@ -34,10 +34,10 @@
       color: #000;
     }
 
-    &.glbNews{
-      display:flex;
-      align-items:center;
-      gap:3px;
+    &.glbNews {
+      display: flex;
+      align-items: center;
+      gap: 3px;
     }
   }
 }
@@ -55,14 +55,13 @@
 }
 
 .beta {
-  display:block;
-  width: 28px !important;
+  display: block;
   height: 15px !important;
   line-height: 15px;
   text-align: Center;
-  background: #5368ff;
+  color: #5368ff;
   border-radius: 4px;
   font-size: 10px;
-  color: #fff;
-  margin-top:1px;
+  margin-top: 1px;
+  font-style: italic;
 }
