@@ -46,6 +46,14 @@
                 right:0;
             }
         }
+        
+        &.gblform{
+            input.form-control{
+                &:focus{
+                    background:#fff;
+                }
+            }
+        }
 
         .form-inline{
             position:relative;
