@@ -136,6 +136,7 @@
   background: #fff;
   margin-top: -3px;
   z-index: 1000;
+  display:none;
 }
 .autocomplete-suggestion {
   display: flex;
@@ -187,9 +188,8 @@
 }
 
 .page-top-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  display:block;
   width: 100%;
   height: 80px;
   background: #10A37F;
