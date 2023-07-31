@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>thinkpool</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- basic css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"> </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- bxslider -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- basic js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
+        <!-- //header_w -->
+
+        <!-- 결제 헤더 부분 -->
+        <header id="p-header_w">
+            <div id="p-header">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="http://img.thinkpool.com/www/img/logoforpay.png" alt="씽크풀 전문가방송">
+                    </a>
+                </h1>
+                <div class="info_menu">
+                    <h2 class="sr-only">사용자메뉴</h2>
+
+                    <div class="info_L">
+                        <ul>
+                            <li><a href="#">씽크풀 홈</a></li>
+                            <li><a href="#">전문가방송</a></li>
+                            <li><a href="#">카톡리딩</a></li>
+                        </ul>
+                    </div>
+                    <!-- //좌측메뉴 -->
+                    <div class="info_R">
+                        <ul>
+                            <li><a href="#">**님 로그아웃</a></li>
+                            <li><a href="#">마이페이지</a></li>
+                            <!-- //로그인후 -->
+
+                            <!-- <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li> -->
+                            <!-- // 로그인전 -->
+
+                            <li><a href="#">공동인증센터</a></li>
+                            <li><a href="#">원격지원</a></li>
+                        </ul>
+                    </div>
+                    <!-- //우측메뉴 -->
+                </div>
+            </div>
+        </header>
+        <!-- 결제 헤더 -->
+
+        <section id="container_w">
+            <div id="container">
+                <h2 class="sr-only">본문내용</h2>
+
+                <!-- 결제페이지 시작 -->
+                <div id="content" class="sub nbg mt-40">
+                    <div class="sub-content">
+                        <h3 class="sub-title">나의 서비스</h3>
+
+                        <div class="sub-section pay">
+                            <div id="payWrap">
+
+
+                                <div class="pay-section mt-0">
+                                    <strong class="pay-title">회원정보</strong>
+
+                                    <div class="table_w">
+                                        <table width="100%" class="table-lft pay-table">
+                                            <colgroup>
+                                                <col width="140">
+                                                <col width="351">
+                                                <col width="140">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>이름</th>
+                                                    <td>
+                                                        <span class="bold">홍길동</span>
+                                                    </td>
+                                                    <th>아이디</th>
+                                                    <td>
+                                                        <span class="bold">Holand89102</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>필명</th>
+                                                    <td >
+                                                        <span>Red신호등</span>
+                                                    </td>
+                                                    <th>연락처</th>
+                                                    <td>
+                                                        <span>010-000-0000</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="guide pay">
+                                            <span>휴대폰번호가 틀릴 경우 전문가들이 VIP회원들에게 보내는 SMS 를 받지 못할 수 있으니 정확하게 입력해주세요</span>
+                                        </div>
+                                    </div>
+                                    <!-- 테이블 -->
+                                </div>
+                                <!-- //회원정보 -->
+
+                                <div class="pay-section">
+                                    <strong class="pay-title">서비스 가입 현황</strong>
+
+                                    <div class="item_board_nav">
+                                        <h4 class="sr-only">나의서비스 카테고리</h4>
+                                        <ul class="nav nav-tabs">
+                                            <li role="presentation" class="active"><a href="#">서비스 결제내역</a></li>
+                                            <li role="presentation"><a href="#">신용카드 정기결제</a></li>
+                                            <li role="presentation"><a href="#">현금영수증</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="my-payment-sch">
+                                        <div>기간별 조회</div>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">2021</option>
+                                                <option value="">2022</option>
+                                                <option value="">2023</option>
+                                                <option value="">2024</option>
+                                            </select>
+                                            <span>년</span>
+                                            <select name="" id="">
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                            </select>
+                                            <span>월</span>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">2021</option>
+                                                <option value="">2022</option>
+                                                <option value="">2023</option>
+                                                <option value="">2024</option>
+                                            </select>
+                                            <span>년</span>
+                                            <select name="" id="">
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                            </select>
+                                            <span>월</span>
+                                        </div>
+                                        <button>검색</button>
+                                    </div>
+                                    <!-- 기간별 검색 -->
+                                </div>
+
+                                <div class="pay-section mt-40">
+                                    <strong class="pay-title">서비스 결제내역</strong>
+
+                                    <div class="table_w">
+                                        <table width="100%" class="table-lft pay-table">
+                                            <colgroup>
+                                                <col width="140">
+                                                <col width="351">
+                                                <col width="140">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">서비스명</th>
+                                                    <td>
+                                                        <div>
+                                                            <span class="bold">카톡리딩 심우재대표 3개월</span>
+                                                        </div>
+                                                        <span>(1,440,000원)</span>
+                                                    </td>
+                                                    <th scope="row">정기결제 상태</th>
+                                                    <td>
+                                                        <div>
+                                                            <span class="dn bold">사용중</span>
+                                                            <button class="tmnt" data-toggle="modal" data-target="#sv_tmnt">해지 신청</button>
+                                                        </div>
+                                                        <span>※정기결제해지는 남은 회차만 해지 가능합니다.</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">사용기간</th>
+                                                    <td>
+                                                        <span>2023.02.01 ~ 2023.06.01</span>
+                                                    </td>
+                                                    <th scope="row">결제일</th>
+                                                    <td>2023.02.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">결제예정금액</th>
+                                                    <td class="bgCol2" colspan="3">
+                                                        <span class="bold">480,000원</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 테이블 -->
+
+                                    <div class="table_w mt-20">
+                                        <table width="100%" class="table-lft pay-table">
+                                            <colgroup>
+                                                <col width="140">
+                                                <col width="351">
+                                                <col width="140">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">서비스명</th>
+                                                    <td>
+                                                        <div>
+                                                            <span class="bold">카톡리딩 심우재대표 3개월</span>
+                                                        </div>
+                                                        <span>(1,440,000원)</span>
+                                                    </td>
+                                                    <th scope="row">정기결제 상태</th>
+                                                    <td>
+                                                        <div>
+                                                            <span class="bold">사용종료</span>
+                                                            <button class="tmnt" data-toggle="modal" data-target="#sv_tmnt">해지 신청</button>
+                                                        </div>
+                                                        <span>※정기결제해지는 남은 회차만 해지 가능합니다.</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">사용기간</th>
+                                                    <td>
+                                                        <span>2023.02.01 ~ 2023.06.01</span>
+                                                    </td>
+                                                    <th scope="row">결제일</th>
+                                                    <td>2023.02.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">결제예정금액</th>
+                                                    <td class="bgCol2" colspan="3">
+                                                        <span class="bold">480,000원</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 테이블 -->
+
+                                    <div class="table_w mt-20">
+                                        <table width="100%" class="table-lft pay-table">
+                                            <colgroup>
+                                                <col width="140">
+                                                <col width="351">
+                                                <col width="140">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        <span class="empty">결제한 내역이 없습니다.</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <div class="guide pay">
+                                            <span>서비스 결제내역은 최근 6개월까지 내역만 확인하실 수 있습니다.</span>
+                                            <span>일반신용카드 결제 해지신청은 <a href="#">1:1상담창으로</a> 이동됩니다.</span>
+                                            <span>정기결제는 서비스 중도해지는 불가하나 정기결제 해지는 정기결제 탭에서 해지 신청이 가능합니다.</span>
+                                            <span>서비스 및 결제 관련 문의는 ☎ 02-6938-2055 , 1666-6300 으로 문의해 주시기 바랍니다.</span>
+                                        </div>
+                                    </div>
+                                    <!-- 테이블 -->
+
+                                </div>
+
+
+                            </div>
+                            <!-- payWrap -->
+
+                            <div class="modal fade" id="sv_tmnt">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="tmnt-text">
+                                                <span class="dn">서비스 해지 시</span>, <br>
+                                                ☎ 02-6938-2055 , 1666-6300 <span class="up">전화주시거나 <br>
+                                                    1:1 상담창</span>으로 문의 주시면 바로 답변 드리겠습니다
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                                        </div>
+                                        <!-- //modal-footer -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 서비스해지 모달 -->
+                            <div class="modal fade" id="py_tmnt">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="tmnt-text">
+                                                <span class="dn">정기결제 해지 시,</span> <br>
+                                                가입하신 서비스는 남은 기간 동안은 사용 가능하며 <br>
+                                                추후 예정되어 있던 정기결제만 해지 됩니다.
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="table_w mt-20">
+                                                <table width="100%" class="table-lft pay-table">
+                                                    <colgroup>
+                                                        <col width="160">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">서비스</th>
+                                                            <td>
+                                                                <span class="bold">심우재대표 3개월</span> (1,440,000원)
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">최초등록일</th>
+                                                            <td>
+                                                                <span class="">2023/02/04</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">남은회차</th>
+                                                            <td>
+                                                                <span class="">3회차 중 <em class="bold dn">1회</em> 남음</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">결제예정금액</th>
+                                                            <td>
+                                                                <span class="">480,000원</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <p class="py-table-pg">정기결제를 해지하곗습니까?</p>
+
+                                            </div>
+                                            <!-- 테이블 -->
+
+                                        </div>
+                                        <!-- modal-body -->
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal">아니요</button>
+                                            <button class="btn btn-primay">예</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 정기결제 해지 모달 -->
+                        </div>
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+            </div>
+            <!-- //contianer -->
+        </section>
+        <!-- //container -->
+        <footer id="footer_w">
+            <h2 class="sr-only">하단영역</h2>
+            <div id="realfooter">
+                <div class="fmenu">
+                    <h3 class="sr-only">약관및지원메뉴</h3>
+                    <ul>
+                        <li><a href="#">서비스 약관/정책</a></li>
+                        <li><a href="#" class="bold">개인정보 처리방침</a></li>
+                        <li><a href="#">원격지원</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">회사소개</a></li>
+                    </ul>
+                </div>
+                <!-- //fmenu -->
+                <div class="fsite">
+                    <h3 class="sr-only">관련사이트이동</h3>
+                    <div class="dropup">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                            패밀리사이트
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">로그인도용방지</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">카드터치인증</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">기업씽크풀</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">씽크풀 공식블로그</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //d_down -->
+                </div>
+                <!-- //fsite -->
+                <address>
+                    <h3 class="sr-only"></h3>
+                    <p>
+                        씽크풀사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                        <br>
+                        또한 이용자는 본 정보를 무단 복사, 전재 할 수 없습니다.
+                        <br>
+                        <em>㈜씽크풀</em>
+                        서울시 영등포구 국제금융로 70, 15층 (여의도동, 미원빌딩)
+                        <span class="copy">
+                            Copyright since 1999 &copy; ThinkPool Co.,Ltd. All Rights Reserved
+                        </span>
+                    </p>
+                </address>
+                <!-- //address -->
+            </div>
+        </footer>
+        <!-- //footer -->
+        <div id="allmenu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="allmenyLabel" aria-hidden="hidden">
+            <h2 class="sr-only">사이트전체메뉴</h2>
+            <div class="allmenu_wrap modal-dialog">
+                <div class="allmenu_header">
+                    <strong>전체메뉴보기</strong>
+                    <button class="close" data-dismiss="modal" aria-label="Close"><img src="img/header/allmenu_close.png" title="닫기"></button>
+                </div>
+                <!-- //allmenu_header -->
+                <div class="allmenu_content">
+                    <div class="menu">
+                        <ul>
+                            <li class="menu_list">
+                                <div class="amenu thumb m01">
+                                    <strong>AI정보분석</strong>
+                                    <ul>
+                                        <li><a href="#">AI정보분석 홈</a></li>
+                                        <li><a href="#">이슈</a></li>
+                                        <li><a href="#">주요지수</a></li>
+                                        <li><a href="#">투자자별매매동향</a></li>
+                                        <li><a href="#">업종/테마</a></li>
+                                        <li><a href="#">시세분석(특징주)</a></li>
+                                        <li><a href="#">뉴스</a></li>
+                                        <li><a href="#">공시</a></li>
+                                        <li><a href="#">리포트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu thumb m02">
+                                    <strong>AI종목추천</strong>
+                                    <ul>
+                                        <li><a href="#">AI종목추천 홈</a></li>
+                                        <li><a href="#">AI추천봇 전체보기</a></li>
+                                        <li><a href="#">(적응형)AI어드바이저</a></li>
+                                        <li><a href="#">MY추천봇</a></li>
+                                        <li><a href="#">이용안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu thumb m03">
+                                    <strong>AI매매신호</strong>
+                                    <ul>
+                                        <li><a href="#">AI매매신호 홈</a></li>
+                                        <li><a href="#">나의 AI매매신호</a></li>
+                                        <li><a href="#">서비스 이용안내</a></li>
+                                        <li><a href="#">AI매매신호 안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu">
+                                    <strong>토론실</strong>
+                                    <ul>
+                                        <li><a href="#">소셜분석</a></li>
+                                        <li><a href="#">증권가속보</a></li>
+                                        <li><a href="#">주식종합토론</a></li>
+                                        <li><a href="#">유머방</a></li>
+                                        <li><a href="#">정치방</a></li>
+                                    </ul>
+                                </div>
+                                <div class="amenu">
+                                    <strong>고객센터</strong>
+                                    <ul>
+                                        <li><a href="#">고객센터 홈</a></li>
+                                        <li><a href="#">회원정보관리</a></li>
+                                        <li><a href="#">공지사항 및 이용문의</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_list">
+                                <div class="amenu">
+                                    <strong>MY종목홈</strong>
+                                    <ul>
+                                        <li><a href="#">MY종목홈</a></li>
+                                    </ul>
+                                </div>
+                                <div class="amenu">
+                                    <strong>기타</strong>
+                                    <ul>
+                                        <li><a href="#">원격지원</a></li>
+                                        <li><a href="#">회사소개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //menu -->
+                    <div class="side">
+                        <div class="side01">
+                            <ul>
+                                <li><a href="#">증권방송</a></li>
+                                <li><a href="#">라씨트레이더</a></li>
+                                <li><a href="#">스탁론</a></li>
+                            </ul>
+                        </div>
+                        <div class="side02">
+                            <strong>패밀리 사이트</strong>
+                            <ul>
+                                <li><a href="#">로그인도용방지</a></li>
+                                <li><a href="#">카드터치인증</a></li>
+                                <li><a href="#">라씨매매비서</a></li>
+                                <li><a href="#">씽크풀 공식 블로그</a></li>
+                                <li><a href="#">기업 씽크풀</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //side -->
+                </div>
+                <!-- //allmenu_content -->
+            </div>
+            <!-- //allmenu_wrap -->
+        </div>
+        <!-- 
+                        //위치는 어디에 두어도 상관없음 작업시 주석 삭제
+                     -->
+        <!-- //allmenu -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
