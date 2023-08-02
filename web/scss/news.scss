@@ -169,6 +169,9 @@
       color: #666;
 
       &.nick {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-weight: 500;
         color: #333;
       }

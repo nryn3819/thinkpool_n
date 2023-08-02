@@ -301,3 +301,28 @@
     float: right;
   }
 }
+
+// 해외주식속보
+
+.global_content {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.gblbox {
+  .infoguide {
+    span {
+      em {
+        font-style: normal;
+      }
+    }
+  }
+
+  .gbl-v-chart {
+    span {
+      max-width:530px;
+    }
+  }
+}
