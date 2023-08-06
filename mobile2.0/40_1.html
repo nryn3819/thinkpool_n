@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+
+                    <div class="toplogo">
+                        <a href="#"><img src="./img/toplogo.png" alt="씽크풀로고" width="32" class="float-start"></a>
+                    </div>
+                    <!-- //이전페이지 -->
+
+                    <div class="headerTitle subTitle text-truncate">
+                        <strong>AI 종목추천</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn subSch">
+                        <button type="button" class="schButton">종목검색</button>
+                    </div>
+
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+
+                <div class="allNav">
+                    <menu class="globalNavigation float-start">
+                        <h3 class="visually-hidden">네비게이션</h3>
+                        <a href="#">AI추천홈</a>
+                        <a href="#">오늘의종목</a>
+                        <a href="#">종목추천</a>
+                        <a href="#">포트폴리오</a>
+                        <a href="#">나의서비스</a>
+                        <a href="#">이용안내</a>
+                    </menu>
+                    <!-- //gloabal navi -->
+                </div>
+                <!-- // -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section class="section noPadding">
+                    <div class="msvc-nav-w">
+                        <nav class="msvc-nav">
+                            <a class="nav-link active" aria-current="page" href="#">모멘텀특징주</a>
+                            <a class="nav-link" href="#">시세특징주</a>
+                            <a class="nav-link" href="#">수급특징주</a>
+                            <a class="nav-link" href="#">실적특징주</a>
+                        </nav>
+                    </div>
+
+                    <div class="rcv_bnr">
+                        <div class="text">
+                            <strong>상승하는 종목은 그 이유가 있다.</strong>
+                            <span>상승 모멘텀 발생 종목 포착</span>
+
+                            <!-- <strong>급등 종목에는 특별한 패턴이 존재한다.</strong>
+                            <span>시세 급등이 예상되는 종목 발굴</span>
+
+                            <strong>종목마다 주도하는 세력들이 있다.</strong>
+                            <span>세력들의 수급을 분석하여 종목 포착</span>
+
+                            <strong>실적이 바탕이 되야 꾸준히 상승한다.</strong>
+                            <span>실적 호전이 예상되는 종목 발굴</span> -->
+                        </div>
+                        <!-- // -->
+                        <div class="per">
+                            <div class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div>
+                                            <em>1년 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화1</span>
+                                        </div>
+                                    </div>
+                                    <!-- 1year -->
+                                    <div class="carousel-item">
+                                        <div>
+                                            <em>6개월 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화6</span>
+                                        </div>
+                                    </div>
+                                    <!-- 6month -->
+                                    <div class="carousel-item">
+                                        <div>
+                                            <em>3개월 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화3</span>
+                                        </div>
+                                    </div>
+                                    <!--3month -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="rcv-btn">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#afterLogin">
+                                <span>
+                                    <em>5,500원</em>에 <em>상승종목</em> 받기
+                                </span>
+                                <svg class="blink" xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.105 0.209209C12.3784 -0.0697365 12.8216 -0.0697365 13.095 0.209209L17.295 4.49492C17.5683 4.77387 17.5683 5.22613 17.295 5.50508L13.095 9.79079C12.8216 10.0697 12.3784 10.0697 12.105 9.79079C11.8317 9.51184 11.8317 9.05958 12.105 8.78064L15.11 5.71429H1.2C0.813401 5.71429 0.5 5.39449 0.5 5C0.5 4.60551 0.813401 4.28571 1.2 4.28571H15.11L12.105 1.21936C11.8317 0.940416 11.8317 0.488155 12.105 0.209209Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- 아래 두 버튼은 삭제 해주세요 -->
+                        <div class="rcv-btn mt-10">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#defaultRcvModal">
+                                <span>
+                                    <em>5,500원</em>에 <em>상승종목</em> 받기
+                                </span>
+                                <svg class="blink" xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.105 0.209209C12.3784 -0.0697365 12.8216 -0.0697365 13.095 0.209209L17.295 4.49492C17.5683 4.77387 17.5683 5.22613 17.295 5.50508L13.095 9.79079C12.8216 10.0697 12.3784 10.0697 12.105 9.79079C11.8317 9.51184 11.8317 9.05958 12.105 8.78064L15.11 5.71429H1.2C0.813401 5.71429 0.5 5.39449 0.5 5C0.5 4.60551 0.813401 4.28571 1.2 4.28571H15.11L12.105 1.21936C11.8317 0.940416 11.8317 0.488155 12.105 0.209209Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="rcv-btn mt-10">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Part1ProductPolicyMD">
+                                <span>
+                                    <em>5,500원</em>에 <em>상승종목</em> 받기
+                                </span>
+                                <svg class="blink" xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.105 0.209209C12.3784 -0.0697365 12.8216 -0.0697365 13.095 0.209209L17.295 4.49492C17.5683 4.77387 17.5683 5.22613 17.295 5.50508L13.095 9.79079C12.8216 10.0697 12.3784 10.0697 12.105 9.79079C11.8317 9.51184 11.8317 9.05958 12.105 8.78064L15.11 5.71429H1.2C0.813401 5.71429 0.5 5.39449 0.5 5C0.5 4.60551 0.813401 4.28571 1.2 4.28571H15.11L12.105 1.21936C11.8317 0.940416 11.8317 0.488155 12.105 0.209209Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="afterLogin" class="modal fade custom-modal1" role="dialog" aria-labelledby="로그인 후 이용 안내" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="rcv_modal">
+                                        <div class="top-text">
+                                            <span>
+                                                지금 로그인 하면 한달간<br>
+                                                <em>5,500원</em>에 이용할 수 있습니다. <br>
+                                                로그인하시겠습니까?
+                                            </span>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="price">
+                                            <dl>
+                                                <dt>결합상품:</dt>
+                                                <dd>
+                                                    <del>55,000원</del>
+                                                    <span>→</span>
+                                                    <em>5,500원</em>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="rcv_modal_btn">
+                                            <button class="btn btn-primary">예</button>
+                                            <button class="btn btn-default">아니오</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div id="defaultRcvModal" class="modal fade custom-modal1" role="dialog" aria-labelledby="로그인 후 이용 안내" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="rcv_modal">
+                                        <div class="top-text">
+                                            <span>
+                                                이미 첫달 할인 이벤트를 이용하셨습니다.
+                                                <br>다른 상품을 선택해 주세요.
+                                            </span>
+                                        </div>
+                                        <!-- // -->
+                                        <div class="rcv-items">
+                                            <button type="button" data-bs-target="#Part1ProductPolicyMD" data-bs-toggle="modal">
+                                                <span>결합상품</span><em>55,000원</em>
+                                            </button>
+                                            <button type="button" data-bs-target="#Part1ProductPolicyMD" data-bs-toggle="modal">
+                                                <span>추천</span><em>39,800원</em>
+                                            </button>
+                                            <button type="button" data-bs-target="#Part1ProductPolicyMD" data-bs-toggle="modal">
+                                                <span>포트폴리오</span><em>39,800원</em>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div id="Part1ProductPolicyMD" aria-labelledby="" tabindex="-1" class="modal fade custom-modal1" aria-modal="true" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-basic-text check">
+                                        <div><span class="dn">매월 정기 결제되는 구독 서비스입니다.</span></div>
+                                        <div><span class="dn">첫달 이후에는 매월 55,000원이 결제됩니다.</span></div>
+                                        <div><span>언제든지 해지(정기 결제 중단)할 수 있습니다.</span></div>
+                                        <div>
+                                            <span><em class="dn">해지시 서비스가 개시된 월에 대한 환불 금액은 없으며</em>,
+                                                이용만료일까지 서비스 이용이 가능합니다.
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>서비스
+                                                <em class="link dn">이용약관</em>
+                                                에 동의합니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-basic-text rmt-10">
+                                        <div>
+                                            <span>※</span><span>BC카드결제가 불가합니다. <br>BC카드 이용자는 씽크풀앱을 통해 가입해 주세요</span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-basic-link rmt-10"><em class="dn">▶씽크풀앱 다운로드</em></div>
+                                </div>
+                                <div class="modal-footer text-center cm-footer"><!---->
+                                    <button type="button" class="btn-custom-primary">
+                                        확인했습니다.
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // -->
+
+
+
+                    <div class="pf_w rmt-20">
+                        <div class="top">
+                            <div class="btnbox">
+                                <button class="float-end refresh">
+                                    <img src="./img/refresh.png" alt="새로고침" width="12"> 12/12 14:00
+                                </button>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="tab-w noPadding">
+                            <ul class="nav nav-tabs tth">
+                                <li class="nav-item position-relative">
+                                    <a class="nav-link active" aria-current="page" href="#">매수종목</a>
+                                </li>
+                                <li class="nav-item position-relative">
+                                    <a class="nav-link" href="#">매도종목</a>
+                                    <span class="circle-badge bg-red">
+                                        <span class="">N</span>
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- // -->
+
+
+                            <div class="tab-content rmt-25">
+                                <div class="tab-pane active">
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="section-inline-ad rmt-0 rpb-20">
+                                        <div class="first-bnr-ad text-center rmt-0">
+                                            <img src="./img/aibnr2.png" alt="오픈이벤트" class="img-fluid">
+                                        </div>
+                                        <!-- // 인라인광고 -->
+                                    </div>
+
+                                    <div class="rdnItem-w bg-point">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="rdnItem-w">
+                                        <div class="rdnItem">
+                                            <div class="left">
+                                                <div class="name">삼성전자</div>
+                                                <div class="info">대한민국 대표 일등 IT기업</div>
+                                                <div class="tag">
+                                                    <span>폴더블</span>
+                                                    <span>스마트폰</span>
+                                                    <span>반도체</span>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="right">
+                                                <div class="date">12/12 매수</div>
+                                                <div class="sellprice">매수가 1,054,000</div>
+                                                <div class="per up">+0.2% 달성정</div>
+                                                <div class="targetprice">목표가 1,054,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="shorcutBtn d-grid gap-2 rmt-20 rpl-17 rpr-17">
+                                        <button class="btn-outline-detail">자세히보기&nbsp;&nbsp;〉</button>
+                                    </div>
+
+                                    <div class="today-guide text-start rpt-10 rpr-17 rpl-17" dir="ltr">
+                                        <span>바쁜 투자자를 위해 10일 이내 급등 확률이 높은 종목을 선별 합니다.</span>
+                                        <span>선별한 종목에 대해서 매수 타이밍과 정확한 매도 타이밍을 카톡알림으로 알려드립니다.</span>
+                                    </div>
+
+                                </div>
+                                <!-- // -->
+                                <div class="tab-pane show"></div>
+                                <!-- // -->
+                                <div class="tab-pane show"></div>
+                                <!-- // -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hspace50"></div>
+                </section>
+
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                    </span>
+                </div>
+            </footer>
+
+        </div>
+        <!-- /wrap -->
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+
+
+</body>
+
+</html>
