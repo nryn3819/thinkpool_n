@@ -116,52 +116,53 @@
                         </div>
                         <!-- // -->
                         <div class="per">
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-                            <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-                            <div class="splide" aria-label="종목별 등락률">
-                                <div class="splide__track">
-
-                                    <ul class="splide__list">
-                                        <div class="splide__slide">
-                                            <div>
-                                                <em>1년 TOP</em>
-                                                <strong class="up">+41.27%</strong>
-                                                <span>서인이화1</span>
-                                            </div>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <em>1년 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화1</span>
                                         </div>
-                                        <!-- 1year -->
-                                        <div class="splide__slide">
-                                            <div>
-                                                <em>6개월 TOP</em>
-                                                <strong class="up">+41.27%</strong>
-                                                <span>서인이화6</span>
-                                            </div>
+                                    </div>
+                                    <!-- 1year -->
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <em>6개월 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화6</span>
                                         </div>
-                                        <!-- 6month -->
-                                        <div class="splide__slide">
-                                            <div>
-                                                <em>3개월 TOP</em>
-                                                <strong class="up">+41.27%</strong>
-                                                <span>서인이화3</span>
-                                            </div>
+                                    </div>
+                                    <!-- 6month -->
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <em>3개월 TOP</em>
+                                            <strong class="up">+41.27%</strong>
+                                            <span>서인이화3</span>
                                         </div>
-                                        <!--3month -->
-
-                                    </ul>
+                                    </div>
+                                    <!--3month -->
                                 </div>
-                            </div>
 
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    var splide = new Splide('.splide', {
-                                        type: 'loop',
-                                        autoplay: true,
+                                <!-- Swiper JS -->
+                                <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+                                <!-- Initialize Swiper -->
+                                <script>
+                                    var swiper = new Swiper(".mySwiper", {
+                                        centeredSlides: true,
+                                        speed: 3000,
+                                        loop: true,
+                                        autoplay: {
+                                            delay: 5000,
+                                            disableOnInteraction: false,
+                                        },
                                         pagination: false,
-                                        arrows: false
+                                        navigation: false,
                                     });
-                                    splide.mount();
-                                });
-                            </script>
+                                </script>
+                            </div>
                         </div>
                         <!-- // -->
                         <!-- 
