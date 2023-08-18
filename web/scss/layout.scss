@@ -94,7 +94,8 @@
 }
 
 #container_banner{
-  display:block;
+  display:flex;
+  justify-content: space-between;
   width:1030px;
   margin:40px 20px 160px 20px;
   overflow:hidden;
@@ -106,9 +107,9 @@
     background:#d6d6d6;
     float:left;
 
-    &:nth-child(2n+1){
-      margin:0 65px 0 64px;
-    }
+    // &:nth-child(2n+1){
+    //   margin:0 65px 0 64px;
+    // }
   }
 }
 
