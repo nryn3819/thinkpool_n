@@ -257,7 +257,7 @@
                                                     <path d="M6 11L10 15L17 8" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <span>이용약관 동의(필독)</span>
-                                                <a href="#">[상세보기]</a>
+                                                <a href="javascript:;" data-target="#payAgree" data-toggle="modal">[상세보기]</a>
                                             </label>
                                         </div>
                                         <!-- 동의 -->
@@ -367,6 +367,73 @@
             </div>
         </footer>
         <!-- //footer -->
+
+        <div id="payAgree" class="modal fade paytoagree" tabindex="-1" role="dialog" aria-labelledby="결제 이용약관" aria-hidden="hidden">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="pa_title">서비스이용약관</div>
+                        <!-- // -->
+
+                        <div class="pa_txt">
+
+                            <div>
+                                <strong>1. 이용기간 약관</strong>
+                                <div>
+                                    <span>모든 서비스는 1개월 30일 기준(예, 3개월 90일) 입니다. </span>
+                                    <span>일시정지 신청은 서비스 기간 중 1회 가능하며 14일(휴일포함)로 제한 합니다. </span>
+                                    <span>무료기간 이용중에는 일시정지 불가합니다. </span>
+                                    <span>무료연장 및 무료체험은 일시정지 되지 않습니다.</span>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <strong>2. 정기결제약관</strong>
+                                <div>
+                                    <span>정기결제는 가입기간 만큼 일정금액을 정기적으로 결제 하는 방식입니다. </span>
+                                    <span>정기결제는 할부가 불가능하며 일시불만 가능합니다. </span>
+                                    <span>정기 결제기간중 등록된 카드의 변화가 발생시 카드결제가 되지 않아 서비스가 중단될 수 있습니다. 카드에 변화가 있을 시 꼭, 고객센터 02-6937-2055로 연락 주세요.(유료기간만료, 거래중지, 한도초과, 카드교체등)</span>
+                                    <span>정기결제 취소는 서비스해지가 아닌 신용카드 정기결제 취소 입니다. </span>
+                                    <span>정기결제 취소를 신청하시면 다음 결제일부터 정기결제가 되지 않습니다.</span>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <strong>3. 환불 약관</strong>
+                                <div>
+                                    <span>환불시, 유료 사용 기간일수 만큼의 이용금액 (일할 계산)과 결제금액의 10%의 환불수수료를 차감한 잔액을 지급합니다. </span>
+                                    <span>일할계산은 정상금액에서 일할계산함.(1개월기준 30일) </span>
+                                    <span>신용카드 결제시 환불은 카드 취소로만 가능하며, 카드 결제 요금을 부분 취소하기 어려운 경우에는 전액 취소 후 차액의 납입을 요청할 수 있습니다. (차액 추가 납입 후 전액 취소) 환불금액 계산 시 무료기간은 적용되지 않으며 환불 요청 시 소멸됩니다. </span>
+                                    <span>현금 환불은 매주 월요일 입금됩니다. 단, 결제수단별로 입금일은 조정됩니다. (무통장 도래되는 월요일, 카드 2주후 월요일)</span>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <strong>4. 아카데미 상품의 경우 변경 및 환불, 일시정지가 불가능 하오니 이 점 유념 부탁드립니다.</strong>
+                            </div>
+
+                            <div>
+                                <strong>5. 서비스 이용중 전문가의 리딩을 방해하거나, 타 회원에게 불편을 초래할 경우,
+                                    채팅차단 및 서비스 강제 종료될 수 있습니다. <br>
+                                    <em>(강제 종료시에도 환불수수료 및 일할 결제금액은 동일하게 적용됩니다.)</em></strong>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="pa_btn">
+                            <button data-dismiss="modal">확인</button>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- payagree -->
+
+
         <div id="allmenu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="allmenyLabel" aria-hidden="hidden">
             <h2 class="sr-only">사이트전체메뉴</h2>
             <div class="allmenu_wrap modal-dialog">

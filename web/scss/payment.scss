@@ -783,3 +783,116 @@ div.upload-btn_wrap button {
     height: auto;
   }
 }
+
+.paytoagree {
+  .modal-dialog {
+    width: 562px;
+  }
+
+  .modal-content {
+    .modal-body {
+      padding: 40px 50px;
+
+      .pa_title {
+        display: block;
+        width: 100%;
+        text-align: Center;
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+        line-height: 26px;
+      }
+
+      .pa_txt {
+        display: flex;
+        width: 100%;
+        padding-top: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & > div {
+          display: block;
+          width: 100%;
+
+          strong {
+            display: block;
+            font-size: 16px;
+            min-height: 23px;
+            line-height: 23px;
+            font-weight: 500;
+            color: #000;
+
+            em {
+              font-size: 14px;
+              color: #000;
+              font-weight: 400;
+              font-style: normal;
+            }
+          }
+
+          div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-left: 10px;
+
+            span {
+              display: block;
+              width: 100%;
+              font-size: 14px;
+              color: #000;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      .pa_btn {
+        display: block;
+        width: 100%;
+        padding-top: 25px;
+        text-align: center;
+
+        button {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 47px;
+          border-radius: 100px;
+          background: #3e72ed;
+          font-size: 16px;
+          color: #fff;
+          font-weight: 300;
+          border: 0;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.my-pay-btn {
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+  gap: 20px;
+  justify-content: center;
+
+  button {
+    width: 167px;
+    height: 47px;
+    border: 0;
+    background: #ebebeb;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+
+    &.active {
+      color: #fff;
+      background: #3e72ed;
+    }
+  }
+}
