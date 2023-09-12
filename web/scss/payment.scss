@@ -19,6 +19,7 @@
   width: 100%;
 
   .pay-section {
+    position: relative;
     display: block;
     width: 100%;
     float: left;
@@ -894,5 +895,27 @@ div.upload-btn_wrap button {
       color: #fff;
       background: #3e72ed;
     }
+  }
+}
+
+.ch-user-info {
+  position: absolute;
+  top: 6px;
+  right: 0;
+
+  button {
+    display: flex;
+    min-width: 104px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #3e72ed;
+    background: #fff;
+    font-size: 14px;
+    color: #3e72ed;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
   }
 }
