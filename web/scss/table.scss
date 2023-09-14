@@ -208,8 +208,8 @@
         content: "※";
       }
 
-      a{
-        color:#3272ed;
+      a {
+        color: #3272ed;
         text-decoration: underline;
       }
     }
@@ -494,7 +494,7 @@
               line-height: 27px;
               padding: 10px 10px 10px 40px;
               border-right: 1px solid #d8d8d8;
-              background:#fff;
+              background: #fff;
 
               font-size: 14px;
               color: #333;
@@ -506,8 +506,8 @@
                 margin-left: 10px;
               }
 
-              em{
-                font-style:normal;
+              em {
+                font-style: normal;
               }
 
               &:last-child {
@@ -521,18 +521,18 @@
               &.bgCol2 {
                 background: #fcfaee;
                 padding: 10px;
-                padding-left:40px;
+                padding-left: 40px;
               }
 
-              &.empty{
-                display:flex;
-                height:200px;
-                width:100%;
+              &.empty {
+                display: flex;
+                height: 200px;
+                width: 100%;
                 align-items: center;
                 justify-content: center;
-                font-size:14px;
-                color:#333;
-                font-weight:300;
+                font-size: 14px;
+                color: #333;
+                font-weight: 300;
               }
 
               input[type="text"],
@@ -553,7 +553,7 @@
                 align-content: center;
                 gap: 15px;
                 line-height: 27px;
-                cursor:pointer;
+                cursor: pointer;
 
                 input {
                   margin: 0;
@@ -561,19 +561,24 @@
                 }
               }
 
-              .tmnt{
-                display:inline-flex;
-                width:101px;
-                line-height:24px;
-                border:1px solid #3272ed;
+              .tmnt {
+                display: inline-flex;
+                width: 101px;
+                line-height: 24px;
+                border: 1px solid #3272ed;
                 border-radius: 6px;
-                color:#3272ed;
-                font-size:14px;
-                background:#fff;
-                padding:0;
-                margin:0 0 0 15px;
+                color: #3272ed;
+                font-size: 14px;
+                background: #fff;
+                padding: 0;
+                margin: 0 0 0 15px;
                 justify-content: center;
                 align-items: center;
+
+                &-r {
+                  color: #c8212f !important;
+                  border: 1px solid #c8212f !important;
+                }
               }
             }
           }
