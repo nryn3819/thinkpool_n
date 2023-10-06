@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>씽크풀</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- 오픈팝업 -->
 
-    
+
 
     <!-- <div class="modal fade" id="openPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -76,13 +78,13 @@
             </div>
         </div>
     </div> -->
-        <script>
+    <script>
         const openModal1 = new bootstrap.Modal(document.getElementById('openPop'), {})
         openModal1.show()
 
         const openModal2 = new bootstrap.Modal(document.getElementById('openAppPop'), {})
         openModal2.show()
-        </script>
+    </script>
     <!-- 앱오픈팝업 -->
 
     <div id="app">
@@ -103,7 +105,7 @@
                         </div>
                     </div>
                     <!-- //logo -->
-                
+
                     <div class="topSch">
                         <h3 class="visually-hidden">종목검색영역</h3>
                         <div class="input-group">
@@ -153,7 +155,7 @@
                         <!-- // -->
                     </div>
                     <!-- //sch -->
-                
+
                     <div id="sideMenu">
                         <h3 class="visually-hidden">사이드메뉴열기</h3>
                         <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn02">
@@ -187,7 +189,7 @@
                                     </div>
                                     <!-- // -->
 
-                                    <div class="after">
+                                    <!-- <div class="after">
                                         <div class="top">
                                             <strong><em>에너지만땅</em>님</strong>
                                             <button>로그아웃</button>
@@ -198,7 +200,7 @@
                                             <button>나의활동</button>
                                             <button>쪽지함 <span class="badge">4</span></button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- // -->
                                 </div>
                                 <!-- // -->
@@ -246,7 +248,7 @@
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush03">
                                             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
-                                            라씨신호
+                                                라씨신호
                                             </button>
                                         </div>
                                         <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
@@ -264,7 +266,7 @@
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush04">
                                             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
-                                            AI속보
+                                                AI속보
                                             </button>
                                         </div>
                                         <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
@@ -284,7 +286,7 @@
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush05">
                                             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
-                                            토론실
+                                                토론실
                                             </button>
                                         </div>
                                         <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
@@ -302,9 +304,28 @@
                                     <!-- // -->
 
                                     <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush07">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                                                미국주식
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">홈</a></li>
+                                                <li><a href="#">AI미국추천</a></li>
+                                                <li><a href="#">AI종목속보</a></li>
+                                                <li><a href="#">AI미국이슈</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">MY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush06">
                                             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
-                                            더보기
+                                                더보기
                                             </button>
                                         </div>
                                         <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
@@ -338,11 +359,11 @@
                             const cateId = '#' + cate.getAttribute('data-cate-id');
                             const offId = document.querySelector('#sideContent');
 
-                            cate.addEventListener('click', function(){
+                            cate.addEventListener('click', function () {
                                 const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
                             });
 
-                            offId.addEventListener('hide.bs.offcanvas', function(){
+                            offId.addEventListener('hide.bs.offcanvas', function () {
                                 const showCate = document.querySelector('.collapse.show');
 
                                 const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
@@ -350,12 +371,12 @@
 
                         </script>
                         <!-- //2022.06.28 변경 -->
-                        
+
                     </div>
                     <!-- //sideMenu -->
 
                     <script>
-                        document.getElementById('hd_sch').addEventListener('click', function(){
+                        document.getElementById('hd_sch').addEventListener('click', function () {
                             document.querySelector('.searcharea').classList.add('sch-show');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
@@ -366,7 +387,7 @@
                             document.forms.sidemenu.tgle.checked = 'checked';
                         });
 
-                        document.querySelector('.sch-hide').addEventListener('click', function(){
+                        document.querySelector('.sch-hide').addEventListener('click', function () {
                             document.querySelector('.searcharea').classList.remove('sch-show');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
@@ -377,7 +398,7 @@
                             document.forms.sidemenu.tgle.checked = '';
                         });
 
-                        document.querySelector('.sch-hide2').addEventListener('click', function(){
+                        document.querySelector('.sch-hide2').addEventListener('click', function () {
                             document.querySelector('.searcharea').classList.remove('sch-show');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
                             document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
@@ -390,7 +411,7 @@
                     </script>
                 </div>
                 <!-- //top -->
-                
+
             </header>
             <!-- // -->
             <div class="allNav">
@@ -441,7 +462,7 @@
                                 <!-- //좋아요 -->
                             </div>
                             <!-- //item -->
-                            
+
                             <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
                                 <span class="name text-truncate">KOSDAQ</span>
                                 <!-- //종목명 -->
@@ -549,7 +570,7 @@
 
                                     <div class="cdn-tabs">
                                         <button class="active"><em>AI</em>국내</button>
-                                        <button><em>AI</em>해외</button>                                        
+                                        <button><em>AI</em>해외</button>
                                     </div>
                                     <!-- 
                                         화면을 보여주기 위해 두개를 만들었습니다.
@@ -563,7 +584,7 @@
                                     <div class="more">
                                         <a href="#"><span>더보기</span></a>
                                     </div>
-            
+
                                     <div class="cont mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -616,18 +637,18 @@
                             <!-- // -->
 
                             <div class="swiper-slide">
-                                <div class="itemCdn">  
+                                <div class="itemCdn">
                                     <div class="name">
                                         <a href="#">
                                             <strong>싸이맥스</strong>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-                                            </svg>
+                                                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                                                </svg>
                                             </span>
                                         </a>
                                     </div>
-            
+
                                     <div class="cont mySwiper">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -638,18 +659,18 @@
                                                 </span>
                                             </div>
                                             <!-- // -->
-            
+
                                             <div class="swiper-slide">
                                                 <span class="txt d-block text-truncate">[03/11] (주)싸이맥스 대표이사변경</span>
                                             </div>
                                             <!-- // -->
-            
+
                                             <div class="swiper-slide">
                                                 <span class="txt d-block text-truncate">[03/11] 증권가속보</span>
                                                 <span class="txt2 d-block text-truncate">차트분석-주가 상승 중, 단기간 골든크로스 형성 골든크로스 형성</span>
                                             </div>
                                             <!-- //slide -->
-            
+
                                             <div class="swiper-slide">
                                                 <div class="per up">
                                                     <strong>18,900 <span>▲200 +1.07%</span></strong>
@@ -685,17 +706,17 @@
                                         demo 내용을 조합하면 됩니다.
                                      -->
                                     <!-- //cont -->
-            
+
                                     <button class="sttg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
                                         </svg>
                                     </button>
                                     <!-- //설정 바로가기 입니다. 
                                     -->
-            
-            
+
+
                                 </div>
                                 <!-- // -->
                             </div>
@@ -709,7 +730,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <!-- Swiper JS -->
                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -740,13 +761,13 @@
 
                         const swpClose = document.querySelector('.swp-guide');
 
-                        swpClose.addEventListener('click', function(){
+                        swpClose.addEventListener('click', function () {
                             swpClose.style.display = 'none';
                         });
 
 
-                    //https://codesandbox.io/s/v2olkf?file=/src/App.vue
-                    //vue 소스링크
+                        //https://codesandbox.io/s/v2olkf?file=/src/App.vue
+                        //vue 소스링크
                     </script>
                 </section>
                 <!-- // -->
@@ -765,7 +786,7 @@
                         <!-- // -->
 
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane show active" >
+                            <div class="tab-pane show active">
                                 <!-- 차트박스 위 -->
                                 <div class="toast bbchart show" role="alert" aria-live="assertive" aria-atomic="true">
                                     <div class="toast-body">
@@ -804,7 +825,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- //header -->
-                            
+
                             <div class="modal-body">
                                 <h5 class="rmTitle text-truncate"><em class="dn">수소</em> 검색빈도 및 종목 누적 등락률</h5>
                                 <div class="issue-obj text-truncate">문 대통령 '2050년 100% 청정수고 전환 정부 2050년 정부 청정수고</div>
@@ -824,7 +845,7 @@
                                     </div>
                                     <!-- //issue-chart -->
 
-                                    
+
 
                                     <div class="issue-list rmt-25 position-relative">
                                         <strong class="title">주요종목</strong>
@@ -844,7 +865,7 @@
                                                         </td>
                                                     </tr>
                                                     <!-- //template -->
-                
+
                                                     <tr>
                                                         <th>
                                                             <span class="itemObj text-truncate">sk하이닉스</span>
@@ -1221,11 +1242,11 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
@@ -1381,7 +1402,7 @@
                                     </div>
                                     <!-- //list -->
 
-                                    
+
                                 </div>
                                 <!-- //marketList -->
 
@@ -1409,15 +1430,15 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-Week">
                                         <div class="left">
@@ -1595,15 +1616,15 @@
                             <!-- // -->
 
                             <div class="tab-pane fade" id="mwktab03c" role="tabpanel" aria-labelledby="목표가높음">
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-Week">
                                         <div class="left">
@@ -1766,15 +1787,15 @@
                             <!-- // 목표가 높음-->
 
                             <div class="tab-pane fade" id="mwktab04c" role="tabpanel" aria-labelledby="수주공시">
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-Week">
                                         <div class="left">
@@ -1819,15 +1840,15 @@
                             <!-- // -->
 
                             <div class="tab-pane fade" id="mwktab05c" role="tabpanel" aria-labelledby="투자공시">
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-Week">
                                         <div class="left">
@@ -2042,8 +2063,8 @@
 
                         <div class="itemUpdate">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                             </svg>
                             <span>12/31 12:30</span>
                         </div>
@@ -2427,16 +2448,16 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="mainColumnAlramBox rmt-20">
                                     <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
                                 </div>
                                 <!-- // -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
@@ -2506,20 +2527,20 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="mainColumnAlramBox rmt-20">
                                     <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
                                 </div>
                                 <!-- // -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-market">
                                         <div class="leftDate">
@@ -2577,20 +2598,20 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="mainColumnAlramBox rmt-20">
                                     <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
                                 </div>
                                 <!-- // -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-market">
                                         <div class="leftDate">
@@ -2652,20 +2673,20 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="mainColumnAlramBox rmt-20">
                                     <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
                                 </div>
                                 <!-- // -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-market">
                                         <div class="leftDate">
@@ -2723,20 +2744,20 @@
                                     </div>
                                 </div>
                                 <!-- //ch_data -->
-        
+
                                 <div class="mainColumnAlramBox rmt-20">
                                     <span><em>씽크풀텔레그램에서 이 정보 실시간 알림 받기</em></span><button class="btn btn-customOutline-primary">바로가기</button>
                                 </div>
                                 <!-- // -->
-        
+
                                 <div class="itemUpdate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                                     </svg>
                                     <span>12/31 12:30</span>
                                 </div>
-                                
+
                                 <div class="marketList">
                                     <div class="list list-market">
                                         <div class="leftDate">
@@ -2996,7 +3017,7 @@
                                 <!-- //guide -->
 
 
-                                
+
 
 
                             </div>
@@ -3216,11 +3237,11 @@
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                
+
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- //header -->
-                            
+
                             <div class="modal-body">
                                 <div class="modal-title" id="">
                                     <h5 class="rmTitle text-truncate">[삼성전자] 탐방노트: <br> 편견의 거미줄을 벗어나</h5>
@@ -3241,14 +3262,14 @@
                                     <!-- // -->
 
                                     <div class="text">
-반도체, 디스플레이, 
-태양전지용 증착장비 공급사 주성엔지니어링은 
-2016년부터 2018년까지 
-2천억 원 후반 수준의 매출(2016년 2,680억 원, 
-2017년 2,727억 원, 2018년 2,630억 원)을 
-이어가다가 2019년과 2020년에 각각 2,546억 원,
-1,186억 원으로 매출 감소세를 보이며 
-외국인 투자자들의 관심권에서 벗어났다. 
+                                        반도체, 디스플레이,
+                                        태양전지용 증착장비 공급사 주성엔지니어링은
+                                        2016년부터 2018년까지
+                                        2천억 원 후반 수준의 매출(2016년 2,680억 원,
+                                        2017년 2,727억 원, 2018년 2,630억 원)을
+                                        이어가다가 2019년과 2020년에 각각 2,546억 원,
+                                        1,186억 원으로 매출 감소세를 보이며
+                                        외국인 투자자들의 관심권에서 벗어났다.
                                     </div>
                                     <!-- // -->
                                 </div>
@@ -3271,24 +3292,24 @@
 
                     <div class="annce">
                         <div class="ch_tab">
-                            <ul class="nav nav-round disableList" role="tablist" >
+                            <ul class="nav nav-round disableList" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >수주공시</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">수주공시</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >지분공시</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">지분공시</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >신규 투자공시</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">신규 투자공시</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >전환사채공시</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">전환사채공시</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >실적공시(잠정)</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">실적공시(잠정)</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'" >실적공시(확정)</button>
+                                    <button class="nav-link disable" type="button" role="tab" onclick="location.href='공시분석.html'">실적공시(확정)</button>
                                 </li>
                             </ul>
                         </div>
@@ -3307,7 +3328,7 @@
 
                     <div class="news">
                         <div class="ch_tab">
-                            <ul class="nav nav-round disableList"  role="tablist" >
+                            <ul class="nav nav-round disableList" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disable" type="button" role="tab">어닝서프라이즈</button>
                                 </li>
@@ -3357,7 +3378,7 @@
                             <!-- //card -->
                         </div>
                         <!-- //videoList -->
-                        
+
                     </div>
                     <!-- // -->
                     <div class="shorcutBtn d-grid gap-2 rmt-20">
@@ -3366,6 +3387,34 @@
                     <!-- // -->
                 </section>
                 <!-- // -->
+
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="tModal" aria-labelledby="offcanvasBottomLabel">
+                    <div class="offcanvas-body">
+                        <div class="tmodal-offCanvas">
+                            <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_214_274)">
+                                        <path d="M0 0L12 12M24 24L12 12M12 12L24 0M12 12L0 24" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_214_274">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <a href="#">
+                                <img src="./img/timeBanner.png" alt="기간연장 이벤트" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        document.querySelector('#tModal').classList.add('show');
+                    })
+                </script>
 
             </main>
             <!-- //container -->
@@ -3394,37 +3443,38 @@
 
                 <div class="copyright">
                     <span class="d-block">@Thinkpool</span>
-                    
+
                     <span class="d-block">
                         본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
-                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다.
                     </span>
                 </div>
             </footer>
-            
+
         </div>
         <!-- /wrap -->
         <!-- bootstrap js -->
-        
+
         <!-- //bootstrap js -->
     </div>
     <!-- //app -->
 
-    
+
 
     <script>
 
         const offhide = document.querySelector('.offhide');
 
         const bsOffcanvas1 = new bootstrap.Offcanvas(document.getElementById('sideContent'), {})
-        offhide.addEventListener('click', function(){
+        offhide.addEventListener('click', function () {
             bsOffcanvas1.hide()
         });
 
-        
-        </script>
 
-    
-    
-  </body>
+    </script>
+
+
+
+</body>
+
 </html>
