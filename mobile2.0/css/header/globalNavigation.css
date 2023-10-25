@@ -1,0 +1,55 @@
+.globalNavigation {
+  display: flex;
+  min-width: 100%;
+  padding: 0 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: auto;
+  justify-content: space-between;
+}
+.globalNavigation a {
+  position: relative;
+  height: 37px;
+  line-height: 37px;
+  font-size: 15px;
+  color: #000;
+  margin-right: 25px;
+}
+.globalNavigation a:first-child {
+  margin-left: 0;
+}
+.globalNavigation a:last-child {
+  margin-right: 0;
+}
+.globalNavigation a.active {
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+.globalNavigation a:hover {
+  color: #000;
+}
+.globalNavigation a.glbNews {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.allNav.aiitem {
+  justify-content: flex-start;
+}
+.allNav.aiitem .globalNavigation a {
+  margin-right: 0;
+}
+
+.beta {
+  display: block;
+  height: 15px !important;
+  line-height: 15px;
+  text-align: Center;
+  color: #5368ff;
+  border-radius: 4px;
+  font-size: 10px;
+  margin-top: 1px;
+  font-style: italic;
+}
