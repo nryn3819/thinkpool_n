@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>씽크풀</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="javascript:;" class="float-start h-logo h-show">
+                            <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid">
+                        </a>
+                    </div>
+                    <!-- logo -->
+
+                    <div class="headerTitle text-truncate subTitle">
+                        <strong>네오위즈</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn">
+                        <button type="button" id="opensch" class="schButton">종목검색</button>
+
+
+                        <div class="searcharea">
+                            <div class="searcharea-header">
+                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                <!-- // -->
+                                <div class="searcharea-sch">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <button type="button" class="btn-close text-reset sch-hide"></button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="searcharea-body">
+
+                                <div class="off-basic">
+                                    <div class="tag">
+                                        <strong class="d-block rmb-10">주요키워드</strong>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                    </div>
+                                    <!-- //최근이슈 -->
+
+                                    <div class="hr-line rmt-20"></div>
+
+                                    <div class="latest rmt-20">
+                                        <strong>최근 검색어</strong>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+
+                                    </div>
+                                    <!-- //최근검색어 -->
+                                </div>
+
+                                <div class="off-empty">
+                                    <span>
+                                        입력하신 단어와 일치하는 종목이 없습니다. <br>
+                                        검색어를 확인하시고 다시 입력해주세요.
+                                    </span>
+                                </div>
+                                <!-- // off-empty -->
+                            </div>
+                            <!-- // -->
+                        </div>
+
+                        <script>
+                            document.getElementById('opensch').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.add('sch-show')
+
+                                document.getElementById('inputsch').focus();
+                                document.getElementById('inputsch').value = "";
+                            });
+
+
+                            document.querySelector('.sch-hide').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.remove('sch-show')
+                            });
+
+
+                        </script>
+                    </div>
+
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn02">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+                        <!-- 2022.06.28 변경 -->
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
+                                    <div class="app">
+                                        <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <div class="before">
+                                        <button class="btn-custom-primary" style="width:120px">로그인</button>
+                                        <button class="btn-custom-default" style="width:120px">회원가입</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <!-- <div class="after">
+                                                            <div class="top">
+                                                                <strong><em>에너지만땅</em>님</strong>
+                                                                <button>로그아웃</button>
+                                                            </div>
+                                                            <div class="menu">
+                                                                <button>MY종목</button>
+                                                                <button>알림설정</button>
+                                                                <button>나의활동</button>
+                                                                <button>쪽지함 <span class="badge">4</span></button>
+                                                            </div>
+                                                        </div> -->
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush01">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                                                AI분석
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">AI분석홈</a></li>
+                                                <li><a href="#">시세분석</a></li>
+                                                <li><a href="#">이슈분석</a></li>
+                                                <li><a href="#">수급분석</a></li>
+                                                <li><a href="#">테마분석</a></li>
+                                                <li><a href="#">공시분석</a></li>
+                                                <li><a href="#">리포트분석</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush02">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                                                AI추천
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">AI종목추천홈</a></li>
+                                                <li><a href="#">오늘의종목</a></li>
+                                                <li><a href="#">종목추천</a></li>
+                                                <li><a href="#">포트폴리오</a></li>
+                                                <li><a href="#">나의서비스</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush03">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                                                라씨신호
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">라씨매매신호홈</a></li>
+                                                <li><a href="#">서비스소개</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">나의신호</a></li>
+                                                <li><a href="#">(앱다운로드)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush04">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                                                AI속보
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">주요속보</a></li>
+                                                <li><a href="#">수급</a></li>
+                                                <li><a href="#">테마</a></li>
+                                                <li><a href="#">리포트</a></li>
+                                                <li><a href="#">실적</a></li>
+                                                <li><a href="#">공시</a></li>
+                                                <li><a href="#">태그전체보기</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush05">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                                                토론실
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">토론실홈</a></li>
+                                                <li><a href="#">증권가속보</a></li>
+                                                <li><a href="#">특징주포착</a></li>
+                                                <li><a href="#">주식종합토론</a></li>
+                                                <li><a href="#">유머방</a></li>
+                                                <li><a href="#">정치방</a></li>
+                                                <li><a href="#">나의활동</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush07">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                                                미국주식
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">홈</a></li>
+                                                <li><a href="#">AI미국추천</a></li>
+                                                <li><a href="#">AI종목속보</a></li>
+                                                <li><a href="#">AI미국이슈</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">MY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush06">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                                                더보기
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">공지사항 및 문의</a></li>
+                                                <li><a href="#">회원정보관리</a></li>
+                                                <li><a href="#">약관및정책</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="sfmenu">
+                                    <button class="btn-custom-primary outline">블로그</button>
+                                    <button class="btn-custom-primary outline">텔레그램</button>
+                                    <button class="btn-custom-primary outline">유투브</button>
+                                    <button class="btn-custom-primary outline">AI매매 시그널</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="other rmt-25 text-center">
+                                    <button class="btn-custom-default">PC버전으로 보기</button>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <script>
+                            const cate = document.querySelector('.sideMenuBtn');
+                            const cateId = '#' + cate.getAttribute('data-cate-id');
+                            const offId = document.querySelector('#sideContent');
+
+                            cate.addEventListener('click', function () {
+                                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                            });
+
+                            offId.addEventListener('hide.bs.offcanvas', function () {
+                                const showCate = document.querySelector('.collapse.show');
+
+                                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                            });
+
+                        </script>
+                        <!-- //2022.06.28 변경 -->
+
+                    </div>
+                    <!-- //sideMenu -->
+
+                    <script>
+                        document.getElementById('hd_sch').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.add('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+                            document.querySelector('.h-logo').classList.remove('h-show');
+                            document.querySelector('.h-logo').classList.add('h-hide');
+                            document.querySelector('.pageBack').classList.remove('h-hide');
+                            document.querySelector('.pageBack').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = 'checked';
+                        });
+
+                        document.querySelector('.sch-hide').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+
+                        document.querySelector('.sch-hide2').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+                    </script>
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <div class="allNav">
+                <menu class="globalNavigation float-start">
+                    <h3 class="visually-hidden">네비게이션</h3>
+                    <a href="#">홈</a>
+                    <a href="#">AI미국추천</a>
+                    <a href="#">AI종목속보</a>
+                    <a href="#" class="active">AI미국이슈</a>
+                    <a href="#">이용안내</a>
+                    <a href="#">MY</a>
+                </menu>
+                <!-- //gloabal navi -->
+            </div>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section id="" class="section section-usa-content gray-bg">
+                    <div class="usa-issue-top">
+                        <nav>
+                            <ul>
+                                <li><button class="active">이슈 키워드</button></li>
+                                <li><button>이슈강도</button></li>
+                                <li><button>시맨틱 리포트</button></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- // -->
+
+                    <div class="usa-issue-section">
+                        <p>
+                            빅데이터를 기반으로 미국 주식시장에서 가장 많은 관심을 받고 있는 이슈와 종목을 보다 빨리 발굴 합니다. <br>
+                            최근 미국 투자자들의 투자 관심사를 쉽게 파악하고, 다양한 투자 기회를 누려 보세요.
+                        </p>
+
+                        <div class="usa-issue-keyword">
+                            <input type="text" placeholder="미국주식 이슈 키워드">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.50005 10.7084C5.50005 7.8319 7.83197 5.5 10.7085 5.5C13.5851 5.5 15.917 7.8319 15.917 10.7084C15.917 13.585 13.5851 15.9169 10.7085 15.9169C7.83197 15.9169 5.50005 13.585 5.50005 10.7084ZM10.7085 4C7.00355 4 4.00005 7.00347 4.00005 10.7084C4.00005 14.4134 7.00355 17.4169 10.7085 17.4169C12.2907 17.4169 13.7451 16.8691 14.8921 15.9529L17.8389 18.8996C18.1318 19.1925 18.6066 19.1925 18.8995 18.8996C19.1924 18.6067 19.1924 18.1318 18.8995 17.8389L15.9528 14.8922C16.8691 13.7451 17.417 12.2908 17.417 10.7084C17.417 7.00347 14.4135 4 10.7085 4Z" fill="#141414" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- // -->
+
+                        <div class="usa-issue-date">
+                            <strong>이슈 기간설정</strong>
+                            <div>
+                                <input type="date" name="" id="startDate" min="2023-09-10">
+                                <span>~</span>
+                                <input type="date" name="" id="lastDate" min="2023-09-10">
+                            </div>
+
+                            <script>
+                                const today = new Date();
+                                const monthAgo = new Date(today);
+                                monthAgo.setMonth(today.getMonth() - 1);
+
+                                document.querySelector('#startDate').valueAsDate = monthAgo; // 한달전
+                                document.querySelector('#lastDate').valueAsDate = today; // 오늘날짜
+                            </script>
+                        </div>
+                        <!-- // -->
+
+                        <div class="usa-issue-item">
+                            <ul>
+                                <li><button class="active">종목</button></li>
+                                <li><button>이슈</button></li>
+                            </ul>
+
+                            <div class="usa-tab-content usa-item">
+                                <div class="title">
+                                    <strong>기간별 종목순위</strong>
+                                </div>
+
+                                <div class="usa-tab-box rankBg rmt-15">
+                                    <div class="rankBubble">
+                                        <img src="./img/eventRank.png" alt="버블랭킹" class="img-fluid">
+                                    </div>
+                                    <!-- // -->
+                                </div>
+
+                                <div class="usa-tab-box rmt-20">
+                                    <div class="rank-table">
+                                        <table width="100%">
+                                            <colgroup>
+                                                <col width="36">
+                                                <col width="*">
+                                                <col width="50">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="text-center">순위</th>
+                                                    <th scope="col" class="text-center">종목</th>
+                                                    <th scope="col" class="text-end">이슈강도</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank1">1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank2">2</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank2">3</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">4</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">5</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">6</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">7</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">8</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">9</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">10</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button>
+                                            더보기
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                                <path d="M1 1L5 5L9 1" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="usa-issue-item">
+
+                            <div class="usa-tab-txt">
+                                <strong>떠오르는 이슈, 가라앉는 이슈</strong>
+                                <p>
+                                    이슈 키워드는 시장 관심도를 반영 합니다. <br>
+                                    이슈 키워드의 강도와 순위로 미국 시장의 변화하는 흐름을 살펴보세요.
+                                </p>
+                            </div>
+
+                            <ul>
+                                <li><button class="active">종목</button></li>
+                                <li><button>이슈</button></li>
+                            </ul>
+
+                            
+
+                            <div class="usa-tab-content usa-issue">
+                                <div class="time-txt">
+                                    <strong>06월 4주차</strong>
+                                    <span>2023.06.11 ~ 2023.06.21</span>
+                                </div>
+
+                                <div class="usa-tab-box rmt-15">
+                                    <div class="rank-table">
+                                        <table width="100%">
+                                            <colgroup>
+                                                <col width="50">
+                                                <col width="*">
+                                                <col width="50">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="text-center">순위변동</th>
+                                                    <th scope="col" class="text-center">종목</th>
+                                                    <th scope="col" class="text-end">이슈강도</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c">-</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up">NEW</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c">-</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up">NEW</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button>
+                                            더보기
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                                <path d="M1 1L5 5L9 1" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="updateTime">
+                                    <em>update 06.28 20:00</em>
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="hspace50"></div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </section>
+                <!-- //container -->
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                    </span>
+                </div>
+            </footer>
+
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+
+    <script>
+        const topTitle = document.querySelector('.headerTitle');
+
+        topTitle.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -51,7 +51,7 @@
   display: block;
   width: 100%;
   border-radius: 12px;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   background: #fff;
   padding: 20px;
 
@@ -80,6 +80,24 @@
     font-size: 14px;
     color: #333;
     line-height: 21px;
+  }
+
+  .alarm-btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 24px;
+
+    button{
+      border-radius: 100px;
+      background: #5567FD;
+      border: none;
+      padding: 7px 17px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
   }
 
   .usa-issue-keyword {
@@ -289,6 +307,10 @@
           border-bottom: 1px solid #edeff2;
           font-size: 16px;
 
+          &.right{
+            text-align: right;
+          }
+
           .rank {
             display: block;
             width: 100%;
@@ -352,7 +374,7 @@
     align-items: center;
     gap: 2px;
     width: 100%;
-    margin-top: 13px;
+    margin-top: 20px;
     border: 0;
     padding: 0;
     background: none;
@@ -408,6 +430,11 @@
     font-size: 18px;
     color: #333;
     font-weight: 500;
+
+    em{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   .update {
@@ -427,11 +454,15 @@
   border: 1px solid #dfdfdf;
   background: #fff;
   border-radius: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 20px;
 
+  .magn{
+    margin: 40px 0px 20px;
+  }
+
   .bullet {
-    display: block;
+    display: inline-block;
     height: 27px;
     padding: 3px 12px;
     line-height: 21px;
@@ -485,7 +516,29 @@
       color: #333;
       font-weight: 500;
       line-height: 21px;
-      padding: 15px 0 10px;
+      padding: 20px 0 10px;
+    }
+
+    .table-title{
+      color: #333;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 10px;
+
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 4px;
+        height: 4px;
+        background: #666;
+        border-radius: 100%;
+        content: "";
+      }
     }
 
     table {
@@ -517,6 +570,15 @@
       td {
         color: #666;
         padding: 0 10px;
+
+        &.right{
+          text-align: right;
+        }
+
+        &.left{
+          text-align: left;
+          padding: 13px 7px;
+        }
 
         .up {
           color: #e81a1a;
@@ -608,5 +670,28 @@
         }
       }
     }
+  }
+}
+
+// 시멘틱분석차트 / 시멘틱 분석 리포트
+.semantics{
+  background: #F7F8FA;
+  padding: 20px 16px 40px;
+
+  .headertxt{
+    width: 100%;
+    padding: 30px 10px 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+
+    span{
+      color: #5368ff;
+    }
+  }
+
+  .sem-chart_img img{
+    width: 100%;
   }
 }

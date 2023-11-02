@@ -2,6 +2,9 @@
 @import "./usa/issue.scss";
 @import "./usa/news.scss";
 @import "./usa/strength.scss";
+@import "./usa/airecom.scss";
+@import "./usa/evthome.scss";
+@import "./usa/infouse.scss";
 
 .section {
   &-usa-top {
@@ -147,4 +150,121 @@
 
 .min-h-300 {
   min-height: 300px;
+}
+
+.text-truncate4{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.text-truncate2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+
+// 미국주식 공통
+.notHeader{
+  top: 0 !important;
+}
+
+.us_home .up{
+	color: #FFCECE !important;
+}
+
+.us_home .down{
+	color: #D8C0FF !important;
+}
+
+.us_home .us_up{
+	color: #E81A1A !important;
+}
+
+.us_home .us_down{
+  color: #225CFF !important;
+}
+
+.us_home .buy{
+	color: #E81A1A !important;
+}
+
+.us_home .buy-bg{
+	background: #FBEBEB !important;
+}
+
+.us_home .sell{
+	color: #6333CB !important;
+}
+
+.us_home .sell-bg{
+	background: #F2EDFF !important;
+}
+
+.us_home .evt-sell{
+	color: #225CFF !important;
+}
+
+.us_home .evt-sell-bg{
+	background: #E7F0FF !important;
+}
+
+.us_home .evt-mainup{
+	color: #FFBEB6 !important;
+}
+
+.us_home .etf-upbg1{
+	background: #D83337 !important;
+}
+
+.us_home .etf-upbg2{
+	background: #FFF2F2 !important;
+}
+
+.us_home .etf-downbg1{
+	background: #3865E1 !important;
+}
+
+.us_home .etf-downbg2{
+	background: #E7F0FF !important;
+}
+
+.us_home .hig-per_up{
+	color: #F0FF41 !important;
+}
+
+.pt-o{
+  padding-top: 0 !important;
+}
+
+.pt-48{
+  padding-top: 48px !important;
+}
+
+.pt-30{
+  padding-top: 30px !important;
+}
+
+.mt-20{
+  margin-top: 20px !important;
+}
+
+.icn-tag {
+  display: inline-block;
+  color: #666 !important;
+  background: #E7EBF1;
+  font-size: 11px !important;
+  font-weight: 500;
+  line-height: 14px !important;
+  padding: 3px 6px;
+  border-radius: 4px;
+
+  em {
+    display: inline-block;
+  }
 }
