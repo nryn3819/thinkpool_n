@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+      <!-- header - header.scss -->
+      <header id="header" class="clearfix">
+        <h2 class="visually-hidden">상단영역</h2>
+        <div id="top" class="float-start">
+
+          <div class="logo">
+            <h3 class="visually-hidden">로고</h3>
+            <a href="javascript:;" class="float-start h-logo h-show">
+              <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid">
+            </a>
+          </div>
+          <!-- logo -->
+
+          <div class="headerTitle text-truncate centerHeader">
+            <strong>미국주식</strong>
+          </div>
+          <!-- //종목명 -->
+
+          <div class="subSchBtn">
+            <button type="button" id="opensch" class="schButton">종목검색</button>
+
+
+            <div class="searcharea">
+              <div class="searcharea-header">
+                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                <!-- // -->
+                <div class="searcharea-sch">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                    <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                  </div>
+                </div>
+                <!-- // -->
+                <button type="button" class="btn-close text-reset sch-hide"></button>
+              </div>
+              <!-- // -->
+
+              <div class="searcharea-body">
+
+                <div class="off-basic">
+                  <div class="tag">
+                    <strong class="d-block rmb-10">주요키워드</strong>
+                    <span>태그명</span>
+                    <span>태그명</span>
+                    <span>태그명</span>
+                    <span>태그명</span>
+                    <span>태그명</span>
+                    <span>태그명</span>
+                  </div>
+                  <!-- //최근이슈 -->
+
+                  <div class="hr-line rmt-20"></div>
+
+                  <div class="latest rmt-20">
+                    <strong>최근 검색어</strong>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+                    <span class="tag">면세점</span>
+
+                  </div>
+                  <!-- //최근검색어 -->
+                </div>
+
+                <div class="off-empty">
+                  <span>
+                    입력하신 단어와 일치하는 종목이 없습니다. <br>
+                    검색어를 확인하시고 다시 입력해주세요.
+                  </span>
+                </div>
+                <!-- // off-empty -->
+              </div>
+              <!-- // -->
+            </div>
+
+            <script>
+              document.getElementById('opensch').addEventListener('click', function () {
+
+                document.querySelector('.searcharea').classList.add('sch-show')
+
+                document.getElementById('inputsch').focus();
+                document.getElementById('inputsch').value = "";
+              });
+
+
+              document.querySelector('.sch-hide').addEventListener('click', function () {
+
+                document.querySelector('.searcharea').classList.remove('sch-show')
+              });
+
+
+            </script>
+          </div>
+
+          <div id="sideMenu">
+            <h3 class="visually-hidden">사이드메뉴열기</h3>
+            <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <form name="sidemenu">
+                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                <label class="menu" for="sdmnu">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </label>
+              </form>
+            </div>
+            <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+            <!-- 2022.06.28 변경 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
+                  <div class="app">
+                    <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
+                  </div>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:120px">로그인</button>
+                    <button class="btn-custom-default" style="width:120px">회원가입</button>
+                  </div>
+                  <!-- // -->
+
+                  <!-- <div class="after">
+                                                            <div class="top">
+                                                                <strong><em>에너지만땅</em>님</strong>
+                                                                <button>로그아웃</button>
+                                                            </div>
+                                                            <div class="menu">
+                                                                <button>MY종목</button>
+                                                                <button>알림설정</button>
+                                                                <button>나의활동</button>
+                                                                <button>쪽지함 <span class="badge">4</span></button>
+                                                            </div>
+                                                        </div> -->
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        AI분석
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">AI분석홈</a></li>
+                        <li><a href="#">시세분석</a></li>
+                        <li><a href="#">이슈분석</a></li>
+                        <li><a href="#">수급분석</a></li>
+                        <li><a href="#">테마분석</a></li>
+                        <li><a href="#">공시분석</a></li>
+                        <li><a href="#">리포트분석</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        AI추천
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">AI종목추천홈</a></li>
+                        <li><a href="#">오늘의종목</a></li>
+                        <li><a href="#">종목추천</a></li>
+                        <li><a href="#">포트폴리오</a></li>
+                        <li><a href="#">나의서비스</a></li>
+                        <li><a href="#">이용안내</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        라씨신호
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">라씨매매신호홈</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">나의신호</a></li>
+                        <li><a href="#">(앱다운로드)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        AI속보
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">주요속보</a></li>
+                        <li><a href="#">수급</a></li>
+                        <li><a href="#">테마</a></li>
+                        <li><a href="#">리포트</a></li>
+                        <li><a href="#">실적</a></li>
+                        <li><a href="#">공시</a></li>
+                        <li><a href="#">태그전체보기</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        토론실
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">토론실홈</a></li>
+                        <li><a href="#">증권가속보</a></li>
+                        <li><a href="#">특징주포착</a></li>
+                        <li><a href="#">주식종합토론</a></li>
+                        <li><a href="#">유머방</a></li>
+                        <li><a href="#">정치방</a></li>
+                        <li><a href="#">나의활동</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        미국주식
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">AI미국추천</a></li>
+                        <li><a href="#">AI종목속보</a></li>
+                        <li><a href="#">AI미국이슈</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">MY</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        더보기
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">공지사항 및 문의</a></li>
+                        <li><a href="#">회원정보관리</a></li>
+                        <li><a href="#">약관및정책</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="sfmenu">
+                  <button class="btn-custom-primary outline">블로그</button>
+                  <button class="btn-custom-primary outline">텔레그램</button>
+                  <button class="btn-custom-primary outline">유투브</button>
+                  <button class="btn-custom-primary outline">AI매매 시그널</button>
+                </div>
+                <!-- // -->
+
+                <div class="other rmt-25 text-center">
+                  <button class="btn-custom-default">PC버전으로 보기</button>
+                </div>
+              </div>
+            </aside>
+
+            <script>
+              const cate = document.querySelector('.sideMenuBtn');
+              const cateId = '#' + cate.getAttribute('data-cate-id');
+              const offId = document.querySelector('#sideContent');
+
+              cate.addEventListener('click', function () {
+                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+              });
+
+              offId.addEventListener('hide.bs.offcanvas', function () {
+                const showCate = document.querySelector('.collapse.show');
+
+                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+              });
+
+            </script>
+            <!-- //2022.06.28 변경 -->
+
+          </div>
+          <!-- //sideMenu -->
+
+          <script>
+            document.getElementById('hd_sch').addEventListener('click', function () {
+              document.querySelector('.searcharea').classList.add('sch-show');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+              document.querySelector('.h-logo').classList.remove('h-show');
+              document.querySelector('.h-logo').classList.add('h-hide');
+              document.querySelector('.pageBack').classList.remove('h-hide');
+              document.querySelector('.pageBack').classList.add('h-show');
+              document.forms.sidemenu.tgle.checked = 'checked';
+            });
+
+            document.querySelector('.sch-hide').addEventListener('click', function () {
+              document.querySelector('.searcharea').classList.remove('sch-show');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+              document.querySelector('.pageBack').classList.remove('h-show');
+              document.querySelector('.pageBack').classList.add('h-hide');
+              document.querySelector('.h-logo').classList.remove('h-hide');
+              document.querySelector('.h-logo').classList.add('h-show');
+              document.forms.sidemenu.tgle.checked = '';
+            });
+
+            document.querySelector('.sch-hide2').addEventListener('click', function () {
+              document.querySelector('.searcharea').classList.remove('sch-show');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+              document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+              document.querySelector('.pageBack').classList.remove('h-show');
+              document.querySelector('.pageBack').classList.add('h-hide');
+              document.querySelector('.h-logo').classList.remove('h-hide');
+              document.querySelector('.h-logo').classList.add('h-show');
+              document.forms.sidemenu.tgle.checked = '';
+            });
+          </script>
+        </div>
+        <!-- //top -->
+      </header>
+      <!-- // -->
+
+      <!-- <div class="allNav">
+                <menu class="globalNavigation float-start">
+                    <h3 class="visually-hidden">네비게이션</h3>
+                    <a href="#" class="active">홈</a>
+                    <a href="#">AI미국추천</a>
+                    <a href="#">AI종목속보</a>
+                    <a href="#">AI미국이슈</a>
+                    <a href="#">이용안내</a>
+                    <a href="#">MY</a>
+                </menu> -->
+      <!-- //gloabal navi -->
+      <!-- </div> -->
+      <!-- // -->
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+
+        <section id="" class="section section-usa-content rp-0">
+
+          <!-- // -->
+          <div class="us_home">
+
+            <div class="us_event-home">
+
+              <div class="content-header">
+                <button class="back-btn"><img src="img/icon_back.png" alt="icon_back"></button>
+                <div class="header-txt evt-header_txt">
+                  <span>AMZ</span>
+                  <span class="header-txt_name text-truncate">아마존닷컴</span>
+                  <span class="buy buy-bg icn-tag"><em class="blink">매수예정</em></span>
+                </div>
+              </div> <!--class="content-header"-->
+
+              <div class="evthome-main">
+                <div class="evt-main_notjoin">
+                  <div>
+                    <div class="icn"><img src="img/notjoin-con_white.png" alt=""></div>
+                    <div class="join-txt">최근 5거래일 정보는 <br> AI 미국 추천 유료가입자에게만 공개됩니다.</div>
+                    <!-- <div class="join-btn"><button class="stab-join-btn">가입하기</button></div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="evt-section">
+
+                <div class="header-tab nav evt-tab">
+                  <button class="evt-nav nav-link active" data-bs-toggle="tab" data-bs-target="#strat" type="button"
+                    aria-selected="true">AI매매전략</button>
+                  <button class="evt-nav nav-link" data-bs-toggle="tab" data-bs-target="#overview" type="button"
+                    aria-selected="false">기업개요</button>
+                  <button class="evt-nav nav-link" data-bs-toggle="tab" data-bs-target="#aiNews" type="button"
+                    aria-selected="false">AI속보</button>
+                </div>
+
+                <div class="tab-content mt-0">
+
+                  <!-- AI매매전략 탭 -->
+                  <div class="tab-pane fade show active" id="strat">
+
+                    <div class="ai-strat sec-bg">
+
+                      <div class="ai_notjoin-con">
+                        <div>
+                          <div class="icn"><img src="img/notjoin-con_white.png" alt=""></div>
+                          <div class="join-txt">최근 5거래일 정보는 <br> AI 미국 추천 유료가입자에게만 공개됩니다.</div>
+                          <!-- <div class="join-btn"><button class="stab-join-btn">가입하기</button></div> -->
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="strat-box">
+
+                          <div class="strat-box_icn">
+                            <span class="buy-bg">(6월 6일) <em class="buy">매수추천</em></span>
+                          </div>
+
+                          <ul>
+                            <li>
+                              투자포인트
+                              <div class="li-stxt">
+                                <span>주가는 연초 이후 37% 상승. 견조한 사이버 보안 업황과 차별화된 실적 증가흐름 보여주며 시장 대비 아웃퍼폼하는 모습 </span>
+                                <span>1,000만달러 이상 계약은136% 증가, 500만달러 이상 거래는 62% 증가 </span>
+                                <span>SASE(Secure Access Service Edge), SD-WAN, 네트워크 및 VM(가상) 방화벽(점유율 1위)에서 시장 리더자리 유지
+                                </span>
+                              </div>
+                            </li>
+                            <button class="more" type="button" data-bs-toggle="modal" data-bs-target="#pastHis">과거 매매내역
+                              보기</button>
+                          </ul>
+
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="strat-box">
+
+                          <div class="strat-box_icn">
+                            <div class="buy-bg">
+                              <strong>AI투자팩터 종합평가점수</strong>
+                              <span><strong class="us_up">91</strong>점</span>
+                            </div>
+                          </div>
+
+                          <div class="update">uodate 06.28 20:00</div>
+
+                          <div class="us_evthome-chart">
+                            <img src="img/us_evthome_chart.png" alt="">
+                          </div>
+
+                          <ul>
+                            <li>
+                              AI투자팩터 분석방법
+                              <div class="li-stxt">
+                                <span>AI가 빅데이터를 분석하여 주가와 연관도가 높은 18개의 투자팩터를 발굴/생성하고 상승확률이 가장 높은 종목을 추출</span>
+                                <span>투자팩터는 경제지표, 현금흐름표,시가총액, 손익계산서, 대차대조표 등의 속성을 갖는 복수 데이터 조합으로 구성되며, AI가 팩터데이터를 조합하여
+                                  최적의 수식으로 18개의 투자팩터를 생성하고, 매일 투자팩터 결과를 종합평가하는 AI알고리즘을 통해 상승 평가점수가 가장 높은 종목들을 추천</span>
+                              </div>
+                            </li>
+                            <li>
+                              투자팩터 평가
+                            </li>
+                          </ul>
+
+                          <table>
+                            <colgroup>
+                              <col width="34%">
+                              <col width="46%">
+                              <col width="20%">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>팩터</th>
+                                <th>분석요소</th>
+                                <th>점수</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>현금유동 / <br>시총팩터</td>
+                                <td>재무활동 / 현금흐름 시가총액</td>
+                                <td><strong>161</strong>점</td>
+                              </tr>
+                              <tr>
+                                <td>경제지표 팩터</td>
+                                <td>건축허가건수 / 무역수지 / 비농업민간고용 / 제조업임금 / 자동차제외소매재고 / 신규주택판매 / 신규주택착공 / 소비자신뢰지수</td>
+                                <td><strong>70</strong>점</td>
+                              </tr>
+                              <tr>
+                                <td>경제지표 / <br>시총 팩터</td>
+                                <td>무역수지 / 건축허가 / 비농업민간고용 시가총액 4,5,6분기전</td>
+                                <td><strong>70</strong>점</td>
+                              </tr>
+                              <tr>
+                                <td>경영실적 팩터</td>
+                                <td>영업이익 / 당기순이익 시가총액</td>
+                                <td><strong>161</strong>점</td>
+                              </tr>
+                              <tr>
+                                <td>경영실적 / <br>시총 팩터</td>
+                                <td>EBITDA/ 영업활동현</td>
+                                <td><strong>70</strong>점</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+
+                      <!-- AI매매전략 없을 때 -->
+                      <div>
+                        <div class="strat-box">
+                          <div class="notjoin-con">
+                      
+                            <div class="notjoin-con_icn mt-20">
+                              <img src="img/notjoin-con.png" alt="">
+                            </div>
+                      
+                            <div class="notjoin-con_txt">
+                              <span>#MSFT/마이크로소프트</span> 과(와) 관련된 <br> AI매매전략이 없습니다.
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      <!-- AI매매전략 없을 때 -->
+
+                      <!-- AI매매전략 투자팩터 없을 때 -->
+                      <div>
+                        <div class="strat-box">
+                          <div class="notjoin-con">
+
+                            <div class="strat-box_icn">
+                              <div class="buy-bg">
+                                <strong>AI투자팩터 종합평가점수</strong>
+                                <span><strong class="us_up"></strong>점</span>
+                              </div>
+                            </div>
+                      
+                            <div class="notjoin-con_icn">
+                              <img src="img/notjoin-con.png" alt="">
+                            </div>
+                      
+                            <div class="notjoin-con_txt">
+                              <span>#MSFT/마이크로소프트</span> 과(와) 관련된 <br> AI매매전략이 없습니다.
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      <!-- AI매매전략 투자팩터 없을 때 -->
+
+                    </div>
+
+                    <div class="modal fade" id="pastHis" aria-hidden="true">
+                      <div class="popup modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="aisco-head">과거 매매내역</div>
+                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="past-notjoin">
+                              최근 5거래일 정보는 <br>
+                              AI 미국 추천 유료가입자에게만 공개됩니다
+                            </div>
+
+                            <div class="past-history">
+                              <div class="table-border"></div>
+                              <table class="his-table">
+                                <colgroup>
+                                  <col width="32%">
+                                  <col width="16%">
+                                  <col width="24%">
+                                  <col width="28%">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>거래일자</th>
+                                    <th>신호</th>
+                                    <th>매매단가</th>
+                                    <th>실현손익률</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>2022.12.01</td>
+                                    <td><span class="buy">매수</span></td>
+                                    <td>144.00</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="mb-8">2022.12.01</span>
+                                      <span>2022.12.01</span>
+                                    </td>
+                                    <td>
+                                      <span class="evt-sell mb-8">매도</span>
+                                      <span class="buy">매수</span>
+                                    </td>
+                                    <td>
+                                      <span class="mb-8">144.00</span>
+                                      <span>144.00</span>
+                                    </td>
+                                    <td><span class="buy">+132.03%</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="mb-8">2022.12.01</span>
+                                      <span>2022.12.01</span>
+                                    </td>
+                                    <td>
+                                      <span class="evt-sell mb-8">매도</span>
+                                      <span class="buy">매수</span>
+                                    </td>
+                                    <td>
+                                      <span class="mb-8">144.00</span>
+                                      <span>144.00</span>
+                                    </td>
+                                    <td><span class="">-12.0%</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="mb-8">2022.12.01</span>
+                                      <span>2022.12.01</span>
+                                    </td>
+                                    <td>
+                                      <span class="evt-sell mb-8">매도</span>
+                                      <span class="buy">매수</span>
+                                    </td>
+                                    <td>
+                                      <span class="mb-8">144.00</span>
+                                      <span>144.00</span>
+                                    </td>
+                                    <td><span class="">-12.0%</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="mb-8">2022.12.01</span>
+                                      <span>2022.12.01</span>
+                                    </td>
+                                    <td>
+                                      <span class="evt-sell mb-8">매도</span>
+                                      <span class="buy">매수</span>
+                                    </td>
+                                    <td>
+                                      <span class="mb-8">144.00</span>
+                                      <span>144.00</span>
+                                    </td>
+                                    <td><span class="">-12.0%</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <button class="moclose" type="button" data-bs-dismiss="modal">확인</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- AI매매전략 탭 -->
+
+                  <!-- 기업개요 탭 -->
+                  <div class="tab-pane fade" id="overview">
+
+                    <div class="ai-strat">
+
+                      <div>
+                        <div class="strat-box">
+
+                          <div class="overview-title">[기업현황]</div>
+
+                          <table class="ai-table mt-10">
+                            <colgroup>
+                              <col width="40%">
+                              <col width="60%">
+                            </colgroup>
+                            <tbody>
+                              <tr class="table-bt">
+                                <th>주가(전일대비)</th>
+                                <td>13.99 (<span class="buy">+0.12%</span>)</td>
+                              </tr>
+                              <tr>
+                                <th>52주 최고/최저</th>
+                                <td>16.23/8.90</td>
+                              </tr>
+                              <tr>
+                                <th>거래량</th>
+                                <td>699,000주</td>
+                              </tr>
+                              <tr>
+                                <th>시가총액(순위)</th>
+                                <td>1,785백만 <br>
+                                  (나스닥 2,216위)</td>
+                              </tr>
+                              <tr>
+                                <th>섹터</th>
+                                <td>기술</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="strat-box">
+
+                          <div class="overview-title">[기업개요]</div>
+
+                          <div class="overview-txt">
+                            Kratos Defense & Security Solutions, Inc.는 기술, 지적 재산, 독점 제품 및 시스템 회사입니다. 회사는 Kratos
+                            Government Solutions(KGS)와 무인
+                            시스템(US)의 두 부문을 통해 운영됩니다. KGS 부문에는 마이크로파 전자 제품, 우주, 위성 및 사이버, 교육 솔루션, 명령, 제어, 통신, 컴퓨팅, 전투, 정보
+                            감시 및 정찰(C5ISR)/모듈식
+                            시스템, 터빈 기술, 방위 및 로켓 지원 서비스 운영 부문이 포함됩니다. . 미국 부문은 무인 공중, 무인 지상, 무인 해상 및 관련 지휘, 통제 및 통신 시스템
+                            사업으로 구성됩니다. KGS 및 미국
+                            부문은 미션 크리티컬 국가 보안 프로그램을 위한 제품, 솔루션 및 서비스를 제공합니다. KGS 및 미국 고객은 주로 국가 안보 관련 기관, 미국 국방부(DoD),
+                            정보 기관 및 기밀 기관을 포함합니다.
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="strat-box">
+
+                          <div class="overview-title">[최근 실적추이]</div>
+
+                          <div class="overview-chart">
+                            <img src="img/overview-chart.png" alt="overview-chart">
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <!-- 기업개요 없을 때 -->
+                      <!-- <div class="notjoin-con">
+
+                        <div class="notjoin-con_icn">
+                          <img src="img/notjoin-con.png" alt="">
+                        </div>
+
+                        <div class="notjoin-con_txt">
+                          <span>#MSFT/마이크로소프트</span> 과(와) 관련된 <br> 기업개요가 없습니다.
+                        </div>
+
+                      </div> -->
+                      <!-- 기업개요 없을 때 -->
+
+                    </div>
+
+                  </div>
+
+
+
+                  <!-- 기업개요 탭 -->
+
+                  <!-- AI속보 탭 -->
+                  <div class="tab-pane fade" id="aiNews">
+
+                    <div class="usnews-con pt-30">
+
+                      <div class="usnews-con_box mt-0">
+
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>08:58 PM </span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+                        <button class="usnews-con_list">
+                          <div class="usnews-list_top">
+                            <div class="usnews-list_name text-truncate"><span>NVDA</span>그랜드 캐니언 에듀케이션</div>
+                            <div class="usnews-list_time">
+                              <span>23.09.01</span>
+                              <span class="usnews-list_line"></span>
+                              <span>씽크풀</span>
+                            </div>
+                          </div>
+                          <div class="usnews-list_bot text-truncate2">
+                            [8K공시]전 세계 자동차 애호가 시장에 초점을 맞출 전문 보험 제공업체 전문 보험 제공업체 전 세계 자동차
+                          </div>
+                        </button>
+
+                        <button class="more">더보기</button>
+
+                      </div>
+
+                      <!-- AI속보 없을 때 -->
+                      <!-- <div class="notjoin-con">
+
+                        <div class="notjoin-con_icn">
+                          <img src="img/notjoin-con.png" alt="">
+                        </div>
+
+                        <div class="notjoin-con_txt">
+                          <span>#MSFT/마이크로소프트</span> 과(와) 관련된 <br> 최근 속보가 없습니다.
+                        </div>
+
+                      </div> -->
+                      <!-- AI속보 없을 때 -->
+
+                    </div>
+
+                  </div>
+                  <!-- AI속보 탭 -->
+
+
+                </div>
+                <!-- tab-content -->
+
+              </div>
+              <!-- evt-section -->
+
+            </div>
+
+          </div>
+          <!-- //us_home -->
+
+          <!-- <div class="hspace50"></div> -->
+        </section>
+        <!-- //container -->
+      </main>
+
+      <footer id="footer" class="clearfix">
+        <menu id="fmenu">
+          <figure class="figure">
+            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+            <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+            <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+            <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+          </figure>
+        </menu>
+
+        <menu id="fmenu2">
+          <a href="#">고객센터</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+        </menu>
+
+        <div class="copyright">
+          <span class="d-block">@Thinkpool</span>
+          <span class="d-block">
+            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+          </span>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /wrap -->
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+  <script>
+    const topTitle = document.querySelector('.headerTitle');
+
+    topTitle.addEventListener('click', function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+
+
+</body>
+
+</html>

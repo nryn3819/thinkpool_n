@@ -380,10 +380,10 @@
             <div class="allNav">
                 <menu class="globalNavigation float-start">
                     <h3 class="visually-hidden">네비게이션</h3>
-                    <a href="#" class="active">홈</a>
+                    <a href="#">홈</a>
                     <a href="#">AI미국추천</a>
                     <a href="#">AI종목속보</a>
-                    <a href="#">AI미국이슈</a>
+                    <a href="#" class="active">AI미국이슈</a>
                     <a href="#">이용안내</a>
                     <a href="#">MY</a>
                 </menu>
@@ -411,15 +411,19 @@
                             미국 금융 기사들을 AI 시멘틱 분석을 통해 시장이나 종목에 긍정적 기사인지 부정적 기사인지를 판독한 통계 데이터입니다. 기사들의 시장평가가 시장의 흐름에 미치는 영향을 살펴보시기 바랍니다.
                         </p>
 
+                        <div class="alarm-btn">
+                            <button>시멘틱 분석 리포트 알림받기</button>
+                        </div>
+
                         <div class="ch-date">
                             <button data-bs-toggle="offcanvas" data-bs-target="#chUsDate">
-                                <span>2023년 8월 13일</span>
+                                <span>2023년 8월 13일 기준</span>
+                                <em>(최근 7일)</em>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M19 8L12.7071 14.2929C12.3166 14.6834 11.6834 14.6834 11.2929 14.2929L5 8" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
 
-                            <span class="update">Update <br>11:00</span>
                         </div>
 
                         <div class="stbox">
@@ -495,7 +499,7 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="row up">긍정순위</th>
+                                            <th scope="row"><em class="up">긍정순위</em></th>
                                             <th scope="row">전체기사</th>
                                             <th scope="row">긍정기사</th>
                                             <th scope="row">부정기사</th>
@@ -580,7 +584,7 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="row up">부정순위</th>
+                                            <th scope="row"><em class="up">부정순위</em></th>
                                             <th scope="row">전체기사</th>
                                             <th scope="row">긍정기사</th>
                                             <th scope="row">부정기사</th>
@@ -668,7 +672,7 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="row up">긍정순위</th>
+                                            <th scope="row"><em class="up">긍정순위</em></th>
                                             <th scope="row">전체기사</th>
                                             <th scope="row">긍정기사</th>
                                             <th scope="row">부정기사</th>
@@ -753,7 +757,7 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="row up">부정순위</th>
+                                            <th scope="row"><em class="up">부정순위</em></th>
                                             <th scope="row">전체기사</th>
                                             <th scope="row">긍정기사</th>
                                             <th scope="row">부정기사</th>
@@ -824,6 +828,16 @@
                                 </table>
                             </div>
                             <!--  -->
+                            <div class="magn"><strong class="bullet">실시간 종목 시멘틱 리포트 분석하기</strong></div>
+                            <div class="usa-issue-keyword">
+                                <input type="text" placeholder="종목검색">
+                                <button type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.50005 10.7084C5.50005 7.8319 7.83197 5.5 10.7085 5.5C13.5851 5.5 15.917 7.8319 15.917 10.7084C15.917 13.585 13.5851 15.9169 10.7085 15.9169C7.83197 15.9169 5.50005 13.585 5.50005 10.7084ZM10.7085 4C7.00355 4 4.00005 7.00347 4.00005 10.7084C4.00005 14.4134 7.00355 17.4169 10.7085 17.4169C12.2907 17.4169 13.7451 16.8691 14.8921 15.9529L17.8389 18.8996C18.1318 19.1925 18.6066 19.1925 18.8995 18.8996C19.1924 18.6067 19.1924 18.1318 18.8995 17.8389L15.9528 14.8922C16.8691 13.7451 17.417 12.2908 17.417 10.7084C17.417 7.00347 14.4135 4 10.7085 4Z" fill="#141414"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
 

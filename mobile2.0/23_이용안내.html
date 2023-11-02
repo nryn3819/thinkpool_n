@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <title>씽크풀</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="javascript:;" class="float-start h-logo h-show">
+                            <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid">
+                        </a>
+                    </div>
+                    <!-- logo -->
+
+                    <div class="headerTitle text-truncate centerHeader">
+                        <strong>미국주식</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn">
+                        <button type="button" id="opensch" class="schButton">종목검색</button>
+
+
+                        <div class="searcharea">
+                            <div class="searcharea-header">
+                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                <!-- // -->
+                                <div class="searcharea-sch">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <button type="button" class="btn-close text-reset sch-hide"></button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="searcharea-body">
+
+                                <div class="off-basic">
+                                    <div class="tag">
+                                        <strong class="d-block rmb-10">주요키워드</strong>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                        <span>태그명</span>
+                                    </div>
+                                    <!-- //최근이슈 -->
+
+                                    <div class="hr-line rmt-20"></div>
+
+                                    <div class="latest rmt-20">
+                                        <strong>최근 검색어</strong>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+                                        <span class="tag">면세점</span>
+
+                                    </div>
+                                    <!-- //최근검색어 -->
+                                </div>
+
+                                <div class="off-empty">
+                                    <span>
+                                        입력하신 단어와 일치하는 종목이 없습니다. <br>
+                                        검색어를 확인하시고 다시 입력해주세요.
+                                    </span>
+                                </div>
+                                <!-- // off-empty -->
+                            </div>
+                            <!-- // -->
+                        </div>
+
+                        <script>
+                            document.getElementById('opensch').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.add('sch-show')
+
+                                document.getElementById('inputsch').focus();
+                                document.getElementById('inputsch').value = "";
+                            });
+
+
+                            document.querySelector('.sch-hide').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.remove('sch-show')
+                            });
+
+
+                        </script>
+                    </div>
+
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn02">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+                        <!-- 2022.06.28 변경 -->
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
+                                    <div class="app">
+                                        <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <div class="before">
+                                        <button class="btn-custom-primary" style="width:120px">로그인</button>
+                                        <button class="btn-custom-default" style="width:120px">회원가입</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <!-- <div class="after">
+                                                            <div class="top">
+                                                                <strong><em>에너지만땅</em>님</strong>
+                                                                <button>로그아웃</button>
+                                                            </div>
+                                                            <div class="menu">
+                                                                <button>MY종목</button>
+                                                                <button>알림설정</button>
+                                                                <button>나의활동</button>
+                                                                <button>쪽지함 <span class="badge">4</span></button>
+                                                            </div>
+                                                        </div> -->
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush01">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                                                AI분석
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">AI분석홈</a></li>
+                                                <li><a href="#">시세분석</a></li>
+                                                <li><a href="#">이슈분석</a></li>
+                                                <li><a href="#">수급분석</a></li>
+                                                <li><a href="#">테마분석</a></li>
+                                                <li><a href="#">공시분석</a></li>
+                                                <li><a href="#">리포트분석</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush02">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                                                AI추천
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">AI종목추천홈</a></li>
+                                                <li><a href="#">오늘의종목</a></li>
+                                                <li><a href="#">종목추천</a></li>
+                                                <li><a href="#">포트폴리오</a></li>
+                                                <li><a href="#">나의서비스</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush03">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                                                라씨신호
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">라씨매매신호홈</a></li>
+                                                <li><a href="#">서비스소개</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">나의신호</a></li>
+                                                <li><a href="#">(앱다운로드)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush04">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                                                AI속보
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">주요속보</a></li>
+                                                <li><a href="#">수급</a></li>
+                                                <li><a href="#">테마</a></li>
+                                                <li><a href="#">리포트</a></li>
+                                                <li><a href="#">실적</a></li>
+                                                <li><a href="#">공시</a></li>
+                                                <li><a href="#">태그전체보기</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush05">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                                                토론실
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">토론실홈</a></li>
+                                                <li><a href="#">증권가속보</a></li>
+                                                <li><a href="#">특징주포착</a></li>
+                                                <li><a href="#">주식종합토론</a></li>
+                                                <li><a href="#">유머방</a></li>
+                                                <li><a href="#">정치방</a></li>
+                                                <li><a href="#">나의활동</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush07">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                                                미국주식
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">홈</a></li>
+                                                <li><a href="#">AI미국추천</a></li>
+                                                <li><a href="#">AI종목속보</a></li>
+                                                <li><a href="#">AI미국이슈</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">MY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush06">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                                                더보기
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">공지사항 및 문의</a></li>
+                                                <li><a href="#">회원정보관리</a></li>
+                                                <li><a href="#">약관및정책</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="sfmenu">
+                                    <button class="btn-custom-primary outline">블로그</button>
+                                    <button class="btn-custom-primary outline">텔레그램</button>
+                                    <button class="btn-custom-primary outline">유투브</button>
+                                    <button class="btn-custom-primary outline">AI매매 시그널</button>
+                                </div>
+                                <!-- // -->
+
+                                <div class="other rmt-25 text-center">
+                                    <button class="btn-custom-default">PC버전으로 보기</button>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <script>
+                            const cate = document.querySelector('.sideMenuBtn');
+                            const cateId = '#' + cate.getAttribute('data-cate-id');
+                            const offId = document.querySelector('#sideContent');
+
+                            cate.addEventListener('click', function () {
+                                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                            });
+
+                            offId.addEventListener('hide.bs.offcanvas', function () {
+                                const showCate = document.querySelector('.collapse.show');
+
+                                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                            });
+
+                        </script>
+                        <!-- //2022.06.28 변경 -->
+
+                    </div>
+                    <!-- //sideMenu -->
+
+                    <script>
+                        document.getElementById('hd_sch').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.add('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
+                            document.querySelector('.h-logo').classList.remove('h-show');
+                            document.querySelector('.h-logo').classList.add('h-hide');
+                            document.querySelector('.pageBack').classList.remove('h-hide');
+                            document.querySelector('.pageBack').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = 'checked';
+                        });
+
+                        document.querySelector('.sch-hide').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+
+                        document.querySelector('.sch-hide2').addEventListener('click', function () {
+                            document.querySelector('.searcharea').classList.remove('sch-show');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                            document.querySelector('.pageBack').classList.remove('h-show');
+                            document.querySelector('.pageBack').classList.add('h-hide');
+                            document.querySelector('.h-logo').classList.remove('h-hide');
+                            document.querySelector('.h-logo').classList.add('h-show');
+                            document.forms.sidemenu.tgle.checked = '';
+                        });
+                    </script>
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <div class="allNav">
+                <menu class="globalNavigation float-start">
+                    <h3 class="visually-hidden">네비게이션</h3>
+                    <a href="#">홈</a>
+                    <a href="#">AI미국추천</a>
+                    <a href="#">AI종목속보</a>
+                    <a href="#">AI미국이슈</a>
+                    <a href="#" class="active">이용안내</a>
+                    <a href="#">MY</a>
+                </menu>
+                <!-- //gloabal navi -->
+            </div>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+
+                <section id="" class="section section-usa-content rp-0">
+                    
+                    <!-- // -->
+                  <div class="us_home">
+
+                    <div class="info-use">
+
+                      <div class="us_ser-section1">
+        
+                        <div class="ser-main">
+
+                          <div class="us_ser-maintxt">
+                            <span>실시간 미국주식 투자</span>
+                            AI 미국추천
+                          </div>
+                          <div class="us_ser-mainstxt">
+                            <span>미국주식도</span><br>
+                            똑똑한 AI가 <br>
+                            알아서 잘, 딱! <br>
+                            깔끔하고! 센스있게!
+                          </div>
+                          <div class="us_ser-mainsstxt">
+                            추천부터 장중 실시간 대응까지 AI 밀착관리! <br>
+                            나에게 딱 맞는 알고리즘 제공!
+                          </div>
+                          <div class="ser_app">
+                            <button class="us_ser-btn">AI 미국 추천 서비스 가입안내</button>
+                          </div>
+                      
+                        </div>
+              
+                      </div> <!--class="us_ser-section1"-->
+
+                      <div class="us_ser-section2">
+
+                        <div class="us_ser-easy">
+              
+                          <div class="us_easy-maintxt">
+                            AI가 똑똑하면 <br>
+                            누구나 <br>
+                            미국주식이 쉽습니다.
+                          </div>
+              
+                          <div class="swiper ana-swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ana-slide easy-slide">
+                                <div class="ana-num"><span>1</span></div>
+                                <div class="ana-top easy-top"><span>미국시장 실시간 모니터링</span> <br>장중 매수매도 타이밍 알림 제공</div>
+                                <div class="easy-img">
+                                  <div>
+                                    <div class="easy-img_top">
+                                      <img style="height: 130px;" src="img/us_easy-1-1.png" alt="">
+                                      <img style="height: 130px;" src="img/us_easy-1-2.png" alt="">
+                                    </div>
+                                    <div class="easy-img_bot">
+                                      <img src="img/us_easy-1-3.png" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ana-bot">
+                                  시장상황을 반영한 실시간 알림으로 <br>
+                                  <strong>장중 시장 상황에 빠르게 대응할 수</strong>있습니다.
+                                </div>
+                              </div>
+                              <div class="swiper-slide ana-slide easy-slide">
+                                <div class="ana-num"><span>2</span></div>
+                                <div class="ana-top easy-top"><span>수십억 개의 정형 비정형</span> 데이터로 <br>AI알고리즘 매일 업데이트</div>
+                                <div class="easy-img2">
+                                  <img style="width: 245px;" src="img/us_easy-2.png" alt="">
+                                </div>
+                                <div class="ana-bot">
+                                  <strong>안정적인 적중률과 수익률</strong>을 확보하기 위해<br>
+                                  씽크풀이 2015년 부터 연구한 시스템입니다.
+                                </div>
+                              </div>
+                              <div class="swiper-slide ana-slide easy-slide">
+                                <div class="ana-num"><span>3</span></div>
+                                <div class="ana-top easy-top">투자팩터의 주가 영향력을 분석하여<br><span>투자매력도와 5일 후 주가 예측</span></div>
+                                <div class="easy-img3">
+                                  <img style="width: 254px;" src="img/us_easy-3.png" alt="">
+                                </div>
+                                <div class="ana-bot">
+                                  AI가 분석한 <strong>5가지 항목</strong>을 통해<br>
+                                  명확하게 종목 평가를 합니다.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+              
+                          <script>
+                            var swiper = new Swiper('.ana-swiper', {
+                              spaceBetween: 20,
+                              pagination: {
+                                el: '.swiper-pagination',
+                              },
+                              autoplay: {
+                                delay: 2000,
+                                disableOnInteraction: false,
+                              },
+                              loop: true,
+                            });
+                          </script>
+              
+                        </div>
+              
+                      </div> <!--class="us_ser-section2"-->
+
+                      <div class="us_ser-section3">
+
+                        <div class="us_ser-alarm">
+              
+                          <div class="us_alarm-maintxt">
+                            잠이 없는 AI가<br>
+                            알아서! 깔끔하고! 센스있게!
+                          </div>
+              
+                          <div class="us_alarm-stxt">누구나 쉽게 투자할 수 있도록<br>AI가 깔끔하게 딱! 문자로 보내 드립니다.</div>
+              
+                          <div class="us_alarm-msg">
+                            <div class="us_msg msg-1">
+                              <div class="us_msg-icn">장전<br>예고</div>
+                              <div class="us_msg-con">
+                                <div class="msg_con-time">P.M 17:00</div>
+                                <div class="msg_con-txt">종목 매수 매도 예고 알림</div>
+                              </div>
+                            </div>
+                            <div class="us_msg msg-2">
+                              <div class="us_msg-icn">실시간<br>대응</div>
+                              <div class="us_msg-con">
+                                <div class="msg_con-time">P.M 23:30 ~ A.M 06:00</div>
+                                <div class="msg_con-txt">장중 실시간 매수매도 타이밍 알림</div>
+                              </div>
+                            </div>
+                            <div class="us_msg msg-3">
+                              <div class="us_msg-icn">장마감<br>요약</div>
+                              <div class="us_msg-con">
+                                <div class="msg_con-time">A.M 08:00</div>
+                                <div class="msg_con-txt">메메내역 정리 + 시황브리핑 알림</div>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="us_alarm-img">
+                            <img style="width: 250px;" src="img/alarm-img.png" alt="">
+                          </div>
+              
+                        </div>
+              
+                        <script>
+                          gsap.registerPlugin(ScrollTrigger);
+                          gsap.to(".msg-1", {
+                            scrollTrigger: {
+                              trigger: ".msg-1",
+                              toggleActions: "restart none reverse none",
+                              start: "top bottom",
+                              end: "50% center",
+                              // markers: true,
+                              toggleClass: { targets: '.msg-1', className: 'msg_on' }
+                            },
+                          });
+              
+                          gsap.to(".msg-2", {
+                            scrollTrigger: {
+                              trigger: ".msg-2",
+                              toggleActions: "restart none reverse none",
+                              start: "-42% center",
+                              end: "150% center",
+                              // markers: true,
+                              toggleClass: { targets: '.msg-2', className: 'msg_on' }
+                            },
+                          });
+              
+                          gsap.to(".msg-3", {
+                            scrollTrigger: {
+                              trigger: ".msg-3",
+                              toggleActions: "restart none reverse none",
+                              start: "50% center",
+                              end: "200% center",
+                              // markers: true,
+                              toggleClass: { targets: '.msg-3', className: 'msg_on' }
+                            },
+                          });
+              
+                          gsap.to(".us_alarm-img", {
+                            scrollTrigger: {
+                              trigger: ".us_alarm-img",
+                              toggleActions: "restart none reverse none",
+                              start: "36% center",
+                              end: "top",
+                              // markers: true,
+                              toggleClass: { targets: '.msg-1', className: 'msg_on' }
+                            },
+                          });
+                        </script>
+              
+                      </div> <!--class="us_ser-section3"-->
+
+                      <div class="us_ser-section4">
+
+                        <div class="us_ser-timing">
+              
+                          <div class="us_timing-maintxt">
+                            명확한 추천 사유! <br>
+                            장중 실시간 매수/매도 타이밍!
+                          </div>
+              
+                          <div class="us_timing-stxt">
+                            매수신호 제공 시 추천사유를 <br>
+                            명확하고 구체적으로 알려드립니다.
+                          </div>
+              
+                          <div class="us_timing-con">
+                            <div class="timing_con-ele01">
+                              <img src="img/us_timing-img-1.png" alt="">
+                              <div class="timing_con-ele02 aos-init aos-animate" data-aos="zoom-in">
+                                <img src="img/us_timing-img-2.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+              
+                        </div>
+              
+                      </div> <!--class="us_ser-section4"-->
+
+                      <div class="us_ser-section5">
+
+                        <div class="us_ser-report">
+              
+                          <div class="us_report-maintxt">심도있는<br>AI 종목분석 리포트</div>
+                          <div class="us_report-stxt">
+                            AI가 발굴한 종목에 대해<br>
+                            투자포인트와 5일 후 주가예측, 상승확률 등을<br>
+                            제시합니다.
+                          </div>
+              
+                          <div class="us_report-con">
+              
+                            <div class="us_report-img">
+                              <img src="img/us_report-img.png" alt="">
+                            </div>
+              
+                          </div>
+              
+                        </div>
+              
+                      </div>  <!--class="us_ser-section6"-->
+
+                      <div class="us_ser-section6">
+
+                        <div class="us_ser-report alarm">
+              
+                          <div class="us_report-maintxt">AI 시멘틱 투자분석 리포트<br>알림 서비스</div>
+                          <div class="us_report-stxt">
+                            종목이슈, 이벤트, 시장별로 최적의 시멘틱 <br>
+                            인과분석을 통한 리포트와 알림기능을<br>
+                            제공합니다.
+                          </div>
+              
+                          <div class="us_report-con">
+              
+                            <div class="us_report-img">
+                              <img src="img/us_report-alr-img.png" alt="">
+                            </div>
+              
+                          </div>
+              
+                        </div>
+              
+                      </div>  <!--class="us_ser-section7"-->
+
+                      <div class="us_ser-section7">
+                      
+                        <div class="us_ser-news">
+                      
+                          <div class="us_news-maintxt">
+                            미국주식에 관심있는 <span>누구나</span>
+                          </div>
+                          <div class="us_news-stxt">가입 여부 상관없이 즉시 이용 가능</div>
+                      
+                          <div class="us_news-box">
+                            <div class="us_news-list">
+                              <div class="us_news-list_img">
+                                <img src="img/us_news-list01.png" alt="">
+                              </div>
+                              <div class="us_news-list_txt">매일 아침 8시 미국 시장 요약</div>
+                            </div>
+                            <div class="us_news-list">
+                              <div class="us_news-list_img">
+                                <img src="img/us_news-list02.png" alt="">
+                              </div>
+                              <div class="us_news-list_txt">주가에 영향을 주는 <br>미국 기업 수시공시 실시간 요약</div>
+                            </div>
+                            <div class="us_news-list">
+                              <div class="us_news-list_img">
+                                <img src="img/us_news-list03.png" alt="">
+                              </div>
+                              <div class="us_news-list_txt">가장 빠른 미국 실적 소식 제공</div>
+                            </div>
+                          </div>
+                      
+                          <button class="us_news-btn">
+                            US속보 바로가기
+                          </button>
+                      
+                        </div>
+                      
+                      </div> <!--class="us_ser-section7"-->
+
+                      <div class="us_ser-section8">
+
+                        <div class="us_join-info">
+
+                          <div class="us_news-maintxt">
+                            AI 미국 추천 <span>가입안내</span>
+                          </div>
+
+                          <ul>
+                            <li>
+                              미국주식 시가총액 상위 1,000종목을 대상으로 매수/매도 신호 제공
+                            </li>
+                            <li>
+                              문자알림
+                              <div class="stxt">
+                                -  모닝브리핑(아침 8시 1회) <br>
+                                -  종목브리핑(아침 8시 1회)<br>
+                                -  매수예고 알림 (저녁5시 1회)<br>
+                                -  매도예고 알림 (저녁5시 1회)<br>
+                                -  매수/매도 장중 도달 알림(심야/심야수신 동의시)<br>
+                                &nbsp;&nbsp;(장마감 30분전,예정가격 미도달시 처리)
+                              </div>
+                            </li>
+                            <li>
+                              종목 평균 보유기간 10일 이내
+                              <div class="stxt">(보유기간은 시장상황에 따라 달라질 수 있습니다.)</div>
+                            </li>
+                            <li>
+                              종목당 투자비중 5% 권장
+                            </li>
+                            <li>
+                              이용요금 : <span class="us_up">55,000</span>원 <em>(VAT 포함, 매월 정기결제)</em>
+                              <div class="emp">"누구나 쉽고 안정적으로 <br>미국 주식에 투자할 수 있습니다."</div>
+                            </li>
+                            <!-- 가입신청 팝업 -->
+                            <div class="app-pop">
+                              <button>
+                                <div class="app-pop_txt">
+                                  <strong>AI 미국 주식 추천</strong>
+                                  <span>유료 서비스를 기대하세요 <br>Commingsoon</span>
+                                </div>
+                                <div class="ushome-banner_img">
+                                  <img src="img/ushome_bannerimg.png" alt="banner-img">
+                                </div>
+                              </button>
+                            </div>
+                            <!-- 가입신청 팝업 -->
+                            <li>
+                              미국주식 사용자 서비스 이용 범위
+                            </li>
+                            <table>
+                              <colgroup>
+                                <col width="44%">
+                                <col width="28%">
+                                <col width="28%">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>팩터</th>
+                                  <th>분석요소</th>
+                                  <th>점수</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    - AI미국추천 매매신호 <br>
+                                    - 매수/매도 추천종목 <br>
+                                    - 매수/매도 체결 종목 <br>
+                                    - 보유종목 대응전략
+                                  </td>
+                                  <td style="text-align: left;">
+                                    - AI미국추천 <br>
+                                    - 최신정보 <br>
+                                    &nbsp;&nbsp;&nbsp;조회 <br>
+                                    - 문자 알림
+                                  </td>
+                                  <td>
+                                    5거래일이 지난 정보만 조회가능
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    [ 문자 알림서비스 ] <br>
+                                    - 모닝브리핑 <br>
+                                    - 종목브리핑 <br>
+                                    - 매수/매도 종목<br>
+                                    -매매 체결알림 <br>
+                                    - 보유종목 대응전략 <br>
+                                    - 시멘틱 투자리포트
+                                  </td>
+                                  <td>O</td>
+                                  <td>X</td>
+                                </tr>
+                                <tr>
+                                  <td>종목분석 리포트</td>
+                                  <td>O</td>
+                                  <td>X</td>
+                                </tr>
+                                <tr>
+                                  <td>시멘틱 투자리포트</td>
+                                  <td>O</td>
+                                  <td>X</td>
+                                </tr>
+                                <tr>
+                                  <td>AI종목뉴스</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                </tr>
+                                <tr>
+                                  <td>AI미국이슈</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <li>
+                              AI 미국 추천 문자 샘플
+                            </li>
+                            <div class="swiper msg_sam-swiper">
+                              <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                  <div class="headtxt">● 로봇관련주 예상 체결가 강세</div>
+                                  <div class="bodytxt">
+                                    <div>
+                                      <span>휴림로봇</span> <br>
+                                      - 예상체결가 전일대비 +30.0% <br>
+                                      - 01/31 다믈멀티미디어, 최대주주 변경에 <br><br>
+                                      <span>레인보우로보틱스</span><br>
+                                      - 예상체결가 전일대비 +30.0% <br>
+                                      - 01/17 레인보우로보틱스, 52주 신고가 경신  <br>…
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="headtxt">● 장중 즉징주 AI 속보</div>
+                                  <div class="bodytxt">
+                                    <div>
+                                      <em>오늘 장중, 수주공시를 발표한 2종목</em> <br>
+                                      <em>[신규추천리포트] 코나아이 '사업+실적</em> <br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;전망좋다' <br>
+                                      <em>[이슈종목] 오전장 이화전기(30.0%) 등 강세</em><br>
+                                      <em>[10시급등테마]장초반 상승률 상위 테마</em><br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;리스트<br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;…
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="headtxt">● 장마감 총정리</div>
+                                  <div class="bodytxt">
+                                    <div>
+                                      코스피와 코스닥 일제히 2일만에 하락세 전환 <br>
+                                      - KOSPI 2395.26 (+0.63%) <br>
+                                      - KOSDAQ 717.97(+0.71%) <br>
+                                      ◈ 자율주행 로봇 배달 도로교통법 개정안 <br>
+                                      통과, 관련주 상승세 유진로봇(+5.02%), <br>
+                                      로보티즈(+9.56%),티로보틱스(+2.96%), <br>
+                                      뉴로메카(+8.03%)
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="swiper-pagination"></div>
+                            </div>
+                            <li>
+                              AI 미국 추천 결제 및 환불 정책
+                              <div class="stxt">
+                                -  신용카드로 결제할 수 있습니다.    <br>
+                                &nbsp;&nbsp;&nbsp;(단,현대카드,하나카드 결제 불가) <br>
+                                -  <span>매월 정기 결제되는 구독 서비스</span>입니다. <br>
+                                -  언제든지 해지(정기 결제 중단)할 수 있습니다. <br>
+                                -  해지시 서비스가 개시된 월에 대한 <span>환불 금액은</span> <br>
+                                &nbsp;&nbsp;&nbsp;<span>없으며, 이용만료일까지</span> 서비스 이용이 가능합니다.
+                              </div>
+                            </li>
+                            <!-- 가입신청 팝업 -->
+                            <div class="app-pop">
+                              <button>
+                                <div class="app-pop_txt">
+                                  <strong>AI 미국 주식 추천</strong>
+                                  <span>유료 서비스를 기대하세요 <br>Commingsoon</span>
+                                </div>
+                                <div class="ushome-banner_img">
+                                  <img src="img/ushome_bannerimg.png" alt="banner-img">
+                                </div>
+                              </button>
+                            </div>
+                            <!-- 가입신청 팝업 -->
+                          </ul>
+
+                          <script>
+                            var swiper = new Swiper('.msg_sam-swiper', {
+                              spaceBetween: 20,
+                              pagination: {
+                                el: '.swiper-pagination',
+                                clickable : true,
+                              },
+                              autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              },
+                              loop: true,
+                            });
+                          </script>
+
+                        </div>
+
+                      </div>  <!--class="us_ser-section8"-->
+
+                    </div>
+                    <!-- //info-use -->
+
+                  <!-- //us_home -->
+                    
+                  <!-- <div class="hspace50"></div> -->
+                </section>
+                <!-- //container -->
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                    </span>
+                </div>
+            </footer>
+
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+        <!-- animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </div>
+    <!-- //app -->
+
+
+    <script>
+        const topTitle = document.querySelector('.headerTitle');
+
+        topTitle.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

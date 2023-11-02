@@ -380,10 +380,10 @@
             <div class="allNav">
                 <menu class="globalNavigation float-start">
                     <h3 class="visually-hidden">네비게이션</h3>
-                    <a href="#" class="active">홈</a>
+                    <a href="#">홈</a>
                     <a href="#">AI미국추천</a>
                     <a href="#">AI종목속보</a>
-                    <a href="#">AI미국이슈</a>
+                    <a href="#" class="active">AI미국이슈</a>
                     <a href="#">이용안내</a>
                     <a href="#">MY</a>
                 </menu>
@@ -398,8 +398,8 @@
                     <div class="usa-issue-top">
                         <nav>
                             <ul>
-                                <li><button>이슈 키워드</button></li>
-                                <li><button class="active">이슈강도</button></li>
+                                <li><button class="active">이슈 키워드</button></li>
+                                <li><button>이슈강도</button></li>
                                 <li><button>시맨틱 리포트</button></li>
                             </ul>
                         </nav>
@@ -408,170 +408,125 @@
 
                     <div class="usa-issue-section">
                         <p>
-                            빅데이터 시멘틱 분석을 통해 추출한 종목/키워드를 이슈 강도별로 조회 할 수 있습니다. <br>
-                            시장의 이슈를 받고 있는 종목/키워드의 상태를 확인하세요.
+                            빅데이터를 기반으로 미국 주식시장에서 가장 많은 관심을 받고 있는 이슈와 종목을 보다 빨리 발굴 합니다. <br>
+                            최근 미국 투자자들의 투자 관심사를 쉽게 파악하고, 다양한 투자 기회를 누려 보세요.
                         </p>
 
-                        <div class="usa-issue-item rmt-20">
+                        <div class="usa-issue-keyword">
+                            <input type="text" placeholder="미국주식 이슈 키워드">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.50005 10.7084C5.50005 7.8319 7.83197 5.5 10.7085 5.5C13.5851 5.5 15.917 7.8319 15.917 10.7084C15.917 13.585 13.5851 15.9169 10.7085 15.9169C7.83197 15.9169 5.50005 13.585 5.50005 10.7084ZM10.7085 4C7.00355 4 4.00005 7.00347 4.00005 10.7084C4.00005 14.4134 7.00355 17.4169 10.7085 17.4169C12.2907 17.4169 13.7451 16.8691 14.8921 15.9529L17.8389 18.8996C18.1318 19.1925 18.6066 19.1925 18.8995 18.8996C19.1924 18.6067 19.1924 18.1318 18.8995 17.8389L15.9528 14.8922C16.8691 13.7451 17.417 12.2908 17.417 10.7084C17.417 7.00347 14.4135 4 10.7085 4Z" fill="#141414" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- // -->
 
-                            <div class="strength">
-                                <button class="str01 active">강함</button>
-                                <button class="str02">중간</button>
-                                <button class="str03">약함</button>
-                                <button class="str04">신규</button>
-                                <button class="str05">전체</button>
+                        <div class="usa-issue-date">
+                            <strong>이슈 기간설정</strong>
+                            <div>
+                                <input type="date" name="" id="startDate" min="2023-09-10">
+                                <span>~</span>
+                                <input type="date" name="" id="lastDate" min="2023-09-10">
                             </div>
 
-                            <div class="usa-tab-content usa-item rmt-20">
+                            <script>
+                                const today = new Date();
+                                const monthAgo = new Date(today);
+                                monthAgo.setMonth(today.getMonth() - 1);
 
-                                <div class="str_text">
-                                    해당 종목과 키워드가 시장의 관심받으면서 주가 움직임이 강한 종목입니다. 해당 키워드의 관련 종목들을 주의깊게 보시기 바랍니다.
+                                document.querySelector('#startDate').valueAsDate = monthAgo; // 한달전
+                                document.querySelector('#lastDate').valueAsDate = today; // 오늘날짜
+                            </script>
+                        </div>
+                        <!-- // -->
+
+                        <div class="usa-issue-item">
+                            <ul>
+                                <li><button class="active">종목</button></li>
+                                <li><button>이슈</button></li>
+                            </ul>
+
+                            <div class="usa-tab-content usa-item">
+                                <div class="title">
+                                    <strong>기간별 종목순위</strong>
                                 </div>
-                                <!-- <div class="str_text">
-                                    해당 종목/키워드는 이수 강도가 높아지기 전과 이후 모두 주가/거래량의 등륵이 큰 상태입니다. 주가 움직임이 현저히 약해지거나 반대방향으로 갈 수 있으니 주의 하세요.
+
+                                <div class="usa-tab-box rankBg rmt-15">
+                                    <div class="rankBubble">
+                                        <img src="./img/eventRank.png" alt="버블랭킹" class="img-fluid">
+                                    </div>
+                                    <!-- // -->
                                 </div>
-                                <div class="str_text">
-                                    해당 종목/키워든 주가 움직임이 있다가 시장 관심도가 높아진 이후 주가 움직임 약해진 상태입니다.
-                                </div>
-                                <div class="str_text">
-                                    새로 등장한 시장 관심도가 높아진 종목/키워드입니다. 이슈가 생겨난 전후에 주가/거래량의 움직임이 없는상태이나, 앞으로 주가강도가 높아질 수 있는 종목이나 관심을 가지고 지켜보세요.
-                                </div>
-                                <div class="str_text">
-                                    최근 날짜순 전체 키워드 조회 화면입니다.
-                                </div> -->
 
                                 <div class="usa-tab-box rmt-20">
-                                    <div class="usa-news str">
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str01">강함</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str02">중간</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str03">약함</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str04">신규</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str01">강함</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str02">중간</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str03">약함</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str04">신규</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str01">강함</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
-                                        <div data-bs-toggle="modal" data-bs-target="#issueStr">
-                                            <div class="top">
-                                                <em>09/21</em>
-                                                <span class="obj text-truncate">abcdeabcdeAb</span>
-                                                <span class="str str02">중간</span>
-                                            </div>
-                                            <div class="cont text-truncate">
-                                                <em>관련종목 : </em>
-                                                <span>애플, 가나다라마, 가나다라마바사아차차가나다라마바사아차차</span>
-                                            </div>
-                                        </div>
-                                        <!-- // -->
-
+                                    <div class="rank-table">
+                                        <table width="100%">
+                                            <colgroup>
+                                                <col width="36">
+                                                <col width="*">
+                                                <col width="50">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="text-center">순위</th>
+                                                    <th scope="col" class="text-center">종목</th>
+                                                    <th scope="col" class="text-end">이슈강도</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank1">1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank2">2</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank2">3</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">4</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">5</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">6</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">7</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">8</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">9</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank3">10</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <button>
                                             더보기
                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
@@ -582,101 +537,120 @@
                                 </div>
 
 
-
-
                             </div>
                             <!-- // -->
                         </div>
                         <!-- // -->
-                        <div class="hspace50"></div>
-                    </div>
 
-                    <div class="modal fade" id="issueStr">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="usa-modal-str">
-                                        <header>
-                                            <strong>이슈 강도 상세보기</strong>
-                                            <button data-bs-dismiss="modal">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                    <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                        </header>
-                                        <!-- // -->
-                                        <section>
-                                            <p>
-                                                해당 종목/키워든 주가 움직임이 있다가 시장 관심도가 높아진 이후 주가 움직임 약해진 상태입니다.
-                                            </p>
+                        <div class="usa-issue-item">
 
-                                            <div class="w-100 d-block rmt-16">
-                                                <table width="100%">
-                                                    <colgroup>
-                                                        <col width="80">
-                                                        <col width="*">
-                                                    </colgroup>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>날짜</th>
-                                                            <td>
-                                                                2023.06.11
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>AI키워드</th>
-                                                            <td>
-                                                                속보
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>AI테마</th>
-                                                            <td>
-                                                                엔비디아
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>관련종목</th>
-                                                            <td>
-                                                                TSLA
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>관련산업</th>
-                                                            <td>
-                                                                전기전자
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>관련키워드</th>
-                                                            <td>
-                                                                로봇업체 가상공간 미국법인 안드로이드 컴퓨터 인포테인먼트 PC시장 글로벌기술기업
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>이슈 강도</th>
-                                                            <td>
-                                                                <span class="bullet_str str01">강함</span>
-                                                                <!-- <span class="bullet_str str02">중간</span>
-                                                                <span class="bullet_str str03">약함</span>
-                                                                <span class="bullet_str str04">신규</span>  -->
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <!-- // -->
+                            <div class="usa-tab-txt">
+                                <strong>떠오르는 이슈, 가라앉는 이슈</strong>
+                                <p>
+                                    이슈 키워드는 시장 관심도를 반영 합니다. <br>
+                                    이슈 키워드의 강도와 순위로 미국 시장의 변화하는 흐름을 살펴보세요.
+                                </p>
+                            </div>
 
-                                            <div class="modal-button">
-                                                <button>확인</button>
-                                            </div>
-                                            <!-- // -->
-                                        </section>
-                                        <!-- // -->
+                            <ul>
+                                <li><button class="active">종목</button></li>
+                                <li><button>이슈</button></li>
+                            </ul>
+
+                            
+
+                            <div class="usa-tab-content usa-issue">
+                                <div class="time-txt">
+                                    <strong>06월 4주차</strong>
+                                    <span>2023.06.11 ~ 2023.06.21</span>
+                                </div>
+
+                                <div class="usa-tab-box rmt-15">
+                                    <div class="rank-table">
+                                        <table width="100%">
+                                            <colgroup>
+                                                <col width="50">
+                                                <col width="*">
+                                                <col width="50">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="text-center">순위변동</th>
+                                                    <th scope="col" class="text-center">종목</th>
+                                                    <th scope="col" class="text-end">이슈강도</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c">-</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up">NEW</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c">-</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up">NEW</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c up"><em>▲</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><span class="rank rank-c dn"><em>▼</em> 1</span></td>
+                                                    <td><span class="name d-block text-truncate">종목명종목명종목명종목명</span></td>
+                                                    <td class="right"><span class="up">123</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button>
+                                            더보기
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                                <path d="M1 1L5 5L9 1" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
+
+                                <div class="updateTime">
+                                    <em>update 06.28 20:00</em>
+                                </div>
                             </div>
+                            <!-- // -->
+
+                            <div class="hspace50"></div>
                         </div>
+                        <!-- // -->
                     </div>
                 </section>
                 <!-- //container -->

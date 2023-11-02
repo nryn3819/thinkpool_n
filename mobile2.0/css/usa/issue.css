@@ -45,7 +45,7 @@
   display: block;
   width: 100%;
   border-radius: 12px;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   background: #fff;
   padding: 20px;
 }
@@ -72,6 +72,22 @@
   width: 100%;
   font-size: 14px;
   color: #333;
+  line-height: 21px;
+}
+.usa-issue-section .alarm-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+.usa-issue-section .alarm-btn button {
+  border-radius: 100px;
+  background: #5567FD;
+  border: none;
+  padding: 7px 17px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 21px;
 }
 .usa-issue-section .usa-issue-keyword {
@@ -258,6 +274,9 @@
   border-bottom: 1px solid #edeff2;
   font-size: 16px;
 }
+.rank-table table tbody tr td.right {
+  text-align: right;
+}
 .rank-table table tbody tr td .rank {
   display: block;
   width: 100%;
@@ -311,7 +330,7 @@
   align-items: center;
   gap: 2px;
   width: 100%;
-  margin-top: 13px;
+  margin-top: 20px;
   border: 0;
   padding: 0;
   background: none;
@@ -365,6 +384,10 @@
   color: #333;
   font-weight: 500;
 }
+.ch-date button em {
+  font-size: 14px;
+  line-height: 21px;
+}
 .ch-date .update {
   position: absolute;
   top: 0;
@@ -381,11 +404,14 @@
   border: 1px solid #dfdfdf;
   background: #fff;
   border-radius: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 20px;
 }
+.stbox .magn {
+  margin: 40px 0px 20px;
+}
 .stbox .bullet {
-  display: block;
+  display: inline-block;
   height: 27px;
   padding: 3px 12px;
   line-height: 21px;
@@ -435,7 +461,27 @@
   color: #333;
   font-weight: 500;
   line-height: 21px;
-  padding: 15px 0 10px;
+  padding: 20px 0 10px;
+}
+.stbox .tbl-news .table-title {
+  color: #333;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+}
+.stbox .tbl-news .table-title::before {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: #666;
+  border-radius: 100%;
+  content: "";
 }
 .stbox .tbl-news table {
   width: 100%;
@@ -466,6 +512,13 @@
 .stbox .tbl-news table td {
   color: #666;
   padding: 0 10px;
+}
+.stbox .tbl-news table td.right {
+  text-align: right;
+}
+.stbox .tbl-news table td.left {
+  text-align: left;
+  padding: 13px 7px;
 }
 .stbox .tbl-news table td .up {
   color: #e81a1a;
@@ -543,4 +596,23 @@
 }
 .usDate .offcanvas-body button.active em {
   display: block;
+}
+
+.semantics {
+  background: #F7F8FA;
+  padding: 20px 16px 40px;
+}
+.semantics .headertxt {
+  width: 100%;
+  padding: 30px 10px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.semantics .headertxt span {
+  color: #5368ff;
+}
+.semantics .sem-chart_img img {
+  width: 100%;
 }
