@@ -657,7 +657,8 @@
 
                 <div class="buy-con">
 
-                  <button class="buy-con_box">
+                  <!-- 상장폐지일 때 -->
+                  <button class="buy-con_box" type="button" data-bs-toggle="modal" data-bs-target="#listedPopup">
                     <div class="buy-box_top">
                       <div class="top1">
                         <div class="top1-left">AMZNI</div>
@@ -690,6 +691,7 @@
                       </div>
                     </div>
                   </button>
+                  <!-- 상장폐지일 때 -->
 
                   <button class="buy-con_box">
                     <div class="buy-box_top">
@@ -1057,7 +1059,21 @@
 
             </div>
 
-
+            <!-- 상장폐지 팝업창 -->
+            <div class="modal fade list-popup" id="listedPopup">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <strong>상장폐지 종목입니다.</strong>
+                    <span>매매에 참고하여 주시기 바랍니다.</span>
+                  </div>
+                  <div class="listmodal-btn">
+                    <button type="button" data-bs-dismiss="modal">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 상장폐지 팝업창 -->
 
           </div>
           <!-- //us_home -->
