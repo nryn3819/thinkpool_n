@@ -3692,3 +3692,28 @@
 .icn-tag em {
   display: inline-block;
 }
+
+#autoComplete_list_us {
+  position: fixed;
+  top: 53px !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 80vh !important;
+  z-index: 9999 !important;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+  list-style: none;
+  overflow: auto;
+}
+#autoComplete_list_us li {
+  margin-top: 14px;
+}
+#autoComplete_list_us li:first-child {
+  margin-top: 24px;
+}
+#autoComplete_list_us li mark {
+  background: none;
+  padding: 0;
+  font-weight: 700;
+  color: #5367ff;
+}
