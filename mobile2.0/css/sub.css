@@ -8938,91 +8938,6 @@
 .us_event-home .evt-section .tab-content .tab-pane .ai-strat div .strat-box .overview-chart img {
   width: 100%;
 }
-.us_event-home .evt-section .tab-content .tab-pane .modal {
-  width: 100%;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog {
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0px 16px;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content {
-  border-radius: 16px;
-  border: none;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-header {
-  width: 100%;
-  position: relative;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-header .aisco-head {
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 25px;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-header button {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  padding: 4px;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body {
-  padding: 25px 20px;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history .table-border {
-  width: 100%;
-  height: 1px;
-  background: #8C8C8C;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table {
-  width: 100%;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table thead tr th {
-  border-right: 1px solid #F0F0F0;
-  border-bottom: 1px solid #DCDCDC;
-  padding: 9px 10px;
-  color: #000;
-  font-size: 12px;
-  font-weight: 400;
-  text-align: center;
-  line-height: 15px;
-  background: #FAFAFA;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table thead tr th:last-child {
-  border-right: none;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table tbody tr td {
-  border-bottom: 1px solid #F0F0F0;
-  padding: 16px 0;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #141414;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table tbody tr td span {
-  display: block;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table tbody tr td:first-child {
-  color: #8C8C8C;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content .modal-body .past-history table tbody tr td:last-child {
-  color: #666;
-}
-.us_event-home .evt-section .tab-content .tab-pane .modal .modal-dialog .modal-content button.moclose {
-  width: 100%;
-  height: 48px;
-  border-radius: 0px 0px 15px 15px;
-  background: #5567FD;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-}
 
 .evt-main_notjoin {
   width: 100%;
@@ -9246,11 +9161,76 @@
   text-align: center;
   background: #A5A2BC;
   backdrop-filter: blur(7.5px);
-  margin-bottom: 10px;
+  margin-bottom: 17px;
+  border-radius: 6px;
   color: #fff;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+}
+
+.pastHis {
+  width: 100%;
+  padding: 20px 16px 60px;
+}
+.pastHis .past-history .table-border {
+  width: 100%;
+  height: 1px;
+  background: #8C8C8C;
+}
+.pastHis .past-history table {
+  width: 100%;
+}
+.pastHis .past-history table thead tr th {
+  border-right: 1px solid #F0F0F0;
+  border-bottom: 1px solid #DCDCDC;
+  padding: 9px 10px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 15px;
+  background: #FAFAFA;
+}
+.pastHis .past-history table thead tr th:last-child {
+  border-right: none;
+}
+.pastHis .past-history table tbody tr td {
+  border-bottom: 1px solid #F0F0F0;
+  padding: 16px 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #141414;
+}
+.pastHis .past-history table tbody tr td span {
+  display: block;
+}
+.pastHis .past-history table tbody tr td:first-child {
+  color: #8C8C8C;
+}
+.pastHis .past-history table tbody tr td:last-child {
+  color: #666;
+}
+.pastHis .past-history button.more {
+  margin-top: 30px;
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #DFE3E7;
+  background: #E7EBEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pastHis .past-history button span {
+  display: block;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .info-use .ser-main {
