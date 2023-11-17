@@ -505,6 +505,10 @@
   display: flex;
   gap: 8px;
 }
+.usnews-con .usnews-con_box button.usnews-con_list .usnews-list_top .usnews-list_time.usnews-list_right {
+  width: 100%;
+  justify-content: end;
+}
 .usnews-con .usnews-con_box button.usnews-con_list .usnews-list_top .usnews-list_time span.usnews-list_line::after {
   content: "";
   display: inline-block;

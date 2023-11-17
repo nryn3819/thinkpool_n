@@ -603,6 +603,11 @@
           display: flex;
           gap: 8px;
 
+          &.usnews-list_right{
+            width: 100%;
+            justify-content: end;
+          }
+
           span.usnews-list_line {
           
             &::after {
