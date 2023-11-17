@@ -413,12 +413,104 @@
                         </p>
 
                         <div class="usa-issue-keyword">
-                            <input type="text" placeholder="미국주식 이슈 키워드">
-                            <button type="submit">
+                            <input type="text" placeholder="미국주식 이슈 키워드" id="opensch02">
+                            <button type="submit" data-bs-toggle="modal" data-bs-target="#noKeword">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.50005 10.7084C5.50005 7.8319 7.83197 5.5 10.7085 5.5C13.5851 5.5 15.917 7.8319 15.917 10.7084C15.917 13.585 13.5851 15.9169 10.7085 15.9169C7.83197 15.9169 5.50005 13.585 5.50005 10.7084ZM10.7085 4C7.00355 4 4.00005 7.00347 4.00005 10.7084C4.00005 14.4134 7.00355 17.4169 10.7085 17.4169C12.2907 17.4169 13.7451 16.8691 14.8921 15.9529L17.8389 18.8996C18.1318 19.1925 18.6066 19.1925 18.8995 18.8996C19.1924 18.6067 19.1924 18.1318 18.8995 17.8389L15.9528 14.8922C16.8691 13.7451 17.417 12.2908 17.417 10.7084C17.417 7.00347 14.4135 4 10.7085 4Z" fill="#141414" />
                                 </svg>
                             </button>
+
+                            <div class="searcharea">
+                                <div class="searcharea-header">
+                                    <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                    <!-- // -->
+                                    <div class="searcharea-sch">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <button type="button" class="btn-close text-reset sch-hide"></button>
+                                </div>
+                                <!-- // -->
+    
+                                <div class="searcharea-body">
+    
+                                    <div class="off-basic">
+                                        <div class="tag">
+                                            <strong class="d-block rmb-10">주요키워드</strong>
+                                            <span>태그명</span>
+                                            <span>태그명</span>
+                                            <span>태그명</span>
+                                            <span>태그명</span>
+                                            <span>태그명</span>
+                                            <span>태그명</span>
+                                        </div>
+                                        <!-- //최근이슈 -->
+    
+                                        <div class="hr-line rmt-20"></div>
+    
+                                        <div class="latest rmt-20">
+                                            <strong>최근 검색어</strong>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+                                            <span class="tag">면세점</span>
+    
+                                        </div>
+                                        <!-- //최근검색어 -->
+                                    </div>
+    
+                                    <div class="off-empty">
+                                        <span>
+                                            입력하신 단어와 일치하는 종목이 없습니다. <br>
+                                            검색어를 확인하시고 다시 입력해주세요.
+                                        </span>
+                                    </div>
+                                    <!-- // off-empty -->
+                                </div>
+                                <!-- // -->
+                            </div>
+    
+                            <script>
+                                document.getElementById('opensch02').addEventListener('click', function () {
+    
+                                    document.querySelector('.searcharea').classList.add('sch-show')
+    
+                                    document.getElementById('inputsch').focus();
+                                    document.getElementById('inputsch').value = "";
+                                });
+    
+    
+                                document.querySelector('.sch-hide').addEventListener('click', function () {
+    
+                                    document.querySelector('.searcharea').classList.remove('sch-show')
+                                });
+    
+    
+                            </script>
+                        </div>
+
+                        <div class="modal fade custom-modal1" id="noKeword" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <button type="button" data-bs-dismiss="modal" class="btn-close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-basic-text text-center">
+                                            검색 키워드를 입력해주세요.
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer text-center cm-footer">
+                                        <button type="button" data-bs-dismiss="modal" class="btn-custom-primary">확인</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- // -->
 
