@@ -7,14 +7,16 @@
 
 #autoComplete_list_1 {
   position: fixed;
-  top: 53px;
+  top: 49px !important;
   left: 0;
   width: 100%;
   z-index: 90;
   background: #fff;
   min-height: 300px;
   border-bottom: 1px solid #f5f5f5;
+  overflow: auto;
   list-style: none;
+  padding: 0px 16px 20px 2rem;
 }
 #autoComplete_list_1 li {
   margin-top: 14px;

@@ -2166,21 +2166,24 @@ html, body {
   color: #5368ff;
 }
 .sch-info.usa-sch-result .usa-result-list button .item-cont {
+  width: calc(100% - 73px);
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 2px;
 }
 .sch-info.usa-sch-result .usa-result-list button .item-cont .korName {
+  width: 100%;
+  text-align: left;
   display: block;
-  height: 22px;
   line-height: 22px;
   font-size: 16px;
   color: #000;
 }
 .sch-info.usa-sch-result .usa-result-list button .item-cont .engName {
+  width: 100%;
+  text-align: left;
   display: block;
-  height: 22px;
   line-height: 22px;
   font-size: 16px;
   color: #999;
@@ -9385,11 +9388,15 @@ html, body {
   font-weight: 700;
 }
 .us_aiintro-con01 .us_rec-swiper .swiper-wrapper .us_rec-slide .us_rec-slide_img .us_text-box.sell-position {
+  width: 163px;
+  height: 85px;
   position: absolute;
   right: 16px;
   top: 12px;
 }
 .us_aiintro-con01 .us_rec-swiper .swiper-wrapper .us_rec-slide .us_rec-slide_img .us_text-box.buy-position {
+  width: 210px;
+  height: 78px;
   position: absolute;
   left: 16px;
   bottom: 13px;
@@ -12723,15 +12730,16 @@ html, body {
 
 #autoComplete_list_us {
   position: fixed;
-  top: 53px !important;
+  top: 49px !important;
   left: 0 !important;
   width: 100% !important;
-  height: 80vh !important;
+  height: calc(100vh - 49px) !important;
   z-index: 9999 !important;
   background: #fff;
   border-bottom: 1px solid #f5f5f5;
   list-style: none;
   overflow: auto;
+  padding: 20px 16px 20px 2rem;
 }
 #autoComplete_list_us li {
   margin-top: 14px;
@@ -20628,14 +20636,16 @@ table tbody tr td a {
 
 #autoComplete_list_1 {
   position: fixed;
-  top: 53px;
+  top: 49px !important;
   left: 0;
   width: 100%;
   z-index: 90;
   background: #fff;
   min-height: 300px;
   border-bottom: 1px solid #f5f5f5;
+  overflow: auto;
   list-style: none;
+  padding: 0px 16px 20px 2rem;
 }
 #autoComplete_list_1 li {
   margin-top: 14px;

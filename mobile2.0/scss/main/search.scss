@@ -124,21 +124,24 @@
         }
 
         .item-cont {
+          width: calc(100% - 73px);
           display: flex;
           flex-direction: column;
           align-items: start;
           gap: 2px;
 
           .korName {
+            width: 100%;
+            text-align: left;
             display: block;
-            height: 22px;
             line-height: 22px;
             font-size: 16px;
             color: #000;
           }
           .engName {
+            width: 100%;
+            text-align: left;
             display: block;
-            height: 22px;
             line-height: 22px;
             font-size: 16px;
             color: #999;

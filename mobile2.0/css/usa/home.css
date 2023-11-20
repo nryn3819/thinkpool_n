@@ -337,11 +337,15 @@
   font-weight: 700;
 }
 .us_aiintro-con01 .us_rec-swiper .swiper-wrapper .us_rec-slide .us_rec-slide_img .us_text-box.sell-position {
+  width: 163px;
+  height: 85px;
   position: absolute;
   right: 16px;
   top: 12px;
 }
 .us_aiintro-con01 .us_rec-swiper .swiper-wrapper .us_rec-slide .us_rec-slide_img .us_text-box.buy-position {
+  width: 210px;
+  height: 78px;
   position: absolute;
   left: 16px;
   bottom: 13px;
