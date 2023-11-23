@@ -414,24 +414,24 @@
 
                         <div class="usa-issue-keyword">
                             <input type="text" placeholder="미국주식 이슈 키워드" id="opensch02">
-                            <button type="submit" data-bs-toggle="modal" data-bs-target="#noKeword">
+                            <button type="submit" data-bs-toggle="modal" data-bs-target="#noKeword" class="mainSch-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.50005 10.7084C5.50005 7.8319 7.83197 5.5 10.7085 5.5C13.5851 5.5 15.917 7.8319 15.917 10.7084C15.917 13.585 13.5851 15.9169 10.7085 15.9169C7.83197 15.9169 5.50005 13.585 5.50005 10.7084ZM10.7085 4C7.00355 4 4.00005 7.00347 4.00005 10.7084C4.00005 14.4134 7.00355 17.4169 10.7085 17.4169C12.2907 17.4169 13.7451 16.8691 14.8921 15.9529L17.8389 18.8996C18.1318 19.1925 18.6066 19.1925 18.8995 18.8996C19.1924 18.6067 19.1924 18.1318 18.8995 17.8389L15.9528 14.8922C16.8691 13.7451 17.417 12.2908 17.417 10.7084C17.417 7.00347 14.4135 4 10.7085 4Z" fill="#141414" />
                                 </svg>
                             </button>
 
-                            <div class="searcharea">
-                                <div class="searcharea-header">
+                            <div class="searcharea02">
+                                <div class="searcharea02-header">
                                     <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
                                     <!-- // -->
                                     <div class="searcharea-sch">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                                            <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch02">
                                             <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
                                         </div>
                                     </div>
                                     <!-- // -->
-                                    <button type="button" class="btn-close text-reset sch-hide"></button>
+                                    <button type="button" class="btn-close text-reset sch-hide02"></button>
                                 </div>
                                 <!-- // -->
     
@@ -479,16 +479,16 @@
                             <script>
                                 document.getElementById('opensch02').addEventListener('click', function () {
     
-                                    document.querySelector('.searcharea').classList.add('sch-show')
+                                    document.querySelector('.searcharea02').classList.add('sch-show')
     
-                                    document.getElementById('inputsch').focus();
-                                    document.getElementById('inputsch').value = "";
+                                    document.getElementById('inputsch02').focus();
+                                    document.getElementById('inputsch02').value = "";
                                 });
     
     
-                                document.querySelector('.sch-hide').addEventListener('click', function () {
+                                document.querySelector('.sch-hide02').addEventListener('click', function () {
     
-                                    document.querySelector('.searcharea').classList.remove('sch-show')
+                                    document.querySelector('.searcharea02').classList.remove('sch-show')
                                 });
     
     
