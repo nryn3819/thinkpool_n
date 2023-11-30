@@ -987,6 +987,15 @@
         });
     </script>
 
+    <script>
+      const clickBtn = document.querySelector('.us_ser-btn');
+      const guideLoc = document.querySelector('.us_join-info').offsetTop;
+
+      clickBtn.addEventListener('click', function() {
+        window.scrollTo({top: guideLoc, behavior: 'smooth'});
+      });
+    </script>
+
 
 
 </body>
