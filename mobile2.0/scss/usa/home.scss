@@ -508,6 +508,46 @@
     }
   }
 }
+
+.ushome-banner02{
+  padding: 40px 16px;
+  background: #F7F8FA;
+  width: 100%;
+
+  button{
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #8450FD;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ushome-banner_txt{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+
+      span{
+        display: block;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #FDFF9C;
+        font-weight: 400;
+      }
+    }
+
+    .ushome-banner_img{
+      
+      img{
+        width: 91px;
+      }
+    }
+  }
+}
 // us_home > ushome-banner
 
 // us_home > usnews-con

@@ -515,25 +515,21 @@
                         <!-- // -->
 
                         <div class="usa-issue-date">
-                            <strong>이슈 기간설정</strong>
-                            <div>
-                                <input type="date" name="" id="startDate" min="2023-09-10">
-                                <span>~</span>
-                                <input type="date" name="" id="lastDate" min="2023-09-10">
+                            <div class="nav">
+                                <button>1주</button>
+                                <button>2주</button>
+                                <button>3주</button>
+                                <button class="active">4주</button>
+                                <button>2개월</button>
+                                <button>3개월</button>
                             </div>
-
-                            <script>
-                                const today = new Date();
-                                const monthAgo = new Date(today);
-                                monthAgo.setMonth(today.getMonth() - 1);
-
-                                document.querySelector('#startDate').valueAsDate = monthAgo; // 한달전
-                                document.querySelector('#lastDate').valueAsDate = today; // 오늘날짜
-                            </script>
+                            <div class="navTxt">
+                                이슈 기간 : 2022.08.09 ~ 2022.08.09
+                            </div>
                         </div>
                         <!-- // -->
 
-                        <div class="usa-issue-item">
+                        <div class="usa-issue-item mt-20">
                             <ul>
                                 <li><button class="active">종목</button></li>
                                 <li><button>이슈</button></li>
