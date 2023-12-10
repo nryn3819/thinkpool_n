@@ -25,7 +25,7 @@
           padding: 8px 0;
           height: 40px;
           text-align: center;
-          font-size: 16px;
+          font-size: 15px;
           color: #666;
           border: 0;
           background: none;
@@ -35,7 +35,7 @@
             background: #454860;
             border-radius: 8px;
             color: #fff;
-            font-weight: 700;
+            font-weight: 500;
           }
         }
 
@@ -61,8 +61,8 @@
   }
 
   &.rankBg {
-    background: url(../img/rankBg.png) no-repeat 0 0;
-    background-size: cover;
+    // background: url(../img/rankBg.png) no-repeat 0 0;
+    // background-size: cover;
     padding: 20px 10px;
   }
   &.bubble {
@@ -120,7 +120,7 @@
         color: #999;
       }
     }
-    button {
+    button.mainSch-btn {
       position: absolute;
       top: 7px;
       right: 7px;
@@ -137,49 +137,46 @@
     width: 100%;
     margin-top: 20px;
 
-    strong {
-      display: block;
+    .nav{
       width: 100%;
-      font-size: 14px;
-      color: #8c8c8c;
-      line-height: 21px;
-      font-weight: 400;
+      height: 38px;
+      border-radius: 100px;
+      background: #E2E5EE;
+      margin-bottom: 15px;
+
+      button{
+        width: calc(100% / 6);
+        height: 38px;
+        border: none;
+        background: none;
+        color: #666;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+
+        &.active{
+          font-weight: 500;
+          color: #fff;
+          border-radius: 100px;
+          background: #454860;
+        }
+      }
     }
 
-    & > div {
-      display: flex;
+    .navTxt{
       width: 100%;
-      height: 40px;
-      border: 1px solid #5468ff;
-      border-radius: 6px;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 12px;
-      background: #fff;
-      margin-top: 6px;
-
-      input {
-        width: 120px;
-        border: 0;
-        padding: 0;
-        font-size: 16px;
-        font-weight: 500;
-        color: #141414;
-      }
-
-      span {
-        display: block;
-        font-size: 14px;
-        color: #000;
-        font-weight: 700;
-      }
+      text-align: center;
+      font-size: 14px;
+      color: #8C8C8C;
+      font-weight: 400;
+      line-height: 21px;
     }
   }
 }
 .usa-issue-item {
   display: block;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 40px;
 
   ul {
     display: flex;
@@ -517,6 +514,15 @@
       font-weight: 500;
       line-height: 21px;
       padding: 20px 0 10px;
+
+      span{
+        display: block;
+        margin-left: 6px;
+        color: #666;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 19px;
+      }
     }
 
     .table-title{
