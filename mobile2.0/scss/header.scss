@@ -51,13 +51,35 @@
   margin-right: 5px;
   float: left;
 
+  &.main-logo{
+    width: auto;
+    max-width: 115px;
+  }
+
   & > a {
     width: 100%;
     height: 20px;
     float: left;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 
     img {
       float: left;
+    }
+
+    &.ai-logo{
+      position: absolute;
+    }
+
+    &.f02{
+      position: absolute;
+      left: 33px;
+    }
+
+    &.f03{
+      position: absolute;
+      left: 33px;
     }
   }
   .pageBack {
@@ -68,7 +90,9 @@
 }
 #top {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   min-height: 20px;
   padding: 14px 18px 0;
@@ -96,6 +120,134 @@
   opacity: 0;
   transform: scale(0.5);
   transition: 0.15s 0.01s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.w-32{
+  width: 32px !important;
+}
+
+.border-none{
+  border: none !important;
+  width: calc(100% - 70px) !important;
+  height: 20px !important;
+}
+
+.border-none .schButton{
+  margin: 0 !important;
+}
+
+.schShow-input{
+  width: calc(100% - 40px) !important;
+  height: 20px !important;
+  border: 0 !important;
+  font-size: 15px !important;
+  padding: 0 10px 0 0px !important;
+  background: none !important;
+}
+
+
+// header 애니메이션
+.f01{
+  animation-name: f01ani;
+  animation-duration: 8s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes f01ani {
+  0%{
+    opacity: 1;
+  }
+  45%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  } 
+}
+
+.ai-logo{
+  animation-name: aiLogoani;
+  animation-duration: 8s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aiLogoani{
+  0%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.f02{
+  animation-name: f02ani;
+  animation-duration: 8s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes f02ani {
+  0%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.f03{
+  animation-name: f03ani;
+  animation-duration: 8s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes f03ani {
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 @import "./header/topSch.scss";

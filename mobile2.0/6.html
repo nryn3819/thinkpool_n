@@ -97,20 +97,33 @@
             <header id="header" class="clearfix">
                 <h2 class="visually-hidden">상단영역</h2>
                 <div id="top" class="float-start">
-                    <div class="logo">
+                    <div class="logo main-logo h-logo h-show"">
                         <h3 class="visually-hidden">로고</h3>
-                        <a href="main.html" class="float-start h-logo h-show"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
-                        <div class="pageBack h-hide">
-                            <button type="button" class="sch-hide2">이전페이지</button>
-                        </div>
+                        <a href="#" class="f01">
+                            <img src="./img/logo.png" alt="씽크풀로고" class="img-fluid w-32">
+                            <img src="./img/f01.png" style="height: 16px;" alt="씽크풀" class="img-fluid">
+                        </a>
+                        <a href="#" class="ai-logo">
+                            <img src="./img/aiLogo.png" style="height: 18px;" alt="ai로고">
+                        </a>
+                        <a href="#" class="f02">
+                            <img src="./img/f02.png" style="height: 16px;" alt="시대">
+                        </a>
+                        <a href="#" class="f03">
+                            <img src="./img/f03.png" style="height: 16px;" alt="투자플랫폼">
+                        </a>
+                        
+                    </div>
+                    <div class="pageBack h-hide">
+                        <button type="button" class="sch-hide2">이전페이지</button>
                     </div>
                     <!-- //logo -->
 
-                    <div class="topSch">
+                    <div class="topSch main-topSch">
                         <h3 class="visually-hidden">종목검색영역</h3>
-                        <div class="input-group">
-                            <input type="text" id="hd_sch" class="form-control" placeholder="종목을 입력해 주세요." aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
-                            <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                        <div class="input-group main-input-group">
+                            <input type="text" id="hd_sch" class="form-control schInput" aria-label="종목을 입력해 주세요." aria-describedby="button-addon">
+                            <button class="btn-img schButton main-schButton" type="button" id="button-addon">검색하기</button>
                         </div>
                         <!-- // -->
 
@@ -161,7 +174,7 @@
                         <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn02">
                             <form name="sidemenu">
                                 <input type="checkbox" id="sdmnu" name="tgle" disabled>
-                                <label class="menu" for="sdmnu">
+                                <label class="menu main-menu" for="sdmnu">
                                     <div class="bar"></div>
                                     <div class="bar"></div>
                                     <div class="bar"></div>
@@ -384,6 +397,9 @@
                             document.querySelector('.h-logo').classList.add('h-hide');
                             document.querySelector('.pageBack').classList.remove('h-hide');
                             document.querySelector('.pageBack').classList.add('h-show');
+                            document.querySelector('.topSch').classList.add('border-none');
+                            document.querySelector('.schInput').classList.add('schShow-input');
+                            document.querySelector('.schInput').placeholder= "종목명 / 종목코드 / 키워드";
                             document.forms.sidemenu.tgle.checked = 'checked';
                         });
 
@@ -395,6 +411,9 @@
                             document.querySelector('.pageBack').classList.add('h-hide');
                             document.querySelector('.h-logo').classList.remove('h-hide');
                             document.querySelector('.h-logo').classList.add('h-show');
+                            document.querySelector('.topSch').classList.remove('border-none');
+                            document.querySelector('.schInput').classList.remove('schShow-input');
+                            document.querySelector('.schInput').placeholder= "";
                             document.forms.sidemenu.tgle.checked = '';
                         });
 
@@ -406,6 +425,9 @@
                             document.querySelector('.pageBack').classList.add('h-hide');
                             document.querySelector('.h-logo').classList.remove('h-hide');
                             document.querySelector('.h-logo').classList.add('h-show');
+                            document.querySelector('.topSch').classList.remove('border-none');
+                            document.querySelector('.schInput').classList.remove('schShow-input');
+                            document.querySelector('.schInput').placeholder= "";
                             document.forms.sidemenu.tgle.checked = '';
                         });
                     </script>

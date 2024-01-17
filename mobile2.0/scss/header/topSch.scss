@@ -10,9 +10,19 @@
 
 .topSch{
     display:block;
-    width:calc(100% - 82px);
+    width:calc(100% - 70px);
     height:20px;
     float:left;
+    
+
+    &.main-topSch{
+        width: calc(100% - 162px);
+        height: 32px;
+        border: 1px solid #DFDFDF;
+        border-radius: 6px;
+        margin-left: 10px;
+        margin-right: 35px;
+    }
 
     .input-group input{
         width:calc(100% - 40px);
@@ -30,6 +40,11 @@
             color:#cacaca;
         }
     }
+
+    .main-input-group input{
+        height: 30px;
+        padding: 0px 10px;
+    }
 }
 
 .schButton {
@@ -39,6 +54,10 @@
     background: url(#{$imgUrlSv}/ico-sch.svg) no-repeat 0 0;
     margin-top:-1px !important;
     float:left;
+}
+
+.main-schButton{
+    margin: 4px 6px 6px 0 !important;
 }
 
 body ul#autoComplete_list_1{

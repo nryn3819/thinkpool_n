@@ -45,6 +45,8 @@
 // 이전페이지
 .pageBack {
   float: left;
+  position: absolute;
+  top: 14px;
 
   button {
     padding: 0;
@@ -109,6 +111,12 @@
     cursor: pointer;
     transition: 0.5s ease;
     //height: 50px;
+
+    &.main-menu{
+      top: 3px;
+      left: -2px;
+      padding: 4px 2px;
+    }
 
     &:hover .bar {
       //box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
