@@ -45,8 +45,11 @@
 // 이전페이지
 .pageBack {
   float: left;
-  position: absolute;
-  top: 14px;
+
+  &.main-pageBack{
+    position: absolute;
+    top: 14px;
+  }
 
   button {
     padding: 0;
