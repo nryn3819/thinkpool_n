@@ -156,16 +156,20 @@
   animation-duration: 8s;
   animation-direction: normal;
   animation-iteration-count: infinite;
+
+  img{
+    height: 18px !important;
+  }
 }
 
 @keyframes f01ani {
   0%{
     opacity: 1;
   }
-  45%{
+  35%{
     opacity: 1;
   }
-  50%{
+  40%{
     opacity: 0;
   }
   95%{
@@ -187,10 +191,10 @@
   0%{
     opacity: 0;
   }
-  45%{
+  35%{
     opacity: 0;
   }
-  50%{
+  40%{
     opacity: 1;
   }
   95%{
@@ -206,22 +210,26 @@
   animation-duration: 8s;
   animation-direction: normal;
   animation-iteration-count: infinite;
+
+  img{
+    height: 18px !important;
+  }
 }
 
 @keyframes f02ani {
   0%{
     opacity: 0;
   }
-  45%{
+  35%{
     opacity: 0;
   }
-  50%{
+  40%{
+    opacity: 1;
+  }
+  65%{
     opacity: 1;
   }
   70%{
-    opacity: 1;
-  }
-  75%{
     opacity: 0;
   }
   100%{
@@ -234,16 +242,20 @@
   animation-duration: 8s;
   animation-direction: normal;
   animation-iteration-count: infinite;
+
+  img{
+    height: 18px !important;
+  }
 }
 
 @keyframes f03ani {
   0%{
     opacity: 0;
   }
-  70%{
+  65%{
     opacity: 0;
   }
-  75%{
+  70%{
     opacity: 1;
   }
   95%{
