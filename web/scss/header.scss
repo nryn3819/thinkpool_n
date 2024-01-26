@@ -304,3 +304,82 @@
     text-align:center;
   }
 }
+
+// 헤더 로고 애니메이션
+.logoAni{
+  float: left;
+  margin-top: 24px;
+  margin-left: 15px;
+  position: relative;
+
+  .ai-logo{
+    
+    img{
+      width: 22px;
+    }
+  }
+
+  .f01{
+    position: absolute;
+    left: 30px;
+    top: -1px;
+    animation-name: f01Ani;
+    animation-duration: 6s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    
+    img{
+      height: 20px;
+    }
+  }
+
+  .f02{
+    position: absolute;
+    left: 30px;
+    top: -1px;
+    animation-name: f02Ani;
+    animation-duration: 6s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    
+    img{
+      height: 20px;
+    }
+  }
+}
+
+@keyframes f01Ani{
+  0%{
+    opacity: 1;
+  }
+  45%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes f02Ani{
+  0%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
