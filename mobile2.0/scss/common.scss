@@ -386,15 +386,36 @@ body {
     border-radius: 20px 20px 0 0;
     overflow: hidden;
 
-    button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 0;
-      padding: 0;
-      width: 24px;
-      z-index: 999;
+    .closeBtn{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      // background: #6565FF;
+
+      .form-check{
+        margin: 0;
+
+        label{
+            font-size: 16px;
+            color: #fff;
+            font-weight: 400;
+        }
+    }
+
+      button{
+        border: none;
+        background: none;
+        padding: 10px;
+        color: #fff;
+      }
+    }
+
+    a{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #6565FF;
     }
   }
 }

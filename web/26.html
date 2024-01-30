@@ -3982,6 +3982,33 @@
                 </aside>
                 <!-- //c_side -->
             </section>
+
+            <!-- 사칭 주의 배너 -->
+            <div class="float_banner">
+                <div class="closeBtn">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            다시 보지 않기
+                        </label>
+                    </div>
+                    <div>/</div>
+                    <button id="closeBanner" onclick="closeBanner()">X &nbsp;닫기</button>
+                </div>
+                <div class="bannerImg">
+                    <a href="#">
+                        <img src="https://img.thinkpool.com/www/mobile/banner/web_ban01.png" alt="웹 사칭 주의 배너">
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                function closeBanner() {
+                    document.querySelector(".float_banner").classList.add("closeBanner");
+                }
+            </script>
+            <!-- 사칭 주의 배너 -->
+
             <!-- //container -->
             <footer id="footer_w">
                 <h2 class="sr-only">하단영역</h2>
