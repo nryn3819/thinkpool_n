@@ -1,0 +1,1920 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>씽크풀</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="wrap">
+            <h1 class="visually-hidden">씽크풀</h1>
+            <h2 class="visually-hidden">Title for screen readers</h2>
+            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+            <!-- header - header.scss -->
+            <header id="header" class="clearfix item">
+                <h2 class="visually-hidden">상단영역</h2>
+                <div id="top" class="float-start">
+
+                    <div class="logo">
+                        <h3 class="visually-hidden">로고</h3>
+                        <a href="javascript:;" class="float-start h-logo h-show">
+                            <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid">
+                        </a>
+                    </div>
+                    <!-- logo -->
+                    <div class="pageBack">
+                        <button type="button" onclick="history.back()">이전페이지</button>
+                    </div>
+                    <!-- //이전페이지 -->
+
+                    <div class="headerTitle text-truncate subTitle">
+                        <strong>네오위즈</strong>
+                    </div>
+                    <!-- //종목명 -->
+
+                    <div class="subSchBtn">
+                        <button type="button" id="opensch" class="schButton">종목검색</button>
+
+
+                        <div class="searcharea">
+                            <div class="searcharea-header">
+                                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                                <!-- // -->
+                                <div class="searcharea-sch">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="종목명 / 종목코드 / 키워드"
+                                            id="inputsch">
+                                        <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <button type="button" class="btn-close text-reset sch-hide"></button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="searcharea-body">
+                                <div class="favtop">
+                                    <strong>인기 관심종목</strong>
+
+                                    <button class="btn-custom-board float-end">
+                                        선택종목 추가 +
+                                    </button>
+                                </div>
+
+                                <div class="favitemlist">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999001" name="favcheck" class="form-check-input">
+                                        <label for="999001" class="form-check-label">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999002" name="favcheck" class="form-check-input">
+                                        <label for="999002">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999003" name="favcheck" class="form-check-input">
+                                        <label for="999003">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999004" name="favcheck" class="form-check-input">
+                                        <label for="999004">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999005" name="favcheck" class="form-check-input">
+                                        <label for="999005">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999006" name="favcheck" class="form-check-input">
+                                        <label for="999006">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999007" name="favcheck" class="form-check-input">
+                                        <label for="999007">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="form-check">
+                                        <input type="checkbox" id="999008" name="favcheck" class="form-check-input">
+                                        <label for="999008">스튜디오산타 <em>(999000)</em></label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+
+                        <script>
+                            document.getElementById('opensch').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.add('sch-show')
+
+                                document.getElementById('inputsch').focus();
+                                document.getElementById('inputsch').value = "";
+                            });
+
+
+                            document.querySelector('.sch-hide').addEventListener('click', function () {
+
+                                document.querySelector('.searcharea').classList.remove('sch-show')
+                            });
+
+
+                        </script>
+                    </div>
+
+                    <div id="sideMenu">
+                        <h3 class="visually-hidden">사이드메뉴열기</h3>
+                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent">
+                            <form name="sidemenu">
+                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
+                                <label class="menu" for="sdmnu">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                            <div class="offcanvas-header">
+                                <div class="offcanvas-title">
+                                    <div class="logo"><img src="" alt="logo"></div>
+                                    <div class="app">
+                                        <button>앱다운로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="loginmenu">
+                                    <div class="before">
+                                        <button>로그인</button>
+                                        <button>회원가입</button>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="after">
+                                        <div class="tpo">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함</button>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="allmenulist">
+                                    <div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn01"
+                                            aria-expanded="false" aria-controls="">
+                                            Toggle width collapse
+                                        </button>
+                                        <div class="collapse" id="amn01">
+                                            <ul>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- //sideMenu -->
+                </div>
+                <!-- //top -->
+            </header>
+            <!-- // -->
+
+            <main id="container" class="clearfix">
+                <h2 class="visually-hidden">본문영역</h2>
+                <section class="section section-item">
+                    <h3 class="visually-hidden">나의종목</h3>
+                    <!-- item.scss -->
+                    <div id="myItem">
+                        <div class="myItemList">
+                            <div class="myItemBox title shadow-sm">
+                                <div>
+                                    <strong>MY</strong>
+                                    <span>종목</span>
+                                </div>
+                            </div>
+                            <!-- //item -->
+
+                            <div class="myItemBox item item-null">
+                                <span class="null">
+                                    최근 조회 종목이 없습니다.
+                                </span>
+                            </div>
+                            <!-- //item -->
+                        </div>
+                    </div>
+                    <!-- //myItem -->
+                </section>
+                <!-- // -->
+
+                <section class="section noMargin">
+                    <div class="item-home-info">
+                        <div class="date">
+                            <span>11/20 09:35</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="pnp">
+                            <span class="price">28,000</span>
+                            <span class="per up">+14.25%</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="tag">
+                            <a href="#">기업개요</a>
+                            <span>게임</span>
+                            <span>웹툰</span>
+                            <span>크래프톤</span>
+                            <span>크래프톤</span>
+                            <span>크래프톤</span>
+                            <span>크래프톤</span>
+                        </div>
+                        <!-- // -->
+
+                        <a href="#" class="chart-ico">
+                            <span>차트</span>
+                        </a>
+
+                        <div class="fav active">
+                            <span>관심종목</span>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </section>
+                <!-- // -->
+
+                <section class="section noMargin">
+
+                    <div class="item-home-navi">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="main.html">종목분석</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active new" href="">강도분석</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">라씨매매신호</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">AI속보</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">토론실</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="bookmark-item" type="button">즐겨찾기 +</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // -->
+                    <div class="item-home-robbery">
+
+                        <div class="rob-main">
+
+                            <div class="mainTxt">
+                                지금 <span>삼성전자</span>는 최근 한달 대비, 거래 강도가 강한 편입니다.
+                            </div>
+                            <div class="mainItem">
+                                <div class="item">
+                                    <div class="item01">
+                                        <div class="evtbg"></div>
+                                        <span>삼성전자</span>
+                                    </div>
+                                    <div class="item01">
+                                        <div class="cosbg"></div>
+                                        <span>코스피</span>
+                                    </div>
+                                </div>
+                                <div class="date">02/23 AM 10:30</div>
+                            </div>
+                            <div class="mainChart">
+                                <img src="./img/robMain-chart.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="rob-content">
+
+                            <div class="contentTab nav">
+                                <button class="nav-link" type="button">최근 한달대비</button>
+                                <button class="nav-link active" type="button"">시장대비</button>
+                            </div>
+
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="market">
+
+                                  <div class="rob-item">
+
+                                    <!-- 주가위치 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>주가 위치</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp01">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>낮음</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal01">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph01.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>높음</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal01">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- /////////////// -->
+
+                                    <!-- 거래강도 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>거래 강도</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp02">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>약함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal02">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph01.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>강함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal02">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ///////////////// -->
+
+                                    <!-- 이슈강도 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>이슈 강도</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp03">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>낮음</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal03">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph01.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>높음</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal03">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- /////////////// -->
+
+                                    <!-- 시장 관심도 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>시장 관심도</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp04">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>약함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal04">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph02.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>강함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal04">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ////////////////// -->
+
+                                    <!-- 기관 수급강도 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>기관 수급강도</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp05">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>약함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal05">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph02.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>강함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal05">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ///////////////////// -->
+
+                                    <!-- 외국인 수급강도 -->
+                                    <div class="box">
+                                      <div class="title">
+                                        <div class="txt">
+                                          <span>외국인 수급강도</span>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#exp06">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                                              <path
+                                                d="M6.46354 7.39877C6.61536 6.93095 6.89347 6.51463 7.26736 6.1951C7.64125 5.87556 8.09671 5.66558 8.58247 5.58851C9.06822 5.51144 9.56553 5.57013 10.02 5.75825C10.4744 5.94636 10.868 6.25666 11.1571 6.65451C11.4463 7.05236 11.6195 7.52228 11.6581 8.01259C11.6968 8.5029 11.599 8.99448 11.3757 9.43273C11.1525 9.87097 10.8128 10.2387 10.3934 10.4957C9.97408 10.7527 9.49183 10.8887 9 10.8887V11.778M9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10C17 14.4183 13.4183 18 9 18ZM9.04427 14.4444V14.5333L8.95573 14.5335V14.4444H9.04427Z"
+                                                stroke="#949494" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="graphBox">
+                                        <div class="txt dn">
+                                          <div>약함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#dnModal06">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="graph">
+                                          <!-- 차트 영역 -->
+                                          <img src="img/graph02.png" alt="">
+                                          <!-- 차트 영역 -->
+                                        </div>
+                                        <div class="txt up">
+                                          <div>강함</div>
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal06">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                              <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
+                                              <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="15" cy="9" r="2" fill="#B9C3D1" />
+                                              <circle cx="8" cy="9" r="2" fill="#B9C3D1" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ///////////////////////// -->
+
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 모달창 -->
+
+                    <!-- 주가위치 설명 -->
+                    <div class="modal robModal fade" id="exp01" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                <div class="modal-title">주가위치</div>
+                                <div class="modal-body">
+                                    <p>
+                                        최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다. (의미, 투자관점에서 어떤 의미)
+                                    </p>
+                                    <ul class="detail">
+                                        <li>
+                                            <strong>주가위치 계산방법 : </strong> 재무 정보, 수급정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                        </li>
+                                        <li>
+                                            <strong>주가위치 100%, 0% 의 의미 : </strong> 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다.
+                                        </li>
+                                        <li>
+                                            <strong>활용성 : </strong> 매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. 
+                                        </li>
+                                        <li>
+                                            <strong>시장평균 계산방법 : </strong> 코스피/코스닥 개별 종목 주가위치의 평균
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ///////////////////// -->
+
+                    <!-- 거래강도 설명 -->
+                    <div class="modal robModal fade" id="exp02" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                              <button class="btn-close" data-bs-dismiss="modal"></button>
+                              <div class="modal-title">거래강도</div>
+                              <div class="modal-body">
+                                  <p>
+                                      최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다.  
+                                  </p>
+                                  <ul class="detail">
+                                      <li>
+                                          <strong>거래강도 : </strong> 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ///////////////////// -->
+
+                  <!-- 이슈강도 설명 -->
+                  <div class="modal robModal fade" id="exp03" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                              <button class="btn-close" data-bs-dismiss="modal"></button>
+                              <div class="modal-title">이슈강도</div>
+                              <div class="modal-body">
+                                  <p>
+                                      최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다.  
+                                  </p>
+                                  <ul class="detail">
+                                      <li>
+                                          <strong>AI상승확률 : </strong> 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                      </li>
+                                      <li>
+                                          <strong>주가매력도 : </strong> 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다.
+                                      </li>
+                                      <li>
+                                          <strong>성장성 : </strong>매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>안정성 : </strong>부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>수익성 : </strong>영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ///////////////////// -->
+
+                  <!-- 시장관심도 설명 -->
+                  <div class="modal robModal fade" id="exp04" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                              <button class="btn-close" data-bs-dismiss="modal"></button>
+                              <div class="modal-title">시장관심도</div>
+                              <div class="modal-body">
+                                  <p>
+                                      최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다.  
+                                  </p>
+                                  <ul class="detail">
+                                      <li>
+                                          <strong>AI상승확률 : </strong> 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                      </li>
+                                      <li>
+                                          <strong>주가매력도 : </strong> 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다.
+                                      </li>
+                                      <li>
+                                          <strong>성장성 : </strong>매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>안정성 : </strong>부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>수익성 : </strong>영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ///////////////////// -->
+
+                  <!-- 기관 수급강도 설명 -->
+                  <div class="modal robModal fade" id="exp05" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                              <button class="btn-close" data-bs-dismiss="modal"></button>
+                              <div class="modal-title">기관 수급강도</div>
+                              <div class="modal-body">
+                                  <p>
+                                      최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다.  
+                                  </p>
+                                  <ul class="detail">
+                                      <li>
+                                          <strong>AI상승확률 : </strong> 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                      </li>
+                                      <li>
+                                          <strong>주가매력도 : </strong> 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다.
+                                      </li>
+                                      <li>
+                                          <strong>성장성 : </strong>매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>안정성 : </strong>부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>수익성 : </strong>영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ///////////////////// -->
+
+                  <!-- 외국인 수급강도 설명 -->
+                  <div class="modal robModal fade" id="exp06" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                              <button class="btn-close" data-bs-dismiss="modal"></button>
+                              <div class="modal-title">외국인 수급강도</div>
+                              <div class="modal-body">
+                                  <p>
+                                      최근 한달 동안 저가와 고가 사이에서 현재주가의 위치를 파악할 수 있습니다.  
+                                  </p>
+                                  <ul class="detail">
+                                      <li>
+                                          <strong>AI상승확률 : </strong> 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                                      </li>
+                                      <li>
+                                          <strong>주가매력도 : </strong> 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다.
+                                      </li>
+                                      <li>
+                                          <strong>성장성 : </strong>매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>안정성 : </strong>부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. 
+                                      </li>
+                                      <li>
+                                          <strong>수익성 : </strong>영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ///////////////////// -->
+
+                  <!-- 주가위치 낮은 종목 -->
+                  <div class="modal robModal fade" id="dnModal01" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">주가위치 <span class="dn">낮은</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 주가위치 낮은 종목 -->
+
+                  <!-- 주가위치 높은 종목 -->
+                  <div class="modal robModal fade" id="upModal01" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">주가위치 <span class="up">높은</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">주가위치</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 주가위치 높은 종목 -->
+
+                  <!-- 거래강도 약한 종목 -->
+                  <div class="modal robModal fade" id="dnModal02" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">거래강도 <span class="dn">약한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 거래강도 약한 종목 -->
+
+                  <!-- 거래강도 강한 종목 -->
+                  <div class="modal robModal fade" id="upModal02" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">거래강도 <span class="up">강한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">거래강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 거래강도 강한 종목 -->
+
+                  <!-- 강도 낮은 이슈 -->
+                  <div class="modal robModal fade" id="dnModal03" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">강도 <span class="dn">낮은</span> 이슈</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">반도체</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right dn">-4.52%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">모듈러주택</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right dn">-4.52%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">온디바이스AI</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right dn">-4.52%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">통신장비</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right dn">-4.52%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">게임</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right dn">-4.52%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 강도 낮은 이슈 -->
+
+                  <!-- 강도 높은 이슈 -->
+                  <div class="modal robModal fade" id="upModal03" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">강도 <span class="up">높은</span> 이슈</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">반도체</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">모듈러주택</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">온디바이스AI</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">통신장비</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">이슈</span>
+                                <span class="txt text-truncate">게임</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">관련종목수</span>
+                                <span class="txt fw-500 text-right">31</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">이슈강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 강도 높은 이슈 -->
+
+                  <!-- 시장관심도 약한 종목 -->
+                  <div class="modal robModal fade" id="dnModal04" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">시장관심도 <span class="dn">약한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 시장관심도 약한 종목 -->
+
+                  <!-- 시장관심도 강한 종목 -->
+                  <div class="modal robModal fade" id="upModal04" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">시장관심도 <span class="up">강한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">시장관심도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 시장관심도 강한 종목 -->
+
+                  <!-- 기관수급강도 약한 종목 -->
+                  <div class="modal robModal fade" id="dnModal05" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">기관수급강도 <span class="dn">약한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 기관수급강도 약한 종목 -->
+
+                  <!-- 기관수급강도 강한 종목 -->
+                  <div class="modal robModal fade" id="upModal05" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">기관수급강도 <span class="up">강한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">기관수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 기관수급강도 강한 종목 -->
+
+                  <!-- 외국인수급강도 약한 종목 -->
+                  <div class="modal robModal fade" id="dnModal06" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">외국인수급강도 <span class="dn">약한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right dn">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 외국인수급강도 약한 종목 -->
+
+                  <!-- 외국인수급강도 강한 종목 -->
+                  <div class="modal robModal fade" id="upModal06" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title">외국인수급강도 <span class="up">강한</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="listBox">
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="name">
+                                <span class="code">005930</span>
+                                <span class="txt text-truncate">삼성증권가나다라마바사아자차카타파핳</span>
+                              </div>
+                              <div class="price">
+                                <span class="code text-right">현재가</span>
+                                <span class="txt fw-500 text-right">1,304,000</span>
+                              </div>
+                              <div class="per">
+                                <span class="code text-right">외국인수급강도</span>
+                                <span class="txt fw-500 text-right up">+102%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="listMore">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 외국인수급강도 강한 종목 -->
+
+                    <!-- 모달창 -->
+
+                </section>
+                <!-- // -->
+            </main>
+
+            <footer id="footer" class="clearfix">
+                <menu id="fmenu">
+                    <figure class="figure">
+                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+                    </figure>
+                </menu>
+
+                <menu id="fmenu2">
+                    <a href="#">고객센터</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </menu>
+
+                <div class="copyright">
+                    <span class="d-block">@Thinkpool</span>
+                    <span class="d-block">
+                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+                        그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+                    </span>
+                </div>
+            </footer>
+
+        </div>
+        <!-- /wrap -->
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+
+
+    <script>
+        const topTitle = document.querySelector('.headerTitle');
+
+        topTitle.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
