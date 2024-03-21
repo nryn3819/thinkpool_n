@@ -242,6 +242,7 @@
                     margin-bottom: 10px;
 
                     .txt{
+                        min-width: 90px;
                         display: flex;
                         justify-content: start;
                         align-items: center;
@@ -265,7 +266,8 @@
                     }
 
                     .bubble{
-                        max-width: 155px; 
+                        min-height: 138px;
+                        margin-left: 27px;
 
                         button{
                             img{
@@ -294,12 +296,16 @@
                     margin-top: 20px;
 
                     .donut{
+                        min-height: 105px;
+                        
                         img{
                             width: 100%;
                         }
                     }
 
                     .bar{
+                        min-height: 100px;
+
                         img{
                             width: 100%;
                         }
