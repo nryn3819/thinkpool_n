@@ -179,7 +179,7 @@
 
         .mainChart{
             width: 100%;
-            min-height: 300px;
+            min-width: 246px;
 
             img{
                 width: 100%;
@@ -266,7 +266,7 @@
                     }
 
                     .bubble{
-                        min-height: 138px;
+                        min-width: 90px;
                         margin-left: 27px;
 
                         button{
@@ -292,11 +292,11 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    gap: 30px;
+                    gap: 10px;
                     margin-top: 20px;
 
                     .donut{
-                        min-height: 105px;
+                        min-width: 80px;
                         
                         img{
                             width: 100%;
@@ -304,7 +304,7 @@
                     }
 
                     .bar{
-                        min-height: 100px;
+                        min-width: 100px;
 
                         img{
                             width: 100%;
@@ -469,7 +469,7 @@
 }
 
 .gap-60{
-    gap: 60px !important;
+    gap: 2rem !important;
 }
 
 .mt-15{
