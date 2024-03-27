@@ -23,6 +23,14 @@
 @import "msg";
 @import "payment";
 
+.text-truncate2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
 .sub-topbanner {
   display: block;
   width: 100%;
@@ -38,6 +46,13 @@
   width: 100%;
   float: left;
   clear: both;
+
+  .titleFlex{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+  }
 
   .sub-section {
     display: block;
@@ -109,6 +124,34 @@
     .modulebox {
       padding-bottom: 40px;
       border-bottom: 1px solid #d7d7d7;
+    }
+
+    .youtubeCon{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+
+      .box{
+        width: 225px;
+
+        .title{
+          width: 225px;
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-top: 10px;
+        }
+
+        .date{
+          color: #999;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 19px;
+          margin-top: 3px;
+        }
+      }
     }
   }
 
