@@ -95,7 +95,8 @@
 
 #container_banner{
   display:flex;
-  justify-content: space-between;
+  justify-content: normal;
+  gap:65px;
   width:1030px;
   margin:40px 20px 160px 20px;
   overflow:hidden;
