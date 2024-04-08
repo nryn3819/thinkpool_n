@@ -266,7 +266,6 @@
                     }
 
                     .bubble{
-                        max-width: 200px;
                         min-width: 90px;
                         margin-left: 27px;
 
@@ -297,7 +296,7 @@
                     margin-top: 20px;
 
                     .donut{
-                        max-width: 150px;
+                        width: 100%;
                         max-width: 150px;
                         min-width: 80px;
                         
@@ -307,7 +306,7 @@
                     }
 
                     .bar{
-                        max-width: 200px;
+                        width: 100%;
                         min-width: 100px;
 
                         img{
