@@ -386,7 +386,7 @@
                                         </div>
                                         <div class="txt up">
                                           <div>높음</div>
-                                          <button type="button" data-bs-toggle="modal" data-bs-target="#upModal01">
+                                          <button type="button" data-bs-toggle="modal" data-bs-target="#noData">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
                                               <rect x="1" y="1" width="28" height="16" rx="3" fill="white" stroke="#B9C3D1" />
                                               <circle cx="22" cy="9" r="2" fill="#B9C3D1" />
@@ -1855,6 +1855,23 @@
                     </div>
                   </div>
                   <!-- 외국인수급강도 강한 종목 -->
+
+                  <!-- 데이터 없을 때 -->
+                  <div class="modal robModal fade" id="noData" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-title pb-20">주가위치 <span class="up">높은</span> 종목</div>
+                        <div class="modal-body">
+                          <div class="nodata">
+                            관련된 종목이 없습니다.
+                          </div>
+                          <button class="listMore" data-bs-dismiss="modal">더보기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 데이터 없을 때 -->
 
                     <!-- 모달창 -->
 
