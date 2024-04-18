@@ -1,1 +1,138 @@
-.strength{display:flex;width:100%;gap:7px}.strength button{display:block;height:30px;width:60px;font-size:16px;font-weight:400;letter-spacing:-0.4px;border-radius:4px;background:none}.strength button.active{color:#fff !important;background:#454860;border:0 !important}.strength button.str01{border:1px solid #ffcece;color:#e81a1a}.strength button.str02{border:1px solid #bfe1ab;color:#26a911}.strength button.str03{border:1px solid #bccee9;color:#225cff}.strength button.str04{border:1px solid #cfbef2;color:#6333cb}.strength button.str05{border:1px solid #d4d4d4;color:#666}.str_text{display:block;width:100%;padding:10px;background:#e6e8ee;font-size:14px;line-height:21px;color:#333}.usa-modal-str{display:block;width:100%}.usa-modal-str header{display:flex;width:100%;justify-content:center;align-items:center;height:56px;position:relative}.usa-modal-str header strong{font-size:18px;color:#000;font-weight:500 !important}.usa-modal-str header button{background:none;padding:0;margin:0;position:absolute;top:16px;right:16px;border:0;width:24px;height:24px}.usa-modal-str section{border-top:1px solid #f0f2f4;padding:20px 20px 40px}.usa-modal-str section p{display:block;font-size:14px;color:#333;font-weight:500;line-height:21px}.usa-modal-str section table tbody tr th{border:1px solid #dcdcdc;border-left:0;background:#fbfbfb;font-size:13px;color:#666;padding-left:7px;letter-spacing:-0.325px;font-weight:400}.usa-modal-str section table tbody tr td{border:1px solid #dcdcdc;border-right:0;height:41px;padding-left:7px;font-size:13px;color:#666;font-weight:400;letter-spacing:-0.325px}#issueStr .modal-content{width:328px;margin:0 auto;border:0}#issueStr .modal-body{padding:0}#issueStr .modal-body .modal-button{display:flex;width:100%;margin-top:20px;justify-content:center}#issueStr .modal-body .modal-button button{display:block;padding:0 32px;height:35px;line-height:35px;text-align:center;border:0;background:#5567fd;font-size:14px;color:#fff;font-weight:400;border-radius:99px}
+.strength {
+  display: flex;
+  width: 100%;
+  gap: 7px;
+}
+.strength button {
+  display: block;
+  height: 30px;
+  width: 20%;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  border-radius: 4px;
+  background: none;
+}
+.strength button.active {
+  color: #fff !important;
+  background: #454860;
+  border: 0 !important;
+}
+.strength button.str01 {
+  border: 1px solid #ffcece;
+  color: #e81a1a;
+}
+.strength button.str02 {
+  border: 1px solid #bfe1ab;
+  color: #26a911;
+}
+.strength button.str03 {
+  border: 1px solid #bccee9;
+  color: #225cff;
+}
+.strength button.str04 {
+  border: 1px solid #cfbef2;
+  color: #6333cb;
+}
+.strength button.str05 {
+  border: 1px solid #d4d4d4;
+  color: #666;
+}
+
+.str_text {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #e6e8ee;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
+}
+
+.usa-modal-str {
+  display: block;
+  width: 100%;
+}
+.usa-modal-str header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  position: relative;
+}
+.usa-modal-str header strong {
+  font-size: 18px;
+  color: #000;
+  font-weight: 500 !important;
+}
+.usa-modal-str header button {
+  background: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  width: 24px;
+  height: 24px;
+}
+.usa-modal-str section {
+  border-top: 1px solid #f0f2f4;
+  padding: 20px 20px 40px;
+}
+.usa-modal-str section p {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  line-height: 21px;
+}
+.usa-modal-str section table tbody tr th {
+  border: 1px solid #dcdcdc;
+  border-left: 0;
+  background: #fbfbfb;
+  font-size: 13px;
+  color: #666;
+  padding-left: 7px;
+  letter-spacing: -0.325px;
+  font-weight: 400;
+}
+.usa-modal-str section table tbody tr td {
+  border: 1px solid #dcdcdc;
+  border-right: 0;
+  height: 41px;
+  padding-left: 7px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: -0.325px;
+}
+
+#issueStr .modal-content {
+  width: 328px;
+  margin: 0 auto;
+  border: 0;
+}
+#issueStr .modal-body {
+  padding: 0;
+}
+#issueStr .modal-body .modal-button {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+}
+#issueStr .modal-body .modal-button button {
+  display: block;
+  padding: 0 32px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 0;
+  background: #5567fd;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 99px;
+}

@@ -369,6 +369,11 @@ html,
 body {
   scroll-behavior: auto !important;
 }
+@media (min-width:720px){
+  .offcanvas-body{
+    margin-right:15px !important;
+  }
+}
 
 #tModal {
   background: none;

@@ -1,1 +1,23 @@
-.badge{height:20px;line-height:18px !important;min-width:60px;text-align:center;font-size:13px !important;border-radius:5px !important;background:#fff;padding:0 7px !important;font-weight:400 !important}.badge.bg-custom-default{color:#666;border:1px solid #676767}.badge.bg-custom-primary{color:#5368ff;border:1px solid #5468ff}.badge.bg-custom-danger{color:#e73b84;border:1px solid #e73b84}
+.badge {
+  height: 20px;
+  line-height: 18px !important;
+  min-width: 60px;
+  text-align: center;
+  font-size: 13px !important;
+  border-radius: 5px !important;
+  background: #fff;
+  padding: 0 7px !important;
+  font-weight: 400 !important;
+}
+.badge.bg-custom-default {
+  color: #666;
+  border: 1px solid #676767;
+}
+.badge.bg-custom-primary {
+  color: #5368FF;
+  border: 1px solid #5468FF;
+}
+.badge.bg-custom-danger {
+  color: #E73B84;
+  border: 1px solid #E73B84;
+}
