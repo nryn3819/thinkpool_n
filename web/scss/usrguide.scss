@@ -1,5 +1,9 @@
 // 이용안내
 
+.z-2{
+    z-index: -2;
+}
+
 .usrguide{
 
     .box{
@@ -39,8 +43,49 @@
             .box-title{
                 display:block;
                 height:29px;
-                text-indent:-9999em;
-                background:url(https://img.thinkpool.com/www/img/sub/usrguide/tit01.png) no-repeat 0 0;
+                font-size: 30px;
+                font-weight: 400;
+                position: relative;
+                z-index: 1;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    width: 417px;
+                    height: 15px;
+                    background: #dbebff;
+                    z-index: -1;
+                    bottom: 0;
+                }
+            }
+
+            .appQR-box{
+                width: 100%;
+                padding: 25px 0;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .qrImg{
+                    img{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+        
+                .qrTxt{
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: 400;
+                    line-height: 25px;
+        
+                    span{
+                        color: #5368ff;
+                    }
+                }
             }
         }
         &.box02{
@@ -141,9 +186,16 @@
                     padding-top:15px;
                     float:right;
 
+                    .btnGroup{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 28px;
+                    }
+
                     button{
                         display:block;
-                        width:250px;
+                        width:200px;
                         height:70px;
                         border-radius: 5px;
                         border:0;

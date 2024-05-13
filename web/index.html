@@ -29,6 +29,9 @@
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <!-- basic js -->
         <script src="js/main.js"></script>
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </head>
     <body>
 
@@ -416,6 +419,7 @@
                                 <div class="main-signal">
                                     <div class="left">
                                         <div class="signal">
+                                            <div class="signal-title">오늘의 AI매매신호 현황</div>
                                             <ul>
                                                 <li>
                                                     <div class="ccl buy up">
@@ -432,36 +436,53 @@
                                             </ul>
                                         </div>
                                         <!-- //신호 -->
-                                        <div class="info">
-                                            <ul>
-                                                <li>
-                                                    <dl>
-                                                        <dt>최고수익률</dt>
-                                                        <dd class="up">354.2%</dd>
-                                                    </dl>
-                                                </li>
-                                                <li>
-                                                    <dl>
-                                                        <dt>누적수익률</dt>
-                                                        <dd class="dn">153.3%</dd>
-                                                    </dl>
-                                                </li>
-                                                <li>
-                                                    <dl>
-                                                        <dt>AI적중률</dt>
-                                                        <dd class="up">72.3%</dd>
-                                                    </dl>
-                                                </li>
-                                            </ul>
+                                        <div class="s_alarm">
+                                            <div class="txt">AI의 다음 신호 발생까지 <span>02분 01초전</span></div>
+                                            <!-- <div class="txt">AI는 현재 데이터를 수집,학습에 반영 중입니다.</div> -->
+                                            <!-- <div class="txt noStart">장 시작 전 입니다.</div> -->
+                                            <!-- <div class="txt">곧 새로운 AI매매신호가 발생됩니다.</div> -->
+                                            <div class="txtBox">
+                                                <div class="swiper sigTxtSwiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            Today 시세마스터 생성
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <strong>이오플로우</strong> 보유중 <span class="up">+2.35%</span>(2일전매수)
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            Today 시세마스터 생성
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <strong>이오플로우</strong> 보유중 <span class="up">+2.35%</span>(2일전매수)
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    var sigTxtSwiper = new Swiper(".sigTxtSwiper", {
+                                                        slidesPerView: 1,
+                                                        autoplay: {
+                                                            delay: 2000,
+                                                            disableOnInteraction : false,
+                                                        },
+                                                        loop: true,
+                                                    });
+                                                </script>
+                                            </div>
                                         </div>
                                         <!-- //정보 -->
-                                        <div class="more">
-                                            <a href="#">자세히보기</a>
-                                        </div>
-
-                                        <div class="link">
-                                            <a href="#"></a>
-                                        </div>
                                     </div>
                                     <!-- //left -->
                                     <div class="right">

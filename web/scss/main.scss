@@ -339,6 +339,14 @@
     display: block;
     width: 100%;
 
+    .signal-title{
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      font-weight: 700;
+    }
+
     ul {
       display: flex;
       width: 100%;
@@ -376,6 +384,42 @@
 
     }
 
+  }
+
+  .s_alarm {
+    text-align: center;
+    padding: 25px 17px 0;
+
+    .txt {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 20px;
+      font-weight: 400;
+
+      span {
+        color: #000;
+      }
+
+      &.noStart{
+        padding: 50px 0;
+      }
+    }
+
+    .txtBox {
+      width: 100%;
+      background: #f2f3f7;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+
+      em {
+        font-style: normal;
+        font-size: 13px;
+        color: #999;
+      }
+    }
   }
 
   .info{

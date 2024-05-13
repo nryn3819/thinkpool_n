@@ -1,5 +1,15 @@
 @import 'char_pop';
 
+.text-truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pb-35{
+    padding-bottom: 35px !important;
+}
+
 .rmd_item_sch {
     display: block;
 
@@ -300,20 +310,56 @@
             }
         }
     }
+
+    .appQR-box{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .qrImg{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .qrTxt{
+            font-size: 14px;
+            color: #000;
+            font-weight: 400;
+            line-height: 24px;
+
+            span{
+                color: #5368ff;
+            }
+        }
+    }
 }
 
 .signal_update {
     display: block;
 
     .info {
-        width: calc(100% - 604px);
+        width: calc(100% - 625px);
         float: left;
-        padding: 0 52px;
+        padding-left: 5px;
+
+        .signal-title{
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            font-weight: 700;
+        }
 
         ul {
             display: flex;
             width: 100%;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 40px;
             flex-wrap: wrap;
 
             li {
@@ -368,12 +414,152 @@
 
             color:#999;
         }
+
+        .s_alarm {
+            text-align: center;
+
+            .txt {
+                font-size: 14px;
+                color: #999;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-weight: 400;
+
+                span {
+                    color: #000;
+                }
+
+                &.noStart {
+                    padding: 50px 0;
+                }
+            }
+
+            .txtBox {
+                width: 100%;
+                background: #f2f3f7;
+                padding: 10px 0;
+                border-radius: 8px;
+                font-size: 16px;
+                color: #000;
+                font-weight: 400;
+
+                em {
+                    font-style: normal;
+                    font-size: 13px;
+                    color: #999;
+                }
+            }
+        }
     }
 
     .table_w {
         display: block;
         width: 604px;
         float: left;
+    }
+
+    .s_history{
+        display: block;
+        width: 625px;
+        float: left;
+        padding-left: 80px;
+
+        .s_historyTitle{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            strong{
+                display: block;
+                font-size: 20px;
+                color: #000;
+            }
+
+            .swiper-pagination_txt{
+                max-width: 130px;
+
+                .swiper-pagination-bullet{
+                    display: none;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active{
+                    display: block;
+                }
+                span{
+                    display: block;
+                    font-size: 16px;
+                    color: #999;
+                    font-weight: 400;
+                    min-width: 130px;
+                    text-align: right;
+                }
+            }
+        }
+
+        .s_hisSwiper{
+            .swiper-slide{
+                width: calc(100%/3);
+                height: 155px;
+                padding: 25px 15px;
+                border: 1px solid #d6d6d6;
+                border-radius: 8px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background: #fff;
+
+                .itemName{
+                    width: 100%;
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 700;
+                }
+
+                .itemNum{
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    
+                    em{
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #999;
+                        line-height: 15px;
+                        font-style: normal;
+                    }
+                }
+
+                .itemTxt{
+                    font-size: 16px;
+                    color: #999;
+                    font-weight: 400;
+                }
+            }
+
+            .swiper-pagination{
+                position: relative;
+                margin-top: 30px;
+
+                .swiper-pagination-bullet{
+                    width: 10px;
+                    height: 10px;
+                    background: #f2f3f7;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active{
+                    background: #5368ff;
+                }
+            }
+        }
     }
 }
 

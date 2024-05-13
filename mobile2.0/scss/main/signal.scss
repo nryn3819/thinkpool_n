@@ -1,6 +1,12 @@
 @import '../variable.scss';
 //signal
 .s_signal{
+    .s_signalTitle{
+        padding-top: 40px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
     .result{
         display:flex;
         justify-content: space-around;
@@ -42,5 +48,231 @@
             }
         }
     }
-    
+
+    .s_alarm{
+        text-align: center;
+        padding: 20px 17px 0;
+
+        .txt{
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 400;
+
+            span{
+                color: #000;
+            }
+        }
+
+        .txtBox{
+            width: 100%;
+            background: #f2f3f7;
+            padding: 5px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #000;
+            font-weight: 400;
+
+            em{
+                font-size: 13px;
+                color: #999;
+            }
+        }
+    }
+
+    .s_history{
+        padding: 20px 17px 20px;
+
+        .s_historyTitle{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 15px;
+
+            strong{
+                display: block;
+                font-size: 16px;
+                color: #000;
+            }
+
+            .swiper-pagination_txt{
+                max-width: 120px;
+                min-height: 20px;
+
+                .swiper-pagination-bullet{
+                    display: none;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active{
+                    display: block;
+                }
+                span{
+                    display: block;
+                    font-size: 13px;
+                    color: #999;
+                    font-weight: 400;
+                    min-width: 120px;
+                    text-align: right;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .s_hisSwiper{
+            .swiper-slide{
+                width: calc(100%/2);
+                height: 130px;
+                padding: 17px;
+                padding-bottom: 10px;
+                border: 1px solid #d6d6d6;
+                border-radius: 8px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background: #fff;
+
+                .itemName{
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 700;
+                }
+
+                .itemNum{
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    
+                    em{
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #999;
+                        line-height: 15px;
+                    }
+                }
+
+                .itemTxt{
+                    font-size: 13px;
+                    color: #999;
+                    font-weight: 400;
+                }
+            }
+
+            .swiper-pagination{
+                margin-top: 15px;
+
+                .swiper-pagination-bullet{
+                    width: 12px;
+                    height: 12px;
+                    background: #f2f3f7;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active{
+                    background: #5368ff;
+                }
+            }
+        }
+    }
+
+    .s_push{
+        padding: 0 17px;
+
+        .box{
+            width: 100%;
+            padding: 17px;
+            border-radius: 8px;
+            background: #f2f3f7;
+
+            .txtBox{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .txt{
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+                .icon{
+                    img{
+                        width: 85px;
+                    }
+                }
+            }
+
+            .comBtn{
+                width: 100%;
+                margin-top: 15px;
+                
+                button{
+                    width: 100%;
+                    height: 37px;
+                    line-height: 37px;
+                    padding: 0;
+                    border: none;
+                    background: #5368ff;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.comModal{
+    .modal-content{
+        border-radius: 1rem;
+
+        .modal-header{
+            border: none;
+        }
+
+        .modal-body{
+            padding: 0px 17px 35px;
+
+            .title{
+                font-size: 16px;
+                color: #000;
+                font-weight: 700;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .comTable{
+                table{
+                    width: 100%;
+                }
+
+                th, td{
+                    height: 40px;
+                    text-align: center;
+                }
+                thead{
+                    border-top: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    background: #f5f5f5;
+                }
+                th{
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: 400;
+                }
+                td{
+                    border-bottom: 1px solid #cacaca;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
 }

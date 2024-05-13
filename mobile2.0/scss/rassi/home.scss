@@ -252,13 +252,126 @@
     background:#fff;
 
     p{
+        &.twoLine{
+            height: 100%;
+            text-align: left;
+            padding: 7px 17px;
+            text-indent: 0%;
+        }
         button{
             background:none;
+
+            &.twoLine{
+                height: 100%;
+                text-align: left;
+                text-indent: 0%;
+            }
         }
     }
 
     .collapse,.collapsing{
         padding:0 17px 30px;
+    }
+
+    .question{
+        font-size: 15px;
+        color: #000;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .answer{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 5px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #000;
+        margin-bottom: 20px;
+    }
+    .appDownload{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+        button{
+            width: 225px;
+            height: 40px;
+            border: none;
+            background: #fff;
+            border: 1px solid #5368ff;
+            color: #5368ff;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+    }
+    .comBtn{
+        width: 100%;
+
+        button{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            background: #5368ff;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+    .briefing{
+        width: 100%;
+        padding: 20px 17px;
+        border-top: 1px solid #eee;
+
+        .img{
+            width: 100%;
+            height: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f6f6f7;
+        }
+    }
+}
+
+.s_briefing{
+    .txtSwiper{
+        text-align: center;
+        margin-top: 17px;
+
+        .swiper-slide {
+            span {
+                display: inline-block;
+                border-radius: 20px;
+                font-size: 15px;
+                padding: 4px 14px;
+                color: #000;
+                background: #ccc;
+                line-height: 18px;
+            }
+            .txt{
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+                margin-top: 10px;
+                line-height: 20px;
+            }
+        }
+        .swiper-pagination{
+            margin-top: 15px;
+
+            .swiper-pagination-bullet{
+                width: 12px;
+                height: 12px;
+                background: #ccc;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active{
+                background: #5368ff;
+            }
+        }
     }
 }
 
@@ -451,6 +564,44 @@
         width:1.2rem;
         height:1.2rem;
         stroke-width: 2em;
+    }
+}
+
+.moreModal{
+    .modal-content{
+        border-radius: 1rem;
+
+        .modal-header{
+            border: none;
+        }
+        .modal-body{
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 40px;
+            
+            .txt{
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                line-height: 24px;
+                margin-bottom: 25px;
+            }
+            .appDownloadBtn{
+                width: 100%;
+                text-align: center;
+
+                button{
+                    width: 220px;
+                    height: 37px;
+                    border: none;
+                    background: #5368ff;
+                    border-radius: 20px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 

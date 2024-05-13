@@ -7,12 +7,10 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- basic css -->
     <link rel="stylesheet" href="scss/common.scss">
+    <link rel="stylesheet" href="css/common.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,6 +25,9 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- basic js -->
     <script src="js/main.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -330,20 +331,46 @@
                                 <div class="empty">
                                     <img src="./img/sub/item/rmd/empty2.jpg" alt="비어있는 이미지" width="100%">
 
-                                    <div class="direct">
-                                        <div class="txt">
-                                            <span>
-                                                AI매매신호는 <br>
-                                                매일 <em>5종목까지 무료</em>로 볼 수 있습니다.
-                                            </span>
-                                        </div>
-
-                                        <div class="button">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#direct"><span>지금 바로 내역 보기</span></button>
+                                    <div class="guide">
+                                        <span>무료 5종목 보기가 완료 되었습니다! </span>
+                                        <span class="rmt-25">
+                                            라씨 매매신호는 <br>
+                                            매일 5종목까지 무료로 볼 수 있으며, <br>
+                                            가입을 통해 전 종목 매매신호를 <br>
+                                            바로 확인 할 수 있습니다.
+                                        </span>
+                                        <span class="rmt-40">
+                                            라씨 매매비서 APP을 다운받고, <br>
+                                            AI매매신호 실시간 받기 (최대 500종목)
+                                        </span>
+                                        <button class="appDown">라씨 매매비서 APP 다운로드</button>
+                                        <div class="mJoin-btn">
+                                            <button>
+                                                <div>
+                                                    씽크풀에서 라씨 매매신호 가입하고 <br>
+                                                    AI매매신호 실시간 받기 (최대 50종목)
+                                                </div>
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                                                        <path d="M0.293013 0.636048C0.105542 0.823576 0.000226466 1.07788 0.000226454 1.34305C0.000226442 1.60821 0.105542 1.86252 0.293013 2.05005L5.24301 7.00005L0.293013 11.95C0.110855 12.1387 0.0100603 12.3913 0.0123386 12.6534C0.0146169 12.9156 0.119786 13.1665 0.305194 13.3519C0.490602 13.5373 0.741414 13.6424 1.00361 13.6447C1.26581 13.647 1.51841 13.5462 1.70701 13.364L7.36401 7.70705C7.55148 7.51952 7.6568 7.26521 7.6568 7.00005C7.6568 6.73488 7.55148 6.48058 7.36401 6.29305L1.70701 0.636048C1.51948 0.448577 1.26518 0.343261 1.00001 0.343261C0.734848 0.343261 0.480541 0.448577 0.293013 0.636048Z" fill="#bdc4ff"/>
+                                                    </svg>
+                                                </div>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- //empty -->
+
+                                <div class="appQR-box">
+                                    <div class="qrImg">
+                                        <img src="https://img.thinkpool.com/www/img/appQR.png" alt="앱 QR코드">
+                                    </div>
+                                    <div class="qrTxt">
+                                        씽크풀 라씨 매매신호를 똑똑하게 이용 하는 방법! <br>
+                                        QR코드 스캔을 통해 <span>라씨 매매비서 APP</span>을 다운 후 더 많은 종목 관리 혜택을 받으세요. <br>
+                                        APP에서도 씽크풀 로그인을 통해 이용 하셨던 그대로 서비스 제공 됩니다. 
+                                    </div>
+                                </div>
 
                                 
 
@@ -501,8 +528,24 @@
                                 <!-- //table -->
 
                                 <div class="tbl-more clearfix">
-                                    <button class="btn-circle btn-white">+</button>
+                                    <button class="btn-circle btn-white" data-bs-toggle="modal" data-bs-target="#moreModal">+</button>
                                     <span>더보기</span>
+                                </div>
+
+                                <div class="modal fade moreModal" id="moreModal">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="txt">라씨 매매비서 APP을 통해 <br>모든 매매내역을 무료로 볼 수 있습니다.</div>
+                                                <div class="appDownloadBtn">
+                                                    <button>라씨 매매비서 APP 다운로드</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- //tbl-more -->
                                 
@@ -917,5 +960,9 @@
 
     </div>
     <!-- //wrap -->
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
 </body>
 </html>
