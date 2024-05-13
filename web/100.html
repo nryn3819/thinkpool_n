@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- basic css -->
     <link rel="stylesheet" href="scss/common.scss">
+    <link rel="stylesheet" href="css/common.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,6 +29,9 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- basic js -->
     <script src="js/main.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -145,7 +149,7 @@
                     
 
                     <div class="sub-content">
-                        <h4 class="sub-title">AI추천종목</h4>
+                        <h4 class="sub-title">라씨매매신호</h4>
 
                         <div class="sub-section char">
                             <div class="rmd_item_sch">
@@ -166,31 +170,17 @@
                                 </div>
                                 <!-- //sch -->
 
-                                <div class="button">
-                                    <button class="btn btn-primary"><span>안드로이드</span></button>
-                                    <button class="btn btn-primary"><span class="app">IOS다운로드</span></button>
-                                    <button class="btn btn-default"><span>자세히보기</span></button>
+                                <div class="appQR-box">
+                                    <div class="qrImg">
+                                        <img src="https://img.thinkpool.com/www/img/QRimg.png" alt="앱 QR코드">
+                                    </div>
+                                    <div class="qrTxt">
+                                        씽크풀 라씨 매매신호를 똑똑하게 이용 하는 방법! <br>
+                                        QR코드 스캔을 통해 <span>라씨 매매비서 APP</span>을 다운 후 더 많은 종목 관리 혜택을 받으세요. <br>
+                                        APP에서도 씽크풀 로그인을 통해 이용 하셨던 그대로 서비스 제공 됩니다. 
+                                    </div>
                                 </div>
-                                <!-- //button -->
 
-                                <div class="info">
-                                    <ul class="infolist">
-                                        <li>
-                                            <span class="tit">매매 적중률</span>
-                                            <span class="txt up"><em >72.8</em>%</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">최고 수익률</span>
-                                            <span class="txt return dn"><em>355.0</em>%</span>
-                                            <!-- // txt up/dn 에 따라 + - 자동표시 -->
-                                        </li>
-                                        <li>
-                                            <span class="tit">수익난 매매</span>
-                                            <span class="txt"><em>18,747</em>회</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //info -->
                             </div>
                         </div>
                         <!-- //추천종목검색 -->
@@ -199,77 +189,152 @@
                             <a href="#"><img src="./img/rassi_mn_bnr.jpg" alt="라씨매매비서 프리미엄 서비스" width="100%"></a>
                         </div>
 
-                        <div class="sub-section mt-40">
+                        <div class="sub-section mt-40 pb-35">
                             <div class="signal_update">
                                 <div class="info">
+                                    <div class="signal-title">오늘의 AI매매신호 현황</div>
                                     <ul>
                                         <li class="buy"><span>매수</span><strong>21종목</strong></li>
                                         <li class="sell"><span>매도</span><strong>123종목</strong></li>
-                                        <li class="pssn"><span>보유</span><strong>21종목</strong></li>
-                                        <li class="ppnwk"><span>관망</span><strong>123종목</strong></li>
                                     </ul>
-                                    <span class="date">기준 2020.08.21</span>
+                                    <div class="s_alarm">
+                                        <div class="txt">AI의 다음 신호 발생까지 <span>02분 01초전</span></div>
+                                        <!-- <div class="txt">AI는 현재 데이터를 수집,학습에 반영 중입니다.</div> -->
+                                        <!-- <div class="txt noStart">장 시작 전 입니다.</div> -->
+                                        <!-- <div class="txt">곧 새로운 AI매매신호가 발생됩니다.</div> -->
+                                        <div class="txtBox">
+                                            <div class="swiper sigTxtSwiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        Today 시세마스터 생성
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <strong>이오플로우</strong> 보유중 <span class="up">+2.35%</span>(2일전매수)
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        Today 시세마스터 생성
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <strong>이오플로우</strong> 보유중 <span class="up">+2.35%</span>(2일전매수)
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <em>09:20</em> 새로운 <span class="up">매수신호</span>가 <strong>1종목</strong>에서 발생
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                var sigTxtSwiper = new Swiper(".sigTxtSwiper", {
+                                                    slidesPerView: 1,
+                                                    autoplay: {
+                                                        delay: 2000,
+                                                        disableOnInteraction : false,
+                                                    },
+                                                    loop: true,
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- //info -->
 
-                                <div class="table_w">
-                                    <table class="table signal">
-                                        <colgroup>
-                                            <col width="*">
-                                            <col width="16%">
-                                            <col width="16%">
-                                            <col width="16%">
-                                            <col width="16%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">종목</th>
-                                                <th scope="col">수익률</th>
-                                                <th scope="col">매도일</th>
-                                                <th scope="col">매도가</th>
-                                                <th scope="col">보유기간</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="#"><span>종목명종목명종목명</span></a></td>
-                                                <td class="text-center"><span class="up">122.5%</span></td>
-                                                <td class="text-center"><span>09/10</span></td>
-                                                <td class="text-center"><span>50,000,000</span></td>
-                                                <td class="text-center"><span>45일</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#"><span>종목명종목명종목명</span></a></td>
-                                                <td class="text-center"><span class="up">122.5%</span></td>
-                                                <td class="text-center"><span>09/10</span></td>
-                                                <td class="text-center"><span>50,000,000</span></td>
-                                                <td class="text-center"><span>45일</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#"><span>종목명종목명종목명</span></a></td>
-                                                <td class="text-center"><span class="up">122.5%</span></td>
-                                                <td class="text-center"><span>09/10</span></td>
-                                                <td class="text-center"><span>50,000,000</span></td>
-                                                <td class="text-center"><span>45일</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#"><span>종목명종목명종목명</span></a></td>
-                                                <td class="text-center"><span class="up">122.5%</span></td>
-                                                <td class="text-center"><span>09/10</span></td>
-                                                <td class="text-center"><span>50,000,000</span></td>
-                                                <td class="text-center"><span>45일</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#"><span>종목명종목명종목명</span></a></td>
-                                                <td class="text-center"><span class="up">122.5%</span></td>
-                                                <td class="text-center"><span>09/10</span></td>
-                                                <td class="text-center"><span>50,000,000</span></td>
-                                                <td class="text-center"><span>45일</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <!-- 최근 AI매매신호내역 -->
+                                <div class="s_history">
+                                    <div class="s_historyTitle">
+                                        <strong>최근 AI매매신호 내역</strong>
+                                        <div class="swiper-pagination_txt"></div>
+                                    </div>
+                                    <div class="swiper s_hisSwiper">
+                                        <div class="swiper-wrapper">
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">최근 매도 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">최근 매도 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">최근 매도 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum"><em>매수가</em>6,100원</div>
+                                                <div class="itemTxt">최근 매수 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum"><em>매수가</em>6,100원</div>
+                                                <div class="itemTxt">최근 매수 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum"><em>매수가</em>6,100원</div>
+                                                <div class="itemTxt">최근 매수 종목</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">보유중 상승률 TOP</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">보유중 상승률 TOP</div>
+                                            </button>
+                                            <button class="swiper-slide">
+                                                <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                                <div class="itemNum up">+28.2%</div>
+                                                <div class="itemTxt">보유중 상승률 TOP</div>
+                                            </button>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
-                                <!-- //table_w -->
+
+                                <script>
+                                    var hisSwiper = new Swiper(".s_hisSwiper", {
+                                        slidesPerView: 3,
+                                        slidesPerGroup: 3,
+                                        spaceBetween: 10,
+                                        pagination: {
+                                            el: ".swiper-pagination",
+                                            clickable: true,
+                                        },
+                                        loop: true,
+                                    });
+                                    
+                                    var hispg = ['최근 매도 종목', '최근 매수 종목', '보유중 상승률 TOP'];
+
+                                    var pagingSwiper = new Swiper(".s_hisSwiper", {
+                                        slidesPerView: 3,
+                                        slidesPerGroup: 3,
+                                        spaceBetween: 10,
+                                        pagination: {
+                                            el: ".swiper-pagination_txt",
+                                            renderBullet: function (index, className) {
+                                                return '<div class="' + className + '"><span>' + (hispg[index]) + '</span></div>';
+                                            }
+                                        },
+                                        loop: true,
+                                    });
+
+                                    hisSwiper.controller.control = pagingSwiper;
+                                    pagingSwiper.controller.control = hisSwiper;
+                                </script>
+                                <!-- 최근 AI매매신호내역 -->
                             </div>
                             <!-- //매매신호업데이트 -->
 
@@ -575,7 +640,7 @@
 
 
                     <div class="modal fade" id="direct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -624,10 +689,16 @@
 
                                     <div class="button">
                                         <button type="button" class="btn btn-primary"><span>서비스 자세히보기 <em>(59,800원, 휴대폰 자동결제)</em></span></button>
+                                        <div class="joinBtn">
+                                            <button><span>라씨 매매비서 APP에서 1초만에 가입하기</span></button>
+                                        </div>
 
                                         <ul>
                                             <li>
-                                                <a href="#">서비스 이용안내</a>
+                                                <a href="#">다른 서비스 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">서비스 자세히 보기</a>
                                             </li>
                                         </ul>
                                     </div>

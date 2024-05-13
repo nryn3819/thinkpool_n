@@ -212,54 +212,90 @@
         min-height:447px;
 
 
-        .direct {
-            position: absolute;
-            top: 140px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            z-index: 99;
+        .guide{
+            position:absolute;
+            display:flex;
+            top:40px;
+            left:0;
+            width:100%;
+            flex-wrap: wrap;
+            text-align:center;
+            justify-content: center;
+            padding: 0px 20px;
 
-            .txt {
-                display: block;
+            span{
+                display:block;
+                width:100%;
+                font-size:16px;
+                color:#000;
+                line-height:19px;
 
-                span {
-                    line-height: 30px;
-
-                    font: {
-                        size: 20px;
-                        weight: 300;
-                    }
-
-                    color:#666;
-
-                    em {
-                        font: {
-                            style: normal;
-                            weight: 700;
-                        }
-                    }
+                &.rmt-25{
+                    margin-top: 25px;
+                }
+                &.rmt-40{
+                    margin-top: 40px;
                 }
             }
+            button.appDown{
+                margin-top:25px;
+                height:39px;
+                padding:0 17px;
 
-            .button {
-                button {
-                    width: 220px;
-                    height: 40px;
-                    line-height: 40px;
-                    padding: 0;
-                    margin-top: 20px;
-                    border-radius: 40px;
+                font-size:16px;
+                color:#fff;
+                border-radius: 39px;
+                background:#5567FD;
+                border:0;
+            }
+            .mJoin-btn{
+                margin-top: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                button{
+                    max-width: 350px;
+                    border: 1px solid #5368ff;
+                    border-radius: 8px;
+                    width: 100%;
+                    padding: 20px 15px;
+                    background: #fff;
                     font-size: 16px;
-                    color: #fff;
-                    font-weight: 300;
-                    outline: 0;
-                    border: 0;
-                    background: #3e72ed;
+                    font-weight: 700;
+                    text-align: left;
+                    line-height: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #5368ff;
                 }
             }
         }
 
+    }
+
+    .appQR-box{
+        width: 100%;
+        padding: 25px 0;
+        background: #f6f6f6;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .qrTxt{
+            font-size: 14px;
+            color: #000;
+            font-weight: 400;
+            line-height: 25px;
+
+            span{
+                color: #5368ff;
+            }
+        }
     }
 
     .chart_w{
@@ -383,5 +419,55 @@
 .signal_condition{
     .popover{
         max-width:320px;
+    }
+}
+
+// modal
+.moreModal{
+    .modal-content{
+        border-radius: 1rem;
+
+        .modal-header{
+            border: none;
+        }
+        .modal-body{
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 40px;
+            
+            .txt{
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                line-height: 24px;
+                margin-bottom: 25px;
+            }
+            .appDownloadBtn{
+                width: 100%;
+                text-align: center;
+
+                button{
+                    width: 220px;
+                    height: 37px;
+                    border: none;
+                    background: #5368ff;
+                    border-radius: 20px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.joinBtn{
+    padding: 0px 59px;
+    margin-top: 25px;
+    
+    button{
+        width: 100% !important;
+        border: none;
+        background: #7874f7 !important;
     }
 }
