@@ -1029,48 +1029,73 @@
                         <div class="s_history px-0 pb-0">
                             <div class="s_historyTitle">
                                 <strong>최근 AI매매신호 내역</strong>
-                                <div class="swiper-pagination_txt"></div>
+                                <div class="swiper s_txtSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            최근 매도 종목
+                                        </div>
+                                        <div class="swiper-slide">
+                                            최근 매수 종목
+                                        </div>
+                                        <div class="swiper-slide">
+                                            보유중 상승률 TOP
+                                        </div>
+                                        <div class="swiper-slide">
+                                            문의가 많은 종목
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper s_hisSwiper">
                                 <div class="swiper-wrapper">
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum up">+28.2%</div>
-                                        <div class="itemTxt">최근 매도 종목</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum up">+28.2%</div>
-                                        <div class="itemTxt">최근 매도 종목</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum"><em>매수가</em>6,100원</div>
-                                        <div class="itemTxt">최근 매수 종목</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum"><em>매수가</em>6,100원</div>
-                                        <div class="itemTxt">최근 매수 종목</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum up">+28.2%</div>
-                                        <div class="itemTxt">보유중 상승률 TOP</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">신라젠아모레퍼시</div>
-                                        <div class="itemNum up">+28.2%</div>
-                                        <div class="itemTxt">보유중 상승률 TOP</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">사피엔반도체</div>
-                                        <div class="itemTxt">문의가 많은 종목</div>
-                                    </button>
-                                    <button class="swiper-slide">
-                                        <div class="itemName text-truncate">사피엔반도체</div>
-                                        <div class="itemTxt">문의가 많은 종목</div>
-                                    </button>
+                                    <div class="swiper-slide">
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">최근 매도 종목</div>
+                                        </button>
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">최근 매도 종목</div>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">최근 매수 종목</div>
+                                        </button>
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">최근 매수 종목</div>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">보유중 상승률 TOP</div>
+                                        </button>
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">보유중 상승률 TOP</div>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">문의가 많은 종목</div>
+                                        </button>
+                                        <button class="itemBox">
+                                            <div class="itemName text-truncate">신라젠아모레퍼시</div>
+                                            <div class="itemNum up">+28.2%</div>
+                                            <div class="itemTxt">문의가 많은 종목</div>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -1078,32 +1103,29 @@
 
                         <script>
                             var hisSwiper = new Swiper(".s_hisSwiper", {
-                                slidesPerView: 2,
-                                slidesPerGroup: 2,
                                 spaceBetween: 10,
                                 pagination: {
                                     el: ".swiper-pagination",
                                     clickable: true,
                                 },
-                                loop: true,
-                            });
-                            var hispg = ['최근 매도 종목', '최근 매수 종목', '보유중 상승률 TOP', '문의가 많은 종목',];
-
-                            var pagingSwiper = new Swiper(".s_hisSwiper", {
-                                slidesPerView: 2,
-                                slidesPerGroup: 2,
-                                spaceBetween: 10,
-                                pagination: {
-                                    el: ".swiper-pagination_txt",
-                                    renderBullet: function (index, className) {
-                                        return '<div class="' + className + '"><span>' + (hispg[index]) + '</span></div>';
-                                    }
+                                controller: {
+                                    control: txtSwiper,
                                 },
                                 loop: true,
+                                touchStartForcePreventDefault: true,
+                            });
+                            
+                            var txtSwiper = new Swiper(".s_txtSwiper", {
+                                spaceBetween: 0,
+                                loop: true,
+                                controller: {
+                                    control: hisSwiper,
+                                },
+                                touchStartForcePreventDefault: true,
                             });
 
-                            hisSwiper.controller.control = pagingSwiper;
-                            pagingSwiper.controller.control = hisSwiper;
+                            hisSwiper.controller.control = txtSwiper;
+                            txtSwiper.controller.control = hisSwiper;
                         </script>
                         <!-- 최근 AI매매신호내역 -->
                     </div>

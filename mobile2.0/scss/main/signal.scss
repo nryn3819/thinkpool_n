@@ -95,35 +95,28 @@
                 color: #000;
             }
 
-            .swiper-pagination_txt{
+            .s_txtSwiper{
                 max-width: 120px;
-                min-height: 20px;
+                max-height: 24px;
+                margin: 0;
 
-                .swiper-pagination-bullet{
-                    display: none;
-                    width: 10px;
-                    height: 10px;
-                    background: #fff;
-                    opacity: 1;
-                }
-
-                .swiper-pagination-bullet-active{
-                    display: block;
-                }
-                span{
-                    display: block;
-                    font-size: 13px;
+                .swiper-slide{
                     color: #999;
-                    font-weight: 400;
-                    min-width: 120px;
+                    font-size: 13px;
                     text-align: right;
-                    line-height: 20px;
                 }
             }
         }
 
         .s_hisSwiper{
             .swiper-slide{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .itemBox{
                 width: calc(100%/2);
                 height: 130px;
                 padding: 10px 17px;

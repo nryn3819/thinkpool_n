@@ -476,26 +476,14 @@
                 color: #000;
             }
 
-            .swiper-pagination_txt{
+            .s_txtSwiper{
                 max-width: 130px;
+                max-height: 20px;
+                margin: 0;
 
-                .swiper-pagination-bullet{
-                    display: none;
-                    width: 10px;
-                    height: 10px;
-                    background: #fff;
-                    opacity: 1;
-                }
-
-                .swiper-pagination-bullet-active{
-                    display: block;
-                }
-                span{
-                    display: block;
-                    font-size: 16px;
+                .swiper-slide{
                     color: #999;
-                    font-weight: 400;
-                    min-width: 130px;
+                    font-size: 16px;
                     text-align: right;
                 }
             }
@@ -503,6 +491,13 @@
 
         .s_hisSwiper{
             .swiper-slide{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .itemBox{
                 width: calc(100%/3);
                 height: 155px;
                 padding: 20px 15px;
