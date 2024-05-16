@@ -505,13 +505,14 @@
             .swiper-slide{
                 width: calc(100%/3);
                 height: 155px;
-                padding: 25px 15px;
+                padding: 20px 15px;
                 border: 1px solid #d6d6d6;
                 border-radius: 8px;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
+                gap: 15px;
                 align-items: center;
                 background: #fff;
 
