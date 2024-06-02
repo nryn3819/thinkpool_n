@@ -18042,6 +18042,8 @@ span.label.ico.ico01 {
 #lowcode #container .content.detail-w .top {
   padding-bottom: 17px;
   border-bottom: 1px solid #dcdcdc;
+  position: relative;
+  top: 0;
 }
 #lowcode #container .content .top {
   position: sticky;
