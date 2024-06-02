@@ -18039,13 +18039,13 @@ span.label.ico.ico01 {
 #lowcode #container .content.detail-w {
   padding-bottom: 100px;
 }
-#lowcode #container .content.detail-w .top {
+#lowcode #container .content.detail-w > .top {
   padding-bottom: 17px;
   border-bottom: 1px solid #dcdcdc;
   position: relative;
   top: 0;
 }
-#lowcode #container .content .top {
+#lowcode #container .content > .top {
   position: sticky;
   top: 135px;
   display: flex;
@@ -18056,21 +18056,21 @@ span.label.ico.ico01 {
   background: #fff;
   z-index: 50;
 }
-#lowcode #container .content .top .tit {
+#lowcode #container .content > .top .tit {
   font-size: 35px;
   font-weight: 700;
   line-height: 45px;
 }
-#lowcode #container .content .top .button-group {
+#lowcode #container .content > .top .button-group {
   display: flex;
   gap: 20px;
 }
-#lowcode #container .content .top .button-group.end button {
+#lowcode #container .content > .top .button-group.end button {
   background: #fff;
   border: 1px solid #999;
   color: #000;
 }
-#lowcode #container .content .top .button-group button {
+#lowcode #container .content > .top .button-group button {
   border-radius: 5px;
   background: #bfbfbf;
   height: 50px;
@@ -18080,10 +18080,10 @@ span.label.ico.ico01 {
   font-weight: 500;
   border: 0;
 }
-#lowcode #container .content .top .button-group button.active {
+#lowcode #container .content > .top .button-group button.active {
   background: #0f1a33;
 }
-#lowcode #container .content .top .button-group:last-child button {
+#lowcode #container .content > .top .button-group:last-child button {
   font-size: 18px;
   font-weight: 500;
   color: #333;
@@ -18564,7 +18564,7 @@ span.label.ico.ico01 {
   justify-content: center;
   column-gap: 120px;
 }
-#lowcode #container .detail .price-w strong {
+#lowcode #container .detail .price-w > strong {
   display: block;
   width: 100%;
   height: 70px;
