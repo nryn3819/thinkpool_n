@@ -1166,6 +1166,10 @@
             vertical-align: middle;
             font-weight: 400 !important;
 
+            &.bg{
+              background:#fbfbfb;
+            }
+
             &:last-child {
               border-right: 0;
               text-align: center;
