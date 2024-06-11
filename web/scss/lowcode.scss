@@ -71,6 +71,11 @@
           font-size: 18px;
           line-height: 25px;
           color: #fff;
+
+          &.active{
+            color:#3190ff;
+            font-weight:700;
+          }
         }
       }
 
