@@ -87,6 +87,46 @@
                     }
                 }
             }
+
+            .appDownload{
+                .txt{
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #333;
+                    font-weight: 400;
+                    text-align: center;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                .btnGroup{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    margin-bottom: 15px;
+        
+                    button{
+                        width: 200px;
+                        height: 42px;
+                        line-height: 42px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 14px;
+                        color: #fff;
+                        font-weight: 300;
+                        background: #000;
+                        border: none;
+                        border-radius: 20px;
+                        
+                        div{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
         }
         &.box02{
             .box-title{
