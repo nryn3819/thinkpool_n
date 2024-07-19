@@ -22,6 +22,7 @@
 ### macOS ###
 # General
 .DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 *.zip
@@ -241,3 +242,4 @@ yarn.
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn,macos,visualstudiocode,git
+.DS_Store
