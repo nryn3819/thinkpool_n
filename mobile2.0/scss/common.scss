@@ -435,6 +435,7 @@ body {
   margin: 0 auto;
   background: none;
   border:0;
+  overflow: hidden;
 
   *{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -444,6 +445,7 @@ body {
     background: #ff7d63;
     border-radius: 20px 20px 0 0;
     padding:20px 15px;
+    overflow:hidden;
 
     .top{
       display:flex;
