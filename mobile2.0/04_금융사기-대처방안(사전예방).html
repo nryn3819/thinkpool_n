@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+      <!-- header - header.scss -->
+      <header id="header" class="clearfix fraud-header">
+        <h2 class="visually-hidden">상단영역</h2>
+        <div id="top" class="float-start">
+          <div class="header-title">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <g clip-path="url(#clip0_46_802)">
+                  <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
+                    fill="#323232" stroke="#FFDA55" stroke-width="2" />
+                  <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_46_802">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span>디지털 금융 사기 방지</span>
+          </div>
+          <!-- 헤더 타이틀 -->
+          <div id="sideMenu">
+            <h3 class="visually-hidden">사이드메뉴열기</h3>
+            <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17H21M3 12H21M3 7H21" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+            <!-- 2022.06.28 변경 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <g clip-path="url(#clip0_46_734)">
+                        <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
+                          fill="#323232" stroke="#FFDA55" stroke-width="2" />
+                        <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_734">
+                          <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>디지털 금융 사기 방지</span>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:115px">로그인</button>
+                    <button class="btn-custom-default" style="width:115px">회원가입</button>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        디지털 금융 사기 방지 홈
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        피싱사기 유형
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        사기사례
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        대처방안
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전예방</a></li>
+                        <li><a href="#">사후대처</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        가상체험관
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">기본체험</a></li>
+                        <li><a href="#">AI 챗봇 체험</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        교육평가
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전조사</a></li>
+                        <li><a href="#">사후평가</a></li>
+                        <li><a href="#">수료증 발급</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        공지사항
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+              </div>
+            </aside>
+
+            <script>
+              const cate = document.querySelector('.sideMenuBtn');
+              const cateId = '#' + cate.getAttribute('data-cate-id');
+              const offId = document.querySelector('#sideContent');
+
+              cate.addEventListener('click', function () {
+                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+              });
+
+              offId.addEventListener('hide.bs.offcanvas', function () {
+                const showCate = document.querySelector('.collapse.show');
+
+                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+              });
+
+            </script>
+            <!-- //2022.06.28 변경 -->
+
+          </div>
+          <!-- //sideMenu -->
+        </div>
+        <!-- //top -->
+
+        <menu id="mainMenu" class="globalNavigation float-start">
+          <h3 class="visually-hidden">네비게이션</h3>
+          <a href="#">사기유형</a>
+          <a href="#">사기사례</a>
+          <a class="active" href="#">대처방안</a>
+          <a href="#">가상체험관</a>
+          <a href="#">교육평가</a>
+          <a href="#">교육신청</a>
+        </menu>
+        <!-- //gloabal navi -->
+      </header>
+      <!-- // -->
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-option">
+          <div class="option-tab">
+            <button class="active">사전예방</button>
+            <button>사후대처</button>
+          </div>
+          <div class="option-content">
+            <div class="option-title">사전 예방법</div>
+            <div class="option-box">
+              <div class="option-as">
+                <div class="as-title">
+                  <span>01</span>
+                  <strong>휴대폰 소액결제 차단</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    각 통신사별 웹, 앱 , 고객센터를 통해 설정 가능/결제액을줄이거나 0원으로 설정 (<button>설정방법 보기</button>)
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>02</span>
+                  <strong>보안위험 자동차단 설정 <em>(안드로이드)</em></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    악성 앱 설치를 차단하기 위해 안드로이드 기기에서 보안위험 자동차단 설정을 활성화 (<button>설정방법 보기</button>) <br />
+                    ※ 앱은 반드시 공식 앱스토어에서만 다운로드
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>03</span>
+                  <strong>휴대폰 신규개통 방지</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    엠세이퍼(<button>www.msafer.or.kt</button>) 에서 휴대폰 신규개통을 차단
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>04</span>
+                  <strong>스미싱,악성앱 알림/확인 서비스</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    1,2,3 조치를 시행한 이후,금융회사 및 경찰 안내 등에 따라 인증서 폐지·재발급 신분증 재발급 등 필요한 추가조치를 실시
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>05</span>
+                  <strong>국제전화 수신 차단</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    국제전화 수신 차단 하기 (<button>차단방법 보기</button>)
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>06</span>
+                  <strong>스미싱 확인 서비스</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    카카오톡에서보호나라 채널 추가하고 스미싱 문자 붙여넣기로 확인 (<button>보호나라 안내</button>)
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>07</span>
+                  <strong>사진첩에서 개인정보, 금융정보 삭제</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    신분증 사진 삭제 , 금융정보(카드, 보안카드 등) 정보 사진과 문서 삭제
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>08</span>
+                  <strong>찐 센터</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    피싱 의심 전화나 위조 서류를 문자메시지로 확인 :<br /> 010-3570-8242 (<button>찐센터 안내</button>)
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>09</span>
+                  <strong>ATM 지연인출제도 <em>(자동적용)</em></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    1회에 100만원 이상 금액이 송금·이체되어 입금된 경우 해당금액 범위 내에서 30분간 자동화기기(CD/ATM기 등)를 통한 인출·이체가 지연
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>10</span>
+                  <strong>지연이체서비스 <em>(해당 금융사에 신청)</em></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    이체 시 수취인 계좌에 일정시간(최소 3시간) 경과 후 입금되도록 하는 서비스. <br />
+                    이체신청 후 일정 시간 내(최종 이체처리시간 30분 전까지)에는 취소가 가능.
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>11</span>
+                  <strong>입금계좌 지정서비스 <em>(해당 금융사에 신청)</em></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    비지정 계좌로는 소액(1일 100만원)만 이체 가능
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>12</span>
+                  <strong>단말기 지정서비스 <em>(해당 금융사에 신청)</em></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    미지정 기기에서는 추가 인증 필요로 보안 강화
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="option-title rmt-40">보이스피싱 예방수칙</div>
+            <div class="option-box">
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>수사기관·금융기관이라며 자금 이체나 금융정보 요구하면, <b>100% 보이스피싱</b></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    정부기관은 절대 자금 이체나 금융정보를 요구하지 않음
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>통화내용을 절대 타인에게 발설하지 말라고 하면, <b>100% 보이스피싱</b></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    정부기관은 절대 자금 이체나 금융정보를 요구하지 않음
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>전화나·문자로 대출을 권유하고 처리비용을 요구하면, <b>100% 보이스피싱</b></strong>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>금융기관 웹사이트에서 금융거래정보 입력을 요구하면, <b>100% 보이스피싱</b></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    국세청, 우체국, 금감원이나 금융기관의 (가짜)사이트를 띄워 계좌번호·비밀번호·보안카드 번호 등의 입력을 요구하면 100% 사기
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>현금지급기로 유인하면, <b>100% 보이스피싱</b></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    정부기관은 절대 자금 이체나 금융정보를 요구하지 않음
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>가족 납치 협박전화를 받은 경우, 가족 당사자에게 전화하여 안전 확인</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    직접 전화하기 어렵다면 주위에 연락 요청 자녀의 친구, 선생님 등의 연락처 미리 확보
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>출처 불명 파일·이메일·문자는 절대 클릭하지  말고 즉시 삭제·차단 </strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    휴대전화에 악성앱이 설치되면 범인이 원격으로 휴대전화를 조종하여 자금 이체 및 개인정보 탈취
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>문자·메신저로 가족/지인을 사칭하여 금전을 요구하는 경우, 반드시 전화로 확인</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    카카오톡 프로필을 가족/지인으로 조작하여 금전을 요구하는 사례가 많으므로, 반드시 전화로 걸어서 확인
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>채팅앱에서 음란 영상통화 제안 시, <b>100% 피싱조직</b></strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    만남 앱 채팅을 통해 여성인 척 접근하여 음란 영상통화를 제안한 후, 녹화된 영상으로 협박하여 금품을 갈취하는 수법
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray prev-as">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>모르는 돈이 입금되면 즉시 금융기관에 신고하여 환급 절차 진행</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    계좌가 공개된 자영업자 등에게 돈을 송금한 후, 보이스피싱 계좌라고 허위 신고하여 피해자 계좌를 지급정지 시키고 이를 해제하는 대가로 금전을 갈취하는 통장협박 수법
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="fixbanner">
+            <img width="120" src="img/option-banner.png" alt="">
+          </button>
+        </section>
+      </main>
+
+      <footer id="footer" class="clearfix">
+        <menu id="fmenu">
+          <figure class="figure">
+            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+            <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+            <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+            <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+          </figure>
+        </menu>
+
+        <menu id="fmenu2">
+          <a href="#">고객센터</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+        </menu>
+
+        <div class="copyright">
+          <span class="d-block">@Thinkpool</span>
+          <span class="d-block">
+            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+          </span>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

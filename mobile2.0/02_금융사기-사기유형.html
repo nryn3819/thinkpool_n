@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+      <!-- header - header.scss -->
+      <header id="header" class="clearfix fraud-header">
+        <h2 class="visually-hidden">상단영역</h2>
+        <div id="top" class="float-start">
+          <div class="header-title">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <g clip-path="url(#clip0_46_802)">
+                  <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z" fill="#323232"
+                    stroke="#FFDA55" stroke-width="2" />
+                  <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_46_802">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span>디지털 금융 사기 방지</span>
+          </div>
+          <!-- 헤더 타이틀 -->
+          <div id="sideMenu">
+            <h3 class="visually-hidden">사이드메뉴열기</h3>
+            <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17H21M3 12H21M3 7H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+            <!-- 2022.06.28 변경 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <g clip-path="url(#clip0_46_734)">
+                        <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z" fill="#323232" stroke="#FFDA55" stroke-width="2"/>
+                        <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_734">
+                          <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>디지털 금융 사기 방지</span>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:115px">로그인</button>
+                    <button class="btn-custom-default" style="width:115px">회원가입</button>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        디지털 금융 사기 방지 홈
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        피싱사기 유형
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        사기사례
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        대처방안
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전예방</a></li>
+                        <li><a href="#">사후대처</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        가상체험관
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">기본체험</a></li>
+                        <li><a href="#">AI 챗봇 체험</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        교육평가
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전조사</a></li>
+                        <li><a href="#">사후평가</a></li>
+                        <li><a href="#">수료증 발급</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        공지사항
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+              </div>
+            </aside>
+
+            <script>
+              const cate = document.querySelector('.sideMenuBtn');
+              const cateId = '#' + cate.getAttribute('data-cate-id');
+              const offId = document.querySelector('#sideContent');
+
+              cate.addEventListener('click', function () {
+                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+              });
+
+              offId.addEventListener('hide.bs.offcanvas', function () {
+                const showCate = document.querySelector('.collapse.show');
+
+                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+              });
+
+            </script>
+            <!-- //2022.06.28 변경 -->
+
+          </div>
+          <!-- //sideMenu -->
+        </div>
+        <!-- //top -->
+
+        <menu id="mainMenu" class="globalNavigation float-start">
+          <h3 class="visually-hidden">네비게이션</h3>
+          <a class="active" href="#">사기유형</a>
+          <a href="#">사기사례</a>
+          <a href="#">대처방안</a>
+          <a href="#">가상체험관</a>
+          <a href="#">교육평가</a>
+          <a href="#">교육신청</a>
+        </menu>
+        <!-- //gloabal navi -->
+      </header>
+      <!-- // -->
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-category">
+          <div class="category-title">디지털 금융 사기유형</div>
+          <div class="category-box">
+            <div class="category-list">
+              <div class="list-title">대출 빙자형</div>
+              <div class="list-box">
+                금융사나 직원을 사칭하여 저금리, 카드론, 서민금융지원 등 대출을 빙자하여 자금을 편취 <br />
+                정상적인 금융 거래과정과 동일하게 진행되며, 정형화되지 않아 다양한 형태로 발생
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>기관 사칭형</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#voicePhishing">샘플영상보기</button>
+              </div>
+              <div class="list-box">
+                검찰, 금감원 등 공공기관 사칭으로 자금 편취 <br />
+                피해자에게 개인정보 유출이나 명의도용 등 범죄에 연루되었다고 심리적 압박을 가한 후, 가짜 사이트에 접속하도록 유도하여 금융정보를 빼내거나, 금전을 직접 전달받거나, 상품권 등을 결제하도록 하여 가로채는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>지인 사칭형</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#msgPhishing">메시지샘플보기</button>
+              </div>
+              <div class="list-box">
+                지인 사칭을 통한 입금 요구, 상품권 결제 유도. <br />
+                카카오톡이나 문자 메시지로 연락해 기존 전화가 고장 났다거나 급한 사정이 있다고 하여 금전이나 상품권을 요구하거나, 특정 앱을 설치하게 하여 개인정보 편취
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">보상 제공형</div>
+              <div class="list-box">
+                세금 환급, 경품 제공을 빙자하여 자금을 편취 <br />
+                관세청을 사칭하거나 경품 당점을 위조하여 악성앱 설치를 유도하고, 이를 통해 개인정보를 편취한 후 피해자의 계좌에서 돈을 빼내는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>자녀 & 지인 협박형</span>
+              </div>
+              <div class="list-box">
+                가족 또는 지인이 납치되거나 사고를 당해 위험한 상황에 처해 있다고 강조하면서 금전을 요구 <br />
+                가족, 지인으로 오인할 수 있는 목소리를 들려주며, 사전에 입수한 가족이나 지인의 이름, 직업, 상황 정보 사용함. 사기범은 피해자에게 공포를 조장하고, 다른 사람의 도움을 받지 못하도록 하거나 해당 가족과 통화하지 못하도록 압박
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">거래 사칭형</div>
+              <div class="list-box">
+                물품대금 오류송금 빙자 등으로 자금 편취. <br />
+                사기범이 물품을 구입한 후 지불할 금액보다 더 많은 금액을 송금한 것처럼 문자메시지를 조작하고, 실수로 잘못 송금했다고 주장하여 반환 또는 차액을 요구하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">정보 해킹형</div>
+              <div class="list-box">
+                스미싱(SMS), 파밍(피싱사이트), 메모리 해킹 등을 이용하여 개인 정보 및 금융 정보를 탈취한 후, 피해자 자신도 모르게 자금을 편취하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">투자 사기형</div>
+              <div class="list-box">
+                주식, 코인 리딩방을 불법적으로 개설하여 투자사기 <br />
+                허위 광고 문자를 통해 피해자를 단체 채팅방으로 유도하고, 가짜 참여자들의 고수익 인증으로 유료로 투자 리딩을 판매한 뒤 잠적하거나, 큰 손실을 입히고도 책임을 지지 않는 수법
+              </div>
+            </div>
+          </div>
+
+          <div class="category-title rmt-40 rmb-10">피싱(Phishing)의 유형</div>
+          <div class="category-subtitle">
+            "피싱(Phishing)"은 전화, 문자, 메신저, 가짜 사이트 등을 통해 피해자를 속여 개인정보나 금융정보를 빼내고, 재산을 갈취하는 사기 수법
+          </div>
+          <div class="category-box">
+            <div class="category-list">
+              <div class="list-title">
+                <span>보이스피싱</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#voicePhishing">샘플보기</button>
+              </div>
+              <div class="list-box">
+                유선전화 발신번호를 수사기관 등으로 조작하여 해당기관을 사칭하면서 금품을 편취하거나 자녀납치, 사고빙자 등 이용자 환경의 약점을 노려 금품을 편취하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>메신저피싱</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#msgPhishing">샘플보기</button>
+              </div>
+              <div class="list-box">
+                SNS, 메신저를 통해 가족, 지인을  사칭하여 금품을 수취하거나, 금융정보를 빼내거나 악성 앱을 깔게해 금융자산을 탈취하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>스미싱</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#smsPhishing">샘플보기</button>
+              </div>
+              <div class="list-box">
+                “스미싱(Smishing)” SMS와 피싱(phishing)의 합성어 <br />
+                문자 메시지를 이용하여 사용자가 악성 앱을 휴대전화에 설치하게 한 후 휴대폰에 있는 개인정보를 통해 금융자산을 탈취 <br />
+                최근에는 파밍·피싱사이트 수법과 결합한 스미싱 수법이 등장하는 등 그 수법이 점차 진화중
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">피싱사이트</div>
+              <div class="list-box">
+                고위 공직자, 유명인 등 특정 개인 및 회사를 대상으로 개인정보를 캐내거나 특정 정보 탈취 목적으로 하는 피싱 공격하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">
+                <span>큐싱</span>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#qrPhishing">샘플보기</button>
+              </div>
+              <div class="list-box">
+                고위 공직자, 유명인 등 특정 개인 및 회사를 대상으로 개인정보를 캐내거나 특정 정보 탈취 목적으로 하는 피싱 공격하는 수법
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">로맨스 스캠</div>
+              <div class="list-box">
+                SNS 및 이메일 등 온라인상으로 접근하여 호감을 표시한 뒤 재력, 외모 등으로 신뢰를 형성한 후 각종 이유로 금전을 요구하는 방법의 사기
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="list-title">몸캠피싱</div>
+              <div class="list-box">
+                스카이프 등 스마트폰 채팅 어플을 통해 음란 화상 채팅(몸캠피싱)을 하자고 접근하여 상대방의 음란한 행위를 녹화한 후 피해자의 스마트폰에 악성코드를 심어 피해자 지인의 연락처를 탈취한 다음 지인들에게 녹화해둔 영상(사진)을 유포하겠다고 협박하여 금전을 갈취하는 범죄 수법
+              </div>
+            </div>
+          </div>
+          <div class="category-video">
+            <img width="100%" src="img/main-title_video.png" alt="비디오 영역">
+          </div>
+        </section>
+
+        <!-- 팝업창 -->
+
+        <!-- 보이스피싱 샘플 -->
+        <div class="modal fade sampleModal" id="voicePhishing" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span>보이스피싱 샘플</span>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-video">
+                  <img width="100%" src="img/main-title_video.png" alt="">
+                </div>
+                <div class="sample-title">사기 수법과 과정</div>
+                <div class="sample-box">
+                  <div class="sample-list">
+                    <div class="list-num">1</div>
+                    <div class="list-txt">
+                      수사기관을 사칭 <br/ >
+                      수사관이나 검사를 사칭하여 계좌가 범죄에 연루되어서 참고인 조사를 해야 한다고 전화
+                    </div>
+                  </div>
+                  <div class="sample-list">
+                    <div class="list-num">2</div>
+                    <div class="list-txt">
+                      무죄증명을 위해 본인명의 통장에서 현금을 인출한 후 금감원 담당자에게 전달하도록 지시
+                    </div>
+                  </div>
+                  <div class="sample-list">
+                    <div class="list-num">3</div>
+                    <div class="list-txt">
+                      금감원 앞에서 신분명찰을 패찰한 가짜 금감원 직원(수거책)이 현금을 수거
+                    </div>
+                  </div>
+                  <div class="sample-list">
+                    <div class="list-num">4</div>
+                    <div class="list-txt">
+                      악성앱 설치를 유도하여 2차 금전 탈취를 행하는 경우도 있음
+                    </div>
+                  </div>
+                  <div class="sample-notice">
+                    <div class="notice-title">유의사항</div>
+                    <div class="notice-txt">
+                      <span>※</span>
+                      <span>수사기관이  현금을 요구하는 경우 100% 보이스피싱입니다.</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="closeBtn" data-bs-dismiss="modal">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 보이스피싱 샘플 -->
+
+        <!-- 메신저피싱 샘플 -->
+        <div class="modal fade sampleModal" id="msgPhishing" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span>메신저피싱 샘플</span>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <div class="msgImg">
+                  <img width="100%" src="img/msgSample.png" alt="메신저피싱 샘플">
+                </div>
+                <div class="sample-title">사기 수법과 과정</div>
+                <div class="sample-box">
+                  <div class="sample-list">
+                    <div class="list-num">1</div>
+                    <div class="list-txt">
+                      자녀 사칭 메신저피싱: 휴대폰 고장을 빌미로 접근
+                    </div>
+                  </div>
+                  <div class="sample-list">
+                    <div class="list-num">2</div>
+                    <div class="list-txt">
+                      변조 접근: 메신저 프로필을 자녀와 동일한 이름과 사진으로 접근하거나, 남의 전화기를 빌려 연락한다고 변명
+                    </div>
+                  </div>
+                  <div class="sample-list">
+                    <div class="list-num">3</div>
+                    <div class="list-txt">
+                      금전 요구: 구글 기프트카드, 상품권 구매와 일련번호를 요구하여 자금 편취 (핀 번호로 상품권 환불, 재판매 등으로 현금화)
+                    </div>
+                  </div>
+                  <div class="more-title">추가수법 :</div>
+                  <div class="more-txt">
+                    <span>-</span>
+                    <span>수리비 대신 결제 요청하며 개인정보 요구 및 악성앱(원격제어앱) 설치 유도</span>
+                  </div>
+                  <div class="more-txt">
+                    <span>-</span>
+                    <span>휴대폰 보험신청을 핑계로 URL 접속 및 개인정보 요구</span>
+                  </div>
+                  <div class="more-title">유의사항 :</div>
+                  <div class="more-txt">
+                    <span>-</span>
+                    <span>휴대폰 고장났다는 자녀 메시지를 받으면 반드시 본인에게 전화하여 확인</span>
+                  </div>
+                  <div class="more-txt">
+                    <span>-</span>
+                    <span>앱 설치 요구에 절대 응하지 말 것</span>
+                  </div>
+                </div>
+                <button class="closeBtn" data-bs-dismiss="modal">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메신저피싱 샘플 -->
+
+        <!-- 스미싱 샘플 -->
+        <div class="modal fade sampleModal" id="smsPhishing" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span>스미싱 문자 샘플</span>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <div class="body-txt">
+                  공공, 금융, 정부 기관이나 사설업체를 사칭하거나 결혼식, 부고장, 택배 안내 등의 문자메시지를 통해 가짜 사이트로 유도하여 신분 정보를 탈취하고 악성앱 설치를 유도, 전화 연결을 통해 보이스피싱과 결합된 수법도 사용
+                </div>
+                <div class="smsimg-box">
+                  <img src="img/sms01.png" alt="문자샘플01">
+                  <img src="img/sms02.png" alt="문자샘플02">
+                  <img src="img/sms03.png" alt="문자샘플03">
+                  <img src="img/sms04.png" alt="문자샘플04">
+                  <img src="img/sms05.png" alt="문자샘플05">
+                  <img src="img/sms06.png" alt="문자샘플06">
+                  <img src="img/sms07.png" alt="문자샘플07">
+                </div>
+                <button class="closeBtn" data-bs-dismiss="modal">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 스미싱 샘플 -->
+
+        <!-- 큐싱 샘플 -->
+        <div class="modal fade sampleModal" id="qrPhishing" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span>큐싱 샘플</span>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-img">
+                  <img src="img/qrimg01.png" alt="큐싱샘플01">
+                </div>
+                <div class="modal-txt">
+                  공유 자전거나 킥보드에 가짜 QR 코드를 붙여서 사용자가 가짜 사이트에 접속하도록 유도하고, 악성 앱을 설치하게 하는 수법
+                </div>
+                <div class="modal-img">
+                  <img src="img/qrimg02.png" alt="큐싱샘플02">
+                </div>
+                <div class="modal-txt">
+                  가짜 불법주차 경고문이나 딱지를 붙여 QR코드로 범칙금 조회나 납부를 하라고 안내하여 악성 앱 설치를 유도하는 수법
+                </div>
+                <div class="modal-img">
+                  <img src="img/qrimg03.png" alt="큐싱샘플03">
+                </div>
+                <button class="closeBtn" data-bs-dismiss="modal">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 큐싱 샘플 -->
+
+        <!-- 팝업창 -->
+      </main>
+
+      <footer id="footer" class="clearfix">
+        <menu id="fmenu">
+          <figure class="figure">
+            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+            <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+            <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+            <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+          </figure>
+        </menu>
+
+        <menu id="fmenu2">
+          <a href="#">고객센터</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+        </menu>
+
+        <div class="copyright">
+          <span class="d-block">@Thinkpool</span>
+          <span class="d-block">
+            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+          </span>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

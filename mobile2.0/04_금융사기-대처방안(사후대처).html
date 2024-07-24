@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+      <!-- header - header.scss -->
+      <header id="header" class="clearfix fraud-header">
+        <h2 class="visually-hidden">상단영역</h2>
+        <div id="top" class="float-start">
+          <div class="header-title">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <g clip-path="url(#clip0_46_802)">
+                  <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
+                    fill="#323232" stroke="#FFDA55" stroke-width="2" />
+                  <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_46_802">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span>디지털 금융 사기 방지</span>
+          </div>
+          <!-- 헤더 타이틀 -->
+          <div id="sideMenu">
+            <h3 class="visually-hidden">사이드메뉴열기</h3>
+            <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17H21M3 12H21M3 7H21" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+            <!-- 2022.06.28 변경 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <g clip-path="url(#clip0_46_734)">
+                        <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
+                          fill="#323232" stroke="#FFDA55" stroke-width="2" />
+                        <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_734">
+                          <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>디지털 금융 사기 방지</span>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:115px">로그인</button>
+                    <button class="btn-custom-default" style="width:115px">회원가입</button>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        디지털 금융 사기 방지 홈
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        피싱사기 유형
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        사기사례
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        대처방안
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전예방</a></li>
+                        <li><a href="#">사후대처</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        가상체험관
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">기본체험</a></li>
+                        <li><a href="#">AI 챗봇 체험</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        교육평가
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전조사</a></li>
+                        <li><a href="#">사후평가</a></li>
+                        <li><a href="#">수료증 발급</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        공지사항
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+              </div>
+            </aside>
+
+            <script>
+              const cate = document.querySelector('.sideMenuBtn');
+              const cateId = '#' + cate.getAttribute('data-cate-id');
+              const offId = document.querySelector('#sideContent');
+
+              cate.addEventListener('click', function () {
+                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+              });
+
+              offId.addEventListener('hide.bs.offcanvas', function () {
+                const showCate = document.querySelector('.collapse.show');
+
+                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+              });
+
+            </script>
+            <!-- //2022.06.28 변경 -->
+
+          </div>
+          <!-- //sideMenu -->
+        </div>
+        <!-- //top -->
+
+        <menu id="mainMenu" class="globalNavigation float-start">
+          <h3 class="visually-hidden">네비게이션</h3>
+          <a href="#">사기유형</a>
+          <a href="#">사기사례</a>
+          <a class="active" href="#">대처방안</a>
+          <a href="#">가상체험관</a>
+          <a href="#">교육평가</a>
+          <a href="#">교육신청</a>
+        </menu>
+        <!-- //gloabal navi -->
+      </header>
+      <!-- // -->
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-option">
+          <div class="option-tab">
+            <button>사전예방</button>
+            <button class="active">사후대처</button>
+          </div>
+          <div class="option-content">
+            <div class="option-txt">
+                피싱 전화 또는 문자를 받고, 피싱 사기범에게 이체·송금, 개인정보 제공 또는 악성앱이 설치된 경우 다음과 같이 대응합니다.
+            </div>
+            <div class="option-box">
+              <div class="option-as">
+                <div class="as-title">
+                  <span>01</span>
+                  <strong>피해신고 및 계좌 일괄지급정지 신청</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    1) 국번 없이 112로 신고하여 원스톱 처리 <br />
+                    - 사건 접수<br />
+                    - 악성앱 차단 안내<br />
+                    - 본인계좌 일괄지급정지<br />
+                    - 송금계좌 지급정지<br />
+                  </p>
+                  <p>
+                    ※ 악성앱 설치 시 전화 가로채기의 위험이 있으므로, 다른 휴대폰이나 전화 사용 권장
+                  </p>
+                  <p>
+                    ※ 명의도용 계좌/카드 등 확인은 금융결제원 계좌정보통합관리서비스(<button>www.payinfo.or.kr</button>) 접속
+                  </p>
+                  <p>
+                    2) 영업점 방문을 통해 지급정지 신청 가능
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>02</span>
+                  <strong>개인정보 노출사실 등록</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    개인정보 노출사실을 등록하여 신규계좌 개설, 신용카드 발급 등 제한
+                  </p>
+                  <p>
+                    신분증, 계좌번호 등 개인정보가 유출되거나,  악성앱 설치가 의심되는 경우 다음 절차대로 신속 조치대전화
+                  </p>
+                  <p>
+                    1) 보안앱을 설치/실행하여 악성앱 삭제
+                    <button>보안앱 안내 바로가기</button>
+                  </p>
+                  <p>
+                    보안앱 설치 또는 실행이 안될 경우 휴대전화 초기화 (저장 데이터 손실됨)
+                  </p>
+                  <p>
+                    2) 금감원 개인정보 노출자 사고예방시스템 <br />
+                    (<button>pd.fss.or.kr</button>)에 접속하여 등록 신청 <br />
+                    - 휴대폰 인증이나 공동인증서로 인증처리
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>03</span>
+                  <strong>명의도용 휴대폰 개설 조회/신고</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    1) 명의도용된 휴대전화 개설 여부 조회
+                    한국정보통신진흥협회 명의도용방지 서비스 <br />
+                    (<button>www.msafer.or.kr</button>)접속 후 공동인증서 로그인
+                  </p>
+                  <p>
+                    가입사실현황조회 서비스 메뉴에서 개설된 휴대전화 조회 (부정 개설된 휴대전화 확인)
+                  </p>
+                  <p>
+                    2) 회선 해지 및 명의도용 신고
+                    명의도용으로 부정 개설된 휴대전화가 있을 경우 즉시 해당 이동통신사 등에 회선 해지 신청 및 명의도용 신고
+                  </p>
+                  <p>
+                    <신고방법 안내> <br />
+                    <button>https://www.msafer.or.kr/minwon_center/<br />process.do</button>
+                  </p>
+                  <p>
+                    3) 휴대전화 신규가입제한<br />
+                    추가피해를 방지하기 위해 가입제한 서비스를 통해 신규가입제한 신청<br />
+                    <<button>신청방법 안내 보기</button>>
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title">
+                  <span>04</span>
+                  <strong>인증서 폐지/재발급과 신분증 재발급</strong>
+                </div>
+                <div class="option-txt">
+                  1,2,3 조치를 시행한 이후,금융회사 및 경찰 안내 등에 따라 인증서 폐지·재발급 신분증 재발급 등 필요한 추가조치를 실시
+                </div>
+              </div>
+            </div>
+            <div class="option-box">
+              <div class="option-as">
+                <div class="as-title bg-gray">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>피해 보상과 구제</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    1) 피해 입증 자료 확보: 이제 내역, 문자 메시지, 통화 기록 등의 증거 확보
+                  </p>
+                  <p>
+                    2) 경찰서(사이버 수사대)에서 사건사고사실확인원 발급 (피해 입증 자료 필요)
+                  </p>
+                  <p>
+                    3) 사전 지급정지 신청한 피해 계좌 금융사 영업점에 피해구제 신청 서면접수 <br />
+                    (1) 피해 환급금 구제 신청 <br />
+                    (2)‘비대면 금융사고 책임분담기준’에 따른 자율배상 신청
+                  </p>
+                  <p>
+                    필요서류 : 사건사고사실확인원과 그 외 필요한 서류는 방문 전 금융회사에 문의
+                  </p>
+                  <p>
+                    <em>서면접수는 지급정시 신청 3영업일 이내</em>
+                    <em>종합상담 : 보이스피싱 통합대응센터 112, 1566-1188(직통)</em>
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>법률 무료 상담</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    <strong>보이스피싱 통합신고대응센터 :</strong> <br />
+                    보이스피싱과 관련된 다양한 문제에 대해 종합적으로 지원합니다. 전화 112 또는 1566-1188(직통)
+                  </p>
+                  <p>
+                    <strong>대한법률구조공단 :</strong> <br />
+                    대한법률구조공단에서는 무료 법률상담을 제공 전화(132)로 상담을 신청하거나, 가까운 지부를 방문하여 상담 웹사이트(<button>www.klac.or.kr</button>)에서도 상담 신청이 가능
+                  </p>
+                  <p>
+                    <strong>한국소비자원 :</strong> <br />
+                    한국소비자원에서는 소비자 피해 구제와 관련된 법률상담을 제공 전화(1372)로 상담을 신청할 수 있으며, 웹사이트(<button>www.kca.go.kr</button>)에서도 상담 신청이 가능
+                  </p>
+                </div>
+              </div>
+              <div class="option-as">
+                <div class="as-title bg-gray">
+                  <em>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_46_2718)">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#FF7676" stroke-width="2"/>
+                        <path d="M8 12.0002L11.0002 15.0005L17 9" stroke="#FF7676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_2718">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </em>
+                  <strong>정신건강 무료상담과 치료</strong>
+                </div>
+                <div class="option-txt">
+                  <p>
+                    거주하고 있는 자치구 정신건강 복지센터에서 정신건강 문제에 대한 상담 서비스를 제공
+                  </p>
+                  <p>
+                    <span>[복지센터 정신건강 상담]</span> <br />
+                    거주하고 있는 자치구 정신건강 복지센터에서 정신건강 문제에 대한 상담 서비스를 제공 (신청방법 : 자치구 복지센터 문의)
+                  </p>
+                  <p>
+                    <span>[전국민 마음투자 지원사업]</span> <br />
+                    우울,불안 등 정서적 어려움이 있는 국민에게 심리상담 서비스 제공 (나이 및 소득 기준 없음, 총 8회) <br />
+                    * 지원 사업 상세 안내 :  <br />
+                    <button>https://www.socialservice.or.kr:444/user/<br />htmlEditor/view2.do?p_sn=71</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="fixbanner">
+            <img width="120" src="img/option-banner.png" alt="">
+          </button>
+        </section>
+      </main>
+
+      <footer id="footer" class="clearfix">
+        <menu id="fmenu">
+          <figure class="figure">
+            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+            <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+            <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+            <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+          </figure>
+        </menu>
+
+        <menu id="fmenu2">
+          <a href="#">고객센터</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+        </menu>
+
+        <div class="copyright">
+          <span class="d-block">@Thinkpool</span>
+          <span class="d-block">
+            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+          </span>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

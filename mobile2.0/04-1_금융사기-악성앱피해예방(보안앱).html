@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+      <!-- header - header.scss -->
+      <header id="header" class="clearfix fraud-header fraud-content_header">
+        <h2 class="visually-hidden">상단영역</h2>
+        <div id="top" class="float-start">
+          <button class="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 12L9 18M3 12L9 6M3 12H21" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="header-title">
+            <span>보안 앱: 피싱 방지 어플 소개</span>
+          </div>
+          <!-- 헤더 타이틀 -->
+          <div id="sideMenu">
+            <h3 class="visually-hidden">사이드메뉴열기</h3>
+            <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17H21M3 12H21M3 7H21" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+                </svg>
+            </div>
+            <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+
+            <!-- 2022.06.28 변경 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <g clip-path="url(#clip0_46_734)">
+                        <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
+                          fill="#323232" stroke="#FFDA55" stroke-width="2" />
+                        <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_46_734">
+                          <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>디지털 금융 사기 방지</span>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:115px">로그인</button>
+                    <button class="btn-custom-default" style="width:115px">회원가입</button>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        디지털 금융 사기 방지 홈
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        피싱사기 유형
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        사기사례
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        대처방안
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전예방</a></li>
+                        <li><a href="#">사후대처</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        가상체험관
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">기본체험</a></li>
+                        <li><a href="#">AI 챗봇 체험</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        교육평가
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">사전조사</a></li>
+                        <li><a href="#">사후평가</a></li>
+                        <li><a href="#">수료증 발급</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed none-after" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        공지사항
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+              </div>
+            </aside>
+
+            <script>
+              const cate = document.querySelector('.sideMenuBtn');
+              const cateId = '#' + cate.getAttribute('data-cate-id');
+              const offId = document.querySelector('#sideContent');
+
+              cate.addEventListener('click', function () {
+                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+              });
+
+              offId.addEventListener('hide.bs.offcanvas', function () {
+                const showCate = document.querySelector('.collapse.show');
+
+                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+              });
+
+            </script>
+            <!-- //2022.06.28 변경 -->
+
+          </div>
+          <!-- //sideMenu -->
+        </div>
+        <!-- //top -->
+      </header>
+      <!-- // -->
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-content">
+          <div class="content-title">보안 앱: 피싱 방지 어플 소개</div>
+          <div class="appBox">
+            <div class="appIcn">
+              <div><img width="80" src="img/konan.png" alt="시티즌코난"></div>
+            </div>
+            <div class="appName">
+              <div class="appTitle">1. 시티즌코난</div>
+              <div class="appTxt">경찰대학 치안정책연구소와 ㈜인피니그루에서 개발 및 공동 운영</div>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[주요 기능]</div>
+            <div class="content-txt">
+              <em>
+                각종 보이스피싱에 악용되는 전화 가로채기 앱, 금융기관 사칭 앱, 경찰/검찰 등의 공공기관 사칭 앱, 의료 사칭 앱, 택배/쇼핑 사칭 앱, 몸캠 악성 앱 등을 실시간으로 탐지
+              </em>
+              <em>
+                설치된 악성 앱 외 미설치된 악성 파일(.apk / .zip) 탐지 및 삭제 기능
+              </em>
+              <em>
+                제휴 금융사 연동 <br />
+                보이스피싱 악성 앱 탐지 순간 사용자가 동의한 제휴사와 공동으로 대응하여 이체, 대출 등의 금융거래 시 차단
+              </em>
+            </div>
+          </div>
+          <div class="txt-box rmb-30">
+            <div class="txt-title">[다운로드]</div>
+            <div class="content-txt">
+              <p>
+                안드로이드 <br />
+                <button class="link">https://play.google.com/store/apps/details?id=com.infinigru.police.phishingeyes</button>
+              </p>
+            </div>
+          </div>
+          <div class="appBox">
+            <div class="appIcn">
+              <div><img width="80" src="img/v3.png" alt="v3"></div>
+            </div>
+            <div class="appName">
+              <div class="appTitle">2. V3 Mobile Security</div>
+              <div class="appTxt">V3 Mobile Security는 AhnLab의 대표적인 모바일 종합 백신 앱</div>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[주요 기능]</div>
+            <div class="content-txt">
+              <em>
+                앱을 설치하기 전 악성 앱인지 검사할 수 있어요.
+              </em>
+              <em>
+                설치한 앱과 파일, 불필요한 앱을 검사해 위협이 있는지 알 수 있어요.
+              </em>
+              <em>
+                URL을 검사해 악성 URL인지 알려드려요.
+              </em>
+              <em>
+                스미싱 탐지 : 문자 메시지를 검사해 악성, 피싱, 스팸 메시지인지 알려드려요.
+              </em>
+              <em>
+                QR 코드 검사 : QR 코드 내 악성 앱이나 악성코드를 다운로드하는URL이 있는지 알려드려요.
+              </em>
+            </div>
+          </div>
+          <div class="txt-box rmb-30">
+            <div class="txt-title">[다운로드]</div>
+            <div class="content-txt">
+              <p>
+                안드로이드 <br />
+                <button class="link">https://play.google.com/store/apps/details?id=com.ahnlab.v3mobilesecurity.soda</button>
+              </p>
+              <p>
+                iOS <br />
+                <button class="link">https://apps.apple.com/kr/app/v3-mobile-plus/id1481938658</button>
+              </p>
+            </div>
+          </div>
+          <div class="appBox">
+            <div class="appIcn">
+              <div><img width="80" src="img/whoscall.png" alt="후스콜"></div>
+            </div>
+            <div class="appName">
+              <div class="appTitle">3. 후스콜</div>
+              <div class="appTxt">전 세계 다운로드 1억 건을 돌파한 후스콜!</div>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[주요 기능]</div>
+            <div class="content-txt">
+              <em>
+                실시간 스팸번호 확인
+              </em>
+              <em>
+                모르는 전화 번호 검색
+              </em>
+              <em>
+                보이스피싱, 스팸 전화 차단
+              </em>
+              <em>
+                위험 전화 자동 차단
+              </em>
+              <em>
+                스미싱 URL 검사
+              </em>
+            </div>
+          </div>
+          <div class="txt-box rmb-30">
+            <div class="txt-title">[다운로드]</div>
+            <div class="content-txt">
+              <p>
+                안드로이드 <br />
+                <button class="link">https://play.google.com/store/apps/details?id=gogolook.callgogolook2</button>
+              </p>
+              <p>
+                iOS <br />
+                <button class="link">https://apps.apple.com/kr/app/<br />%ED%9B%84%EC%8A%A4%EC%BD%9C/<br />id929968679</button>
+              </p>
+            </div>
+          </div>
+          <div class="appBox">
+            <div class="appIcn">
+              <div><img width="80" src="img/pill.png" alt="알약"></div>
+            </div>
+            <div class="appName">
+              <div class="appTitle">4. 알약M</div>
+              <div class="appTxt">국내최대 스미싱 탐지 DB로 강력하게 탐지</div>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[주요 기능]</div>
+            <div class="content-txt">
+              <em>
+                스미싱 메시지 탐지 <br />
+                개인정보 및 금융 정보 탈취를 노리는 스미싱 위협, 알약M이 실시간으로 분석해 강력하게 탐지합니다.
+              </em>
+            </div>
+          </div>
+          <div class="txt-box rmb-30">
+            <div class="txt-title">[다운로드]</div>
+            <div class="content-txt">
+              <p>
+                안드로이드 <br />
+                <button class="link">https://play.google.com/store/apps/details?id=com.estsoft.alyac</button>
+              </p>
+            </div>
+          </div>
+          <div class="appBox">
+            <div class="appIcn">
+              <div><img width="80" src="img/skshielder.png" alt="sk쉴더스"></div>
+            </div>
+            <div class="appName">
+              <div class="appTitle">5. SK쉴더스 모바일가드</div>
+              <div class="appTxt">원격제어앱탐지, 스미싱검사 등의 전문적 보안 기능 제공</div>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[주요 기능]</div>
+            <div class="content-txt">
+              <em>
+                원격제어 앱 탐지 : 보이스피싱 수법으로 악용되는 원격제어 앱 실시간 탐지
+              </em>
+              <em>
+                스미싱 검사 : 실시간으로 메시지 내 악성 URL 탐지
+              </em>
+              <em>
+                안심 QR 스캐너 : 악성 URL 여부를 판단하고 안전하게 이동
+              </em>
+              <em>
+                스미싱 신고 : 악성으로 의심되는 문자를 앱에서 신고하면 '한국인터넷진흥원'과 함께 메시지를 분석하여 안전 여부를 확인
+              </em>
+              <em>
+                앱 잠금 : 내가 지정한 앱을 다른 사람이 실행할 수 없도록 비밀번호 입력 보안
+              </em>
+            </div>
+          </div>
+          <div class="txt-box">
+            <div class="txt-title">[다운로드]</div>
+            <div class="content-txt">
+              <p>
+                안드로이드 <br />
+                <button class="link">https://play.google.com/store/apps/details?id=kr.co.adtcaps.mobileguard</button>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer" class="clearfix">
+        <menu id="fmenu">
+          <figure class="figure">
+            <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
+            <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
+            <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
+            <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
+          </figure>
+        </menu>
+
+        <menu id="fmenu2">
+          <a href="#">고객센터</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+        </menu>
+
+        <div class="copyright">
+          <span class="d-block">@Thinkpool</span>
+          <span class="d-block">
+            본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
+            그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+          </span>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>
