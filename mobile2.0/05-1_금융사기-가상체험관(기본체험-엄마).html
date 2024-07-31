@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-virtual">
+          <div class="virtual-header">
+            <div>
+              <span>
+                <img width="25" src="img/call-icon.png" alt="">
+              </span>
+              <strong>보이스 피싱 가상체험</strong>
+            </div>
+            <button class="end" data-bs-toggle="modal" data-bs-target="#endVirtual">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.6151 19.6151L11.769 11.769M11.769 11.769L3.92285 3.92285M11.769 11.769L19.6152 3.92285M11.769 11.769L3.92285 19.6152" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <!-- 타이틀 -->
+          <div class="virtual-phishing fadeIn">
+            <div class="phone-header call">
+              <div class="flexcenter call">
+                <span><img width="30" src="img/call-icon02.png" alt=""></span>
+                <span>010-3XX0-8242  <em>통화중...</em></span>
+              </div>
+            </div>
+            <div class="phone-body call">
+              <div class="message left msg01 none">
+                여보세요. 여기 세모네모 병원입니다. 홍길동씨가 교통사고로 중상을 입어 긴급수술을 해야 하는 상황이라 휴대폰 연락처에 있는 어머님께 연락 드렸습니다.
+              </div>
+              <div class="message right msg02 none">
+                네? 제 아들이 교통사고를 요? 선생님 얼마나 다쳤나요? 생명엔 지장이 없을까요? 네?
+              </div>
+              <div class="message left msg03 none">
+                환자의 상태가 매우 위급하여 긴급으로 진행하는 두개내 출혈 수술에 필요한 약품과 의료기기 크래니오톰 비용을 먼저 보내주셔야 합니다!
+              </div>
+              <div class="message right msg04 none">
+                어디 병원이신가요? 비용은 제가 가서 바로 지불하겠습니다.
+              </div>
+              <div class="message left msg05 none">
+                저희 병원에는 없는 장비와 의약품을 급히 준비해야 해서 수술비를 보내주시고 오세요. 늦어지면 생명이 위독해집니다.. 압구정동에 있는 세모네모 병원 본관 15층 수술실로 오시면 됩니다.
+              </div>
+              <div class="message right msg06 none">
+                알겠습니다. 바로 송금하겠습니다. 어디로 보내드려야 하나요?
+              </div>
+              <div class="message left msg07 none">
+                오각은행 123-1234-1111 엄아리 입니다.
+              </div>
+            </div>
+
+            <!-- 답변01 -->
+            <div class="choice-reply none reply01">
+              <button class="endCall" onclick="successOn()">
+                <span><img width="38" src="img/endcall-icon.png" alt=""></span>
+                <span>통화종료</span>
+              </button>
+              <button class="reply msg-next" onclick="msgNext01()">
+                <em>A</em>
+                <span>네네.  어떤 의료기기인지 모르겠지만 계좌번호 알려주시면 보내드리겠습니다. 제발 살려만 주세요. ㅜㅜ</span>
+              </button>
+              <button class="reply failed" onclick="msgNext01()">
+                <em>B</em>
+                <span>어디에 있는 병원이신가요? 비용은 제가 가서 바로 지불하겠습니다. </span>
+              </button>
+            </div>
+            <!-- 답변02 -->
+            <div class="choice-reply none reply02">
+              <button class="endCall" onclick="successOn()">
+                <span><img width="38" src="img/endcall-icon.png" alt=""></span>
+                <span>통화종료</span>
+              </button>
+              <button class="reply msg-next" onclick="msgNext02()">
+                <em>A</em>
+                <span>알겠습니다. 바로 송금하겠습니다. 어디로 보내드려야 하나요?</span>
+              </button>
+              <button class="reply failed" onclick="successOn()">
+                <em>B</em>
+                <span>항상 의심하고, 끊고, 확인!<br />아들에게 전화를 걸어서 확인한 후 보내준다. <br />
+                  전화를 끊기 어려우면 주위에 연락 도움을 요청한다.</span>
+              </button>
+            </div>
+            <!-- 답변03 -->
+            <div class="choice-reply none reply03">
+              <button class="endCall" onclick="successOn()">
+                <span><img width="38" src="img/endcall-icon.png" alt=""></span>
+                <span>통화종료</span>
+              </button>
+              <button class="reply msg-next" onclick="failedOn()">
+                <em>A</em>
+                <span>네. 바로 송금드렸고, 병원으로 바로 가고 있습니다.</span>
+              </button>
+              <button class="reply failed" onclick="successOn()">
+                <em>B</em>
+                <span>계좌주가 병원이 아님을 의심하고, <br />
+                  바로 전화를 끊고, 아들에게 전화해서 확인한다.</span>
+              </button>
+            </div>
+
+            <!-- 성공 화면 -->
+            <div class="phishing-result none success">
+              <div class="top">
+                <div class="title success">피싱 예방에 <br />성공하였습니다.</div>
+                <img width="220" src="img/success-icon.png" alt="">
+                <button class="link">디지털 금융사기 사전예방 바로가기</button>
+              </div>
+              <div class="bot">
+                <button>체험 다시하기</button>
+                <button>기본체험 홈</button>
+              </div>
+            </div>
+            <!-- 실패 화면 -->
+            <div class="phishing-result none failure">
+              <div class="top">
+                <div class="title">피싱 예방에 <br />실패하였습니다.</div>
+                <div class="txt">
+                  추후 아들이 멀쩡한걸 알게 되었지만, 이미  <br />
+                  사기범의 요구에 따라 금전 피해 발생 <br />
+                  항상 전화 걸어서 확인하기! 111
+                </div>
+                <img width="220" src="img/failed-icon.png" alt="">
+                <button class="link">디지털 금융사기 사전예방 바로가기</button>
+              </div>
+              <div class="bot">
+                <button>체험 다시하기</button>
+                <button>기본체험 홈</button>
+              </div>
+            </div>
+            <script>
+              // 애니메이션
+              const fadeInElement = document.querySelector('.fadeIn');
+              const msg01Element = document.querySelector('.msg01');
+              const msg02Element = document.querySelector('.msg02');
+              const msg03Element = document.querySelector('.msg03');
+              const msg04Element = document.querySelector('.msg04');
+              const msg05Element = document.querySelector('.msg05');
+              const msg06Element = document.querySelector('.msg06');
+              const msg07Element = document.querySelector('.msg07');
+              const reply01Element = document.querySelector('.reply01');
+              const reply02Element = document.querySelector('.reply02');
+              const reply03Element = document.querySelector('.reply03');
+              const phoneBody = document.querySelector('.phone-body');
+
+              document.addEventListener('DOMContentLoaded', function() {
+                phoneBody.style.paddingBottom = '250px';
+
+                fadeInElement.addEventListener('animationend', function() {
+                  msg01Element.classList.remove('none');
+                  msg01Element.classList.add('msgOn');
+                });
+                msg01Element.addEventListener('animationend', function() {
+                  msg02Element.classList.remove('none');
+                  msg02Element.classList.add('msgOn');
+                });
+                msg02Element.addEventListener('animationend', function() {
+                  msg03Element.classList.remove('none');
+                  msg03Element.classList.add('msgOn');
+                });
+                msg03Element.addEventListener('animationend', function() {
+                  reply01Element.classList.remove('none');
+                  reply01Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              });
+
+              function msgNext01() {
+                phoneBody.style.paddingBottom = '300px';
+                reply01Element.classList.add('fadeOut');
+                msg04Element.classList.remove('none');
+                msg04Element.classList.add('msgOn');
+
+                msg04Element.addEventListener('animationend', function() {
+                  msg05Element.classList.remove('none');
+                  msg05Element.classList.add('msgOn');
+                });
+
+                msg05Element.addEventListener('animationend', function() {
+                  reply02Element.classList.remove('none');
+                  reply02Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              function msgNext02() {
+                phoneBody.style.paddingBottom = '250px';
+                reply02Element.classList.add('fadeOut');
+                msg06Element.classList.remove('none');
+                msg06Element.classList.add('msgOn');
+
+                msg06Element.addEventListener('animationend', function() {
+                  msg07Element.classList.remove('none');
+                  msg07Element.classList.add('msgOn');
+                });
+
+                msg07Element.addEventListener('animationend', function() {
+                  reply03Element.classList.remove('none');
+                  reply03Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              // 피싱 예방 성공
+              function successOn() {
+                const failOn = document.querySelector('.success');
+                failOn.classList.remove('none');
+              }
+              // 피싱 예방 실패
+              function failedOn() {
+                const failOn = document.querySelector('.failure');
+                failOn.classList.remove('none');
+              }
+
+              // 메세지 스크롤
+              function scrollToBottom() {
+                const phoneBody = document.querySelector('.phone-body');
+                phoneBody.scrollTo({
+                  top: phoneBody.scrollHeight,
+                  behavior: 'smooth'
+                });
+              }
+            </script>
+          </div>
+        </section>
+
+        <!-- 모의체험 종료 팝업 -->
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-bs-dismiss="modal" class="btn-close"></button>
+                <div class="title">모의체험 종료</div>
+                <div class="txt text-center">
+                  보이스피싱 AI챗봇 체험을 종료하시겠습니까?
+                </div>
+                <div class="btn-group rmt-25">
+                  <button>종료</button>
+                  <button data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

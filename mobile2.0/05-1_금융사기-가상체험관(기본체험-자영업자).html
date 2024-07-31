@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-virtual">
+
+          <div class="virtual-header sms">
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                  <circle cx="12.5" cy="13" r="12.5" fill="#114EED"/>
+                  <ellipse cx="12.8292" cy="12.6709" rx="8.22368" ry="6.25" fill="white"/>
+                  <circle cx="9.04585" cy="12.8359" r="1.15132" fill="black"/>
+                  <circle cx="12.9931" cy="12.8359" r="1.15132" fill="black"/>
+                  <circle cx="16.9414" cy="12.8359" r="1.15132" fill="black"/>
+                  <path d="M6.83991 19.5186L8.41622 16.4861L10.0078 18.2358L6.83991 19.5186Z" fill="white"/>
+                </svg>
+              </span>
+              <strong>문자 피싱 가상체험</strong>
+            </div>
+            <button class="end" data-bs-toggle="modal" data-bs-target="#endVirtual">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.6151 19.6151L11.769 11.769M11.769 11.769L3.92285 3.92285M11.769 11.769L19.6152 3.92285M11.769 11.769L3.92285 19.6152" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="virtual-header call none">
+            <div>
+              <span>
+                <img width="25" src="img/call-icon.png" alt="">
+              </span>
+              <strong>보이스 피싱 가상체험</strong>
+            </div>
+            <button class="end" data-bs-toggle="modal" data-bs-target="#endVirtual">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.6151 19.6151L11.769 11.769M11.769 11.769L3.92285 3.92285M11.769 11.769L19.6152 3.92285M11.769 11.769L3.92285 19.6152" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 타이틀 -->
+          <div class="virtual-phishing fadeIn">
+
+            <div class="phone-header sms">
+              <div class="flexsb sms">
+                <div class="smsProfile">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M17.4998 7.5L10.8837 14.1161C10.3955 14.6043 10.3955 15.3957 10.8837 15.8839L17.4998 22.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <img width="30" src="img/prof-icon.png" alt="프로필 아이콘">
+                  </span>
+                  <span>1577-000X</span>
+                </div>
+                <div>
+                  <img width="13.5" src="img/dot3.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-header call none">
+              <div class="flexcenter call">
+                <span><img width="30" src="img/call-icon02.png" alt=""></span>
+                <span>1577-000X  <em>통화중...</em></span>
+              </div>
+            </div>
+
+            <div class="phone-body sms">
+              <div class="message left msg01 none">
+                [Web발신] 소상공인 사업안정자금 초저금리 특별보증대출 대상자 안내
+                중소벤처기업부와 서울신용보증재단에서는 소상공인 일상회복을 위한 긴급 경영자금 지원을 위한 「희망플러스 특례보증대출」대상자로 선정되셨습니다. <br />
+                1. 지원대상 : 소상공인 방역지원금 혹은 손실보전금 수급한 소기업, 소상공인<br />
+                2. 보증한도 : 최대 2억원<br />
+                3. 대출금리 : (최초 1년)약 3.1%, (2년차 이후)약 5.7%<br />
+                4. 보증기간 : 5년(1년 거치 4년 분할상환)<br />
+                5. 신청 문의 : 1570-000x 엄아리 차장, 황항진 과장<br /><br />
+                ■ 지원금액은 보증심사 후 최종 결정됩니다.
+              </div>
+            </div>
+
+            <div class="phone-body call none">
+              <div class="message right msg02 none">
+                안녕하세요. 특별보증대출 대상자라고 문자가 와서요.. 저금리로 전환대출이 되는가요?
+              </div>
+              <div class="message left msg03 none">
+                안녕하세요. 홍길동님,엄아리 차장입니다. <br />
+                연락주신 전화번호로 조회해 보니 금리 3.1%로 대출이 가능하신 대상자가 맞으신데 실제 대출이 얼마까지 가능한지는 보증심사용 앱을 설치하셔야 합니다. <br />
+                문자로 링크 보내 드릴테니 설치하고, 심사 신청하신 후 말씀해주세요.
+              </div>
+              <div class="message right msg04 none">
+                앱 설치하고 심사신청 다 했습니다. 이제 어떻게 하면 되나요?
+              </div>
+              <div class="message left msg05 none">
+                고객님 대출 심사 조회를 다 해봤는데 안타깝게 신용점수가 살짝 부족하셔서 대출이 조금 어려우실것 같은데요…
+              </div>
+              <div class="message right msg06 none">
+                신용점수가 조금 모자라나요?  방법 없을까요? 요즘 고금리 이자  내기도 어려운데..
+              </div>
+              <div class="message left msg07 none">
+                타 금융기관에서 대출을 실행했다가 바로 상황하시면 저희가 전산에서 신용점수를 올려드릴 수 있는데요. <br />
+                신용카드 카드론으로 1천만원만 빌렸다가 오늘 바로 신용카드 대표전화로 전화 하셔서 상환하시면 이자 없이 처리하실 수 있습니다.
+              </div>
+            </div>
+
+            <!-- 답변01 -->
+            <div class="choice-reply none reply01">
+              <button class="reply msg-next" onclick="msgNext01()">
+                <em>A</em>
+                <span>고금리 대환대출이 되는지 신청 문의 연락처로 전화를 걸어서 문의해본다.</span>
+              </button>
+              <button class="reply failed" onclick="successOn()">
+                <em>B</em>
+                <span>스미싱이 아닌가 보호나라로 문의하거나 112  피싱 통합대응센터에 확인해본다.</span>
+              </button>
+            </div>
+            <!-- 답변02 -->
+            <div class="choice-reply none reply02">
+              <button class="endCall" onclick="successOn()">
+                <span><img width="38" src="img/endcall-icon.png" alt=""></span>
+                <span>통화종료</span>
+              </button>
+              <button class="reply msg-next" onclick="msgNext02()">
+                <em>A</em>
+                <span>앱 설치하고 심사신청 다 했습니다. 이제 어떻게 하면 되나요?</span>
+              </button>
+              <button class="reply failed" onclick="successOn()">
+                <em>B</em>
+                <span>앱스토어가 아닌 수동 앱 설치를 요구하면 100% 보이스피싱! 바로 전화를 끊고 112  피싱 통합대응센터에 신고한다.</span>
+              </button>
+            </div>
+            <!-- 답변03 -->
+            <div class="choice-reply none reply03">
+              <button class="endCall" onclick="successOn()">
+                <span><img width="38" src="img/endcall-icon.png" alt=""></span>
+                <span>통화종료</span>
+              </button>
+              <button class="reply msg-next" onclick="failedOn()">
+                <em>A</em>
+                <span>네. 그럼 신용카드론으로 1천만원 대출하고 신용카드사에 전화를 걸어서 상환 진행하겠습니다.</span>
+              </button>
+              <button class="reply failed" onclick="successOn()">
+                <em>B</em>
+                <span>바로 전화를 끊고 112  피싱 통합대응센터에 신고한다.</span>
+              </button>
+            </div>
+
+            <!-- 성공 화면 -->
+            <div class="phishing-result none success">
+              <div class="top">
+                <div class="title success">피싱 예방에 <br />성공하였습니다.</div>
+                <img width="220" src="img/success-icon.png" alt="">
+                <button class="link">디지털 금융사기 사전예방 바로가기</button>
+              </div>
+              <div class="bot">
+                <button>체험 다시하기</button>
+                <button>기본체험 홈</button>
+              </div>
+            </div>
+            <!-- 실패 화면 -->
+            <div class="phishing-result none failure">
+              <div class="top">
+                <div class="title">피싱 예방에 <br />실패하였습니다.</div>
+                <div class="txt">
+                  악성앱 전화 가로채기 수법으로 <br />
+                  카드론 상환금액 1천만원 편취 <br />
+                  휴대폰에 저장된 개인,금융 정보 누출로  <br />
+                  2차 금융 피해 발생 가능 <br />
+                  연락처 정보 누출로 지인 보이스피싱 피해 발생 가능
+                </div>
+                <img width="220" src="img/failed-icon.png" alt="">
+                <button class="link">디지털 금융사기 사전예방 바로가기</button>
+              </div>
+              <div class="bot">
+                <button>체험 다시하기</button>
+                <button>기본체험 홈</button>
+              </div>
+            </div>
+            <script>
+              // 애니메이션
+              const fadeInElement = document.querySelector('.fadeIn');
+              const msg01Element = document.querySelector('.msg01');
+              const msg02Element = document.querySelector('.msg02');
+              const msg03Element = document.querySelector('.msg03');
+              const msg04Element = document.querySelector('.msg04');
+              const msg05Element = document.querySelector('.msg05');
+              const msg06Element = document.querySelector('.msg06');
+              const msg07Element = document.querySelector('.msg07');
+              const reply01Element = document.querySelector('.reply01');
+              const reply02Element = document.querySelector('.reply02');
+              const reply03Element = document.querySelector('.reply03');
+              const phoneBody = document.querySelector('.phone-body');
+              const virtualHeader_sms = document.querySelector('.virtual-header.sms');
+              const phoneHeader_sms = document.querySelector('.phone-header.sms');
+              const phoneBody_sms = document.querySelector('.phone-body.sms');
+              const virtualHeader_call = document.querySelector('.virtual-header.call');
+              const phoneHeader_call = document.querySelector('.phone-header.call');
+              const phoneBody_call = document.querySelector('.phone-body.call');
+
+              phoneBody.style.paddingBottom = '200px';
+
+              document.addEventListener('DOMContentLoaded', function() {
+                fadeInElement.addEventListener('animationend', function() {
+                  msg01Element.classList.remove('none');
+                  msg01Element.classList.add('msgOn');
+                });
+                msg01Element.addEventListener('animationend', function() {
+                  reply01Element.classList.remove('none');
+                  reply01Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              });
+
+              function msgNext01() {
+                phoneBody_call.style.paddingBottom = '280px';
+                reply01Element.classList.add('none');
+                virtualHeader_sms.classList.add('none');
+                phoneHeader_sms.classList.add('none');
+                phoneBody_sms.classList.add('none');
+                virtualHeader_call.classList.remove('none');
+                phoneHeader_call.classList.remove('none');
+                phoneBody_call.classList.remove('none');
+
+                msg02Element.classList.remove('none');
+                msg02Element.classList.add('msgOn');
+
+                msg02Element.addEventListener('animationend', function() {
+                  msg03Element.classList.remove('none');
+                  msg03Element.classList.add('msgOn');
+                });
+
+                msg03Element.addEventListener('animationend', function() {
+                  reply02Element.classList.remove('none');
+                  reply02Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              function msgNext02() {
+                phoneBody_call.style.paddingBottom = '250px';
+                reply02Element.classList.add('fadeOut');
+                msg04Element.classList.remove('none');
+                msg04Element.classList.add('msgOn');
+
+                msg04Element.addEventListener('animationend', function() {
+                  msg05Element.classList.remove('none');
+                  msg05Element.classList.add('msgOn');
+                });
+
+                msg05Element.addEventListener('animationend', function() {
+                  msg06Element.classList.remove('none');
+                  msg06Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+
+                msg06Element.addEventListener('animationend', function() {
+                  msg07Element.classList.remove('none');
+                  msg07Element.classList.add('msgOn');
+                });
+
+                msg07Element.addEventListener('animationend', function() {
+                  reply03Element.classList.remove('none');
+                  reply03Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              // 피싱 예방 성공
+              function successOn() {
+                const failOn = document.querySelector('.success');
+                failOn.classList.remove('none');
+              }
+              // 피싱 예방 실패
+              function failedOn() {
+                const failOn = document.querySelector('.failure');
+                failOn.classList.remove('none');
+              }
+
+              // 메세지 스크롤
+              function scrollToBottom() {
+                phoneBody.scrollTo({
+                  top: phoneBody.scrollHeight,
+                  behavior: 'smooth'
+                });
+                phoneBody_call.scrollTo({
+                  top: phoneBody_call.scrollHeight,
+                  behavior: 'smooth'
+                });
+              }
+            </script>
+          </div>
+        </section>
+
+        <!-- 모의체험 종료 팝업 -->
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-bs-dismiss="modal" class="btn-close"></button>
+                <div class="title">모의체험 종료</div>
+                <div class="txt text-center">
+                  보이스피싱 AI챗봇 체험을 종료하시겠습니까?
+                </div>
+                <div class="btn-group rmt-25">
+                  <button>종료</button>
+                  <button data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

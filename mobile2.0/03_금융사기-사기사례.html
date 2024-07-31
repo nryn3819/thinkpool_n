@@ -240,246 +240,252 @@
               </div>
             </div>
           </div>
-          <div class="example-keyword">
-            <button class="keyword active">최근</button>
-            <button class="keyword">보이스피싱</button>
-            <button class="keyword">스미싱</button>
-            <button class="keyword">메신저피싱</button>
-            <button class="keyword">대출사기</button>
-            <button class="keyword">보상제공형</button>
-            <button class="keyword">정보해킹형가</button>
-            <button class="keyword">보이스피싱</button>
-            <button class="keyword hidden-keyword">메신저피싱</button>
-            <button class="keyword hidden-keyword">대출사기</button>
-            <button class="keyword hidden-keyword">보상제공형</button>
-            <button class="keyword hidden-keyword">정보해킹형가</button>
-            <button class="keyword hidden-keyword">보이스피싱</button>
-            <button class="keyword hidden-keyword">메신저피싱</button>
-            <button class="remote skipRemote hidden-remote">
-              <span>간략히보기</span>
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-                  <path d="M9.5 14.2499L9.5 4.49989M5 8.24989L8.96967 4.28022C9.26256 3.98732 9.73744 3.98732 10.0303 4.28022L14 8.24989" stroke="#666666" stroke-width="1.3" stroke-linecap="round"/>
-                </svg>
-              </span>
-            </button>
-            <button class="remote allRemote">
-              <span>전체보기</span>
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M9 3.75011L9 13.5001M13.5 9.75011L9.53033 13.7198C9.23744 14.0127 8.76256 14.0127 8.46967 13.7198L4.5 9.75011" stroke="#666666" stroke-width="1.3" stroke-linecap="round"/>
-                </svg>
-              </span>
-            </button>
-          </div>
-          <script>
-            const allRemote = document.querySelector('.allRemote');
-            const skipRemote = document.querySelector('.skipRemote');
-
-            allRemote.addEventListener('click', function () {
-              const hiddenKeywords = document.querySelectorAll('.hidden-keyword');
-              const hiddenRemotes = document.querySelectorAll('.hidden-remote');
-
-              hiddenKeywords.forEach(function (element) {
-                element.classList.remove('hidden-keyword');
-                element.classList.add('hidden');
-              });
-
-              hiddenRemotes.forEach(function (element) {
-                element.classList.remove('hidden-remote');
-              });
-
-              this.classList.add('hidden-remote');
-            });
-
-            skipRemote.addEventListener('click', function () {
-              const hiddens = document.querySelectorAll('.hidden');
-              const hiddenRemotes = document.querySelectorAll('.hidden-remote');
-
-              hiddens.forEach(function (element) {
-                element.classList.add('hidden-keyword');
-                element.classList.remove('hidden');
-              });
-
-              hiddenRemotes.forEach(function (element) {
-                element.classList.remove('hidden-remote');
-              });
-
-              this.classList.add('hidden-remote');
-            });
-          </script>
-          <div class="example-list">
-            <div class="listBox">
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
+          <div>
+            <div class="example-keyword">
+              <button class="keyword active">최근</button>
+              <button class="keyword">보이스피싱</button>
+              <button class="keyword">스미싱</button>
+              <button class="keyword">메신저피싱</button>
+              <button class="keyword">대출사기</button>
+              <button class="keyword">보상제공형</button>
+              <button class="keyword">정보해킹형가</button>
+              <button class="keyword">보이스피싱</button>
+              <button class="keyword hidden-keyword">메신저피싱</button>
+              <button class="keyword hidden-keyword">대출사기</button>
+              <button class="keyword hidden-keyword">보상제공형</button>
+              <button class="keyword hidden-keyword">정보해킹형가</button>
+              <button class="keyword hidden-keyword">보이스피싱</button>
+              <button class="keyword hidden-keyword">메신저피싱</button>
+              <button class="remote skipRemote hidden-remote">
+                <span>간략히보기</span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                    <path
+                      d="M9.5 14.2499L9.5 4.49989M5 8.24989L8.96967 4.28022C9.26256 3.98732 9.73744 3.98732 10.0303 4.28022L14 8.24989"
+                      stroke="#666666" stroke-width="1.3" stroke-linecap="round" />
+                  </svg>
+                </span>
               </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
-              </button>
-              <button class="list">
-                <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
-                <div class="list-tag">
-                  <span>문자</span>
-                  <span>스미싱</span>
-                  <span>기관사칭형</span>
-                </div>
+              <button class="remote allRemote">
+                <span>전체보기</span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path
+                      d="M9 3.75011L9 13.5001M13.5 9.75011L9.53033 13.7198C9.23744 14.0127 8.76256 14.0127 8.46967 13.7198L4.5 9.75011"
+                      stroke="#666666" stroke-width="1.3" stroke-linecap="round" />
+                  </svg>
+                </span>
               </button>
             </div>
-            <button class="more">더보기</button>
+            <script>
+              const allRemote = document.querySelector('.allRemote');
+              const skipRemote = document.querySelector('.skipRemote');
+
+              allRemote.addEventListener('click', function () {
+                const hiddenKeywords = document.querySelectorAll('.hidden-keyword');
+                const hiddenRemotes = document.querySelectorAll('.hidden-remote');
+
+                hiddenKeywords.forEach(function (element) {
+                  element.classList.remove('hidden-keyword');
+                  element.classList.add('hidden');
+                });
+
+                hiddenRemotes.forEach(function (element) {
+                  element.classList.remove('hidden-remote');
+                });
+
+                this.classList.add('hidden-remote');
+              });
+
+              skipRemote.addEventListener('click', function () {
+                const hiddens = document.querySelectorAll('.hidden');
+                const hiddenRemotes = document.querySelectorAll('.hidden-remote');
+
+                hiddens.forEach(function (element) {
+                  element.classList.add('hidden-keyword');
+                  element.classList.remove('hidden');
+                });
+
+                hiddenRemotes.forEach(function (element) {
+                  element.classList.remove('hidden-remote');
+                });
+
+                this.classList.add('hidden-remote');
+              });
+            </script>
+            <div class="example-list">
+              <div class="listBox">
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span class="active">문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+                <button class="list">
+                  <div class="list-title text-truncate2">카드 또는 세금이 연체되었습니다. 연체 확인</div>
+                  <div class="list-tag">
+                    <span>문자</span>
+                    <span>스미싱</span>
+                    <span>기관사칭형</span>
+                  </div>
+                </button>
+              </div>
+              <button class="more">더보기</button>
+            </div>
           </div>
         </section>
       </main>

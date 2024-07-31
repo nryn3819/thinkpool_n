@@ -6,6 +6,8 @@
 @import './fraud/experience.scss';
 @import './fraud/education.scss';
 @import './fraud/manager.scss';
+@import './fraud/virtual.scss';
+@import './fraud/board.scss';
 
 // 메인
 .fraud-header{
@@ -322,6 +324,9 @@
 }
 
 .openPopup{
+  width: 100%;
+  padding: 0px 10px !important;
+  
   .modal-content{
     width: 100%;
     border-radius: 16px;
@@ -369,6 +374,24 @@
         font-weight: 500;
         line-height: 24px;
         color: #fff;
+      }
+      .btn-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        button{
+          width: 50%;
+          height: 40px;
+          border-radius: 6px;
+          background: #363EDE;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          border: none;
+        }
       }
     }
   }
