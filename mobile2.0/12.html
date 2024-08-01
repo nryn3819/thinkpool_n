@@ -1,799 +1,1175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- common.css -->
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>씽크풀</title>
   </head>
   <body>
-
     <div id="app">
-        <div id="wrap">
-            <h1 class="visually-hidden">씽크풀</h1>
-            <h2 class="visually-hidden">Title for screen readers</h2>
-            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
-            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
-            <!-- header - header.scss -->
-            <header id="header" class="clearfix item">
-                <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
-                    
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container"
+          >Skip to main content</a
+        >
+        <div class="visually-hidden-focusable">
+          A container with a <a href="#">focusable element</a>.
+        </div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show">
+                <img
+                  src="https://img.thinkpool.com/www/mobile/img/logo.png"
+                  alt="씽크풀로고"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <!-- logo -->
+            <div class="pageBack">
+              <button type="button" onclick="history.back()">이전페이지</button>
+            </div>
+            <!-- //이전페이지 -->
+
+            <div class="headerTitle centerHeader text-truncate">
+              <strong>[이슈]<span class="dn">수소</span></strong>
+            </div>
+            <!-- //종목명 -->
+
+            <div class="subSchBtn subSch">
+              <button type="button" class="schButton">종목검색</button>
+            </div>
+
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div
+                class="sideMenuBtn sch-hide"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sideContent"
+                data-cate-id="amn02"
+              >
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled />
+                  <label class="menu" for="sdmnu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </label>
+                </form>
+              </div>
+              <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+              <!-- 2022.06.28 변경 -->
+              <aside
+                id="sideContent"
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                aria-labelledby="사이드컨텐츠"
+              >
+                <div class="offcanvas-header">
+                  <div class="offcanvas-title">
                     <div class="logo">
-                        <h3 class="visually-hidden">로고</h3> 
-                        <a href="javascript:;" class="float-start h-logo h-show">
-                            <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid">
-                        </a>
+                      <img src="./img/thinklogo.png" alt="logo" width="102" />
                     </div>
-                    <!-- logo -->
-                    <div class="pageBack">
-                        <button type="button" onclick="history.back()">이전페이지</button>
+                    <div class="app">
+                      <button>
+                        <img src="./img/bulogo.png" alt="tp" width="18" />
+                        앱다운로드
+                      </button>
                     </div>
-                    <!-- //이전페이지 -->
-                
-                    <div class="headerTitle centerHeader text-truncate">
-                        <strong>[이슈]<span class="dn">수소</span></strong>
-                    </div>
-                    <!-- //종목명 -->
-
-                    <div class="subSchBtn subSch">
-                        <button type="button" class="schButton">종목검색</button>
-                    </div>
-                
-                
-                    <div id="sideMenu">
-                        <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn02">
-                            <form name="sidemenu">
-                                <input type="checkbox" id="sdmnu" name="tgle" disabled>
-                                <label class="menu" for="sdmnu">
-                                    <div class="bar"></div>
-                                    <div class="bar"></div>
-                                    <div class="bar"></div>
-                                </label>
-                            </form>
-                        </div>
-                        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
-
-
-                        <!-- 2022.06.28 변경 -->
-                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
-                            <div class="offcanvas-header">
-                                <div class="offcanvas-title">
-                                    <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
-                                    <div class="app">
-                                        <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offcanvas-body">
-                                <div class="loginmenu">
-                                    <div class="before">
-                                        <button class="btn-custom-primary" style="width:120px">로그인</button>
-                                        <button class="btn-custom-default" style="width:120px">회원가입</button>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="after">
-                                        <div class="top">
-                                            <strong><em>에너지만땅</em>님</strong>
-                                            <button>로그아웃</button>
-                                        </div>
-                                        <div class="menu">
-                                            <button>MY종목</button>
-                                            <button>알림설정</button>
-                                            <button>나의활동</button>
-                                            <button>쪽지함 <span class="badge">4</span></button>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
-                                <!-- // -->
-
-                                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush01">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
-                                                AI분석
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">AI분석홈</a></li>
-                                                <li><a href="#">시세분석</a></li>
-                                                <li><a href="#">이슈분석</a></li>
-                                                <li><a href="#">수급분석</a></li>
-                                                <li><a href="#">테마분석</a></li>
-                                                <li><a href="#">공시분석</a></li>
-                                                <li><a href="#">리포트분석</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush02">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
-                                                AI추천
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">AI종목추천홈</a></li>
-                                                <li><a href="#">오늘의종목</a></li>
-                                                <li><a href="#">종목추천</a></li>
-                                                <li><a href="#">포트폴리오</a></li>
-                                                <li><a href="#">나의서비스</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush03">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
-                                            라씨신호
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">라씨매매신호홈</a></li>
-                                                <li><a href="#">서비스소개</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                                <li><a href="#">나의신호</a></li>
-                                                <li><a href="#">(앱다운로드)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush04">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
-                                            AI속보
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">주요속보</a></li>
-                                                <li><a href="#">수급</a></li>
-                                                <li><a href="#">테마</a></li>
-                                                <li><a href="#">리포트</a></li>
-                                                <li><a href="#">실적</a></li>
-                                                <li><a href="#">공시</a></li>
-                                                <li><a href="#">태그전체보기</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush05">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
-                                            토론실
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">토론실홈</a></li>
-                                                <li><a href="#">증권가속보</a></li>
-                                                <li><a href="#">특징주포착</a></li>
-                                                <li><a href="#">주식종합토론</a></li>
-                                                <li><a href="#">유머방</a></li>
-                                                <li><a href="#">정치방</a></li>
-                                                <li><a href="#">나의활동</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush06">
-                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
-                                            더보기
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">공지사항 및 문의</a></li>
-                                                <li><a href="#">회원정보관리</a></li>
-                                                <li><a href="#">약관및정책</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
-                                <!-- // -->
-
-                                <div class="sfmenu">
-                                    <button class="btn-custom-primary outline">블로그</button>
-                                    <button class="btn-custom-primary outline">텔레그램</button>
-                                    <button class="btn-custom-primary outline">유투브</button>
-                                </div>
-                                <!-- // -->
-
-                                <div class="other rmt-25 text-center">
-                                    <button class="btn-custom-default">PC버전으로 보기</button>
-                                </div>
-                            </div>
-                        </aside>
-
-                        <script>
-                            const cate = document.querySelector('.sideMenuBtn');
-                            const cateId = '#' + cate.getAttribute('data-cate-id');
-                            const offId = document.querySelector('#sideContent');
-
-                            cate.addEventListener('click', function(){
-                                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
-                            });
-
-                            offId.addEventListener('hide.bs.offcanvas', function(){
-                                const showCate = document.querySelector('.collapse.show');
-
-                                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
-                            });
-
-                        </script>
-                        <!-- //2022.06.28 변경 -->
-                        
-                    </div>
-                    <!-- //sideMenu -->
-
-                    <script>
-                        document.getElementById('hd_sch').addEventListener('click', function(){
-                            document.querySelector('.searcharea').classList.add('sch-show');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', '');
-                            document.querySelector('.h-logo').classList.remove('h-show');
-                            document.querySelector('.h-logo').classList.add('h-hide');
-                            document.querySelector('.pageBack').classList.remove('h-hide');
-                            document.querySelector('.pageBack').classList.add('h-show');
-                            document.forms.sidemenu.tgle.checked = 'checked';
-                        });
-
-                        document.querySelector('.sch-hide').addEventListener('click', function(){
-                            document.querySelector('.searcharea').classList.remove('sch-show');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
-                            document.querySelector('.pageBack').classList.remove('h-show');
-                            document.querySelector('.pageBack').classList.add('h-hide');
-                            document.querySelector('.h-logo').classList.remove('h-hide');
-                            document.querySelector('.h-logo').classList.add('h-show');
-                            document.forms.sidemenu.tgle.checked = '';
-                        });
-
-                        document.querySelector('.sch-hide2').addEventListener('click', function(){
-                            document.querySelector('.searcharea').classList.remove('sch-show');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
-                            document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
-                            document.querySelector('.pageBack').classList.remove('h-show');
-                            document.querySelector('.pageBack').classList.add('h-hide');
-                            document.querySelector('.h-logo').classList.remove('h-hide');
-                            document.querySelector('.h-logo').classList.add('h-show');
-                            document.forms.sidemenu.tgle.checked = '';
-                        });
-                    </script>
+                  </div>
                 </div>
-                <!-- //top -->
-            </header>
-            <!-- // -->
-
-            <main id="container" class="clearfix">
-                <h2 class="visually-hidden">본문영역</h2>
-
-                <section class="section section-npd">
-                    <div class="title fs18">
-                        <strong>검색빈도 및 종목 누적 등락률</strong>
+                <div class="offcanvas-body">
+                  <div class="loginmenu">
+                    <div class="before">
+                      <button class="btn-custom-primary" style="width: 120px">
+                        로그인
+                      </button>
+                      <button class="btn-custom-default" style="width: 120px">
+                        회원가입
+                      </button>
                     </div>
                     <!-- // -->
 
-                    <div class="issue-summary">
-                        <!-- <div class="date">2021/11/11</div>
+                    <div class="after">
+                      <div class="top">
+                        <strong><em>에너지만땅</em>님</strong>
+                        <button>로그아웃</button>
+                      </div>
+                      <div class="menu">
+                        <button>MY종목</button>
+                        <button>알림설정</button>
+                        <button>나의활동</button>
+                        <button>쪽지함 <span class="badge">4</span></button>
+                      </div>
+                    </div>
+                    <!-- // -->
+                  </div>
+                  <!-- // -->
+
+                  <div
+                    class="allmenulist accordion accordion-flush"
+                    id="accoridon-flush-menu"
+                  >
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush01">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn01"
+                          aria-expanded="false"
+                          aria-controls="amn01"
+                        >
+                          AI분석
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn01"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI분석홈</a></li>
+                          <li><a href="#">시세분석</a></li>
+                          <li><a href="#">이슈분석</a></li>
+                          <li><a href="#">수급분석</a></li>
+                          <li><a href="#">테마분석</a></li>
+                          <li><a href="#">공시분석</a></li>
+                          <li><a href="#">리포트분석</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush02">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn02"
+                          aria-expanded="false"
+                          aria-controls="amn02"
+                        >
+                          AI추천
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn02"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI종목추천홈</a></li>
+                          <li><a href="#">오늘의종목</a></li>
+                          <li><a href="#">종목추천</a></li>
+                          <li><a href="#">포트폴리오</a></li>
+                          <li><a href="#">나의서비스</a></li>
+                          <li><a href="#">이용안내</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush03">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn03"
+                          aria-expanded="false"
+                          aria-controls="amn03"
+                        >
+                          라씨신호
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn03"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">라씨매매신호홈</a></li>
+                          <li><a href="#">서비스소개</a></li>
+                          <li><a href="#">이용안내</a></li>
+                          <li><a href="#">나의신호</a></li>
+                          <li><a href="#">(앱다운로드)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush04">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn04"
+                          aria-expanded="false"
+                          aria-controls="amn04"
+                        >
+                          AI속보
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn04"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">주요속보</a></li>
+                          <li><a href="#">수급</a></li>
+                          <li><a href="#">테마</a></li>
+                          <li><a href="#">리포트</a></li>
+                          <li><a href="#">실적</a></li>
+                          <li><a href="#">공시</a></li>
+                          <li><a href="#">태그전체보기</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush05">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn05"
+                          aria-expanded="false"
+                          aria-controls="amn05"
+                        >
+                          토론실
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn05"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">토론실홈</a></li>
+                          <li><a href="#">증권가속보</a></li>
+                          <li><a href="#">특징주포착</a></li>
+                          <li><a href="#">주식종합토론</a></li>
+                          <li><a href="#">유머방</a></li>
+                          <li><a href="#">정치방</a></li>
+                          <li><a href="#">나의활동</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush06">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn06"
+                          aria-expanded="false"
+                          aria-controls="amn06"
+                        >
+                          더보기
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn06"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">공지사항 및 문의</a></li>
+                          <li><a href="#">회원정보관리</a></li>
+                          <li><a href="#">약관및정책</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+                  </div>
+                  <!-- // -->
+
+                  <div class="sfmenu">
+                    <button class="btn-custom-primary outline">블로그</button>
+                    <button class="btn-custom-primary outline">텔레그램</button>
+                    <button class="btn-custom-primary outline">유투브</button>
+                  </div>
+                  <!-- // -->
+
+                  <div class="other rmt-25 text-center">
+                    <button class="btn-custom-default">PC버전으로 보기</button>
+                  </div>
+                </div>
+              </aside>
+
+              <script>
+                const cate = document.querySelector(".sideMenuBtn");
+                const cateId = "#" + cate.getAttribute("data-cate-id");
+                const offId = document.querySelector("#sideContent");
+
+                cate.addEventListener("click", function () {
+                  const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                });
+
+                offId.addEventListener("hide.bs.offcanvas", function () {
+                  const showCate = document.querySelector(".collapse.show");
+
+                  const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                });
+              </script>
+              <!-- //2022.06.28 변경 -->
+            </div>
+            <!-- //sideMenu -->
+
+            <script>
+              document
+                .getElementById("hd_sch")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.add("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "");
+                  document.querySelector(".h-logo").classList.remove("h-show");
+                  document.querySelector(".h-logo").classList.add("h-hide");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-hide");
+                  document.querySelector(".pageBack").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "checked";
+                });
+
+              document
+                .querySelector(".sch-hide")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.remove("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "#sideContent");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "offcanvas");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-show");
+                  document.querySelector(".pageBack").classList.add("h-hide");
+                  document.querySelector(".h-logo").classList.remove("h-hide");
+                  document.querySelector(".h-logo").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "";
+                });
+
+              document
+                .querySelector(".sch-hide2")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.remove("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "#sideContent");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "offcanvas");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-show");
+                  document.querySelector(".pageBack").classList.add("h-hide");
+                  document.querySelector(".h-logo").classList.remove("h-hide");
+                  document.querySelector(".h-logo").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "";
+                });
+            </script>
+          </div>
+          <!-- //top -->
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <h2 class="visually-hidden">본문영역</h2>
+
+          <section class="section section-npd">
+            <div class="title fs18">
+              <strong>검색빈도 및 종목 누적 등락률</strong>
+            </div>
+            <!-- // -->
+
+            <div class="issue-summary">
+              <div class="date">2021/11/11</div>
+              <!--
                         <div class="obj">
                             메타버스 최종 수혜주 반도체의 시간이 왔다.
                         </div> -->
-                        <div class="cont">
-                            코로나19로 역대급 매출을 올린 게임사들이 시너지
-                            를 낼 수 있는 NFT(대체불가토큰) 사업으로 눈을 
-                            리고 있다. 8일 업계에 따르면 최근 ‘미르4’ 글로벌 
-                            버전 흥행에 성공한 위메이드는 블록체인 서비스
-                            를 전담했던 위메이드트리의 흡수합병을 위메이
-                            드트리의 결정하고..   <a href="#">[→ 자세히보기]</a>
+              <div class="cont">
+                코로나19로 역대급 매출을 올린 게임사들이 시너지 를 낼 수 있는
+                NFT(대체불가토큰) 사업으로 눈을 리고 있다. 8일 업계에 따르면
+                최근 ‘미르4’ 글로벌 버전 흥행에 성공한 위메이드는 블록체인
+                서비스 를 전담했던 위메이드트리의 흡수합병을 위메이 드트리의
+                결정하고.. <a href="#">[→ 자세히보기]</a>
+              </div>
+            </div>
+            <!-- // -->
+
+            <div class="issue-chart rmt-25">
+              <!-- <div class="title fs18 rpl-0">
+                <strong>
+                  <span>수소</span>
+                  <strong>검색빈도 및 종목 누적 등락률</strong>
+                </strong>
+              </div> -->
+              <!-- // -->
+
+              <div class="chartTab">
+                <button class="active">이슈 검색 추이</button>
+                <button>이슈 수급 동향</button>
+              </div>
+
+              <div class="chartTabContent">
+                <div class="chartContent">
+                  <div class="rmt-20">
+                    <img src="./img/issue-chart.png" alt="" class="img-fluid" />
+                  </div>
+                  <!-- // -->
+
+                  <div class="chart_ex rmt-20">
+                    <div class="cht01"><span>종목명</span></div>
+                    <div class="cht02"><span>종목명종</span></div>
+                    <div class="cht03"><span>종목명종목</span></div>
+                    <div class="cht04"><span>종목명종목명</span></div>
+                    <div class="cht05"><span>종목명종목명종</span></div>
+                    <div class="cht06"><span>종목명종목명종목</span></div>
+                  </div>
+                </div>
+                <!-- // 검색추이-->
+
+                 <div class="chartContent">
+                    <div class="rmt-20">
+                        <img src="./img/issue-chart.png" alt="" class="img-fluid" />
+                      </div>
+                      <!-- // -->
+    
+                      <div class="chart_ex2 rmt-20">
+                        <div class="cht01"><span>종목명</span></div>
+                        <div class="cht02"><span>종목명종</span></div>
+                        <div class="cht03"><span>종목명종목</span></div>
+                      </div>
+
+                      <div class="chart_guide_txt">
+                        <span><em>누적 순매매 : 최근 1개월 동안 이슈에 포함된 종목들의 누적 순매매 금액</em></span>
+                        <span><em>이슈 강도 추이: AI가 분석한 이슈 강도의 최근 1개월간 추이 해당 이슈의 신선도와 지속성을 한눈에 파악할 수 있음</em></span>
+                      </div>
+                 </div>
+                 <!-- // 수급동향 -->
+              </div>
+            </div>
+            <!-- // -->
+
+            <div class="issue-alarm rmt-25">
+              <div class="alarm ai">
+                <span
+                  >최근 3일이내 AI가 추천한 종목이
+                  <em class="dn">3개</em> 있습니다.</span
+                >
+              </div>
+              <!-- // -->
+
+              <div class="alarm rs">
+                <span
+                  >최근 3일이내 매수신호가 발생한 종목이
+                  <em class="dn">3개</em> 있습니다.</span
+                >
+              </div>
+              <!-- // -->
+            </div>
+            <!-- // -->
+
+            <div class="market rmt-5">
+              <div class="ch_tab ch_tab01">
+                <ul class="nav nav-round" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="mistab01"
+                      data-bs-toggle="pill"
+                      data-bs-target="#mistab01c"
+                      type="button"
+                      role="tab"
+                      aria-controls="종목개요"
+                      aria-selected="true"
+                    >
+                      종목개요
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="mistab02"
+                      data-bs-toggle="pill"
+                      data-bs-target="#mistab02c"
+                      type="button"
+                      role="tab"
+                      aria-controls="매매동향비교"
+                      aria-selected="false"
+                    >
+                      매매동향비교
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="mistab03"
+                      data-bs-toggle="pill"
+                      data-bs-target="#mistab03c"
+                      type="button"
+                      role="tab"
+                      aria-controls="차트비교"
+                      aria-selected="false"
+                    >
+                      차트비교
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <!-- // -->
+
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="mistab01c"
+                  role="tabpanel"
+                  aria-labelledby="종목개요"
+                >
+                  <div class="itemUpdate">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-repeat"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                      ></path>
+                    </svg>
+                    <span>12/31 12:30</span>
+                  </div>
+
+                  <div class="marketList">
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em
+                              >미코바이오메드미코바이오메드미코바이오메드</em
+                            ></span
+                          >
+                          <!-- //종목명 -->
                         </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="per up">
+                          <em>+27.0%</em>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
                     </div>
-                    <!-- // -->
-
-                    <div class="issue-chart rmt-25">
-                        <div class="title fs18 rpl-0">
-                            <strong>
-                                <span>수소</span>
-                                <strong>검색빈도 및 종목 누적 등락률</strong>
-                            </strong>
+                    <!-- //list -->
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em
+                              >미코바이오메드미코바이오메드미코바이오메드</em
+                            ></span
+                          >
+                          <!-- //종목명 -->
                         </div>
-                        <!-- // -->
+                        <!-- // left-top -->
 
-                        <div class="rmt-20">
-                            <img src="./img/issue-chart.png" alt="" class="img-fluid">
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
                         </div>
-                        <!-- // -->
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
 
-                        <div class="chart_ex rmt-20">
-                            <div class="cht01"><span>종목명</span></div>
-                            <div class="cht02"><span>종목명종</span></div>
-                            <div class="cht03"><span>종목명종목</span></div>
-                            <div class="cht04"><span>종목명종목명</span></div>
-                            <div class="cht05"><span>종목명종목명종</span></div>
-                            <div class="cht06"><span>종목명종목명종목</span></div>
+                      <div class="right">
+                        <div class="per up">
+                          <em>+27.0%</em>
                         </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
                     </div>
-                    <!-- // -->
-
-                    <div class="issue-alarm rmt-25">
-                        <div class="alarm ai">
-                            <span>최근 3일이내  AI가 추천한 종목이 <em class="dn">3개</em> 있습니다.</span>
+                    <!-- //list -->
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em
+                              >미코바이오메드미코바이오메드미코바이오메드</em
+                            ></span
+                          >
+                          <!-- //종목명 -->
                         </div>
-                        <!-- // -->
+                        <!-- // left-top -->
 
-                        <div class="alarm rs">
-                            <span>최근 3일이내  매수신호가 발생한 종목이 <em class="dn">3개</em> 있습니다.</span>
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
                         </div>
-                        <!-- // -->
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="per up">
+                          <em>+27.0%</em>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
                     </div>
-                    <!-- // -->
-
-                    <div class="market rmt-5">
-                        <div class="ch_tab ch_tab01">
-                            <ul class="nav nav-round" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="mistab01" data-bs-toggle="pill" data-bs-target="#mistab01c" type="button" role="tab" aria-controls="종목개요" aria-selected="true">종목개요</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="mistab02" data-bs-toggle="pill" data-bs-target="#mistab02c" type="button" role="tab" aria-controls="매매동향비교" aria-selected="false">매매동향비교</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="mistab03" data-bs-toggle="pill" data-bs-target="#mistab03c" type="button" role="tab" aria-controls="차트비교" aria-selected="false">차트비교</button>
-                                </li>
-                            </ul>
+                    <!-- //list -->
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em
+                              >미코바이오메드미코바이오메드미코바이오메드</em
+                            ></span
+                          >
+                          <!-- //종목명 -->
                         </div>
-                        <!-- // -->
+                        <!-- // left-top -->
 
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="mistab01c" role="tabpanel" aria-labelledby="종목개요">
-        
-                                <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
-                                    </svg>
-                                    <span>12/31 12:30</span>
-                                </div>
-
-                                <div class="marketList">
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="per up">
-                                                <em>+27.0%</em>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="per up">
-                                                <em>+27.0%</em>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="per up">
-                                                <em>+27.0%</em>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="per up">
-                                                <em>+27.0%</em>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드미코바이오메드미코바이오메드</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="per up">
-                                                <em>+27.0%</em>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    
-                                </div>
-                                <!-- //marketList -->
-
-                                <div class="mainColumnGuideBox tabInBtm">
-                                    <span class="d-block"><em>최근 5일 동안 기관, 외국인의 매수비중이 높은 종목입니다. </em></span>
-                                    <span class="d-block"><em>매수비중은 (5일간 순매수량)/(상장주식수) 입니다.</em></span>
-                                </div>
-                                <!-- //guide -->
-                            </div>
-                            <!-- // 매수비중 상위 -->
-
-                            <div class="tab-pane fade" id="mistab02c" role="tabpanel" aria-labelledby="매매동향비교">
-                                <div class="radionCheckingBox">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataIs11" value="기관" checked="">
-                                        <label class="form-check-label" for="dataIs11">기관</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="mwkradio" id="dataIs12" value="외국인">
-                                        <label class="form-check-label" for="dataIs12">외국인</label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-
-                                <div class="itemUpdate nbdtm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
-                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
-                                    </svg>
-                                    <span>12/31 12:30</span>
-                                </div>
-                                <!-- // -->
-
-
-                                <div class="issue-tbl-box">
-                                    <table class="table table-custom-bordered">
-                                        <colgroup>
-                                            <col width="*">
-                                            <col width="20%">
-                                            <col width="20%">
-                                            <col width="20%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" rowspan="2">종목명</th>
-                                                <th scope="col" colspan="3">외국인</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="col">순매수</th>
-                                                <th scope="col">5일누적</th>
-                                                <th scope="col">20일누적</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="text-truncate itemObj">롯데정밀화학</span></th>
-                                                <td class="text-end">
-                                                    <span class="dn">-40,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="up">123,000</span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span class="dn">-1,400</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- // -->
-                            </div>
-                            <!-- // -->
-
-                            <div class="tab-pane fade" id="mistab03c" role="tabpanel" aria-labelledby="차트비교">
-
-                                <div class="issue-tab-btn">
-                                    <ul class="nav nmg chart-tab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active " id="" type="button" role="tab" aria-controls="5분" aria-selected="true">5분</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link " id="" type="button" role="tab" aria-controls="일봉" aria-selected="false">일봉</button>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="issue-tab-chart">
-                                    <h4 class="title">종목명</h4>
-
-                                    <p><img src="./img/demoChart.png" alt="" class="img-fluid"></p>
-                                </div>
-                                <!-- // -->
-                                <div class="issue-tab-chart">
-                                    <h4 class="title">종목명</h4>
-
-                                    <p><img src="./img/demoChart.png" alt="" class="img-fluid"></p>
-                                </div>
-                                <!-- // -->
-                                <div class="issue-tab-chart">
-                                    <h4 class="title">종목명</h4>
-
-                                    <p><img src="./img/demoChart.png" alt="" class="img-fluid"></p>
-                                </div>
-                                <!-- // -->
-                            </div>
-                            <!-- // -->
-                            <div class="shorcutBtn d-grid gap-2 rmt-20">
-                                <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
-                            </div>
-                            <!-- // -->
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
                         </div>
-                        <!-- // -->
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
 
-                        <div class="cnn-item">
-                            <header>
-                                <h3 class="title">관련종목</h3>
-                                <div class="dropdown">
-                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="./img/bu_tit_rassi.png" alt="" width="18" class="float-start"><span class="float-start rpl-8">라씨 선호순 정렬</span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>등락률 상위순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <img src="./img/bu_tit_rassi.png" alt="" width="18" class="float-start"><span class="float-start rpl-3">라씨 선호순 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>기관 선호순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>외국인 선호순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>연기금 선호순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>사모펀드 선호순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-item">
-                                                <span>시총 선호순으로 정렬</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //dropdown -->
-                                <div class="guide">
-                                    <!-- <div>
+                      <div class="right">
+                        <div class="per up">
+                          <em>+27.0%</em>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em
+                              >미코바이오메드미코바이오메드미코바이오메드</em
+                            ></span
+                          >
+                          <!-- //종목명 -->
+                        </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="per up">
+                          <em>+27.0%</em>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+                  </div>
+                  <!-- //marketList -->
+
+                  <div class="mainColumnGuideBox tabInBtm">
+                    <span class="d-block"
+                      ><em
+                        >최근 5일 동안 기관, 외국인의 매수비중이 높은
+                        종목입니다.
+                      </em></span
+                    >
+                    <span class="d-block"
+                      ><em
+                        >매수비중은 (5일간 순매수량)/(상장주식수) 입니다.</em
+                      ></span
+                    >
+                  </div>
+                  <!-- //guide -->
+                </div>
+                <!-- // 매수비중 상위 -->
+
+                <div
+                  class="tab-pane fade"
+                  id="mistab02c"
+                  role="tabpanel"
+                  aria-labelledby="매매동향비교"
+                >
+                  <div class="radionCheckingBox">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="mwkradio"
+                        id="dataIs11"
+                        value="기관"
+                        checked=""
+                      />
+                      <label class="form-check-label" for="dataIs11"
+                        >기관</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="mwkradio"
+                        id="dataIs12"
+                        value="외국인"
+                      />
+                      <label class="form-check-label" for="dataIs12"
+                        >외국인</label
+                      >
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="itemUpdate nbdtm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-repeat"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                      ></path>
+                    </svg>
+                    <span>12/31 12:30</span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="issue-tbl-box">
+                    <table class="table table-custom-bordered">
+                      <colgroup>
+                        <col width="*" />
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="20%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" rowspan="2">종목명</th>
+                          <th scope="col" colspan="3">외국인</th>
+                        </tr>
+                        <tr>
+                          <th scope="col">순매수</th>
+                          <th scope="col">5일누적</th>
+                          <th scope="col">20일누적</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <span class="text-truncate itemObj"
+                              >롯데정밀화학</span
+                            >
+                          </th>
+                          <td class="text-end">
+                            <span class="dn">-40,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="up">123,000</span>
+                          </td>
+                          <td class="text-end">
+                            <span class="dn">-1,400</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div
+                  class="tab-pane fade"
+                  id="mistab03c"
+                  role="tabpanel"
+                  aria-labelledby="차트비교"
+                >
+                  <div class="issue-tab-btn">
+                    <ul class="nav nmg chart-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id=""
+                          type="button"
+                          role="tab"
+                          aria-controls="5분"
+                          aria-selected="true"
+                        >
+                          5분
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id=""
+                          type="button"
+                          role="tab"
+                          aria-controls="일봉"
+                          aria-selected="false"
+                        >
+                          일봉
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="issue-tab-chart">
+                    <h4 class="title">종목명</h4>
+
+                    <p>
+                      <img src="./img/demoChart.png" alt="" class="img-fluid" />
+                    </p>
+                  </div>
+                  <!-- // -->
+                  <div class="issue-tab-chart">
+                    <h4 class="title">종목명</h4>
+
+                    <p>
+                      <img src="./img/demoChart.png" alt="" class="img-fluid" />
+                    </p>
+                  </div>
+                  <!-- // -->
+                  <div class="issue-tab-chart">
+                    <h4 class="title">종목명</h4>
+
+                    <p>
+                      <img src="./img/demoChart.png" alt="" class="img-fluid" />
+                    </p>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+                <div class="shorcutBtn d-grid gap-2 rmt-20">
+                  <button class="btn-outline-detail">
+                    더보기&nbsp;&nbsp;+
+                  </button>
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+
+              <div class="cnn-item">
+                <header>
+                  <h3 class="title">관련종목</h3>
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="./img/bu_tit_rassi.png"
+                        alt=""
+                        width="18"
+                        class="float-start"
+                      /><span class="float-start rpl-8">라씨 선호순 정렬</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="dropdown-item">
+                          <span>등락률 상위순으로 정렬</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <img
+                            src="./img/bu_tit_rassi.png"
+                            alt=""
+                            width="18"
+                            class="float-start"
+                          /><span class="float-start rpl-3"
+                            >라씨 선호순 정렬</span
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <span>기관 선호순으로 정렬</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <span>외국인 선호순으로 정렬</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <span>연기금 선호순으로 정렬</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <span>사모펀드 선호순으로 정렬</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-item">
+                          <span>시총 선호순으로 정렬</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //dropdown -->
+                  <div class="guide">
+                    <!-- <div>
                                         <span>당일 (개장전에는 전일) 등락률 상위 순서입니다.</span>
                                     </div> -->
-                                    <div>
-                                        <span>라씨매매신호 AI가 선호하는 순서입니다.</span>
-                                        <a href="#">라씨매매신호</a>
-                                    </div>
-                                    <!-- 
+                    <div>
+                      <span>라씨매매신호 AI가 선호하는 순서입니다.</span>
+                      <a href="#">라씨매매신호</a>
+                    </div>
+                    <!-- 
                                     <div>
                                         <span>최근 3일 동안 기관 누적 순매수 금액 높은 순서입니다.</span>
                                     </div>
@@ -810,318 +1186,447 @@
                                         <span>전일 시가총액이 큰 종목 순서입니다.</span>
                                     </div> 
                                     -->
-                                    
-                                </div>
-                                
-                            </header>
-                            <section>
-                                <div class="marketList">
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드</em><em class="rml-10 dn">-7.2%</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="like">
-                                                <button data-bs-toggle="modal" data-bs-target="#cnnItem" class="active">관심종목</button>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드</em><em class="rml-10 up">+27.2%</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="like">
-                                                <button data-bs-toggle="modal" data-bs-target="#cnnItem2" class="">관심종목</button>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드</em><em class="rml-10 dn">-7.2%</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="like">
-                                                <button data-bs-toggle="modal" data-bs-target="#cnnItem" class="active">관심종목</button>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드</em><em class="rml-10 up">+27.2%</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="like">
-                                                <button data-bs-toggle="modal" data-bs-target="#cnnItem2" class="">관심종목</button>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    <div class="list list-market">
-                                        <div class="left">
-                                            <div class="top text-truncate">
-                                                <span class="nameObj"><em>미코바이오메드</em><em class="rml-10 up">+27.2%</em></span>
-                                                <!-- //종목명 -->
-                                            </div>
-                                            <!-- // left-top -->
-
-                                            <div class="btm">
-                                                <div class="contxt text-truncate">
-                                                    <span>항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부항체진단키트 부스터샷 접종 판단 여부</span>
-                                                </div>
-                                                <!-- //내용 -->
-                                            </div>
-                                            <!-- //left-btm -->
-                                        </div>
-                                        <!-- //left -->
-
-                                        <div class="right">
-                                            <div class="like">
-                                                <button data-bs-toggle="modal" data-bs-target="#cnnItem" class="">관심종목</button>
-                                            </div>
-                                            <!-- //블릿 -->
-                                        </div>
-                                        <!-- //right -->
-
-                                    </div>
-                                    <!-- //list -->
-
-                                    <div class="toast like show" role="alert" aria-live="assertive" aria-atomic="true">
-                                        <div class="toast-body">
-                                            <strong class="me-auto">
-                                                <img src="./img/bu_start.png" alt="" width="14" style="margin-top:-5px;"> 별을 눌러서 <br>
-                                                관심종목에 추가할 수 있습니다.
-                                            </strong>
-                                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">&times;</button>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
-                                <!-- // -->
-
-                                <div class="modal fade custom-modal1" id="cnnItem" aria-label="true" aria-labelledby="">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="modal-basic-text text-center">
-                                                    관심종목에 추가되었습니다. <br><br>
-                                                    <em class="dn">에스에너지</em>의 <br>
-                                                    정확한 매도타이밍을 알려주는 <br>
-                                                    <img src="./img/bu_tit_rassi.png" alt="" width="18" style="margin-top:-4px;"> 라씨매매신호를 아시나요?
-                                                </div>
-                                                <!-- // -->
-                                            </div>
-                                            <div class="modal-footer text-center cm-footer">
-                                                <button class="btn-custom-primary">자세히 알아보기</button>
-                                                <button class="btn-custom-grey" data-bs-target="#" data-bs-toggle="modal">다음에 알아보기</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-                                <div class="modal fade custom-modal1" id="cnnItem2" aria-label="true" aria-labelledby="">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="modal-basic-text text-center">
-                                                    관심종목은 최대 10개까지 <br>
-                                                    등록할 수 있습니다. <br><br>
-                                                    관심종목은 MY종목에서 변경할 수 <br>
-                                                    있습니다.
-                                                </div>
-                                                <!-- // -->
-                                            </div>
-                                            <div class="modal-footer text-center cm-footer">
-                                                <button class="btn-custom-primary" data-bs-target="#" data-bs-toggle="modal">MY종목 바로가기</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- // -->
-
-
-                                <div class="shorcutBtn d-grid gap-2 rmt-20">
-                                    <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
-                                </div>
-                                <!-- // -->
-                            </section>
+                  </div>
+                </header>
+                <section>
+                  <div class="marketList">
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em>미코바이오메드</em
+                            ><em class="rml-10 dn">-7.2%</em></span
+                          >
+                          <!-- //종목명 -->
                         </div>
-                        <!-- //연관종목 -->
+                        <!-- // left-top -->
 
-                        <div class="section-inline-ad rmt-25">
-                            <img src="./img/demoBnr.png" alt="" class="img-fluid">
-                            <!-- // 인라인광고 -->
-
-                            
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
                         </div>
-                        <!-- // -->
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
 
-                        <h3 class="title rmt-25">이슈 관련 히스토리</h3>
-
-                        <div class="issue-summary">
-                            <div class="date">2021/11/11</div>
-                            <div class="obj">
-                                메타버스 최종 수혜주 반도체의 시간이 왔다.
-                            </div>
-                            <div class="cont">
-                                코로나19로 역대급 매출을 올린 게임사들이 시너지
-                                를 낼 수 있는 NFT(대체불가토큰) 사업으로 눈을 
-                                리고 있다. 8일 업계에 따르면 최근 ‘미르4’ 글로벌 
-                                버전 흥행에 성공한 위메이드는 블록체인 서비스
-                                를 전담했던 위메이드트리의 흡수합병을 위메이
-                                드트리의 결정하고..   <a href="#">[→ 자세히보기]</a>
-                            </div>
+                      <div class="right">
+                        <div class="like">
+                          <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#cnnItem"
+                            class="active"
+                          >
+                            관심종목
+                          </button>
                         </div>
-                        <!-- // -->
-
-                        <div class="issue-summary">
-                            <div class="date">2021/11/11</div>
-                            <div class="obj">
-                                메타버스 최종 수혜주 반도체의 시간이 왔다.
-                            </div>
-                            <div class="cont">
-                                코로나19로 역대급 매출을 올린 게임사들이 시너지
-                                를 낼 수 있는 NFT(대체불가토큰) 사업으로 눈을 
-                                리고 있다. 8일 업계에 따르면 최근 ‘미르4’ 글로벌 
-                                버전 흥행에 성공한 위메이드는 블록체인 서비스
-                                를 전담했던 위메이드트리의 흡수합병을 위메이
-                                드트리의 결정하고..   <a href="#">[→ 자세히보기]</a>
-                            </div>
-                        </div>
-                        <!-- // -->
-
-                        <div class="shorcutBtn d-grid gap-2 rmt-20">
-                            <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
-                        </div>
-                        <!-- // -->
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
                     </div>
+                    <!-- //list -->
 
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em>미코바이오메드</em
+                            ><em class="rml-10 up">+27.2%</em></span
+                          >
+                          <!-- //종목명 -->
+                        </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="like">
+                          <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#cnnItem2"
+                            class=""
+                          >
+                            관심종목
+                          </button>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em>미코바이오메드</em
+                            ><em class="rml-10 dn">-7.2%</em></span
+                          >
+                          <!-- //종목명 -->
+                        </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="like">
+                          <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#cnnItem"
+                            class="active"
+                          >
+                            관심종목
+                          </button>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em>미코바이오메드</em
+                            ><em class="rml-10 up">+27.2%</em></span
+                          >
+                          <!-- //종목명 -->
+                        </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="like">
+                          <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#cnnItem2"
+                            class=""
+                          >
+                            관심종목
+                          </button>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+
+                    <div class="list list-market">
+                      <div class="left">
+                        <div class="top text-truncate">
+                          <span class="nameObj"
+                            ><em>미코바이오메드</em
+                            ><em class="rml-10 up">+27.2%</em></span
+                          >
+                          <!-- //종목명 -->
+                        </div>
+                        <!-- // left-top -->
+
+                        <div class="btm">
+                          <div class="contxt text-truncate">
+                            <span
+                              >항체진단키트 부스터샷 접종 판단 여부항체진단키트
+                              부스터샷 접종 판단 여부항체진단키트 부스터샷 접종
+                              판단 여부</span
+                            >
+                          </div>
+                          <!-- //내용 -->
+                        </div>
+                        <!-- //left-btm -->
+                      </div>
+                      <!-- //left -->
+
+                      <div class="right">
+                        <div class="like">
+                          <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#cnnItem"
+                            class=""
+                          >
+                            관심종목
+                          </button>
+                        </div>
+                        <!-- //블릿 -->
+                      </div>
+                      <!-- //right -->
+                    </div>
+                    <!-- //list -->
+
+                    <div
+                      class="toast like show"
+                      role="alert"
+                      aria-live="assertive"
+                      aria-atomic="true"
+                    >
+                      <div class="toast-body">
+                        <strong class="me-auto">
+                          <img
+                            src="./img/bu_start.png"
+                            alt=""
+                            width="14"
+                            style="margin-top: -5px"
+                          />
+                          별을 눌러서 <br />
+                          관심종목에 추가할 수 있습니다.
+                        </strong>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="toast"
+                          aria-label="Close"
+                        >
+                          &times;
+                        </button>
+                      </div>
+                    </div>
+                    <!-- // -->
+                  </div>
+                  <!-- // -->
+
+                  <div
+                    class="modal fade custom-modal1"
+                    id="cnnItem"
+                    aria-label="true"
+                    aria-labelledby=""
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-basic-text text-center">
+                            관심종목에 추가되었습니다. <br /><br />
+                            <em class="dn">에스에너지</em>의 <br />
+                            정확한 매도타이밍을 알려주는 <br />
+                            <img
+                              src="./img/bu_tit_rassi.png"
+                              alt=""
+                              width="18"
+                              style="margin-top: -4px"
+                            />
+                            라씨매매신호를 아시나요?
+                          </div>
+                          <!-- // -->
+                        </div>
+                        <div class="modal-footer text-center cm-footer">
+                          <button class="btn-custom-primary">
+                            자세히 알아보기
+                          </button>
+                          <button
+                            class="btn-custom-grey"
+                            data-bs-target="#"
+                            data-bs-toggle="modal"
+                          >
+                            다음에 알아보기
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div
+                    class="modal fade custom-modal1"
+                    id="cnnItem2"
+                    aria-label="true"
+                    aria-labelledby=""
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-basic-text text-center">
+                            관심종목은 최대 10개까지 <br />
+                            등록할 수 있습니다. <br /><br />
+                            관심종목은 MY종목에서 변경할 수 <br />
+                            있습니다.
+                          </div>
+                          <!-- // -->
+                        </div>
+                        <div class="modal-footer text-center cm-footer">
+                          <button
+                            class="btn-custom-primary"
+                            data-bs-target="#"
+                            data-bs-toggle="modal"
+                          >
+                            MY종목 바로가기
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="shorcutBtn d-grid gap-2 rmt-20">
+                    <button class="btn-outline-detail">
+                      더보기&nbsp;&nbsp;+
+                    </button>
+                  </div>
+                  <!-- // -->
                 </section>
+              </div>
+              <!-- //연관종목 -->
 
-            </main>
+              <div class="section-inline-ad rmt-25">
+                <img src="./img/demoBnr.png" alt="" class="img-fluid" />
+                <!-- // 인라인광고 -->
+              </div>
+              <!-- // -->
 
-            <footer id="footer" class="clearfix">
-                <menu id="fmenu">
-                    <figure class="figure">
-                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
-                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
-                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
-                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
-                    </figure>
-                </menu>
+              <h3 class="title rmt-25">이슈 관련 히스토리</h3>
 
-                <menu id="fmenu2">
-                    <a href="#">고객센터</a>
-                    <a href="#">이용약관</a>
-                    <a href="#">개인정보처리방침</a>
-                </menu>
-
-                <div class="copyright">
-                    <span class="d-block">@Thinkpool</span>
-                    <span class="d-block">
-                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
-                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
-                    </span>
+              <div class="issue-summary">
+                <div class="date">2021/11/11</div>
+                <div class="obj">
+                  메타버스 최종 수혜주 반도체의 시간이 왔다.
                 </div>
-            </footer>
-            
-        </div>
-        <!-- /wrap -->
-        <!-- bootstrap js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <!-- //bootstrap js -->
+                <div class="cont">
+                  코로나19로 역대급 매출을 올린 게임사들이 시너지 를 낼 수 있는
+                  NFT(대체불가토큰) 사업으로 눈을 리고 있다. 8일 업계에 따르면
+                  최근 ‘미르4’ 글로벌 버전 흥행에 성공한 위메이드는 블록체인
+                  서비스 를 전담했던 위메이드트리의 흡수합병을 위메이 드트리의
+                  결정하고.. <a href="#">[→ 자세히보기]</a>
+                </div>
+              </div>
+              <!-- // -->
+
+              <div class="issue-summary">
+                <div class="date">2021/11/11</div>
+                <div class="obj">
+                  메타버스 최종 수혜주 반도체의 시간이 왔다.
+                </div>
+                <div class="cont">
+                  코로나19로 역대급 매출을 올린 게임사들이 시너지 를 낼 수 있는
+                  NFT(대체불가토큰) 사업으로 눈을 리고 있다. 8일 업계에 따르면
+                  최근 ‘미르4’ 글로벌 버전 흥행에 성공한 위메이드는 블록체인
+                  서비스 를 전담했던 위메이드트리의 흡수합병을 위메이 드트리의
+                  결정하고.. <a href="#">[→ 자세히보기]</a>
+                </div>
+              </div>
+              <!-- // -->
+
+              <div class="shorcutBtn d-grid gap-2 rmt-20">
+                <button class="btn-outline-detail">더보기&nbsp;&nbsp;+</button>
+              </div>
+              <!-- // -->
+            </div>
+          </section>
+        </main>
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img
+                src="./img/flogin.png"
+                class="figure-img img-fluid"
+                alt="로그인"
+              />
+              <figcaption class="figure-caption text-center rmt-7">
+                로그인
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <img
+                src="./img/fpc.png"
+                class="figure-img img-fluid"
+                alt="PC버전"
+              />
+              <figcaption class="figure-caption text-center rmt-7">
+                PC버전
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <img
+                src="./img/fdw.png"
+                class="figure-img img-fluid"
+                alt="씽크풀앱 다운로드"
+              />
+              <figcaption class="figure-caption text-center">
+                씽크풀앱<br />다운로드
+              </figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+            <span class="d-block">
+              본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+      <!-- bootstrap js -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+      <!-- //bootstrap js -->
     </div>
     <!-- //app -->
-
-    
-    
   </body>
 </html>

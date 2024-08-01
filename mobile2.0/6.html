@@ -805,24 +805,40 @@
                         <nav>
                             <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
                                 <button class="nav-link active">AI이슈포착</button>
-                                <button class="nav-link" onclick="loaction.href='기관관심이슈.html'">기관이슈</button>
-                                <button class="nav-link" onclick="loaction.href='기관관심이슈.html'">외국인이슈</button>
+                                <button class="nav-link">
+                                    이슈수급강도 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none" data-bs-target="#issue_supply" data-bs-toggle="modal">
+                                    <path d="M8.12207 7.56135C8.2644 7.12277 8.52513 6.73247 8.87565 6.4329C9.22618 6.13334 9.65316 5.93648 10.1086 5.86423C10.564 5.79198 11.0302 5.847 11.4562 6.02336C11.8823 6.19971 12.2512 6.49062 12.5223 6.86361C12.7934 7.23659 12.9557 7.67713 12.992 8.1368C13.0282 8.59647 12.9365 9.05732 12.7272 9.46818C12.5179 9.87904 12.1995 10.2237 11.8063 10.4647C11.4132 10.7056 10.9611 10.8331 10.5 10.8331V11.6669M10.5 17.5C6.35786 17.5 3 14.1421 3 10C3 5.85786 6.35786 2.5 10.5 2.5C14.6421 2.5 18 5.85786 18 10C18 14.1421 14.6421 17.5 10.5 17.5ZM10.5415 14.1667V14.25L10.4585 14.2502V14.1667H10.5415Z" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
                             </div>
                         </nav>
                         <!-- // -->
 
+                                
+                        <!-- 202408 추가 -->
+                        <div class="bubbleChart-tab">
+                            <div class="tabArea">
+                                <button class="active">기관</button>
+                                <button>외국인</button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="dayArea">
+                                <button class="active">3일</button>
+                                <button class="">5일</button>
+                                <button class="">10일</button>
+                            </div>
+                            <!-- // -->
+                         </div>
+                         <!-- 202408 추가 -->
+
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane show active">
-                                <!-- 차트박스 위 -->
-                                <div class="toast bbchart show" role="alert" aria-live="assertive" aria-atomic="true">
-                                    <div class="toast-body">
-                                        <strong class="me-auto">버블차트를 터치해서 관련 종목을 확인하세요.</strong>
-                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">&times;</button>
-                                    </div>
-                                </div>
-                                <!-- //차트박스 위 -->
 
-                                <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+                                 <div class="chartArea">
+                                    <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+                                </div>
 
                                 <!-- 차트박스 아래 -->
                                 <div class="refresh">
@@ -834,6 +850,13 @@
                                 </div>
                                 <!-- //차트박스 아래 -->
                             </div>
+                            <!-- 이슈포착 차트 -->
+
+                            <div class="tab-pane">
+                                <!-- 수급강도 차트영역  -->
+                            </div>
+                            <!-- // -->
+
                         </div>
                         <!-- //tab-content -->
                     </div>
@@ -844,37 +867,108 @@
                     <!-- //바로가기 -->
                 </section>
                 <!-- // 이슈-->
+
+                <div class="modal fade" id="issue_supply" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="이슈수급강도" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!-- // -->
+
+                            <div class="modal-body">
+                                <div class="supplybox">
+                                    <strong>이슈수급강도란?</strong>
+
+                                    <div class="txt">
+                                        <span>
+                                            오늘 화제가 된 이슈들의 기관, 외국인 수급강도를 한눈에 파악할 수 있는 차트 입니다. 
+                                        </span>
+                                    </div>
+
+                                    <div class="list">
+                                        <span>
+                                            <em>수급 주체별로 최근 3일/5일/10일 기준 수급강도를  조회할 수 있습니다. </em>
+                                        </span>
+                                        <span>
+                                            <em>버블차트의 이슈명을 클릭하면 최근 1개월 이슈 수급 동향을 확인할 수 있습니다. </em>
+                                        </span>
+                                        <span>
+                                            <em>거래 시간 동안의 거래대금과 순매수 금액 합계는 집계 과정에서 완전하지 않을 수 있습니다.</em>
+                                        </span>
+                                        <span>
+                                            <em>이슈별 수급강도 계산식</em>
+                                        </span>
+                                    </div>
+
+                                    <div class="calc">
+                                        <img src="./img/supply_bg.png" alt="" class="img-fluid" width="242px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="modal fade custom-modal1" id="issueModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="이슈팝업" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
+                                <strong class="text-truncate">이슈명제목</strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- //header -->
 
                             <div class="modal-body">
-                                <h5 class="rmTitle text-truncate"><em class="dn">수소</em> 검색빈도 및 종목 누적 등락률</h5>
-                                <div class="issue-obj text-truncate">문 대통령 '2050년 100% 청정수고 전환 정부 2050년 정부 청정수고</div>
+                                
+                                <div class="issue-obj text-truncate">
+                                    문 대통령 '2050년 100% 청정수고 전환 정부 2050년 정부 청정수고 문 대통령 '2050년 100% 청정수고 전환 정부 2050년 정부 청정수고
+                                </div>
                                 <div class="rmCont noBorder">
 
-                                    <div class="issue-chart rmt-25">
-                                        <img src="./img/pop_demo_chart.png" alt="" class="img-fluid">
-
-                                        <div class="chart_ex rmt-20">
-                                            <div class="cht01"><span>종목명</span></div>
-                                            <div class="cht02"><span>종목명종</span></div>
-                                            <div class="cht03"><span>종목명종목</span></div>
-                                            <div class="cht04"><span>종목명종목명</span></div>
-                                            <div class="cht05"><span>종목명종목명종</span></div>
-                                            <div class="cht06"><span>종목명종목명종목</span></div>
+                                    <div class="issue-chart">
+                                        <div class="modal-issue-tab">
+                                            <button class="active">이슈 검색 추이</button>
+                                            <button>이슈 수급 동향</button>
                                         </div>
+                                        <!-- // -->
+
+                                        <div class="modal-issue-tabContent">
+                                            <div class="cont" id="is01">
+                                                <img src="./img/pop_demo_chart.png" alt="" class="img-fluid" width="100%">
+
+                                                <div class="chart_ex rmt-20">
+                                                    <div class="cht01"><span>종목명</span></div>
+                                                    <div class="cht02"><span>종목명종</span></div>
+                                                    <div class="cht03"><span>종목명종목</span></div>
+                                                    <div class="cht04"><span>종목명종목명</span></div>
+                                                    <div class="cht05"><span>종목명종목명종</span></div>
+                                                    <div class="cht06"><span>종목명종목명종목</span></div>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+
+                                            <div class="cont" id="is02">
+                                                <img src="./img/pop_demo_chart2.png" alt="" class="img-fluid" width="100%">
+
+                                                <div class="chart_ex2 rmt-20">
+                                                    <div class="cht01"><span>기관</span></div>
+                                                    <div class="cht02"><span>외국인</span></div>
+                                                    <div class="cht03"><span>이슈 강도</span></div>
+                                                </div>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
                                     </div>
                                     <!-- //issue-chart -->
 
 
 
                                     <div class="issue-list rmt-25 position-relative">
-                                        <strong class="title">주요종목</strong>
+                                        <!-- <strong class="title">주요종목</strong> -->
 
                                         <div class="mainListTable rmt-10">
                                             <table class="table">
@@ -941,7 +1035,7 @@
                                         </div>
                                         <!-- //mainListTable -->
 
-                                        <button class="array">AI 선호순으로 정렬&nbsp;&nbsp;〉</button>
+                                        <!-- <button class="array">AI 선호순으로 정렬&nbsp;&nbsp;〉</button> -->
                                     </div>
                                     <!-- //issue-list -->
                                 </div>
