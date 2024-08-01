@@ -21,12 +21,12 @@
                 max-width: 250px;
 
                 @include mini {
-                    max-width: 150px;
+                    max-width: 132px;
                 }
             }
 
             @include mini {
-                max-width: 150px;
+                max-width: 132px;
             }
         }
 
@@ -75,17 +75,17 @@
 
                 // th
                 th {
-                    height: 44px;
-                    padding: 0;
-                    border-bottom: 1px solid #e2e2e2;
+                    height: 39px;
+                    padding: 0 !important;
+                    border-bottom: 1px solid #f4f4f4;
                     font-weight: 400;
                 }
 
                 // td
                 td {
-                    height: 44px;
-                    padding: 0;
-                    border-bottom: 1px solid #e2e2e2;
+                    height: 39px;
+                    padding: 0 !important;
+                    border-bottom: 1px solid #f4f4f4;
                     font-weight: 400;
 
                     &>.state {

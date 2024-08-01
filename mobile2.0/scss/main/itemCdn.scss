@@ -46,7 +46,7 @@
 
   .cdn-tabs {
     display: block;
-    width: 148px;
+    width: 130px;
     height: 30px;
     overflow: hidden;
     border-radius: 100px;
@@ -57,7 +57,7 @@
         width:50%;
         height:30px;
         border:0;
-        padding:0;
+        padding:0 5px;
         background:none;
         float:left;
         font-size:14px;
@@ -84,6 +84,7 @@
             border-radius: 100px;
             color:#fff;
             font-weight:700;
+            justify-content: flex-start;
 
             em{
                 display:block;
