@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-virtual">
+          <div class="virtual-header">
+            <div>
+              <span>
+                <img width="25" src="img/call-icon.png" alt="">
+              </span>
+              <strong>보이스 피싱 가상체험</strong>
+            </div>
+            <button class="end" data-bs-toggle="modal" data-bs-target="#endVirtual">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.6151 19.6151L11.769 11.769M11.769 11.769L3.92285 3.92285M11.769 11.769L19.6152 3.92285M11.769 11.769L3.92285 19.6152" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <!-- 타이틀 -->
+          <div class="virtual-phishing">
+            <div class="phone-header call">
+              <div class="flexcenter call">
+                <span><img width="30" src="img/call-icon02.png" alt=""></span>
+                <span>1577-000X  <em>통화중...</em></span>
+              </div>
+            </div>
+            <div class="phone-body call ai">
+              <div class="message left">
+                안녕하십니까 정부지원 특별 대환대출 안내상담원 박대출 대리입니다. <br />
+                김바른 고객님 바로 연락 주셨네요.  정부지원 특별 대환대출 안내 계속 진행해드리겠습니다. <br />
+                고객님께서는 안내를 어디까지 받으셨는지 확인해주시기 바랍니다. <br />
+                1번이 기본적인 정부지원 특별 대환대출 상품 기본안내까지 안내해드린 상황이고,<br />
+                2번이 대환대출 금리 안내해 드린 것이고,<br />
+                3번이 부분상환 관련해서 안내해드린 것이고,<br />
+                마지막 4번이 실제 상환하기 위해 우리은행으로 전화하셔서 상환하시는 부분 안내해드린 겁니다. <br />
+                원하시는 안내 번호를 아래  키패드에서 선택해주세요.
+              </div>
+            </div>
+            <!-- 채팅입력 -->
+            <div class="chatInput">
+              <div class="inputGroup">
+                <input type="text" placeholder="메시지내용 입력">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <rect y="0.5" width="24" height="24" rx="8" fill="#666973" />
+                    <path d="M12 3.5L7 8.5M12 3.5L17 8.5M12 3.5V21.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!-- 가상 선택 키패드 -->
+            <div class="numChoice none keyUp">
+              <button>0</button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+            </div>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const numChoice = document.querySelector('.numChoice');
+                const chatInput = document.querySelector('.chatInput');
+                const numChoiceBtns = document.querySelectorAll('.numChoice button');
+
+                chatInput.classList.add('keyDown');
+
+                chatInput.addEventListener('animationend', function () {
+                  numChoice.classList.remove('none');
+                });
+                numChoiceBtns.forEach(btn => {
+                  btn.addEventListener('click', function () {
+                    numChoice.classList.add('keyDown'); 
+
+                    numChoice.addEventListener('animationend', function () {
+                      chatInput.classList.remove('keyDown');
+                      chatInput.classList.add('keyUp');
+                    }, { once: true }); 
+                  });
+                });
+              }); 
+            </script>
+          </div>
+        </section>
+
+        <!-- 모의체험 종료 팝업 -->
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-bs-dismiss="modal" class="btn-close"></button>
+                <div class="title">모의체험 종료</div>
+                <div class="txt text-center">
+                  보이스피싱 AI챗봇 체험을 종료하시겠습니까?
+                </div>
+                <div class="btn-group rmt-25">
+                  <button>종료</button>
+                  <button data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 체험 종로 시간 초과 팝업 -->
+        <div class="modal fade openPopup" id="timeOutVirtual" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-bs-dismiss="modal" class="btn-close"></button>
+                <div class="title">모의체험 종료</div>
+                <div class="txt text-center">
+                  입력 시간이 초과되어 <br />
+                  시나리오 체험을 종료합니다. <br />
+                  한번 더 진행하여 완벽한 체험을 경험해 보세요.
+                </div>
+                <div class="btn-group rmt-25">
+                  <button>종료</button>
+                  <button data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 팝업창 열기 버튼 -->
+          <button style="opacity: 0;" id="openTimeOut" data-bs-toggle="modal" data-bs-target="#timeOutVirtual"></button>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              document.querySelector('#openTimeOut').click();
+          })
+        </script>
+
+      </main>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>

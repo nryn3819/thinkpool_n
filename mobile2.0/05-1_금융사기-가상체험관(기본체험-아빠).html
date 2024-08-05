@@ -75,6 +75,9 @@
               <div class="message right msg02 none">
                 다른 번호? 그 휴대폰은 어디서 났어?
               </div>
+              <div class="message right msg02_1 none">
+                무슨 부탁인데? 부탁할거 있으면 전화 걸어서 해.
+              </div>
               <div class="message left msg03 none">
                 수리점 사장님이 잠깐 빌려주신 폰인데 문자만 되고 전화는 안된대.. ㅜㅜ
               </div>
@@ -98,7 +101,7 @@
                 <em>A</em>
                 <span>다른 번호? 그 휴대폰은 어디서 났어?</span>
               </button>
-              <button class="reply failed" onclick="msgNext01()">
+              <button class="reply failed" onclick="msgNext01_1()">
                 <em>B</em>
                 <span>무슨 부탁인데? <br />부탁할거 있으면 전화 걸어서 해.</span>
               </button>
@@ -156,6 +159,7 @@
               const fadeInElement = document.querySelector('.fadeIn');
               const msg01Element = document.querySelector('.msg01');
               const msg02Element = document.querySelector('.msg02');
+              const msg02_1Element = document.querySelector('.msg02_1');
               const msg03Element = document.querySelector('.msg03');
               const msg04Element = document.querySelector('.msg04');
               const msg05Element = document.querySelector('.msg05');
@@ -184,6 +188,29 @@
                 msg02Element.classList.add('msgOn');
 
                 msg02Element.addEventListener('animationend', function() {
+                  msg03Element.classList.remove('none');
+                  msg03Element.classList.add('msgOn');
+                });
+
+                msg03Element.addEventListener('animationend', function() {
+                  msg04Element.classList.remove('none');
+                  msg04Element.classList.add('msgOn');
+                });
+
+                msg04Element.addEventListener('animationend', function() {
+                  reply02Element.classList.remove('none');
+                  reply02Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              function msgNext01_1() {
+                phoneBody.style.paddingBottom = '230px';
+                reply01Element.classList.add('fadeOut');
+                msg02_1Element.classList.remove('none');
+                msg02_1Element.classList.add('msgOn');
+
+                msg02_1Element.addEventListener('animationend', function() {
                   msg03Element.classList.remove('none');
                   msg03Element.classList.add('msgOn');
                 });

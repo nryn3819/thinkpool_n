@@ -62,6 +62,9 @@
               <div class="message right msg04 none">
                 어디 병원이신가요? 비용은 제가 가서 바로 지불하겠습니다.
               </div>
+              <div class="message right msg04_1 none">
+                네네.  어떤 의료기기인지 모르겠지만 계좌번호 알려주시면 보내드리겠습니다. 제발 살려만 주세요. ㅜㅜ
+              </div>
               <div class="message left msg05 none">
                 저희 병원에는 없는 장비와 의약품을 급히 준비해야 해서 수술비를 보내주시고 오세요. 늦어지면 생명이 위독해집니다.. 압구정동에 있는 세모네모 병원 본관 15층 수술실로 오시면 됩니다.
               </div>
@@ -79,7 +82,7 @@
                 <span><img width="38" src="img/endcall-icon.png" alt=""></span>
                 <span>통화종료</span>
               </button>
-              <button class="reply msg-next" onclick="msgNext01()">
+              <button class="reply msg-next" onclick="msgNext01_1()">
                 <em>A</em>
                 <span>네네.  어떤 의료기기인지 모르겠지만 계좌번호 알려주시면 보내드리겠습니다. 제발 살려만 주세요. ㅜㅜ</span>
               </button>
@@ -157,6 +160,7 @@
               const msg02Element = document.querySelector('.msg02');
               const msg03Element = document.querySelector('.msg03');
               const msg04Element = document.querySelector('.msg04');
+              const msg04_1Element = document.querySelector('.msg04_1');
               const msg05Element = document.querySelector('.msg05');
               const msg06Element = document.querySelector('.msg06');
               const msg07Element = document.querySelector('.msg07');
@@ -194,6 +198,24 @@
                 msg04Element.classList.add('msgOn');
 
                 msg04Element.addEventListener('animationend', function() {
+                  msg05Element.classList.remove('none');
+                  msg05Element.classList.add('msgOn');
+                });
+
+                msg05Element.addEventListener('animationend', function() {
+                  reply02Element.classList.remove('none');
+                  reply02Element.classList.add('msgOn');
+                  scrollToBottom();
+                });
+              }
+
+              function msgNext01_1() {
+                phoneBody.style.paddingBottom = '300px';
+                reply01Element.classList.add('fadeOut');
+                msg04_1Element.classList.remove('none');
+                msg04_1Element.classList.add('msgOn');
+
+                msg04_1Element.addEventListener('animationend', function() {
                   msg05Element.classList.remove('none');
                   msg05Element.classList.add('msgOn');
                 });
