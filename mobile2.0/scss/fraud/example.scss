@@ -82,18 +82,17 @@
     }
   }
 
-  .board-btn{
-    width: 100%;
-    padding: 20px 20px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
   .example-list{
     width: 100%;
     padding: 20px 20px 50px;
 
+    .board-btn{
+      width: 100%;
+      padding: 0px 0px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
     .list{
       width: 100%;
       text-align: left;
