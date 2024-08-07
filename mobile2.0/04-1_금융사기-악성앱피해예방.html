@@ -25,26 +25,16 @@
       <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
       <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
       <!-- header - header.scss -->
-      <header id="header" class="clearfix fraud-header">
+      <header id="header" class="clearfix fraud-header fraud-content_header">
         <h2 class="visually-hidden">상단영역</h2>
         <div id="top" class="float-start">
+          <button class="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 12L9 18M3 12L9 6M3 12H21" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
           <div class="header-title">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                <g clip-path="url(#clip0_46_802)">
-                  <path d="M12 1.5L3 5.5V11.5C3 17.05 6.84 22.24 12 23.5C17.16 22.24 21 17.05 21 11.5V5.5L12 1.5Z"
-                    fill="#323232" stroke="#FFDA55" stroke-width="2" />
-                  <path d="M8 12.5002L11.0002 15.5005L17 9.5" stroke="white" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_46_802">
-                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <span>디지털 금융 사기 방지</span>
+            <span>악성 앱 피해와 예방 한눈에 보기</span>
           </div>
           <!-- 헤더 타이틀 -->
           <div id="sideMenu">
@@ -52,9 +42,9 @@
             <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
               data-cate-id="amn02">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M3 17H21M3 12H21M3 7H21" stroke="white" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
+                <path d="M3 17H21M3 12H21M3 7H21" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+                </svg>
             </div>
             <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
 
@@ -188,39 +178,10 @@
               </div>
             </aside>
 
-            <script>
-              const cate = document.querySelector('.sideMenuBtn');
-              const cateId = '#' + cate.getAttribute('data-cate-id');
-              const offId = document.querySelector('#sideContent');
-
-              cate.addEventListener('click', function () {
-                const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
-              });
-
-              offId.addEventListener('hide.bs.offcanvas', function () {
-                const showCate = document.querySelector('.collapse.show');
-
-                const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
-              });
-
-            </script>
-            <!-- //2022.06.28 변경 -->
-
           </div>
           <!-- //sideMenu -->
         </div>
         <!-- //top -->
-
-        <menu id="mainMenu" class="globalNavigation float-start">
-          <h3 class="visually-hidden">네비게이션</h3>
-          <a href="#">사기유형</a>
-          <a href="#">사기사례</a>
-          <a class="active" href="#">대처방안</a>
-          <a href="#">가상체험관</a>
-          <a href="#">교육평가</a>
-          <a href="#">교육신청</a>
-        </menu>
-        <!-- //gloabal navi -->
       </header>
       <!-- // -->
 
