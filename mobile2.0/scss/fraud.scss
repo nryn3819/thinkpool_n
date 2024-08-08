@@ -128,7 +128,7 @@
       padding: 0px 60px;
       
       img{
-        max-width: 360px;
+        max-width: 300px;
       }
     }
 
@@ -137,7 +137,7 @@
     }
 
     .max-w-600{
-      max-width: 600px;
+      max-width: 445px;
     }
 
     .main-title_video{
@@ -147,6 +147,13 @@
       bottom: -150px;
       left: 50%;
       transform: translateX(-50%);
+
+      iframe{
+        width: 100%;
+        max-width: 445px;
+        min-height: 250px;
+        border-radius: 10px;
+      }
     }
   }
 

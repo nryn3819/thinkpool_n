@@ -210,4 +210,21 @@
     margin-bottom: 30px;
     border-top: 1px solid #cacaca;
   }
+  .content-video{
+    iframe{
+      width: 100%;
+      min-height: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width: 450px){
+  .fraud-example_content{
+    .content-video{
+      iframe{
+        min-height: 400px;
+      }
+    }
+  }
 }

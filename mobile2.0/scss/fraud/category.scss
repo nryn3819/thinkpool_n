@@ -70,6 +70,12 @@
   .category-video{
     width: 100%;
     margin-top: 40px;
+
+    iframe{
+      width: 100%;
+      min-height: 250px;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -240,6 +246,13 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 21px;
+      }
+      .modal-video{
+        iframe{
+          width: 100%;
+          min-height: 250px;
+          border-radius: 10px;
+        }
       }
     }
   }
