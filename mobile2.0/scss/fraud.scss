@@ -128,7 +128,7 @@
       padding: 0px 60px;
       
       img{
-        max-width: 300px;
+        max-width: 360px;
       }
     }
 
@@ -137,7 +137,7 @@
     }
 
     .max-w-600{
-      max-width: 445px;
+      max-width: 600px;
     }
 
     .main-title_video{
@@ -150,7 +150,7 @@
 
       iframe{
         width: 100%;
-        max-width: 445px;
+        max-width: 600px;
         min-height: 250px;
         border-radius: 10px;
       }
@@ -400,6 +400,31 @@
           border: none;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 450px){
+  .fraud-main{
+    .main-title{
+      .main-title_video{
+        width: 100%;
+        padding: 0px 20px;
+        position: absolute;
+        bottom: -220px;
+        left: 50%;
+        transform: translateX(-50%);
+  
+        iframe{
+          width: 100%;
+          max-width: 600px;
+          min-height: 400px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .main-advertisement{
+      padding-top: 250px;
     }
   }
 }
