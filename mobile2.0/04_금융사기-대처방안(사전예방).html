@@ -604,6 +604,17 @@
         </section>
       </main>
 
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const moveScroll = document.getElementById('moveScroll');
+
+          if(moveScroll) {
+            const top = moveScroll.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        })
+      </script>
+
       <footer id="footer" class="clearfix">
         <menu id="fmenu">
           <figure class="figure">
