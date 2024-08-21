@@ -207,14 +207,7 @@
         <h2 class="visually-hidden">본문영역</h2>
         <section class="section fraud-content">
           <div class="certificates">
-            <div class="certificates-img">
-              <img src="img/certificates-main.png" alt="교육수료증">
-              <div class="name">
-                <em>이름 : </em>
-                <span>홍길동</span>
-              </div>
-              <div class="date">2024년&nbsp;&nbsp;12월&nbsp;&nbsp;01일</div>
-            </div>
+            <canvas id="certificatesCanvas" width="320" height="450"></canvas>
           </div>
           <div class="download">
             <button>수료증 다운로드</button>
@@ -224,6 +217,30 @@
           </div>
         </section>
       </main>
+
+      <script>
+        const canvas = document.getElementById('certificatesCanvas');
+        const ctx = canvas.getContext('2d');
+      
+        const img = new Image();
+        img.src = 'img/certificates-main.png';
+        img.onload = function() {
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      
+          ctx.fillStyle = '#141414';
+          
+          ctx.font = '700 20px Noto Sans KR';
+          ctx.textAlign = 'right';
+          ctx.fillText('홍길동', canvas.width - 40, 150); 
+      
+          ctx.font = '400 18px Noto Sans KR';
+          ctx.fillText('이름 : ', canvas.width - 100, 149); 
+      
+          ctx.font = '500 15px Noto Sans KR';
+          ctx.textAlign = 'center';
+          ctx.fillText('2024년 12월 01일', 165, canvas.height - 140); 
+        };
+      </script>
 
       <footer id="footer" class="clearfix">
         <menu id="fmenu">
