@@ -53,11 +53,17 @@
               <div class="message left">
                 <p>“여보세요, OOO씨 되시죠?”</p>
               </div>
+              <div class="message right">
+                <p>네 맞습니다. 무슨 일이신가요?</p>
+              </div>
               <div class="message left">
                 <p>저는서울중앙검찰청 첨단범죄수사 1부1팀 이도현 수사관입니다. 본인 명의도용과 관련된 사건으로 확인차 연락을 드렸는데, 통화 괜찮으십니까?</p>
               </div>
               <div class="message left">
                 <p>지금 본인 앞으로 명의도용 사건이 접수가 됐어요. 작년 5월부터 8월까지 강남 선릉 쪽 오피스텔 총 7곳에서 “성매매 특별법 및 전자금융법 위반혐의로 주범 사기수를 포함한 일당을 검거됐는데. 본인께서는 사기수라는 사람을 알고 계십니까?”</p>
+              </div>
+              <div class="message right">
+                <p>모르는데요.</p>
               </div>
               <div class="message left">
                 <p>일단은 저희가 사건내용부터 마저 고지를 드리자면, 지금 김민수씨를 모른다고 하셨는데 지금 현금계좌와 공동인증서가 들어있는 USB를 압수했습니다. <br />
@@ -101,7 +107,7 @@
                         currentMessageIndex++;
                         setTimeout(showNextMessage, 2000); // 각 메시지 후 1초 대기
                       });
-                    } else {
+                    } else if (message.classList.contains('right')) {
                       p.innerHTML = text;
                       currentMessageIndex++;
                       setTimeout(showNextMessage, 2000); // 각 메시지 후 1초 대기
