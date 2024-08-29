@@ -45,7 +45,7 @@
           </div>
           <!-- 타이틀 -->
           <div class="virtual-phishing">
-            <div class="phone-header call">
+            <div class="phone-header call ai">
               <div class="flexcenter call">
                 <span><img width="30" src="img/call-icon02.png" alt=""></span>
                 <span>1577-000X <em>통화중...</em></span>
@@ -163,7 +163,7 @@
         </section>
 
         <!-- 모의체험 종료 팝업 -->
-        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body">
@@ -182,11 +182,10 @@
         </div>
 
         <!-- 체험 종로 시간 초과 팝업 -->
-        <div class="modal fade openPopup" id="timeOutVirtual" aria-hidden="true">
+        <div class="modal fade openPopup" id="timeOutVirtual" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body">
-                <button data-bs-dismiss="modal" class="btn-close"></button>
                 <div class="title">모의체험 종료</div>
                 <div class="txt text-center">
                   입력 시간이 초과되어 <br />
@@ -194,8 +193,7 @@
                   한번 더 진행하여 완벽한 체험을 경험해 보세요.
                 </div>
                 <div class="btn-group rmt-25">
-                  <button>종료</button>
-                  <button data-bs-dismiss="modal">취소</button>
+                  <button class="w-100">종료</button>
                 </div>
               </div>
             </div>

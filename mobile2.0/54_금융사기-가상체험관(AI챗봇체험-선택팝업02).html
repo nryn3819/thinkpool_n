@@ -51,24 +51,10 @@
             </div>
             <div class="phone-body call ai">
               <div class="message left">
-                <p>“여보세요, OOO씨 되시죠?”</p>
+                <p>고객님, 이 부분이 가장 중요하므로 명확히 이해하셔야 다음 단계로 진행할 수 있습니다. 이 절차를 잘 이해하셨습니까?</p>
               </div>
               <div class="message right">
-                <p>네 맞습니다. 무슨 일이신가요?</p>
-              </div>
-              <div class="message left">
-                <p>저는서울중앙검찰청 첨단범죄수사 1부1팀 이도현 수사관입니다. 본인 명의도용과 관련된 사건으로 확인차 연락을 드렸는데, 통화 괜찮으십니까?</p>
-              </div>
-              <div class="message left">
-                <p>지금 본인 앞으로 명의도용 사건이 접수가 됐어요. 작년 5월부터 8월까지 강남 선릉 쪽 오피스텔 총 7곳에서 “성매매 특별법 및 전자금융법 위반혐의로 주범 사기수를 포함한 일당을 검거됐는데. 본인께서는 사기수라는 사람을 알고 계십니까?”</p>
-              </div>
-              <div class="message right">
-                <p>모르는데요.</p>
-              </div>
-              <div class="message left">
-                <p>일단은 저희가 사건내용부터 마저 고지를 드리자면, 지금 김민수씨를 모른다고 하셨는데 지금 현금계좌와 공동인증서가 들어있는 USB를 압수했습니다. <br />
-                그런데 그 중에서 OOO씨 은행 계좌가 발견이 되어서 참고인조사를 하려고 합니다.
-                지금 혼자 계신가요?</p>
+                <p>바로 다시 전화 드릴게요.</p>
               </div>
             </div>
             <!-- 스크립트 -->
@@ -118,6 +104,10 @@
                       const container = document.querySelector('.phone-body');
                       container.scrollTop = container.scrollHeight;
                     }, 500);
+                  } else{
+                    setTimeout(() => {
+                      document.querySelector('#openChoice').click();
+                    }, 1000)
                   }
                 }
 
@@ -156,22 +146,26 @@
           </div>
         </section>
 
-        <!-- 모의체험 종료 팝업 -->
-        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <!-- 사용자 선택 팝업 -->
+        <div class="modal fade choice" id="choice" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body">
-                <button data-bs-dismiss="modal" class="btn-close"></button>
-                <div class="title">모의체험 종료</div>
-                <div class="txt text-center">
-                  보이스피싱 AI챗봇 체험을 종료하시겠습니까?
+                <div class="title">통화 종료 후 선택</div>
+                <div class="txt">
+                  대출을 위해 상환금을 보내줘도 괜찮은지 <br>
+                  불안감이 있다면, 인터넷으로 검색한 <br>
+                  대박저축은행의 대표 전화번호로 담당자 <br>
+                  확인 전화를 걸어볼 수 있습니다.
                 </div>
-                <div class="btn-group rmt-25">
-                  <button>종료</button>
-                  <button data-bs-dismiss="modal">취소</button>
+                <div class="choiceBtn">
+                  <button class="rmb-10">대박저축은행 대표전화로 걸기</button>
+                  <button class="rmb-10">상환금 입금 진행</button>
+                  <button>상담 종료하기</button>
                 </div>
               </div>
             </div>
+            <button id="openChoice" data-bs-toggle="modal" data-bs-target="#choice"></button>
           </div>
         </div>
       </main>

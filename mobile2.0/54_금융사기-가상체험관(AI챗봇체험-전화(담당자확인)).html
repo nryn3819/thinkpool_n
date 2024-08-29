@@ -46,29 +46,37 @@
             <div class="phone-header call ai">
               <div class="flexcenter call">
                 <span><img width="30" src="img/call-icon02.png" alt=""></span>
-                <span>010-3XX0-8242  <em>통화중...</em></span>
+                <span>1880-880  <em>대박저축은행 고객센터</em></span>
               </div>
             </div>
-            <div class="phone-body call ai">
+            <div class="phone-body call ai auto_ai">
               <div class="message left">
-                <p>“여보세요, OOO씨 되시죠?”</p>
+                <p>고객님 안녕하세요.
+                  대박저축은행 고객센터 상담원 갈오첸입니다. 무엇을 도와드릴까요?</p>
               </div>
               <div class="message right">
-                <p>네 맞습니다. 무슨 일이신가요?</p>
+                <p>여기 은행 관계자분과 대환대출 상담을 했는데 확인차 대표전화로 전화 드렸어요. 혹시나 싶어서요..</p>
               </div>
               <div class="message left">
-                <p>저는서울중앙검찰청 첨단범죄수사 1부1팀 이도현 수사관입니다. 본인 명의도용과 관련된 사건으로 확인차 연락을 드렸는데, 통화 괜찮으십니까?</p>
-              </div>
-              <div class="message left">
-                <p>지금 본인 앞으로 명의도용 사건이 접수가 됐어요. 작년 5월부터 8월까지 강남 선릉 쪽 오피스텔 총 7곳에서 “성매매 특별법 및 전자금융법 위반혐의로 주범 사기수를 포함한 일당을 검거됐는데. 본인께서는 사기수라는 사람을 알고 계십니까?”</p>
+                <p>아, 정부지원 저금리 대환대출이라면 여신부 박대출 대리님이 담당자이신데요.. 전화 연결시켜드릴까요?</p>
               </div>
               <div class="message right">
-                <p>모르는데요.</p>
+                <p>아! 이름은 맞네요. 연결해주세요. 같은분인지 확인되겠네요.</p>
               </div>
               <div class="message left">
-                <p>일단은 저희가 사건내용부터 마저 고지를 드리자면, 지금 김민수씨를 모른다고 하셨는데 지금 현금계좌와 공동인증서가 들어있는 USB를 압수했습니다. <br />
-                그런데 그 중에서 OOO씨 은행 계좌가 발견이 되어서 참고인조사를 하려고 합니다.
-                지금 혼자 계신가요?</p>
+                <p>연결하겠습니다. 잠시만 기다려 주세요.</p>
+              </div>      
+              <!-- 상담종료버튼 -->
+              <div class="endCounsel none">
+                <strong>담당자 확인 후 연결</strong>
+                <span>
+                  대박저축은행 대표전화로 전화를 걸어 상담원 <br>
+                  에게 저금리 대환대출 담당자명을 확인 한 후 <br>
+                  연결을 요청했습니다.<br>
+                  대환대출 담당자와 전화통화를 시작하려면 <br>
+                  확인을 눌러주세요.
+                </span>
+                <button>확인</button>
               </div>
             </div>
             <!-- 스크립트 -->
@@ -102,22 +110,26 @@
                     p.innerHTML = ''; // 빈 내용으로 초기화
                     message.style.display = 'block';
 
-                    if (message.classList.contains('left')) {
+                    if (message.classList.contains('left') || message.classList.contains('right')) {
                       typeEffect(p, text, 50, () => {
                         currentMessageIndex++;
                         setTimeout(showNextMessage, 1000); // 각 메시지 후 1초 대기
                       });
-                    } else if (message.classList.contains('right')) {
-                      p.innerHTML = text;
-                      currentMessageIndex++;
-                      scrollToBottom();
-                      setTimeout(showNextMessage, 1000); // 각 메시지 후 1초 대기
                     }
 
                     setTimeout(() => {
                       const container = document.querySelector('.phone-body');
                       container.scrollTop = container.scrollHeight;
                     }, 500);
+                  } else {
+                    // 모든 메시지가 표시된 후 3초 뒤에 endCounsel 요소 표시
+                    setTimeout(() => {
+                      const endCounselElement = document.querySelector('.endCounsel');
+                      if (endCounselElement) {
+                        endCounselElement.classList.remove('none');
+                        scrollToBottom(); // 화면 스크롤
+                      }
+                    }, 3000); // 3초 지연
                   }
                 }
 
@@ -157,7 +169,7 @@
         </section>
 
         <!-- 모의체험 종료 팝업 -->
-        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body">

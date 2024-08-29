@@ -51,24 +51,34 @@
             </div>
             <div class="phone-body call ai">
               <div class="message left">
-                <p>“여보세요, OOO씨 되시죠?”</p>
-              </div>
-              <div class="message right">
-                <p>네 맞습니다. 무슨 일이신가요?</p>
-              </div>
-              <div class="message left">
-                <p>저는서울중앙검찰청 첨단범죄수사 1부1팀 이도현 수사관입니다. 본인 명의도용과 관련된 사건으로 확인차 연락을 드렸는데, 통화 괜찮으십니까?</p>
+                <p>안녕하세요. 대박저축은행 박대출 입니다. 
+                  [이름]고객님, 상환 절차 대로 잘 처리하셨네요.
+                  고객님의 일부 상환금 입금 확인했습니다. 지금부터 이후 절차를 안내해드리겠습니다. 
+                  </p>
               </div>
               <div class="message left">
-                <p>지금 본인 앞으로 명의도용 사건이 접수가 됐어요. 작년 5월부터 8월까지 강남 선릉 쪽 오피스텔 총 7곳에서 “성매매 특별법 및 전자금융법 위반혐의로 주범 사기수를 포함한 일당을 검거됐는데. 본인께서는 사기수라는 사람을 알고 계십니까?”</p>
-              </div>
-              <div class="message right">
-                <p>모르는데요.</p>
+                <p>전화 통화를 마치고 바로 고객님의 대환대출 서류를 정부 행정 절차에 따라 접수할 예정입니다. 
+                </p>
               </div>
               <div class="message left">
-                <p>일단은 저희가 사건내용부터 마저 고지를 드리자면, 지금 김민수씨를 모른다고 하셨는데 지금 현금계좌와 공동인증서가 들어있는 USB를 압수했습니다. <br />
-                그런데 그 중에서 OOO씨 은행 계좌가 발견이 되어서 참고인조사를 하려고 합니다.
-                지금 혼자 계신가요?</p>
+                <p>서류 접수 신청 후, 접수 확인까지는 하루 정도 소요될 예정입니다.
+                </p>
+              </div>
+              <div class="message left">
+                <p>서류 접수가 확인되면 저희가 고객님께 확인 문자를 보내드리겠습니다. 
+                  이제 모든 업무 처리가 완료되었습니다. 
+                  </p>
+              </div>
+              <div class="message left">
+                <p>지금까지 대출상담원 박대출이었습니다.
+                  고객님 오늘도 좋은 하루 보내세요.
+                  상담 종료하겠습니다.
+                </p>
+              </div>
+              <!-- 상담종료버튼 -->
+              <div class="endCounsel none">
+                <span>상담을 종료하시겠습니까?</span>
+                <button>상담 종료하기</button>
               </div>
             </div>
             <!-- 스크립트 -->
@@ -89,45 +99,54 @@
                 }, speed);
               }
 
-              function showMessages() {
-                const messages = document.querySelectorAll('.message');
-                let delay = 1000; 
-                let currentMessageIndex = 0;
+                function showMessages() {
+                  const messages = document.querySelectorAll('.message');
+                  let delay = 1000;
+                  let currentMessageIndex = 0;
 
-                function showNextMessage() {
-                  if (currentMessageIndex < messages.length) {
-                    const message = messages[currentMessageIndex];
-                    const p = message.querySelector('p');
-                    const text = p.getAttribute('data-full-text') || p.innerHTML; // 데이터 속성에서 전체 텍스트 가져오기
-                    p.innerHTML = ''; // 빈 내용으로 초기화
-                    message.style.display = 'block';
+                  function showNextMessage() {
+                    if (currentMessageIndex < messages.length) {
+                      const message = messages[currentMessageIndex];
+                      const p = message.querySelector('p');
+                      const text = p.getAttribute('data-full-text') || p.innerHTML; // 데이터 속성에서 전체 텍스트 가져오기
+                      p.innerHTML = ''; // 빈 내용으로 초기화
+                      message.style.display = 'block';
 
-                    if (message.classList.contains('left')) {
-                      typeEffect(p, text, 50, () => {
+                      if (message.classList.contains('left')) {
+                        typeEffect(p, text, 50, () => {
+                          currentMessageIndex++;
+                          setTimeout(showNextMessage, 1000); // 각 메시지 후 1초 대기
+                        });
+                      } else if (message.classList.contains('right')) {
+                        p.innerHTML = text;
                         currentMessageIndex++;
+                        scrollToBottom();
                         setTimeout(showNextMessage, 1000); // 각 메시지 후 1초 대기
-                      });
-                    } else if (message.classList.contains('right')) {
-                      p.innerHTML = text;
-                      currentMessageIndex++;
-                      scrollToBottom();
-                      setTimeout(showNextMessage, 1000); // 각 메시지 후 1초 대기
+                      }
+
+                      setTimeout(() => {
+                        const container = document.querySelector('.phone-body');
+                        container.scrollTop = container.scrollHeight;
+                      }, 500);
+                    } else {
+                      // 모든 메시지가 표시된 후 3초 뒤에 endCounsel 요소 표시
+                      setTimeout(() => {
+                        const endCounselElement = document.querySelector('.endCounsel');
+                        if (endCounselElement) {
+                          endCounselElement.classList.remove('none');
+                          scrollToBottom(); // 화면 스크롤
+                        }
+                      }, 3000); // 3초 지연
                     }
-
-                    setTimeout(() => {
-                      const container = document.querySelector('.phone-body');
-                      container.scrollTop = container.scrollHeight;
-                    }, 500);
                   }
+
+                  messages.forEach(message => {
+                    const p = message.querySelector('p');
+                    p.setAttribute('data-full-text', p.innerHTML);
+                  });
+
+                  setTimeout(showNextMessage, delay); // 첫 메시지 타이핑 시작
                 }
-
-                messages.forEach(message => {
-                  const p = message.querySelector('p');
-                  p.setAttribute('data-full-text', p.innerHTML);
-                });
-
-                setTimeout(showNextMessage, delay); // 첫 메시지 타이핑 시작
-              }
 
               // 메세지 스크롤
               function scrollToBottom() {
@@ -143,7 +162,7 @@
             <!-- 채팅입력 -->
             <div class="chatInput">
               <div class="inputGroup">
-                <input type="text" placeholder="메시지내용 입력">
+                <input type="text" placeholder="메시지내용 입력" disabled>
                 <button>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <rect y="0.5" width="24" height="24" rx="8" fill="#666973" />
@@ -157,7 +176,7 @@
         </section>
 
         <!-- 모의체험 종료 팝업 -->
-        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body">

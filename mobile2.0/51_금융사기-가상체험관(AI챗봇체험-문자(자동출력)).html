@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+
+      <main id="container" class="clearfix">
+        <h2 class="visually-hidden">본문영역</h2>
+        <section class="section fraud-virtual">
+          <div class="virtual-header">
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                  <circle cx="12.5" cy="13" r="12.5" fill="#114EED"/>
+                  <ellipse cx="12.8292" cy="12.6709" rx="8.22368" ry="6.25" fill="white"/>
+                  <circle cx="9.04585" cy="12.8359" r="1.15132" fill="black"/>
+                  <circle cx="12.9931" cy="12.8359" r="1.15132" fill="black"/>
+                  <circle cx="16.9414" cy="12.8359" r="1.15132" fill="black"/>
+                  <path d="M6.83991 19.5186L8.41622 16.4861L10.0078 18.2358L6.83991 19.5186Z" fill="white"/>
+                </svg>
+              </span>
+              <strong>보이스 피싱 가상체험</strong>
+            </div>
+            <button class="end" data-bs-toggle="modal" data-bs-target="#endVirtual">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.6151 19.6151L11.769 11.769M11.769 11.769L3.92285 3.92285M11.769 11.769L19.6152 3.92285M11.769 11.769L3.92285 19.6152" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <!-- 타이틀 -->
+          <div class="virtual-phishing">
+            <div class="phone-header sms">
+              <div class="flexsb sms">
+                <div class="smsProfile">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M17.4998 7.5L10.8837 14.1161C10.3955 14.6043 10.3955 15.3957 10.8837 15.8839L17.4998 22.5" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <img width="30" src="img/prof-icon.png" alt="프로필 아이콘">
+                  </span>
+                  <span>1588-5000 [은행명]은행</span>
+                </div>
+                <div>
+                  <img width="13.5" src="img/dot3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="phone-body sms auto_ai">
+              <div class="message left msg01 none">
+                <p>[[은행명]은행]<br />
+                  [이름] 고객님 안녕하세요. <br />
+                  정부지원 대환대출용 대출원금 일부상환 관련으로 전화 상담한 [은행명]은행 가로첸 상담원입니다.<br /><br />
+
+                  일부상황금액과 입금하실 가상계좌 안내를 문자로 보내드리겠습니다.<br /><br />
+
+                  감사합니다.</p>
+              </div>
+              <div class="message left msg02 none">
+                <p>[[은행명]은행]<br />
+                  [은행명]은행 대출 일부 상환 안내 <br /><br />
+
+                  - 대출 상환금액 : [상환금]<br />
+                  - 상환용 가상 계좌번호<br />
+                    [은행명]은행 4232-19004321<br />
+                    예금주 : (주)[은행명]은행<br /><br />
+
+                  입금 후 대환 대출 운영사인 대박저축은행으로 연락하시면 됩니다.<br /><br />
+
+                  대박저축은행 담당부서<br />
+                  ☎ 010-300-8242</p>
+              </div>
+              <div class="endCounsel none">
+                <span>대출 상환금을 입금하고, 저금리 대환대출 <br>진행을 위해 대박저축은행 담당자와 <br>통화 하시겠습니까?</span>
+                <button class="rmb-10">대출 10% 상환 후 전화하기</button>
+                <button>상환하지 않고 종료하기</button>
+              </div>
+            </div>
+
+            <!-- 스크립트 -->
+            <script>
+              // 애니메이션
+              const msg01Element = document.querySelector('.msg01');
+              const msg02Element = document.querySelector('.msg02');
+              const endCounselElement = document.querySelector('.endCounsel');
+              const phoneBody = document.querySelector('.phone-body');
+
+              document.addEventListener('DOMContentLoaded', function () {
+                msg01Element.classList.remove('none');
+                msg01Element.classList.add('msgOn');
+
+                msg01Element.addEventListener('animationend', function () {
+                  msg02Element.classList.remove('none');
+                  msg02Element.classList.add('msgOn_ai');
+                });
+
+                msg02Element.addEventListener('animationend', function () {
+                  endCounselElement.classList.remove('none');
+                  endCounselElement.classList.add('msgOn_ai');
+                });
+
+                endCounselElement.addEventListener('animationend', function () {
+                  scrollToBottom();
+                });
+              });
+
+              function closeReply() {
+                reply01Element.classList.add('fadeOut');
+              }
+              // 메세지 스크롤
+              function scrollToBottom() {
+                const phoneBody = document.querySelector('.phone-body');
+                phoneBody.scrollTo({
+                  top: phoneBody.scrollHeight,
+                  behavior: 'smooth'
+                });
+              }
+            </script>
+            <!-- 채팅입력 -->
+            <div class="chatInput">
+              <div class="inputGroup">
+                <input type="text" placeholder="메시지내용 입력" disabled>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <rect y="0.5" width="24" height="24" rx="8" fill="#666973" />
+                    <path d="M12 3.5L7 8.5M12 3.5L17 8.5M12 3.5V21.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 모의체험 종료 팝업 -->
+        <div class="modal fade openPopup" id="endVirtual" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-bs-dismiss="modal" class="btn-close"></button>
+                <div class="title">모의체험 종료</div>
+                <div class="txt text-center">
+                  보이스피싱 AI챗봇 체험을 종료하시겠습니까?
+                </div>
+                <div class="btn-group rmt-25">
+                  <button>종료</button>
+                  <button data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+    <!-- /wrap -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- //bootstrap js -->
+  </div>
+  <!-- //app -->
+
+
+
+</body>
+
+</html>
