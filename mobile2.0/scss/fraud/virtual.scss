@@ -220,6 +220,10 @@
       &.ai{
         .message{
           display: none;
+
+          a{
+            color: #000;
+          }
         }
       }
       &.calling{

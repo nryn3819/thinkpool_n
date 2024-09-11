@@ -52,7 +52,7 @@
             <div class="phone-body call ai">
               <div class="message left">
                 <p>고객님 안녕하세요.
-                  [은행명]은행 고객센터 상담원 가로첸입니다. 무엇을 도와드릴까요?</p>
+                  <a href="">[은행명]</a>은행 고객센터 상담원 가로첸입니다. 무엇을 도와드릴까요?</p>
               </div>
               <div class="message right">
                 <p>대박저축은행에서 정부 30일 한정 대환대출을 상담했는데요..
@@ -113,7 +113,11 @@
                   message.style.display = 'block';
 
                   if (message.classList.contains('left')) {
-                    await typeEffect(p, text, 50); // left 메시지는 타이핑 효과 적용
+                    if (text.includes('<a')) {
+                      p.innerHTML = text; 
+                    } else {
+                      await typeEffect(p, text, 50); 
+                    }
                   } else if (message.classList.contains('right')) {
                     p.innerHTML = text; // right 메시지는 한 번에 표시
                   }
