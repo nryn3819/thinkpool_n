@@ -52,7 +52,7 @@
             <div class="phone-body call ai">
               <div class="message left">
                 <p>고객님 안녕하세요.
-                  <a href="">[은행명]</a>은행 고객센터 상담원 가로첸입니다. 무엇을 도와드릴까요?</p>
+                  <a href="https://www.naver.com/">[은행명]</a>은행 고객센터 상담원 가로첸입니다. 무엇을 도와드릴까요?</p>
               </div>
               <div class="message right">
                 <p>대박저축은행에서 정부 30일 한정 대환대출을 상담했는데요..
@@ -89,14 +89,34 @@
               function typeEffect(element, text, speed) {
                 return new Promise((resolve) => {
                   let i = 0;
-                  const length = text.length;
-                  element.innerHTML = ''; // Clear the element
+                  let isTag = false;
+                  let currentTag = '';
+                  let finalText = '';
+
                   const interval = setInterval(() => {
-                    if (i < length) {
-                      element.innerHTML += text.charAt(i);
-                      i++;
-                      scrollToBottom();
+                    const char = text.charAt(i);
+
+                    if (char === '<') {
+                      isTag = true;
+                    }
+
+                    if (isTag) {
+                      currentTag += char;
                     } else {
+                      finalText += char;
+                    }
+
+                    if (char === '>') {
+                      isTag = false;
+                      finalText += currentTag;
+                      currentTag = '';
+                    }
+                    
+                    element.innerHTML = finalText;
+                    i++;
+                    scrollToBottom();
+
+                    if (i === text.length) {
                       clearInterval(interval);
                       resolve();
                     }
@@ -113,11 +133,7 @@
                   message.style.display = 'block';
 
                   if (message.classList.contains('left')) {
-                    if (text.includes('<a')) {
-                      p.innerHTML = text; 
-                    } else {
-                      await typeEffect(p, text, 50); 
-                    }
+                    await typeEffect(p, text, 50);
                   } else if (message.classList.contains('right')) {
                     p.innerHTML = text; // right 메시지는 한 번에 표시
                   }
