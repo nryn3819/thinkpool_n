@@ -86,6 +86,11 @@
             </div>
             <!-- 스크립트 -->
             <script>
+              function inputDisabled(disabled) {
+                const chatInput = document.querySelector('.chatInput input');
+                chatInput.disabled = disabled;
+              }
+
               function typeEffect(element, text, speed) {
                 return new Promise((resolve) => {
                   let i = 0;
@@ -133,7 +138,9 @@
                   message.style.display = 'block';
 
                   if (message.classList.contains('left')) {
+                    inputDisabled(true);
                     await typeEffect(p, text, 50);
+                    inputDisabled(false);
                   } else if (message.classList.contains('right')) {
                     p.innerHTML = text; // right 메시지는 한 번에 표시
                   }
