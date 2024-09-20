@@ -621,6 +621,7 @@
       }
     }
     .page{
+      position: relative;
       width: 100%;
       background: #fff;
       height: calc(100dvh - 55.16px);
@@ -633,6 +634,15 @@
         img{
           max-width: 360px;
         }
+      }
+      .pageClose{
+        border: none;
+        background: none;
+        position: absolute;
+        left: 3.2%;
+        top: 0.94%;
+        width: 10%;
+        height: 10%;
       }
     }
   }

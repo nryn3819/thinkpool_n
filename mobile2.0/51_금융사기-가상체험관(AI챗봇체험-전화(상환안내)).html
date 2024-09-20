@@ -88,7 +88,9 @@
             <script>
               function inputDisabled(disabled) {
                 const chatInput = document.querySelector('.chatInput input');
+                const chatButton = document.querySelector('.chatInput button');
                 chatInput.disabled = disabled;
+                chatButton.disabled = disabled;
               }
 
               function typeEffect(element, text, speed) {
