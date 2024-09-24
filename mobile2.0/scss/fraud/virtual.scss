@@ -621,28 +621,27 @@
       }
     }
     .page{
-      position: relative;
-      width: 100%;
-      background: #fff;
-      height: calc(100dvh - 55.16px);
-      overflow-y: scroll;
-
-      .imgCenter{
-        display: flex;
-        justify-content: center;
-
-        img{
-          max-width: 360px;
-        }
+      img{
+        width: 100%;
+        border-radius: 16px;
       }
-      .pageClose{
-        border: none;
-        background: none;
+      .modal-content{
+        margin: 10px;
+      }
+      .modal-body{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        border-radius: 16px;
+      }
+      button{
         position: absolute;
-        left: 3.2%;
-        top: 0.94%;
+        background: none;
+        border: none;
         width: 10%;
-        height: 10%;
+        height: 4.5%;
+        top: 10px;
+        left: 10px;
       }
     }
   }

@@ -43,11 +43,24 @@
           </div>
           <!-- 타이틀 -->
           <div class="virtual-phishing">
-            <div class="page">
-              <img width="100%" src="img/vir_page01.png" alt="">
-              <button class="pageClose"></button>
+            <div class="modal fade page" id="page01" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img src="img/vir_page01.png" alt="행정안전부">
+                    <button id="openPage01" data-bs-toggle="modal" data-bs-target="#page01"></button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              document.querySelector('#openPage01').click();
+            });
+          </script>
+
         </section>
       </main>
 
