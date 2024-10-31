@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel='stylesheet' type='text/css' href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' >
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+    <style>
+      html,
+      body {
+        background: #fff !important;
+      }
+      #module_010D.module_box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-self: stretch;
+      }
+      #module_010D.module_box .module_wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 0 20px;
+      }
+      #module_010D.module_box .module_header {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        padding: 6px 0 12px;
+        height: fit-content;
+        border-bottom: 1px solid #e9e9e9;
+        position: relative;
+      }
+      #module_010D.module_box .module_header .item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 22px;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #555cdc;
+      }
+      #module_010D.module_box .module_header .obj {
+        width: 100%;
+        height: fit-content;
+        font-size: 16px;
+        color: #111;
+        font-weight: 700;
+        line-height: 22px;
+        display: -webkit-box;
+        word-wrap: break-word;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      #module_010D.module_box .module_header .date {
+        position: absolute;
+        top: 19px;
+        right: 16px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+        font-weight: 400;
+      }
+      #module_010D.module_box .module_header .info{
+        font-size:12px;
+        line-height: 16px;
+        color:#666;
+        font-weight:normal;
+      }
+      #module_010D.module_box .module_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px 0;
+        gap: 16px;
+      }
+      #module_010D.module_box .module_content .report {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+      }
+      #module_010D.module_box .module_content .report .report-top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #module_010D.module_box .module_content .report .report-top div {
+        display: flex;
+        flex-direction: column;
+        width: calc((100% - 40px) / 2);
+        height: 62px;
+        justify-content: center;
+        align-items: center;
+        background: #fff4fa;
+        border-radius: 10px;
+        color: #333;
+      }
+      #module_010D.module_box .module_content .report .report-top div span {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      #module_010D.module_box .module_content .report .report-top div em {
+        height: 22px;
+        line-height: 22px;
+        font-size: 16px;
+        color: #e22d72;
+        font-weight: 700;
+      }
+      #module_010D.module_box .module_content .report .report-top div.beforeObjective {
+        color: #333;
+        background: #f3f2f2;
+      }
+      #module_010D.module_box .module_content .report .report-top div.beforeObjective span {
+        color: #333;
+      }
+      #module_010D.module_box .module_content .report .report-top div.beforeObjective em {
+        color: #333;
+      }
+      #module_010D.module_box .module_content .report .report-content {
+        width: 100%;
+        line-height: 20px;
+        font-size: 14px;
+        color: #333;
+      }
+      #module_010D.module_box .module_content .module_footer {
+        display: flex;
+        justify-content: flex-end;
+        border-top: 1px solid #e9e9e9;
+        padding-top: 10px;
+        height: 30px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+      }
+      #module_010D.module_box .btn-group {
+        @apply flex w-full gap-1;
+        display: flex;
+        width: 100%;
+        gap: 4px;
+      }
+      #module_010D.module_box .btn-group button {
+        display: flex;
+        width: fit-content;
+        height: 31px;
+        padding: 0 14px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #7583aa;
+        align-items: center;
+        background: #dae0ef;
+      }
+      .kwom_pop_header {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 56px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      .kwom_pop_header button{
+        position: absolute;
+        top:20px;
+        right:20px;
+        border:0;
+        background:none;
+        width:18px;
+        height:18px;
+        padding:0;
+        margin:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .kwom_pop_header strong {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      .module_box *{
+        font-family: Spoqa Han Sans Neo !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="module_010D" class="module_box">
+      <div class="kwom_pop_header">
+        <strong>리포트 상세보기</strong>
+        <button>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.9999 16.9999L9 9M9 9L1 1M9 9L17 1M9 9L1 17" stroke="#686868" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <!-- // -->
+      <div class="module_wrap">
+        <header class="module_header">
+          <span class="item">삼성전자(010620)</span>
+          <strong class="obj">[목표가상향]매출액, 영업이익 시장 기대치 상회 시장 기대치 상회 시장 기대치 상회</strong>
+          <em class="info">7/23 리포트_IBK투자증권</em>
+        </header>
+        <!-- header -->
+
+        <div class="module_content">
+          <div class="report">
+            <div class="report-top">
+              <div class="beforeObjective">
+                <span>직전목표가</span>
+                <em>120,000</em>
+              </div>
+              <!-- 직전목표가 -->
+
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_800_1100)">
+                  <path d="M17.4375 9.00049L9 0.562988L9 5.62549L-5.16341e-07 5.62549L-2.21289e-07 12.3755L9 12.3755L9 17.438L17.4375 9.00049Z" fill="#141414" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_800_1100">
+                    <rect width="18" height="18" fill="white" transform="translate(0 18.0005) rotate(-90)" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div class="afterObjective">
+                <span>최근목표가</span>
+                <em>120,000</em>
+              </div>
+              <!-- 최근목표가 -->
+            </div>
+            <!-- top -->
+
+            <div class="report-content">
+              건설부문에서 1조원 수준 영업이익을 지탱하는 가운데, 비건설부문 이익 기여도가 추세적으로 증가하며 사업 포트폴리오의 힘이 나타남. <br>
+              수소/태양광/SMR 등 새로운 성장동력에 대한 투자가 다양하게 전개. <br><br>
+              개선되는 펀더멘탈을 주주환원으로 이어갈 수 있는 준비가 되어있어 긍정적<br>
+              건설부문에서 1조원 수준 영업이익을 지탱하는 가운데, 비건설부문 이익 기여도가 추세적으로 증가하며 사업 포트폴리오의 힘이 나타남. <br>
+              수소/태양광/SMR 등 새로운 성장동력에 대한 투자가 다양하게 전개. <br><br>
+              개선되는 펀더멘탈을 주주환원으로 이어갈 수 있는 준비가 되어있어 긍정적
+            </div>
+            <!-- content -->
+          </div>
+        </div>
+        <!-- content -->
+      </div>
+      <!-- /wrap -->
+    </div>
+  </body>
+</html>
