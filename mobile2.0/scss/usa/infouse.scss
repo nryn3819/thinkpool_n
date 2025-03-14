@@ -721,4 +721,17 @@
       }
     }
   }
+  .ushome-banner_img{
+    margin-bottom: 40px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 100%;
+      max-width: 400px;
+    }
+  }
 }
