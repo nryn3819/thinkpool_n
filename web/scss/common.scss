@@ -332,6 +332,15 @@ table {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+.mainFrameBox{
+  width:150%;transform: scale(0.65);margin-top:-43px;margin-left:-251px;float:left;
+}
+.frameBoard{
+  padding:0;height:165px;width:100%;float:left;
+}
+.frameBoard div{
+  width:150%;transform: scale(0.65);margin-top:-43px;margin-left:-251px;float:left;
+}
 @import "header";
 @import "layout";
 @import "main";
