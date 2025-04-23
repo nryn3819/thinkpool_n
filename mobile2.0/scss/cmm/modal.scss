@@ -466,7 +466,10 @@
 }
 
 #endToRassiro{
+  display:flex !important;
+  justify-content: center;
   .modal-dialog {
+    width:100%;
     margin:0 16px !important;
 
     .modal-content{
