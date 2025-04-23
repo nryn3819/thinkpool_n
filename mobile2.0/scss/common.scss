@@ -3,7 +3,7 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
 @import "variable.scss";
 * {
-  @include mobile {
+  @include mobile { 
     -ms-overflow-style: none;
     /* IE, Edge */
     scrollbar-width: 0;
@@ -608,4 +608,7 @@ body {
       }
     }
   }
+}
+.frameBox{
+  width:100%;
 }

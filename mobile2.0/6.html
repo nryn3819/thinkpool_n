@@ -81,13 +81,13 @@
             </div>
         </div>
     </div> -->
-    <script>
+    <!-- <script>
         const openModal1 = new bootstrap.Modal(document.getElementById('openPop'), {})
         openModal1.show()
 
         const openModal2 = new bootstrap.Modal(document.getElementById('openAppPop'), {})
         openModal2.show()
-    </script>
+    </script> -->
     <!-- 앱오픈팝업 -->
 
     <div id="app">
@@ -3600,7 +3600,7 @@
                 </section>
                 <!-- // -->
 
-                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="tModal" aria-labelledby="offcanvasBottomLabel">
+                <!-- <div class="offcanvas offcanvas-bottom" tabindex="-1" id="tModal" aria-labelledby="offcanvasBottomLabel">
                     <div class="offcanvas-body">
                         <div class="tmodal-offCanvas">
                             <div class="closeBtn">
@@ -3618,13 +3618,82 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <!-- // -->
+
+                <!-- 2025.04.23 라씨로종료안내 -->
+                <div class="modal fade" id="endToRassiro" aria-labelledby="라씨로종료안내">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="top">
+                                    <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.729614" width="50" height="50" rx="25" fill="#F06970"/>
+                                        <path d="M23.8073 30.92L22.9673 16.16L22.7673 10.56H28.6873L28.4873 16.16L27.6473 30.92H23.8073ZM25.7273 41.56C24.6606 41.56 23.7806 41.1867 23.0873 40.44C22.4206 39.6933 22.0873 38.7867 22.0873 37.72C22.0873 36.6 22.4206 35.68 23.0873 34.96C23.7806 34.24 24.6606 33.88 25.7273 33.88C26.7939 33.88 27.6606 34.24 28.3273 34.96C29.0206 35.68 29.3673 36.6 29.3673 37.72C29.3673 38.7867 29.0206 39.6933 28.3273 40.44C27.6606 41.1867 26.7939 41.56 25.7273 41.56Z" fill="white"/>
+                                    </svg>
+                                    <strong>유료 서비스 종료 안내</strong>
+                                </div>
+                                <!-- //top -->
+                                 <div class="txt">
+                                    <p class="fblock">
+                                        <span>그동안 저희 AI종목추천 서비스를 이용해 주셔서 <br>진심으로 감사드립니다.</span>
+                                        <span>회사의 업종 변경으로 인해 다음과 같이 <br><em>유료 컨텐츠 서비스가 종료될 예정</em> 입니다.</span>
+                                    </p>
+
+                                    <p class="sblock">
+                                        <span>
+                                            <em>&middot; 서비스 종료일 : </em>
+                                            2025년 5월 30일(금)
+                                        </span>
+                                        <span>
+                                            <em>&middot; 신규가입 중단 : </em>
+                                            2025년 4월 28일(월) 부터
+                                        </span>
+                                        <span>
+                                            <em>&middot; 자동결제 중단 : </em>
+                                            2025년 4월 28일(월) 부터
+                                        </span>
+                                    </p>
+
+                                    <p class="tblock">
+                                        단, 이전에 결제하신 서비스는 이용 만료일까지 <br>
+                                        정상적으로 이용 가능하며, <br>
+                                        무료 컨텐츠는 계속 제공 됩니다. 
+                                    </p>
+
+                                    <p class="frblock">
+                                        더 나은 모습으로 찾아 뵙겠습니다. <br>감사합니다.
+                                    </p>
+                                 </div>
+                                <div class="close">
+                                    <button data-bs-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M20.7295 19.9999L12.7296 12M12.7296 12L4.72961 4M12.7296 12L20.7296 4M12.7296 12L4.72961 20" stroke="#333333" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- 닫기버튼 -->
+                            </div>
+                            <!-- body -->
+                             <div class="modal-footer">
+                                <button>오늘 하루 열지 않기</button>
+                                <button data-bs-dismiss="modal">닫기</button>
+                             </div>
+                        </div>
+                    </div>
 
                 <script>
+                    var endpop = new bootstrap.Modal(document.getElementById('endToRassiro'), {})
+                    endpop.show()
+                </script>
+                </div>
+                <!-- //2025.04.23 라씨로종료안내 -->
+
+                <!-- <script>
                     document.addEventListener("DOMContentLoaded", () => {
                         document.querySelector('#tModal').classList.add('show');
                     })
-                </script>
+                </script> -->
 
             </main>
             <!-- //container -->
@@ -3663,15 +3732,12 @@
 
         </div>
         <!-- /wrap -->
-        <!-- bootstrap js -->
-
-        <!-- //bootstrap js -->
     </div>
     <!-- //app -->
 
 
 
-    <script>
+    <!-- <script>
 
         const offhide = document.querySelector('.offhide');
 
@@ -3681,7 +3747,7 @@
         });
 
 
-    </script>
+    </script> -->
 
 
 
