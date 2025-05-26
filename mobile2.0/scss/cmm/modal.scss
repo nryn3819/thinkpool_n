@@ -325,8 +325,8 @@
   .modal-dialog {
     width: 100%;
     max-width: 720px;
-    margin:0 auto;
-    padding:0 17px;
+    margin: 0 auto;
+    padding: 0 17px;
 
     .modal-content {
       width: 100%;
@@ -380,9 +380,9 @@
               font-size: 14px;
               line-height: 21px;
 
-              em{
-                display:block;
-                width:calc(100% - 10px);
+              em {
+                display: block;
+                width: calc(100% - 10px);
               }
 
               &::before {
@@ -410,7 +410,7 @@
 
 #issueModal {
   .modal-content {
-    padding:16px 0 20px;
+    padding: 16px 0 20px;
 
     .modal-header {
       padding: 0 16px;
@@ -429,173 +429,174 @@
         margin: 0;
       }
     }
-    .modal-body{
-        padding:15px 16px 0;
+    .modal-body {
+      padding: 15px 16px 0;
 
-        .issue-chart{
-            padding:0;
+      .issue-chart {
+        padding: 0;
+      }
+
+      .modal-issue-tab {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        padding-bottom: 10px;
+
+        button {
+          display: flex;
+          min-width: 106px;
+          height: 30px;
+          line-height: 24px;
+          border: 1px solid #cfd3d9;
+          background: none;
+          border-radius: 4px;
+          font-size: 14px;
+          color: #999;
+          justify-content: center;
+
+          &.active {
+            border: 1px solid #5368ff;
+            color: #5368ff;
+            font-weight: bold;
+          }
         }
-
-        .modal-issue-tab{
-            display:flex;
-            width:100%;
-            gap:10px;
-            padding-bottom:10px;
-
-            button{
-                display:flex;
-                min-width:106px;
-                height:30px;
-                line-height:24px;
-                border:1px solid #cfd3d9;
-                background:none;
-                border-radius: 4px;
-                font-size:14px;
-                color:#999;
-                justify-content: center;
-
-                &.active{
-                    border:1px solid #5368ff;
-                    color:#5368ff;
-                    font-weight:bold;
-                }
-            }
-        }
+      }
     }
   }
 }
 
-#endToRassiro{
-  display:flex !important;
-  justify-content: center;
+#endToRassiro {
+  &.show {
+  }
   .modal-dialog {
-    width:100%;
-    margin:0 16px !important;
+    margin:0 auto;
+    padding:0 16px;
 
-    .modal-content{
+
+    .modal-content {
       border-radius: 12px !important;
 
-      .modal-body{
-        padding:16px 16px 25px;
+      .modal-body {
+        padding: 16px 16px 25px;
 
-        .close{
-          position:absolute;
-          top:16px;
-          right:16px;
+        .close {
+          position: absolute;
+          top: 16px;
+          right: 16px;
 
-          button{
-            background:none;
-            border:none;
-            padding:0;
-            margin:0;
+          button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
           }
         }
 
-        .top{
-          display:flex;
+        .top {
+          display: flex;
           flex-direction: column;
-          width:100%;
-          gap:10px;
+          width: 100%;
+          gap: 10px;
           justify-content: center;
           align-items: center;
-          padding-top:24px;
-          padding-bottom:16px;
-          border-bottom:1px solid #D4D4D4;
-          strong{
-            font-size:26px;
-            font-weight:400 !important;
-            color:#333;
-            line-height:33px;
+          padding-top: 24px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #d4d4d4;
+          strong {
+            font-size: 26px;
+            font-weight: 400 !important;
+            color: #333;
+            line-height: 33px;
           }
         }
 
-        .txt{
-          display:block;
-          width:100%;
-          p{
-            display:block;
-            width:100%;
-            padding:20px 0 0 0;
+        .txt {
+          display: block;
+          width: 100%;
+          p {
+            display: block;
+            width: 100%;
+            padding: 20px 0 0 0;
             margin: 0;
 
-            &.fblock{
-              display:flex;
-              flex-direction:column;
+            &.fblock {
+              display: flex;
+              flex-direction: column;
               align-items: center;
-              gap:8px;
-              text-align:center;
+              gap: 8px;
+              text-align: center;
 
-              span{
-                font-size:14px;
-                color:#333;
-                font-weight:400;
-                line-height:21px;
+              span {
+                font-size: 14px;
+                color: #333;
+                font-weight: 400;
+                line-height: 21px;
 
-                em{
-                  font-weight:bold;
+                em {
+                  font-weight: bold;
                 }
               }
             }
 
-            &.sblock{
-              display:flex;
-              flex-direction:column;
+            &.sblock {
+              display: flex;
+              flex-direction: column;
               align-items: center;
-              gap:4px;
+              gap: 4px;
 
-              span{
-                width:260px;
-                font-size:14px;
-                line-height:21px;
-                color:#333;
-                font-weight:400;
+              span {
+                width: 260px;
+                font-size: 14px;
+                line-height: 21px;
+                color: #333;
+                font-weight: 400;
 
-                em{
-                  font-weight:bold;
+                em {
+                  font-weight: bold;
                 }
               }
             }
 
-            &.tblock{
-              text-align:center;
-              padding-top:4px;
-              font-size:12px;
-              color:#666;
-              line-height:16px;
-              font-weight:400;
+            &.tblock {
+              text-align: center;
+              padding-top: 4px;
+              font-size: 12px;
+              color: #666;
+              line-height: 16px;
+              font-weight: 400;
             }
 
-            &.frblock{
-              text-align:center;
-              font-size:14px;
-              line-height:21px;
-              color:#333;
-              font-weight:400;
+            &.frblock {
+              text-align: center;
+              font-size: 14px;
+              line-height: 21px;
+              color: #333;
+              font-weight: 400;
             }
           }
         }
       }
-      .modal-footer{
-        display:flex;
-        padding:0;
-        margin:0;
+      .modal-footer {
+        display: flex;
+        padding: 0;
+        margin: 0;
         border-radius: 0 0 12px 12px;
         overflow: hidden;
 
-        button{
-          padding:0;
-          margin:0;
-          height:45px;
-          line-height:45px;
-          background:#ddd;
-          color:#666;
-          font-size:14px;
-          font-weight:500;
-          border:0;
-          width:50%;
+        button {
+          padding: 0;
+          margin: 0;
+          height: 45px;
+          line-height: 45px;
+          background: #ddd;
+          color: #666;
+          font-size: 14px;
+          font-weight: 500;
+          border: 0;
+          width: 50%;
 
-          &:last-child{
-            border-left:1px solid #fff;
+          &:last-child {
+            border-left: 1px solid #fff;
           }
         }
       }

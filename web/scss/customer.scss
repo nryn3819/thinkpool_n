@@ -76,6 +76,8 @@
         flex-wrap:wrap;
 
         &.svList{
+            justify-content: flex-start;
+            gap:21px;
             li>a{
                 border:1px solid #3e72ed;
                 color:#3e72ed;
