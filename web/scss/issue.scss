@@ -32,7 +32,7 @@
                 background: #ebebeb;
                 border-radius: 40px;
                 margin-right:10px;
-                font-weight:300;
+                font-weight: 400;
             }
 
             &.active,
@@ -50,7 +50,7 @@
         width:100%;
         font-size:14px;
         color:#999;
-        font-weight:300;
+        font-weight: 400;
         padding:15px 0;
         border-bottom:1px solid #d6d6d6;
         margin-bottom:15px;
@@ -77,7 +77,7 @@
                         max-width:710px;
                         font-size:16px;
                         color:#3e72ed;
-                        font-weight:300;
+                        font-weight: 400;
                         overflow:hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
@@ -89,7 +89,7 @@
                         right:0;
                         display:block;
                         font-size:14px;
-                        font-weight:300;
+                        font-weight: 400;
                         color:#999;
                         line-height:20px;
                     }
@@ -97,7 +97,7 @@
                 .txt{
                     font-size:14px;
                     color:#666;
-                    font-weight:300;
+                    font-weight: 400;
                     line-height:20px;
                     height:40px;
                 }
@@ -113,7 +113,7 @@
         a{
             font-size:14px;
             color:#999;
-            font-weight:300;
+            font-weight: 400;
             &::before{
                 content: '+';
                 padding-right:5px;
@@ -180,7 +180,7 @@
             line-height:26px;
             font-size:16px;
             color:#666;
-            font-weight:300;
+            font-weight: 400;
             text-align:center;
             padding-bottom:20px;
         }
@@ -195,7 +195,7 @@
             background:#e8e8e8;
             font-size:16px;
             color:#333;
-            font-weight:300;
+            font-weight: 400;
             text-align:center;
             margin:30px 8px 0 8px;
 
@@ -216,7 +216,7 @@
             line-height:26px;
             font-size:16px;
             color:#666;
-            font-weight:300;
+            font-weight: 400;
             text-align:center;
             padding-bottom:20px;
         }

@@ -116,7 +116,7 @@
                             }
                         }
                         &:nth-child(5n){
-                            font-weight:300;
+                            font-weight: 400;
                         }
                     }
                 }
@@ -350,7 +350,7 @@
         float:left;
         line-height:36px;
         font-size:14px;
-        font-weight:300;
+        font-weight: 400;
         color:#666;
     }
 
@@ -557,7 +557,7 @@
 
         font: {
             size: 15px;
-            weight: 300;
+            weight: 400;
         }
 
         color:#666;
@@ -581,7 +581,7 @@
         font: {
             style: normal;
             size: 14px;
-            weight: 300;
+            weight: 400;
         }
 
         color:#999;
@@ -625,7 +625,7 @@
 
         &.user_class{
             font-size:16px;
-            font-weight:300;
+            font-weight: 400;
             color:#666;
             line-height:42px;
             padding:0 20px;
@@ -647,7 +647,7 @@
         margin-top:3px;
         font-size:14px;
         color:#666;
-        font-weight:300;
+        font-weight: 400;
 
         &:focus,&:hover,&:active{
             background:#fff;
@@ -719,7 +719,7 @@
             width:100%;
             font-size:14px;
             padding:10px 0;
-            font-weight:300;
+            font-weight: 400;
             color:#666;
             float:left;
             em{
@@ -756,7 +756,7 @@
             p{
                 font-size:13px;
                 color:#666;
-                font-weight:300;
+                font-weight: 400;
                 line-height:18px;
             }
 

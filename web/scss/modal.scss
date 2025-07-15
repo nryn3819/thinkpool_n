@@ -39,7 +39,7 @@
                     text-align:center;
                     font-size:16px;
                     color:#333;
-                    font-weight:300;
+                    font-weight: 400;
                     float:left;
                 }
                 input[type="text"]{
@@ -55,7 +55,7 @@
 
                     &::placeholder{
                         color:#999;
-                        font-weight:300;
+                        font-weight: 400;
                     }
 
                     &.pnum{
@@ -70,7 +70,7 @@
                     border-radius: 5px;
                     text-align:center;
                     font-size:14px;
-                    font-weight:300;
+                    font-weight: 400;
                     color:#3E72ED;
                     float:left;
                     margin-left:10px;
@@ -145,7 +145,7 @@
 
             span{
                 font-size:16px;
-                font-weight:300;
+                font-weight: 400;
                 color:#333;
             }
 
@@ -278,7 +278,7 @@
                         border-radius: 5px;
                         text-align:center;
                         font-size:16px;
-                        font-weight:300;
+                        font-weight: 400;
                         color:#3E72ED;
                         padding:0;
                         background:#fff;
@@ -319,7 +319,7 @@
                 margin:0;
                 font: {
                     size: 16px;
-                    weight: 300;
+                    weight: 400;
                 }
                 color:#fff;
             }
@@ -364,7 +364,7 @@
                     text-indent:30px;
                     font-size:18px;
                     color:#333;
-                    font-weight:300;
+                    font-weight: 400;
                 }
                 dd{
                     display:block;
@@ -376,7 +376,7 @@
                     float:left;
                     font-size:18px;
                     color:#333;
-                    font-weight:300;
+                    font-weight: 400;
                 }
                 .btm_n{
                     border-bottom:0;
@@ -390,7 +390,7 @@
 
             p{
                 font-size:16px;
-                font-weight:300;
+                font-weight: 400;
                 padding-bottom:40px;
             }
 
@@ -412,12 +412,12 @@
                 &-default{
                     background:#ebebeb;
                     color:#333;
-                    font-weight:300;
+                    font-weight: 400;
                 }
                 &-primary{
                     background:#3E72ED;
                     color:#fff;
-                    font-weight:300;
+                    font-weight: 400;
                 }
             }
         }
@@ -436,7 +436,7 @@
             span{
                 font-size:13px;
                 color:#666;
-                font-weight:300;
+                font-weight: 400;
 
                 &::before{
                     display:inline-block;
@@ -520,7 +520,7 @@
             float:left;
             font-size:14px;
             color:#666;
-            font-weight:300;
+            font-weight: 400;
         }
     }
     .modal-body{
@@ -576,7 +576,7 @@
             width:100%;
             font-size:16px;
             line-height:30px;
-            font-weight:300;
+            font-weight: 400;
 
             margin-top:20px;
 
@@ -622,7 +622,7 @@
                 padding-top:20px;
                 font-size:16px;
                 color:#333;
-                font-weight:300;
+                font-weight: 400;
                 line-height:30px;
 
                 em{
