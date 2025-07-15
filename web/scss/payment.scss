@@ -151,7 +151,7 @@
         height: 20px;
         font-size: 14px;
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
 
         &::before {
           content: "";
@@ -171,7 +171,7 @@
       line-height: 21px;
       color: #333;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 400;
 
       a {
         color: #3e72ed;
@@ -246,7 +246,7 @@
     border: 0;
     font-size: 16px;
     color: #333;
-    font-weight: 300;
+    font-weight: 400;
 
     &.active {
       color: #fff;
@@ -286,7 +286,7 @@
       line-height: 20px;
       margin-bottom: 6px;
       align-items: flex-start;
-      font-weight: 300;
+      font-weight: 400;
       color: #666;
 
       em {
@@ -314,7 +314,7 @@
       padding-left: 22px;
       font-size: 14px;
       color: #333;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 21px;
       font-style: normal;
       margin-top: 20px;
@@ -332,7 +332,7 @@
       line-height: 21px;
       font-size: 14px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
       gap: 4px;
       padding: 0 10px;
 
@@ -378,7 +378,7 @@
       margin-bottom: 10px;
       font-size: 14px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 }
@@ -410,7 +410,7 @@
       margin-bottom: 4px;
       font-size: 14px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 }
@@ -425,19 +425,19 @@
   &.auto {
     span {
       margin-top: 50px;
-      font-weight: 300;
+      font-weight: 400;
 
       &.light {
-        font-weight: 300;
+        font-weight: 400;
         margin-top: 0;
         em {
-          font-weight: 300;
+          font-weight: 400;
         }
       }
     }
     & > em {
       margin-top: 30px;
-      font-weight: 300;
+      font-weight: 400;
       color: #666;
       font-size: 14px;
     }
@@ -488,7 +488,7 @@
     gap: 8px;
     font-size: 14px;
     color: #000;
-    font-weight: 300;
+    font-weight: 400;
     align-items: center;
 
     select {
@@ -502,7 +502,7 @@
       background: #f6f6f7;
       font-size: 14px;
       color: #000;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
   button {
@@ -514,7 +514,7 @@
     background: #848484;
     color: #fff;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 4px;
     border: 0;
   }
@@ -541,7 +541,7 @@
 
     .tmnt-text {
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 30px;
       display: block;
       width: 100%;
@@ -566,7 +566,7 @@
         margin: 0;
         font-size: 16px;
         color: #fff;
-        font-weight: 300;
+        font-weight: 400;
         cursor: pointer;
       }
     }
@@ -595,7 +595,7 @@
           display: block;
           width: 100%;
           font-size: 16px;
-          font-weight: 300;
+          font-weight: 400;
           color: #333;
           line-height: 30px;
           text-align: center;
@@ -621,7 +621,7 @@
           margin: 0;
           font-size: 16px;
           color: #fff;
-          font-weight: 300;
+          font-weight: 400;
           cursor: pointer;
           align-items: center;
 
@@ -651,7 +651,7 @@
   text-align: Center;
   font-size: 16px;
   color: #333;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #p-header_w {
@@ -697,7 +697,7 @@
           li > a {
             font-size: 12px;
             color: #c6c6c6;
-            font-weight: 300;
+            font-weight: 400;
             display: block;
             height: 35px;
             line-height: 35px;
@@ -722,7 +722,7 @@
           li > a {
             font-size: 12px;
             color: #c6c6c6;
-            font-weight: 300;
+            font-weight: 400;
             display: block;
             height: 35px;
             line-height: 35px;
@@ -865,7 +865,7 @@ div.upload-btn_wrap button {
           background: #3e72ed;
           font-size: 16px;
           color: #fff;
-          font-weight: 300;
+          font-weight: 400;
           border: 0;
           padding: 0;
           margin: 0;
@@ -888,7 +888,7 @@ div.upload-btn_wrap button {
     border: 0;
     background: #ebebeb;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     color: #333;
 
     &.active {

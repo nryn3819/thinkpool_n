@@ -33,7 +33,7 @@
       padding: 0;
       text-align: center;
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       border-radius: 40px;
       border: 0;
       outline: 0;
@@ -120,7 +120,7 @@
 
           &:hover {
             background: none;
-            font-weight: 300;
+            font-weight: 400;
             text-decoration: underline;
           }
         }
@@ -178,7 +178,7 @@
     strong {
       display: inline-block;
       font-size: 40px;
-      font-weight: 300;
+      font-weight: 400;
       color: #333;
       height: 50px;
       line-height: 50px;
@@ -227,7 +227,7 @@
       font-size: 16px;
       line-height: 26px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
       width: 100%;
 
       em {
@@ -240,7 +240,7 @@
       font-size: 16px;
       line-height: 30px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
       width: 100%;
 
       a {
@@ -260,7 +260,7 @@
       text-align: center;
       font-size: 14px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .btn {
@@ -272,7 +272,7 @@
       text-align: center;
       float: none;
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       border-radius: 40px;
       margin: 20px 10px;
       &-long {
@@ -311,7 +311,7 @@
       display: block;
       padding-top: 30px;
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       color: #666;
       line-height: 36px;
       text-align: center;
@@ -333,7 +333,7 @@
     p {
       font-size: 14px;
       color: #666;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     form {
@@ -384,7 +384,7 @@
           line-height: 40px;
           font-size: 16px;
           color: #333;
-          font-weight: 300;
+          font-weight: 400;
           float: left;
           text-indent: 5px;
           text-align: left;
@@ -416,11 +416,11 @@
           &::placeholder {
             font-size: 14px;
             color: #999;
-            font-weight: 300;
+            font-weight: 400;
           }
           &:disabled {
             background: none;
-            font-weight: 300;
+            font-weight: 400;
             color: #3e72ed;
           }
         }
@@ -435,7 +435,7 @@
           border-radius: 5px;
           border: 1px solid #3e72ed;
           color: #3e72ed;
-          font-weight: 300;
+          font-weight: 400;
           font-size: 14px;
           background: #fff;
           &:hover,
@@ -454,7 +454,7 @@
           font-size: 14px;
           line-height: 20px;
           color: #666;
-          font-weight: 300;
+          font-weight: 400;
           em {
             font-style: normal;
           }
@@ -466,7 +466,7 @@
           line-height: 40px;
           font-size: 16px;
           color: #333;
-          font-weight: 300;
+          font-weight: 400;
           float: left;
           padding-left: 50px;
           box-sizing: border-box;
@@ -487,7 +487,7 @@
         margin-top: 60px;
         float: none;
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
         border-radius: 40px;
 
         &:focus {
@@ -510,7 +510,7 @@
   p {
     font-size: 16px;
     color: #666;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -526,7 +526,7 @@
       display: block;
       font-size: 40px;
       color: #333;
-      font-weight: 300;
+      font-weight: 400;
     }
     span {
       display: block;
@@ -598,7 +598,7 @@
         font-size: 18px;
         line-height: 24px;
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
       }
     }
     .right {
@@ -621,7 +621,7 @@
         font-size: 18px;
         line-height: 24px;
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
       }
     }
   }
@@ -650,7 +650,7 @@
         font-size: 18px;
         line-height: 24px;
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
       }
     }
     .right {
@@ -673,7 +673,7 @@
         font-size: 18px;
         line-height: 24px;
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
       }
     }
   }
@@ -737,7 +737,7 @@
         em {
           font-style: normal;
           color: #3e72ed;
-          font-weight: 300;
+          font-weight: 400;
         }
 
         &::before {
@@ -769,7 +769,7 @@
       display: block;
       font-size: 14px;
       color: #fff;
-      font-weight: 300;
+      font-weight: 400;
       padding-top: 5px;
     }
   }
@@ -826,7 +826,7 @@
             display: block;
             font-size: 15px;
             color: #666;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 23px;
             padding-left: 10px;
 
@@ -878,7 +878,7 @@
       display: block;
       font-size: 14px;
       color: #fff;
-      font-weight: 300;
+      font-weight: 400;
       padding-top: 5px;
     }
   }

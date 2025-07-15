@@ -39,7 +39,7 @@
       label {
         font-size: 14px;
         color: #333;
-        font-weight: 300;
+        font-weight: 400;
         padding-left: 5px;
         cursor: pointer;
 
@@ -85,7 +85,7 @@
 
       span {
         color: #666;
-        font-weight: 300;
+        font-weight: 400;
       }
 
       &:hover {
@@ -188,7 +188,7 @@
       & > span {
         display: block;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         color: #666;
         padding-top: 10px;
       }
@@ -248,7 +248,7 @@
     right: 0;
     font-size: 14px;
     color: #999;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   table {
@@ -286,7 +286,7 @@
           border-radius: 16px;
           background: #ddd;
           color: #333;
-          font-weight: 300;
+          font-weight: 400;
           cursor: pointer;
         }
       }
@@ -375,7 +375,7 @@
 
           font-size: 14px;
           color: #333;
-          font-weight: 300;
+          font-weight: 400;
           border-radius: 0;
 
           &:active,
@@ -410,7 +410,7 @@
       thead {
         tr th {
           font-size: 15px;
-          font-weight: 300;
+          font-weight: 400;
           background: #f6f6f6;
           border-bottom: 0;
 
@@ -483,7 +483,7 @@
               text-align: center;
               font-size: 14px;
               color: #333;
-              font-weight: 300;
+              font-weight: 400;
               text-indent: 0;
               vertical-align: middle;
               background: #ebebeb;
@@ -498,7 +498,7 @@
 
               font-size: 14px;
               color: #333;
-              font-weight: 300;
+              font-weight: 400;
 
               select {
                 width: 220px;
@@ -532,7 +532,7 @@
                 justify-content: center;
                 font-size: 14px;
                 color: #333;
-                font-weight: 300;
+                font-weight: 400;
               }
 
               input[type="text"],
@@ -547,7 +547,7 @@
               label {
                 font-size: 14px;
                 color: #333;
-                font-weight: 300;
+                font-weight: 400;
                 display: flex;
                 align-items: center;
                 align-content: center;
@@ -604,7 +604,7 @@
           padding: 0 15px;
           font-size: 14px;
           color: #666;
-          font-weight: 300;
+          font-weight: 400;
         }
         tr:first-child td {
           border-top: 0;
@@ -654,7 +654,7 @@
 
             span {
               font-size: 14px;
-              font-weight: 300;
+              font-weight: 400;
               color: #666;
             }
           }
@@ -685,7 +685,7 @@
           border-bottom: 0;
           border-top: 0;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 400;
           border-right: 1px solid #dfdfdf;
           border-left: 1px solid #dfdfdf;
 
@@ -770,7 +770,7 @@
             th {
               border-top: 1px solid #dfdfdf;
               border-bottom: 1px solid #dfdfdf;
-              font-weight: 300;
+              font-weight: 400;
               border-left: 0;
             }
           }
@@ -863,7 +863,7 @@
               right: 15px;
             }
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 400;
 
             span {
               font: {
