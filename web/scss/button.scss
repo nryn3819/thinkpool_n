@@ -22,5 +22,29 @@
 }
 .btn-white{
     background:#fff;
-    
+}
+
+.btn-payment-basic{
+    display:inline-flex;
+    height:30px;
+    align-items: center;
+    justify-content: center;
+    padding:0 12px;
+    border:1px solid #999;
+    border-radius: 6px;
+    font-size:14px;
+    color:#999;
+    background:#fff;
+}
+.btn-payment-primary{
+    display:inline-flex;
+    height:30px;
+    align-items: center;
+    justify-content: center;
+    padding:0 12px;
+    border:1px solid #3E72ED;
+    border-radius: 6px;
+    font-size:14px;
+    color:#3E72ED;
+    background:#fff;
 }
