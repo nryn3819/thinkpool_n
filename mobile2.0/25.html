@@ -1,775 +1,706 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- common.css -->
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>씽크풀</title>
   </head>
   <body>
-
     <div id="app">
-        <div id="wrap">
-            <h1 class="visually-hidden">씽크풀</h1>
-            <h2 class="visually-hidden">Title for screen readers</h2>
-            <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
-            <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
-            <!-- header - header.scss -->
-            <header id="header" class="clearfix item">
-                <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
-                    
-                    <div class="pageBack">
-                        <button type="button" onclick="history.back()">이전페이지</button>
-                    </div>
-                    <!-- //이전페이지 -->
-                
-                    <div class="headerTitle text-truncate centerHeader">
-                        <strong>글읽기</strong>
-                    </div>
-                    <!-- //종목명  헤더가 바뀝니다. -->
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+        <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="pageBack">
+              <button type="button" onclick="history.back()">이전페이지</button>
+            </div>
+            <!-- //이전페이지 -->
 
-                </div>
-                <!-- //top -->
-            </header>
+            <div class="headerTitle text-truncate centerHeader">
+              <strong>글읽기</strong>
+            </div>
+            <!-- //종목명  헤더가 바뀝니다. -->
+          </div>
+          <!-- //top -->
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <h2 class="visually-hidden">본문영역</h2>
+
+          <section class="section noPadding">
+
+            <div class="frameBox" style="width: 100%; clear: both; box-sizing: border-box;padding:25px 17px 0">
+              <iframe width="100%" height="100" src="https://ad.adinc.kr/cgi-bin/PelicanC.dll?impr?pageid=09en&amp;out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+            </div>
             <!-- // -->
 
-            <main id="container" class="clearfix">
-                <h2 class="visually-hidden">본문영역</h2>
+            <div class="board rpt-0">
+              <div class="board-top clearfix float-start">
+                <button class="btn btn-custom-board write float-start">글쓰기</button>
+                <button class="btn-custom-board float-end">글목록</button>
+              </div>
 
-                <section class="section noPadding">
-                    <div class="section-inline-ad rmt-0">
-                        <img src="./img/demoBnr.png" alt="" class="img-fluid">
-                        <!-- // 인라인광고 -->
+              <div class="reading rmt-10 float-start">
+                <div class="top">
+                  <div class="obj">비디아이, 삼천포발전소 계약해지 통보함 그래서 "원만하게 합의, 이행에 문제...</div>
+                  <!-- //제목 -->
+
+                  <div class="info" data-bs-toggle="modal" data-bs-target="#classguide">
+                    <div class="level cls cls-01"></div>
+                    <!-- // -->
+                    <div class="info-txt">
+                      <div class="name">여섯자리필명</div>
+                      <div class="date">22/02/22 13:31 (118.2178.***.123)</div>
                     </div>
                     <!-- // -->
-                    <div class="board rpt-20">
-                        <div class="board-top clearfix float-start">
-                            <button class="btn btn-custom-board write float-start">글쓰기</button>
-                            <button class="btn-custom-board float-end">글목록</button>
+
+                    <div id="classguide" class="modal fade custom-modal1" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <strong class="title">등급별 점수 안내</strong>
+
+                            <div class="rmt-20">
+                              <table class="table-custom-borderless" width="100%">
+                                <colgroup></colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">등급</th>
+                                    <th scope="col">등급비율</th>
+                                    <th scope="col">점수</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-10 fw-bold"> 왕</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 2명</td>
+                                    <td class="text-end">50만점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-09 fw-bold"> 세자</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 0% ~ 1% 까지</td>
+                                    <td class="text-end">15만점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-08 fw-bold"> 대감</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 1% ~ 5% 까지</td>
+                                    <td class="text-end">5만점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-07 fw-bold"> 장군</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 5% ~ 15%까지</td>
+                                    <td class="text-end">1만5천점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-06 fw-bold"> 나리</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 15% ~ 30%까지</td>
+                                    <td class="text-end">5천점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-05 fw-bold"> 사또</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 30% ~ 55%까지</td>
+                                    <td class="text-end">3천점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-04 fw-bold"> 포졸</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 55% ~ 75%까지</td>
+                                    <td class="text-end">1천점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-03 fw-bold"> 중인</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 75% ~ 95%까지</td>
+                                    <td class="text-end">5백점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-02 fw-bold"> 상인</span>
+                                      </div>
+                                    </td>
+                                    <td>상위 95% ~ 100%까지</td>
+                                    <td class="text-end">1백점 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="my-class">
+                                        <span class="cls cls-01 fw-bold"> 평민</span>
+                                      </div>
+                                    </td>
+                                    <td>점수기준</td>
+                                    <td class="text-end">50점 이상</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <div class="modal-close text-center rmt-10">
+                              <button type="button" class="btn-custom-default" data-bs-dismiss="modal">닫기</button>
+                            </div>
+                          </div>
                         </div>
-
-                        <div class="reading rmt-10 float-start">
-                            <div class="top">
-                                <div class="obj">
-                                    비디아이, 삼천포발전소 계약해지 통보함 그래서 "원만하게 합의, 이행에 문제...
-                                </div>
-                                <!-- //제목 -->
-
-                                <div class="info"  data-bs-toggle="modal" data-bs-target="#classguide">
-                                    <div class="level cls cls-01">
-                                    </div>
-                                    <!-- // -->
-                                    <div class="info-txt">
-                                        <div class="name">여섯자리필명</div>
-                                        <div class="date">
-                                            22/02/22 13:31 (118.2178.***.123)
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div id="classguide" class="modal fade custom-modal1" tabindex="-1">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-            
-                                                    <strong class="title">등급별 점수 안내</strong>
-            
-                                                    <div class="rmt-20">
-                                                        <table class="table-custom-borderless" width="100%">
-                                                            <colgroup>
-                                                            </colgroup>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">등급</th>
-                                                                    <th scope="col">등급비율</th>
-                                                                    <th scope="col">점수</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-10 fw-bold"> 왕</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 2명
-                                                                    </td>
-                                                                    <td class="text-end">50만점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-09 fw-bold"> 세자</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 0% ~ 1% 까지
-                                                                    </td>
-                                                                    <td class="text-end">15만점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-08 fw-bold"> 대감</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 1% ~ 5% 까지
-                                                                    </td>
-                                                                    <td class="text-end">5만점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-07 fw-bold"> 장군</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 5% ~ 15%까지
-                                                                    </td>
-                                                                    <td class="text-end">1만5천점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-06 fw-bold"> 나리</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 15% ~ 30%까지
-                                                                    </td>
-                                                                    <td class="text-end">5천점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-05 fw-bold"> 사또</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 30% ~ 55%까지
-                                                                    </td>
-                                                                    <td class="text-end">3천점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-04 fw-bold"> 포졸</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 55% ~ 75%까지
-                                                                    </td>
-                                                                    <td class="text-end">1천점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-03 fw-bold"> 중인</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 75% ~ 95%까지
-                                                                    </td>
-                                                                    <td class="text-end">5백점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-02 fw-bold"> 상인</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        상위 95% ~ 100%까지
-                                                                    </td>
-                                                                    <td class="text-end">1백점 이상</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="my-class">
-                                                                            <span class="cls cls-01 fw-bold"> 평민</span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        점수기준
-                                                                    </td>
-                                                                    <td class="text-end">50점 이상</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-            
-            
-                                                    <div class="modal-close text-center rmt-10">
-                                                        <button type="button" class="btn-custom-default" data-bs-dismiss="modal">닫기</button>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
-                                <!-- // 글쓴이정보 -->
-
-                                <div class="board-info">
-                                    <span>댓글 30개</span>
-                                    <span>조회 2122</span>
-                                    <span>추천 23</span>
-                                    <span>반대 7</span>
-                                </div>
-                                <!-- // 글정보 -->
-
-                                <div class="board-file">
-                                    <span>첨부파일 : </span>
-                                    <em>abcdef.jpg</em>
-                                </div>
-                                <!-- //파일 -->
-                            </div>
-                            <!-- //top -->
-
-                            <div class="viewContent">
-비디아이가 삼천포 <br>
-화력 5·6호기 환경 설비 개선공사와 관련해 발주처인 <br>
-한국남동발전(남동발전)으로부터 받은 계약해지<br>
-통보에 대해 코로나로 인한 공사 지연과 경영권 <br>
-분쟁 등 해지 요인에 대해 소명했으며 양사가 <br>
-원만하게 합의를 진행 중으로 계약 이행에는 문제가 <br>
-없을 것이라고 23일 밝혔다. <br><br>
-
-그는 이어 '비디아이 경영진은 최근 이슈가 됐던 <br>
-경영권 분쟁도 해지의 원인 가운데 하나일 <br>
-가능성이 높다고 판단해 안승만 회장을 중심으로 한 <br>
-경영권 안정화도 소명하고 있다'며 '프로젝트가 <br>
-지연되는 가운데 경영권이 불안한 상황에서 남동발<br>
-전 입장에서는 완공에 대한 우려가 있을 수도 <br>
-있다고 판단해 본원 사업 강화와 <br>
-경영권 안정 측면에서 최근 안승만 명예
-
-
-
-                                <div class="board-top-btn">
-                                    <button type="button" class="btn btn-circle-default" data-bs-toggle="modal" data-bs-target="#shareformodal">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
-                                            <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"></path>
-                                        </svg>
-                                        <em>공유하기</em>
-                                    </button>
-                                    <button type="button" class="btn btn-circle-default fontSize">
-                                        <img src="./img/fontsize.svg" alt="폰트사이즈 조절" width="14">
-                                        <em>폰트사이즈 조절</em>
-                                    </button>
-                                </div>
-                                <!-- // -->
-
-                            </div>
-                            <!-- // viewcontent -->
-
-                            <div class="viewContentBtn">
-                                <button>
-                                    <span class="up">12</span>
-                                    <em>추천</em>
-                                </button>
-                                <!-- // -->
-                                <button>
-                                    <span class="dn">3</span>
-                                    <em>반대</em>
-                                </button>
-                                <!-- // -->
-                            </div>
-                            <!-- // viewcontentBtn -->
-                        </div>
-                        <!-- // reading-->
-
-                        <div class="modal custom-modal1 fade" id="shareformodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <!-- //header -->
-                                    <div class="modal-body">
-                                        <div class="share">
-                                            <div class="title">공유하기</div>
-
-                                            <div class="share-list rmt-25">
-                                                <a href="#">
-                                                    <img src="./img/sh-kakao.png" alt="카카오톡" width="50">
-                                                    <span>카카오톡</span>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="./img/sh-blog.png" alt="네이버블로그" width="50">
-                                                    <span>블로그</span>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="./img/sh-facebook.png" alt="페이스북" width="50">
-                                                    <span>페이스북</span>
-                                                </a>
-                                            </div>
-                                            <!-- // -->
-
-                                            <div class="share-url rmt-20">
-                                                <form class="row">
-                                                    <div class="col">
-                                                      <label for="shareUrl" class="visually-hidden">URL</label>
-                                                      <input type="text" class="form-control" id="shareUrl" placeholder="URL" value="http://www.thinkpool.com" disabled="">
-                                                      <button type="submit" class="btn-custom-share mb-3">URL복사</button>
-                                                    </div>
-                                                  </form>
-                                            </div>
-                                            <!-- // -->
-                                        </div>
-                                    </div>
-                                    <!-- //body -->
-                                </div>
-                                <!-- //content -->
-                            </div>
-                            <!-- //dialog -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="writer-info">
-                            <div class="top">
-                                <div class="name"><strong>여섯자리필명</strong>님</div>
-                                <div class="info">
-                                    <span>관심회원수 <em class="dn">201</em></span>
-                                    <span class="msg">쪽지보내기</span>
-                                </div>
-
-                                <div class="btnbox">
-                                    <button class="active" data-bs-toggle="modal" data-bs-target="#addfav">관심회원 추가</button>
-                                </div>
-
-                                <div class="modal custom-modal1 fade" id="addfav" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <!-- //header -->
-                                            <div class="modal-body">
-                                                <div class="alert">
-                                                    <div class="text-center"><em class="dn">관심회원</em>으로 등록되었습니다.</div>
-                                                </div>
-                                            </div>
-                                            <!-- //body -->
-                                            <div class="modal-footer">
-                                                <button class="btn-custom-primary" data-bs-dismiss="modal">확인</button>
-                                            </div>
-                                            <!-- //footer -->
-                                        </div>
-                                        <!-- //content -->
-                                    </div>
-                                    <!-- //dialog -->
-                                </div>
-                                <!-- // -->
-                            </div>
-                            <!-- // -->
-                            <div class="latest">
-                                <strong>작성자 최신글</strong>
-                                <ul>
-                                    <li>
-                                        <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="group-btn">
-                            <div class="board-btn-group clearfix">
-                                <button class="btn-custom-board write write-mini float-start">글쓰기</button>
-                                <button class="btn-custom-board float-start rml-5">답글</button>
-                                <button class="btn-custom-board float-start rml-5">수정</button>
-                                <button class="btn-custom-board float-start rml-5">삭제</button>
-                                <button class="btn-custom-board float-end">목록</button>
-                            </div>
-                            <!-- //board-btn-group -->
-
-                            <div class="opn-btn-group">
-                                <div class="txt" data-bs-toggle="modal" data-bs-target="#opn-guide">
-                                    운영배심원 의견 
-                                </div>
-                                <!-- // -->
-
-                                <div class="btnbox">
-                                    <button class="active">글</button>
-                                    <button>내</button>
-                                    <button>리</button>
-                                    <button>기</button>
-                                </div>
-                                <!-- // -->
-
-                                <div class="called">
-                                    <span data-bs-toggle="modal" data-bs-target="#calleduser">신고</span>
-                                </div>
-                                <!-- // -->
-
-                                <!-- Modal -->
-                                <div class="modal fade custom-modal1" id="opn-guide" data-bs-backdrop="static" tabindex="-1" aria-labelledby="운영배심원의견" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <!-- // -->
-                                            <div class="modal-body">
-                                                <div class="opn-guide">
-                                                    <strong>운영배심원 의련이란?</strong>
-
-                                                    <span>
-                                                        게시판 활동 내용에 따라 매월 새롭게 선덩되는 운영
-                                                        배심원(15인 이하)이 의견을 행사할 수 있습니다. <br><br>
-                                                        운영배심원 4인이 글내리기에 의견을 행사하게 되면 
-                                                        해당글의 추천수와 반대수를 비교하여 반대수가 추천수를
-                                                        넘어서는 경우에는 해당글이 블라인드 처리 됩니다. <br><br>
-
-                                                        <em>
-                                                            ※ <br>
-                                                            본 기능은 시험적용으로 추후 운영방침이 개선 될 수 있습니다. 
-                                                        </em>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- //body -->
-                                        </div>
-                                        <!-- // content -->
-                                    </div>
-                                    <!-- // dialog -->
-                                </div>
-                                <!-- // -->
-
-                                <!-- Modal -->
-                                <div class="modal fade custom-modal1" id="calleduser" data-bs-backdrop="static" tabindex="-1" aria-labelledby="게시물신고" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <!-- // -->
-                                            <div class="modal-body">
-                                                <div class="colled-w">
-                                                    <div class="top">
-                                                        <strong>게시물 신고하기</strong>
-                                                        <span><em class="dn">에너지만땅</em>님 게시물 신고 이유를 남겨주세요.</span>
-                                                    </div>
-                                                    <!-- // -->
-
-                                                    <div class="ch-reason rmt-25">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist01" checked>
-                                                            <label class="form-check-label" for="reasonlist01">
-                                                            욕설/타인에 대한 비방
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist02">
-                                                            <label class="form-check-label" for="reasonlist02">
-                                                            광고(돈벌기, 행운의편지 등)
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist03">
-                                                            <label class="form-check-label" for="reasonlist03">
-                                                            도배(같은 글 반복 게시)
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist04">
-                                                            <label class="form-check-label" for="reasonlist04">
-                                                            악성코드/바이러스 유포
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist05">
-                                                            <label class="form-check-label" for="reasonlist05">
-                                                            시비분쟁/스토킹
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist06">
-                                                            <label class="form-check-label" for="reasonlist06">
-                                                            음란내용/선정성
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="reason" id="reasonlist07">
-                                                            <label class="form-check-label" for="reasonlist07">
-                                                            기타
-                                                            </label>
-                                                        </div>
-                                                        <!-- // -->
-                                                        <div class="form-floating">
-                                                            <textarea class="form-control" placeholder="기타사유를 작성해주세요" id="etcContent" style="height: 62px"></textarea>
-                                                            <label for="etcContent">기타사유</label>
-                                                        </div>
-                                                    </div>
-                                                    <!-- // -->
-
-                                                    <div class="colled-guide">
-                                                        ※ <br>
-                                                        부당한 신고일 경우 신고자의 활동이 제한될 수 있으니 신중하게 결정해 주세요.
-                                                    </div>
-                                                    <!-- // -->
-                                                </div>
-                                                <!-- //colled-w -->
-                                            </div>
-                                            <!-- // body -->
-
-                                            <div class="modal-footer">
-                                                <button class="btn-custom-primary">확인</button>
-                                                <button class="btn-custom-default" data-bs-dismiss="modal">취소</button>
-                                            </div>
-                                            <!-- //footer -->
-                                        </div>
-                                        <!-- // content-->
-                                    </div>
-                                    <!-- //dialog -->
-                                </div>
-                                <!-- // modal -->
-
-                                
-                            </div>
-                            <!-- //opn-btn-group -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="frameBox" style="width:100%;clear:both;box-sizing:border-box;padding:0 17px;">
-                            <iframe src="//io1.innorame.com/imp/A2Xn7K3DbEQ4.iframe" width="100%" height="126" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="width:280px;min-width:100%;position:relative;"></iframe>
-                        </div>
-                        <!-- // -->
-
-                        <div class="recomment">
-                            <div class="tit">
-                                <strong>댓글</strong>
-                                <span data-bs-toggle="collapse" data-bs-target="#recmt">
-                                    <em class="on">댓글접기</em>
-                                    <em class="off">댓글펼침</em>
-                                </span>
-                            </div>
-                            <!-- // -->
-                            <div class="inputarea">
-                                <div class="notInput">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" data-bs-toggle="collapse" data-bs-target="#inputrecmt" placeholder="댓글을 입력하세요." disabled>
-                                        <button class="btn btn-primary" type="button" id="">등록</button>
-                                    </div>
-                                </div>
-                                <!-- //입력전 화면 사용되지 않음 -->
-
-                                <div id="inputrecmt" class="clickInput collapse">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
-                                    <div class="d-block text-center rmt-10">
-                                        <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
-                                        <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
-                                    </div>
-                                </div>
-                                <!-- //입력화면 -->
-
-                            </div>
-                            <!-- //댓글 입력 영역 -->
-
-                            <div id="recmt" class="listarea collapse show">
-                                <div class="list">
-                                    <div class="top">
-                                        <span class="name">여섯자리필명</span>
-                                        <span class="date">02/22 13:31 (118.***.***.**)</span>
-                                    </div>
-                                    <div class="txt">
-                                        달려라 달려라 달려라 하니<br>
-                                        얄리얄라 얄라셩 얄라리 얄라 <br>
-                                        푸른하늘 은하수
-                                    </div>
-                                    <!-- // -->
-                                    <div class="wr-btn text-end">
-                                        <div class="wr-btn-group">
-                                            <button>수정하기</button>
-                                            <button>삭제하기</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="button">
-                                        <button class="btn-custom-board float-start" data-bs-toggle="collapse" data-bs-target="#reinput1">댓글</button>
-                                        <button class="btn-custom-board float-start rml-3">블라인드</button>
-                                        <div class="right float-end">
-                                            <button class="btn-custom-board up">12</button>
-                                            <button class="btn-custom-board dn">7</button>
-                                            <button class="btn-custom-board">신고</button>
-                                        </div>
-                                    </div>
-                                    <!-- //button -->
-
-                                    <div id="reinput1" class="clickInput collapse rmt-10">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
-                                        <div class="d-block text-center rmt-10">
-                                            <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
-                                            <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
-                                        </div>
-                                    </div>
-                                    <!-- //입력화면 -->
-                                </div>
-                                <!-- //list -->
-                                <div class="list re">
-                                    <div class="top">
-                                        <div class="name">여섯자리필명</div>
-                                        <div class="date">02/22 13:31 (118.***.***.**)</div>
-                                    </div>
-                                    <div class="txt">
-                                        <span class="writer"><em>이상한아저씨</em>님</span> 달려라 달려라 달려라 하니<br>
-                                        얄리얄라 얄라셩 얄라리 얄라 <br>
-                                        푸른하늘 은하수
-                                    </div>
-                                    <!-- // -->
-                                    <div class="wr-btn text-end">
-                                        <div class="wr-btn-group">
-                                            <button>수정하기</button>
-                                            <button>삭제하기</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="button">
-                                        <button class="btn-custom-board float-start" data-bs-toggle="collapse" data-bs-target="#reinput1">댓글</button>
-                                        <button class="btn-custom-board float-start rml-3">블라인드</button>
-                                        <div class="right float-end">
-                                            <button class="btn-custom-board up">12</button>
-                                            <button class="btn-custom-board dn">7</button>
-                                            <button class="btn-custom-board">신고</button>
-                                        </div>
-                                    </div>
-                                    <!-- //button -->
-
-                                    <div id="reinput2" class="clickInput collapse rmt-10">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
-                                        <div class="d-block text-center rmt-10">
-                                            <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
-                                            <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
-                                        </div>
-                                    </div>
-                                    <!-- //입력화면 -->
-                                    
-                                </div>
-                                <!-- //list -->
-
-                                <div class="list del">
-                                    <span>삭제된 댓글입니다.</span>
-                                </div>
-                                <!-- //list -->
-
-                            </div>
-                            <!-- //댓글 리스트 -->
-
-                            <div class="shorcutBtn d-block w-100 rmt-20 noPadding float-start">
-                                <button class="btn-outline-detail w-100">더보기&nbsp;&nbsp;+</button>
-                            </div>
-                            <!-- / -->
-                        </div>
-                        <!-- // 댓글  -->
-
-                        <div class="boardlatest">
-                            <dl>
-                                <dt class="prev">이전글</dt>
-                                <dd class="text-truncate">거래소 외국인 순매도상위에 금융업거래소 외국인 순매도상위에 금융업</dd>
-                                <dt class="next">다음글</dt>
-                                <dd class="text-truncate">거래소 외국인 순매도상위에 금융업거래소 외국인 순매도상위에 금융업</dd>
-                            </dl>
-
-                            <div class="board-btm float-start clearfix noPadding rmt-20">
-                                <button class="btn btn-custom-board pagetop float-end">맨위로</button>
-                            </div>
-    
-                            <script>
-                                const wtop = document.querySelector('.pagetop');
-                        
-                                wtop.addEventListener('click', function() {
-                                    window.scrollTo(0 , 0);
-                                });
-                            </script>
-                        </div>
-                        <!-- // -->
-                        
-                            
+                      </div>
                     </div>
-                    <!-- // board-->
-                </section>
-            </main>
+                    <!-- // -->
+                  </div>
+                  <!-- // 글쓴이정보 -->
 
-            <footer id="footer" class="clearfix">
-                <menu id="fmenu">
-                    <figure class="figure">
-                        <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인">
-                        <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전">
-                        <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드">
-                        <figcaption class="figure-caption text-center">씽크풀앱<br>다운로드</figcaption>
-                    </figure>
-                </menu>
+                  <div class="board-info">
+                    <span>댓글 30개</span>
+                    <span>조회 2122</span>
+                    <span>추천 23</span>
+                    <span>반대 7</span>
+                  </div>
+                  <!-- // 글정보 -->
 
-                <menu id="fmenu2">
-                    <a href="#">고객센터</a>
-                    <a href="#">이용약관</a>
-                    <a href="#">개인정보처리방침</a>
-                </menu>
-
-                <div class="copyright">
-                    <span class="d-block">@Thinkpool</span>
-                    <span class="d-block">
-                        본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br>
-                        그 이용에 따르는 책임은 이용자 본인에게 있습니다. 
-                    </span>
+                  <div class="board-file">
+                    <span>첨부파일 : </span>
+                    <em>abcdef.jpg</em>
+                  </div>
+                  <!-- //파일 -->
                 </div>
-            </footer>
-            
-        </div>
-        <!-- /wrap -->
+                <!-- //top -->
 
-        <!-- bootstrap js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <!-- //bootstrap js -->
+                <div class="viewContent">
+                  비디아이가 삼천포 <br />
+                  화력 5·6호기 환경 설비 개선공사와 관련해 발주처인 <br />
+                  한국남동발전(남동발전)으로부터 받은 계약해지<br />
+                  통보에 대해 코로나로 인한 공사 지연과 경영권 <br />
+                  분쟁 등 해지 요인에 대해 소명했으며 양사가 <br />
+                  원만하게 합의를 진행 중으로 계약 이행에는 문제가 <br />
+                  없을 것이라고 23일 밝혔다. <br /><br />
+
+                  그는 이어 '비디아이 경영진은 최근 이슈가 됐던 <br />
+                  경영권 분쟁도 해지의 원인 가운데 하나일 <br />
+                  가능성이 높다고 판단해 안승만 회장을 중심으로 한 <br />
+                  경영권 안정화도 소명하고 있다'며 '프로젝트가 <br />
+                  지연되는 가운데 경영권이 불안한 상황에서 남동발<br />
+                  전 입장에서는 완공에 대한 우려가 있을 수도 <br />
+                  있다고 판단해 본원 사업 강화와 <br />
+                  경영권 안정 측면에서 최근 안승만 명예
+
+                  <div class="board-top-btn">
+                    <button type="button" class="btn btn-circle-default" data-bs-toggle="modal" data-bs-target="#shareformodal">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                        <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"></path>
+                      </svg>
+                      <em>공유하기</em>
+                    </button>
+                    <button type="button" class="btn btn-circle-default fontSize">
+                      <img src="./img/fontsize.svg" alt="폰트사이즈 조절" width="14" />
+                      <em>폰트사이즈 조절</em>
+                    </button>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // viewcontent -->
+
+                <div class="viewContentBtn">
+                  <button>
+                    <span class="up">12</span>
+                    <em>추천</em>
+                  </button>
+                  <!-- // -->
+                  <button>
+                    <span class="dn">3</span>
+                    <em>반대</em>
+                  </button>
+                  <!-- // -->
+                </div>
+                <!-- // viewcontentBtn -->
+              </div>
+              <!-- // reading-->
+
+              <div class="modal custom-modal1 fade" id="shareformodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- //header -->
+                    <div class="modal-body">
+                      <div class="share">
+                        <div class="title">공유하기</div>
+
+                        <div class="share-list rmt-25">
+                          <a href="#">
+                            <img src="./img/sh-kakao.png" alt="카카오톡" width="50" />
+                            <span>카카오톡</span>
+                          </a>
+                          <a href="#">
+                            <img src="./img/sh-blog.png" alt="네이버블로그" width="50" />
+                            <span>블로그</span>
+                          </a>
+                          <a href="#">
+                            <img src="./img/sh-facebook.png" alt="페이스북" width="50" />
+                            <span>페이스북</span>
+                          </a>
+                        </div>
+                        <!-- // -->
+
+                        <div class="share-url rmt-20">
+                          <form class="row">
+                            <div class="col">
+                              <label for="shareUrl" class="visually-hidden">URL</label>
+                              <input type="text" class="form-control" id="shareUrl" placeholder="URL" value="http://www.thinkpool.com" disabled="" />
+                              <button type="submit" class="btn-custom-share mb-3">URL복사</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- // -->
+                      </div>
+                    </div>
+                    <!-- //body -->
+                  </div>
+                  <!-- //content -->
+                </div>
+                <!-- //dialog -->
+              </div>
+              <!-- // -->
+
+              <div class="writer-info">
+                <div class="top">
+                  <div class="name"><strong>여섯자리필명</strong>님</div>
+                  <div class="info">
+                    <span>관심회원수 <em class="dn">201</em></span>
+                    <span class="msg">쪽지보내기</span>
+                  </div>
+
+                  <div class="btnbox">
+                    <button class="active" data-bs-toggle="modal" data-bs-target="#addfav">관심회원 추가</button>
+                  </div>
+
+                  <div class="modal custom-modal1 fade" id="addfav" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- //header -->
+                        <div class="modal-body">
+                          <div class="alert">
+                            <div class="text-center"><em class="dn">관심회원</em>으로 등록되었습니다.</div>
+                          </div>
+                        </div>
+                        <!-- //body -->
+                        <div class="modal-footer">
+                          <button class="btn-custom-primary" data-bs-dismiss="modal">확인</button>
+                        </div>
+                        <!-- //footer -->
+                      </div>
+                      <!-- //content -->
+                    </div>
+                    <!-- //dialog -->
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+                <div class="latest">
+                  <strong>작성자 최신글</strong>
+                  <ul>
+                    <li>
+                      <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-truncate"><span class="date">22/02/22 14:00</span><span class="obj">지수에 휩쓸리면 그것도 조건 이 가나다라마바사아자차카타파하</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="group-btn">
+                <div class="board-btn-group clearfix">
+                  <button class="btn-custom-board write write-mini float-start">글쓰기</button>
+                  <button class="btn-custom-board float-start rml-5">답글</button>
+                  <button class="btn-custom-board float-start rml-5">수정</button>
+                  <button class="btn-custom-board float-start rml-5">삭제</button>
+                  <button class="btn-custom-board float-end">목록</button>
+                </div>
+                <!-- //board-btn-group -->
+
+                <div class="opn-btn-group">
+                  <div class="txt" data-bs-toggle="modal" data-bs-target="#opn-guide">운영배심원 의견</div>
+                  <!-- // -->
+
+                  <div class="btnbox">
+                    <button class="active">글</button>
+                    <button>내</button>
+                    <button>리</button>
+                    <button>기</button>
+                  </div>
+                  <!-- // -->
+
+                  <div class="called">
+                    <span data-bs-toggle="modal" data-bs-target="#calleduser">신고</span>
+                  </div>
+                  <!-- // -->
+
+                  <!-- Modal -->
+                  <div class="modal fade custom-modal1" id="opn-guide" data-bs-backdrop="static" tabindex="-1" aria-labelledby="운영배심원의견" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- // -->
+                        <div class="modal-body">
+                          <div class="opn-guide">
+                            <strong>운영배심원 의련이란?</strong>
+
+                            <span>
+                              게시판 활동 내용에 따라 매월 새롭게 선덩되는 운영 배심원(15인 이하)이 의견을 행사할 수 있습니다. <br /><br />
+                              운영배심원 4인이 글내리기에 의견을 행사하게 되면 해당글의 추천수와 반대수를 비교하여 반대수가 추천수를 넘어서는 경우에는 해당글이 블라인드 처리 됩니다. <br /><br />
+
+                              <em>
+                                ※ <br />
+                                본 기능은 시험적용으로 추후 운영방침이 개선 될 수 있습니다.
+                              </em>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- //body -->
+                      </div>
+                      <!-- // content -->
+                    </div>
+                    <!-- // dialog -->
+                  </div>
+                  <!-- // -->
+
+                  <!-- Modal -->
+                  <div class="modal fade custom-modal1" id="calleduser" data-bs-backdrop="static" tabindex="-1" aria-labelledby="게시물신고" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- // -->
+                        <div class="modal-body">
+                          <div class="colled-w">
+                            <div class="top">
+                              <strong>게시물 신고하기</strong>
+                              <span><em class="dn">에너지만땅</em>님 게시물 신고 이유를 남겨주세요.</span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="ch-reason rmt-25">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist01" checked />
+                                <label class="form-check-label" for="reasonlist01"> 욕설/타인에 대한 비방 </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist02" />
+                                <label class="form-check-label" for="reasonlist02"> 광고(돈벌기, 행운의편지 등) </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist03" />
+                                <label class="form-check-label" for="reasonlist03"> 도배(같은 글 반복 게시) </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist04" />
+                                <label class="form-check-label" for="reasonlist04"> 악성코드/바이러스 유포 </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist05" />
+                                <label class="form-check-label" for="reasonlist05"> 시비분쟁/스토킹 </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist06" />
+                                <label class="form-check-label" for="reasonlist06"> 음란내용/선정성 </label>
+                              </div>
+                              <!-- // -->
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" id="reasonlist07" />
+                                <label class="form-check-label" for="reasonlist07"> 기타 </label>
+                              </div>
+                              <!-- // -->
+                              <div class="form-floating">
+                                <textarea class="form-control" placeholder="기타사유를 작성해주세요" id="etcContent" style="height: 62px"></textarea>
+                                <label for="etcContent">기타사유</label>
+                              </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="colled-guide">
+                              ※ <br />
+                              부당한 신고일 경우 신고자의 활동이 제한될 수 있으니 신중하게 결정해 주세요.
+                            </div>
+                            <!-- // -->
+                          </div>
+                          <!-- //colled-w -->
+                        </div>
+                        <!-- // body -->
+
+                        <div class="modal-footer">
+                          <button class="btn-custom-primary">확인</button>
+                          <button class="btn-custom-default" data-bs-dismiss="modal">취소</button>
+                        </div>
+                        <!-- //footer -->
+                      </div>
+                      <!-- // content-->
+                    </div>
+                    <!-- //dialog -->
+                  </div>
+                  <!-- // modal -->
+                </div>
+                <!-- //opn-btn-group -->
+              </div>
+              <!-- // -->
+
+              <div class="recomment">
+                <div class="tit">
+                  <strong>댓글</strong>
+                  <span data-bs-toggle="collapse" data-bs-target="#recmt">
+                    <em class="on">댓글접기</em>
+                    <em class="off">댓글펼침</em>
+                  </span>
+                </div>
+                <!-- // -->
+                <div class="inputarea">
+                  <div class="notInput">
+                    <div class="input-group">
+                      <input type="text" class="form-control" data-bs-toggle="collapse" data-bs-target="#inputrecmt" placeholder="댓글을 입력하세요." disabled />
+                      <button class="btn btn-primary" type="button" id="">등록</button>
+                    </div>
+                  </div>
+                  <!-- //입력전 화면 사용되지 않음 -->
+
+                  <div id="inputrecmt" class="clickInput collapse">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
+                    <div class="d-block text-center rmt-10">
+                      <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
+                      <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
+                    </div>
+                  </div>
+                  <!-- //입력화면 -->
+                </div>
+                <!-- //댓글 입력 영역 -->
+
+                <div id="recmt" class="listarea collapse show">
+                  <div class="list">
+                    <div class="top">
+                      <span class="name">여섯자리필명</span>
+                      <span class="date">02/22 13:31 (118.***.***.**)</span>
+                    </div>
+                    <div class="txt">
+                      달려라 달려라 달려라 하니<br />
+                      얄리얄라 얄라셩 얄라리 얄라 <br />
+                      푸른하늘 은하수
+                    </div>
+                    <!-- // -->
+                    <div class="wr-btn text-end">
+                      <div class="wr-btn-group">
+                        <button>수정하기</button>
+                        <button>삭제하기</button>
+                      </div>
+                    </div>
+
+                    <div class="button">
+                      <button class="btn-custom-board float-start" data-bs-toggle="collapse" data-bs-target="#reinput1">댓글</button>
+                      <button class="btn-custom-board float-start rml-3">블라인드</button>
+                      <div class="right float-end">
+                        <button class="btn-custom-board up">12</button>
+                        <button class="btn-custom-board dn">7</button>
+                        <button class="btn-custom-board">신고</button>
+                      </div>
+                    </div>
+                    <!-- //button -->
+
+                    <div id="reinput1" class="clickInput collapse rmt-10">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
+                      <div class="d-block text-center rmt-10">
+                        <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
+                        <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
+                      </div>
+                    </div>
+                    <!-- //입력화면 -->
+                  </div>
+                  <!-- //list -->
+                  <div class="list re">
+                    <div class="top">
+                      <div class="name">여섯자리필명</div>
+                      <div class="date">02/22 13:31 (118.***.***.**)</div>
+                    </div>
+                    <div class="txt">
+                      <span class="writer"><em>이상한아저씨</em>님</span> 달려라 달려라 달려라 하니<br />
+                      얄리얄라 얄라셩 얄라리 얄라 <br />
+                      푸른하늘 은하수
+                    </div>
+                    <!-- // -->
+                    <div class="wr-btn text-end">
+                      <div class="wr-btn-group">
+                        <button>수정하기</button>
+                        <button>삭제하기</button>
+                      </div>
+                    </div>
+
+                    <div class="button">
+                      <button class="btn-custom-board float-start" data-bs-toggle="collapse" data-bs-target="#reinput1">댓글</button>
+                      <button class="btn-custom-board float-start rml-3">블라인드</button>
+                      <div class="right float-end">
+                        <button class="btn-custom-board up">12</button>
+                        <button class="btn-custom-board dn">7</button>
+                        <button class="btn-custom-board">신고</button>
+                      </div>
+                    </div>
+                    <!-- //button -->
+
+                    <div id="reinput2" class="clickInput collapse rmt-10">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."></textarea>
+                      <div class="d-block text-center rmt-10">
+                        <button class="btn-custom btn-custom-primary doneradius caromini">등록</button>
+                        <button class="btn-custom btn-custom-default doneradius caromini" data-bs-toggle="collapse" data-bs-target="#inputrecmt">취소</button>
+                      </div>
+                    </div>
+                    <!-- //입력화면 -->
+                  </div>
+                  <!-- //list -->
+
+                  <div class="list del">
+                    <span>삭제된 댓글입니다.</span>
+                  </div>
+                  <!-- //list -->
+                </div>
+                <!-- //댓글 리스트 -->
+
+                <div class="shorcutBtn d-block w-100 rmt-20 noPadding float-start">
+                  <button class="btn-outline-detail w-100">더보기&nbsp;&nbsp;+</button>
+                </div>
+                <!-- / -->
+              </div>
+              <!-- // 댓글  -->
+
+              <div class="boardlatest">
+                <dl>
+                  <dt class="prev">이전글</dt>
+                  <dd class="text-truncate">거래소 외국인 순매도상위에 금융업거래소 외국인 순매도상위에 금융업</dd>
+                  <dt class="next">다음글</dt>
+                  <dd class="text-truncate">거래소 외국인 순매도상위에 금융업거래소 외국인 순매도상위에 금융업</dd>
+                </dl>
+
+                <div class="board-btm float-start clearfix noPadding rmt-20">
+                  <button class="btn btn-custom-board pagetop float-end">맨위로</button>
+                </div>
+
+                <script>
+                  const wtop = document.querySelector(".pagetop");
+
+                  wtop.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                  });
+                </script>
+              </div>
+              <!-- // -->
+            </div>
+            <!-- // board-->
+          </section>
+        </main>
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인" />
+              <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전" />
+              <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드" />
+              <figcaption class="figure-caption text-center">씽크풀앱<br />다운로드</figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+            <span class="d-block">
+              본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+
+      <!-- bootstrap js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <!-- //bootstrap js -->
     </div>
     <!-- //app -->
-
-    
-    
   </body>
 </html>
