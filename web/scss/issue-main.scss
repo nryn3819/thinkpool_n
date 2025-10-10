@@ -354,6 +354,9 @@
           &:first-child{
             margin-top:0;
           }
+          &:last-child{
+            border-bottom:0;
+          }
 
           .date{
             line-height:18px;
