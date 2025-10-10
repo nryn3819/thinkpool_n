@@ -1,325 +1,389 @@
 //isuue home
 
-.ch_today{
-    display:block;
-    margin-left:110px;
-    padding-top:10px;
-    float:Left;
+.ch_today {
+  display: block;
+  margin-left: 110px;
+  padding-top: 10px;
+  float: Left;
 
-    span{
-        font-size:14px;
-        color:#999;
-        font-weight: 400;
-        cursor:pointer;
-    }
+  span {
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    cursor: pointer;
+  }
 
-    strong{
-        font-size:14px;
-        color:#333;
-        font-weight:700;
-    }
+  strong {
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+  }
 
-    button{
-        background:none;
-        border:0;
-        outline:0;
-        cursor:pointer;
-        font-size:14px;
-        color:#333;
-        font-weight:700;
-    }
+  button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+  }
 }
 
-.issue-nav-list{
-    position:relative;
-    display:block;
-    width:100%;
-    min-height:54px;
+.issue-nav-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 54px;
 
-    .bx-wrapper{
-        max-width:955px !important;
+  .bx-wrapper {
+    max-width: 955px !important;
+  }
+
+  .bx-prev {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    z-index: 99;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 31px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Dotum;
+    color: #d8d8d8;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid #3e73ed;
+      background: #3e73ed;
+      color: #fff;
     }
 
-    .bx-prev{
-        position:absolute;
-        top:10px;
-        left:-15px;
-        z-index:99;
-        background:#fff;
-        width:30px;
-        height:30px;
-        line-height:31px;
-        text-align:center;
-        font-size:20px;
-        font-family: Dotum;
-        color:#d8d8d8;
-        font-weight:500;
-        border-radius:30px;
-        border:1px solid #d6d6d6;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-        text-decoration: none;
-
-        &:hover{
-            border:1px solid #3e73ed;
-            background:#3e73ed;
-            color:#fff;
-        }
-        
-        &.disabled{
-            display:none;
-        }
+    &.disabled {
+      display: none;
     }
-    .bx-next{
-        position:absolute;
-        top:10px;
-        right:-15px;
-        z-index:99;
-        background:#fff;
-        width:30px;
-        height:30px;
-        line-height:31px;
-        text-align:center;
-        font-size:21px;
-        font-family: Dotum;
-        color:#d8d8d8;
-        font-weight:500;
-        border-radius:30px;
-        border:1px solid #d6d6d6;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-        text-decoration: none;
+  }
+  .bx-next {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    z-index: 99;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 31px;
+    text-align: center;
+    font-size: 21px;
+    font-family: Dotum;
+    color: #d8d8d8;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 
-        &:hover{
-            border:1px solid #3e73ed;
-            background:#3e73ed;
-            color:#fff;
-        }
-        
-        &.disabled{
-            display:none;
-        }
+    &:hover {
+      border: 1px solid #3e73ed;
+      background: #3e73ed;
+      color: #fff;
     }
 
-    .list-w{
+    &.disabled {
+      display: none;
+    }
+  }
 
-        .list{
-            display:block;
-            width:calc(100% / 6);
-            border:1px solid #d7d7d7;
-            height:54px;
-            line-height:52px;
-            text-align:center;
+  .list-w {
+    .list {
+      display: block;
+      width: calc(100% / 6);
+      border: 1px solid #d7d7d7;
+      height: 54px;
+      line-height: 52px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;
+      float: left;
+      cursor: pointer;
+      border-right: 0;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        float: left;
+      }
+
+      &:last-child {
+        border-right: 1px solid #d7d7d7;
+      }
+      &:hover,
+      &.active {
+        background: #3e73ed;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.issue_obj {
+  height: 60px;
+  line-height: 60px;
+  background: #3e73ed;
+
+  strong {
+    color: #fff;
+  }
+}
+
+.issue_top {
+  display: block;
+  clear: both;
+
+  .tit {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font: {
+      size: 24px;
+      weight: 700;
+    }
+    color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .txt {
+    display: block;
+    margin-top: 20px;
+    padding: 0 10px;
+    font : {
+      size: 15px;
+      weight: 400;
+    }
+    color: #666;
+    line-height: 30px;
+
+    a {
+      font : {
+        size: 13px;
+        weight: 400;
+      }
+      color: #3e73ed;
+    }
+  }
+}
+
+.issue_und {
+  display: block;
+
+  .chartbox {
+    //border:1px solid #d7d7d7;
+    min-height: 300px;
+  }
+
+  .article_list {
+    display: block;
+    padding: 0 5px;
+    ul {
+      display: block;
+      width: 100%;
+
+      li {
+        display: block;
+        width: 100%;
+        float: left;
+
+        a {
+          height: 40px;
+          line-height: 40px;
+          font-size: 15px;
+          color: #333;
+          font-weight: 400;
+          cursor: pointer;
+          &:hover {
+            .obj {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .obj {
+          display: block;
+          width: 620px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding-right: 10px;
+          float: left;
+        }
+        .enp {
+          display: block;
+          width: 210px;
+          float: left;
+          text-align: center;
+        }
+        .date {
+          display: block;
+          width: 118px;
+          float: left;
+          text-align: right;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.issue_info {
+  display: block;
+  width: 100%;
+  float: left;
+
+  .nav-tabs {
+    li {
+      a {
+        em {
+          padding: 0 4px;
+          height: 17px;
+          align-items: center;
+          border-radius: 4px;
+          background: #3e72ed;
+          font-size: 12px;
+          color: #fff;
+          display: inline-flex;
+          font-style: normal;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      .chartbox {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        ul {
+          display: block;
+          width: 100%;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          li {
+            display: block;
+            text-align: center;
+            width: 300px;
+            height: 240px;
+            background: #fefefe;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            float: left;
+            margin: {
+              bottom: 25px;
+            }
+            &:nth-child(3n-1) {
+              margin: 0 29px;
+            }
+
+            strong {
+              display: block;
+              text-align: center;
+              padding-top: 20px;
+              font: {
+                size: 16px;
+                weight: 500;
+              }
+              color: #333;
+            }
+
+            .chartImg {
+              display: inline-block;
+              margin-top: 15px;
+              width: 290px;
+              height: auto;
+              background: #fff;
+
+              img {
+                width: 100%;
+                //max-height:165px;
+              }
+            }
+          }
+        }
+        .date {
+          position: absolute;
+          top: -33px;
+          right: 3px;
+          font-size: 13px;
+          font-weight: 400;
+          color: #999;
+        }
+      }
+      &#tab02 {
+        .table_w {
+          padding-top: 20px;
+        }
+      }
+      .history_list_w {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .history_list {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding-bottom:20px;
+          border-bottom: 1px solid #d7d7d7;
+          margin-top:20px;
+
+          &:first-child{
+            margin-top:0;
+          }
+
+          .date{
+            line-height:18px;
+            font-size:15px;
+            color:#3e72ed;
+            font-weight:400;
+          }
+          .obj{
+            margin-top:10px;
             font-size:16px;
-            font-weight: 400;
             color:#333;
-            float:left;
-            cursor:pointer;
-            border-right:0;
+            font-weight:700;
+            line-height:20px;
+          }
+          .cont{
+            margin-top:10px;
+            line-height:25px;
+            font-size:15px;
+            color:#666;
+            font-weight:400;
 
-            span{
-                display:block;
-                width:100%;
-                height:54px;
-                line-height:54px;
-                float:left;
+            a{
+                display:inline;
+                color:#3e72ed;
+                font-size:13px;
+                font-weight:400;
             }
-
-            &:last-child{
-                border-right:1px solid #d7d7d7;
-            }
-            &:hover, &.active{
-                background:#3e73ed;
-                color:#fff;
-                font-weight:700;
-            }
+          }
         }
+      }
     }
-}
-
-.issue_obj{
-    height:60px;
-    line-height:60px;
-    background:#3e73ed;
-
-    strong{
-        color:#fff;
-    }
-}
-
-.issue_top{
-    display:block;
-    clear:both;
-
-    .tit{
-        display:block;
-        width:100%;
-        height:30px;
-        line-height:30px;
-        font: {
-            size:24px;
-            weight:700;
-        }
-        color:#333;
-        text-overflow: ellipsis;
-        overflow:hidden;
-        white-space: nowrap;
-    }
-
-    .txt{
-        display:block;
-        margin-top:20px;
-        padding:0 10px;
-        font : {
-            size:15px;
-            weight:400;
-        }
-        color:#666;
-        line-height:30px;
-
-        a{
-            font : {
-                size:13px;
-                weight:400;
-            }
-            color:#3e73ed;
-        }
-    }
-}
-
-.issue_und{
-    display:block;
-
-    .chartbox{
-        //border:1px solid #d7d7d7;
-        min-height:300px;
-    }
-
-    .article_list{
-        display:block;
-        padding:0 5px;
-        ul{
-            display:block;
-            width:100%;
-
-            li{
-                display:block;
-                width:100%;
-                float:left;
-                
-
-                a{
-                    height:40px;
-                    line-height:40px;
-                    font-size:15px;
-                    color:#333;
-                    font-weight: 400;
-                    cursor:pointer;
-                    &:hover{
-                        .obj{
-                            text-decoration: underline;
-                        }
-                    }
-                }
-
-                .obj{
-                    display:block;
-                    width:620px;
-                    overflow:hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    padding-right:10px;
-                    float:left;
-                }
-                .enp{
-                    display:block;
-                    width:210px;
-                    float:left;
-                    text-align:center;
-                }
-                .date{
-                    display:block;
-                    width:118px;
-                    float:left;
-                    text-align:right;
-                    color:#999;
-                }
-            }
-        }
-    }
-}
-
-.issue_info{
-    display:block;
-    width:100%;
-    float:left;
-
-    .tab-content{
-        .tab-pane{
-            .chartbox{
-                position:relative;
-                display:block;
-                width:100%;
-
-                ul{
-                    display:block;
-                    width:100%;
-                    justify-content: space-between;
-                    flex-wrap:wrap;
-
-                    li{
-                        display:block;
-                        text-align:center;
-                        width:300px;
-                        height:240px;
-                        background:#fefefe;
-                        border:1px solid #ccc;
-                        border-radius: 5px;
-                        float:left;
-                        margin: {
-                            bottom:25px;
-                        }
-                        &:nth-child(3n-1){
-                            margin:0 29px;
-                        }
-
-                        strong{
-                            display:block;
-                            text-align:center;
-                            padding-top:20px;
-                            font: {
-                                size:16px;
-                                weight:500;
-                            }
-                            color:#333;
-                        }
-
-                        .chartImg{
-                            display:inline-block;
-                            margin-top:15px;
-                            width:290px;
-                            height:auto;
-                            background:#fff;
-
-                            img{
-                                width:100%;
-                                //max-height:165px;
-                            }
-                        }
-                    }
-                }
-                .date{
-                    position:absolute;
-                    top:-33px;
-                    right:3px;
-                    font-size:13px;
-                    font-weight: 400;
-                    color:#999;
-                }
-            }
-            &#tab02{
-                .table_w{
-                    padding-top:20px;
-                }
-            }
-        }
-    }
+  }
 }
