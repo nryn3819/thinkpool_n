@@ -3,403 +3,451 @@
 ////////////////////////////////
 
 $(function () {
+  $('[data-toggle="modal"]').removeAttr("href");
 
-    $('[data-toggle="modal"]').removeAttr('href');
+  //메인 슬라이더
+  $(".text-banner_w").bxSlider({
+    auto: true,
+    mode: "vertical",
+    control: false,
+    infiniteLoop: false,
+    minSlides: 1,
+    maxSlides: 1,
+    moveSlides: 1,
+    nextText: "",
+    prevText: "",
+    hideControlOnEnd: true
+  });
 
-    //메인 슬라이더
-    $('.text-banner_w').bxSlider({
-        auto:true,
-        mode: 'vertical',
-        control: false,
-        infiniteLoop: false,
-        minSlides: 1,
-        maxSlides: 1,
-        moveSlides: 1,
-        nextText: '',
-        prevText: '',
-        hideControlOnEnd: true
+  //이슈홈 슬라이더
+  var issueNavList = $(".issue-nav-list .list-w .list").length;
+  var issueListIndex = $(".issue-nav-list .list-w .active").index();
+
+  $(".issue-nav-list .list-w .list").on("click", function () {
+    $(".issue-nav-list .list-w .list").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  if (issueNavList > 6) {
+    $(".issue-nav-list .list-w").bxSlider({
+      mode: "horizontal",
+      pager: false,
+      minSlides: 1,
+      maxSlides: 6,
+      moveSlides: 6,
+      slideMargin: 0,
+      slideWidth: 958 / 6,
+      startSlide: issueListIndex,
+      infiniteLoop: false,
+      nextText: ">",
+      prevText: "<",
+      preventDefaultSwipeX: false,
+      touchEnabled: false,
+      hideControlOnEnd: true
+    });
+  }
+
+  // ⭐️ 다음/이전 버튼 클릭 이벤트 처리
+  if (issueNavList > 6) {
+    // issueListIndex가 0보다 클 경우, 시작 슬라이드에 맞춰 현재 active 인덱스를 설정합니다.
+    // bxSlider의 startSlide는 실제 li 인덱스가 아닌 슬라이드(묶음) 인덱스입니다.
+    // moveSlides: 6 이므로, 0, 6, 12...가 묶음의 시작 인덱스가 됩니다.
+    let currentActiveIndex = issueListIndex - (issueListIndex % 6);
+    const $listItems = $(".issue-nav-list .list-w .list");
+    const itemsPerSlide = 6;
+    const totalItems = $listItems.length;
+
+    // '다음' 버튼 클릭 이벤트
+    $(".bx-next").on("click", function () {
+      // 다음 묶음의 첫 번째 요소 인덱스 계산
+      const nextIndex = currentActiveIndex + itemsPerSlide;
+
+      // 슬라이더의 마지막 묶음을 넘어가지 않는지 확인 (hideControlOnEnd: true 사용 시)
+      if (nextIndex < totalItems) {
+        // 1. 기존 active 제거
+        $listItems.removeClass("active");
+
+        // 2. 새로운 묶음의 첫 번째 li에 active 추가
+        $listItems.eq(nextIndex).addClass("active");
+
+        // 3. 인덱스 업데이트
+        currentActiveIndex = nextIndex;
+      }
     });
 
-    //이슈홈 슬라이더
-    var issueNavList = $('.issue-nav-list .list-w .list').length;
-    var issueListIndex = $('.issue-nav-list .list-w .active').index();
+    // '이전' 버튼 클릭 이벤트
+    $(".bx-prev").on("click", function () {
+      // 이전 묶음의 첫 번째 요소 인덱스 계산
+      const prevIndex = currentActiveIndex - itemsPerSlide;
 
-    $('.issue-nav-list .list-w .list').on('click', function(){
-        $('.issue-nav-list .list-w .list').removeClass('active');
-        $(this).addClass('active');
+      // 슬라이더의 첫 번째 묶음보다 작아지지 않는지 확인 (hideControlOnEnd: true 사용 시)
+      if (prevIndex >= 0) {
+        // 1. 기존 active 제거
+        $listItems.removeClass("active");
+
+        // 2. 새로운 묶음의 첫 번째 li에 active 추가
+        $listItems.eq(prevIndex).addClass("active");
+
+        // 3. 인덱스 업데이트
+        currentActiveIndex = prevIndex;
+      }
+    });
+  }
+
+  //상단배너 가리기
+  $(".top_close").on("click", function () {
+    $(".top_w").slideUp();
+  });
+
+  //전체메뉴보기
+  $(".allmenu").on("click", function () {
+    $("#allmenu").modal("toggle");
+  });
+
+  //우측메뉴 높이값
+  let sideTop = $("#content").offset();
+  let headerH = $("#header_w").height();
+  $("#c_side").css({
+    top: sideTop.top - headerH + "px"
+  });
+
+  //우측메뉴 종목리스트 오버
+
+  //우측메뉴 종목리스트 슬라이드
+  const s_menuLenth = $(".s_m01 li").length;
+
+  if (s_menuLenth > 8) {
+    $(".s_menu_control").removeClass("disabled");
+
+    const slider = $(".s_m01 .s_list").bxSlider({
+      mode: "vertical",
+      //control: false,
+      pager: false,
+      infiniteLoop: false,
+      minSlides: 8,
+      maxSlides: 8,
+      moveSlides: 1,
+      nextText: "",
+      prevText: "",
+      hideControlOnEnd: true,
+      touchEnabled: false,
+      oneToOneTouch: false
     });
 
-    
-    if(issueNavList > 6){
-        $('.issue-nav-list .list-w').bxSlider({
-            mode: 'horizontal',
-            pager: false,
-            minSlides: 1,
-            maxSlides: 6,
-            moveSlides: 1,
-            slideMargin: 0,
-            slideWidth: 958 / 6,
-            startSlide : issueListIndex,
-            //infiniteLoop:false,
-            nextText: '>',
-            prevText: '<',
-            preventDefaultSwipeX: false,
-            touchEnabled: false,
-            hideControlOnEnd: true
-        });
+    $(".s_menu_control .next").on("click", function () {
+      slider.goToNextSlide();
+      return false;
+    });
+    $(".s_menu_control .prev").on("click", function () {
+      slider.goToPrevSlide();
+      return false;
+    });
+  }
+
+  //우측메뉴 탭스크립트
+  $("#myTab a").on("click", function (e) {
+    e.preventDefault();
+    $(this).tab("show");
+  });
+
+  //종목홈 top 관심종목 on/off
+  $(".ins").on("click", function () {
+    $(this).toggleClass("act");
+  });
+
+  //게시판 blind 링크 삭제
+  let tblBlind = $(".board_tbl table tbody tr.blind td a");
+  tblBlind.removeAttr("href");
+  $(".board .latest_list li.active a").removeAttr("href");
+
+  //게시판 검색 안내버튼
+  $(".board_sch")
+    .find(".guide")
+    .on("click", function () {
+      $(".layer_guide").fadeIn();
+
+      $("button.close span").on("click", function () {
+        $(".layer_guide").fadeOut();
+      });
+    });
+
+  $(".fav-item").on("click", function () {
+    $(this).toggleClass("active");
+  });
+
+  //게시판 댓글
+  $(".recmmt").on("click", function () {
+    $(this).parents(".cmmtBox").find(".re_cmmt_input").toggle();
+  });
+
+  //공유하기
+  $(".btn-share").on("click", function () {
+    $(".share_pop").fadeIn();
+    $(".share_pop")
+      .find(".ly_close")
+      .children("button")
+      .on("click", function () {
+        $(".share_pop").fadeOut();
+      });
+  });
+  $(".btn-share2").on("click", function () {
+    $(".share_pop2").fadeIn();
+    $(".share_pop2")
+      .find(".ly_close")
+      .children("button")
+      .on("click", function () {
+        $(".share_pop2").fadeOut();
+      });
+  });
+
+  //운영배심원
+  $(".btn-operjr").on("click", function () {
+    $(".operjr_guide").fadeIn();
+    $(".operjr_guide")
+      .find(".ly_close")
+      .children("button")
+      .on("click", function () {
+        $(".operjr_guide").fadeOut();
+      });
+  });
+
+  let opjrbtn = $(".operationjuror ul li a");
+
+  $(opjrbtn).on("click", function () {
+    $(this).toggleClass("active");
+  });
+
+  $(".vote li").on("click", function () {
+    $(this).toggleClass("on");
+  });
+
+  //글쓰기 파일업로드
+
+  var fileTarget = $(".filebox .upload-hidden");
+
+  fileTarget.on("change", function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split("/").pop().split("\\").pop();
     }
-    
 
-    //상단배너 가리기
-    $('.top_close').on('click', function () {
-        $('.top_w').slideUp();
-    });
+    $(this).siblings(".upload-name").val(filename);
+  });
 
+  //추천종목 아이템리스트
 
-    //전체메뉴보기
-    $('.allmenu').on('click', function () {
-        $('#allmenu').modal('toggle');
-    });
+  var rmdItemList2 = $(".left_item li").length;
 
-    //우측메뉴 높이값
-    let sideTop = $('#content').offset();
-    let headerH = $('#header_w').height();
-        $('#c_side').css({
-            top: sideTop.top - headerH + 'px'
-        });
-
-    //우측메뉴 종목리스트 오버
-    
-
-    //우측메뉴 종목리스트 슬라이드
-    const s_menuLenth = $('.s_m01 li').length;
-
-    if (s_menuLenth > 8) {
-        $('.s_menu_control').removeClass('disabled');
-
-        const slider = $('.s_m01 .s_list').bxSlider({
-            mode: 'vertical',
-            //control: false,
-            pager: false,
-            infiniteLoop: false,
-            minSlides: 8,
-            maxSlides: 8,
-            moveSlides: 1,
-            nextText: '',
-            prevText: '',
-            hideControlOnEnd: true,
-            touchEnabled: false,
-            oneToOneTouch: false
-        });
-
-        $('.s_menu_control .next').on('click', function(){
-            slider.goToNextSlide();
-            return false;
-        });
-        $('.s_menu_control .prev').on('click', function () {
-            slider.goToPrevSlide();
-            return false;
-        });
+  if (rmdItemList2 < 8) {
+    for (var i = 0; i < 8 - rmdItemList2; i++) {
+      $(".left_item").append("<li class='disabled'><a></a></li>");
     }
+  }
 
-    //우측메뉴 탭스크립트
-    $('#myTab a').on('click', function (e) {
-        e.preventDefault()
-        $(this).tab('show')
+  var rmdItemList = $(".left_item li").length;
+
+  if (rmdItemList >= 7) {
+    var slider2 = $(".left_item").bxSlider({
+      mode: "vertical",
+      pager: false,
+      infiniteLoop: false,
+      minSlides: 8,
+      maxSlides: 8,
+      moveSlides: 1,
+      hideControlOnEnd: true,
+      touchEnabled: false,
+      nextText: '<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>',
+      prevText: '<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>'
+    });
+    slider2.reloadSlider();
+  }
+
+  //프린트버튼
+
+  // 폰트사이즈조절
+
+  var lcvText = $(".listContentView .cont"),
+    lcvLink = $(".listContentView .cont .txt a");
+
+  $(".btn-font").bind("click", function () {
+    var fsize = parseInt($(".listContentView .cont .txt").css("font-size"));
+
+    if (fsize < 20) {
+      lcvText.css({
+        "font-size": fsize + 2 + "px",
+        "line-height": fsize + 10 + "px"
+      });
+      lcvLink.css("font-size", fsize + 2 + "px");
+    } else if (fsize >= 20) {
+      lcvText.css({
+        "font-size": "15px",
+        "line-height": "25px"
+      });
+      lcvLink.css("font-size", "15px");
+    }
+  });
+
+  //signal
+
+  $(".rb_info")
+    .popover({
+      trigger: "manual",
+      html: true,
+      placement: "right",
+      container: ".aisignal_w .info"
     })
+    .on("mouseenter", function () {
+      var _this = this;
 
-    //종목홈 top 관심종목 on/off
-    $('.ins').on('click', function(){
-        $(this).toggleClass('act');
-    });
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover("hide");
+      });
+    })
+    .on("mouseleave", function () {
+      var _this = this;
 
-    //게시판 blind 링크 삭제
-    let tblBlind = $('.board_tbl table tbody tr.blind td a');
-    tblBlind.removeAttr("href");
-    $('.board .latest_list li.active a').removeAttr('href');
-
-    //게시판 검색 안내버튼
-    $('.board_sch').find('.guide').on('click', function(){
-        $('.layer_guide').fadeIn();
-
-        $('button.close span').on('click', function () {
-            $('.layer_guide').fadeOut();
-        });
-    });
-
-    $('.fav-item').on('click', function(){
-        $(this).toggleClass('active');
-    });
-
-
-    //게시판 댓글
-    $('.recmmt').on('click', function(){
-        $(this).parents('.cmmtBox').find('.re_cmmt_input').toggle();
-    });
-
-    //공유하기
-    $('.btn-share').on('click', function(){
-        $('.share_pop').fadeIn();
-        $('.share_pop').find('.ly_close').children('button').on('click', function(){
-            $('.share_pop').fadeOut();
-        });
-    });
-    $('.btn-share2').on('click', function(){
-        $('.share_pop2').fadeIn();
-        $('.share_pop2').find('.ly_close').children('button').on('click', function(){
-            $('.share_pop2').fadeOut();
-        });
-    });
-
-    //운영배심원
-    $('.btn-operjr').on('click', function () {
-        $('.operjr_guide').fadeIn();
-        $('.operjr_guide').find('.ly_close').children('button').on('click', function () {
-            $('.operjr_guide').fadeOut();
-        });
-    });
-
-    let opjrbtn = $('.operationjuror ul li a');
-
-    $(opjrbtn).on('click', function(){
-        $(this).toggleClass('active');
-    });
-
-    $('.vote li').on('click', function(){
-        $(this).toggleClass('on');
-    });
-
-
-    //글쓰기 파일업로드
-
-    var fileTarget = $('.filebox .upload-hidden');
-
-    fileTarget.on('change', function () {
-        if (window.FileReader) {
-            var filename = $(this)[0].files[0].name;
-        } else {
-            var filename = $(this).val().split('/').pop().split('\\').pop();
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
         }
-
-        $(this).siblings('.upload-name').val(filename);
+      });
     });
 
+  $(".overGuide")
+    .popover({
+      trigger: "manual",
+      html: true,
+      placement: "bottom",
+      container: ".signal_condition"
+    })
+    .on("mouseenter", function () {
+      var _this = this;
 
-    //추천종목 아이템리스트
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover("hide");
+      });
+    })
+    .on("mouseleave", function () {
+      var _this = this;
 
-    var rmdItemList2 = $('.left_item li').length;
-
-    if(rmdItemList2 < 8){
-        for(var i = 0; i < (8 - rmdItemList2); i++){
-            $('.left_item').append("<li class='disabled'><a></a></li>");
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
         }
-    }
-
-    var rmdItemList = $('.left_item li').length;
-
-    if (rmdItemList >= 7) {
-
-        var slider2 = $('.left_item').bxSlider({
-            mode: 'vertical',
-            pager: false,
-            infiniteLoop: false,
-            minSlides: 8,
-            maxSlides: 8,
-            moveSlides: 1,
-            hideControlOnEnd: true,
-            touchEnabled: false,
-            nextText: '<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>',
-            prevText: '<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>'
-        });
-        slider2.reloadSlider();
-    }
-
-
-
-    //프린트버튼
-
-    // 폰트사이즈조절
-
-    var lcvText = $('.listContentView .cont'),
-        lcvLink = $('.listContentView .cont .txt a');
-    
-
-    $('.btn-font').bind('click', function(){
-        var fsize = parseInt($('.listContentView .cont .txt').css('font-size'));
-
-        if(fsize < 20){
-            lcvText.css({
-                "font-size" : fsize + 2 + "px",
-                "line-height" : fsize + 10 + "px"
-            });
-            lcvLink.css('font-size', fsize + 2 + "px");
-
-        }else if(fsize >= 20){
-            lcvText.css({
-                "font-size" : "15px",
-                "line-height" : "25px"
-            });
-            lcvLink.css('font-size',  "15px");
-        }
+      });
     });
 
+  //report
 
-    //signal
-
-    $('.rb_info').popover({
-        trigger: 'manual',
-        html: true,
-        placement : 'right',
-        container : '.aisignal_w .info'
-    }).on('mouseenter', function () {
+  $(function () {
+    $(".table a[data-toggle='popover']")
+      .popover({
+        trigger: "manual",
+        placement: "bottom"
+      })
+      .on("mouseenter", function () {
         var _this = this;
 
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
+        $(this).popover("show");
+        $(".popover").on("mouseleave", function () {
+          $(_this).popover("hide");
         });
-    }).on('mouseleave', function () {
+      })
+      .on("mouseleave", function () {
         var _this = this;
 
         setTimeout(function () {
-            if (!$('.popover:hover').length) {
-                $(_this).popover('hide');
-            }
+          if (!$(".popover:hover").length) {
+            $(_this).popover("hide");
+          }
         });
-    });
-
-    $('.overGuide').popover({
-        trigger: 'manual',
-        html: true,
-        placement : 'bottom',
-        container : '.signal_condition'
-    }).on('mouseenter', function () {
+      })
+      .on("click", function () {
         var _this = this;
+        $(_this).popover("hide");
+      });
+  });
 
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
-        });
-    }).on('mouseleave', function () {
-        var _this = this;
+  //adviser
+  $(".p_num_submit").on("click", function () {
+    $(".a_num_input").show();
+  });
 
-        setTimeout(function () {
-            if (!$('.popover:hover').length) {
-                $(_this).popover('hide');
-            }
-        });
+  $(".pNumCheck").on("click", function () {
+    var thisBtn = $(this),
+      thisModal = "#" + $(this).parents(".modal").attr("id");
+
+    $(thisModal).modal("hide");
+    $(thisModal).on("hidden.bs.modal", function (e) {
+      var nextModal = $(thisBtn).attr("data-target");
+      $(nextModal).modal({
+        show: true,
+        keyboard: false,
+        backdrop: "static"
+      });
+      $(this).off("hidden.bs.modal");
     });
+  });
+  // 팝업내 팝업
 
-    //report
-
-    $(function(){
-        $(".table a[data-toggle='popover']").popover({
-            trigger: 'manual',
-            placement: 'bottom'
-        }).on('mouseenter', function () {
-            var _this = this;
-    
-            $(this).popover('show');
-            $('.popover').on('mouseleave', function () {
-                $(_this).popover('hide');
-            });
-        }).on('mouseleave', function () {
-            var _this = this;
-    
-            setTimeout(function () {
-                if (!$('.popover:hover').length) {
-                    $(_this).popover('hide');
-                }
-            });
-        }).on("click", function(){
-            var _this = this;
-            $(_this).popover('hide');
-        });
-    });
-
-    //adviser
-    $('.p_num_submit').on('click', function(){
-        $('.a_num_input').show();
-    });
-    
-
-    $('.pNumCheck').on('click', function(){
-        var thisBtn = $(this),
-            thisModal = '#' + $(this).parents('.modal').attr('id');
-
-        $(thisModal).modal('hide');
-        $(thisModal).on('hidden.bs.modal', function(e){
-            var nextModal = $(thisBtn).attr('data-target');
-            $(nextModal).modal({
-                show : true,
-                keyboard: false,
-                backdrop: 'static'
-            });
-            $(this).off('hidden.bs.modal');
-        });
-    });
-    // 팝업내 팝업
-
-    $('.o-top').popover({
-        trigger: 'manual',
-        html: true,
-        placement : 'top',
-        container : 'body'
-    }).on('mouseenter', function () {
-        var _this = this;
-
-        $(this).popover('show');
-        $('.popover').on('mouseleave', function () {
-            $(_this).popover('hide');
-        });
-    }).on('mouseleave', function () {
-        var _this = this;
-
-        setTimeout(function () {
-            if (!$('.popover:hover').length) {
-                $(_this).popover('hide');
-            }
-        });
-    });
-
-    //module
-
-
-
-    $('.modulebox .left').each(function (index, item){
-        var moduleLeftHeight = $(item).next('.right').height();
-
-        $(item).height(moduleLeftHeight + 'px');
+  $(".o-top")
+    .popover({
+      trigger: "manual",
+      html: true,
+      placement: "top",
+      container: "body"
     })
+    .on("mouseenter", function () {
+      var _this = this;
 
-    
-
-    $('.mod .left').each(function (index, item){
-        var moduleLeftHeight = $(item).next('.right').height();
-
-        $(item).height(moduleLeftHeight + 'px');
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover("hide");
+      });
     })
+    .on("mouseleave", function () {
+      var _this = this;
 
-    //mysignal
-
-    const allCheck = $('#allcheck');
-    const varCheck = $('input.tblCheckItem');
-
-    $(allCheck).on('click', function(){
-
-        if($(allCheck).prop('checked')){
-            $('input.tblCheckItem').prop('checked', true);
-        }else{
-            $('input.tblCheckItem').prop('checked', false);
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
         }
-
+      });
     });
 
-    $(varCheck).on('click', function(){
-        if($(varCheck).prop('checked') == false){
-            $(allCheck).prop('checked', false);
-        }
-    });
+  //module
 
+  $(".modulebox .left").each(function (index, item) {
+    var moduleLeftHeight = $(item).next(".right").height();
 
+    $(item).height(moduleLeftHeight + "px");
+  });
+
+  $(".mod .left").each(function (index, item) {
+    var moduleLeftHeight = $(item).next(".right").height();
+
+    $(item).height(moduleLeftHeight + "px");
+  });
+
+  //mysignal
+
+  const allCheck = $("#allcheck");
+  const varCheck = $("input.tblCheckItem");
+
+  $(allCheck).on("click", function () {
+    if ($(allCheck).prop("checked")) {
+      $("input.tblCheckItem").prop("checked", true);
+    } else {
+      $("input.tblCheckItem").prop("checked", false);
+    }
+  });
+
+  $(varCheck).on("click", function () {
+    if ($(varCheck).prop("checked") == false) {
+      $(allCheck).prop("checked", false);
+    }
+  });
 });
