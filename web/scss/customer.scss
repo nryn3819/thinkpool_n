@@ -160,7 +160,8 @@
   display: flex;
   width: 100%;
   float: left;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .customer .member_setting {
