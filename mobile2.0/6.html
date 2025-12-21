@@ -794,11 +794,14 @@
                     <!-- issue.scss -->
                     <div class="main-issue">
                         <nav>
-                            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active">
                                     <span>
                                         AI이슈포착
                                     </span>
+                                </button>
+                                <button class="nav-link">
+                                    <span>미국이슈포착</span>
                                 </button>
                                 <button class="nav-link">
                                     <span>
@@ -832,9 +835,9 @@
                          <!-- 202408 추가 -->
 
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane show active">
+                            <div class="tab-pane">
 
-                                 <div class="chartArea">
+                                <div class="chartArea">
                                     <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
                                 </div>
 
@@ -849,6 +852,74 @@
                                 <!-- //차트박스 아래 -->
                             </div>
                             <!-- 이슈포착 차트 -->
+
+                            <div class="tab-pane show active">
+                                <!-- 미국이슈 차트영역 -->
+
+                                <div class="chartArea">
+                                    <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#issueModal">
+                                </div>
+                                <div class="refresh rmt-20">
+                                    <div>
+                                        <span>12/01 13:21 ET 기준</span>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                                            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"></path>
+                                        </svg>
+                                        <span>12/31 12:30 KST 기준</span>
+                                    </div>
+                                </div>
+
+                                <div class="chartIssueList">
+                                    <div class="swiper cilSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <strong class="text-truncate">금값상승</strong>
+                                                    <span class="text-truncate-2">
+                                                        아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손
+                                                    </span>
+                                                    <em class="per up">+3.25</em>
+                                                </a>
+                                            </div>
+                                            <!-- swiper-slide -->
+                                             <div class="swiper-slide">
+                                                <a href="#">
+                                                    <strong class="text-truncate">금값상승</strong>
+                                                    <span class="text-truncate-2">
+                                                        아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손
+                                                    </span>
+                                                    <em class="per">+3.25</em>
+                                                </a>
+                                            </div>
+                                            <!-- swiper-slide -->
+                                             <div class="swiper-slide">
+                                                <a href="#">
+                                                    <strong class="text-truncate">금값상승</strong>
+                                                    <span class="text-truncate-2">
+                                                        아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손
+                                                    </span>
+                                                    <em class="per">+3.25</em>
+                                                </a>
+                                            </div>
+                                            <!-- swiper-slide -->
+                                        </div>
+                                        <!-- swiper-wrapper -->
+                                         <div class="swiper-pagination"></div>
+                                    </div>
+                                    <!-- swiper -->
+                                    <script>
+                                    var cilSwiper = new Swiper(".cilSwiper", {
+                                        loop: true,
+                                        pagination: {
+                                            el: ".swiper-pagination",
+                                        },
+                                    });
+                                    </script>
+                                </div>
+                            </div>
 
                             <div class="tab-pane">
                                 <!-- 수급강도 차트영역  -->

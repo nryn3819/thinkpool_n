@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>씽크풀</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+        <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+        <!-- header - header.scss -->
+        <header id="header" class="item clearfix">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show">
+                <img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid" />
+              </a>
+              <!---->
+            </div>
+            <!---->
+            <div class="headerTitle centerHeader text-truncate">
+              <strong>AI속보</strong>
+              <!---->
+            </div>
+            <!---->
+            <div class="subSchBtn">
+              <button type="button" id="opensch" class="schButton">종목검색</button>
+              <div class="searcharea undefined">
+                <div class="searcharea-header">
+                  <h4 class="logo"><img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="" width="32" /></h4>
+                  <div class="searcharea-sch">
+                    <div class="input-group"><input type="text" placeholder="종목명 / 종목코드 / 키워드" class="form-control autoComplete ui-autocomplete-input" autocomplete="off" /> <button type="button" id="button-addon" class="btn-img schButton">검색하기</button></div>
+                  </div>
+                  <button type="button" class="btn-close text-reset sch-hide"></button>
+                </div>
+                <div tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" class="searcharea searcharea-main sch-show">
+                  <div class="searcharea-body">
+                    <div class="off-basic">
+                      <div class="tag"><span>철도</span><span>소금</span><span>전력설비</span><span>수소</span><span>게임</span></div>
+                      <div class="schTop rmt-20"><span>셀트리온</span><span>이수페타시스</span><span>넥스트칩</span><span>두산에너빌리티</span><span>인디에프</span><span>코미팜</span><span>하나마이크론</span><span>백광산업</span><span>루닛</span><span>SK하이닉스</span></div>
+                      <div class="latest rmt-20">
+                        <strong>최근 검색어</strong> <span>셀트리온 <em>(068270)</em></span
+                        ><span>삼성SDI <em>(006400)</em></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              document.getElementById("opensch").addEventListener("click", function () {
+                document.querySelector(".searcharea").classList.add("sch-show");
+
+                document.getElementById("inputsch").focus();
+                document.getElementById("inputsch").value = "";
+              });
+
+              document.querySelector(".sch-hide").addEventListener("click", function () {
+                document.querySelector(".searcharea").classList.remove("sch-show");
+              });
+            </script>
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div data-bs-toggle="offcanvas" data-bs-target="#sideContent" data-cate-id="amn04" class="sideMenuBtn sch-hide">
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled="disabled" />
+                  <label for="sdmnu" class="menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </label>
+                </form>
+              </div>
+              <aside id="sideContent" tabindex="-1" aria-labelledby="사이드컨텐츠" class="offcanvas offcanvas-end" aria-hidden="true" style="visibility: hidden">
+                <div class="offcanvas-header">
+                  <div class="offcanvas-title">
+                    <div data-bs-dismiss="offcanvas" class="logo">
+                      <a href="/" class="nuxt-link-active"><img src="https://img.thinkpool.com/www/mobile/img/thinklogo.png" alt="logo" width="102" /></a>
+                    </div>
+                    <div class="app"><button data-bs-dismiss="offcanvas">앱다운로드</button></div>
+                  </div>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="loginmenu">
+                    <div class="after">
+                      <div class="top">
+                        <a href="/customer/user" class=""
+                          ><strong><em>woos1</em>님</strong></a
+                        >
+                        <button type="button" data-bs-dismiss="offcanvas">로그아웃</button>
+                      </div>
+                      <div class="menu">
+                        <button type="button" data-bs-dismiss="offcanvas">MY종목</button> <button type="button" data-bs-dismiss="offcanvas">알림설정</button> <button type="button" data-bs-dismiss="offcanvas">나의활동</button> <button type="button" data-bs-dismiss="offcanvas">쪽지함 <span class="badge"></span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="accoridon-flush-menu" class="allmenulist accordion accordion-flush">
+                    <div class="amn accordion-item">
+                      <div id="flush01" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01" class="accordion-button collapsed">AI분석</button></div>
+                      <div id="amn01" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/" class="nuxt-link-active">AI분석홈</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/sise" class=""> 시세분석 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/issue/today" class=""> 이슈분석 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/supply?div=1" class=""> 수급분석 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/theme" class="">테마분석</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/notice/main?depth1Code=1" class=""> 공시분석 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/analysis/report/main?depth1Code=1" class=""> 리포트분석 </a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="amn accordion-item">
+                      <div id="flush02" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02" class="accordion-button collapsed">AI추천</button></div>
+                      <div id="amn02" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor" class="">AI종목추천홈</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor/todays" class="">오늘의종목</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor/recomm/00000055" class=""> 종목추천 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor/portfolio/00000050" class=""> 포트폴리오 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor/my" class="">나의서비스</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/advisor/guide" class="">이용안내</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="amn accordion-item">
+                      <div id="flush03" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03" class="accordion-button collapsed">라씨신호</button></div>
+                      <div id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal" class="">라씨매매신호홈</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/intro" class="">서비스소개</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/guide" class="">이용안내</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/my" class="">나의신호</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="amn accordion-item">
+                      <div id="flush04" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04" class="accordion-button collapsed">AI속보</button></div>
+                      <div id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse" style="">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/breakingNews" class="nuxt-link-exact-active nuxt-link-active" aria-current="page"> 주요속보 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/supply" class="">수급</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/theme" class="">테마</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/report" class=""> 리포트 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/record" class="">실적</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/notice" class="">공시</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/news/tagAllView" class=""> 태그전체보기 </a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="amn accordion-item">
+                      <div id="flush05" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05" class="accordion-button collapsed">토론실</button></div>
+                      <div id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/social" class="">토론실홈</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/breakingNews/list" class=""> 증권가속보 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/screening/list" class=""> 특징주포착 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/compDiscuss/list" class=""> 주식종합토론 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/politics/list" class=""> 정치방 </a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/my" class="">나의활동</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="amn accordion-item">
+                      <div id="flush06" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06" class="accordion-button collapsed">더보기</button></div>
+                      <div id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/customer" class="">공지사항 및 문의</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/customer/user" class="">회원정보관리</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="#">약관및정책</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sfmenu"><button type="button" data-bs-dismiss="offcanvas" class="btn-custom-primary outline">블로그</button> <button type="button" data-bs-dismiss="offcanvas" class="btn-custom-primary outline">텔레그램</button> <button type="button" data-bs-dismiss="offcanvas" class="btn-custom-primary outline">유튜브</button> <button type="button" data-bs-dismiss="offcanvas" class="btn-custom-primary outline">AI매매 시그널</button></div>
+                  <div class="other rmt-25 text-center"><button data-bs-dismiss="offcanvas" class="btn-custom-default">PC버전으로 보기</button></div>
+                </div>
+              </aside>
+            </div>
+            <!---->
+            <!---->
+            <!---->
+          </div>
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <h2 class="visually-hidden">본문영역</h2>
+
+          <section class="section">
+            <div class="usaSummary">
+              <div class="title">
+                <strong>금값상승</strong>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M15.8631 12.6836H0.136889C0.27184 13.0076 0.499675 13.2844 0.791681 13.4791C1.08369 13.6738 1.4268 13.7777 1.77778 13.7778H14.2222C14.5732 13.7777 14.9163 13.6738 15.2083 13.4791C15.5003 13.2844 15.7282 13.0076 15.8631 12.6836ZM0 10.5827H16V11.7209H0V10.5827ZM5.11111 4.27955H16V5.41778H5.11111V4.27955ZM15.8631 3.31644C15.7282 2.99245 15.5003 2.71565 15.2083 2.52092C14.9163 2.3262 14.5732 2.22227 14.2222 2.22222H5.11111V3.31644H15.8631ZM5.11111 6.38044H16V7.51867H5.11111V6.38044ZM0 8.48133H16V9.61955H0V8.48133Z"
+                    fill="#BF0A30"
+                  />
+                  <path d="M5.11111 5.41733H16V6.38044H5.11111V5.41733ZM0 7.51867V8.48133H16V7.51867H5.33333H0ZM5.11111 3.31644V4.27956H16V4C16 3.75778 15.9507 3.52711 15.8631 3.31644H5.11111ZM0 9.61955H16V10.5827H0V9.61955ZM0 12C0 12.2422 0.0493333 12.4729 0.136889 12.6836H15.8627C15.9531 12.467 15.9998 12.2347 16 12V11.7204H0V12Z" fill="#EEEEEE" />
+                  <path d="M1.77778 2.22222C1.30628 2.22222 0.854097 2.40952 0.520699 2.74292C0.187301 3.07632 0 3.5285 0 4L0 7.51867H5.33333V2.22222H1.77778Z" fill="#002868" />
+                  <path d="M2.61808 3.38196L2.5 3L2.38192 3.38196H2L2.30904 3.61804L2.19096 4L2.5 3.76391L2.80904 4L2.69096 3.61804L3 3.38196H2.61808Z" fill="white" />
+                  <path d="M2.61808 4.78196L2.5 4.4L2.38192 4.78196H2L2.30904 5.01804L2.19096 5.4L2.5 5.16392L2.80904 5.4L2.69096 5.01804L3 4.78196H2.61808Z" fill="white" />
+                  <path d="M2.61808 6.08195L2.5 5.7L2.38192 6.08195H2L2.30904 6.31804L2.19096 6.7L2.5 6.46391L2.80904 6.7L2.69096 6.31804L3 6.08195H2.61808Z" fill="white" />
+                  <path d="M1.41789 3.38196L1.2998 3L1.18172 3.38196H0.799805L1.10885 3.61804L0.990762 4L1.2998 3.76391L1.60885 4L1.49076 3.61804L1.7998 3.38196H1.41789Z" fill="white" />
+                  <path d="M1.41887 4.78196L1.30078 4.4L1.1827 4.78196H0.800781L1.10982 5.01804L0.991739 5.4L1.30078 5.16392L1.60982 5.4L1.49174 5.01804L1.80078 4.78196H1.41887Z" fill="white" />
+                  <path d="M1.41887 6.08195L1.30078 5.7L1.1827 6.08195H0.800781L1.10982 6.31804L0.991739 6.7L1.30078 6.46391L1.60982 6.7L1.49174 6.31804L1.80078 6.08195H1.41887Z" fill="white" />
+                  <path d="M3.81828 3.38196L3.7002 3L3.58211 3.38196H3.2002L3.50924 3.61804L3.39115 4L3.7002 3.76391L4.00924 4L3.89115 3.61804L4.2002 3.38196H3.81828Z" fill="white" />
+                  <path d="M3.8173 4.78196L3.69922 4.4L3.58113 4.78196H3.19922L3.50826 5.01804L3.39018 5.4L3.69922 5.16392L4.00826 5.4L3.89018 5.01804L4.19922 4.78196H3.8173Z" fill="white" />
+                  <path d="M3.8173 6.08195L3.69922 5.7L3.58113 6.08195H3.19922L3.50826 6.31804L3.39018 6.7L3.69922 6.46391L4.00826 6.7L3.89018 6.31804L4.19922 6.08195H3.8173Z" fill="white" />
+                  <path d="M5.11808 3.38196L5 3L4.88192 3.38196H4.5L4.80904 3.61804L4.69096 4L5 3.76391L5.30904 4L5.19096 3.61804L5.5 3.38196H5.11808Z" fill="white" />
+                  <path d="M5.11808 4.78196L5 4.4L4.88192 4.78196H4.5L4.80904 5.01804L4.69096 5.4L5 5.16392L5.30904 5.4L5.19096 5.01804L5.5 4.78196H5.11808Z" fill="white" />
+                  <path d="M5.11808 6.08195L5 5.7L4.88192 6.08195H4.5L4.80904 6.31804L4.69096 6.7L5 6.46391L5.30904 6.7L5.19096 6.31804L5.5 6.08195H5.11808Z" fill="white" />
+                </svg>
+              </div>
+              <!-- // -->
+
+              <div class="txtbox">
+                <div class="title">
+                  <strong>금 가격 상승으로 투자심리 개선 및 매수세 확 매수세 확금 가격 상승으로 투자심리 개선 및 매수세 확 매수세 확</strong>
+                </div>
+                <div class="cont">
+                  <span>아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손 K뷰티 아카데미 지원 맞손아모레퍼시픽공감재단·세종학당재단, K뷰티 아카데미 지원 맞손 K뷰티 아카데미 지원 맞손</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section rmt-8">
+            <div class="usaReason">
+              <div class="title">
+                <strong>종목 상승/하락 이유</strong>
+              </div>
+
+              <div class="dateList">
+                <div>
+                  <span>12/01 13:21 미국동부(ET)</span>
+                </div>
+                <div>
+                  <span>12/01 13:21 한국기준시(KST)</span>
+                </div>
+              </div>
+
+              <div class="todayRate">
+                <span class="title">당일 등락률</span>
+
+                <div>
+                  <div class="itemCode">
+                    <span>HL</span>
+                  </div>
+                  <div class="itemName">
+                    <span>헤클라 마이닝</span>
+                  </div>
+                  <div class="reason">
+                    <span>금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성</span>
+                  </div>
+                  <div class="per up">+12.92%</div>
+                </div>
+                <!--  -->
+                <div>
+                  <div class="itemCode">
+                    <span>HL</span>
+                  </div>
+                  <div class="itemName">
+                    <span>헤클라 마이닝</span>
+                  </div>
+                  <div class="reason">
+                    <span>금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성금가격 상승으로 매수세 확대 및 긍정적 투자 심리 형성</span>
+                  </div>
+                  <div class="per up">+12.92%</div>
+                </div>
+                <!--  -->
+
+                <button>
+                  <span>자세히보기</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M8.3335 5L12.7442 9.41074C13.0697 9.73618 13.0697 10.2638 12.7442 10.5893L8.3335 15" stroke="#666666" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- //container -->
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img src="./img/flogin.png" class="figure-img img-fluid" alt="로그인" />
+              <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="./img/fpc.png" class="figure-img img-fluid" alt="PC버전" />
+              <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="./img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드" />
+              <figcaption class="figure-caption text-center">씽크풀앱<br />다운로드</figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+            <span class="d-block">
+              본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+      <!-- bootstrap js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+  </body>
+</html>

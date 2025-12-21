@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
-@import "variable.scss";
+@import "variable.scss"; 
 * {
   @include mobile { 
     -ms-overflow-style: none;
@@ -202,32 +202,6 @@ input::placeholder {
   z-index: 1000;
 }
 
-// 레이아웃
-@import "layout.scss"; //레이아웃
-@import "section.scss"; // section박스
-@import "main.scss"; //메인
-@import "sub.scss"; //서브
-
-// 공통
-@import "./cmm/title.scss"; //타이틀
-@import "./cmm/fadeinout.scss"; //페이드 인 아웃
-@import "./cmm/modal.scss"; // 모달
-@import "./cmm/nav.scss"; //마진패딩값
-@import "./cmm/table.scss"; // 테이블
-@import "./cmm/swiper.scss"; // 스와이프
-@import "./cmm/button.scss"; //버튼
-@import "./cmm/etc.scss"; //기타
-@import "./cmm/hspace.scss"; //빈칸높이값
-@import "./cmm/badge.scss"; //뱃지
-@import "./cmm/autocomplete.scss"; //페이징
-@import "./cmm/offcanvas.scss"; //페이징
-@import "./cmm/paging.scss"; //페이징
-@import "./cmm/board.scss"; //게시판
-@import "./cmm/fsize.scss"; //폰트사이즈
-@import "./cmm/mpsize.scss"; //마진패딩값
-@import "./cmm/toast.scss"; //토스트
-
-@import "./ai-plus.scss"; //ai종목추천 추천홈 추가 (33.html)
 
 // 오픈 팝업
 #openPop {
@@ -616,3 +590,29 @@ body {
   width:100%;
   padding:0 17px;
 }
+
+
+// 레이아웃
+@import "layout.scss"; //레이아웃
+@import "section.scss"; // section박스
+@import "main.scss"; //메인
+@import "sub.scss"; //서브
+
+// 공통
+@import "./cmm/title.scss"; //타이틀
+@import "./cmm/fadeinout.scss"; //페이드 인 아웃
+@import "./cmm/modal.scss"; // 모달
+@import "./cmm/nav.scss"; //마진패딩값
+@import "./cmm/table.scss"; // 테이블
+@import "./cmm/swiper.scss"; // 스와이프
+@import "./cmm/button.scss"; //버튼
+@import "./cmm/etc.scss"; //기타
+@import "./cmm/hspace.scss"; //빈칸높이값
+@import "./cmm/badge.scss"; //뱃지
+@import "./cmm/autocomplete.scss"; //페이징
+@import "./cmm/offcanvas.scss"; //페이징
+@import "./cmm/paging.scss"; //페이징
+@import "./cmm/board.scss"; //게시판
+@import "./cmm/fsize.scss"; //폰트사이즈
+@import "./cmm/mpsize.scss"; //마진패딩값
+@import "./cmm/toast.scss"; //토스트
