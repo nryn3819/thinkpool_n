@@ -127,6 +127,7 @@
     }
 
     & > div {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       width: 100%;
@@ -656,19 +657,116 @@
   }
 }
 
-.custom-modal01 {
-  .modal-dialog {
-    width: 100%;
-    padding: 0;
+.custom-modal01{
+  .modal-dialog{
+    .modal-content{
+      position: relative;
+      border-radius: 10px;
 
-    .modal-content {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      overflow: hidden;
+      .org-info{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        gap:12px;
 
-      .modal-body {
-        width: 100%;
+        .tit{
+          font-size:16px;
+          color:#333;
+          font-weight:bold;
+        }
+
+        .txt{
+          display:flex;
+          flex-direction: column;
+          gap:5px;
+          font-size:14px;
+          color:#333;
+          line-height:20px;
+
+          span{
+            display:flex;
+            width:100%;
+            align-items: center;
+            gap:5px;
+            font-size:14px;
+            color:#999;
+
+            &::before{
+              display:block;
+              content:'\00b7'
+            }
+          }
+
+        }
+
+        button{
+          border:0;
+          outline:0;
+          background:0;
+          width:auto;
+          height:auto;
+          position: absolute;
+          top:10px;
+          right:10px;
+          font-size:20px;
+          color:#333;
+          font-weight:500;
+        }
+      }
+
+      .modal-pf{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        gap:12px;
+
+        .tit{
+          font-size:16px;
+          color:#333;
+          font-weight:bold;
+        }
+
+        .txt{
+          display:flex;
+          flex-direction: column;
+          gap:15px;
+
+          & > span{
+            font-size:14px;
+            line-height: 20px;
+            color:#333;            
+          }
+
+          .txt-list{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+
+            span{
+              font-size:14px;
+              color:#333;
+
+              em{
+                font-weight:bold;
+              }
+            }
+          }
+        }
+      }
+      .modal-button{
+        display:block;
+        width:100%;
+        margin-top:20px;
+
+        button{
+          height:40px;
+          border-radius: 8px;
+          background:#5368ff;
+          font-size:16px;
+          color:#fff;
+          border:0;
+          outline:0;
+        }
       }
     }
   }

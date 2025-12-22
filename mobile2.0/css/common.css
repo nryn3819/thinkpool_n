@@ -17571,6 +17571,7 @@ html, body {
   font-weight: normal;
 }
 .usaReason .todayRate > div {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -18041,18 +18042,100 @@ html, body {
   color: #999;
 }
 
-.custom-modal01 .modal-dialog {
-  width: 100%;
-  padding: 0;
-}
 .custom-modal01 .modal-dialog .modal-content {
+  position: relative;
+  border-radius: 10px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .tit {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt span {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #999;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt span::before {
+  display: block;
+  content: "·";
+}
+.custom-modal01 .modal-dialog .modal-content .org-info button {
+  border: 0;
+  outline: 0;
+  background: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .tit {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt > span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list span {
+  font-size: 14px;
+  color: #333;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list span em {
+  font-weight: bold;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-button {
   display: block;
   width: 100%;
-  max-width: 320px;
-  overflow: hidden;
+  margin-top: 20px;
 }
-.custom-modal01 .modal-dialog .modal-content .modal-body {
-  width: 100%;
+.custom-modal01 .modal-dialog .modal-content .modal-button button {
+  height: 40px;
+  border-radius: 8px;
+  background: #5368ff;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  outline: 0;
 }
 
 .title {
