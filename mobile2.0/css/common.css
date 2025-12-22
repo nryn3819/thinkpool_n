@@ -17941,7 +17941,19 @@ html, body {
   left: 0;
   height: 15px;
   border-radius: 50px;
-  background: #5a5aca;
+  background: #3f54c3;
+}
+.org-p .score-box .score .score-progress .pr-active.ac01 {
+  background: #3f54c3;
+}
+.org-p .score-box .score .score-progress .pr-active.ac02 {
+  background: #289599;
+}
+.org-p .score-box .score .score-progress .pr-active.ac03 {
+  background: #9163cb;
+}
+.org-p .score-box .score .score-progress .pr-active.ac04 {
+  background: #f27059;
 }
 .org-p .score-box .score .elm-w {
   display: flex;

@@ -538,7 +538,20 @@
           left: 0;
           height: 15px;
           border-radius: 50px;
-          background: #5a5aca;
+          background: #3f54c3;
+
+          &.ac01 {
+            background: #3f54c3;
+          }
+          &.ac02 {
+            background: #289599;
+          }
+          &.ac03 {
+            background: #9163cb;
+          }
+          &.ac04 {
+            background: #f27059;
+          }
         }
       }
 
@@ -548,38 +561,38 @@
         width: 100%;
         border-top: 1px solid #eaeaea;
         padding: 15px;
-        gap:15px;
+        gap: 15px;
 
         .elm {
-          display:flex;
-          flex-wrap:wrap;
-          width:100%;
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
           border-top: 1px solid #eaeaea;
-          padding-top:15px;
+          padding-top: 15px;
 
-          .bullet{
-            width:auto;
-            height:18px;
-            padding:0 8px;
+          .bullet {
+            width: auto;
+            height: 18px;
+            padding: 0 8px;
             border-radius: 5px;
-            border:0.6px solid #999;
+            border: 0.6px solid #999;
             line-height: 18px;
-            font-size:12px;
-            color:#333;
+            font-size: 12px;
+            color: #333;
           }
-          .txt{
-            display:block;
-            width:100%;
-            padding-top:15px;
+          .txt {
+            display: block;
+            width: 100%;
+            padding-top: 15px;
 
-            font-size:15px;
-            color:#333;
-            line-height:22px;
+            font-size: 15px;
+            color: #333;
+            line-height: 22px;
           }
 
           &:first-child {
             border-top: 0;
-            padding-top:0;
+            padding-top: 0;
           }
         }
       }
@@ -657,115 +670,114 @@
   }
 }
 
-.custom-modal01{
-  .modal-dialog{
-    .modal-content{
+.custom-modal01 {
+  .modal-dialog {
+    .modal-content {
       position: relative;
       border-radius: 10px;
 
-      .org-info{
-        display:flex;
+      .org-info {
+        display: flex;
         flex-direction: column;
-        width:100%;
-        gap:12px;
+        width: 100%;
+        gap: 12px;
 
-        .tit{
-          font-size:16px;
-          color:#333;
-          font-weight:bold;
+        .tit {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
         }
 
-        .txt{
-          display:flex;
+        .txt {
+          display: flex;
           flex-direction: column;
-          gap:5px;
-          font-size:14px;
-          color:#333;
-          line-height:20px;
+          gap: 5px;
+          font-size: 14px;
+          color: #333;
+          line-height: 20px;
 
-          span{
-            display:flex;
-            width:100%;
+          span {
+            display: flex;
+            width: 100%;
             align-items: center;
-            gap:5px;
-            font-size:14px;
-            color:#999;
+            gap: 5px;
+            font-size: 14px;
+            color: #999;
 
-            &::before{
-              display:block;
-              content:'\00b7'
+            &::before {
+              display: block;
+              content: "\00b7";
             }
           }
-
         }
 
-        button{
-          border:0;
-          outline:0;
-          background:0;
-          width:auto;
-          height:auto;
+        button {
+          border: 0;
+          outline: 0;
+          background: 0;
+          width: auto;
+          height: auto;
           position: absolute;
-          top:10px;
-          right:10px;
-          font-size:20px;
-          color:#333;
-          font-weight:500;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          color: #333;
+          font-weight: 500;
         }
       }
 
-      .modal-pf{
-        display:flex;
+      .modal-pf {
+        display: flex;
         flex-direction: column;
-        width:100%;
-        gap:12px;
+        width: 100%;
+        gap: 12px;
 
-        .tit{
-          font-size:16px;
-          color:#333;
-          font-weight:bold;
+        .tit {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
         }
 
-        .txt{
-          display:flex;
+        .txt {
+          display: flex;
           flex-direction: column;
-          gap:15px;
+          gap: 15px;
 
-          & > span{
-            font-size:14px;
+          & > span {
+            font-size: 14px;
             line-height: 20px;
-            color:#333;            
+            color: #333;
           }
 
-          .txt-list{
-            display:flex;
+          .txt-list {
+            display: flex;
             flex-direction: column;
-            gap:10px;
+            gap: 10px;
 
-            span{
-              font-size:14px;
-              color:#333;
+            span {
+              font-size: 14px;
+              color: #333;
 
-              em{
-                font-weight:bold;
+              em {
+                font-weight: bold;
               }
             }
           }
         }
       }
-      .modal-button{
-        display:block;
-        width:100%;
-        margin-top:20px;
+      .modal-button {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
 
-        button{
-          height:40px;
+        button {
+          height: 40px;
           border-radius: 8px;
-          background:#5368ff;
-          font-size:16px;
-          color:#fff;
-          border:0;
-          outline:0;
+          background: #5368ff;
+          font-size: 16px;
+          color: #fff;
+          border: 0;
+          outline: 0;
         }
       }
     }
