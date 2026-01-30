@@ -368,6 +368,7 @@
       width: 100%;
       height: 24px;
       justify-content: space-between;
+      align-items: center;
 
       strong {
         line-height: 24px;
@@ -405,6 +406,7 @@
           background:#fff;
           gap:3.5px;
           margin-top:0;
+          padding:0;
 
           .itemName{
             display:flex;
