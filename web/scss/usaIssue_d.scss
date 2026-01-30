@@ -1,0 +1,180 @@
+.usa-issue_stockContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+
+  // 상단영역
+  .stockContent_title {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    gap: 10px;
+
+    .tit {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      font-size: 24px;
+      font-weight: 700;
+
+      strong {
+        color: #333;
+
+        em {
+          color: #447aec;
+          font-style: normal;
+        }
+      }
+    }
+    .rate {
+      padding: 0 12px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 14px;
+
+      &.up {
+        background: #ffdddd;
+        span {
+          color: #fc2f2f;
+        }
+      }
+      &.dn {
+        background: #c2d2f8;
+        span {
+          color: #1e56d1;
+        }
+      }
+    }
+  }
+
+  //요약정보
+  .stockContent_summary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    background: #f8f9fa;
+    gap: 14px;
+    padding: 30px 24px;
+
+    strong {
+      color: #333;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px; /* 120% */
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+
+      span {
+        font-size: 15px;
+        color: #333;
+
+        &::before {
+          content: "\00b7";
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+.stockContent_reason {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  .stockContent_reason_title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .tit {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+
+      strong {
+        color: #333;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px; /* 125% */
+      }
+      em {
+        color: #999;
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 16px;
+      }
+    }
+
+    & > em {
+      color: #999;
+      text-align: right;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 350;
+      line-height: normal;
+    }
+  }
+
+  .stockContent_reason_table {
+    table{
+      tbody{
+        tr{
+          &:nth-child(2n){
+            td{
+              background:#f9f9f9;
+            }
+          }
+          td{
+            .itemName{
+              width:100%;
+              gap:2px;
+
+              a{
+                font-size:15px;
+                color:#666;
+
+                span{
+                  color:#141414;
+                }
+              }
+            }
+            .rate{
+              width:100%;
+              text-align:right;
+              font-size:15px;
+
+              &.up{
+                color:#F04C59;
+              }
+              &.dn{
+                color:#1E56D1;
+              }
+            }
+            .reason{
+              display:block;
+              width:100%;
+              max-width:347px;
+            }
+            .tag{
+              display:block;
+              width:100%;
+              max-width:237px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

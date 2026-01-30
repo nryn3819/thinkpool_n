@@ -328,16 +328,29 @@
                         </div>
                         <!-- // -->
                         <div class="sub-content mt-40">
-                            <h4 class="sub-title">AI이슈포착</h4>
+                            <h4 class="sub-title main-issue_title">
+                                <span>AI이슈포착</span>
+
+                                <div class="main-issue_tab">
+                                    <button class="active">
+                                        <img src="./img/main-issue_tab_kor.png" alt="">
+                                        <span>한국</span>
+                                    </button>
+                                    <button>
+                                        <img src="./img/main-issue_tab_usa.png" alt="">
+                                        <span>미국</span>
+                                    </button>
+                                </div>
+                            </h4>
                             <div class="sub-section">
                                 <div class="main-issue">
                                     <div class="left">
-                                        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-                                        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-                                        <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
-                                        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-                                        <div id="chartdiv"></div>
-                                        <script src="./js/mainBubble.js"></script>
+                                        <div id="chartdiv">
+                                            <img src="./img/main-bubble.png" alt="">
+                                        </div>
+                                        <div class="chartDate">
+                                            <span>01.23 06:31 KST 기준</span>
+                                        </div>
                                     </div>
                                     <!-- // -->
                                     <div class="right">
@@ -349,8 +362,12 @@
                                                         검색빈도 및 종목 누적 등락률
                                                     </div>
                                                     <!-- //이슈타이틀 -->
-                                                    <div class="chartbox"></div>
+
+                                                    <div class="chartbox">
+                                                        <img src="./img/main-lineChart.png" alt="">
+                                                    </div>
                                                     <!-- //차트 -->
+
                                                     <div class="mi_tit">
                                                         <strong>주요종목</strong>
                                                         <span class="mi mi01">이슈명 검색추이</span>
@@ -410,7 +427,130 @@
                                 </div>
                                 <!-- //main-issue -->
                             </div>
-                            <!-- // -->
+                            <!-- // 국내이슈 -->
+
+                             <div class="sub-section">
+                                <div class="main-issue">
+                                    <div class="left">
+                                        <div id="chartdiv">
+                                            <img src="./img/main-bubble.png" alt="">
+                                        </div>
+                                        <div class="chartDate">
+                                            <span>01.23 06:31 KST 기준 / 01.23 06:31 KST 기준</span>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="right">
+                                        <div class="bubbleBox">
+                                            <div id="data01" class="bubbleContent ">
+                                                <div class="main_issue_w">
+                                                    <div class="title">
+                                                        <span class="dn">이슈명이슈명</span>
+                                                        관련 미국 이슈
+                                                    </div>
+                                                    <!-- //이슈타이틀 -->
+
+                                                    <div class="main-issue_usa_stockContxt">
+                                                        <strong>귀금속 섹터 매수세 확대와 투자심리 개선 지속</strong>
+
+                                                        <div>
+                                                            <span class="text-truncate">최근 금 가격 상승이 금 관련 종목들의 투자심리 개선에 기여최근 금 가격 상승이 금 관련 종목들의 투자심리 개선에 기여</span>
+                                                            <span class="text-truncate">귀금속 섹터의 긍정적인 흐름이 매수세 확대를 유도</span>
+                                                            <span class="text-truncate">주요 기업들의 목표 주가 상향 조정과 긍정적인 실적 발표</span>
+                                                            <span class="text-truncate">금 및 귀금속 채굴업체에 대한 관심 증가와 거래량 확대가 나타남</span>
+                                                            <span class="text-truncate">전략적 거래 및 프로젝트 개발 기대감이 긍정적인 시장 반응을 이끌어냄</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 이슈요약글 -->
+
+                                                    <div class="main-issue_usa_majorStock">
+                                                        <div class="tit">
+                                                            <strong>주요 종목 등락 사유 TOP 3</strong>
+                                                            <em>당일 등락률</em>
+                                                        </div>
+                                                        <!-- title -->
+
+                                                        <div class="main-issue_usa_majorStock_list">
+                                                            <a href="#">
+                                                                <div class="itemInfo">
+                                                                    <div class="itemName">
+                                                                        <em>NET</em>
+                                                                        <span>클라우드플레어</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                    <div class="itemSummary">
+                                                                        <span>전략적 인수 소식에 투자자 열기 확대</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                </div>
+                                                                <div class="itemRate dn">
+                                                                    <span>-2.1%</span>
+                                                                </div>
+                                                                <!--  -->
+                                                            </a>
+                                                            <!-- // -->
+
+                                                            <a href="#">
+                                                                <div class="itemInfo">
+                                                                    <div class="itemName">
+                                                                        <em>NET</em>
+                                                                        <span>클라우드플레어</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                    <div class="itemSummary">
+                                                                        <span>전략적 인수 소식에 투자자 열기 확대</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                </div>
+                                                                <div class="itemRate up">
+                                                                    <span>+24.1%</span>
+                                                                </div>
+                                                                <!--  -->
+                                                            </a>
+                                                            <!-- // -->
+
+                                                            <a href="#">
+                                                                <div class="itemInfo">
+                                                                    <div class="itemName">
+                                                                        <em>NET</em>
+                                                                        <span>클라우드플레어</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                    <div class="itemSummary">
+                                                                        <span>전략적 인수 소식에 투자자 열기 확대</span>
+                                                                    </div>
+                                                                    <!--  -->
+                                                                </div>
+                                                                <div class="itemRate up">
+                                                                    <span>+24.1%</span>
+                                                                </div>
+                                                                <!--  -->
+                                                            </a>
+                                                            <!-- // -->
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    
+                                                    <div class="more">
+                                                        <a href="#">더보기 →</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="data02" class="bubbleContent hidden">02</div>
+                                            <div id="data03" class="bubbleContent hidden">03</div>
+                                            <div id="data04" class="bubbleContent hidden">04</div>
+                                            <div id="data05" class="bubbleContent hidden">05</div>
+                                            <div id="data06" class="bubbleContent hidden">06</div>
+                                            <div id="data07" class="bubbleContent hidden">07</div>
+                                            <div id="data08" class="bubbleContent hidden">08</div>
+                                            <div id="data09" class="bubbleContent hidden">09</div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- //main-issue -->
+                            </div>
+                            <!-- 미국이슈 -->
                         </div>
                         <!-- //이슈포착 -->
                         <div class="sub-content mt-40">

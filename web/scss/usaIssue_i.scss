@@ -1,0 +1,636 @@
+// 미국이슈 종목홈
+.usaIssue-item_top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .itemInfo {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .itemName {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+
+      strong {
+        color: #333d4b;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      em {
+        color: #fc2f2f;
+        font-size: 33px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    .info {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
+
+      .ticker {
+        color: #6b7684;
+        font-size: 12.6px;
+        font-style: normal;
+        font-weight: 350;
+      }
+
+      .price {
+        color: rgba(0, 12, 30, 0.8);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 350;
+
+        em {
+          color: #3182f6;
+        }
+      }
+    }
+    .cmpyIntro {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+
+      strong {
+        color: rgba(0, 12, 30, 0.8);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .tag {
+        display: flex;
+        gap: 10px;
+
+        span {
+          padding: 0 4px;
+          height: 17px;
+          line-height: 17px;
+          color: #333;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          background: #d8e2fa;
+
+          &::before {
+            content: "#";
+            font-size: 14px;
+            color: #5c8aff;
+          }
+        }
+      }
+    }
+  }
+
+  & > button {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    span {
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      color: rgba(51, 51, 51, 0.8);
+    }
+  }
+}
+
+.usaIssue-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .itemNews {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+
+    strong {
+      color: #333;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px; /* 100% */
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      span {
+        color: #666;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &::before {
+          content: "\00b7";
+          padding-right: 5px;
+        }
+      }
+    }
+
+    & > button {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: 0;
+
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      span {
+        color: #afafaf;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .aiScore {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+
+    .title {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      align-items: center;
+      gap: 4px;
+      padding-left: 10px;
+      cursor: pointer;
+
+      strong {
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+
+    .aiScore-box {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      padding: 20px;
+
+      .chartbox {
+        display: block;
+        width: 436px;
+      }
+      .totalScore {
+        display: block;
+        width: calc(100% - 457px);
+        margin-left: 20px;
+        border-left: 1px solid #ebebeb;
+        padding-left: 20px;
+
+        .score {
+          padding: 40px 0;
+          display: flex;
+          flex-direction: column;
+          height: 160px;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            color: #666;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+          }
+
+          strong {
+            color: #404040;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+
+            em {
+              color: #666;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .scoreList {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          border-radius: 10px;
+          background: #f9f9f9;
+          margin-top: 10px;
+          gap: 15px;
+
+          & > div {
+            // .spirit, .stability 등이 해당됨
+            display: flex;
+            width: 100%;
+            height: 24px;
+            justify-content: space-between;
+            gap: 18px;
+
+            .labelName {
+              display: flex;
+              height: 24px;
+              line-height: 24px;
+              gap: 12px;
+              align-items: center;
+              color: #666;
+              font-size: 15px;
+
+              &::before {
+                content: "";
+                display: block; // 크기 적용을 위해 필수
+                width: 22px;
+                height: 11px;
+                border-radius: 10px;
+              }
+            }
+
+            &.spirit .labelName::before {
+              background: #3f54c3;
+            }
+            &.stability .labelName::before {
+              background: #289599;
+            }
+            &.profitability .labelName::before {
+              background: #9163cb;
+            }
+            &.multiple .labelName::before {
+              background: #f27059;
+            }
+
+            .labelScore {
+              // 점수 부분 스타일도 필요하실 것 같아 추가했습니다.
+              strong {
+                color: #333;
+                font-size: 22px;
+                em {
+                  font-style: normal;
+                  font-size: 15px;
+                  color: #666;
+                  margin-left: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .aiScore-empty {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      height: 253px;
+      border-radius: 10px;
+      background: #f9faf8;
+
+      span {
+        color: #666;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .characteristic-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    .characteristic {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 20px 15px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        gap: 8px;
+
+        strong {
+          color: #333;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+        }
+
+        em {
+          padding: 0 10px;
+          display: block;
+          height: 27px;
+          line-height: 27px;
+          border-radius: 10px;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+
+      &.spirit {
+        .title em {
+          background: rgba(63, 84, 195, 0.2);
+          color: #3f54c3;
+        }
+        .characteristic-card .score-bar .bar span {
+          background: #3f54c3;
+        }
+      }
+      &.stability {
+        .title em {
+          background: rgba(40, 149, 153, 0.2);
+          color: #289599;
+        }
+        .characteristic-card .score-bar .bar span {
+          background: #289599;
+        }
+      }
+      &.profitability {
+        .title em {
+          background: rgba(145, 99, 203, 0.2);
+          color: #9163cb;
+        }
+        .characteristic-card .score-bar .bar span {
+          background: #9163cb;
+        }
+      }
+      &.multiple {
+        .title em {
+          background: rgba(242, 112, 89, 0.2);
+          color: #f27059;
+        }
+        .characteristic-card .score-bar .bar span {
+          background: #f27059;
+        }
+      }
+
+      .characteristic-card {
+        display: block;
+        width: 469px;
+        border-radius: 10px;
+        background: #f9f9f9;
+        padding: 20px 15px;
+
+        .score-title {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          height: 21px;
+          margin-top: 12px;
+
+          span {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+          }
+        }
+
+        .score-bar {
+          display: flex;
+          flex-direction: column;
+          margin-top: 24px;
+
+          .bar {
+            display: flex;
+            width: 100%;
+            height: 17px;
+            border-radius: 8.5px;
+            background: #e8e8e8;
+
+            span {
+              height: 17px;
+              border-radius: 8.5px;
+            }
+          }
+          .label {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            height: 21px;
+
+            span {
+              color: #666;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .analysis-box {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid #e5e8eb;
+          gap: 4px;
+
+          em {
+            width: 64px;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #ced2d6;
+            border-radius: 10px;
+            color: #666;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+          }
+
+          span {
+            font-size: 14px;
+            line-height: 20px;
+            color: #666;
+          }
+        }
+      }
+
+      & > em {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        font-style: normal;
+        font-size: 14px;
+        color: #666;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.custom-modal01 {
+  .modal-dialog {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+      position: relative;
+      max-width: 520px;
+      border-radius: 10px;
+
+      .org-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+
+        .tit {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        .txt {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-size: 14px;
+          color: #333;
+          line-height: 20px;
+
+          span {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #999;
+
+            &::before {
+              display: block;
+              content: "\00b7";
+            }
+          }
+        }
+
+        button {
+          border: 0;
+          outline: 0;
+          background: 0;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          color: #333;
+          font-weight: 500;
+        }
+      }
+
+      .modal-pf {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+
+        .tit {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        .txt {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          & > span {
+            font-size: 15px;
+            line-height: 20px;
+            color: #333;
+          }
+
+          .txt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+              font-size: 15px;
+              color: #333;
+              line-height: 20px;
+
+              em {
+                font-weight: bold;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+      .modal-button {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+
+        button {
+          height: 40px;
+          border-radius: 8px;
+          background: #5368ff;
+          font-size: 16px;
+          color: #fff;
+          border: 0;
+          outline: 0;
+        }
+      }
+    }
+  }
+}

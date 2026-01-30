@@ -22,8 +22,10 @@
 @import "popover";
 @import "msg";
 @import "payment";
+@import "usaIssue_d";
+@import "usaIssue_i";
 
-.text-truncate2{
+.text-truncate2 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box !important;
@@ -47,7 +49,7 @@
   float: left;
   clear: both;
 
-  .titleFlex{
+  .titleFlex {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -126,13 +128,13 @@
       border-bottom: 1px solid #d7d7d7;
     }
 
-    .youtubeCon{
+    .youtubeCon {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 20px;
 
-      .box{
+      .box {
         width: 225px;
         padding: 0;
         margin: 0;
@@ -140,7 +142,7 @@
         background: none;
         text-align: left;
 
-        .title{
+        .title {
           width: 225px;
           height: 40px;
           color: #333;
@@ -150,7 +152,7 @@
           margin-top: 10px;
         }
 
-        .date{
+        .date {
           color: #999;
           font-size: 13px;
           font-weight: 400;
@@ -277,6 +279,60 @@
   color: #333;
   font-weight: 700;
 
+  &.main-issue_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .main-issue_tab {
+      display: flex;
+      width: 150px;
+      height:38px;
+      padding: 2px;
+      border-radius: 100px;
+      background: #fff;
+      align-items: center;
+
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        width: 65px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        gap: 3px;
+
+        img {
+          display: none;
+        }
+
+        span {
+          font-size: 15px;
+          color: #999;
+        }
+
+        &.active {
+          width:80px;
+          background: linear-gradient(144deg, #323335 38.91%, #323335 92.76%);
+          img {
+            display: block;
+          }
+          span {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
   em {
     font: {
       style: normal;
@@ -371,7 +427,7 @@
 
   .gbl-v-chart {
     span {
-      max-width:530px;
+      max-width: 530px;
     }
   }
 }

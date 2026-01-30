@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>thinkpool</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" />
+    <!-- basic css -->
+    <link rel="stylesheet" href="scss/common.scss" />
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- bxslider -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- basic js -->
+    <script src="js/main.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <a class="sr-only sr-only-focusable" href="#container">Skip to main content</a>
+      <header id="header_w">
+        <div class="top_w">
+          <div class="top">
+            <a href="javascript:;" class="top_close">닫기</a>
+          </div>
+          <!-- //top -->
+        </div>
+        <!-- //top_w -->
+        <div id="realheader">
+          <div id="header">
+            <h1 class="logo">
+              <a href="#">thinkpool</a>
+            </h1>
+            <!-- //logo -->
+            <div class="info">
+              <h2 class="sr-only">사용자메뉴</h2>
+              <ul>
+                <!-- <li><a href="#">로그인</a></li>
+                                    <li><a href="#">회원가입</a></li> -->
+
+                <li>
+                  <a href="#" data-toggle="modal" data-target=".member_simple"
+                    >필명필명필명(간편회원)
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </a>
+                  <a href="#" class="msgicon">
+                    <img src="./img/msg.png" alt="" />
+                    <img src="./img/msg.gif" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <span>필명필명필명</span>
+                </li>
+                <li>
+                  <a href="#">로그아웃</a>
+                </li>
+              </ul>
+            </div>
+            <!-- //info -->
+            <div class="modal fade bs-example-modal-sm member_simple" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <span class="modal-text01 text-center">
+                      이 서비스는 일반회원가입 후
+                      <br />
+                      이용 가능 합니다.
+                    </span>
+                  </div>
+                  <!-- //modal-body -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm">일반회원가입</button>
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">취소</button>
+                  </div>
+                  <!-- //modal-footer -->
+                </div>
+                <!-- modal-content -->
+              </div>
+              <!-- modal-sm -->
+            </div>
+            <!-- //modal -->
+            <nav class="nav">
+              <h2 class="sr-only">네비게이션</h2>
+              <button class="allmenu" data-toggle="modal" data-garget="#allmenu"><img src="img/header/allmenu.png" alt="전체메뉴" /></button>
+              <h3 class="sr-only">페이지메뉴</h3>
+              <ul class="main_menu">
+                <li>
+                  <a href="#" class="active">AI정보분석</a>
+                </li>
+                <li>
+                  <a href="#">AI종목추천</a>
+                </li>
+                <li>
+                  <a href="#">AI매매신호</a>
+                </li>
+                <li>
+                  <a href="#">토론실</a>
+                </li>
+                <li>
+                  <a href="61.html">MY종목</a>
+                </li>
+              </ul>
+              <h3 class="sr-only">서비스페이지메뉴</h3>
+              <ul class="add_menu">
+                <li>
+                  <a href="#">전문가방송</a>
+                </li>
+                <!-- <li>
+                                    <a href="#">라씨트레이더</a>
+                                </li> -->
+                <li>
+                  <a href="#">스탁론</a>
+                </li>
+              </ul>
+              <div class="sch">
+                <h3 class="sr-only">종목검색</h3>
+                <form class="form-inline" action="">
+                  <div class="form-group">
+                    <label for="" class="sr-only">종목검색</label>
+                    <input type="text" placeholder="종목명/종목코드를 입력하세요" />
+                    <button type="submit" class="glyphicon glyphicon-search" title="검색"></button>
+                  </div>
+                </form>
+              </div>
+            </nav>
+            <!-- //nav -->
+          </div>
+          <!-- //header -->
+        </div>
+        <!-- //realheader -->
+      </header>
+      <!-- //header_w -->
+      <section id="container_w">
+        <div id="container">
+          <h2 class="sr-only">본문내용</h2>
+          <nav id="subNav" class="garo">
+            <ul>
+              <li>
+                <a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active active"> AI정보분석 홈 </a>
+              </li>
+              <li>
+                <a href="/analysis/sise"> 시세분석 </a>
+              </li>
+              <li>
+                <a href="/analysis/issue"> 이슈분석 </a>
+              </li>
+              <li>
+                <a href="/analysis/supply"> 수급분석 </a>
+              </li>
+              <li>
+                <a href="/analysis/theme/"> 테마/업종 </a>
+              </li>
+              <li>
+                <a href="/analysis/notice"> 공시분석 </a>
+              </li>
+              <li>
+                <a href="/analysis/report"> 리포트분석 </a>
+              </li>
+              <li>
+                <a href="/analysis/news"> 뉴스 </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="content" class="sub nbg">
+            <div class="sub-content">
+              <div class="usaIssue-item_top">
+                <div class="itemInfo">
+                  <div class="itemName">
+                    <strong>리버티 미디어 Series A</strong>
+                    <em class="rate up">+41.2%</em>
+                  </div>
+                  <div class="info">
+                    <span class="ticker"> LLYVA ・ NASDAQ </span>
+                    <span class="price"> 시총(전일종가) $ 7.714 <em>B</em></span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="cmpyIntro">
+                    <strong>라이브 공연 및 이벤트 기획·운영 엔터테인먼트기업</strong>
+                    <div class="tag">
+                      <span>스트리밍서비스</span>
+                      <span>인공지능</span>
+                    </div>
+                    <!-- 디자인상 #기호에 디자인이 들어감으로 데이터에서 제외해주세요 -->
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- 종목정보 -->
+
+                <button data-toggle="modal" data-target="#OrgInfoModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                    <path
+                      d="M5.22632 0.593384H22.0261C22.6361 0.593384 23.2217 0.835878 23.6531 1.26721C24.0842 1.69848 24.3269 2.28335 24.3269 2.89319V27.5934H2.92651V2.89319C2.92657 2.28326 3.16905 1.6985 3.60034 1.26721C4.03163 0.835924 4.61639 0.593435 5.22632 0.593384ZM4.72632 25.7936H11.3269V20.193H15.9265V25.7936H22.5261V2.39319H4.72632V25.7936ZM18.7263 13.193V16.3932H15.5261V13.193H18.7263ZM11.7263 13.193V16.3932H8.52612V13.193H11.7263ZM18.7263 6.19299V9.39319H15.5261V6.19299H18.7263ZM11.7263 6.19299V9.39319H8.52612V6.19299H11.7263Z"
+                      fill="black"
+                      stroke="#F6F6F7"
+                    />
+                  </svg>
+                  <span>기업정보</span>
+                </button>
+                <!-- 기업정보 버튼 -->
+
+                <!-- Modal -->
+                <div class="modal fade custom-modal01" id="OrgInfoModal" tabindex="-1" aria-labelledby="기업정보" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="org-info">
+                          <div class="tit">기업정보</div>
+
+                          <div class="txt">
+                            <span>abcdefg</span>
+                            팔란티어 테크놀로지스는 기관용 소프트웨어 플랫폼을 구축합니다. 회사는 비정부 산업에 종사하는 고객에게 서비스를 제공하는 상업 부문과 미국 연방 정부 및 비미국 정부 기관 고객에게 서비스를 제공하는 정부 부문의 두 가지 부문을 운영합니다. 팔란티어 고담(Palantir Gotham)과 팔란티어 파운드리(Palantir Foundry)라는 두 가지 소프트웨어 플랫폼을 구축했습니다. 고담은 국방 및 정보 기관의 분석가를 위해 구축된 소프트웨어 플랫폼입니다.고담은 사용자가 신호 정보 소스에서 정보원의 보고서에
+                            이르기까지 데이터 세트에 숨겨진 패턴을 식별할 수 있도록 지원하여 미국과 동맹국 군인을 돕습니다.파운드리는 조직의 데이터를 위한 중앙 운영 체제를 생성합니다.개별 사용자는 데이터를 통합하고 분석할 수 있습니다.
+                          </div>
+
+                          <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // -->
+              </div>
+              <!-- top -->
+
+              <div class="sub-section mt-30">
+                <div class="usaIssue-item">
+                  <div class="itemNews">
+                    <strong>이 종목, 무슨일이야?</strong>
+
+                    <div>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                      <span class="text-truncate">최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여 최근 Liberty Live Group의 분할 상장 완료 소식이 투자심리 개선에 기여 료 소식이 투자심리 개선에 기여</span>
+                    </div>
+
+                    <button>
+                      <span>관련기사</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="none">
+                        <path d="M2.45199 6.57999L3.51299 5.51999L9.29199 11.297C9.38514 11.3896 9.45907 11.4996 9.50952 11.6209C9.55997 11.7421 9.58594 11.8722 9.58594 12.0035C9.58594 12.1348 9.55997 12.2648 9.50952 12.3861C9.45907 12.5073 9.38514 12.6174 9.29199 12.71L3.51299 18.49L2.45299 17.43L7.87699 12.005L2.45199 6.57999Z" fill="#AFAFAF" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- // -->
+
+                  <div class="aiScore">
+                    <div class="title" data-target="#guideforscore" data-toggle="modal">
+                      <strong>AI 평가점수</strong>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect width="24" height="24" fill="url(#pattern0_11_8572)" />
+                        <defs>
+                          <pattern id="pattern0_11_8572" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_11_8572" transform="scale(0.00195312)" />
+                          </pattern>
+                          <image
+                            id="image0_11_8572"
+                            width="512"
+                            height="512"
+                            preserveAspectRatio="none"
+                            xlink:href="data:image/png;base64,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"
+                          />
+                        </defs>
+                      </svg>
+                    </div>
+                    <!-- // -->
+
+                    <div class="aiScore-box">
+                      <div class="chartbox">
+                        <img src="./img/usaItemChart.png" alt="" />
+                      </div>
+                      <!--  -->
+                      <div class="totalScore">
+                        <div class="score">
+                          <span>종합 평가 점수</span>
+                          <strong>89<em>점</em></strong>
+                        </div>
+
+                        <div class="scoreList">
+                          <div class="spirit">
+                            <div class="labelName">성장성 지표</div>
+                            <div class="labelScore">
+                              <strong>00<em>점</em></strong>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="stability">
+                            <div class="labelName">안정성 지표</div>
+                            <div class="labelScore">
+                              <strong>00<em>점</em></strong>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="profitability">
+                            <div class="labelName">수익성 지표</div>
+                            <div class="labelScore">
+                              <strong>00<em>점</em></strong>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="multiple">
+                            <div class="labelName">시장성 지표</div>
+                            <div class="labelScore">
+                              <strong>00<em>점</em></strong>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <!-- // -->
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="aiScore-empty">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 0.75C5.78681 0.75 0.75 5.78681 0.75 12C0.75 18.2132 5.78681 23.25 12 23.25C18.2132 23.25 23.25 18.2132 23.25 12C23.25 5.78681 18.2132 0.75 12 0.75ZM18.8943 18.8943C17.1848 20.5987 14.9019 21.6056 12.4906 21.7188C10.0792 21.832 7.7121 21.0434 5.85044 19.5066C3.98877 17.9698 2.76594 15.795 2.4202 13.4059C2.07446 11.0168 2.63058 8.5845 3.98021 6.58302C5.32984 4.58153 7.37629 3.15421 9.72081 2.57917C12.0653 2.00412 14.54 2.32255 16.6625 3.4724C18.7851 4.62226 20.4035 6.52117 21.2025 8.79912C22.0014 11.0771 21.9237 13.5709 20.9844 15.7947C20.4949 16.9534 19.785 18.0061 18.8943 18.8943Z"
+                          fill="#999999"
+                        />
+                        <path d="M7.87523 15H16.1252V16.5H7.87523V15ZM9.87352 10.6895L8.74655 9.68769L9.74827 8.56077L8.6272 7.56421L7.62544 8.69118L6.49852 7.68946L5.50195 8.81052L6.62892 9.81229L5.6272 10.9392L6.74827 11.9358L7.75003 10.8088L8.87695 11.8105L9.87352 10.6895ZM17.9983 8.56077L16.8772 7.56421L15.8754 8.69118L14.7485 7.68946L13.752 8.81052L14.8789 9.81229L13.8772 10.9392L14.9983 11.9358L16 10.8088L17.127 11.8105L18.1235 10.6895L16.9965 9.68769L17.9983 8.56077Z" fill="#999999" />
+                      </svg>
+                      <span>
+                        이 종목은 충분한 데이터가 확보되지 않아 <br />
+                        AI 평가점수가 산출되지 않았습니다. <br />
+                        데이터 확보 후 업데이트될 예정입니다.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <!-- Modal -->
+                  <div class="modal custom-modal01 fade" id="guideforscore">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <div class="modal-pf">
+                            <div class="tit">
+                              <span>AI 평가점수</span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="txt">
+                              <span> 5가지 항목 점수를 종합적으로 반영하여 AI평가점수에 반영합니다. </span>
+
+                              <div class="txt-list">
+                                <span> <em>&middot; AI상승확률</em> : 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다. </span>
+
+                                <span> <em>&middot; 주가매력도</em> : 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다. </span>
+
+                                <span> <em>&middot; 성장성</em> : 매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. </span>
+
+                                <span> <em>&middot; 안정성</em> : 부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. </span>
+
+                                <span> <em>&middot; 수익성</em> : 영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다. </span>
+                              </div>
+                            </div>
+                            <!-- // -->
+                          </div>
+
+                          <div class="modal-button">
+                            <button class="bg-blue" data-dismiss="modal" style="width: 100%">확인</button>
+                          </div>
+                          <!-- // button -->
+                        </div>
+                        <!-- //body -->
+                      </div>
+                      <!-- //content -->
+                    </div>
+                    <!-- //dialog -->
+                  </div>
+                  <!-- // -->
+
+                  <div class="characteristic-group">
+                    <div class="spirit characteristic">
+                      <div class="title">
+                        <strong>성장형 지표</strong>
+                        <em>90점</em>
+                      </div>
+                      <!-- // -->
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>매출액 증가율</span>
+                          <span>00점</span>
+                        </div>
+                        <!--  -->
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <!-- // -->
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                          <!-- // -->
+                        </div>
+                        <!-- // -->
+
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치</span>
+                        </div>
+
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>기업의 성장률을 판단하는 대표적인 지표. <br />시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 <br />종목으로 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>자기자본 증가율</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 3년 분기별 자기자본 금액, 전종목 자기자본 금액, 종목별 AI분석 가중치</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>기업 고유자산의 증가를 나타내는 지표. <br />시가총액 상위20%평균 점수보다 높을수록 미래 성장 잠재력이 크다고 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+
+                      <em>기업의 미래 성장 가능성을 분석할 수 있는 지표입니다.</em>
+                    </div>
+                    <!-- //성장성 -->
+
+                    <div class="stability characteristic">
+                      <div class="title">
+                        <strong>안정성 지표</strong>
+                        <em>92점</em>
+                      </div>
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>부채/유동 비율</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>부채총계, 자본총계, 유동자산, 유동부채,AI분석 적정비율값</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>재무 건전성을 분석할때 활용되는 지표. <br />시가총액 상위20%평균 점수보다 높으면 보다 안정적인 기업으로 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>실적안정성</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 3년 분기별 매출액, 영업이익, 당기순이익 등 실적분석 지표</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>꾸준한 실적은 내는 기업을 평가하는 지표. <br />시가총액 상위20%평균 점수보다 높을 경우 안정적인 실적을 <br />내는 것으로 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+
+                      <em>기업의 재무/실적 안정성을 분석할 수 있는 지표입니다.</em>
+                    </div>
+                    <!-- //안정성 -->
+
+                    <div class="profitability characteristic">
+                      <div class="title">
+                        <strong>수익성 지표</strong>
+                        <em>86점</em>
+                      </div>
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>ROA/ROE</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 2년 분기별 당기순이익, 자산총계, 자본총계, 종목별 AI분석 가중치</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>대표적인 수익성 지표인 ROA와 ROE 결합. <br />시가총액 상위20%평균 점수보다 높을수록 투자가치와 <br />수익성이 높다고 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>영업이익률</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 2년 분기별 영업이익, 매출액, 종목별 AI분석 가중치</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>기업의 영업활동의 능률을 측정하는 지표. <br />시가총액 상위20%평균 점수보다 높을 수록 시장대비 수익성이 <br />좋은 것으로 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+
+                      <em>기업의 영업효율 및 성과를 분석할 수 있는 지표입니다.</em>
+                    </div>
+                    <!-- //수익성 -->
+
+                    <div class="multiple characteristic">
+                      <div class="title">
+                        <strong>멀티플 지표</strong>
+                        <em>72점</em>
+                      </div>
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>PER</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 4분기 당기순이익, 주가, 시가총액, 전종목 PER, 종목별 AI분석 가중치</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>기업의 주식가치를 나타내는 대표적인 척도. <br />시가총액 상위20%평균 점수보다 높을수록 기업 가치가 높은 것으로 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="characteristic-card">
+                        <div class="score-title">
+                          <span>PBR</span>
+                          <span>00점</span>
+                        </div>
+                        <div class="score-bar">
+                          <div class="bar">
+                            <span style="width: 60%"></span>
+                            <!-- 점수에 따라 width값을 조정해주세요 -->
+                          </div>
+                          <div class="label">
+                            <span>0</span>
+                            <span>평균(00)</span>
+                            <span>100</span>
+                          </div>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>최근 4분기 자본총계, 주가, 시가총액, 전종목 PBR, 종목별 AI분석 가중치</span>
+                        </div>
+                        <div class="analysis-box">
+                          <em>분석요소</em>
+                          <span>기업의 재무상태면에서 주가를 판단하는 지표. <br />시가총액 상위20%평균 점수보다 높을수록 재무구조가 <br />매우 튼튼하다고 평가.</span>
+                        </div>
+                      </div>
+                      <!--  -->
+
+                      <em>기업의 미래 가치를 분석할 수 있는 지표입니다.</em>
+                    </div>
+                    <!-- //멀티플 -->
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+          <!-- //content -->
+        </div>
+        <!-- //contianer -->
+        <aside id="c_side">
+          <h2 class="sr-only">사이드메뉴</h2>
+          <div class="s_menu s_m01">
+            <div class="title_s">
+              나의종목
+              <a href="#" class="setting glyphicon glyphicon-cog" title="설정"></a>
+            </div>
+            <div class="s_list_w">
+              <ul class="s_list">
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자</span>
+                    <em class="per up">+12.5%</em>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자</span>
+                    <em class="per dn">+12.5%</em>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자</span>
+                    <em class="per dn">+12.5%</em>
+                  </a>
+                </li>
+                <li class="ad">
+                  <a href="#" class="adtext">[이벤트] 수익률 2배!</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자</span>
+                    <em class="per up">+12.5%</em>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자</span>
+                    <em class="per dn">+12.5%</em>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자여섯</span>
+                    <em class="per up">+12.5%</em>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                    <span class="name" title="종목명">삼성전자여섯일곱</span>
+                    <span class="own">보유중<em class="badge">AI</em> </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- //list -->
+            <div class="s_menu_control disabled">
+              <a href="javascript:;" class="prev" role="button">
+                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                <span class="sr-only">이전</span>
+              </a>
+              <a href="javascript:;" class="next" role="button">
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                <span class="sr-only">다음</span>
+              </a>
+            </div>
+            <!-- //s_menu control list 가 8개 이상일때 활성화됨 -->
+          </div>
+          <!-- //s_menu s_m01-->
+          <div class="s_menu s_m02">
+            <div class="tab_title" role="tabpanel">
+              <ul role="tablist" id="myTab">
+                <li role="presentation" class="active">
+                  <a href="#popular" aria-controls="popular item" role="tab" data-toggle="tab">인기토론</a>
+                </li>
+                <li role="presentation">
+                  <a href="#topsch" aria-controls="top seach" role="tab" data-toggle="tab">검색상위</a>
+                </li>
+              </ul>
+            </div>
+            <!-- //tab -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="popular">
+                <ul class="s_list">
+                  <li class="list">
+                    <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                      <span class="name" title="종목명">삼성전자1</span>
+                      <em class="per up">+12.5%</em>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                      <span class="name" title="종목명">삼성전자</span>
+                      <em class="per dn">+12.5%</em>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //인기토론 -->
+              <div role="tabpanel" class="tab-pane fade" id="topsch">
+                <ul class="s_list">
+                  <li class="list">
+                    <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                      <span class="name" title="종목명">삼성전자2</span>
+                      <em class="per up">+12.5%</em>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" class="myItemList" data-toggle="popover" data-content="<a href='#'>토론</a><a href='#'>차트</a><a href='#'>신호</a>">
+                      <span class="name" title="종목명">삼성전자</span>
+                      <em class="per dn">+12.5%</em>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //검색상위 -->
+            </div>
+            <!-- //tab-content -->
+          </div>
+          <!-- //s_m02 -->
+          <div class="side_banner">
+            <a href="#"><img src="./img/header/demo_banner.jpg" alt="배너데모" /></a>
+          </div>
+        </aside>
+        <!-- //c_side -->
+      </section>
+      <!-- //container -->
+      <footer id="footer_w">
+        <h2 class="sr-only">하단영역</h2>
+        <div id="realfooter">
+          <div class="fmenu">
+            <h3 class="sr-only">약관및지원메뉴</h3>
+            <ul>
+              <li><a href="#">서비스 약관/정책</a></li>
+              <li><a href="#" class="bold">개인정보 처리방침</a></li>
+              <li><a href="#">원격지원</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">회사소개</a></li>
+            </ul>
+          </div>
+          <!-- //fmenu -->
+          <div class="fsite">
+            <h3 class="sr-only">관련사이트이동</h3>
+            <div class="dropup">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                패밀리사이트
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">로그인도용방지</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">카드터치인증</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">기업씽크풀</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">씽크풀 공식블로그</a>
+                </li>
+              </ul>
+            </div>
+            <!-- //d_down -->
+          </div>
+          <!-- //fsite -->
+          <address>
+            <h3 class="sr-only"></h3>
+            <p>
+              씽크풀사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+              <br />
+              또한 이용자는 본 정보를 무단 복사, 전재 할 수 없습니다.
+              <br />
+              <em>㈜씽크풀</em>
+              서울시 영등포구 국제금융로 70, 15층 (여의도동, 미원빌딩)
+              <span class="copy"> Copyright since 1999 &copy; ThinkPool Co.,Ltd. All Rights Reserved </span>
+            </p>
+          </address>
+          <!-- //address -->
+        </div>
+      </footer>
+      <!-- //footer -->
+      <div id="allmenu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="allmenyLabel" aria-hidden="hidden">
+        <h2 class="sr-only">사이트전체메뉴</h2>
+        <div class="allmenu_wrap modal-dialog">
+          <div class="allmenu_header">
+            <strong>전체메뉴보기</strong>
+            <button class="close" data-dismiss="modal" aria-label="Close"><img src="img/header/allmenu_close.png" title="닫기" /></button>
+          </div>
+          <!-- //allmenu_header -->
+          <div class="allmenu_content">
+            <div class="menu">
+              <ul>
+                <li class="menu_list">
+                  <div class="amenu thumb m01">
+                    <strong>AI정보분석</strong>
+                    <ul>
+                      <li><a href="#">AI정보분석 홈</a></li>
+                      <li><a href="#">이슈</a></li>
+                      <li><a href="#">주요지수</a></li>
+                      <li><a href="#">투자자별매매동향</a></li>
+                      <li><a href="#">업종/테마</a></li>
+                      <li><a href="#">시세분석(특징주)</a></li>
+                      <li><a href="#">뉴스</a></li>
+                      <li><a href="#">공시</a></li>
+                      <li><a href="#">리포트</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list">
+                  <div class="amenu thumb m02">
+                    <strong>AI종목추천</strong>
+                    <ul>
+                      <li><a href="#">AI종목추천 홈</a></li>
+                      <li><a href="#">AI추천봇 전체보기</a></li>
+                      <li><a href="#">(적응형)AI어드바이저</a></li>
+                      <li><a href="#">MY추천봇</a></li>
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list">
+                  <div class="amenu thumb m03">
+                    <strong>AI매매신호</strong>
+                    <ul>
+                      <li><a href="#">AI매매신호 홈</a></li>
+                      <li><a href="#">나의 AI매매신호</a></li>
+                      <li><a href="#">서비스 이용안내</a></li>
+                      <li><a href="#">AI매매신호 안내</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list">
+                  <div class="amenu">
+                    <strong>토론실</strong>
+                    <ul>
+                      <li><a href="#">소셜분석</a></li>
+                      <li><a href="#">증권가속보</a></li>
+                      <li><a href="#">주식종합토론</a></li>
+                      <li><a href="#">유머방</a></li>
+                      <li><a href="#">정치방</a></li>
+                    </ul>
+                  </div>
+                  <div class="amenu">
+                    <strong>고객센터</strong>
+                    <ul>
+                      <li><a href="#">고객센터 홈</a></li>
+                      <li><a href="#">회원정보관리</a></li>
+                      <li><a href="#">공지사항 및 이용문의</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list">
+                  <div class="amenu">
+                    <strong>MY종목홈</strong>
+                    <ul>
+                      <li><a href="#">MY종목홈</a></li>
+                    </ul>
+                  </div>
+                  <div class="amenu">
+                    <strong>기타</strong>
+                    <ul>
+                      <li><a href="#">원격지원</a></li>
+                      <li><a href="#">회사소개</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- //menu -->
+            <div class="side">
+              <div class="side01">
+                <ul>
+                  <li><a href="#">증권방송</a></li>
+                  <!-- <li><a href="#">라씨트레이더</a></li> -->
+                  <li><a href="#">스탁론</a></li>
+                </ul>
+              </div>
+              <div class="side02">
+                <strong>패밀리 사이트</strong>
+                <ul>
+                  <li><a href="#">로그인도용방지</a></li>
+                  <li><a href="#">카드터치인증</a></li>
+                  <li><a href="#">라씨매매비서</a></li>
+                  <li><a href="#">씽크풀 공식 블로그</a></li>
+                  <li><a href="#">기업 씽크풀</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- //side -->
+          </div>
+          <!-- //allmenu_content -->
+        </div>
+        <!-- //allmenu_wrap -->
+      </div>
+      <!-- 
+                        //위치는 어디에 두어도 상관없음 작업시 주석 삭제
+                     -->
+      <!-- //allmenu -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
