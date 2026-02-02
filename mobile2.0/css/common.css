@@ -1967,6 +1967,17 @@ html, body {
   margin-top: 2px;
 }
 
+.provider_txt {
+  margin: 0;
+  padding: 8px 22px 0;
+  width: 100%;
+}
+.provider_txt p {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
 .main-issue nav .nav-tabs {
   display: flex;
   width: 100%;
@@ -7744,6 +7755,7 @@ html, body {
   width: 100%;
   text-align: left;
   margin-top: 10px;
+  overflow: hidden;
 }
 .today-guide span {
   display: block;
@@ -17496,31 +17508,29 @@ html, body {
   font-size: 16px;
   color: #000;
   font-weight: 700;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
 }
 .usaSummary .txtbox .cont {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-height: 40px;
+  min-height: 40px;
+  gap: 10px;
 }
 .usaSummary .txtbox .cont span {
+  position: relative;
   display: block;
-  width: 100%;
-  max-height: 40px;
+  width: calc(100% - 10px);
   line-height: 20px;
-  font-size: 13px;
-  color: #999;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
+  font-size: 14px;
+  color: #333;
+  padding-left: 10px;
+}
+.usaSummary .txtbox .cont span::before {
+  content: "·";
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .usaReason {
@@ -17683,6 +17693,7 @@ html, body {
   width: 100%;
   justify-content: space-between;
   margin-top: 2px;
+  padding: 0;
 }
 .usaItemInfo .info .itemInfo .per {
   padding-top: 5px;
@@ -17793,11 +17804,12 @@ html, body {
   position: relative;
   display: block;
   width: 100%;
-  height: 138px;
+  min-height: 138px;
   padding: 15px;
   margin-top: 15px;
   border-radius: 10px;
   background: #f7f7f7;
+  overflow: hidden;
 }
 .usaItemInfo .cardNews .box {
   display: flex;
@@ -17822,14 +17834,21 @@ html, body {
   width: 100%;
 }
 .usaItemInfo .cardNews .box .txt span {
+  position: relative;
   display: block;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 500;
+  width: calc(100% - 10px);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
   color: #333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding-left: 10px;
+}
+.usaItemInfo .cardNews .box .txt span::before {
+  content: "·";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
 }
 .usaItemInfo .cardNews .box .link {
   position: absolute;
@@ -17867,6 +17886,17 @@ html, body {
   font-size: 16px;
   color: #000;
   font-weight: 700;
+}
+.org-p .empty_txt {
+  display: flex;
+  min-height: 150px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15px;
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 24px;
 }
 .org-p .score-box {
   display: flex;
@@ -17976,7 +18006,7 @@ html, body {
   padding: 0 8px;
   border-radius: 5px;
   border: 0.6px solid #999;
-  line-height: 18px;
+  line-height: 16px;
   font-size: 12px;
   color: #333;
 }
@@ -71269,5 +71299,3 @@ table tbody tr td a {
   font-weight: 700;
   float: left;
 }
-
-/*# sourceMappingURL=common.css.map */
