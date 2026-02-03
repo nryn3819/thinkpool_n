@@ -165,12 +165,20 @@
             .reason{
               display:block;
               width:100%;
-              max-width:347px;
+              max-width:317px;
+              
+              a{
+                display:inline-block;
+              }
             }
             .tag{
               display:block;
               width:100%;
               max-width:237px;
+
+              a{
+                display:inline-block;
+              }
             }
           }
         }
