@@ -1119,7 +1119,8 @@ html, body {
   justify-content: space-between;
 }
 .globalNavigation a {
-  position: relative;
+  display: flex;
+  align-items: center;
   height: 37px;
   line-height: 37px;
   font-size: 15px;
