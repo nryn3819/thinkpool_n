@@ -58,14 +58,14 @@
         line-height: 20px;
         font-size: 14px;
         color: #333;
-        padding-left:10px;
+        padding-left: 10px;
 
-        &::before{
-          content:'\00b7';
-          font-size:20px;
+        &::before {
+          content: "\00b7";
+          font-size: 20px;
           position: absolute;
-          top:0;
-          left:0;
+          top: 0;
+          left: 0;
         }
       }
     }
@@ -248,6 +248,7 @@
       width: 100%;
       justify-content: space-between;
       margin-top: 2px;
+      padding:0;
 
       .per {
         padding-top: 5px;
@@ -405,20 +406,20 @@
 
         span {
           position: relative;
-          display:block;
+          display: block;
           width: calc(100% - 10px);
           font-size: 14px;
-          line-height:20px;
+          line-height: 20px;
           font-weight: 400;
           color: #333;
-          padding-left:10px;
+          padding-left: 10px;
 
-          &::before{
-            content:'\00b7';
+          &::before {
+            content: "\00b7";
             position: absolute;
-            top:0;
-            left:0;
-            font-size:20px;
+            top: 0;
+            left: 0;
+            font-size: 20px;
           }
         }
       }
@@ -464,6 +465,18 @@
       color: #000;
       font-weight: 700;
     }
+  }
+
+  .empty_txt {
+    display: flex;
+    min-height: 150px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .score-box {
@@ -584,7 +597,7 @@
             padding: 0 8px;
             border-radius: 5px;
             border: 0.6px solid #999;
-            line-height: 18px;
+            line-height: 16px;
             font-size: 12px;
             color: #333;
           }
