@@ -18180,6 +18180,66 @@ html, body {
   outline: 0;
 }
 
+#header.expert-header {
+  border-bottom: 1.111px solid rgba(24, 24, 27, 0.5);
+  background: #15191c;
+}
+#header.expert-header .expert-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 16px;
+}
+#header.expert-header .expert-header-top .expert-header-top_sideMenu {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+#header.expert-header .expert-header-top .expert-header-top_sideMenu > button {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+#header.expert-header .expert-header-globalMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header.expert-header .expert-header-globalMenu a {
+  position: relative;
+  display: block;
+  width: 33.3333333333%;
+  padding: 10px 0;
+  line-height: 22px;
+  font-size: 15px;
+  color: #71717b;
+  text-align: center;
+}
+#header.expert-header .expert-header-globalMenu a.active {
+  color: #fff;
+  font-weight: 700;
+}
+#header.expert-header .expert-header-globalMenu a.active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  z-index: 99;
+}
+
+#container.expert-container {
+  background: #0b0c0e;
+}
+
 .title {
   display: inline-block;
   width: 100%;
@@ -19532,9 +19592,6 @@ table tbody tr td a {
 .table-custom-borderless tbody tr span.per.dn {
   color: #5368FF;
 }
-.table-custom-sm {
-  border: 0 !important;
-}
 .table-custom-sm.carou tbody tr th, .table-custom-sm.carou tbody tr td {
   padding: 15px 7px;
   border: 1px solid #cacaca;
@@ -19567,6 +19624,9 @@ table tbody tr td a {
 }
 .table-custom-sm.vtop thead th, .table-custom-sm.vtop thead td, .table-custom-sm.vtop tbody th, .table-custom-sm.vtop tbody td {
   vertical-align: top !important;
+}
+.table-custom-sm {
+  border: 0 !important;
 }
 .table-custom-sm thead {
   border: 0 !important;
@@ -26646,6 +26706,12 @@ table tbody tr td a {
   padding-bottom: 20px;
   overflow: hidden;
 }
+.board-guide > div::before {
+  display: block;
+  float: left;
+  content: "※";
+  padding-right: 5px;
+}
 .board-guide > div {
   display: block;
   font-size: 15px;
@@ -26653,12 +26719,6 @@ table tbody tr td a {
   float: left;
   overflow: hidden;
   margin-bottom: 5px;
-}
-.board-guide > div::before {
-  display: block;
-  float: left;
-  content: "※";
-  padding-right: 5px;
 }
 .board-guide > div span {
   display: block;
