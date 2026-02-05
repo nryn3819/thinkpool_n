@@ -18190,6 +18190,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 9px 16px;
+  gap: 10px;
 }
 #header.expert-header .expert-header-top .expert-header-top_sideMenu {
   display: flex;
@@ -18206,6 +18207,28 @@ html, body {
   align-items: center;
   width: 24px;
   height: 24px;
+}
+#header.expert-header .expert-header-top .expert-header-top_sub {
+  position: relative;
+  width: calc(100% - 119px);
+  height: 26px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+#header.expert-header .expert-header-top .expert-header-top_sub a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#header.expert-header .expert-header-top .expert-header-top_sub strong {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  height: 26px;
+  line-height: 26px;
+  color: #D4D4D8;
+  font-weight: 400 !important;
 }
 #header.expert-header .expert-header-globalMenu {
   display: flex;
