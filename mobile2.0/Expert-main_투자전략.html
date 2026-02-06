@@ -44,20 +44,6 @@
           </div>
           <!-- expertLogo -->
 
-
-          <!-- <div class="expert-header-top_sub">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-
-            <strong>서브타이틀명</strong>
-          </div> -->
-
-
-
           <div class="expert-header-top_sideMenu">
             <button type="button" id="opensch" class="schButton">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -377,8 +363,8 @@
         <!-- top -->
 
         <div class="expert-header-globalMenu">
-          <a href="#" class="active">홈</a>
-          <a href="#">투자전략</a>
+          <a href="#">홈</a>
+          <a href="#" class="active">투자전략</a>
           <a href="#">나의엑스퍼트</a>
         </div>
         <!-- menu -->
@@ -388,7 +374,111 @@
 
       <main id="container" class="expert-container clearfix">
 
-        123
+        <div class="main-content swiper-content">
+          <div class="title">꼭 읽어봐야할 투자전략</div>
+          <!-- //title -->
+          <div class="swiper exptSwiper04">
+            <div class="swiper-wrapper">
+              <button class="swiper-slide">
+                <div class="date">2025.10.23</div>
+                <div class="box-title text-truncate2">
+                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+                </div>
+                <div class="box-txt text-truncate3">
+                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                </div>
+                <div class="name">
+                  <img width="20" src="img/expert/avatar01.png">
+                  <span>주식재무왕</span>
+                </div>
+              </button>
+              <!-- //swiper-slide -->
+              <button class="swiper-slide">
+                <div class="date">2025.10.23</div>
+                <div class="box-title text-truncate2">
+                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+                </div>
+                <div class="box-txt text-truncate3">
+                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                </div>
+                <div class="name">
+                  <img width="20" src="img/expert/avatar01.png">
+                  <span>주식재무왕</span>
+                </div>
+              </button>
+              <!-- //swiper-slide -->
+              <button class="swiper-slide">
+                <div class="date">2025.10.23</div>
+                <div class="box-title text-truncate2">
+                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+                </div>
+                <div class="box-txt text-truncate3">
+                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                </div>
+                <div class="name">
+                  <img width="20" src="img/expert/avatar01.png">
+                  <span>주식재무왕</span>
+                </div>
+              </button>
+              <!-- //swiper-slide -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <script>
+          var swiper = new Swiper('.exptSwiper04', {
+            slidesPerView: '1.',
+            spaceBetween: 16,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            }
+          });
+        </script>
+        <!-- //첫번째 main-content -->
+
+        <div class="main-content">
+          <div class="title">투자전략</div>
+          <div class="tab-group">
+            <button class="active">투자전략</button>
+            <button>종목분석</button>
+          </div>
+          <div class="tab-content">
+            <!-- 투자전략 박스 -->
+            <div class="box col">
+              <div class="box-name">
+                <img width="20" src="img/expert/avatar01.png">
+                <span>주식재무왕</span>
+              </div>
+              <div class="box-txt text-truncate2">
+                역대급 시장에서 호외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+              </div>
+              <div class="box-date">
+                <p>2025.10.23</p>
+              </div>
+            </div>
+            <!-- // -->
+            <!-- 종목분석 박스 -->
+            <div class="box col">
+              <div class="item-name">
+                <div class="circle">SK</div>
+                <div class="name text-truncate">SK하이닉스</div>
+                <div class="code">000660</div>
+              </div>
+              <div class="box-txt text-truncate2">
+                역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.합니다.
+              </div>
+              <div class="box-date">
+                <p>2025.10.23</p>
+                <span>주식재무왕</span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+        </div>
+        <!-- //두번째 main-content -->
+
       </main>
       <!-- //container -->
 
