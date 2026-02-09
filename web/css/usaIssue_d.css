@@ -127,7 +127,7 @@
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .rate {
   width: 100%;
-  text-align: right;
+  text-align: center;
   font-size: 15px;
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .rate.up {
@@ -151,4 +151,9 @@
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .tag a {
   display: inline-block;
+}
+.stockContent_reason .stockContent_reason_table table tbody tr td .tag a.noneActive {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }

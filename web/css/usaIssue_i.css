@@ -444,11 +444,13 @@
   font-weight: 500;
 }
 
+.custom-modal01 .modal-dialog {
+  margin: 300px auto;
+}
 .custom-modal01 .modal-dialog .modal-content {
   position: relative;
   max-width: 520px;
   border-radius: 10px;
-  margin-top: 500px;
 }
 .custom-modal01 .modal-dialog .modal-content .org-info {
   display: flex;

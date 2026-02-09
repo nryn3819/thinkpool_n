@@ -513,13 +513,15 @@
 }
 
 .custom-modal01 {
+
   .modal-dialog {
+
+    margin:300px auto;
 
     .modal-content {
       position: relative;
       max-width: 520px;
       border-radius: 10px;
-      margin-top:500px;
 
       .org-info {
         display: flex;

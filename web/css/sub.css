@@ -12540,7 +12540,7 @@ div.upload-btn_wrap button span {
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .rate {
   width: 100%;
-  text-align: right;
+  text-align: center;
   font-size: 15px;
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .rate.up {
@@ -12564,6 +12564,11 @@ div.upload-btn_wrap button span {
 }
 .stockContent_reason .stockContent_reason_table table tbody tr td .tag a {
   display: inline-block;
+}
+.stockContent_reason .stockContent_reason_table table tbody tr td .tag a.noneActive {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }
 
 .usaIssue-item_top {
@@ -13011,11 +13016,13 @@ div.upload-btn_wrap button span {
   font-weight: 500;
 }
 
+.custom-modal01 .modal-dialog {
+  margin: 300px auto;
+}
 .custom-modal01 .modal-dialog .modal-content {
   position: relative;
   max-width: 520px;
   border-radius: 10px;
-  margin-top: 500px;
 }
 .custom-modal01 .modal-dialog .modal-content .org-info {
   display: flex;
@@ -13335,14 +13342,19 @@ div.upload-btn_wrap button span {
 }
 .sub-title.main-issue_title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 32px;
+  gap: 10px;
+}
+.sub-title.main-issue_title > span {
+  height: 32px;
+  line-height: 32px;
 }
 .sub-title.main-issue_title .main-issue_tab {
   display: flex;
   width: 150px;
-  height: 38px;
+  height: 32px;
   padding: 2px;
   border-radius: 100px;
   background: #fff;
@@ -13355,7 +13367,7 @@ div.upload-btn_wrap button span {
   margin: 0;
   padding: 0;
   width: 65px;
-  height: 34px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
