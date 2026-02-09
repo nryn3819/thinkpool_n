@@ -325,6 +325,7 @@
     flex-direction: column;
     width: 100%;
     margin-top: 12px;
+    height:175px;
     padding: 16px;
     background: #f8f9fa;
     border-radius: 10px;
@@ -387,7 +388,7 @@
     .main-issue_usa_majorStock_list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
 
       & > a {
         display:flex;
@@ -397,7 +398,7 @@
         border-radius: 5px;
         border: 1px solid #d6d6d6;
         background: #fff;
-        padding:14px;
+        padding:10px 14px;
         text-decoration: none;
 
         .itemInfo{

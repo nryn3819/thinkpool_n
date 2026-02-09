@@ -1,0 +1,545 @@
+@charset "UTF-8";
+.usaIssue-item_top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.usaIssue-item_top .itemInfo {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.usaIssue-item_top .itemInfo .itemName {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.usaIssue-item_top .itemInfo .itemName strong {
+  color: #333d4b;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item_top .itemInfo .itemName em {
+  color: #fc2f2f;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 600;
+}
+.usaIssue-item_top .itemInfo .info {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+.usaIssue-item_top .itemInfo .info .ticker {
+  color: #6b7684;
+  font-size: 12.6px;
+  font-style: normal;
+  font-weight: 350;
+}
+.usaIssue-item_top .itemInfo .info .price {
+  color: rgba(0, 12, 30, 0.8);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 350;
+}
+.usaIssue-item_top .itemInfo .info .price em {
+  color: #3182f6;
+}
+.usaIssue-item_top .itemInfo .cmpyIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+.usaIssue-item_top .itemInfo .cmpyIntro strong {
+  color: rgba(0, 12, 30, 0.8);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+.usaIssue-item_top .itemInfo .cmpyIntro .tag {
+  display: flex;
+  gap: 10px;
+}
+.usaIssue-item_top .itemInfo .cmpyIntro .tag span {
+  padding: 0 4px;
+  height: 17px;
+  line-height: 17px;
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  background: #d8e2fa;
+}
+.usaIssue-item_top .itemInfo .cmpyIntro .tag span::before {
+  content: "#";
+  font-size: 14px;
+  color: #5c8aff;
+}
+.usaIssue-item_top > button {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.usaIssue-item_top > button span {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+.usaIssue-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.usaIssue-item .itemNews {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.usaIssue-item .itemNews strong {
+  color: #333;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+}
+.usaIssue-item .itemNews > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.usaIssue-item .itemNews > div span {
+  color: #666;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.usaIssue-item .itemNews > div span::before {
+  content: "·";
+  padding-right: 5px;
+}
+.usaIssue-item .itemNews > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.usaIssue-item .itemNews > button span {
+  color: #afafaf;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.usaIssue-item .aiScore {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px;
+}
+.usaIssue-item .aiScore .title {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  align-items: center;
+  gap: 4px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.usaIssue-item .aiScore .title strong {
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item .aiScore .aiScore-box {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+.usaIssue-item .aiScore .aiScore-box .chartbox {
+  display: block;
+  width: 436px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore {
+  display: block;
+  width: calc(100% - 457px);
+  margin-left: 20px;
+  border-left: 1px solid #ebebeb;
+  padding-left: 20px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .score {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: space-between;
+  align-items: center;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .score span {
+  color: #666;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .score strong {
+  color: #404040;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .score strong em {
+  color: #666;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  margin-top: 10px;
+  gap: 15px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div {
+  display: flex;
+  width: 100%;
+  height: 24px;
+  justify-content: space-between;
+  gap: 18px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div .labelName {
+  display: flex;
+  height: 24px;
+  line-height: 24px;
+  gap: 12px;
+  align-items: center;
+  color: #666;
+  font-size: 15px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div .labelName::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 11px;
+  border-radius: 10px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div.spirit .labelName::before {
+  background: #3f54c3;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div.stability .labelName::before {
+  background: #289599;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div.profitability .labelName::before {
+  background: #9163cb;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div.multiple .labelName::before {
+  background: #f27059;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div .labelScore strong {
+  color: #333;
+  font-size: 22px;
+}
+.usaIssue-item .aiScore .aiScore-box .totalScore .scoreList > div .labelScore strong em {
+  font-style: normal;
+  font-size: 15px;
+  color: #666;
+  margin-left: 2px;
+}
+.usaIssue-item .aiScore .aiScore-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 253px;
+  border-radius: 10px;
+  background: #f9faf8;
+}
+.usaIssue-item .aiScore .aiScore-empty span {
+  color: #666;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.usaIssue-item .characteristic-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.usaIssue-item .characteristic-group .characteristic {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px 15px;
+}
+.usaIssue-item .characteristic-group .characteristic .title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  gap: 8px;
+}
+.usaIssue-item .characteristic-group .characteristic .title strong {
+  color: #333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item .characteristic-group .characteristic .title em {
+  padding: 0 10px;
+  display: block;
+  height: 27px;
+  line-height: 27px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+}
+.usaIssue-item .characteristic-group .characteristic.spirit .title em {
+  background: rgba(63, 84, 195, 0.2);
+  color: #3f54c3;
+}
+.usaIssue-item .characteristic-group .characteristic.spirit .characteristic-card .score-bar .bar span {
+  background: #3f54c3;
+}
+.usaIssue-item .characteristic-group .characteristic.stability .title em {
+  background: rgba(40, 149, 153, 0.2);
+  color: #289599;
+}
+.usaIssue-item .characteristic-group .characteristic.stability .characteristic-card .score-bar .bar span {
+  background: #289599;
+}
+.usaIssue-item .characteristic-group .characteristic.profitability .title em {
+  background: rgba(145, 99, 203, 0.2);
+  color: #9163cb;
+}
+.usaIssue-item .characteristic-group .characteristic.profitability .characteristic-card .score-bar .bar span {
+  background: #9163cb;
+}
+.usaIssue-item .characteristic-group .characteristic.multiple .title em {
+  background: rgba(242, 112, 89, 0.2);
+  color: #f27059;
+}
+.usaIssue-item .characteristic-group .characteristic.multiple .characteristic-card .score-bar .bar span {
+  background: #f27059;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card {
+  display: block;
+  width: 469px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 20px 18px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
+  margin-top: 12px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-title span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-bar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-bar .bar {
+  display: flex;
+  width: 100%;
+  height: 17px;
+  border-radius: 8.5px;
+  background: #e8e8e8;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-bar .bar span {
+  height: 17px;
+  border-radius: 8.5px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-bar .label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .score-bar .label span {
+  color: #666;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .analysis-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e8eb;
+  gap: 4px;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .analysis-box em {
+  width: 64px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #ced2d6;
+  border-radius: 10px;
+  color: #666;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+.usaIssue-item .characteristic-group .characteristic .characteristic-card .analysis-box span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+.usaIssue-item .characteristic-group .characteristic > em {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  font-style: normal;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.custom-modal01 .modal-dialog .modal-content {
+  position: relative;
+  max-width: 520px;
+  border-radius: 10px;
+  margin-top: 500px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .tit {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt span {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #999;
+}
+.custom-modal01 .modal-dialog .modal-content .org-info .txt span::before {
+  display: block;
+  content: "·";
+}
+.custom-modal01 .modal-dialog .modal-content .org-info button {
+  border: 0;
+  outline: 0;
+  background: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .tit {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt > span {
+  font-size: 15px;
+  line-height: 20px;
+  color: #333;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list span {
+  font-size: 15px;
+  color: #333;
+  line-height: 20px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-pf .txt .txt-list span em {
+  font-weight: bold;
+  font-style: normal;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+.custom-modal01 .modal-dialog .modal-content .modal-button button {
+  height: 40px;
+  border-radius: 8px;
+  background: #5368ff;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
