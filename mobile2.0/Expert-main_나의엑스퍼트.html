@@ -362,167 +362,194 @@
         </div>
         <!-- top -->
 
+      </header>
+
+      <div class="exptNav">
         <div class="expert-header-globalMenu">
           <a href="#">홈</a>
           <a href="#">투자전략</a>
           <a href="#" class="active">나의엑스퍼트</a>
         </div>
         <!-- menu -->
-
-      </header>
+      </div>
       <!-- // -->
 
       <main id="container" class="expert-container clearfix">
         
-        <div class="main-content">
+        <div class="expert-content">
           <div class="title">이용중인 전문가</div>
-          <div class="box inUse">
-            <div class="top">
-              <div class="left">
-                <div class="name">
-                  <strong>주식홍길동</strong>
-                  <span>정기구독중</span>
-                  <a href=""><img width="26" src="img/expert/link-icon.png"></a>
+          <div class="box-group">
+            <div class="box inUse">
+              <div class="top">
+                <div class="left">
+                  <div class="name">
+                    <strong>주식홍길동</strong>
+                    <span>정기구독중</span>
+                    <a href="#"><img width="26" src="img/expert/link-icon.png"></a>
+                  </div>
+                  <div class="date">
+                    <span>이용기간</span>
+                    <p>2025.09.10~2025.10.10</p>
+                  </div>
                 </div>
-                <div class="date">
-                  <span>이용기간</span>
-                  <p>2025.09.10~2025.10.10</p>
+                <div class="right">
+                  <img width="50" src="img/expert/avatar02.png">
                 </div>
               </div>
-              <div class="right">
-                <img width="50" src="img/expert/avatar02.png">
+              <div class="btn-group">
+                <button>
+                  <img width="16" src="img/expert/home-icon.png">
+                  <p>홈</p>
+                </button>
+                <span></span>
+                <button>
+                  <img width="16" src="img/expert/item-icon.png">
+                  <p>추천종목</p>
+                </button>
+                <span></span>
+                <button>
+                  <img width="16" src="img/expert/strategy-icon.png">
+                  <p>투자전략</p>
+                </button>
               </div>
-            </div>
-            <div class="btn-group">
-              <button>
-                <img width="16" src="img/expert/home-icon.png">
-                <p>홈</p>
-              </button>
-              <span></span>
-              <button>
-                <img width="16" src="img/expert/item-icon.png">
-                <p>추천종목</p>
-              </button>
-              <span></span>
-              <button>
-                <img width="16" src="img/expert/strategy-icon.png">
-                <p>투자전략</p>
-              </button>
-            </div>
-            <div class="bottom">
-              <p>오늘 새로운 투자전략이 등록되었습니다.</p>
-              <p>오늘 새로운 추천 종목이 있습니다.</p>
+              <div class="bottom">
+                <button>오늘 새로운 투자전략이 등록되었습니다.</button>
+                <button>오늘 새로운 추천 종목이 있습니다.</button>
+              </div>
             </div>
           </div>
         </div>
-        <!-- //첫번째 main-content -->
+        <!-- //첫번째 expert-content -->
 
-        <div class="main-content">
+        <div class="expert-content">
           <div class="title select">
             <p>나의 전문가 소식</p>
             <div class="select-box">
               <span>전문가 선택</span>
               <img width="14" src="img/expert/down-icon.png">
-              <div class="option-box" style="display: none;">
-                <button>1</button>
-                <button>1</button>
-                <button>1</button>
+              <div class="option-box">
+                <button>전체 선택</button>
+                <button>전체 선택</button>
+                <button>전체 선택</button>
               </div>
             </div>
           </div>
           <!-- //title -->
-          <div class="tab-group">
-            <button class="active">투자전략</button>
-            <button>종목분석</button>
-          </div>
           <div class="tab-content">
-            <div class="news-box">
-              <div class="date">2025.10.12 10:20</div>
-              <div class="news-title">
-                <img width="16" src="img/expert/alarm-icon.png">
-                <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-              </div>
-              <div class="news-txt">
-                <p>종목명 : 삼성전자(005730)</p>
-                <p>추천가 : 85,000원</p>
-                <p>
-                  목표가 : 10,500원 (+12.5%)
-                </p>
-              </div>
-              <div class="comment-box">
-                <div class="comment-title">
-                  <img width="18" src="img/expert/comment-icon.png">
-                  <span>추천코멘트</span>
+            <div class="flex-col">
+              <div class="news-box">
+                <div class="date">2025.10.12 10:20</div>
+                <button>
+                  <div class="news-title">
+                    <img width="16" src="img/expert/alarm-icon.png">
+                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
+                  </div>
+                  <div class="news-txt">
+                    <p>종목명 : 삼성전자(005730)</p>
+                    <p>추천가 : 85,000원</p>
+                    <p>
+                      목표가 : 10,500원 (+12.5%)
+                    </p>
+                  </div>
+                </button>
+                <div class="comment-box">
+                  <button>
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>추천코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                    </div>
+                  </button>
+                  <button class="comment-name">
+                    <img width="20" src="img/expert/avatar01.png">
+                    <span>주식성장왕</span>
+                  </button>
                 </div>
-                <div class="comment-txt">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-                <div class="comment-name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식성장왕</span>
+              </div>
+              <!-- news-box -->
+              <div class="news-box">
+                <div class="date">2025.10.12 10:20</div>
+                <button>
+                  <div class="news-title">
+                    <img width="16" src="img/expert/alarm-icon.png">
+                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
+                  </div>
+                  <div class="news-txt">
+                    <p>종목명 : 삼성전자(005730)</p>
+                    <p>추천가 : 85,000원</p>
+                    <p>
+                      목표가 : 10,500원 (+12.5%)
+                    </p>
+                  </div>
+                </button>
+                <div class="comment-box">
+                  <button>
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>추천코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                    </div>
+                  </button>
+                  <button class="comment-name">
+                    <img width="20" src="img/expert/avatar01.png">
+                    <span>주식성장왕</span>
+                  </button>
                 </div>
               </div>
+              <!-- news-box -->
+              <div class="news-box">
+                <div class="date">2025.10.12 10:20</div>
+                <button>
+                  <div class="news-title">
+                    <img width="16" src="img/expert/alarm-icon.png">
+                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
+                  </div>
+                  <div class="news-txt">
+                    <p>종목명 : 삼성전자(005730)</p>
+                    <p>추천가 : 85,000원</p>
+                    <p>
+                      목표가 : 10,500원 (+12.5%)
+                    </p>
+                  </div>
+                </button>
+                <div class="comment-box">
+                  <button>
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>추천코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                    </div>
+                  </button>
+                  <button class="comment-name">
+                    <img width="20" src="img/expert/avatar01.png">
+                    <span>주식성장왕</span>
+                  </button>
+                </div>
+              </div>
+              <!-- news-box -->
             </div>
-            <!-- news-box -->
-            <div class="news-box">
-              <div class="date">2025.10.12 10:20</div>
-              <div class="news-title">
-                <img width="16" src="img/expert/alarm-icon.png">
-                <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-              </div>
-              <div class="news-txt">
-                <p>종목명 : 삼성전자(005730)</p>
-                <p>추천가 : 85,000원</p>
-                <p>
-                  목표가 : 10,500원 (+12.5%)
-                </p>
-              </div>
-              <div class="comment-box">
-                <div class="comment-title">
-                  <img width="18" src="img/expert/comment-icon.png">
-                  <span>추천코멘트</span>
-                </div>
-                <div class="comment-txt">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-                <div class="comment-name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식성장왕</span>
-                </div>
-              </div>
-            </div>
-            <!-- news-box -->
-            <div class="news-box">
-              <div class="date">2025.10.12 10:20</div>
-              <div class="news-title">
-                <img width="16" src="img/expert/alarm-icon.png">
-                <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-              </div>
-              <div class="news-txt">
-                <p>종목명 : 삼성전자(005730)</p>
-                <p>추천가 : 85,000원</p>
-                <p>
-                  목표가 : 10,500원 (+12.5%)
-                </p>
-              </div>
-              <div class="comment-box">
-                <div class="comment-title">
-                  <img width="18" src="img/expert/comment-icon.png">
-                  <span>추천코멘트</span>
-                </div>
-                <div class="comment-txt">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-                <div class="comment-name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식성장왕</span>
-                </div>
-              </div>
-            </div>
-            <!-- news-box -->
           </div>
         </div>
-        <!-- //두번째 main-content -->
+
+        <script>
+          const selectBox = document.querySelector('.select-box');
+
+          selectBox.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+          });
+
+          document.addEventListener('click', function() {
+            selectBox.classList.remove('active');
+          });
+        </script>
+        <!-- //두번째 expert-content -->
 
       </main>
       <!-- //container -->
