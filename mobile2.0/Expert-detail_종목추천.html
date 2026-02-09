@@ -39,13 +39,7 @@
           <!-- 씽크풀로고 -->
 
 
-          <div class="expert-header-top_logo">
-            <img src="./img/expert/ExpertLogo.png" alt="엑스퍼트 로고" width="123">
-          </div>
-          <!-- expertLogo -->
-
-
-          <!-- <div class="expert-header-top_sub">
+          <div class="expert-header-top_sub">
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
@@ -53,8 +47,8 @@
               </svg>
             </a>
 
-            <strong>서브타이틀명</strong>
-          </div> -->
+            <strong>엑스퍼트</strong>
+          </div>
 
 
 
@@ -376,10 +370,9 @@
         </div>
         <!-- top -->
 
-        <div class="expert-header-globalMenu">
-          <a href="#" class="active">홈</a>
-          <a href="#">투자전략</a>
-          <a href="#">나의엑스퍼트</a>
+        <div class="expert-header-globalMenu_sub">
+          <a href="#">엑스퍼트 홈</a>
+          <a href="#" class="active">종목추천</a>
         </div>
         <!-- menu -->
 
@@ -388,9 +381,279 @@
 
       <main id="container" class="expert-container clearfix">
 
-        123
+        <div class="detail-content">
+          <div class="title">오늘 발생한 종목추천</div>
+          <div class="alarm">
+            <div class="alarm-top">
+              <img width="18" src="img/expert/speaker-icon.png">
+              <p>매수추천 999종목, 매도정리 999종목</p>
+              <strong>총 999종목</strong>
+              <button>
+                <img width="14" src="img/expert/zoom-icon.png">
+              </button>
+            </div>
+            <div class="alarm-list">
+              <span>12시 30분에 SK하이닉스(000660)를 매수했습니다</span>
+              <span>12시 30분에 SK하이닉스(000660)를 매수했습니다</span>
+              <!-- 발생한 종목 추천 없을 때 -->
+              <!-- <div class="no-alarm">
+                <img width="20" src="img/expert/no-icon.png">
+                <p>오늘 새로 발생한 종목 추천이 없습니다.</p>
+              </div> -->
+              <!-- // -->
+            </div>
+          </div>
+          <div class="swiper exptSwiper05">
+            <div class="swiper-wrapper">
+              <button class="swiper-slide green">
+                <div class="tag">
+                  <img width="16" src="img/expert/recommend-icon.png">
+                  <span>종목추천</span>
+                </div>
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                    <a href="#">
+                      <img width="26" src="img/expert/chart-link.png">
+                    </a>
+                  </div>
+                  <div class="item-txt">
+                    <p>
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-bottom">
+                  <div class="box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <span>우주발사체 기업</span>
+                  </div>
+                </div>
+              </button>
+              <button class="swiper-slide red">
+                <div class="tag">
+                  <img width="16" src="img/expert/money-icon.png">
+                  <span>수익실현</span>
+                </div>
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                    <a href="#">
+                      <img width="26" src="img/expert/chart-link.png">
+                    </a>
+                  </div>
+                  <div class="item-txt">
+                    <p>
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-bottom">
+                  <div class="box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <span>우주발사체 기업</span>
+                  </div>
+                </div>
+              </button>
+              <button class="swiper-slide gray">
+                <div class="tag">
+                  <img width="16" src="img/expert/delete-icon.png">
+                  <span>추천제외</span>
+                </div>
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                    <a href="#">
+                      <img width="26" src="img/expert/chart-link.png">
+                    </a>
+                  </div>
+                  <div class="item-txt">
+                    <p>
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-bottom">
+                  <div class="box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <span>우주발사체 기업</span>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <script>
+          var swiper = new Swiper('.exptSwiper05', {
+            slidesPerView: '1',
+            spaceBetween: 16,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            }
+          });
+
+          // 발생 매수/매도 내역 펼치고 닫기
+          document.querySelector('.alarm-top button').addEventListener('click', function() {
+          const alarmList = document.querySelector('.alarm-list');
+          const alarmTopP = document.querySelector('.alarm-top p');
+          const alarmTopStrong = document.querySelector('.alarm-top strong');
+          
+          const isOpen = alarmList.classList.toggle('active');
+  
+          if (isOpen) {
+            alarmTopP.style.display = 'none';
+            alarmTopStrong.innerText = '오늘 발생한 매수/매도 내역';
+          } else {
+            // 다시 닫힐 때 (원래대로 복구)
+            alarmTopP.style.display = 'block';
+            alarmTopStrong.innerText = '총 999종목'; // 기존 텍스트
+          }
+        });
+        </script>
+        <!-- //첫번째 detail-content -->
+
+        <div class="detail-content">
+          <div class="title">종목추천 현황 모두보기</div>
+          <div class="tab-group">
+            <button class="active">전체종목</button>
+            <button>매수종목</button>
+            <button>매도종목</button>
+          </div>
+          <div class="tab-content">
+            <button>
+              <div class="item-top">
+                <div class="item-name">
+                  <div class="circle">SK</div>
+                  <div class="name text-truncate">SK하이닉스</div>
+                  <div class="code">000660</div>
+                  <a href="#">
+                    <img width="26" src="img/expert/chart-link02.png">
+                  </a>
+                </div>
+                <div class="item-txt">
+                  <p>
+                    2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                  </p>
+                </div>
+                <div class="item-box">
+                  <div class="box">
+                    <div class="box-name">현재수익률</div>
+                    <strong><span>+113.2%</span></strong>
+                  </div>
+                  <div class="box">
+                    <div class="box-name">보유중</div>
+                    <strong>365일째</strong>
+                  </div>
+                </div>
+                <div class="item-num">
+                  <div class="area">
+                    <p>목표가</p>
+                    <strong>324,000원</strong>
+                  </div>
+                  <div class="area">
+                    <p>목표수익률</p>
+                    <strong><span>+5.5%</span></strong>
+                  </div>
+                </div>
+              </div>
+              <div class="item-bottom">
+                <div class="comment">
+                  <div class="left">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.86999 10.2137C1.96189 10.4456 1.98235 10.6996 1.92874 10.9431L1.26312 12.9994C1.24167 13.1036 1.24721 13.2117 1.27922 13.3132C1.31124 13.4147 1.36865 13.5064 1.44603 13.5795C1.52341 13.6527 1.61818 13.7048 1.72136 13.731C1.82455 13.7572 1.93272 13.7567 2.03562 13.7294L4.16874 13.1056C4.39856 13.06 4.63657 13.08 4.85562 13.1631C6.19023 13.7864 7.70209 13.9182 9.12446 13.5354C10.5468 13.1526 11.7883 12.2798 12.6298 11.0708C13.4713 9.86192 13.8588 8.39462 13.7239 6.92783C13.589 5.46105 12.9404 4.08903 11.8925 3.05386C10.8446 2.01869 9.4648 1.38689 7.99648 1.26993C6.52815 1.15296 5.0657 1.55836 3.86714 2.41458C2.66858 3.2708 1.81095 4.52283 1.44555 5.94976C1.08015 7.3767 1.23047 8.88684 1.86999 10.2137Z" stroke="#71717B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>엑스퍼트 코멘트</span>
+                  </div>
+                  <div class="right">
+                    주식홍길동
+                  </div>
+                </div>
+                <div class="comment-txt">
+                  최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                </div>
+              </div>
+            </button>
+            <a href="#">
+              <span>투자전략 더보기</span>
+              <img width="24" src="img/expert/right-arrow02.png">
+            </a>
+          </div>
+        </div>
+        <!-- //두번째 detail-content -->
+        
       </main>
       <!-- //container -->
+
+      <!-- 플로팅 버튼 -->
+      <div class="floating-btn">
+        <button>나의 엑스퍼트로 추가하기</button>
+      </div>
 
     </div>
     <!-- /wrap -->
