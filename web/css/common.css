@@ -15465,7 +15465,7 @@ div.upload-btn_wrap button span {
 .sub-title.main-issue_title .main-issue_tab {
   display: flex;
   width: 150px;
-  height: 32px;
+  height: 34px;
   padding: 2px;
   border-radius: 100px;
   background: #fff;
@@ -15478,7 +15478,7 @@ div.upload-btn_wrap button span {
   margin: 0;
   padding: 0;
   width: 65px;
-  height: 28px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
