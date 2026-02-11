@@ -438,7 +438,6 @@
       .circle {
         width: 20px;
         height: 20px;
-        border-top: 1.11px solid rgba(255, 255, 255, 0.1019607843);
         box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.2);
         background: #e7000b;
         display: flex;
@@ -449,6 +448,19 @@
         font-size: 8px;
         line-height: 20px;
         color: #fff;
+
+        &:has(img) {
+          background: transparent;
+        }
+        img{
+          width: 100%;
+        }
+        &.tp{
+          background: #5368FF;
+        }
+        &.rs{
+          background: #6565FF !important;
+        }
       }
 
       .name {
@@ -756,22 +768,6 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
-  }
-
-  .strategy .box .item-name .circle, .analyze .box .item-name .circle {
-    width: 20px;
-    height: 20px;
-    border-top: 1.11px solid rgba(255, 255, 255, 0.1019607843);
-    box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.2);
-    background: #e7000b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    font-weight: 700;
-    font-size: 8px;
-    line-height: 20px;
-    color: #fff;
   }
 
   .strategy .box .item-name .name, .analyze .box .item-name .name {

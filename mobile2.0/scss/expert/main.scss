@@ -199,7 +199,7 @@
               width: 38px;
               height: 38px;
               border-radius: 100%;
-              background: #e7000b;
+              background: #E7000B;
               box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.2);
               display: flex;
               justify-content: center;
@@ -208,6 +208,13 @@
               font-size: 14px;
               line-height: 20px;
               color: #fff;
+
+              &:has(img) {
+                background: transparent;
+              }
+              img{
+                width: 100%;
+              }
             }
 
             .item {
@@ -299,7 +306,7 @@
                 width: 38px;
                 height: 38px;
                 border-radius: 100%;
-                background: #e7000b;
+                background: #E7000B;
                 box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.2);
                 display: flex;
                 justify-content: center;
@@ -308,6 +315,13 @@
                 font-size: 14px;
                 line-height: 20px;
                 color: #fff;
+
+                &:has(img) {
+                  background: transparent;
+                }
+                img{
+                  width: 100%;
+                }
               }
 
               .item {
@@ -843,9 +857,8 @@
           .circle {
             width: 20px;
             height: 20px;
-            border-top: 1.11px solid rgba(255, 255, 255, 0.1019607843);
             box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.2);
-            background: #e7000b;
+            background: #E7000B;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -854,6 +867,13 @@
             font-size: 8px;
             line-height: 20px;
             color: #fff;
+
+            &:has(img) {
+              background: transparent;
+            }
+            img{
+              width: 100%;
+            }
           }
 
           .name {
