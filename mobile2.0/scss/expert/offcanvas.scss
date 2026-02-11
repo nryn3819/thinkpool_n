@@ -1074,6 +1074,100 @@
       }
     }
   }
+  &.noUse{
+    &.offcanvas-bottom{
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      pointer-events: none;
+
+      .offcanvas-body{
+        flex-grow: 0;
+        width: 100%;
+        padding: 30px 20px;
+        background: #32323A;
+        border-radius: 20px 20px 0 0;
+        pointer-events: auto;
+
+        .title{
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 10px;
+          
+          .left{
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            overflow: hidden;
+          }
+          .right{
+            p{
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 26px;
+              color: #fff;
+
+              strong{
+                color: #34D399;
+              }
+            }
+          }
+        }
+        .txt{
+          width: 100%;
+          margin-bottom: 16px;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 18px;
+          color: #D4D4D8;
+        }
+        .check-box{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 6px;
+          margin-bottom: 30px;
+          
+          .list{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 6px;
+
+            P{
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 22px;
+              color: #fff;
+            }
+          }
+        }
+        .use-btn{
+          width: 100%;
+
+          button{
+            width: 100%;
+            height: 45px;
+            border: none;
+            background: #34D399;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #0B0C0E;
+          }
+        }
+      }
+    }
+  }
   .related-items{
     width: 100%;
 
@@ -1187,4 +1281,11 @@
   p{
     margin: 0;
   }
+}
+
+body:has(#noUse.show) .offcanvas-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  opacity: 1 !important;
 }

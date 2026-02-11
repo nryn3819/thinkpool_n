@@ -839,6 +839,52 @@
         </div>
         
       </div>
+
+      <!-- 비가입자 바텀시트 -->
+      <div class="offcanvas offcanvas-bottom exptOffcanvas noUse" data-bs-backdrop="true" id="noUse">
+        <div class="offcanvas-body">
+          <div class="title">
+            <div class="left">
+              <img width="45" src="img/expert/avatar02.png">
+            </div>
+            <div class="right">
+              <p><strong>이준구 자문역</strong></p>
+              <p>종목추천 엑스퍼트 가입</p>
+            </div>
+          </div>
+          <div class="txt">
+            혼란스러운 시장 속에서 명확한 길을 제시합니다. 전문 데이터와 분석을 바탕으로 당신의 투자 수익률을 극대화하세요
+          </div>
+          <div class="check-box">
+            <div class="list">
+              <img width="18" src="img/expert/checkbox.png">
+              <p>엑스퍼트의 실시간 종목추천</p>
+            </div>
+            <div class="list">
+              <img width="18" src="img/expert/checkbox.png">
+              <p>실전 매매를 위한 투자전략</p>
+            </div>
+            <div class="list">
+              <img width="18" src="img/expert/checkbox.png">
+              <p>맞춤형 종목분석</p>
+            </div>
+            <div class="list">
+              <img width="18" src="img/expert/checkbox.png">
+              <p>철저한 리스크 관리</p>
+            </div>
+          </div>
+          <div class="use-btn">
+            <button>지금, 가입하고 모두 이용하기</button>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const noUseOffcanvas = new bootstrap.Offcanvas(document.getElementById('noUse'));
+          noUseOffcanvas.show();
+        });
+      </script>
       
     </div>
     <!-- /wrap -->
