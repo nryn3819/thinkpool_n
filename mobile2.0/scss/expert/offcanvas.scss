@@ -1081,7 +1081,7 @@
       }
     }
   }
-  &.noUse{
+  &.noUse, &.diagnosis{
     &.offcanvas-bottom{
       background: transparent;
       display: flex;
@@ -1155,6 +1155,22 @@
               line-height: 22px;
               color: #fff;
             }
+          }
+        }
+        .box{
+          width: 100%;
+          background: #32323A;
+          border: 1px solid #404244;
+          padding: 10px;
+          border-radius: 12px;
+          margin-bottom: 30px;
+          
+          P{
+            width: 100%;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            color: #D4D4D8;
           }
         }
         .use-btn{
@@ -1308,4 +1324,8 @@ body:has(#noUse.show) .offcanvas-backdrop.show {
   z-index: 999;
   background: #00000010;
   backdrop-filter: blur(5px);
+}
+
+body{
+  padding: 0 !important;
 }

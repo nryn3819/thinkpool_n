@@ -671,6 +671,33 @@
           </button>
         </div>
         <!-- //네번째 expert-content -->
+
+        <!-- 투자성향진단 바텀시트 -->
+        <div class="offcanvas offcanvas-bottom exptOffcanvas diagnosis" data-bs-backdrop="true" id="diagnosis">
+          <div class="offcanvas-body">
+            <div class="title">
+              <div class="right">
+                <p>투자자문사 서비스 이용 안내</p>
+              </div>
+            </div>
+            <div class="txt">
+              라씨 매매비서 내 투자자문사 서비스 이용을 위해 투자성향진단에 참여해 주세요
+            </div>
+            <div class="box">
+              <p>※ 투자자문사 제공 서비스 : 투자자문사 소속 엑스퍼트</p>
+            </div>
+            <div class="use-btn">
+              <button>1분, 투자성향진단 참여하기</button>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const noUseOffcanvas = new bootstrap.Offcanvas(document.getElementById('diagnosis'));
+            noUseOffcanvas.show();
+          });
+        </script>
         
       </main>
       <!-- //container -->
