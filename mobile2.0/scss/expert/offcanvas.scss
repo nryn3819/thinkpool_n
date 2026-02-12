@@ -1321,7 +1321,7 @@ body:has(#noUse.show) .offcanvas-backdrop.show {
   bottom: 0;
   right: 0;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 99;
   background: #00000010;
   backdrop-filter: blur(5px);
 }

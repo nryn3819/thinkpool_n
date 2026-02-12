@@ -2,6 +2,10 @@
   border-bottom: 1.111px solid rgba(24, 24, 27, 0.5);
   background: #15191c;
 
+  // &:has(.expert-header-top_sub) {
+  //   background: #0B0C0E;
+  // }
+
   .expert-header-top {
     display: flex;
     justify-content: space-between;
