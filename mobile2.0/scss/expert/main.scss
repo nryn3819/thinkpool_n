@@ -510,6 +510,29 @@ body:has(.exptNav_sub) #header.expert-header{
       line-height: 26px;
       color: #fff;
 
+      &.setting{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        button{
+          background: #1C1C1E;
+          padding: 7px 12px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px; 
+
+          span{
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            color: #D4D4D8;
+          }
+        }
+      }
       &.select {
         display: flex;
         justify-content: space-between;

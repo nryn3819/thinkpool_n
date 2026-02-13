@@ -39,10 +39,18 @@
           <!-- 씽크풀로고 -->
 
 
-          <div class="expert-header-top_logo">
-            <img src="./img/expert/ExpertLogo.png" alt="엑스퍼트 로고" width="123">
+          <div class="expert-header-top_sub">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <strong>엑스퍼트 이용 설정</strong>
           </div>
-          <!-- expertLogo -->
+
+
 
           <div class="expert-header-top_sideMenu">
             <button type="button" id="opensch" class="schButton">
@@ -361,185 +369,117 @@
         <!-- top -->
 
       </header>
-
-      <div class="exptNav">
-        <div class="expert-header-globalMenu">
-          <a href="#">홈</a>
-          <a href="#">투자전략</a>
-          <a href="#" class="active">나의엑스퍼트</a>
-        </div>
-        <!-- menu -->
-      </div>
       <!-- // -->
 
       <main id="container" class="expert-container clearfix">
-        
+
         <div class="expert-content">
-          <div class="title setting">
-            이용중인 전문가
-            <button>
-              <img width="18" src="img/expert/setting-icon.png">
-              <span>이용 설정</span>
-            </button>
-          </div>
-          <div class="box-group">
-            <div class="box inUse">
-              <div class="top">
-                <div class="left">
-                  <div class="name">
-                    <strong>주식홍길동</strong>
-                    <span>정기구독중</span>
-                    <a href="#"><img width="26" src="img/expert/link-icon.png"></a>
-                  </div>
-                  <div class="date">
-                    <span>이용기간</span>
-                    <p>2025.09.10~2025.10.10</p>
-                  </div>
-                </div>
-                <div class="right">
-                  <img width="50" src="img/expert/avatar02.png">
-                </div>
-              </div>
-              <div class="btn-group">
-                <button>
-                  <img width="16" src="img/expert/home-icon.png">
-                  <p>홈</p>
-                </button>
-                <span></span>
-                <button>
-                  <img width="16" src="img/expert/item-icon.png">
-                  <p>추천종목</p>
-                </button>
-                <span></span>
-                <button>
-                  <img width="16" src="img/expert/strategy-icon.png">
-                  <p>투자전략</p>
-                </button>
-              </div>
-              <div class="bottom">
-                <button>오늘 새로운 투자전략이 등록되었습니다.</button>
-                <button>오늘 새로운 추천 종목이 있습니다.</button>
-              </div>
+
+          <div class="setting">
+          
+            <div class="title">알림수신 번호</div>
+            <div class="number-box">
+              <p>
+                010-1234-1234
+                
+                <!-- 휴대폰 번호가 없습니다. -->
+              </p>
+              <button data-bs-toggle="modal" data-bs-target="#editNumber">
+                변경
+
+                <!-- 등록 -->
+              </button>
             </div>
+            <div class="txt">
+              엑스퍼트 알림은 씽크풀 ID에 등록된 휴대폰 번호로 발송됩니다. <br>
+              엑스퍼트 알림수신 번호를 변경하시면 씽크풀 ID에 등록된 휴대폰 번호가 함께 변경됩니다.
+            </div>
+
           </div>
+
         </div>
         <!-- //첫번째 expert-content -->
 
         <div class="expert-content">
-          <div class="title select">
-            <p>나의 전문가 소식</p>
-            <div class="select-box">
-              <span>전문가 선택</span>
-              <img width="14" src="img/expert/down-icon.png">
-              <div class="option-box">
-                <button>전체 선택</button>
-                <button>전체 선택</button>
-                <button>전체 선택</button>
+
+          <div class="setting">
+            <div class="title">정기결제 관리</div>
+            <div class="setting-box">
+              <div class="txt-group">
+                <strong>종목추천 - 정기결제(퀀트매니저)</strong>
+                <p>사용기간 : 2026.01.02 - 2026.02.02</p>
+              </div>
+              <div class="mini-box">
+                <p>다음 결제 예정일 : 2월 2일</p>
+                <!--밑에 버튼은 앱 화면일 때 생략(밑에 구글플레이 스토어 이동 버튼으로 대체)-->
+                <button data-bs-toggle="modal" data-bs-target="#termination">해지하기</button>
               </div>
             </div>
+            <!-- // -->
+            <div class="txt">
+              엑스퍼트 알림은 씽크풀 ID에 등록된 휴대폰 번호로 발송됩니다. <br>
+              엑스퍼트 알림수신 번호를 변경하시면 씽크풀 ID에 등록된 휴대폰 번호가 함께 변경됩니다.
+            </div>
+            <!-- // -->
+            <div class="go-store">
+              <button>
+                <span>구글플레이 스토어 정기 결게 구독관리 바로가기</span>
+                <img width="22" src="img/expert/right-arrow03.png">
+              </button>
+            </div>
+            <!-- 이용중인 정기결제 없을 때 -->
+            <div class="setting-box no-payment">
+              <div class="txt-group">
+                <p>이용중인 정기 결제가 없습니다.</p>
+              </div>
+            </div>
+            <!-- // -->
           </div>
-          <!-- //title -->
-          <div class="tab-content">
-            <div class="flex-col">
-              <div class="news-box">
-                <div class="date">2025.10.12 10:20</div>
-                <button>
-                  <div class="news-title">
-                    <img width="16" src="img/expert/alarm-icon.png">
-                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-                  </div>
-                  <div class="news-txt">
-                    <p>종목명 : 삼성전자(005730)</p>
-                    <p>추천가 : 85,000원</p>
-                    <p>
-                      목표가 : 10,500원 (+12.5%)
-                    </p>
-                  </div>
-                </button>
-                <div class="comment-box">
-                  <button>
-                    <div class="comment-title">
-                      <img width="18" src="img/expert/comment-icon.png">
-                      <span>추천코멘트</span>
-                    </div>
-                    <div class="comment-txt">
-                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                    </div>
-                  </button>
-                  <button class="comment-name">
-                    <img width="20" src="img/expert/avatar01.png">
-                    <span>주식성장왕</span>
-                  </button>
+
+        </div>
+        <!-- //두번째 expert-content -->
+
+        <div class="expert-content">
+          <div class="setting">
+            <div class="title select">
+              <p>결제 내역</p>
+              <div class="select-box">
+                <span>2026년</span>
+                <img width="14" src="img/expert/down-icon.png">
+                <div class="option-box">
+                  <button>2025년</button>
+                  <button>2024년</button>
+                  <button>2023년</button>
                 </div>
               </div>
-              <!-- news-box -->
-              <div class="news-box">
-                <div class="date">2025.10.12 10:20</div>
-                <button>
-                  <div class="news-title">
-                    <img width="16" src="img/expert/alarm-icon.png">
-                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-                  </div>
-                  <div class="news-txt">
-                    <p>종목명 : 삼성전자(005730)</p>
-                    <p>추천가 : 85,000원</p>
-                    <p>
-                      목표가 : 10,500원 (+12.5%)
-                    </p>
-                  </div>
-                </button>
-                <div class="comment-box">
-                  <button>
-                    <div class="comment-title">
-                      <img width="18" src="img/expert/comment-icon.png">
-                      <span>추천코멘트</span>
-                    </div>
-                    <div class="comment-txt">
-                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                    </div>
-                  </button>
-                  <button class="comment-name">
-                    <img width="20" src="img/expert/avatar01.png">
-                    <span>주식성장왕</span>
-                  </button>
+            </div>
+            <!-- // -->
+            <div class="setting-box">
+              <div class="date">2025.10.12 10:20</div>
+              <div class="txt-group">
+                <div class="txt-flex">
+                  <p>결&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제</p>
+                  <strong><span>129,000원</span> (정기결제)</strong>
+                </div>
+                <div class="txt-flex">
+                  <p>내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역</p>
+                  <strong>종목추천 - 정기결제(퀀트매니저)</strong>
+                </div>
+                <div class="txt-flex">
+                  <p>사용기간</p>
+                  <strong>2026.01.02 ~ 2026.02.02</strong>
                 </div>
               </div>
-              <!-- news-box -->
-              <div class="news-box">
-                <div class="date">2025.10.12 10:20</div>
-                <button>
-                  <div class="news-title">
-                    <img width="16" src="img/expert/alarm-icon.png">
-                    <span>[종목추천 엑스퍼트] 종목추천 알림</span>
-                  </div>
-                  <div class="news-txt">
-                    <p>종목명 : 삼성전자(005730)</p>
-                    <p>추천가 : 85,000원</p>
-                    <p>
-                      목표가 : 10,500원 (+12.5%)
-                    </p>
-                  </div>
-                </button>
-                <div class="comment-box">
-                  <button>
-                    <div class="comment-title">
-                      <img width="18" src="img/expert/comment-icon.png">
-                      <span>추천코멘트</span>
-                    </div>
-                    <div class="comment-txt">
-                      글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                    </div>
-                  </button>
-                  <button class="comment-name">
-                    <img width="20" src="img/expert/avatar01.png">
-                    <span>주식성장왕</span>
-                  </button>
-                </div>
+            </div>
+            <!-- // -->
+            <div class="setting-box no-payment">
+              <div class="txt-group">
+                <p>결제 내역이 없습니다.</p>
               </div>
-              <!-- news-box -->
             </div>
           </div>
         </div>
+        <!-- //세번째 expert-content -->
 
         <script>
           const selectBox = document.querySelector('.select-box');
@@ -553,8 +493,108 @@
             selectBox.classList.remove('active');
           });
         </script>
-        <!-- //두번째 expert-content -->
 
+        <!-- 알림수신 번호 변경/등록 팝업 -->
+        <div class="modal fade exptModal editNumber" data-bs-backdrop="true" id="editNumber">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">알림을 받을 휴대폰 번호를 <br>입력해 주세요</div>
+                <div class="input-group">
+                  <div class="input-box">
+                    <input type="text" name="phoneNum" id="phoneNum" placeholder="휴대폰 번호를 입력해 주세요">
+                    <button>인증하기</button>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" name="certificationNum " id="certificationNum" placeholder="인증 번호를 입력해 주세요">
+                    <button>확인</button>
+                  </div>
+                </div>
+                <button data-bs-dismiss="modal">변경하기</button>
+                <!--새 번호 등록할 때-->
+                <!-- <button data-bs-dismiss="modal">등록하기</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+
+        <!-- 정기결제 해지 팝업 -->
+        <div class="modal fade exptModal termination" data-bs-backdrop="true" id="termination">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">종목추천 - 정기결제 (퀀트매니저)를 해지하실 건가요? </div>
+                <div class="termination-group">
+                  <div class="termination-txt">
+                    정기 결제를 해지하시면 아래의 서비스를 이용하실 수 없어요
+                  </div>
+                  <div class="termination-box">
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>엑스퍼트의 실시간 종목 추천</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>실전 매매를 위한 투자 전략</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>맞춤형 종목분석</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>철저한 리스크 관리</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button data-bs-toggle="modal" data-bs-target="#termination02">해지하기</button>
+                  <button data-bs-dismiss="modal">유지하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+
+        <!-- 정기결제 해지 팝업2 -->
+        <div class="modal fade exptModal termination02" data-bs-backdrop="true" id="termination02">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">종목추천 - 정기결제 (퀀트매니저)를 해지하실 건가요? </div>
+                <div class="termination-group">
+                  <div class="termination-txt">
+                    정기 해지를 하셔도 아래 이용기간까지<br>
+                    서비스 이용이 가능합니다
+                  </div>
+                  <div class="termination-box">
+                    <span>사용기간 : 2026.01.02 ~ 2026.02.02</span>
+                  </div>
+                </div>
+                <button data-bs-dismiss="modal">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+        
       </main>
       <!-- //container -->
 
