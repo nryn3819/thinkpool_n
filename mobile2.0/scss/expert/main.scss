@@ -2,9 +2,9 @@
   border-bottom: 1.111px solid rgba(24, 24, 27, 0.5);
   background: #15191c;
 
-  // &:has(.expert-header-top_sub) {
-  //   background: #0B0C0E;
-  // }
+  &:has(.expert-header-top_sub) {
+    background: #0B0C0E;
+  }
 
   .expert-header-top {
     display: flex;
@@ -57,6 +57,10 @@
       }
     }
   }
+}
+
+body:has(.exptNav_sub) #header.expert-header{
+  background: #15191c;
 }
 
 .expert-header-globalMenu_sub {
@@ -145,6 +149,7 @@
 }
 
 #container.expert-container {
+  width: 100%;
   background: #0b0c0e;
   padding: 32px 0;
   display: flex;
