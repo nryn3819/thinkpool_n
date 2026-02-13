@@ -199,10 +199,36 @@ body:has(.exptNav_sub) #header.expert-header{
           .top {
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
-            gap: 12px;
             margin-bottom: 24px;
+
+            .left{
+              max-width: calc(100% - 75px);
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 12px;
+            }
+            .right{
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-end;
+
+              p{
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: #71717b;
+              }
+              span{
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: #34D399;
+              }
+            }
 
             .circle {
               width: 38px;
@@ -474,6 +500,61 @@ body:has(.exptNav_sub) #header.expert-header{
             }
           }
         }
+      }
+    }
+    .exptSwiper06 .swiper-slide{
+      width: 100%;
+      background: #27272a;
+      border: none;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+
+      .top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+
+        .left{
+          width: calc(100% - 60px);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 12px;
+
+          strong{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            color: #fff;
+          }
+          p{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            color: #D4D4D8;
+          }
+        }
+        .right{
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          border-radius: 100%;
+        }
+      }
+      button{
+        width: 100%;
+        height: 48px;
+        background: #34D399;
+        border-radius: 10px;
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: #0B0C0E;
       }
     }
 
@@ -875,6 +956,10 @@ body:has(.exptNav_sub) #header.expert-header{
             font-size: 13px;
             line-height: 18px;
             color: #34d399;
+            
+            img{
+              margin-right: 4px;
+            }
           }
         }
 

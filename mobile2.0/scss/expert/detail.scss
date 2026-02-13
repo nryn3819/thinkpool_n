@@ -618,11 +618,9 @@
       padding-top: 10px;
       padding-bottom: 10px;
       border-top: 1px solid #27272a;
-      border-bottom: 1px solid #27272a;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
 
       .area {
         display: flex;
@@ -709,6 +707,8 @@
 
   .item-bottom {
     width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid #27272a;
 
     .comment-box {
       width: 100%;

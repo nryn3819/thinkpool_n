@@ -1448,6 +1448,14 @@
   .related-items{
     width: 100%;
 
+    .title{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
     .items-group{
       width: 100%;
       display: flex;

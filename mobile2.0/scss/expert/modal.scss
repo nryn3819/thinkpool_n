@@ -53,6 +53,10 @@
             line-height: 18px;
             color: #D4D4D8;
             text-align: center;
+
+            &.text-left{
+              text-align: left;
+            }
           }
         }
         button{

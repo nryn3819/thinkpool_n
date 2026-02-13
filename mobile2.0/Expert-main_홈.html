@@ -376,7 +376,6 @@
 
         <div class="expert-content swiper-content">
           <div class="main-title">
-            <span>엑스퍼트</span>
             <p>최근 목표 달성한 <br>종목은?</p>
           </div>
           <!-- //main-title -->
@@ -384,10 +383,16 @@
             <div class="swiper-wrapper">
               <button class="swiper-slide">
                 <div class="top">
-                  <div class="circle">SK</div>
-                  <div class="item">
-                    <strong class="text-truncate">SK하이닉스</strong>
-                    <span>000660</span>
+                  <div class="left">
+                    <div class="circle">SK</div>
+                    <div class="item">
+                      <strong class="text-truncate">SK하이닉스</strong>
+                      <span>000660</span>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p>엑스퍼트</p>
+                    <span>실전매매대가</span>
                   </div>
                 </div>
                 <div class="bottom">
@@ -404,10 +409,16 @@
               <!-- //swiper-slide -->
               <button class="swiper-slide">
                 <div class="top">
-                  <div class="circle">SK</div>
-                  <div class="item">
-                    <strong class="text-truncate">SK하이닉스</strong>
-                    <span>000660</span>
+                  <div class="left">
+                    <div class="circle">SK</div>
+                    <div class="item">
+                      <strong class="text-truncate">SK하이닉스</strong>
+                      <span>000660</span>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p>엑스퍼트</p>
+                    <span>실전매매대가</span>
                   </div>
                 </div>
                 <div class="bottom">
@@ -424,10 +435,16 @@
               <!-- //swiper-slide -->
               <button class="swiper-slide">
                 <div class="top">
-                  <div class="circle">SK</div>
-                  <div class="item">
-                    <strong class="text-truncate">SK하이닉스</strong>
-                    <span>000660</span>
+                  <div class="left">
+                    <div class="circle">SK</div>
+                    <div class="item">
+                      <strong class="text-truncate">SK하이닉스</strong>
+                      <span>000660</span>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p>엑스퍼트</p>
+                    <span>실전매매대가</span>
                   </div>
                 </div>
                 <div class="bottom">
@@ -705,12 +722,17 @@
         <!-- //세번째 expert-content -->
 
         <div class="expert-content">
-          <div class="title">엑스퍼트 수익률 TOP3</div>
-          <div class="tab-group">
+          <div class="title select">
+            엑스퍼트 수익률 TOP3
+            <button data-bs-toggle="modal" data-bs-target="#guide">
+              <img width="28" src="img/expert/question-icon.png">
+            </button>
+          </div>
+          <!-- <div class="tab-group">
             <button class="active">최근 1달</button>
             <button>최근 3달</button>
             <button>최근 1년</button>
-          </div>
+          </div> -->
           <div class="tab-content">
             <div class="top-rate flex-col">
               <button class="box row-sb">
@@ -768,13 +790,13 @@
 
         <div class="expert-content">
           <div class="title">실시간 추천 종목 현황</div>
-          <div class="tab-group">
+          <!-- <div class="tab-group">
             <button class="active">마무리</button>
             <button>추천</button>
-          </div>
+          </div> -->
           <div class="tab-content">
             <!-- 마무리 탭 박스 -->
-            <div class="current-state flex-col">
+            <!-- <div class="current-state flex-col">
               <button class="box box-row">
                 <div class="top">
                   <div class="left">
@@ -795,7 +817,7 @@
                   </div>
                 </div>
               </button>
-            </div>
+            </div> -->
             <!-- // -->
             <!-- 추천 탭 박스 -->
             <div class="current-state flex-col">
@@ -838,6 +860,29 @@
           </div>
         </div>
         <!-- //다섯번째 expert-content -->
+
+        <!-- 수익률 안내 팝업 -->
+        <div class="modal fade exptModal guide" data-bs-backdrop="true" id="guide">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">안내</div>
+                <div class="txt">
+                  <p class="text-left">
+                    최근 1개월 동안 추천이 종료된 모든 종목의 수익률만 합산합니다.<br> 
+                    각 종목의 개별 수익률을 단순히 합산한 수치이며, 상세 내역은 각 엑스퍼트 홈의 종목추천에서 확인하실 수 있습니다．
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
 
       </main>
       <!-- //container -->
