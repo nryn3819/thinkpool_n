@@ -49,6 +49,8 @@
   }
   &.payment{
     .offcanvas-body{
+      padding-top: 0;
+
       .info-box{
         width: 100%;
         padding: 0px 36px;
@@ -298,6 +300,10 @@
     }
     .offcanvas-footer{
       width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
       button{
         width: 100%;
