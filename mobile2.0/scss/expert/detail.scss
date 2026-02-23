@@ -321,10 +321,11 @@
     .box-grid {
       width: 100%;
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr 1fr;
       gap: 16px 10px;
 
       .box {
+        min-width: 0;
         width: 100%;
         padding: 20px 16px;
         background: #32323a;
@@ -344,6 +345,8 @@
           align-items: flex-start;
 
           strong {
+            width: 100%;
+            max-width: 100%;
             font-weight: 700;
             font-size: 15px;
             line-height: 22px;
