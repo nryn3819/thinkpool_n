@@ -959,6 +959,8 @@ body:has(.exptNav_sub) #header.expert-header{
             
             img{
               margin-right: 4px;
+              border-radius: 100%;
+              overflow: hidden;
             }
           }
         }

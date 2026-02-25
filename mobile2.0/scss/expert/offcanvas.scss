@@ -402,6 +402,10 @@
           &:last-child{
             margin-bottom: 0;
           }
+
+          img{
+            width: 100%;
+          }
         }
       }
     }
@@ -814,10 +818,15 @@
               color: #fff;
             }
             p{
+              width: 100%;
               font-weight: 400;
               font-size: 15px;
               line-height: 22px;
               color: #D4D4D8;
+
+              img{
+                width: 100%;
+              }
             }
           }
           .txt{

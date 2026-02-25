@@ -1,8 +1,11 @@
 .exptModal{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .modal-dialog{
-    margin: 0;
+    margin: 0 auto;
     padding: 30px;
 
     .modal-content{
