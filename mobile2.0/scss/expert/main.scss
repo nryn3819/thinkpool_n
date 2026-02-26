@@ -2,10 +2,6 @@
   border-bottom: 1.111px solid rgba(24, 24, 27, 0.5);
   background: #15191c;
 
-  &:has(.expert-header-top_sub) {
-    background: #0B0C0E;
-  }
-
   .expert-header-top {
     display: flex;
     justify-content: space-between;
@@ -59,13 +55,9 @@
   }
 }
 
-body:has(.exptNav_sub) #header.expert-header{
-  background: #15191c;
-}
-
 .expert-header-globalMenu_sub {
   width: 100%;
-  border-bottom: 1px solid #27272a;
+  border-bottom: 1px solid #3E444E;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +107,7 @@ body:has(.exptNav_sub) #header.expert-header{
       font-size: 15px;
       color: #71717b;
       text-align: center;
+      border-bottom: 1px solid #3E444E;
 
       &:hover {
         color: #71717b;
@@ -150,7 +143,7 @@ body:has(.exptNav_sub) #header.expert-header{
 
 #container.expert-container {
   width: 100%;
-  background: #0b0c0e;
+  background: #15191C;
   padding: 32px 0;
   display: flex;
   flex-direction: column;
@@ -318,8 +311,7 @@ body:has(.exptNav_sub) #header.expert-header{
         }
 
         &.exptSwiper02 .swiper-slide {
-          border: 1px solid #27272a;
-          background: #18181b;
+          background: #24282F;
           border-radius: 12px;
 
           .top {
@@ -328,7 +320,7 @@ body:has(.exptNav_sub) #header.expert-header{
             justify-content: space-between;
             align-items: center;
             padding-bottom: 24px;
-            border-bottom: 1px solid #27272a;
+            border-bottom: 1px solid #3E444E;
 
             .left {
               max-width: calc(100% - 65px);
@@ -448,7 +440,7 @@ body:has(.exptNav_sub) #header.expert-header{
 
         &.exptSwiper04 .swiper-slide {
           max-width: 100%;
-          background: #27272a;
+          background: #313137;
           border: none;
           border-radius: 12px;
 
@@ -504,7 +496,7 @@ body:has(.exptNav_sub) #header.expert-header{
     }
     .exptSwiper06 .swiper-slide{
       width: 100%;
-      background: #27272a;
+      background: #24282F;
       border: none;
       border-radius: 12px;
       padding: 20px;
@@ -626,7 +618,7 @@ body:has(.exptNav_sub) #header.expert-header{
         .select-box {
           position: relative;
           width: 120px;
-          background: #1c1c1e;
+          background: #484850;
           border-radius: 10px;
           padding: 7px 12px;
           display: flex;
@@ -649,7 +641,7 @@ body:has(.exptNav_sub) #header.expert-header{
             left: 0;
             top: 36px;
             width: 120px;
-            background: #1c1c1e;
+            background: #484850;
             border-radius: 10px;
             padding: 7px 12px;
             flex-direction: column;
@@ -697,9 +689,9 @@ body:has(.exptNav_sub) #header.expert-header{
       .box {
         width: 100%;
         padding: 20px;
-        background: #18181b;
+        background: #24282F;
         border-radius: 12px;
-        border: 1px solid #27272a;
+        border: 1px solid #3E444E;
         display: flex;
         align-items: center;
         text-align: left;
@@ -1055,7 +1047,7 @@ body:has(.exptNav_sub) #header.expert-header{
           display: block;
           width: 1.33px;
           height: 100%;
-          background: #27272a;
+          background: #3E444E;
           left: 11px;
           top: 14px;
           z-index: 1;
@@ -1109,7 +1101,7 @@ body:has(.exptNav_sub) #header.expert-header{
 
         .comment-box {
           width: 100%;
-          background: #252528;
+          background: #24282F;
           border-radius: 12px;
           padding: 16px;
 
@@ -1176,9 +1168,9 @@ body:has(.exptNav_sub) #header.expert-header{
     .box {
       width: 100%;
       padding: 20px;
-      background: #18181b;
+      background: #24282F;
       border-radius: 12px;
-      border: 1px solid #27272a;
+      border: 1px solid #3E444E;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1186,7 +1178,7 @@ body:has(.exptNav_sub) #header.expert-header{
 
       &.inUse {
         flex-direction: column;
-        background: #252528;
+        background: #313137;
         border: none;
 
         .top {
@@ -1346,8 +1338,8 @@ body:has(.exptNav_sub) #header.expert-header{
 
   .expt-box {
     width: 100%;
-    border: 1px solid #27272a;
-    background: #18181b;
+    border: 1px solid #3E444E;
+    background: #24282F;
     border-radius: 12px;
     padding: 20px;
     text-align: left;
@@ -1357,9 +1349,8 @@ body:has(.exptNav_sub) #header.expert-header{
       padding: 0;
       padding-bottom: 20px;
       margin-bottom: 20px;
-      border-bottom: 1px solid #27272a;
+      border-bottom: 1px solid #3E444E;
       background: none;
-      border: none;
       text-align: left;
 
       &:last-child {
@@ -1484,7 +1475,7 @@ body:has(.exptNav_sub) #header.expert-header{
   .tab-group {
     width: 100%;
     padding: 4px;
-    background: #222227;
+    background: #2C2C2F;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1497,7 +1488,7 @@ body:has(.exptNav_sub) #header.expert-header{
       box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1019607843);
       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1019607843);
       border-radius: 10px;
-      background: #222227;
+      background: #2C2C2F;
       border: none;
       font-weight: 400;
       font-size: 15px;
@@ -1537,8 +1528,8 @@ body:has(.exptNav_sub) #header.expert-header{
 }
 
 .exptFooter{
-  background: #0b0c0e !important;
-  border-top: 1px solid #27272A !important;
+  background: #15191C !important;
+  border-top: 1px solid #3E444E !important;
 
   .figure-caption{
     color: #D4D4D8 !important;

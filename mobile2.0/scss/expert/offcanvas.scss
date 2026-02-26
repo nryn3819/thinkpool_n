@@ -184,7 +184,7 @@
             label{
               width: 100%;
               padding: 15px;
-              border: 1px solid #FFFFFF80;
+              border: 1px solid #737379;
               border-radius: 12px;
               background: url('https://img.thinkpool.com/www/mobile/img/expert/check-icon.png') no-repeat;
               background-position: right 15px center;
@@ -300,6 +300,8 @@
     }
     .offcanvas-footer{
       width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -406,6 +408,15 @@
           img{
             width: 100%;
           }
+          p{
+            background-color: #15191C !important;
+
+            span{
+              font-size: 15px !important;
+              line-height: 22px !important;
+              color: #D4D4D8 !important;
+            }
+          }
         }
       }
     }
@@ -445,7 +456,7 @@
           .items-search{
             width: 100%;
             padding: 13px 20px !important;
-            background: #27272A !important;
+            background: #24282F !important;
             border-radius: 12px;
             border: none;
             font-weight: 400;
@@ -469,7 +480,7 @@
             width: 100%;
             height: 453px;
             border-radius: 12px;
-            background: #27272A;
+            background: #24282F;
             padding: 20px;
             border: none;
             font-weight: 400;
@@ -523,7 +534,7 @@
           height: 48px;
           border: none;
           border-radius: 10px;
-          background: #32323A !important;
+          background: #484852 !important;
           font-weight: 400;
           font-size: 15px;
           line-height: 22px;
@@ -660,7 +671,7 @@
             li{
               width: 100%;
               padding: 14px 20px;
-              background: #32323A;
+              background: #24282F;
               cursor: pointer;
 
               &:first-child{
@@ -711,8 +722,8 @@
         .counsel-box{
           width: 100%;
           padding: 20px;
-          border: 1px solid #27272A;
-          background: #18181B;
+          border: 1px solid #3E444E;
+          background: #24282F;
           border-radius: 12px;
 
           .top{
@@ -724,7 +735,7 @@
 
             &.pb-border{
               padding-bottom: 16px;
-              border-bottom: 1px solid #27272A;
+              border-bottom: 1px solid #3E444E;
             }
 
             .left{
@@ -922,7 +933,7 @@
         .item-box{
           width: 100%;
           padding: 20px;
-          border: 1px solid #404244;
+          border: 1px solid #D4D4D8;
           background: #18181B;
           border-radius: 12px;
           text-align: left;
@@ -935,7 +946,7 @@
           .top{
             width: 100%;
             padding-bottom: 16px;
-            border-bottom: 1px solid #27272A;
+            border-bottom: 1px solid #3E444E;
 
             .box-name{
               width: 100%;
@@ -1103,8 +1114,8 @@
         }
         .chart-box{
           width: 100%;
-          border: 1px solid #27272A;
-          background: #18181B;
+          border: 1px solid #3E444E;
+          background: #24282F;
           padding: 20px;
           border-radius: 12px;
 
@@ -1265,7 +1276,7 @@
             }
             .box{
               width: 100%;
-              background: #252528;
+              background: #24282F;
               padding: 20px;
               border-radius: 12px;
               font-weight: 400;
@@ -1492,7 +1503,7 @@
 
       button{
         border: none;
-        background: #252528 !important;
+        background: #32323A !important;
         width: 100%;
         border-radius: 12px;
         padding: 16px 20px !important;
