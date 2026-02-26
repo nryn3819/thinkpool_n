@@ -1426,11 +1426,15 @@ body:has(.exptNav_sub) #header.expert-header{
       .p-group {
         width: 100%;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
         gap: 16px;
+        overflow: hidden;
 
         p {
+          flex-shrink: 0;
+          max-width: 98px;
           margin: 0;
           font-weight: 400;
           font-size: 15px;
@@ -1529,5 +1533,22 @@ body:has(.exptNav_sub) #header.expert-header{
     font-size: 14px;
     line-height: 20px;
     color: #0b0c0e;
+  }
+}
+
+.exptFooter{
+  background: #0b0c0e !important;
+  border-top: 1px solid #27272A !important;
+
+  .figure-caption{
+    color: #D4D4D8 !important;
+  }
+  #fmenu2 a{
+    color: #D4D4D8 !important;
+  }
+  .copyright{
+    span{
+      color: #D4D4D8 !important;
+    }
   }
 }
