@@ -1,5 +1,5 @@
 #header.expert-header {
-  border-bottom: 1.111px solid rgba(24, 24, 27, 0.5);
+  border-bottom: 1px solid #3E444E;
   background: #15191c;
 
   .expert-header-top {
@@ -55,6 +55,14 @@
   }
 }
 
+body:has(.exptNav) #header.expert-header {
+  border-bottom: none !important; 
+}
+
+body:has(.exptNav_sub) #header.expert-header {
+  border-bottom: none !important; 
+}
+
 .expert-header-globalMenu_sub {
   width: 100%;
   border-bottom: 1px solid #3E444E;
@@ -88,7 +96,7 @@
 .exptNav {
   position: sticky;
   z-index: 99;
-  top: 63px;
+  top: 62px;
   left: 0;
   width: 100%;
   background: #15191c;
@@ -185,7 +193,7 @@
         }
 
         &.exptSwiper01 .swiper-slide {
-          border: 1px solid rgba(255, 255, 255, 0.1019607843);
+          border: 1px solid #3E444E;
           border-radius: 12px;
           background: linear-gradient(138.77deg, #0F4344 1.39%, #1D2027 41.85%, #1D2027 70.37%, #421E2E 103.87%);
 
@@ -314,6 +322,7 @@
         &.exptSwiper02 .swiper-slide {
           background: #24282F;
           border-radius: 12px;
+          border: 1px solid #3E444E;
 
           .top {
             width: 100%;
@@ -427,6 +436,7 @@
 
             .txt {
               width: 100%;
+              min-height: 48px;
               font-weight: 400;
               font-size: 15px;
               line-height: 24px;

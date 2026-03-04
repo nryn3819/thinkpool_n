@@ -7,9 +7,11 @@
   .modal-dialog{
     margin: 0 auto;
     padding: 30px;
+    justify-content: center;
 
     .modal-content{
       width: 100%;
+      max-width: 315px;
       background: #32323A;
       border-radius: 20px;
       border: none;
@@ -22,7 +24,7 @@
 
         button{
           position: absolute;
-          top: 0;
+          top: -13px;
           right: 0;
           z-index: 20;
         }
@@ -40,7 +42,7 @@
           font-size: 18px;
           line-height: 26px;
           color: #fff;
-          padding-right: 30px;
+          text-align: center;
         }
         .txt{
           width: 100%;
