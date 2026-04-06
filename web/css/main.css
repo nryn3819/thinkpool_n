@@ -101,9 +101,6 @@
 .main_issue_w .title {
   display: block;
   width: 400px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   font-size: 20px;
   font-weight: 700;
   color: #333;
@@ -122,7 +119,6 @@
   height: 24px;
   margin-top: 16px;
   padding: 0 3px;
-  overflow: hidden;
 }
 .main_issue_w .mi_tit strong {
   display: block;
@@ -209,9 +205,6 @@
   font-size: 16px;
   color: #333;
   font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .main_issue_w .relation .txt {
   display: block;
@@ -941,3 +934,5 @@ body, html {
   line-height: 20px;
   letter-spacing: -0.025em;
 }
+
+/*# sourceMappingURL=main.css.map */
