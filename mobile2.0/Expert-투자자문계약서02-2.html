@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- common.css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <title>씽크풀</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="wrap">
+      <h1 class="visually-hidden">씽크풀</h1>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+      <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+
+      <!-- header -->
+      <header id="header" class="expert-header clearfix">
+        <h2 class="visually-hidden">엑스퍼트헤더</h2>
+        <div class="expert-header-top">
+          <div class="expert-header-top_tplogo">
+            <a href="#">
+              <img src="./img/expert/tpLogo.png" alt="씽크풀로고" width="42">
+            </a>
+          </div>
+          <!-- 씽크풀로고 -->
+
+
+          <div class="expert-header-top_sub">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <strong>투자자문계약 권유문서</strong>
+          </div>
+
+
+
+          <div class="expert-header-top_sideMenu">
+            <button type="button" id="opensch" class="schButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M11.4053 3C16.0473 3.00002 19.8105 6.76321 19.8105 11.4053C19.8105 13.4563 19.075 15.3349 17.8545 16.7939L21.7773 20.7168C22.0702 21.0097 22.0702 21.4845 21.7773 21.7773C21.4845 22.0702 21.0097 22.0702 20.7168 21.7773L16.7939 17.8545C15.3349 19.0749 13.4563 19.8105 11.4053 19.8105C6.76318 19.8105 3 16.0474 3 11.4053C3 6.7632 6.76318 3 11.4053 3ZM11.4053 4.5C7.59162 4.5 4.5 7.59161 4.5 11.4053C4.5 15.2189 7.59162 18.3105 11.4053 18.3105C15.2189 18.3105 18.3105 15.2189 18.3105 11.4053C18.3105 7.59162 15.2189 4.50002 11.4053 4.5Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <!-- 검색버튼 -->
+
+            <button type="button" class="sideMenuButton" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
+              data-cate-id="amn02">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 3L3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 12L3 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M21 21L3 21" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <!-- 사이드메뉴 -->
+
+
+            <!-- 검색팝업 -->
+            <div class="searcharea">
+              <div class="searcharea-header">
+                <h4 class="logo"><img src="./img/logo.png" alt="" width="32"></h4>
+                <!-- // -->
+                <div class="searcharea-sch">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="미국주식 (한글)종목명/심볼" id="inputsch">
+                    <button class="btn-img schButton" type="button" id="button-addon">검색하기</button>
+                  </div>
+                </div>
+                <!-- // -->
+                <button type="button" class="btn-close text-reset sch-hide"></button>
+              </div>
+              <!-- // -->
+
+              <div class="searcharea-body">
+
+                <div class="off-basic">
+                  <div class="tag">
+                    <span>반도체 기판</span>
+                    <span>페인트</span>
+                    <span>태양광</span>
+                    <span>타이어</span>
+                    <span>제지</span>
+                  </div>
+                  <div class="schTop rmt-20">
+                    <span>셀트리온</span>
+                    <span>삼성전자</span>
+                    <span>한화솔루션</span>
+                    <span>대한전선</span>
+                    <span>미래에셋증권</span>
+                    <span>대주전자재료</span>
+                    <span>디아이</span>
+                    <span>하나마이크론</span>
+                    <span>유니테스트</span>
+                    <span>성호전자</span>
+                  </div>
+                  <div class="latest rmt-20">
+                    <strong>최근 검색어</strong>
+                    <span>#068270</span>
+                  </div>
+                </div>
+
+                <div class="off-empty">
+                  <span>
+                    입력하신 단어와 일치하는 종목이 없습니다. <br>
+                    검색어를 확인하시고 다시 입력해주세요.
+                  </span>
+                </div>
+                <!-- // off-empty -->
+              </div>
+              <!-- // -->
+            </div>
+
+            <!-- 사이드메뉴 -->
+            <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">
+                  <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
+                  <div class="app">
+                    <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
+                  </div>
+                </div>
+              </div>
+              <div class="offcanvas-body">
+                <div class="loginmenu">
+                  <div class="before">
+                    <button class="btn-custom-primary" style="width:120px">로그인</button>
+                    <button class="btn-custom-default" style="width:120px">회원가입</button>
+                  </div>
+                  <!-- // -->
+
+                  <!-- <div class="after">
+                                                    <div class="top">
+                                                        <strong><em>에너지만땅</em>님</strong>
+                                                        <button>로그아웃</button>
+                                                    </div>
+                                                    <div class="menu">
+                                                        <button>MY종목</button>
+                                                        <button>알림설정</button>
+                                                        <button>나의활동</button>
+                                                        <button>쪽지함 <span class="badge">4</span></button>
+                                                    </div>
+                                                </div> -->
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush01">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">
+                        AI분석
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">AI분석홈</a></li>
+                        <li><a href="#">시세분석</a></li>
+                        <li><a href="#">이슈분석</a></li>
+                        <li><a href="#">수급분석</a></li>
+                        <li><a href="#">테마분석</a></li>
+                        <li><a href="#">공시분석</a></li>
+                        <li><a href="#">리포트분석</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush02">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">
+                        AI추천
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">AI종목추천홈</a></li>
+                        <li><a href="#">오늘의종목</a></li>
+                        <li><a href="#">종목추천</a></li>
+                        <li><a href="#">포트폴리오</a></li>
+                        <!-- 26.02.02 <li><a href="#">나의서비스</a></li> -->
+                        <li><a href="#">이용안내</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush03">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03">
+                        라씨신호
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">라씨매매신호홈</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">나의신호</a></li>
+                        <li><a href="#">(앱다운로드)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush04">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">
+                        AI속보
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">주요속보</a></li>
+                        <li><a href="#">수급</a></li>
+                        <li><a href="#">테마</a></li>
+                        <li><a href="#">리포트</a></li>
+                        <li><a href="#">실적</a></li>
+                        <li><a href="#">공시</a></li>
+                        <li><a href="#">태그전체보기</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush05">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">
+                        토론실
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">토론실홈</a></li>
+                        <li><a href="#">증권가속보</a></li>
+                        <li><a href="#">특징주포착</a></li>
+                        <li><a href="#">주식종합토론</a></li>
+                        <li><a href="#">유머방</a></li>
+                        <li><a href="#">정치방</a></li>
+                        <li><a href="#">나의활동</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush07">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn07" aria-expanded="false" aria-controls="amn07">
+                        미국주식
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn07" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">AI미국추천</a></li>
+                        <li><a href="#">AI종목속보</a></li>
+                        <li><a href="#">AI미국이슈</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">MY</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+
+                  <div class="amn accordion-item">
+                    <div class="accordion-header" id="flush06">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">
+                        더보기
+                      </button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accoridon-flush-menu">
+                      <ul>
+                        <li><a href="#">공지사항 및 문의</a></li>
+                        <li><a href="#">회원정보관리</a></li>
+                        <li><a href="#">약관및정책</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="sfmenu">
+                  <button class="btn-custom-primary outline">블로그</button>
+                  <button class="btn-custom-primary outline">유투브</button>
+                  <button class="btn-custom-primary outline">AI매매 시그널</button>
+                </div>
+                <!-- // -->
+
+                <div class="other rmt-25 text-center">
+                  <button class="btn-custom-default">PC버전으로 보기</button>
+                </div>
+              </div>
+            </aside>
+
+            <script>
+              // 검색팝업 열고 닫고
+              document.getElementById('opensch').addEventListener('click', function () {
+                document.querySelector('.searcharea').classList.add('sch-show')
+                document.getElementById('inputsch').focus();
+                document.getElementById('inputsch').value = "";
+              });
+
+              document.querySelector('.sch-hide').addEventListener('click', function () {
+                document.querySelector('.searcharea').classList.remove('sch-show')
+              });
+
+              document.querySelector('.sch-hide').addEventListener('click', function () {
+                document.querySelector('.searcharea').classList.remove('sch-show');
+                document.querySelector('.sideMenuBtn').setAttribute('data-bs-target', '#sideContent');
+                document.querySelector('.sideMenuBtn').setAttribute('data-bs-toggle', 'offcanvas');
+                document.querySelector('.pageBack').classList.remove('h-show');
+                document.querySelector('.pageBack').classList.add('h-hide');
+                document.querySelector('.h-logo').classList.remove('h-hide');
+                document.querySelector('.h-logo').classList.add('h-show');
+                document.forms.sidemenu.tgle.checked = '';
+
+                const cate = document.querySelector('.sideMenuBtn');
+                const cateId = '#' + cate.getAttribute('data-cate-id');
+                const offId = document.querySelector('#sideContent');
+
+                cate.addEventListener('click', function () {
+                  const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                });
+
+                offId.addEventListener('hide.bs.offcanvas', function () {
+                  const showCate = document.querySelector('.collapse.show');
+
+                  const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                });
+              });
+            </script>
+          </div>
+          <!-- 검색&사이드메뉴 -->
+        </div>
+        <!-- top -->
+
+      </header>
+      <!-- // -->
+
+      <main id="container" class="expert-container clearfix">
+
+        <div class="expert-content">
+
+          <div class="contract">
+            <!-- 참고 링크 https://tradingpoint.co.kr/trading/document/smartmoney.do -->
+
+            <section>
+              <h2>1. 투자자문의 범위 및 제공방법</h2>
+              <h3>1) 투자자문의 내용</h3>
+              <p>회사는 산업의 분석 및 기업에 대한 합리적인 가치판단을 바탕으로 고객의 투자자문자산의 내용과 규모, 투자방침과 투자환경의 변화 등 제반 사항을 고려하여 적절한 투자자문을
+                수행합니다.</p>
+
+              <h3>2) 투자자문의 대상</h3>
+              <p>회사가 고객에게 투자자문서비스를 제공함에 있어 그 투자자문의 대상이 되는 금융투자상품은 다음과 같습니다.</p>
+              <span class="sub-item">① 주식 및 주식관련자산</span>
+              <span class="sub-item">② RP 및 예수금 등 현금성자산</span>
+              <span class="sub-item">③ 국내 및 해외 파생 자산</span>
+              <span class="sub-item">④ 그 밖의 관련법령에서 허용한 투자자문 대상자산으로서 고객과 회사가 사전 합의한 모든 금융투자상품</span>
+
+              <h3>3) 투자자문서비스의 내용 및 범위</h3>
+              <p>회사가 고객에게 제공하는 투자자문서비스의 내용 및 범위는 다음과 같으며, 고객은 투자자문의 범위를 세부적으로 지정하여 계약서에 명시할 수 있습니다.</p>
+              <span class="sub-item">① 장, 단기 투자전략 수립 및 자산배분에 관한 자문</span>
+              <span class="sub-item">② 계약자산의 포트폴리오 구성 및 분석에 관한 자문</span>
+              <span class="sub-item">③ 금융투자상품 투자에 대한 종류, 종목, 수량, 가격, 매매방법, 매매시기 등 종합적인 투자판단 등의 자문</span>
+              <span class="sub-item">④ 국내외 경제동향, 산업 및 자본시장에 관한 조사 및 이와 관련한 간행물 제공</span>
+              <span class="sub-item">⑤ 그 밖에 투자전략과 관련한 고객의 요청 자료 제공</span>
+
+              <h3>4) 투자자문의 제공방법</h3>
+              <p>① 회사는 고객의 재무상태, 투자목적, 위험선호도 등을 전자방식(앱 등), 유선 등으로 파악하여 투자자문에 반영합니다.</p>
+              <p>② 고객의 자산 규모에 부합된 서비스를 전자방식 또는 유선 등의 방법으로 제공합니다.</p>
+
+              <h3>5) 이해상충방지를 위한 절차</h3>
+              <p>① 회사는 선량한 관리자로서 신의성실하게 의무를 이행합니다.</p>
+              <p>② 이해관계가 있는 기업 발행 증권 자문 시 고객에게 사전 통보합니다.</p>
+              <p>③ 이해상충 발생 우려 시 내부통제체계를 통해 공정하게 관리합니다.</p>
+
+              <h3>6) 고객의 재무상태 및 투자목적 등 사전 파악</h3>
+              <p>① 계약 전 고객의 재무상태 및 투자목적을 사전에 파악합니다.</p>
+              <p>② 고객이 회사의 변경여부 확인 통지에 지속적으로 회신하지 않는 경우 계약을 해지할 수 있습니다.</p>
+            </section>
+
+            <section>
+              <h2>2. 투자자문업무의 절차 지침</h2>
+              <h3>1) 투자자문업무 절차</h3>
+              <p><strong>① 계약 체결:</strong> 회사와 고객은 자문 계약을 상호합의하에 체결하고 자문료를 정해진 방법으로 납부합니다. 고객의 재무상태, 투자목적 등의 파악 이후
+                회사와 고객은 자문 계약을 상호합의 하에체결하고 자문료를 정해진 방법으로 납부합니다.</p>
+              <p><strong>② 자문 시작 및 보고:</strong> 회사는 고객의 현재 포트폴리오 등을 바탕으로 투자 자문을 진행하고 분기 1회 이상 개별적인 포트폴리오 분석을 수행합니다.
+              </p>
+              <p><strong>③ 자문 종료</strong></p>
+              <h3>2) 투자자문업무 수행을 위해 회사가 정하고 있는 지침</h3>
+              <p><strong>① 업무지침:</strong> 회사는 철저한 조사 분석과 적절한 위험관리를 통해 안정적으로 고객 수익을 창출함을 목적으로 합니다.</p>
+              <p><strong>② 고객중심의 투자자문업무 수행 절차:</strong> 회사는 다양한 투자관련자료를 분석하며 운용전략 수립, 모델포트폴리오 및 상품 편입비 결정, 종목 선정 및
+                리스크 관리를 위해 정기적으로 운용전략회의를 운영합니다.</p>
+              <p><strong>③ 자문업무 진행</strong> 고객과의 자문 업무 진행 시 고객의 투자경험 등을 고려하여 당해 고객이 이해할 수 있도록 쉽고, 간명하게 업무를 진행합니다.
+              </p>
+            </section>
+
+            <section>
+              <h2>3. 투자자문담당자에 관한 사항</h2>
+              <div class="item-list">
+                <div>
+                  <p>1) 고객의 투자자문을 담당할 회사의 투자자문담당자의 학력 및 주요경력은 다음과 같습니다. </p>
+                </div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>성명</th>
+                      <td>박민규</td>
+                    </tr>
+                    <tr>
+                      <th>학력/경력</th>
+                      <td>건국대학교 수학과<br>NH투자증권 투자권유대행인<br>미래에셋금융서비스</td>
+                    </tr>
+                    <tr>
+                      <th>주요자격</th>
+                      <td>투자자산운용사<br>국제공인 투자실무사1급</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p style="font-size:12px;">※ 위 투자자문담당자는 과거 내부자거래, 시세조종, 임의매매 등 위법행위로 형사제재를 받았거나 금융위원회로부터 법
+                  제422조제1항제1호부터 제5호까지 또는 같은 조 제2항제1호부터 제6호까지의 조치를 받은 사실이 없습니다.</p>
+                <div class="item-list">
+                  <div>
+                    <p>2) 고객은 회사에 대하여 투자자문담당자의 제재내역 조회를 요청할 수 있습니다. </p>
+                  </div>
+                  <div>
+                    <p>3) 고객이 투자자문담당자를 변경하고자 하는 경우 회사에게 서면 또는 전화 등 사전에 합의한 방법으로 요청하여야 합니다. </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>4. 회사의 주주 및 임원에 관한 사항</h2>
+              <h3>1) 주주 현황</h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>주주명</th>
+                    <th>주식수</th>
+                    <th>지분율</th>
+                    <th>비고</th>
+                  </tr>
+                  <tr>
+                    <td>주인아</td>
+                    <td>62,000</td>
+                    <td>100%</td>
+                    <td>최대주주</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>2) 임원 현황</h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>직위</th>
+                    <th>성명</th>
+                    <th>주요 경력</th>
+                  </tr>
+                  <tr>
+                    <td>대표이사</td>
+                    <td>박민규</td>
+                    <td>現 (주)핀블렌드투자자문 대표이사</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;">※ 위 임원 및 대주주는 과거 위법행위로 인한 형사제재나 자본시장법에 따른 조치를 받은 사실이 없습니다."</p>
+            </section>
+
+            <section>
+              <h2>5. 회사의 의무 및 책임</h2>
+
+              <h3>1) 투자자문계약의 변경 및 해지</h3>
+              <p>고객은 전화 또는 서면 등 회사와 사전에 합의한 방법으로 계약을 변경하거나 해지를 요구할 수 있으며, 회사는 투자자문계약서에 정한 특별한 사유가 없는 한 고객의 합리적인 요구
+                또는 계약의 변경 및 해지 요구에 대하여 응할 의무가 있습니다.</p>
+
+              <h3>2) 비밀유지의무</h3>
+              <p>회사는 계약과 관련하여 알게 된 고객의 투자자문재산 내용과 관리상황, 신상 내용 및 그 밖에 모든 사항에 대해 고객의 사전 동의 없이 제3자에게 누설하지 않습니다.</p>
+
+              <h3>3) 투자자문회사의 금지행위</h3>
+              <p>회사는 다음과 같은 행위를 하지 않습니다.</p>
+              <div class="item-list">
+                <div>① 투자자로부터 금전·증권, 그 밖의 재산의 보관·예탁을 받는 행위</div>
+                <div>② 투자자에게 금전·증권, 그 밖의 재산을 대여하거나 투자자에 대한 제3자의 금전·증권, 그 밖의 재산의 대여를 중개·주선 또는 대리하는 행위</div>
+                <div>③ 투자권유자문인력 또는 투자운용인력이 아닌 자에게 투자자문업을 수행하게 하는 행위</div>
+                <div>④ 계약으로 정한 수수료 외의 대가를 추가로 받는 행위</div>
+                <div>⑤ 투자자문 업무를 함에 있어서 금융투자상품 등의 가격에 영향을 미칠 수 있는 매수/매도 의사 결정 후 실행 전 자기 계산으로 매매하거나 제3자에게 권유하는 행위
+                </div>
+                <div>⑥ 자기 또는 제3자의 이익을 도모할 목적으로 투자자문재산을 불공정한 조건으로 거래하는 행위</div>
+              </div>
+            </section>
+
+            <section>
+              <h2>6. 고객의 의무 및 책임</h2>
+
+              <h3>1) 통지의무</h3>
+              <div class="item-list">
+                <div>① 회사의 통지는 &lt;별지1&gt;에 기재된 연락처로 전자문서 또는 유선 등 합의된 방법으로 하며, 장소 변경 시 고객은 이를 사전에 알려야 합니다.</div>
+                <div>② 고객은 이메일, 연락처 등 서비스에 영향을 줄 수 있는 변동사항 발생 시 <span class="highlight-red">지체 없이 회사에 통지</span>해야
+                  합니다.</div>
+                <div>③ 고객의 책임 있는 사유로 통지의무를 이행하지 않아 발생하는 불이익에 대해 회사는 책임 있는 사유가 없는 한 책임을 지지 않습니다.</div>
+              </div>
+
+              <h3>2) 비밀유지의무</h3>
+              <p>고객은 투자자문서비스의 내용을 제3자에게 누설하여서는 아니 되며, 회사의 사전 동의 없이 회사의 투자자문서비스를 제3자와 공동으로 이용하지 못합니다.</p>
+
+              <h3>3) 투자자문재산의 자문 결과에 대한 책임</h3>
+              <p>회사가 투자자문재산을 자문한 결과 발생하는 이익과 손실은 고객에게 귀속되며, 회사는 수익이나 원금을 보장하는 행위는 하지 않습니다.</p>
+            </section>
+
+            <section>
+              <h2>7. 투자자문재산 수수료에 관한 사항</h2>
+              <p>1) 고객은 회사가 제공하는 투자자문서비스의 대가로서 투자자문 수수료(이하 “기본수수료”라 한다)를 회사에 지급합니다.</p>
+              <p>2) 회사와 고객이 투자자문계약을 개시하는 시점의 자산형태는 현금을 원칙으로 합니다. 단, 고객과 회사의 사전 합의에 의하여 그 시점에 보유하고 있는 금융투자상품으로 할 수
+                있으며, 이 경우 금융투자상품은 공정한 시세가 있는 것에 한정합니다.</p>
+              <p>3) 투자자문수수료는 투자자문재산 계약금액에 제4)항의 요율을 기준으로 하여 계산합니다. 다만, 회사는 투자자문자산의 규모, 성격 및 자문방법에 따라 고객과 사전 협의하여 이와
+                다른 요율을 적용할 수 있습니다.</p>
+              <p>4) 투자자문 기본수수료율 기준표 및 세부기준</p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>수수료 구분</th>
+                    <th>수수료율</th>
+                    <th>납부시기</th>
+                  </tr>
+                  <tr>
+                    <td>기본수수료</td>
+                    <td>고객별 월별 정액</td>
+                    <td>별도 계약에 따름</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="item-list">
+                <div>① 자문계약기간은 고객과 계약한 기간으로 하며, 투자자문 계약자산의 최소 가입금액 예치시점부터 계약의 효력이 유효하다. 다만, 계약기간 내 계약을 갱신할 경우 기존 계약
+                  만료일의 익일부터 추가 자문계약을 통해서 연장된 것으로 한다.</div>
+                <div>② 계약기간 만기 전에 해지를 하는 경우 수수료 계산은 다음의 방식에 의거한다.</div>
+                <p>선취수수료를 징수한 건에 한하여 투자자문계약서 상의 계약조건에 따라 회사는 일할 계산하여 고객에게 반환하도록 한다.</p>
+              </div>
+            </section>
+            <section>
+              <h2>8. 계약기간에 관한 사항</h2>
+              <p>1) 이 계약은 계약체결일로부터 효력이 발생되며, 계약기간은 계약체결일로부터 1년 이상의 기간으로 고객과 회사가 정한 기 간으로 하되, 별도의 다른 약정이 없는 한 1년으로
+                합니다.</p>
+              <p>2) 회사는 계약종료일 1개월 전까지 고객에게 계약종료일을 통지하여야 하며 “고객은 계약종료일 이전까지 계약해지의 의사 표시를 할 수 있으며, 계약해지의 의사표시를 하지 아니한
+                경 우에는 종전 계약과 동일한 기간과 동일한 조건으로 계약이 갱신된 것으로 본다”는 내용을 고객에게 통지하여야 합니다.</p>
+              <p>3) 고객이 제2항의 통지를 받은 날로부터 계약종료일까지 계약해 지의 의사표시를 하지 아니한 경우에는 종전 계약과 동일한 기간 및 동일한 조건으로 계약이 갱신된 것으로 봅니다.
+                단, 계약금액 및 계약기간은 당사자 간의 합의에 따라 변동될 수 있습니다.</p>
+            </section>
+
+            <section>
+              <h2>9. 계약의 변경 및 해지</h2>
+              <div class="item-list">
+                <p>1) 고객은 전화 또는 서면 등 회사와 사전에 합의한 방법으로 계약을 변경하거나 해지할 수 있습니다.</p>
+                <p>2) 회사는 다음 각 호의 어느 하나에 해당하는 사유가 발생한 경우 고객에게 14일 이상의 기간을 부여하여 시정조치를 요구하고, 고객이 적절한 조치를 취하지 아니한 때에는
+                  계약을 해지할 수 있습니다. 단, 고객의 계약 위반내용의 시정이 명백히 불가능하거나 계약 위반의 정도가 중하여 계약목적을 달성할 수 없는 정도에 이른 때에는 즉시 계약을 해지할
+                  수 있습니다.</p>
+                <div class="sub-box">
+                  ① 고객의 계좌에 가압류나 압류절차가 시작되거나 질권(채무 자가 돈을 갚을 때까지 채권자가 담보물을 보유할 수 있고, 채무자가 돈을 갚지 않을 때는 그 담보물에 대하여
+                  우선적으로 변제를 받을 수 있는 권리)이 설정되어 투자자문재산의 서비스에 제한이 있는 경우<br>
+                  ② 고객이 재무상태, 투자목적 등이 변경되었음에도 불구하고 4회(계약한 연도에는 3회)이상 재무상태, 투자목적 등의 변경여부에 대하여 회신하지 않는 경우
+                </div>
+              </div>
+              <p>3) 계약의 해지는 해지일 이전에 실행된 거래에 영향을 미치지 아니하며, 고객이 계약체결일로부터 7일 이내 서면으로 그 해지를 청구하는 경우, 계약은 즉시 해지되는 것으로
+                합니다.</p>
+            </section>
+            
+            <section>
+              <h2>10. 투자자문담당자의 선정</h2>
+              <div class="item-list">
+                <p>1) 회사는 고객에 대한 투자자문재산의 내용과 규모 등을 고려하여 고객과 회사가 협의하여 투자자문담당자를 선임합니다.</p>
+                <p>2) 고객은 회사에 대하여 투자자문담당자의 제재내역 조회를 요청할 수 있습니다.</p>
+              </div>
+            </section>
+            
+            <section>
+              <h2>11. 자문플랫폼 이용 안내</h2>
+              <p>1) 회사는 자문플랫폼 서비스를 제공하는 금융투자회사와 업무위수탁계약을 체결하고 자문플랫폼을 통해 자문계약을 체결한 고객에게 자문서비스를 제공할 수 있습니다.</p>
+              <p>2) 자문플랫폼 서비스는 아래 내용을 포함하고 있습니다.</p>
+              <div class="sub-box">
+                ① 회사의 온라인 계약지원<br>
+                ② 투자자문과 관련된 고객 정보의 보관 및 관리<br>
+                ③ 투자자문내역에 따른 주문·체결 내역의 전달·집행 등의 업무와 기록 보관<br>
+                ④ 고객에게 제공하는 자문과 관련하여 자문수수료 및 성과보수의 계산 및 수취업무의 대행<br>
+                ⑤ 금융투자상품의 설명서 및 투자자에게 정보 제공을 위해 필요한 자료 제공 <br>
+                ⑥ 그 밖의 투자자문업무에 부수된 업무
+              </div>
+            </section>
+
+            <div class="footer-sig">
+              <p style="text-align:center;"><strong>주식회사 핀블렌드투자자문</strong></p>
+            </div>
+
+            <div class="confirm-btn">
+              <button>확인</button>
+            </div>
+          </div>
+
+        </div>
+        <!-- //첫번째 expert-content -->
+
+      </main>
+      <!-- //container -->
+
+    </div>
+    <!-- /wrap -->
+  </div>
+  <!-- //app -->
+</body>
+
+</html>

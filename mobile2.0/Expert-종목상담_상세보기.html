@@ -33,7 +33,7 @@
         <div class="expert-header-top">
           <div class="expert-header-top_tplogo">
             <a href="#">
-              <img src="./img/expert/tpLogo.png" alt="씽크풀로고" width="44">
+              <img src="./img/expert/tpLogo.png" alt="씽크풀로고" width="42">
             </a>
           </div>
           <!-- 씽크풀로고 -->
@@ -47,7 +47,7 @@
               </svg>
             </a>
 
-            <strong>주식홍길동의 투자전략</strong>
+            <strong>주식홍길동의 투자상담</strong>
           </div>
 
 
@@ -376,205 +376,341 @@
         <div class="expert-content">
 
           <div class="counsel">
-            <div class="box02">
-              <div class="icon">
-                <img width="24" src="img/expert/star-icon.png">
-              </div>
-              <strong>궁금한 종목이<br> 있으신가요?</strong>
-              <p>종목상담은 투자자문역의 자문서비스로<br>제공됩니다.</p>
-              <button data-bs-toggle="offcanvas" data-bs-target="#message">
-                <img width="20" src="img/expert/send-icon.png">
-                <span>엑스퍼트 주식 홍길동에게 메세지 보내기</span>
+            <div class="top-txt">
+              1:1 투투자상담은 투자자문사 소속의 투자자문역의 자문서비스로 제공 됩니다.
+            </div>
+            <div class="counsel-group mb-40">
+              <button data-bs-toggle="offcanvas" data-bs-target="#counsel">
+                <p>
+                  <strong><em>투자</em> 상담하기</strong>
+                  <span>포트폴리오 전반에 대한 상담을 받아보세요.</span>
+                </p>
+                <img width="22" src="img/expert/right-arrow.png">
+              </button>
+              <button data-bs-toggle="offcanvas" data-bs-target="#counsel">
+                <p>
+                  <strong><em>종목</em> 상담하기</strong>
+                  <span>궁금한 종목의 상담을 받아보세요</span>
+                </p>
+                <img width="22" src="img/expert/right-arrow.png">
               </button>
             </div>
-            <!-- box02 -->
-            <div class="box03">
-              <div class="title">나의 종목상담</div>
-              <div class="counsel-group">
-                <button class="counsel-box asking" data-bs-toggle="offcanvas" data-bs-target="#counsel">
-                  <div class="item-title">
+            <div class="tab-group">
+              <button class="active">나의 상담</button>
+              <button>전체 상담</button>
+            </div>
+            <div class="tab-content">
+              <div class="counsel-list">
+                <button data-bs-toggle="offcanvas" data-bs-target="#counselDetail">
+                  <div class="top">
                     <div class="left">
                       <div class="circle">Q</div>
                       <div class="name text-truncate">SK하이닉스</div>
                       <div class="code">000660</div>
                     </div>
                     <div class="right">
+                      <img width="18" src="img/expert/lock-icon.png">
                       <span>질문중</span>
                     </div>
                   </div>
-                  <div class="box-txt text-truncate2">
-                    최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목 중 주목할 종목들을 확인해 보세요.
-                  </div>
-                  <div class="date">
-                    <p>2025.10.23</p>
-                  </div>
+                  <div class="txt text-truncate2">최근 매도 종목 중 주목할 종목들을 확인해 보세요.</div>
+                  <div class="date">2025.10.23</div>
                 </button>
-                <button class="counsel-box register" data-bs-toggle="offcanvas" data-bs-target="#counsel">
-                  <div class="item-title">
+                <button class="register" data-bs-toggle="offcanvas" data-bs-target="#counselDetail">
+                  <div class="top">
                     <div class="left">
                       <div class="circle">Q</div>
                       <div class="name text-truncate">SK하이닉스</div>
                       <div class="code">000660</div>
                     </div>
                     <div class="right">
+                      <img width="18" src="img/expert/lock-icon.png">
                       <span>답변등록</span>
                     </div>
                   </div>
-                  <div class="box-txt text-truncate2">
-                    최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목 중 주목할 종목들을 확인해 보세요.
-                  </div>
-                  <div class="date">
-                    <p>2025.10.23</p>
-                  </div>
-                  <div class="answer-box">
-                    <span>A</span>
-                    <p>
-                      코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.
-                    </p>
-                  </div>
+                  <div class="txt text-truncate2">최근 매도 종목 중 주목할 종목들을 확인해 보세요.</div>
+                  <div class="date">2025.10.23</div>
                 </button>
-                <!-- <div class="no-counsel">
-                  <img width="20" src="img/expert/no-icon.png">
-                  <span>나의 종목상담이 없습니다.</span>
-                </div> -->
+                <!-- 전체상담 탭 -->
+                <button data-bs-toggle="offcanvas" data-bs-target="#counselDetail">
+                  <div class="top">
+                    <div class="left">
+                      <div class="circle">Q</div>
+                    </div>
+                    <div class="right">
+                      <img width="18" src="img/expert/lock-icon.png">
+                      <span>질문중</span>
+                    </div>
+                  </div>
+                  <div class="txt text-truncate2">최근 매도 종목 중 주목할 종목들을 확인해 보세요.</div>
+                  <div class="date">2025.10.23</div>
+                </button>
+                <button class="register" data-bs-toggle="offcanvas" data-bs-target="#counselDetail">
+                  <div class="top">
+                    <div class="left">
+                      <div class="circle">Q</div>
+                    </div>
+                    <div class="right">
+                      <img width="18" src="img/expert/lock-icon.png">
+                      <span>답변등록</span>
+                    </div>
+                  </div>
+                  <div class="txt text-truncate2">최근 매도 종목 중 주목할 종목들을 확인해 보세요.</div>
+                  <div class="date">2025.10.23</div>
+                </button>
+                <!-- // -->
+              </div>
+              <div class="no-counsel">
+                <img width="20" src="img/expert/no-icon.png">
+                <p>나의 종목상담이 없습니다.</p>
               </div>
             </div>
           </div>
 
         </div>
         <!-- //첫번째 expert-content -->
+
+        <!-- 종목상담 상세보기 바텀시트 -->
+        <div class="offcanvas offcanvas-bottom exptOffcanvas counselDetail" data-bs-backdrop="false" id="counselDetail">
+          <div class="offcanvas-header">
+            <button type="button" data-bs-dismiss="offcanvas">
+              <img width="25" src="img/expert/offcanvas-close.png">
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="counsel-content">
+              <div class="title">나의 종목상담</div>
+              <div class="counsel-box"> <!--답변 등록 되었을 때 'register' 클래스 추가-->
+                <div class="top">
+                  <div class="left">
+                    <div class="circle">Q</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                  </div>
+                  <div class="right">
+                    <span>질문중</span>
+                  </div>
+                </div>
+                <div class="txt">최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!</div>
+                <div class="date">2025.10.23</div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="counsel-content">
+              <div class="counsel-box">
+                <div class="top pb-border">
+                  <div class="area">
+                    <img width="20" src="img/expert/avatar01.png">
+                    <p>주식재무왕</p>
+                    <span>종목추천 가입하기</span>
+                  </div>
+                  <div class="date">2025.10.23</div>
+                </div>
+                <div class="bottom">
+                  <div class="answer">A</div>
+                  <p>
+                    코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="counsel-content">
+              <div class="title">종목정보 더보기</div>
+              <div class="related-items">
+                <div class="items-group">
+                  <button class="holding">
+                    <div class="left">
+                      <div class="name">
+                        <p class="text-truncate">SK하이닉스</p>
+                        <span>보유중</span>
+                      </div>
+                      <div class="code">000660</div>
+                    </div>
+                    <div class="right">
+                      <div class="a-group">
+                        <a href="#">
+                          <img width="28" src="img/expert/a-home.png">
+                          <span>홈</span>
+                        </a>
+                        <a href="#">
+                          <img width="28" src="img/expert/a-chart.png">
+                          <span>차트</span>
+                        </a>
+                      </div>
+                    </div>
+                  </button>
+                  <button>
+                    <div class="left">
+                      <div class="name">
+                        <p class="text-truncate">SK하이닉스</p>
+                      </div>
+                      <div class="code">000660</div>
+                    </div>
+                    <div class="right">
+                      <div class="a-group">
+                        <a href="#">
+                          <img width="28" src="img/expert/a-home.png">
+                          <span>홈</span>
+                        </a>
+                        <a href="#">
+                          <img width="28" src="img/expert/a-chart.png">
+                          <span>차트</span>
+                        </a>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="counsel-content">
+              <div class="recommend-box">
+                <strong>주식홍길동의 종목추천</strong>
+                <p>주도업종의 최선호주를 찾아 공략합니다.<br>수익은 변곡점에서 나옵니다.</p>
+                <button>종목추천 가입하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 종목상담 메세지 보내기 바텀시트 -->
+        <div class="offcanvas offcanvas-bottom exptOffcanvas counsel" data-bs-backdrop="false" id="counsel">
+          <div class="offcanvas-header">
+            <button type="button" data-bs-dismiss="offcanvas">
+              <img width="25" src="img/expert/offcanvas-close.png">
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="input-group">
+              <div class="input-box">
+                <div class="title">종목 선택</div>
+                <button class="items-search">
+                  삼성전자
+                </button>
+                </input>
+              </div>
+              <div class="input-box">
+                <div class="title">제목</div>
+                <input class="items-search">
+                </input>
+              </div>
+              <div class="input-box">
+                <div class="title">
+                  내용
+                  <!-- 이미지 등록 버튼 -->
+                  <button>
+                    <img width="26" src="img/expert/img-plus.png">
+                  </button>
+                  <!-- 이미지 등록 했을 때 -->
+                  <!-- <span>이미지가 등록되었습니다</span> -->
+                </div>
+                <textarea name="msgContent" id="msgContent"></textarea>
+              </div>
+            </div>
+            <div class="check-box">
+              <input type="checkbox" name="publicCheck" id="publicCheck">
+              <label for="publicCheck">
+                이 글을 비공개로 등록합니다
+              </label>
+            </div>
+            <div class="btn-group">
+              <button>취소</button>
+              <button>등록하기</button>
+            </div>
+          </div>
+          <!-- 종목선택/검색 영역 -->
+          <div class="search-offcanvas">
+            <div class="offcanvas-header">
+              <button type="button">
+                <img width="25" src="img/expert/offcanvas-close.png">
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="input-group">
+                <div class="input-box">
+                  <div class="title">종목 검색</div>
+                  <input class="items-search" />
+
+                  <!-- 자동완성 -->
+                  <div class="expert-autoComplete">
+                    <ul class="auto-list">
+                      <li>
+                        <p><span>삼성</span>전자</p>
+                        <em>005935 | 코스피</em>
+                      </li>
+                      <li>
+                        <p><span>삼성</span>전자</p>
+                        <em>005935 | 코스피</em>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- 최근 검색 종목 -->
+              <div class="recent-search">
+                <div class="title">최근 검색 종목</div>
+                <div class="items-list">
+                  <button>
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                  </button>
+                  <button>
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                  </button>
+                  <button>
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                  </button>
+                  <button>
+                    <div class="circle">SK</div>
+                    <div class="name text-truncate">SK하이닉스</div>
+                    <div class="code">000660</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const searchLayer = document.querySelector('.search-offcanvas');
+            const openBtn = document.querySelector('.input-box .items-search');
+            const closeBtn = searchLayer.querySelector('.offcanvas-header button');
+            const searchInput = searchLayer.querySelector('input.items-search');
+            const autoComplete = searchLayer.querySelector('.expert-autoComplete');
+
+            // 레이어 열기/닫기
+            openBtn.addEventListener('click', () => searchLayer.classList.add('active'));
+            closeBtn.addEventListener('click', () => {
+              searchLayer.classList.remove('active');
+              autoComplete.classList.remove('show'); // 닫을 때 초기화
+              searchInput.value = ''; 
+            });
+
+            // 자동완성 노출 
+            searchInput.addEventListener('input', function () {
+              const value = this.value.trim();
+
+              if (value.length > 0) {
+                // 글자가 하나라도 입력되면 보임
+                autoComplete.classList.add('show');
+              } else {
+                // 입력창이 비면 숨김
+                autoComplete.classList.remove('show');
+              }
+            });
+          });
+        </script>
         
       </main>
       <!-- //container -->
-
-      <!-- 나의 종목상담 상세보기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas counsel" data-bs-backdrop="false" id="counsel">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="qna">
-            <div class="title">나의 종목상담</div>
-            <div class="counsel-box">
-              <div class="item-title">
-                <div class="left">
-                  <div class="circle">Q</div>
-                  <div class="name text-truncate">SK하이닉스</div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="right">
-                  <span>질문중</span>
-                </div>
-              </div>
-              <div class="box-txt">
-                최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목 중 주목할 종목들을 확인해 보세요.
-              </div>
-              <div class="date">
-                <p>2025.10.23</p>
-              </div>
-            </div>
-            <div class="counsel-box">
-              <div class="top">
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-                <div class="date">2025.10.23</div>
-              </div>
-              <div class="bottom">
-                <span>A</span>
-                <div class="box-txt">
-                  코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.코스닥(KOSDAQ) 역시 코스피와 함께 상승 흐름을 이어가며 시장의 전반적인 활력을 뒷받침했습니다.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="related-items">
-            <div class="title">관련종목</div>
-            <div class="items-group">
-              <button class="holding">
-                <div class="left">
-                  <div class="name">
-                    <p class="text-truncate">SK하이닉스</p>
-                    <span>보유중</span>
-                  </div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="right">
-                  <div class="a-group">
-                    <a href="#">
-                      <img width="28" src="img/expert/a-home.png">
-                      <span>홈</span>
-                    </a>
-                    <a href="#">
-                      <img width="28" src="img/expert/a-chart.png">
-                      <span>차트</span>
-                    </a>
-                    <a href="#">
-                      <img width="28" src="img/expert/a-info.png">
-                      <span>종목정보</span>
-                    </a>
-                  </div>
-                </div>
-              </button>
-              <button>
-                <div class="left">
-                  <div class="name">
-                    <p class="text-truncate">SK하이닉스</p>
-                  </div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="right">
-                  <div class="a-group">
-                    <a href="#">
-                      <img width="28" src="img/expert/a-home.png">
-                      <span>홈</span>
-                    </a>
-                    <a href="#">
-                      <img width="28" src="img/expert/a-chart.png">
-                      <span>차트</span>
-                    </a>
-                    <a href="#">
-                      <img width="28" src="img/expert/a-info.png">
-                      <span>종목정보</span>
-                    </a>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- // -->
-
-      <!-- 종목상담 메세지 보내기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas message" data-bs-backdrop="false" id="message">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="input-group">
-            <div class="input-box">
-              <div class="title">종목 선택</div>
-              <input class="items-search">
-              </input>
-            </div>
-            <div class="input-box">
-              <div class="title">내용 입력</div>
-              <textarea name="msgContent" id="msgContent"></textarea>
-            </div>
-          </div>
-          <div class="btn-group">
-            <button>취소</button>
-            <button>등록하기</button>
-          </div>
-        </div>
-      </div>
-      <!-- // -->
 
     </div>
     <!-- /wrap -->

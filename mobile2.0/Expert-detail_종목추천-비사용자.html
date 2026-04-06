@@ -39,10 +39,18 @@
           <!-- 씽크풀로고 -->
 
 
-          <div class="expert-header-top_logo">
-            <img src="./img/expert/ExpertLogo.png" alt="엑스퍼트 로고" width="123">
+          <div class="expert-header-top_sub">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <strong>엑스퍼트</strong>
           </div>
-          <!-- expertLogo -->
+
+
 
           <div class="expert-header-top_sideMenu">
             <button type="button" id="opensch" class="schButton">
@@ -359,76 +367,189 @@
           <!-- 검색&사이드메뉴 -->
         </div>
         <!-- top -->
-
       </header>
-
-      <div class="exptNav">
-        <div class="expert-header-globalMenu">
-          <a href="#">홈</a>
-          <a href="#" class="active">투자전략</a>
-          <a href="#">나의엑스퍼트</a>
-        </div>
-        <!-- menu -->
-      </div>
       <!-- // -->
+
+      <div class="exptNav_sub">
+        <div class="expert-header-globalMenu_sub">
+          <a href="#">엑스퍼트 홈</a>
+          <a href="#" class="active">종목추천</a>
+        </div>
+      </div>
+        <!-- menu -->
 
       <main id="container" class="expert-container clearfix">
 
-        <div class="expert-content swiper-content">
-          <div class="title">꼭 읽어봐야할 투자전략</div>
-          <!-- //title -->
-          <div class="swiper exptSwiper04">
+        <div class="expert-content">
+          <div class="title">오늘 발생한 종목추천</div>
+          <div class="alarm">
+            <div class="alarm-top">
+              <img width="18" src="img/expert/speaker-icon.png">
+              <p>매수추천 999종목, 매도정리 999종목</p>
+              <strong>총 999종목</strong>
+              <button>
+                <img width="14" src="img/expert/zoom-icon.png">
+              </button>
+            </div>
+            <div class="alarm-list">
+              <span>12시 30분에 SK하이닉스(000660)를 매수했습니다</span>
+              <span>12시 30분에 SK하이닉스(000660)를 매수했습니다</span>
+              <!-- 발생한 종목 추천 없을 때 -->
+              <!-- <div class="no-alarm">
+                <img width="20" src="img/expert/no-icon.png">
+                <p>오늘 새로 발생한 종목 추천이 없습니다.</p>
+              </div> -->
+              <!-- // -->
+            </div>
+          </div>
+          <div class="swiper exptSwiper05">
             <div class="swiper-wrapper">
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+              <div class="swiper-slide green">
+                <div class="tag">
+                  <img width="16" src="img/expert/recommend-icon.png">
+                  <span>종목추천</span>
                 </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle tp">TP</div>
+                    <div class="name text-truncate">THINKPOOL</div>
+                    <div class="code">000000</div>
+                    <button> <!--click.stop 필요-->
+                      <img width="26" src="img/expert/chart-link.png">
+                    </button>
+                  </div>
+                  <div class="item-txt">
+                    <p class="txt">
+                      2026.01.28 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
                 </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
+                <div class="item-bottom">
+                  <div class="comment-box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <button>우주발사체 기업</button><!--click.stop 필요-->
+                  </div>
                 </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+              </div>
+              <div class="swiper-slide red">
+                <div class="tag">
+                  <img width="16" src="img/expert/money-icon.png">
+                  <span>수익실현</span>
                 </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle tp">TP</div>
+                    <div class="name text-truncate">THINKPOOL</div>
+                    <div class="code">000000</div>
+                    <button><!--click.stop 필요-->
+                      <img width="26" src="img/expert/chart-link.png">
+                    </button>
+                  </div>
+                  <div class="item-txt">
+                    <p class="txt">
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
                 </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
+                <div class="item-bottom">
+                  <div class="comment-box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <button>우주발사체 기업</button><!--click.stop 필요-->
+                  </div>
                 </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+              </div>
+              <div class="swiper-slide gray">
+                <div class="tag">
+                  <img width="16" src="img/expert/delete-icon.png">
+                  <span>추천제외</span>
                 </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle tp">TP</div>
+                    <div class="name text-truncate">THINKPOOL</div>
+                    <div class="code">000000</div>
+                    <button><!--click.stop 필요-->
+                      <img width="26" src="img/expert/chart-link.png">
+                    </button>
+                  </div>
+                  <div class="item-txt">
+                    <p class="txt">
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
                 </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
+                <div class="item-bottom">
+                  <div class="comment-box">
+                    <div class="comment-title">
+                      <img width="18" src="img/expert/comment-icon.png">
+                      <span>매수코멘트</span>
+                    </div>
+                    <div class="comment-txt">
+                      최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                    </div>
+                  </div>
+                  <div class="bottom-txt">
+                    <p>이 회사는</p>
+                    <button>우주발사체 기업</button><!--click.stop 필요-->
+                  </div>
                 </div>
-              </button>
-              <!-- //swiper-slide -->
+              </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
 
         <script>
-          var swiper = new Swiper('.exptSwiper04', {
-            slidesPerView: '1.',
+          var swiper = new Swiper('.exptSwiper05', {
+            slidesPerView: '1',
             spaceBetween: 16,
             pagination: {
               el: ".swiper-pagination",
@@ -439,144 +560,187 @@
         <!-- //첫번째 expert-content -->
 
         <div class="expert-content">
-          <div class="title">투자전략</div>
+          <div class="title">종목추천 현황 모두보기</div>
           <div class="tab-group">
-            <button class="active">투자전략</button>
-            <button>종목분석</button>
+            <button class="active">전체종목</button>
+            <button>매수종목</button>
+            <button>매도종목</button>
           </div>
           <div class="tab-content">
-            <!-- 투자전략 박스 -->
-            <div class="flex-col">
-              <div
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <button class="box-name"> <!--click.stop 필요-->
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </button>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 호외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+            <div class="view-items">
+              <div class="box col">
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle rs">RA</div>
+                    <div class="name text-truncate">RASSI</div>
+                    <div class="code">000000</div>
+                    <button><!--click.stop 필요-->
+                      <img width="26" src="img/expert/chart-link02.png">
+                    </button>
+                  </div>
+                  <div class="item-txt">
+                    <p class="txt">
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-box">
+                    <div class="box">
+                      <div class="box-name">현재수익률</div>
+                      <strong><span>+113.2%</span></strong>
+                    </div>
+                    <div class="box">
+                      <div class="box-name">보유중</div>
+                      <strong>365일째</strong>
+                    </div>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
                 </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
+                <div class="item-bottom">
+                  <div class="comment">
+                    <div class="left">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.86999 10.2137C1.96189 10.4456 1.98235 10.6996 1.92874 10.9431L1.26312 12.9994C1.24167 13.1036 1.24721 13.2117 1.27922 13.3132C1.31124 13.4147 1.36865 13.5064 1.44603 13.5795C1.52341 13.6527 1.61818 13.7048 1.72136 13.731C1.82455 13.7572 1.93272 13.7567 2.03562 13.7294L4.16874 13.1056C4.39856 13.06 4.63657 13.08 4.85562 13.1631C6.19023 13.7864 7.70209 13.9182 9.12446 13.5354C10.5468 13.1526 11.7883 12.2798 12.6298 11.0708C13.4713 9.86192 13.8588 8.39462 13.7239 6.92783C13.589 5.46105 12.9404 4.08903 11.8925 3.05386C10.8446 2.01869 9.4648 1.38689 7.99648 1.26993C6.52815 1.15296 5.0657 1.55836 3.86714 2.41458C2.66858 3.2708 1.81095 4.52283 1.44555 5.94976C1.08015 7.3767 1.23047 8.88684 1.86999 10.2137Z" stroke="#71717B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>엑스퍼트 코멘트</span>
+                    </div>
+                    <div class="right">
+                      주식홍길동
+                    </div>
+                  </div>
+                  <div class="comment-txt">
+                    최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                  </div>
+                </div>
+              </div>
+              <div class="box col">
+                <div class="item-top">
+                  <div class="item-name">
+                    <div class="circle rs">RA</div>
+                    <div class="name text-truncate">RASSI</div>
+                    <div class="code">000000</div>
+                    <button><!--click.stop 필요-->
+                      <img width="26" src="img/expert/chart-link02.png">
+                    </button>
+                  </div>
+                  <div class="item-txt">
+                    <p class="txt">
+                      2025.10.25 12:30<strong>35,000</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                  <div class="item-box">
+                    <div class="box">
+                      <div class="box-name">현재수익률</div>
+                      <strong><span>+113.2%</span></strong>
+                    </div>
+                    <div class="box">
+                      <div class="box-name">보유중</div>
+                      <strong>365일째</strong>
+                    </div>
+                  </div>
+                  <div class="item-num">
+                    <div class="area">
+                      <p>목표가</p>
+                      <strong>324,000원</strong>
+                    </div>
+                    <div class="area">
+                      <p>목표수익률</p>
+                      <strong><span>+5.5%</span></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-bottom">
+                  <div class="comment">
+                    <div class="left">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.86999 10.2137C1.96189 10.4456 1.98235 10.6996 1.92874 10.9431L1.26312 12.9994C1.24167 13.1036 1.24721 13.2117 1.27922 13.3132C1.31124 13.4147 1.36865 13.5064 1.44603 13.5795C1.52341 13.6527 1.61818 13.7048 1.72136 13.731C1.82455 13.7572 1.93272 13.7567 2.03562 13.7294L4.16874 13.1056C4.39856 13.06 4.63657 13.08 4.85562 13.1631C6.19023 13.7864 7.70209 13.9182 9.12446 13.5354C10.5468 13.1526 11.7883 12.2798 12.6298 11.0708C13.4713 9.86192 13.8588 8.39462 13.7239 6.92783C13.589 5.46105 12.9404 4.08903 11.8925 3.05386C10.8446 2.01869 9.4648 1.38689 7.99648 1.26993C6.52815 1.15296 5.0657 1.55836 3.86714 2.41458C2.66858 3.2708 1.81095 4.52283 1.44555 5.94976C1.08015 7.3767 1.23047 8.88684 1.86999 10.2137Z" stroke="#71717B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>엑스퍼트 코멘트</span>
+                    </div>
+                    <div class="right">
+                      주식홍길동
+                    </div>
+                  </div>
+                  <div class="comment-txt">
+                    최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- // -->
-            <!-- 종목분석 박스 -->
-            <div class="flex-col">
-              <button 
-                type="button"
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <div class="item-name">
-                  <div class="circle">SK</div>
-                  <div class="name text-truncate">SK하이닉스</div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.합니다.
-                </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
-                  <span>
-                    <img width="20" src="img/expert/avatar01.png">
-                    주식재무왕
-                  </span>
-                </div>
-              </button>
-            </div>
-            <!-- // -->
+            <button class="more">
+              <span>투자전략 더보기</span>
+              <img width="24" src="img/expert/right-arrow02.png">
+            </button>
           </div>
         </div>
         <!-- //두번째 expert-content -->
 
+        <!-- 비가입자 바텀시트 -->
+        <div class="offcanvas offcanvas-bottom exptOffcanvas noUse" data-bs-backdrop="true" id="noUse">
+          <div class="offcanvas-body">
+            <div class="title">
+              <div class="left">
+                <img width="45" src="img/expert/avatar02.png">
+              </div>
+              <div class="right">
+                <p><strong>이준구 자문역</strong></p>
+                <p>종목추천 엑스퍼트 가입</p>
+              </div>
+            </div>
+            <div class="txt">
+              혼란스러운 시장 속에서 명확한 길을 제시합니다. 전문 데이터와 분석을 바탕으로 당신의 투자 수익률을 극대화하세요
+            </div>
+            <div class="check-box">
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>엑스퍼트의 실시간 종목추천</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>실전 매매를 위한 투자전략</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>맞춤형 종목분석</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>철저한 리스크 관리</p>
+              </div>
+            </div>
+            <div class="use-btn">
+              <button>지금, 가입하고 모두 이용하기</button>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const noUseOffcanvas = new bootstrap.Offcanvas(document.getElementById('noUse'));
+            noUseOffcanvas.show();
+          });
+        </script>
+
+        <div class="blur-bg"></div>
+        
       </main>
       <!-- //container -->
 
-      <!-- 투자전략/종목분석 상세보기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas strategy" data-bs-backdrop="false" id="strategy">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="top">
-            <div class="title">
-              역대급 시장에서 소외 받지 않기 위해 투자해야되는 단 하나의 전략을 공개합니다.
-            </div>
-            <div class="date-name">
-              <div class="date">2025.10.23</div>
-              <div class="name">
-                <span>주식채무왕</span>
-                <img width="20" src="img/expert/avatar01.png">
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="tag-group">
-              <span>#하이닉스</span>
-              <span>#삼성전자</span>
-            </div>
-            <div class="txt">
-              한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-            </div>
-            <div class="related-items">
-              <div class="title">관련종목</div>
-              <div class="items-group">
-                <button class="holding">
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                      <span>보유중</span>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
-                </button>
-                <button>
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- // -->
+      <!-- 플로팅 버튼 -->
+      <!-- <div class="floating-btn_expt">
+        <button>나의 엑스퍼트로 추가하기</button>
+      </div> -->
 
+
+      
     </div>
     <!-- /wrap -->
   </div>

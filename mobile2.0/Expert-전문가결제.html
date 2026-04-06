@@ -39,10 +39,18 @@
           <!-- 씽크풀로고 -->
 
 
-          <div class="expert-header-top_logo">
-            <img src="./img/expert/ExpertLogo.png" alt="엑스퍼트 로고" width="123">
+          <div class="expert-header-top_sub">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <strong>엑스퍼트</strong>
           </div>
-          <!-- expertLogo -->
+
+
 
           <div class="expert-header-top_sideMenu">
             <button type="button" id="opensch" class="schButton">
@@ -359,223 +367,97 @@
           <!-- 검색&사이드메뉴 -->
         </div>
         <!-- top -->
-
       </header>
-
-      <div class="exptNav">
-        <div class="expert-header-globalMenu">
-          <a href="#">홈</a>
-          <a href="#" class="active">투자전략</a>
-          <a href="#">나의엑스퍼트</a>
-        </div>
-        <!-- menu -->
-      </div>
       <!-- // -->
 
       <main id="container" class="expert-container clearfix">
-
-        <div class="expert-content swiper-content">
-          <div class="title">꼭 읽어봐야할 투자전략</div>
-          <!-- //title -->
-          <div class="swiper exptSwiper04">
-            <div class="swiper-wrapper">
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-
-        <script>
-          var swiper = new Swiper('.exptSwiper04', {
-            slidesPerView: '1.',
-            spaceBetween: 16,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            }
-          });
-        </script>
-        <!-- //첫번째 expert-content -->
-
-        <div class="expert-content">
-          <div class="title">투자전략</div>
-          <div class="tab-group">
-            <button class="active">투자전략</button>
-            <button>종목분석</button>
-          </div>
-          <div class="tab-content">
-            <!-- 투자전략 박스 -->
-            <div class="flex-col">
-              <div
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <button class="box-name"> <!--click.stop 필요-->
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </button>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 호외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
-                </div>
+        
+        <!-- 전문가 결제 바텀시트 -->
+        <div class="exptOffcanvas payment" data-bs-backdrop="false" id="payment">
+          <div class="offcanvas-body">
+            <div class="info-box">
+              <div class="avatar">
+                <img width="98" src="img/expert/avatar02.png" alt="">
+              </div>
+              <div class="title">
+                <span>주식 홍길동</span>
+                <p>나의 엑스퍼트 추가 하기</p>
+              </div>
+              <div class="txt">
+                나의 엑스퍼트로 추가하고 투자전략부터 종목추천까지 모든 것을 이용해 보세요!
               </div>
             </div>
             <!-- // -->
-            <!-- 종목분석 박스 -->
-            <div class="flex-col">
-              <button 
-                type="button"
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <div class="item-name">
-                  <div class="circle">SK</div>
-                  <div class="name text-truncate">SK하이닉스</div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.합니다.
-                </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
-                  <span>
-                    <img width="20" src="img/expert/avatar01.png">
-                    주식재무왕
-                  </span>
-                </div>
+            <div class="banner">
+              <button>
+                <!-- 홍보배너 영역 -->
               </button>
             </div>
             <!-- // -->
-          </div>
-        </div>
-        <!-- //두번째 expert-content -->
-
-      </main>
-      <!-- //container -->
-
-      <!-- 투자전략/종목분석 상세보기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas strategy" data-bs-backdrop="false" id="strategy">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="top">
-            <div class="title">
-              역대급 시장에서 소외 받지 않기 위해 투자해야되는 단 하나의 전략을 공개합니다.
-            </div>
-            <div class="date-name">
-              <div class="date">2025.10.23</div>
-              <div class="name">
-                <span>주식채무왕</span>
-                <img width="20" src="img/expert/avatar01.png">
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="tag-group">
-              <span>#하이닉스</span>
-              <span>#삼성전자</span>
-            </div>
-            <div class="txt">
-              한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-            </div>
-            <div class="related-items">
-              <div class="title">관련종목</div>
-              <div class="items-group">
-                <button class="holding">
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                      <span>보유중</span>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
+            <div class="box contract">
+              <div class="title">AI매매신호는<br>씽크풀투자자문에서 제공해 드려요</div>
+              <div class="contract-box">
+                <button>
+                  <span>투자자문계약서</span>
+                  <img width="22" src="img/expert/right-arrow.png">
                 </button>
                 <button>
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
+                  <span>투자자문계약 권유문서</span>
+                  <img width="22" src="img/expert/right-arrow.png">
                 </button>
               </div>
             </div>
+            <!-- // -->
+            <div class="box use-list">
+              <div class="title">엑스퍼트의<br>모든 것을 이용하실 수 있어요.</div>
+              <div class="txt-group">
+                <p>종목추천과 관련된 모든 정보 이용</p>
+                <p>엑스퍼트의 투자전략과 종목진단 모두 이용</p>
+                <p>엑스퍼트와 1대1 상담하기 이용</p>
+                <p>엑스퍼트 정보 실시간 알림 이용</p>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="box check">
+              <div class="title">가입 방식을<br>확인해 주세요.</div>
+              <div class="radio-group">
+                <div class="radio-box">
+                  <label for="single">
+                    <p>1개월 단건 결제</p>
+                    <p><strong>129,000원</strong></p>
+                  </label>
+                  <input type="radio" name="payment" id="single">
+                </div>
+                <div class="radio-box">
+                  <label for="subscription">
+                    <p>매월 정기 결제</p>
+                    <p>
+                      <em>129,000원</em>
+                      <strong>99,400원</strong>
+                      <span>35% 할인</span>
+                    </p>
+                  </label>
+                  <input type="radio" name="payment" id="subscription" checked>
+                </div>
+              </div>
+              <div class="txt">※ 정기결제는 언제든 구독을 취소할 수 있어요.</div>
+            </div>
+            <!-- // -->
+            <div class="box guide">
+              <div class="title">안내</div>
+              <div class="txt">
+                안내사항을 적어주세요.안내사항을 적어주세요.안내사항을 적어주세요.안내사항을 적어주세요.안내사항을 적어주세요.
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-footer">
+            <button>동의하고 엑스퍼트 가입하기</button>
           </div>
         </div>
-      </div>
-      <!-- // -->
+        <!-- // -->
+        
+      </main>
+      <!-- //container -->
 
     </div>
     <!-- /wrap -->

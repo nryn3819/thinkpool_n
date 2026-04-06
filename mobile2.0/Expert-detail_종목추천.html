@@ -33,7 +33,7 @@
         <div class="expert-header-top">
           <div class="expert-header-top_tplogo">
             <a href="#">
-              <img src="./img/expert/tpLogo.png" alt="씽크풀로고" width="44">
+              <img src="./img/expert/tpLogo.png" alt="씽크풀로고" width="42">
             </a>
           </div>
           <!-- 씽크풀로고 -->
@@ -545,6 +545,11 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
+          <!-- 종목추천 없을 때 -->
+          <div class="no-recommend">
+            <img width="32" src="img/expert/no-icon.png">
+            <p>오늘 새로 발생한 종목추천이 없습니다.</p>
+          </div>
         </div>
 
         <script>
@@ -580,8 +585,7 @@
         <div class="expert-content">
           <div class="title">종목추천 현황 모두보기</div>
           <div class="tab-group">
-            <button class="active">전체종목</button>
-            <button>매수종목</button>
+            <button class="active">매수종목</button>
             <button>매도종목</button>
           </div>
           <div class="tab-content">
@@ -622,6 +626,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- 코멘트 박스부분 오늘 발생한 신호가 아닐 경우에는 삭제 -->
                 <div class="item-bottom">
                   <div class="comment">
                     <div class="left">
@@ -638,6 +643,7 @@
                     최근 매도 종목 중 주목할 종목들을 확인해 보세요. 최근 매도 종목들을 확인해 보세요!
                   </div>
                 </div>
+                <!-- // -->
               </div>
             </div>
             <button class="more">
@@ -647,6 +653,222 @@
           </div>
         </div>
         <!-- //두번째 expert-content -->
+
+        <!-- 종목추천 상세보기 바텀시트 -->
+        <div class="offcanvas offcanvas-bottom exptOffcanvas recommend" data-bs-backdrop="false" id="recommend">
+          <div class="offcanvas-header">
+            <button type="button" data-bs-dismiss="offcanvas">
+              <img width="25" src="img/expert/offcanvas-close.png">
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="body-content">
+              <!-- 매수추천 -->
+              <div class="item-box green">
+                <div class="top">
+                  <div class="box-name">
+                    <div class="left">
+                      <div class="circle">SK</div>
+                      <div class="name text-truncate">SK하이닉스</div>
+                      <div class="code">000660</div>
+                    </div>
+                    <div class="right">
+                      <div class="tag">
+                        <img width="16" src="img/expert/recommend-icon.png">
+                        <span>매수추천</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-txt">
+                    <p>
+                      2025.10.25 12:30<strong>35,000원</strong><span>매수</span>했어요
+                    </p>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <em>현재가</em>
+                    <span>30,000원</span>
+                  </p>
+                  <p>
+                    <em>현재 수익률</em>
+                    <strong>+5.5%</strong>
+                  </p>
+                </div>
+              </div>
+              <!-- // -->
+              <!-- 매도추천 -->
+              <div class="item-box red">
+                <div class="top">
+                  <div class="box-name">
+                    <div class="left">
+                      <div class="circle">SK</div>
+                      <div class="name text-truncate">SK하이닉스</div>
+                      <div class="code">000660</div>
+                    </div>
+                    <div class="right">
+                      <div class="tag">
+                        <img width="16" src="img/expert/recommend-icon.png">
+                        <span>매수추천</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-txt">
+                    <p>
+                      2025.10.25 12:30<strong class="green">35,000원</strong><span class="green">매수</span>했어요
+                    </p>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <em>현재가</em>
+                    <span>30,000원</span>
+                  </p>
+                  <p>
+                    <em>현재 수익률</em>
+                    <strong class="green">-5.5%</strong>
+                  </p>
+                </div>
+              </div>
+              <!-- // -->
+            </div>
+            <!-- // -->
+            <div class="body-content">
+              <div class="title">
+                보유중인 성과
+                <!-- 매도한 성과 -->
+              </div>
+              <div class="chart-box">
+                <div class="txt">
+                  <p>
+                    <em>현재수익률</em>
+                    <strong>+5.5%</strong>
+                  </p>
+                  <p>
+                    <em>보유중</em>
+                    <span>365일째</span>
+                  </p>
+                </div>
+                <div class="chart">
+                  <img src="img/expert/chart-img02.png" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="body-content">
+              <div class="title">투자 목표</div>
+              <div class="box-group">
+                <div class="box">
+                  <span>목표가</span>
+                  <strong>365일째</strong>
+                  <p>목표가까지 15,000원 남았습니다.</p>
+                </div>
+                <div class="box">
+                  <span>목표가</span>
+                  <strong class="red">+113.2%</strong>
+                  <p>목표가까지 15,000원 남았습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="body-content">
+              <div class="title">SK하이닉스에 대한 엑스퍼트 코멘트</div>
+              <div class="comment">
+                <div class="comment-box">
+                  <div class="box-title">
+                    <p>종목진단</p>
+                    <span>2025.10.23</span>
+                  </div>
+                  <div class="box">
+                    글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                  </div>
+                </div>
+                <!-- // -->
+                <div class="comment-box">
+                  <div class="box-title">
+                    <p>종목진단</p>
+                    <span>2025.10.23</span>
+                  </div>
+                  <div class="box">
+                    글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                  </div>
+                </div>
+                <!-- // -->
+                <div class="comment-box">
+                  <div class="box-title">
+                    <p>종목진단</p>
+                    <span>2025.10.23</span>
+                  </div>
+                  <div class="box">
+                    글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
+                  </div>
+                </div>
+                <!-- // -->
+              </div>
+            </div>
+            <!-- // -->
+            <div class="body-footer">
+              <div class="title">SK하이닉스는 어떤 종목일까요?</div>
+              <div class="btn-group">
+                <button>
+                  <img width="16" src="img/expert/a-chart02.png">
+                  <span>차트보기</span>
+                </button>
+                <button>
+                  <img width="16" src="img/expert/a-home02.png">
+                  <span>종목홈</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 비가입자 바텀시트 -->
+        <!-- <div class="offcanvas offcanvas-bottom exptOffcanvas noUse" data-bs-backdrop="true" id="noUse">
+          <div class="offcanvas-body">
+            <div class="title">
+              <div class="left">
+                <img width="45" src="img/expert/avatar02.png">
+              </div>
+              <div class="right">
+                <p><strong>이준구 자문역</strong></p>
+                <p>종목추천 엑스퍼트 가입</p>
+              </div>
+            </div>
+            <div class="txt">
+              혼란스러운 시장 속에서 명확한 길을 제시합니다. 전문 데이터와 분석을 바탕으로 당신의 투자 수익률을 극대화하세요
+            </div>
+            <div class="check-box">
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>엑스퍼트의 실시간 종목추천</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>실전 매매를 위한 투자전략</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>맞춤형 종목분석</p>
+              </div>
+              <div class="list">
+                <img width="18" src="img/expert/checkbox.png">
+                <p>철저한 리스크 관리</p>
+              </div>
+            </div>
+            <div class="use-btn">
+              <button>지금, 가입하고 모두 이용하기</button>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const noUseOffcanvas = new bootstrap.Offcanvas(document.getElementById('noUse'));
+            noUseOffcanvas.show();
+          });
+        </script> -->
         
       </main>
       <!-- //container -->
@@ -656,189 +878,7 @@
         <button>나의 엑스퍼트로 추가하기</button>
       </div> -->
 
-      <!-- 종목추천 상세보기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas recommend" data-bs-backdrop="false" id="recommend">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="body-content">
-            <!-- 매수추천 -->
-            <div class="item-box green">
-              <div class="top">
-                <div class="box-name">
-                  <div class="left">
-                    <div class="circle">SK</div>
-                    <div class="name text-truncate">SK하이닉스</div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="tag">
-                      <img width="16" src="img/expert/recommend-icon.png">
-                      <span>매수추천</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="box-txt">
-                  <p>
-                    2025.10.25 12:30<strong>35,000원</strong><span>매수</span>했어요
-                  </p>
-                </div>
-              </div>
-              <div class="bottom">
-                <p>
-                  <em>현재가</em>
-                  <span>30,000원</span>
-                </p>
-                <p>
-                  <em>현재 수익률</em>
-                  <strong>+5.5%</strong>
-                </p>
-              </div>
-            </div>
-            <!-- // -->
-            <!-- 매도추천 -->
-            <div class="item-box red">
-              <div class="top">
-                <div class="box-name">
-                  <div class="left">
-                    <div class="circle">SK</div>
-                    <div class="name text-truncate">SK하이닉스</div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="tag">
-                      <img width="16" src="img/expert/recommend-icon.png">
-                      <span>매수추천</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="box-txt">
-                  <p>
-                    2025.10.25 12:30<strong class="green">35,000원</strong><span class="green">매수</span>했어요
-                  </p>
-                </div>
-              </div>
-              <div class="bottom">
-                <p>
-                  <em>현재가</em>
-                  <span>30,000원</span>
-                </p>
-                <p>
-                  <em>현재 수익률</em>
-                  <strong class="green">-5.5%</strong>
-                </p>
-              </div>
-            </div>
-            <!-- // -->
-          </div>
-          <!-- // -->
-          <div class="body-content">
-            <div class="title">
-              보유중인 성과
-              <!-- 매도한 성과 -->
-            </div>
-            <div class="chart-box">
-              <div class="txt">
-                <p>
-                  <em>현재수익률</em>
-                  <strong>+5.5%</strong>
-                </p>
-                <p>
-                  <em>보유중</em>
-                  <span>365일째</span>
-                </p>
-              </div>
-              <div class="chart">
-                <img src="img/expert/chart-img02.png" alt="">
-              </div>
-            </div>
-          </div>
-          <!-- // -->
-          <div class="body-content">
-            <div class="title">투자 목표</div>
-            <div class="box-group">
-              <div class="box">
-                <span>목표가</span>
-                <strong>365일째</strong>
-                <p>목표가까지 15,000원 남았습니다.</p>
-              </div>
-              <div class="box">
-                <span>목표가</span>
-                <strong class="red">+113.2%</strong>
-                <p>목표가까지 15,000원 남았습니다.</p>
-              </div>
-            </div>
-          </div>
-          <!-- // -->
-          <div class="body-content">
-            <div class="title">SK하이닉스에 대한 엑스퍼트 코멘트</div>
-            <div class="comment">
-              <div class="comment-box">
-                <div class="box-title">
-                  <p>종목진단</p>
-                  <span>2025.10.23</span>
-                </div>
-                <div class="box">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-              </div>
-              <!-- // -->
-              <div class="comment-box">
-                <div class="box-title">
-                  <p>종목진단</p>
-                  <span>2025.10.23</span>
-                </div>
-                <div class="box">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-              </div>
-              <!-- // -->
-              <div class="comment-box">
-                <div class="box-title">
-                  <p>종목진단</p>
-                  <span>2025.10.23</span>
-                </div>
-                <div class="box">
-                  글로벌 완성차 Peer 대비 10% 할증, 하이브리드 신차 및 스마트카 개발 역량 반영
-                </div>
-              </div>
-              <!-- // -->
-            </div>
-          </div>
-          <!-- // -->
-          <div class="body-footer">
-            <div class="title">SK하이닉스는 어떤 종목일까요?</div>
-            <div class="btn-group">
-              <button>
-                <img width="16" src="img/expert/a-chart02.png">
-                <span>차트보기</span>
-              </button>
-              <button>
-                <img width="16" src="img/expert/a-home02.png">
-                <span>종목홈</span>
-              </button>
-              <button>
-                <img width="16" src="img/expert/a-info02.png">
-                <span>종목요약</span>
-              </button>
-            </div>
-            <div class="link-group">
-              <button>
-                <span>PCB 전문제조기업</span>
-                <img width="22" src="img/expert/right-arrow.png" alt="">
-              </button>
-              <button>
-                <span>챗GPT가 요약한 사업개요</span>
-                <img width="22" src="img/expert/right-arrow.png" alt="">
-              </button>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+
       
     </div>
     <!-- /wrap -->

@@ -39,10 +39,18 @@
           <!-- 씽크풀로고 -->
 
 
-          <div class="expert-header-top_logo">
-            <img src="./img/expert/ExpertLogo.png" alt="엑스퍼트 로고" width="123">
+          <div class="expert-header-top_sub">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.4773 3.97725L8.52271 12.5L16.4773 21.0227" stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <strong>엑스퍼트 이용 설정</strong>
           </div>
-          <!-- expertLogo -->
+
+
 
           <div class="expert-header-top_sideMenu">
             <button type="button" id="opensch" class="schButton">
@@ -361,221 +369,264 @@
         <!-- top -->
 
       </header>
-
-      <div class="exptNav">
-        <div class="expert-header-globalMenu">
-          <a href="#">홈</a>
-          <a href="#" class="active">투자전략</a>
-          <a href="#">나의엑스퍼트</a>
-        </div>
-        <!-- menu -->
-      </div>
       <!-- // -->
 
       <main id="container" class="expert-container clearfix">
 
-        <div class="expert-content swiper-content">
-          <div class="title">꼭 읽어봐야할 투자전략</div>
-          <!-- //title -->
-          <div class="swiper exptSwiper04">
-            <div class="swiper-wrapper">
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-              <button class="swiper-slide">
-                <div class="date">2025.10.23</div>
-                <div class="box-title text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
-                </div>
-                <div class="box-txt text-truncate3">
-                  한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-                </div>
-                <div class="name">
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </div>
-              </button>
-              <!-- //swiper-slide -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
+        <div class="expert-content">
 
-        <script>
-          var swiper = new Swiper('.exptSwiper04', {
-            slidesPerView: '1.',
-            spaceBetween: 16,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            }
-          });
-        </script>
+          <div class="setting">
+          
+            <div class="title">알림수신 번호</div>
+            <div class="number-box">
+              <p>
+                010-1234-1234
+                
+                <!-- 휴대폰 번호가 없습니다. -->
+              </p>
+              <button data-bs-toggle="modal" data-bs-target="#editNumber">
+                변경
+
+                <!-- 등록 -->
+              </button>
+            </div>
+            <div class="txt">
+              엑스퍼트 알림은 씽크풀 ID에 등록된 휴대폰 번호로 발송됩니다. <br>
+              엑스퍼트 알림수신 번호를 변경하시면 씽크풀 ID에 등록된 휴대폰 번호가 함께 변경됩니다.
+            </div>
+
+          </div>
+
+        </div>
         <!-- //첫번째 expert-content -->
 
         <div class="expert-content">
-          <div class="title">투자전략</div>
-          <div class="tab-group">
-            <button class="active">투자전략</button>
-            <button>종목분석</button>
-          </div>
-          <div class="tab-content">
-            <!-- 투자전략 박스 -->
-            <div class="flex-col">
-              <div
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <button class="box-name"> <!--click.stop 필요-->
-                  <img width="20" src="img/expert/avatar01.png">
-                  <span>주식재무왕</span>
-                </button>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 호외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.
+
+          <div class="setting">
+            <div class="title">정기결제 관리</div>
+            <div class="setting-wrap">
+              <div class="setting-group">
+                <div class="setting-box">
+                  <div class="txt-group">
+                    <strong>종목추천 - 정기결제(퀀트매니저)</strong>
+                    <p>사용기간 : 2026.01.02 - 2026.02.02</p>
+                  </div>
+                  <div class="mini-box">
+                    <p>다음 결제 예정일 : 2월 2일</p>
+                    <!--밑에 버튼은 앱 화면일 때 생략(밑에 구글플레이 스토어 이동 버튼으로 대체)-->
+                    <button data-bs-toggle="modal" data-bs-target="#termination">해지하기</button>
+                  </div>
                 </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
+                <!-- // -->
+                <div class="txt">
+                  엑스퍼트 알림은 씽크풀 ID에 등록된 휴대폰 번호로 발송됩니다. <br>
+                  엑스퍼트 알림수신 번호를 변경하시면 씽크풀 ID에 등록된 휴대폰 번호가 함께 변경됩니다.
                 </div>
+                <!-- // -->
+              </div>
+              <!-- //setting-group -->
+              <div class="setting-group">
+                <div class="setting-box">
+                  <div class="txt-group">
+                    <strong>종목추천 - 정기결제(퀀트매니저)</strong>
+                    <p>사용기간 : 2026.01.02 - 2026.02.02</p>
+                  </div>
+                  <div class="mini-box text-center">
+                    <p>다음 결제 예정일 : 2월 2일</p>
+                  </div>
+                </div>
+                <!-- // -->
+                <div class="txt">
+                  정기결제 해지는 구글플레이 스토어를 통해 가능합니다. 정기결제 해지 후 구글플레이 스토어의 처리 시간에 따라 내역이 남아 있을 수 있습니다. 
+                </div>
+                <!-- // -->
+                <div class="go-store">
+                  <button>
+                    <span>구글플레이 스토어 정기 결게 구독관리 바로가기</span>
+                    <img width="22" src="img/expert/right-arrow03.png">
+                  </button>
+                </div>
+              </div>
+              <!-- //setting-group -->
+            </div>
+            <!-- <div class="go-store">
+              <button>
+                <span>구글플레이 스토어 정기 결게 구독관리 바로가기</span>
+                <img width="22" src="img/expert/right-arrow03.png">
+              </button>
+            </div> -->
+            <!-- 이용중인 정기결제 없을 때 -->
+            <div class="setting-box no-payment">
+              <div class="txt-group">
+                <img width="20" src="img/expert/no-icon.png">
+                <p>이용중인 정기 결제가 없습니다.</p>
               </div>
             </div>
             <!-- // -->
-            <!-- 종목분석 박스 -->
-            <div class="flex-col">
-              <button 
-                type="button"
-                class="box col"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#strategy"
-              >
-                <div class="item-name">
-                  <div class="circle">SK</div>
-                  <div class="name text-truncate">SK하이닉스</div>
-                  <div class="code">000660</div>
-                </div>
-                <div class="box-txt text-truncate2">
-                  역대급 시장에서 소외 받지 않기 위해 투자해야 되는 단 하나의 전략을 공개합니다.합니다.
-                </div>
-                <div class="box-date">
-                  <p>2025.10.23</p>
-                  <span>
-                    <img width="20" src="img/expert/avatar01.png">
-                    주식재무왕
-                  </span>
-                </div>
-              </button>
-            </div>
-            <!-- // -->
           </div>
+
         </div>
         <!-- //두번째 expert-content -->
 
+        <div class="expert-content">
+          <div class="setting">
+            <div class="title select">
+              <p>결제 내역</p>
+              <div class="select-box">
+                <span>2026년</span>
+                <img width="14" src="img/expert/down-icon.png">
+                <div class="option-box">
+                  <button>2025년</button>
+                  <button>2024년</button>
+                  <button>2023년</button>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="setting-box">
+              <div class="date">2025.10.12 10:20</div>
+              <div class="txt-group">
+                <div class="txt-flex">
+                  <p>결&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제</p>
+                  <strong><span>129,000원</span> (정기결제)</strong>
+                </div>
+                <div class="txt-flex">
+                  <p>내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역</p>
+                  <strong>종목추천 - 정기결제(퀀트매니저)</strong>
+                </div>
+                <div class="txt-flex">
+                  <p>사용기간</p>
+                  <strong>2026.01.02 ~ 2026.02.02</strong>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="setting-box no-payment">
+              <div class="txt-group">
+                <img width="20" src="img/expert/no-icon.png">
+                <p>결제 내역이 없습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //세번째 expert-content -->
+
+        <script>
+          const selectBox = document.querySelector('.select-box');
+
+          selectBox.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+          });
+
+          document.addEventListener('click', function() {
+            selectBox.classList.remove('active');
+          });
+        </script>
+
+        <!-- 알림수신 번호 변경/등록 팝업 -->
+        <div class="modal fade exptModal editNumber" data-bs-backdrop="true" id="editNumber">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">알림을 받을 휴대폰 번호를 <br>입력해 주세요</div>
+                <div class="input-group">
+                  <div class="input-box">
+                    <input type="text" name="phoneNum" id="phoneNum" placeholder="휴대폰 번호를 입력해 주세요">
+                    <button>인증하기</button>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" name="certificationNum " id="certificationNum" placeholder="인증 번호를 입력해 주세요">
+                    <button>확인</button>
+                  </div>
+                </div>
+                <button data-bs-dismiss="modal">변경하기</button>
+                <!--새 번호 등록할 때-->
+                <!-- <button data-bs-dismiss="modal">등록하기</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+
+        <!-- 정기결제 해지 팝업 -->
+        <div class="modal fade exptModal termination" data-bs-backdrop="true" id="termination">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">종목추천 - 정기결제 (퀀트매니저)를 해지하실 건가요? </div>
+                <div class="termination-group">
+                  <div class="termination-txt">
+                    정기 결제를 해지하시면 아래의 서비스를 이용하실 수 없어요
+                  </div>
+                  <div class="termination-box">
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>엑스퍼트의 실시간 종목 추천</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>실전 매매를 위한 투자 전략</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>맞춤형 종목분석</span>
+                    </p>
+                    <p>
+                      <img width="18" src="img/expert/checkbox.png">
+                      <span>철저한 리스크 관리</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button data-bs-toggle="modal" data-bs-target="#termination02">해지하기</button>
+                  <button data-bs-dismiss="modal">유지하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+
+        <!-- 정기결제 해지 팝업2 -->
+        <div class="modal fade exptModal termination02" data-bs-backdrop="true" id="termination02">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button data-bs-dismiss="modal">
+                  <img width="30" src="img/expert/modal-close.png">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="title">종목추천 - 정기결제 (퀀트매니저)를 해지하실 건가요? </div>
+                <div class="termination-group">
+                  <div class="termination-txt">
+                    정기 해지를 하셔도 아래 이용기간까지<br>
+                    서비스 이용이 가능합니다
+                  </div>
+                  <div class="termination-box">
+                    <span>사용기간 : 2026.01.02 ~ 2026.02.02</span>
+                  </div>
+                </div>
+                <button data-bs-dismiss="modal">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+        
       </main>
       <!-- //container -->
-
-      <!-- 투자전략/종목분석 상세보기 바텀시트 -->
-      <div class="offcanvas offcanvas-bottom exptOffcanvas strategy" data-bs-backdrop="false" id="strategy">
-        <div class="offcanvas-header">
-          <button type="button" data-bs-dismiss="offcanvas">
-            <img width="25" src="img/expert/offcanvas-close.png">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="top">
-            <div class="title">
-              역대급 시장에서 소외 받지 않기 위해 투자해야되는 단 하나의 전략을 공개합니다.
-            </div>
-            <div class="date-name">
-              <div class="date">2025.10.23</div>
-              <div class="name">
-                <span>주식채무왕</span>
-                <img width="20" src="img/expert/avatar01.png">
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="tag-group">
-              <span>#하이닉스</span>
-              <span>#삼성전자</span>
-            </div>
-            <div class="txt">
-              한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 한국거래소에 따르면 코스피는 이날 오전 9시 3분 전 거래일(2591.75)보다 2.68포인트(0.10%) 내린 2588.37에 한국거래소에 ..  
-            </div>
-            <div class="related-items">
-              <div class="title">관련종목</div>
-              <div class="items-group">
-                <button class="holding">
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                      <span>보유중</span>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
-                </button>
-                <button>
-                  <div class="left">
-                    <div class="name">
-                      <p class="text-truncate">SK하이닉스</p>
-                    </div>
-                    <div class="code">000660</div>
-                  </div>
-                  <div class="right">
-                    <div class="a-group">
-                      <a href="#">
-                        <img width="28" src="img/expert/a-home.png">
-                        <span>홈</span>
-                      </a>
-                      <a href="#">
-                        <img width="28" src="img/expert/a-chart.png">
-                        <span>차트</span>
-                      </a>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- // -->
 
     </div>
     <!-- /wrap -->
