@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/usa.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>씽크풀</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container"
+          >Skip to main content</a
+        >
+        <div class="visually-hidden-focusable">
+          A container with a <a href="#">focusable element</a>.
+        </div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show">
+                <img
+                  src="https://img.thinkpool.com/www/mobile/img/logo.png"
+                  alt="씽크풀로고"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <!-- logo -->
+            <div class="pageBack">
+              <button type="button" onclick="history.back()">이전페이지</button>
+            </div>
+            <!-- //이전페이지 -->
+
+            <div class="headerTitle text-truncate subTitle">
+              <strong>이슈상세</strong>
+            </div>
+            <!-- //종목명 -->
+
+            <div class="subSchBtn">
+              <button type="button" id="opensch" class="schButton">
+                종목검색
+              </button>
+
+              <div class="searcharea">
+                <div class="searcharea-header">
+                  <h4 class="logo">
+                    <img src="./img/logo.png" alt="" width="32" />
+                  </h4>
+                  <!-- // -->
+                  <div class="searcharea-sch">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="종목명 / 종목코드 / 키워드"
+                        id="inputsch"
+                      />
+                      <button
+                        class="btn-img schButton"
+                        type="button"
+                        id="button-addon"
+                      >
+                        검색하기
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // -->
+                  <button
+                    type="button"
+                    class="btn-close text-reset sch-hide"
+                  ></button>
+                </div>
+                <!-- // -->
+
+                <div class="searcharea-body">
+                  <div class="favtop">
+                    <strong>인기 관심종목</strong>
+
+                    <button class="btn-custom-board float-end">
+                      선택종목 추가 +
+                    </button>
+                  </div>
+
+                  <div class="favitemlist">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999001"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999001" class="form-check-label"
+                        >스튜디오산타 <em>(999000)</em></label
+                      >
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999002"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999002">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999003"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999003">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999004"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999004">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999005"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999005">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999006"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999006">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999007"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999007">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999008"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999008">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                  </div>
+                </div>
+                <!-- // -->
+              </div>
+
+              <script>
+                document
+                  .getElementById("opensch")
+                  .addEventListener("click", function () {
+                    document
+                      .querySelector(".searcharea")
+                      .classList.add("sch-show");
+
+                    document.getElementById("inputsch").focus();
+                    document.getElementById("inputsch").value = "";
+                  });
+
+                document
+                  .querySelector(".sch-hide")
+                  .addEventListener("click", function () {
+                    document
+                      .querySelector(".searcharea")
+                      .classList.remove("sch-show");
+                  });
+              </script>
+            </div>
+
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div
+                class="sideMenuBtn sch-hide"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sideContent"
+              >
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled />
+                  <label class="menu" for="sdmnu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </label>
+                </form>
+              </div>
+              <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+              <!-- 2022.06.28 변경 -->
+              <aside
+                id="sideContent"
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                aria-labelledby="사이드컨텐츠"
+              >
+                <div class="offcanvas-header">
+                  <div class="offcanvas-title">
+                    <div class="logo">
+                      <img src="./img/thinklogo.png" alt="logo" width="102" />
+                    </div>
+                    <div class="app">
+                      <button>
+                        <img src="./img/bulogo.png" alt="tp" width="18" />
+                        앱다운로드
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="loginmenu">
+                    <div class="before">
+                      <button class="btn-custom-primary" style="width: 120px">
+                        로그인
+                      </button>
+                      <button class="btn-custom-default" style="width: 120px">
+                        회원가입
+                      </button>
+                    </div>
+                    <!-- // -->
+
+                    <!-- <div class="after">
+                                        <div class="top">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함 <span class="badge">4</span></button>
+                                        </div>
+                                    </div> -->
+                    <!-- // -->
+                  </div>
+                  <!-- // -->
+
+                  <div
+                    class="allmenulist accordion accordion-flush"
+                    id="accoridon-flush-menu"
+                  >
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush01">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn01"
+                          aria-expanded="false"
+                          aria-controls="amn01"
+                        >
+                          AI분석
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn01"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI분석홈</a></li>
+                          <li><a href="#">시세분석</a></li>
+                          <li><a href="#">이슈분석</a></li>
+                          <li><a href="#">수급분석</a></li>
+                          <li><a href="#">테마분석</a></li>
+                          <li><a href="#">공시분석</a></li>
+                          <li><a href="#">리포트분석</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush02">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn02"
+                          aria-expanded="false"
+                          aria-controls="amn02"
+                        >
+                          AI추천
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn02"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI종목추천홈</a></li>
+                          <li><a href="#">오늘의종목</a></li>
+                          <li><a href="#">종목추천</a></li>
+                          <li><a href="#">포트폴리오</a></li>
+                          <li><a href="#">나의서비스</a></li>
+                          <li><a href="#">이용안내</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush04">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn04"
+                          aria-expanded="false"
+                          aria-controls="amn04"
+                        >
+                          AI속보
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn04"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">주요속보</a></li>
+                          <li><a href="#">수급</a></li>
+                          <li><a href="#">테마</a></li>
+                          <li><a href="#">리포트</a></li>
+                          <li><a href="#">실적</a></li>
+                          <li><a href="#">공시</a></li>
+                          <li><a href="#">태그전체보기</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush05">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn05"
+                          aria-expanded="false"
+                          aria-controls="amn05"
+                        >
+                          토론실
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn05"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">토론실홈</a></li>
+                          <li><a href="#">증권가속보</a></li>
+                          <li><a href="#">특징주포착</a></li>
+                          <li><a href="#">주식종합토론</a></li>
+                          <li><a href="#">유머방</a></li>
+                          <li><a href="#">정치방</a></li>
+                          <li><a href="#">나의활동</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush03">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn03"
+                          aria-expanded="false"
+                          aria-controls="amn03"
+                        >
+                          <img
+                            width="17"
+                            src="https://img.thinkpool.com/www/mobile/img/rassi-icon.png"
+                            alt="라씨아이콘"
+                            style="margin-right: 3px; margin-top: 2px"
+                          />
+                          라씨매매신호
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn03"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">라씨매매신호홈</a></li>
+                          <li><a href="#">서비스소개</a></li>
+                          <li><a href="#">이용안내</a></li>
+                          <li><a href="#">나의신호</a></li>
+                          <li><a href="#">(앱다운로드)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush08">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn08"
+                          aria-expanded="false"
+                          aria-controls="amn08"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                          >
+                            <path
+                              d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z"
+                              fill="#34D399"
+                            ></path>
+                            <path
+                              d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z"
+                              fill="black"
+                            ></path>
+                          </svg>
+                          엑스퍼트
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn08"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">종목추천</a></li>
+                          <li><a href="#">전략과 분석</a></li>
+                          <li><a href="#">나의 엑스퍼트</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush07">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn07"
+                          aria-expanded="false"
+                          aria-controls="amn07"
+                        >
+                          AI미국
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn07"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI분석홈</a></li>
+                          <li>
+                            <a href="#">미국이슈</a>
+                            <ul class="sub-depth">
+                              <li><a href="#">오늘의 이슈분석</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">미국속보</a>
+                            <ul class="sub-depth">
+                              <li><a href="#">이슈속보</a></li>
+                              <li><a href="#">종목속보</a></li>
+                              <li><a href="#">실적속보</a></li>
+                              <li><a href="#">지분공시</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush06">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn06"
+                          aria-expanded="false"
+                          aria-controls="amn06"
+                        >
+                          더보기
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn06"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">공지사항 및 문의</a></li>
+                          <li><a href="#">회원정보관리</a></li>
+                          <li><a href="#">약관및정책</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+                  </div>
+                  <!-- // -->
+
+                  <div class="sfmenu">
+                    <button class="btn-custom-primary outline">블로그</button>
+                    <button class="btn-custom-primary outline">유투브</button>
+                    <button class="btn-custom-primary outline">
+                      AI매매 시그널
+                    </button>
+                  </div>
+                  <!-- // -->
+
+                  <div class="other rmt-25 text-center">
+                    <button class="btn-custom-default">PC버전으로 보기</button>
+                  </div>
+                </div>
+              </aside>
+
+              <script>
+                const cate = document.querySelector(".sideMenuBtn");
+                const cateId = "#" + cate.getAttribute("data-cate-id");
+                const offId = document.querySelector("#sideContent");
+
+                cate.addEventListener("click", function () {
+                  const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                });
+
+                offId.addEventListener("hide.bs.offcanvas", function () {
+                  const showCate = document.querySelector(".collapse.show");
+
+                  const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                });
+              </script>
+              <!-- //2022.06.28 변경 -->
+            </div>
+            <!-- //sideMenu -->
+          </div>
+          <!-- //top -->
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <h2 class="visually-hidden">본문영역</h2>
+
+          <!-- 섹션 1+2: 이슈 헤더 + 요약카드 (동일 배경 영역) -->
+          <section class="issue-detail-header">
+            <div class="idh-inner">
+              <!-- 제목·등락률 | 날짜 -->
+              <div class="idh-main-row">
+                <div class="idh-left">
+                  <h3 class="idh-title">포장재수요</h3>
+                  <div class="idh-rate-row">
+                    <span class="idh-rate-label">당일등락률</span>
+                    <span class="idh-rate up">+12.4%</span>
+                  </div>
+                </div>
+                <div class="idh-dates">
+                  <div class="idh-date-row">
+                    <span class="idh-date-text">03/10 10:30</span>
+                    <span class="idh-tz-box">ET</span>
+                  </div>
+                  <div class="idh-date-row">
+                    <span class="idh-date-text">03/11 00:30</span>
+                    <span class="idh-tz-box">KST</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 필터 칩 -->
+              <div class="idh-chips">
+                <button type="button" class="idh-chip">시총 TOP2000</button>
+                <button type="button" class="idh-chip">
+                  한국인 거래 TOP200
+                </button>
+              </div>
+            </div>
+
+            <div class="usa-common__empty rmt-15">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M10 0.75C15.1086 0.75 19.25 4.89137 19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0002 14.7827C9.59112 14.7827 9.25948 14.4551 9.25948 14.051L9.25948 9.17296C9.25948 8.76885 9.59112 8.44125 10.0002 8.44125C10.4093 8.44125 10.741 8.76885 10.741 9.17296L10.741 14.051C10.741 14.4551 10.4093 14.7827 10.0002 14.7827Z"
+                  fill="#999999"
+                />
+                <path
+                  d="M10.0002 4.78271C9.38657 4.78271 8.88911 5.27411 8.88911 5.88028C8.88911 6.48644 9.38657 6.97784 10.0002 6.97784C10.6139 6.97784 11.1113 6.48644 11.1113 5.88028C11.1113 5.27411 10.6139 4.78271 10.0002 4.78271Z"
+                  fill="#999999"
+                />
+              </svg>
+              <span
+                >내용을 생성 중입니다. <br />완료되면 자동 업데이트됩니다.</span
+              >
+            </div>
+
+            <!-- 요약 카드 (헤더 영역 내부) -->
+            <div class="issue-summary-card">
+              <div class="isc-head">
+                <p class="isc-title">
+                  트럼프때문에 포장재수요 증가로 투자심리 개선 및 매수세 확대
+                </p>
+                <div class="isc-meta">
+                  <div class="isc-date-row">
+                    <span class="isc-date-text">03/10 10:30</span>
+                    <span class="isc-tz-box">ET</span>
+                    <span class="isc-capture">포착</span>
+                  </div>
+                  <div class="isc-date-row">
+                    <span class="isc-date-text">03/11 00:30</span>
+                    <span class="isc-tz-box">KST</span>
+                    <span class="isc-capture">포착</span>
+                  </div>
+                </div>
+              </div>
+              <div class="isc-bullets">
+                <div class="isc-bullet">
+                  <span class="isc-bullet__dot"></span>
+                  <p class="isc-bullet__text">
+                    포장재수요 테마는 장중 강세를 보이며 매수세가 확대됨
+                  </p>
+                </div>
+                <div class="isc-bullet">
+                  <span class="isc-bullet__dot"></span>
+                  <p class="isc-bullet__text">
+                    포장 수요에 대한 투자자 신뢰가 지속되며 애널리스트들의
+                    긍정적인 전망이 투자심리를 개선함
+                  </p>
+                </div>
+                <div class="isc-bullet">
+                  <span class="isc-bullet__dot"></span>
+                  <p class="isc-bullet__text">
+                    여러 종목에서 실적 발표 후 매출과 이익이 예상치를 초과하며
+                    긍정적인 시장 반응을 이끌어냄
+                  </p>
+                </div>
+                <div class="isc-bullet">
+                  <span class="isc-bullet__dot"></span>
+                  <p class="isc-bullet__text">
+                    전략적 인수와 부문 성과 개선이 포장재 수요 증가에 기여하며,
+                    거래량 증가와 기술적 매수 압력이 강세를 뒷받침함
+                  </p>
+                </div>
+                <div class="isc-bullet">
+                  <span class="isc-bullet__dot"></span>
+                  <p class="isc-bullet__text">
+                    포장재 기업의 실적 전망 상향과 투자 등급 상향 조정이
+                    매수세를 이끔
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //섹션 1+2 -->
+
+          <!-- 섹션 3: 이슈 설명 -->
+          <section class="issue-desc-section">
+            <strong class="ids-label">이슈 설명</strong>
+
+            <div class="usa-common__empty">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M10 0.75C15.1086 0.75 19.25 4.89137 19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0002 14.7827C9.59112 14.7827 9.25948 14.4551 9.25948 14.051L9.25948 9.17296C9.25948 8.76885 9.59112 8.44125 10.0002 8.44125C10.4093 8.44125 10.741 8.76885 10.741 9.17296L10.741 14.051C10.741 14.4551 10.4093 14.7827 10.0002 14.7827Z"
+                  fill="#999999"
+                />
+                <path
+                  d="M10.0002 4.78271C9.38657 4.78271 8.88911 5.27411 8.88911 5.88028C8.88911 6.48644 9.38657 6.97784 10.0002 6.97784C10.6139 6.97784 11.1113 6.48644 11.1113 5.88028C11.1113 5.27411 10.6139 4.78271 10.0002 4.78271Z"
+                  fill="#999999"
+                />
+              </svg>
+              <span
+                >내용을 생성 중입니다. <br />완료되면 자동 업데이트됩니다.</span
+              >
+            </div>
+
+            <div class="ids-card">
+              <p class="ids-body" id="issueDescBody">
+                클라우드와 AI 확대로 공격 표면이 커졌고, 해커도 생성형 AI로
+                피싱과 침투를 더 교묘하게 만들어 기업은 보안 지출을 줄일 수 없게
+                됐다. 미국의 SEC 사이버 공시 의무와 연방의 양자내성 암호 표준
+                도입, CISA의 보안 기본값 추진은 보안 책임을 이사회 수준으로
+                끌어올려 장기 업그레이드와 운영 서비스를 고정화했다. 그 결과 전
+                세계 보안 지출은 2025년 2,130억달러에서 2026년 2,400억달러로 늘
+                전망이며, 이는 미국 상장 보안 플랫폼과 관리형 서비스 기업의 반복
+                매출을 키워 증시의 구조적 성장동력이 되는 이슈다.
+              </p>
+              <button
+                class="ids-footer"
+                type="button"
+                id="descMoreBtn"
+                aria-expanded="true"
+              >
+                <span class="ids-footer-text">접기</span>
+                <span class="ids-chevron">
+                  <!-- chevron/right 90° 회전 = 위방향 (접힌 상태) -->
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.5 4.5L6 8L9.5 4.5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </section>
+          <!-- //섹션 3 -->
+
+          <!-- 섹션 4: 종목개요 -->
+          <section class="issue-stock-section">
+            <div class="iso-header">
+              <strong class="iso-title">종목개요</strong>
+              <div class="iso-dates">
+                <div class="iso-date-row">
+                  <span class="iso-date-text">03/10 10:30</span>
+                  <span class="iso-tz-box">ET</span>
+                </div>
+                <div class="iso-date-row">
+                  <span class="iso-date-text">03/11 00:30</span>
+                  <span class="iso-tz-box">KST</span>
+                </div>
+              </div>
+            </div>
+            <!-- 3개 탭 -->
+            <div class="iso-tabs">
+              <button type="button" class="iso-tab active">
+                <span class="iso-tab__line"></span>
+                <span class="iso-tab__text">시총&#10;TOP2000</span>
+              </button>
+              <button type="button" class="iso-tab">
+                <span class="iso-tab__line"></span>
+                <span class="iso-tab__text">S&amp;P500·&#10;DOW30</span>
+              </button>
+              <button type="button" class="iso-tab">
+                <span class="iso-tab__line"></span>
+                <span class="iso-tab__text">한국인&#10;거래 TOP200</span>
+              </button>
+            </div>
+            <!-- 컬럼 헤더 -->
+            <div class="iso-col-header">
+              <span class="iso-col-label">
+                AI 평가점수
+                <button
+                  class="iso-info-btn"
+                  type="button"
+                  aria-label="AI 평가점수 안내"
+                >
+                  ①
+                </button>
+              </span>
+              <span class="iso-col-label">당일등락률</span>
+            </div>
+            <!-- 종목 리스트 -->
+            <ul class="iso-list">
+              <div class="usa-common__empty">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10 0.75C15.1086 0.75 19.25 4.89137 19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75Z"
+                    stroke="#999999"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.0002 14.7827C9.59112 14.7827 9.25948 14.4551 9.25948 14.051L9.25948 9.17296C9.25948 8.76885 9.59112 8.44125 10.0002 8.44125C10.4093 8.44125 10.741 8.76885 10.741 9.17296L10.741 14.051C10.741 14.4551 10.4093 14.7827 10.0002 14.7827Z"
+                    fill="#999999"
+                  />
+                  <path
+                    d="M10.0002 4.78271C9.38657 4.78271 8.88911 5.27411 8.88911 5.88028C8.88911 6.48644 9.38657 6.97784 10.0002 6.97784C10.6139 6.97784 11.1113 6.48644 11.1113 5.88028C11.1113 5.27411 10.6139 4.78271 10.0002 4.78271Z"
+                    fill="#999999"
+                  />
+                </svg>
+                <span
+                  >내용을 생성 중입니다. <br />완료되면 자동
+                  업데이트됩니다.</span
+                >
+              </div>
+
+              <li class="iso-card">
+                <div class="iso-card-main">
+                  <div class="iso-card-left">
+                    <div class="iso-logo">
+                      <img
+                        src="https://img.thinkpool.com/www/mobile/img/us_logo/TSLA.png"
+                        alt="테슬라"
+                        onerror="
+                          this.style.display = 'none';
+                          this.nextElementSibling.style.display = 'block';
+                        "
+                      />
+                      <span class="iso-logo__text" style="display: none"
+                        >T</span
+                      >
+                    </div>
+                    <div class="iso-info">
+                      <span class="iso-name">테슬라</span>
+                      <span class="iso-code">TSLA</span>
+                    </div>
+                  </div>
+                  <div class="iso-card-right">
+                    <div class="iso-ai-badge">
+                      <span class="iso-ai-badge__circle">
+                        <span class="iso-ai-badge__ai-text">Ai</span>
+                      </span>
+                      <span class="iso-ai-badge__score"><em>95</em>점</span>
+                    </div>
+                    <span class="iso-rate-badge up">+0.92%</span>
+                  </div>
+                </div>
+                <div class="iso-card-desc">
+                  <span>2026 회계연도 실적 추정치 상향</span>
+                </div>
+              </li>
+              <li class="iso-card">
+                <div class="iso-card-main">
+                  <div class="iso-card-left">
+                    <div class="iso-logo">
+                      <img
+                        src="https://img.thinkpool.com/www/mobile/img/us_logo/CEG.png"
+                        alt="콘스텔레이션 에너지"
+                        onerror="
+                          this.style.display = 'none';
+                          this.nextElementSibling.style.display = 'block';
+                        "
+                      />
+                      <span class="iso-logo__text" style="display: none"
+                        >C</span
+                      >
+                    </div>
+                    <div class="iso-info">
+                      <span class="iso-name">콘스텔레이션 에너지</span>
+                      <span class="iso-code">CEG</span>
+                    </div>
+                  </div>
+                  <div class="iso-card-right">
+                    <div class="iso-ai-badge">
+                      <span class="iso-ai-badge__circle">
+                        <span class="iso-ai-badge__ai-text">Ai</span>
+                      </span>
+                      <span class="iso-ai-badge__score"><em>88</em>점</span>
+                    </div>
+                    <span class="iso-rate-badge up">+1.24%</span>
+                  </div>
+                </div>
+                <div class="iso-card-desc">
+                  <span>원자력 발전 확대 및 AI 전력 수요 수혜</span>
+                </div>
+              </li>
+              <li class="iso-card">
+                <div class="iso-card-main">
+                  <div class="iso-card-left">
+                    <div class="iso-logo">
+                      <img
+                        src="https://img.thinkpool.com/www/mobile/img/us_logo/NKE.png"
+                        alt="나이키"
+                        onerror="
+                          this.style.display = 'none';
+                          this.nextElementSibling.style.display = 'block';
+                        "
+                      />
+                      <span class="iso-logo__text" style="display: none"
+                        >N</span
+                      >
+                    </div>
+                    <div class="iso-info">
+                      <span class="iso-name">나이키</span>
+                      <span class="iso-code">NKE</span>
+                    </div>
+                  </div>
+                  <div class="iso-card-right">
+                    <div class="iso-ai-badge">
+                      <span class="iso-ai-badge__circle">
+                        <span class="iso-ai-badge__ai-text">Ai</span>
+                      </span>
+                      <span class="iso-ai-badge__score"><em>74</em>점</span>
+                    </div>
+                    <span class="iso-rate-badge dn">-0.45%</span>
+                  </div>
+                </div>
+                <div class="iso-card-desc">
+                  <span>2026 회계연도 실적 추정치 상향</span>
+                </div>
+              </li>
+              <li class="iso-card">
+                <div class="iso-card-main">
+                  <div class="iso-card-left">
+                    <div class="iso-logo">
+                      <img
+                        src="https://img.thinkpool.com/www/mobile/img/us_logo/MU.png"
+                        alt="마이크론테크놀로지"
+                        onerror="
+                          this.style.display = 'none';
+                          this.nextElementSibling.style.display = 'block';
+                        "
+                      />
+                      <span class="iso-logo__text" style="display: none"
+                        >M</span
+                      >
+                    </div>
+                    <div class="iso-info">
+                      <span class="iso-name">마이크론테크</span>
+                      <span class="iso-code">MU</span>
+                    </div>
+                  </div>
+                  <div class="iso-card-right">
+                    <div class="iso-ai-badge">
+                      <span class="iso-ai-badge__circle">
+                        <span class="iso-ai-badge__ai-text">Ai</span>
+                      </span>
+                      <span class="iso-ai-badge__score"><em>91</em>점</span>
+                    </div>
+                    <span class="iso-rate-badge up">+20.92%</span>
+                  </div>
+                </div>
+                <div class="iso-card-desc">
+                  <span>HBM 수요 급증 및 AI 서버 메모리 공급</span>
+                </div>
+              </li>
+            </ul>
+            <button class="iso-more-btn" type="button">
+              <span>더보기</span>
+            </button>
+          </section>
+          <!-- //섹션 4 -->
+
+          <!-- 섹션 5: 이슈 타임라인 -->
+          <section class="issue-timeline-section">
+            <strong class="itl-title">이슈 타임라인</strong>
+
+            <div class="usa-common__empty">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M10 0.75C15.1086 0.75 19.25 4.89137 19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0002 14.7827C9.59112 14.7827 9.25948 14.4551 9.25948 14.051L9.25948 9.17296C9.25948 8.76885 9.59112 8.44125 10.0002 8.44125C10.4093 8.44125 10.741 8.76885 10.741 9.17296L10.741 14.051C10.741 14.4551 10.4093 14.7827 10.0002 14.7827Z"
+                  fill="#999999"
+                />
+                <path
+                  d="M10.0002 4.78271C9.38657 4.78271 8.88911 5.27411 8.88911 5.88028C8.88911 6.48644 9.38657 6.97784 10.0002 6.97784C10.6139 6.97784 11.1113 6.48644 11.1113 5.88028C11.1113 5.27411 10.6139 4.78271 10.0002 4.78271Z"
+                  fill="#999999"
+                />
+              </svg>
+              <span
+                >내용을 생성 중입니다. <br />완료되면 자동 업데이트됩니다.</span
+              >
+            </div>
+
+            <ul class="itl-list">
+              <li class="itl-item">
+                <div class="itl-time-row">
+                  <span class="itl-time">08:58</span>
+                  <span class="itl-tz">KST</span>
+                  <span class="itl-capture">포착</span>
+                </div>
+                <div class="itl-content-row">
+                  <span class="itl-label itl-label--issue">이슈</span>
+                  <p class="itl-text">
+                    글로벌 친환경 포장재 시장, 2026년 15% 성장 전망 개선 기대
+                  </p>
+                </div>
+              </li>
+              <li class="itl-item">
+                <div class="itl-time-row">
+                  <span class="itl-time">08:58</span>
+                  <span class="itl-tz">KST</span>
+                  <span class="itl-capture">포착</span>
+                </div>
+                <div class="itl-content-row">
+                  <span class="itl-label itl-label--issue">이슈</span>
+                  <p class="itl-text">
+                    주요 이커머스 기업, 종이 포장재 도입 확대 발표
+                  </p>
+                </div>
+              </li>
+              <li class="itl-item">
+                <div class="itl-time-row">
+                  <span class="itl-time">06:03</span>
+                  <span class="itl-tz">KST</span>
+                  <span class="itl-capture">포착</span>
+                </div>
+                <div class="itl-content-row">
+                  <span class="itl-label itl-label--flash">속보</span>
+                  <p class="itl-text">
+                    원자재 가격 안정화, 포장재 기업 마진 개선 기대
+                  </p>
+                </div>
+              </li>
+              <li class="itl-item">
+                <div class="itl-time-row">
+                  <span class="itl-time">06:03</span>
+                  <span class="itl-tz">KST</span>
+                  <span class="itl-capture">포착</span>
+                </div>
+                <div class="itl-content-row">
+                  <span class="itl-label itl-label--issue">이슈</span>
+                  <p class="itl-text">
+                    포장재 수요 증가로 관련 기업 실적 전망 상향 조정
+                  </p>
+                </div>
+              </li>
+              <li class="itl-item">
+                <div class="itl-time-row">
+                  <span class="itl-time">05:12</span>
+                  <span class="itl-tz">KST</span>
+                  <span class="itl-capture">포착</span>
+                </div>
+                <div class="itl-content-row">
+                  <span class="itl-label itl-label--flash">속보</span>
+                  <p class="itl-text">
+                    트럼프 관세 정책 완화 기대감에 포장재 섹터 강세
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <button class="itl-more-btn" type="button">
+              <span>더보기</span>
+            </button>
+
+            <div class="disclaimer-note rmt-30 rmb-30">
+              <ul>
+                <li>
+                  본 서비스는 일부 콘텐츠에 한해 AI가 선별·요약한 투자정보를
+                  제공합니다.
+                </li>
+                <li>
+                  제공 내용은 참고용이며 추천 또는 투자 권유 목적이 아닙니다.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- //섹션 5 -->
+        </main>
+        <!-- //container -->
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img
+                src="./img/flogin.png"
+                class="figure-img img-fluid"
+                alt="로그인"
+              />
+              <figcaption class="figure-caption text-center rmt-7">
+                로그인
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <img
+                src="./img/fpc.png"
+                class="figure-img img-fluid"
+                alt="PC버전"
+              />
+              <figcaption class="figure-caption text-center rmt-7">
+                PC버전
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <img
+                src="./img/fdw.png"
+                class="figure-img img-fluid"
+                alt="씽크풀앱 다운로드"
+              />
+              <figcaption class="figure-caption text-center">
+                씽크풀앱<br />다운로드
+              </figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+            <span class="d-block">
+              본사이트에서 게재되는 정보는 오류 및 지연이 있을 수 있으며 <br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+      <!-- 이슈 설명 접기/더보기 토글 -->
+      <script>
+        (function () {
+          var btn = document.getElementById("descMoreBtn");
+          var body = document.getElementById("issueDescBody");
+
+          btn.addEventListener("click", function () {
+            var expanded = body.classList.contains("is-expanded");
+            if (expanded) {
+              body.classList.remove("is-expanded");
+              btn.classList.remove("is-expanded");
+              btn.setAttribute("aria-expanded", "false");
+              btn.querySelector(".ids-footer-text").textContent = "펼치기";
+            } else {
+              body.classList.add("is-expanded");
+              btn.classList.add("is-expanded");
+              btn.setAttribute("aria-expanded", "true");
+              btn.querySelector(".ids-footer-text").textContent = "접기";
+            }
+          });
+        })();
+      </script>
+      <!-- bootstrap js -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+      <!-- //bootstrap js -->
+    </div>
+    <!-- //app -->
+  </body>
+</html>

@@ -220,6 +220,22 @@
                                 color:#333;
                             }
 
+                            & > ul.sub-depth {
+                                padding: 0 0 0 10px;
+                                margin: 10px 0 0 0;
+
+                                li {
+                                    margin-bottom: 5px;
+                                    
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+
+                                    a {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
