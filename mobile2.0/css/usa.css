@@ -3693,7 +3693,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 10;
   padding: 0 20px;
 }
 .timeline-slider .timeline-nodes .node {
@@ -5804,14 +5804,22 @@
   padding: 0 6px;
   border-radius: 5px;
   font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .related__issue span.tag {
   background: #7F8BE0;
   color: #fff;
+  max-width: 107px;
+}
+.related__issue span.tag::before {
+  content: "#";
 }
 .related__issue span.tkr {
   background: #EDEFFF;
   color: #5B5F79;
+  max-width: 51px;
 }
 
 .section-usa-top {

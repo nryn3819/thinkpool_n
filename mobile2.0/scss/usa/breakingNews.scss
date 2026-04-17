@@ -544,14 +544,24 @@
     padding:0 6px;
     border-radius: 5px;
     font-size:12px;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
     &.tag{
       background:#7F8BE0;
       color:#fff;
+      max-width:107px;
+
+      &::before{
+        content: '#';
+
+      }
     }
     &.tkr{
       background:#EDEFFF;
       color:#5B5F79;
+      max-width:51px;
     }
   }
 }

@@ -37,14 +37,16 @@
                 />
               </a>
             </div>
-
+            <!-- logo -->
             <div class="pageBack">
               <button type="button" onclick="history.back()">이전페이지</button>
             </div>
+            <!-- //이전페이지 -->
 
             <div class="headerTitle text-truncate subTitle">
               <strong>AI속보</strong>
             </div>
+            <!-- //종목명 -->
 
             <div class="subSchBtn">
               <button type="button" id="opensch" class="schButton">
@@ -56,6 +58,7 @@
                   <h4 class="logo">
                     <img src="./img/logo.png" alt="" width="32" />
                   </h4>
+                  <!-- // -->
                   <div class="searcharea-sch">
                     <div class="input-group">
                       <input
@@ -73,19 +76,23 @@
                       </button>
                     </div>
                   </div>
+                  <!-- // -->
                   <button
                     type="button"
                     class="btn-close text-reset sch-hide"
                   ></button>
                 </div>
+                <!-- // -->
 
                 <div class="searcharea-body">
                   <div class="favtop">
                     <strong>인기 관심종목</strong>
+
                     <button class="btn-custom-board float-end">
                       선택종목 추가 +
                     </button>
                   </div>
+
                   <div class="favitemlist">
                     <div class="form-check">
                       <input
@@ -98,8 +105,86 @@
                         >스튜디오산타 <em>(999000)</em></label
                       >
                     </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999002"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999002">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999003"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999003">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999004"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999004">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999005"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999005">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999006"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999006">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999007"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999007">스튜디오산타 <em>(999000)</em></label>
+                    </div>
+                    <!-- // -->
+
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="999008"
+                        name="favcheck"
+                        class="form-check-input"
+                      />
+                      <label for="999008">스튜디오산타 <em>(999000)</em></label>
+                    </div>
                   </div>
                 </div>
+                <!-- // -->
               </div>
 
               <script>
@@ -109,6 +194,7 @@
                     document
                       .querySelector(".searcharea")
                       .classList.add("sch-show");
+
                     document.getElementById("inputsch").focus();
                     document.getElementById("inputsch").value = "";
                   });
@@ -139,7 +225,9 @@
                   </label>
                 </form>
               </div>
+              <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
 
+              <!-- 2022.06.28 변경 -->
               <aside
                 id="sideContent"
                 class="offcanvas offcanvas-end"
@@ -169,7 +257,23 @@
                         회원가입
                       </button>
                     </div>
+                    <!-- // -->
+
+                    <!-- <div class="after">
+                                        <div class="top">
+                                            <strong><em>에너지만땅</em>님</strong>
+                                            <button>로그아웃</button>
+                                        </div>
+                                        <div class="menu">
+                                            <button>MY종목</button>
+                                            <button>알림설정</button>
+                                            <button>나의활동</button>
+                                            <button>쪽지함 <span class="badge">4</span></button>
+                                        </div>
+                                    </div> -->
+                    <!-- // -->
                   </div>
+                  <!-- // -->
 
                   <div
                     class="allmenulist accordion accordion-flush"
@@ -189,19 +293,269 @@
                         </button>
                       </div>
                       <div
-                        id="amn01"
                         class="accordion-collapse collapse"
-                        aria-labelledby="flush01"
+                        id="amn01"
+                        aria-labelledby="flush-headingOne"
                         data-bs-parent="#accoridon-flush-menu"
                       >
                         <ul>
                           <li><a href="#">AI분석홈</a></li>
                           <li><a href="#">시세분석</a></li>
                           <li><a href="#">이슈분석</a></li>
+                          <li><a href="#">수급분석</a></li>
+                          <li><a href="#">테마분석</a></li>
+                          <li><a href="#">공시분석</a></li>
+                          <li><a href="#">리포트분석</a></li>
                         </ul>
                       </div>
                     </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush02">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn02"
+                          aria-expanded="false"
+                          aria-controls="amn02"
+                        >
+                          AI추천
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn02"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI종목추천홈</a></li>
+                          <li><a href="#">오늘의종목</a></li>
+                          <li><a href="#">종목추천</a></li>
+                          <li><a href="#">포트폴리오</a></li>
+                          <li><a href="#">나의서비스</a></li>
+                          <li><a href="#">이용안내</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush04">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn04"
+                          aria-expanded="false"
+                          aria-controls="amn04"
+                        >
+                          AI속보
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn04"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">주요속보</a></li>
+                          <li><a href="#">수급</a></li>
+                          <li><a href="#">테마</a></li>
+                          <li><a href="#">리포트</a></li>
+                          <li><a href="#">실적</a></li>
+                          <li><a href="#">공시</a></li>
+                          <li><a href="#">태그전체보기</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush05">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn05"
+                          aria-expanded="false"
+                          aria-controls="amn05"
+                        >
+                          토론실
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn05"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">토론실홈</a></li>
+                          <li><a href="#">증권가속보</a></li>
+                          <li><a href="#">특징주포착</a></li>
+                          <li><a href="#">주식종합토론</a></li>
+                          <li><a href="#">유머방</a></li>
+                          <li><a href="#">정치방</a></li>
+                          <li><a href="#">나의활동</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush03">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn03"
+                          aria-expanded="false"
+                          aria-controls="amn03"
+                        >
+                          <img
+                            width="17"
+                            src="https://img.thinkpool.com/www/mobile/img/rassi-icon.png"
+                            alt="라씨아이콘"
+                            style="margin-right: 3px; margin-top: 2px"
+                          />
+                          라씨매매신호
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn03"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">라씨매매신호홈</a></li>
+                          <li><a href="#">서비스소개</a></li>
+                          <li><a href="#">이용안내</a></li>
+                          <li><a href="#">나의신호</a></li>
+                          <li><a href="#">(앱다운로드)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush08">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn08"
+                          aria-expanded="false"
+                          aria-controls="amn08"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                          >
+                            <path
+                              d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z"
+                              fill="#34D399"
+                            ></path>
+                            <path
+                              d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z"
+                              fill="black"
+                            ></path>
+                          </svg>
+                          엑스퍼트
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn08"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">종목추천</a></li>
+                          <li><a href="#">전략과 분석</a></li>
+                          <li><a href="#">나의 엑스퍼트</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush07">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn07"
+                          aria-expanded="false"
+                          aria-controls="amn07"
+                        >
+                          AI미국
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn07"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">AI분석홈</a></li>
+                          <li>
+                            <a href="#">미국이슈</a>
+                            <ul class="sub-depth">
+                              <li><a href="#">오늘의 이슈분석</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">미국속보</a>
+                            <ul class="sub-depth">
+                              <li><a href="#">이슈속보</a></li>
+                              <li><a href="#">종목속보</a></li>
+                              <li><a href="#">실적속보</a></li>
+                              <li><a href="#">지분공시</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="amn accordion-item">
+                      <div class="accordion-header" id="flush06">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#amn06"
+                          aria-expanded="false"
+                          aria-controls="amn06"
+                        >
+                          더보기
+                        </button>
+                      </div>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="amn06"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accoridon-flush-menu"
+                      >
+                        <ul>
+                          <li><a href="#">공지사항 및 문의</a></li>
+                          <li><a href="#">회원정보관리</a></li>
+                          <li><a href="#">약관및정책</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // -->
                   </div>
+                  <!-- // -->
 
                   <div class="sfmenu">
                     <button class="btn-custom-primary outline">블로그</button>
@@ -210,14 +564,36 @@
                       AI매매 시그널
                     </button>
                   </div>
+                  <!-- // -->
+
                   <div class="other rmt-25 text-center">
                     <button class="btn-custom-default">PC버전으로 보기</button>
                   </div>
                 </div>
               </aside>
+
+              <script>
+                const cate = document.querySelector(".sideMenuBtn");
+                const cateId = "#" + cate.getAttribute("data-cate-id");
+                const offId = document.querySelector("#sideContent");
+
+                cate.addEventListener("click", function () {
+                  const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                });
+
+                offId.addEventListener("hide.bs.offcanvas", function () {
+                  const showCate = document.querySelector(".collapse.show");
+
+                  const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                });
+              </script>
+              <!-- //2022.06.28 변경 -->
             </div>
+            <!-- //sideMenu -->
           </div>
+          <!-- //top -->
         </header>
+        <!-- // -->
 
         <main id="container" class="clearfix">
           <h2 class="visually-hidden">본문영역</h2>
@@ -319,8 +695,8 @@
               <!-- // -->
 
               <div class="related__issue">
-                <span class="tag">금</span>
-                <span class="tkr">GOLD</span>
+                <span class="tag">일이삼사오육칠팔1</span>
+                <span class="tkr">ABCDE1</span>
                 <span class="tkr">NEM</span>
                 <span class="tkr">AEM</span>
                 <span class="tkr">GDX</span>

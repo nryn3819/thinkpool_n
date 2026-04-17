@@ -134,77 +134,77 @@
 }
 
 
-    .date-navigator {
-      position: relative;
-      background: #F7F7F7;
-      border-radius: 8px;
-      padding: 4px;
+.date-navigator {
+  position: relative;
+  background: #F7F7F7;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  height: 43px;
+
+  .date-nav-inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    button.btn-prev,
+    button.btn-next {
+      width: 35px;
+      height: 35px;
+      background: transparent;
       display: flex;
+      justify-content: center;
       align-items: center;
-      height: 43px;
+      border: 1px solid #cacaca;
+      background: #fff;
+      border-radius: 8px;
 
-      .date-nav-inner {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border: 2px solid #666;
+        border-right: 0;
+        border-bottom: 0;
+      }
 
-        button.btn-prev,
-        button.btn-next {
-          width: 35px;
-          height: 35px;
-          background: transparent;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid #cacaca;
-          background: #fff;
-          border-radius: 8px;
+      &.btn-prev::before {
+        transform: translateX(2px) rotate(-45deg);
+      }
 
-          &::before {
-            content: "";
-            display: block;
-            width: 8px;
-            height: 8px;
-            border: 2px solid #666;
-            border-right: 0;
-            border-bottom: 0;
-          }
-
-          &.btn-prev::before {
-            transform: translateX(2px) rotate(-45deg);
-          }
-
-          &.btn-next::before {
-            transform: translateX(-2px) rotate(135deg);
-          }
-        }
-
-        button.date {
-          width: calc(100% - 78px);
-          height: 35px;
-          background: #FFFFFF;
-          border: 1px solid #cacaca;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          font-size: 14px;
-          font-weight: 700;
-          color: #333;
-
-          .todaybadge{
-            height:20px;
-            padding:0 4px;
-            border-radius: 5px;
-            border:1px solid #5368ff;
-            font-size:12px;
-            color:#5368ff;
-          }
-        }
+      &.btn-next::before {
+        transform: translateX(-2px) rotate(135deg);
       }
     }
+
+    button.date {
+      width: calc(100% - 78px);
+      height: 35px;
+      background: #FFFFFF;
+      border: 1px solid #cacaca;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+
+      .todaybadge {
+        height: 20px;
+        padding: 0 4px;
+        border-radius: 5px;
+        border: 1px solid #5368ff;
+        font-size: 12px;
+        color: #5368ff;
+      }
+    }
+  }
+}
 
 .timeline-slider {
   position: relative;
@@ -243,7 +243,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 10;
     padding: 0 20px;
 
     .node {
@@ -1034,7 +1034,7 @@
     margin: 0;
     padding: 10px 17px;
     min-width: 52px;
-    height:37px;
+    height: 37px;
     border-radius: 6px;
     border: 1px solid #5368FF;
     display: flex;
@@ -1047,20 +1047,20 @@
   }
 }
 
-.usa-common__empty{
-  display:flex;
+.usa-common__empty {
+  display: flex;
   flex-direction: column;
-  width:100%;
-  height:330px;
+  width: 100%;
+  height: 330px;
   justify-content: center;
   align-items: center;
-  gap:10px;
+  gap: 10px;
   text-align: center;
-  background:#F9FAFB;
+  background: #F9FAFB;
 
-  span{
-    font-size:13px;
-    color:#666;
-    line-height:20px;
+  span {
+    font-size: 13px;
+    color: #666;
+    line-height: 20px;
   }
 }
