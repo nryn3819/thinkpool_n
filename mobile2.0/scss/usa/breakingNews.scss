@@ -87,6 +87,9 @@
       border-bottom: 1px solid #ededed;
       gap: 4px;
       align-items: flex-start;
+      &:last-child{
+        border-bottom:0;
+      }
 
       .ai-badge {
         width: 16px;
@@ -135,10 +138,12 @@
           .badge-new {
             color: #FF5050;
             font-size: 11px;
-            font-weight: 700;
             background: #FFEBEB;
             border-radius: 2px;
             padding: 0 3px;
+            font-weight:400;
+            height:14px;
+            line-height:12px;
           }
         }
 

@@ -11050,11 +11050,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   border: 1px solid #e4e4e4;
   border-radius: 10px;
   padding: 12px 0 0;
+}
+.usa-news-section .breaking-news-list .news-item.usa-issue-item {
+  margin-top: 0;
+}
+.usa-news-section .breaking-news-list .news-item.usa-issue-item .content .summary {
+  height: 42px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
 }
 .usa-news-section .breaking-news-list .news-item .thumb {
   flex-shrink: 0;
@@ -11073,22 +11084,18 @@
   width: calc(100% - 84px);
 }
 .usa-news-section .breaking-news-list .news-item .content .subject {
-  margin: 1.5px 0 0;
   font-size: 16px;
   color: #5368FF;
   font-weight: 700;
   line-height: 24px;
+  margin: 0;
 }
 .usa-news-section .breaking-news-list .news-item .content .summary {
   width: 100%;
-  height: 21px;
   font-size: 14px;
   color: #666;
   line-height: 21px;
   margin: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .usa-news-section .breaking-news-list .news-item .tags {
   display: flex;
@@ -11480,7 +11487,7 @@
 }
 
 .issue-detail-header {
-  padding: 26px 17px 34px;
+  padding: 26px 17px 26px;
   background: #fff;
 }
 .issue-detail-header .idh-inner {
@@ -11762,7 +11769,8 @@
 .issue-stock-section .iso-tabs {
   display: flex;
   gap: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 6px;
 }
 .issue-stock-section .iso-tab {
   flex: 1;
@@ -11852,7 +11860,7 @@
 .issue-stock-section .iso-card-main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 .issue-stock-section .iso-card-left {
@@ -12253,7 +12261,6 @@
   background: #EDEFFF;
   color: #5B5F79;
   font-size: 12px;
-  font-weight: 500;
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -12482,6 +12489,9 @@
   gap: 4px;
   align-items: flex-start;
 }
+.breaking-news-container .breaking-news-list .breaking-news-item:last-child {
+  border-bottom: 0;
+}
 .breaking-news-container .breaking-news-list .breaking-news-item .ai-badge {
   width: 16px;
   height: 16px;
@@ -12526,10 +12536,12 @@
 .breaking-news-container .breaking-news-list .breaking-news-item .news-content .title .badge-new {
   color: #FF5050;
   font-size: 11px;
-  font-weight: 700;
   background: #FFEBEB;
   border-radius: 2px;
   padding: 0 3px;
+  font-weight: 400;
+  height: 14px;
+  line-height: 12px;
 }
 .breaking-news-container .breaking-news-list .breaking-news-item .news-content .meta {
   font-size: 12px;

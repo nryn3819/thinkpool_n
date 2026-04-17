@@ -15,7 +15,7 @@
 }
 
 .issue-detail-header {
-  padding: 26px 17px 34px;
+  padding: 26px 17px 26px;
   background: #fff;
 }
 .issue-detail-header .idh-inner {
@@ -297,7 +297,8 @@
 .issue-stock-section .iso-tabs {
   display: flex;
   gap: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 6px;
 }
 .issue-stock-section .iso-tab {
   flex: 1;
@@ -387,7 +388,7 @@
 .issue-stock-section .iso-card-main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 .issue-stock-section .iso-card-left {

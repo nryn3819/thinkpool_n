@@ -23,7 +23,7 @@
 // ─── 섹션 1: 이슈 헤더 ──────────────────────────────────────
 // 섹션 배경(#dcd9ed)은 section.issue-detail-header 에 적용
 .issue-detail-header {
-  padding: 26px 17px 34px;
+  padding: 26px 17px 26px;
   background:#fff;
 
   // layout_248PIV: column, gap:12px
@@ -387,7 +387,8 @@
   .iso-tabs {
     display: flex;
     gap: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding-top:6px;
   }
 
   // layout_8QJW11 / layout_E1NRVA: row, align-items:center, gap:10px, padding:6px 8px 7px
@@ -498,7 +499,7 @@
   .iso-card-main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 
