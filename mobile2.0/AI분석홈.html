@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- common.css -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/usa/aihome.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -630,14 +629,24 @@
                         </div>
                         <div class="date-navigator">
                             <div class="date-nav-inner">
-                                <button type="button" class="btn-prev"><span class="visually-hidden">이전</span></button>
+                                <button type="button" class="btn-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 19L8 12L15 5" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="visually-hidden">이전</span>
+                                </button>
                                 <button type="button" class="date btn-calendar-toggle" data-bs-toggle="modal" data-bs-target="#calendarModal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M8 5H7.2002C6.08009 5 5.51962 5 5.0918 5.21799C4.71547 5.40973 4.40973 5.71547 4.21799 6.0918C4 6.51962 4 7.08009 4 8.2002V9M8 5H16M8 5V3M16 5H16.8002C17.9203 5 18.4796 5 18.9074 5.21799C19.2837 5.40973 19.5905 5.71547 19.7822 6.0918C20 6.5192 20 7.07899 20 8.19691V9M16 5V3M4 9V17.8002C4 18.9203 4 19.4801 4.21799 19.9079C4.40973 20.2842 4.71547 20.5905 5.0918 20.7822C5.5192 21 6.07899 21 7.19691 21H16.8031C17.921 21 18.48 21 18.9074 20.7822C19.2837 20.5905 19.5905 20.2842 19.7822 19.9079C20 19.4805 20 18.9215 20 17.8036V9M4 9H20M16 17H16.002L16.002 17.002L16 17.002V17ZM12 17H12.002L12.002 17.002L12 17.002V17ZM8 17H8.002L8.00195 17.002L8 17.002V17ZM16.002 13V13.002L16 13.002V13H16.002ZM12 13H12.002L12.002 13.002L12 13.002V13ZM8 13H8.002L8.00195 13.002L8 13.002V13Z" stroke="#5368FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                                        <path d="M8 5H7.2002C6.08009 5 5.51962 5 5.0918 5.21799C4.71547 5.40973 4.40973 5.71547 4.21799 6.0918C4 6.51962 4 7.08009 4 8.2002V9M8 5H16M8 5V3M16 5H16.8002C17.9203 5 18.4796 5 18.9074 5.21799C19.2837 5.40973 19.5905 5.71547 19.7822 6.0918C20 6.5192 20 7.07899 20 8.19691V9M16 5V3M4 9V17.8002C4 18.9203 4 19.4801 4.21799 19.9079C4.40973 20.2842 4.71547 20.5905 5.0918 20.7822C5.5192 21 6.07899 21 7.19691 21H16.8031C17.921 21 18.48 21 18.9074 20.7822C19.2837 20.5905 19.5905 20.2842 19.7822 19.9079C20 19.4805 20 18.9215 20 17.8036V9M4 9H20M16 17H16.002L16.002 17.002L16 17.002V17ZM12 17H12.002L12.002 17.002L12 17.002V17ZM8 17H8.002L8.00195 17.002L8 17.002V17ZM16.002 13V13.002L16 13.002V13H16.002ZM12 13H12.002L12.002 13.002L12 13.002V13ZM8 13H8.002L8.00195 13.002L8 13.002V13Z" stroke="#5368FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                     03/11
                                 </button>
-                                <button type="button" class="btn-next"><span class="visually-hidden">다음</span></button>
+                                <button type="button" class="btn-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 5L16 12L9 19" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="visually-hidden">다음</span>
+                                </button>
                             </div>
 
                         </div>
@@ -744,7 +753,7 @@
                         </div>
                     </div>
 
-                    <div class="usa-more-btn-wrap">
+                    <div class="usa-more-btn-wrap rmt-20">
                         <button type="button" class="btn-more">더보기</button>
                     </div>
                 </section>
@@ -846,7 +855,7 @@
                         </div>
                     </div>
 
-                    <div class="usa-more-btn-wrap">
+                    <div class="usa-more-btn-wrap rmt-20">
                         <button type="button" class="btn-more">더보기</button>
                     </div>
                 </section>
@@ -863,12 +872,9 @@
                         <!-- Card 1: 급등이슈 -->
                         <div class="analysis-card surge">
                             <div class="icon-box">
-                                <i class="icon">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 13L6.5 8.5L9.5 11.5L14 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10 7H14V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                                    <path d="M21 18C21.5523 18 22 17.5523 22 17C22 16.4477 21.5523 16 21 16V17V18ZM2 1C2 0.447715 1.55228 0 1 0C0.447715 0 0 0.447715 0 1H1H2ZM3.18404 16.564L3.63803 15.673H3.63803L3.18404 16.564ZM1.43597 14.816L0.544967 15.27L1.43597 14.816ZM10.3536 6.35355L11.0607 5.64645V5.64645L10.3536 6.35355ZM13.6464 9.64645L12.9393 10.3536V10.3536L13.6464 9.64645ZM14.3536 9.64645L15.0607 10.3536L15.0607 10.3536L14.3536 9.64645ZM20.7071 4.70711C21.0976 4.31658 21.0976 3.68342 20.7071 3.29289C20.3166 2.90237 19.6834 2.90237 19.2929 3.29289L20 4L20.7071 4.70711ZM4.29289 10.2929C3.90237 10.6834 3.90237 11.3166 4.29289 11.7071C4.68342 12.0976 5.31658 12.0976 5.70711 11.7071L5 11L4.29289 10.2929ZM9.64645 6.35355L10.3536 7.06066L10.3536 7.06066L9.64645 6.35355ZM21 17V16H7.4V17V18H21V17ZM1 10.6H2V1H1H0V10.6H1ZM7.4 17V16C6.26339 16 5.47108 15.9992 4.85424 15.9488C4.24907 15.8994 3.90138 15.8072 3.63803 15.673L3.18404 16.564L2.73005 17.455C3.32234 17.7568 3.96253 17.8826 4.69138 17.9422C5.40855 18.0008 6.2964 18 7.4 18V17ZM1 10.6H0C0 11.7036 -0.000777721 12.5914 0.0578178 13.3086C0.117367 14.0375 0.24318 14.6777 0.544967 15.27L1.43597 14.816L2.32698 14.362C2.19279 14.0986 2.10062 13.7509 2.05118 13.1458C2.00078 12.5289 2 11.7366 2 10.6H1ZM3.18404 16.564L3.63803 15.673C3.07354 15.3854 2.6146 14.9265 2.32698 14.362L1.43597 14.816L0.544967 15.27C1.02433 16.2108 1.78924 16.9757 2.73005 17.455L3.18404 16.564ZM10.3536 6.35355L9.64645 7.06066L12.9393 10.3536L13.6464 9.64645L14.3536 8.93934L11.0607 5.64645L10.3536 6.35355ZM14.3536 9.64645L15.0607 10.3536L20.7071 4.70711L20 4L19.2929 3.29289L13.6464 8.93934L14.3536 9.64645ZM5 11L5.70711 11.7071L10.3536 7.06066L9.64645 6.35355L8.93934 5.64645L4.29289 10.2929L5 11ZM13.6464 9.64645L12.9393 10.3536C13.5251 10.9393 14.4749 10.9393 15.0607 10.3536L14.3536 9.64645L13.6464 8.93934C13.8417 8.74408 14.1583 8.74407 14.3536 8.93934L13.6464 9.64645ZM10.3536 6.35355L11.0607 5.64645C10.4749 5.06066 9.52513 5.06066 8.93934 5.64645L9.64645 6.35355L10.3536 7.06066C10.1583 7.25592 9.84171 7.25592 9.64645 7.06066L10.3536 6.35355Z" fill="#EA3838"/>
+                                </svg>
                             </div>
                             <h3 class="card-title">급등이슈</h3>
                             <p class="card-desc">실시간 급등<br>이슈 확인</p>
@@ -876,12 +882,9 @@
                         <!-- Card 2: 급락이슈 -->
                         <div class="analysis-card plunge">
                             <div class="icon-box">
-                                <i class="icon">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 3L6.5 7.5L9.5 4.5L14 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10 9H14V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                                    <path d="M21 18C21.5523 18 22 17.5523 22 17C22 16.4477 21.5523 16 21 16V17V18ZM2 1C2 0.447715 1.55228 0 1 0C0.447715 0 0 0.447715 0 1H1H2ZM3.18404 16.564L3.63803 15.673H3.63803L3.18404 16.564ZM1.43597 14.816L0.544968 15.2699L1.43597 14.816ZM14.6464 7.00012L13.9393 6.29302V6.29302L14.6464 7.00012ZM11.3536 10.293L12.0607 11.0001V11.0001L11.3536 10.293ZM10.6464 10.293L9.93934 11.0001L9.93934 11.0001L10.6464 10.293ZM5.70711 3.93946C5.31658 3.54894 4.68342 3.54894 4.29289 3.93946C3.90237 4.32999 3.90237 4.96315 4.29289 5.35368L5 4.64657L5.70711 3.93946ZM19.2929 12.3537C19.6834 12.7442 20.3166 12.7442 20.7071 12.3537C21.0976 11.9632 21.0976 11.33 20.7071 10.9395L20 11.6466L19.2929 12.3537ZM15.3536 7.00012L14.6464 7.70723L14.6464 7.70723L15.3536 7.00012ZM21 17V16H7.4V17V18H21V17ZM1 10.6H2V1H1H0V10.6H1ZM7.4 17V16C6.26339 16 5.47108 15.9992 4.85424 15.9488C4.24907 15.8994 3.90138 15.8072 3.63803 15.673L3.18404 16.564L2.73005 17.455C3.32234 17.7568 3.96253 17.8826 4.69138 17.9422C5.40855 18.0008 6.29639 18 7.4 18V17ZM1 10.6H0C0 11.7036 -0.000777721 12.5914 0.0578179 13.3086C0.117367 14.0375 0.24318 14.6777 0.544968 15.2699L1.43597 14.816L2.32698 14.362C2.19279 14.0986 2.10062 13.7509 2.05118 13.1458C2.00078 12.5289 2 11.7366 2 10.6H1ZM3.18404 16.564L3.63803 15.673C3.07354 15.3854 2.6146 14.9265 2.32698 14.362L1.43597 14.816L0.544968 15.2699C1.02433 16.2108 1.78923 16.9757 2.73005 17.455L3.18404 16.564ZM14.6464 7.00012L13.9393 6.29302L10.6464 9.58591L11.3536 10.293L12.0607 11.0001L15.3536 7.70723L14.6464 7.00012ZM10.6464 10.293L11.3536 9.58591L5.70711 3.93946L5 4.64657L4.29289 5.35368L9.93934 11.0001L10.6464 10.293ZM20 11.6466L20.7071 10.9395L16.0607 6.29302L15.3536 7.00012L14.6464 7.70723L19.2929 12.3537L20 11.6466ZM11.3536 10.293L10.6464 9.58591C10.8417 9.39064 11.1583 9.39065 11.3536 9.58591L10.6464 10.293L9.93934 11.0001C10.5251 11.5859 11.4749 11.5859 12.0607 11.0001L11.3536 10.293ZM14.6464 7.00012L15.3536 7.70723C15.1583 7.90249 14.8417 7.90249 14.6464 7.70723L15.3536 7.00012L16.0607 6.29302C15.4749 5.70723 14.5251 5.70723 13.9393 6.29302L14.6464 7.00012Z" fill="#3885EA"/>
+                                </svg>
                             </div>
                             <h3 class="card-title">급락이슈</h3>
                             <p class="card-desc">실시간 급락<br>이슈 확인</p>
@@ -889,18 +892,18 @@
                         <!-- Card 3: AI 점수 상위 -->
                         <div class="analysis-card ai-top">
                             <div class="icon-box">
-                                <i class="icon-text">Ai</i>
+                                <span class="icon-text">AI</span>
                             </div>
                             <h3 class="card-title">AI 점수 상위</h3>
                             <p class="card-desc">AI 분석<br>상위 종목</p>
                         </div>
                     </div>
 
-                    <div class="usa-more-btn-wrap">
+                    <div class="usa-more-btn-wrap rmt-20">
                         <button type="button" class="btn-more">더보기</button>
                     </div>
 
-                    <div class="disclaimer-note rmt-20">
+                    <div class="disclaimer-note rmt-30">
                         <ul>
                             <li>본 서비스는 일부 콘텐츠에 한해 AI가 선별·요약한 투자정보를 제공합니다.</li>
                             <li>제공 내용은 참고용이며 추천 또는 투자 권유 목적이 아닙니다.</li>

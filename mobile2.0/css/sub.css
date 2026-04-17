@@ -10602,57 +10602,8 @@
 /* 오늘의 핫이슈 & 버블 차트 & 타임라인 */
 /* ======================== */
 .hot-issue-section {
-  padding: 15px 17px 0;
+  padding: 20px 17px 0;
   background: #fff;
-}
-.hot-issue-section .hot-issue-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.hot-issue-section .hot-issue-header .title-wrap .title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #000;
-  margin: 0;
-}
-.hot-issue-section .hot-issue-header .time-block {
-  display: flex;
-  align-items: flex-end;
-  gap: 4px;
-}
-.hot-issue-section .hot-issue-header .time-block .btn-reload {
-  background: none;
-  border: 0;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-}
-.hot-issue-section .hot-issue-header .time-block .btn-reload img {
-  width: 20px;
-  height: 20px;
-}
-.hot-issue-section .hot-issue-header .time-block .timestamps {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.hot-issue-section .hot-issue-header .time-block .timestamps .time {
-  font-size: 12px;
-  color: #999;
-  line-height: 14px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.hot-issue-section .hot-issue-header .time-block .timestamps .time .zone {
-  font-size: 10px;
-  color: #999;
-  line-height: 13px;
-  width: 20px;
-  text-align: Center;
-  border-radius: 1px;
-  background: #F4F4F4;
 }
 .hot-issue-section .hot-issue-tabs {
   display: flex;
@@ -10707,7 +10658,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   background: transparent;
 }
 
@@ -10738,23 +10689,9 @@
   background: #fff;
   border-radius: 8px;
 }
-.date-navigator .date-nav-inner button.btn-prev::before,
-.date-navigator .date-nav-inner button.btn-next::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #666;
-  border-right: 0;
-  border-bottom: 0;
-}
-.date-navigator .date-nav-inner button.btn-prev.btn-prev::before,
-.date-navigator .date-nav-inner button.btn-next.btn-prev::before {
-  transform: translateX(2px) rotate(-45deg);
-}
-.date-navigator .date-nav-inner button.btn-prev.btn-next::before,
-.date-navigator .date-nav-inner button.btn-next.btn-next::before {
-  transform: translateX(-2px) rotate(135deg);
+.date-navigator .date-nav-inner button.btn-prev:disabled,
+.date-navigator .date-nav-inner button.btn-next:disabled {
+  opacity: 0.4;
 }
 .date-navigator .date-nav-inner button.date {
   width: calc(100% - 78px);
@@ -10876,7 +10813,7 @@
 }
 .hot-issue-header .time-block {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 6px;
 }
 .hot-issue-header .time-block .btn-reload {
@@ -10884,6 +10821,7 @@
   border: none;
   padding: 0;
   display: flex;
+  height: 15px;
   align-items: center;
   justify-content: center;
 }
@@ -11060,14 +10998,14 @@
 /* 미국 이슈 속보 */
 /* ======================== */
 .usa-news-section {
-  padding: 15px 17px 50px;
+  padding: 30px 17px 0;
   background: #fff;
 }
 .usa-news-section .section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .usa-news-section .section-header .title-wrap .title {
   font-size: 16px;
@@ -11105,7 +11043,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 .usa-news-section .breaking-news-list .news-item {
   position: relative;
@@ -11143,10 +11081,14 @@
 }
 .usa-news-section .breaking-news-list .news-item .content .summary {
   width: 100%;
+  height: 21px;
   font-size: 14px;
   color: #666;
   line-height: 21px;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .usa-news-section .breaking-news-list .news-item .tags {
   display: flex;
@@ -11208,7 +11150,6 @@
 }
 
 .usa-more-btn-wrap {
-  margin-top: 25px;
   display: flex;
   justify-content: center;
 }
@@ -11235,7 +11176,7 @@
   background: #fff;
 }
 .today-issue-analysis-section .section-header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .today-issue-analysis-section .section-header .title-wrap .title {
   font-size: 16px;
@@ -11247,7 +11188,6 @@
 .today-issue-analysis-section .analysis-grid {
   display: flex;
   gap: 10px;
-  margin-bottom: 25px;
 }
 .today-issue-analysis-section .analysis-grid .analysis-card {
   flex: 1;
@@ -11279,6 +11219,15 @@
 .today-issue-analysis-section .analysis-grid .analysis-card.ai-top .icon-box {
   background: #E7D7FE;
   color: #9F68F0;
+}
+.today-issue-analysis-section .analysis-grid .analysis-card.ai-top .icon-box .icon-text {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #9F68F0;
+  border-radius: 100%;
 }
 .today-issue-analysis-section .analysis-grid .analysis-card .icon-box {
   width: 30px;
@@ -11370,7 +11319,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .stock-news-section .section-header .title-wrap .title {
   font-size: 16px;
@@ -11415,7 +11364,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .stock-news-section .stock-news-list .stock-news-card .stock-card-header .item-name .name {
   font-size: 16px;
@@ -11433,15 +11382,14 @@
   color: #999;
 }
 .stock-news-section .stock-news-list .stock-news-card .card-content .summary {
+  width: 100%;
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-  margin-bottom: 12px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .stock-news-section .stock-news-list .stock-news-card .card-content .tag-group {
   display: flex;
