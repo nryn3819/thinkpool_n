@@ -14221,6 +14221,9 @@ html, body {
   justify-content: flex-start;
   text-align: left;
 }
+.hot-issue-section .hot-issue-tabs button:disabled {
+  opacity: 40%;
+}
 .hot-issue-section .hot-issue-tabs button::before {
   content: "";
   width: 3px;
