@@ -17491,7 +17491,7 @@ html, body {
   margin-top: 4px;
 }
 .breaking-news-container .breaking-news-list .breaking-news-item .ai-badge::after {
-  content: "AI";
+  content: "Ai";
   font-size: 10px;
   font-weight: 700;
   color: #798AFF;
