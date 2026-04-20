@@ -474,6 +474,10 @@
 .usa-news-section .breaking-news-list .news-item.usa-issue-item {
   margin-top: 0;
 }
+.usa-news-section .breaking-news-list .news-item.usa-issue-item .thumb {
+  width: 62px;
+  height: 62px;
+}
 .usa-news-section .breaking-news-list .news-item.usa-issue-item .content .summary {
   max-height: 42px;
   overflow: hidden;

@@ -550,6 +550,11 @@
       &.usa-issue-item {
         margin-top: 0;
 
+        .thumb{
+          width:62px;
+          height:62px;
+        }
+
         .content {
           .summary {
             max-height:42px;
