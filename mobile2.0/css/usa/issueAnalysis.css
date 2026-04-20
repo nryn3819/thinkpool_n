@@ -128,7 +128,7 @@
 }
 .issue-group_section .today-issue_itemList .item .percentage {
   position: absolute;
-  top: 20px;
+  top: 13px;
   right: 16px;
   font-size: 14px;
   font-weight: 700;
@@ -137,7 +137,7 @@
   color: #FC2F2F;
 }
 .issue-group_section .today-issue_itemList .item .percentage.dn {
-  color: #5368ff;
+  color: #447AEC;
 }
 .issue-group_section #group003 .today-issue_itemList .item {
   padding: 16px;

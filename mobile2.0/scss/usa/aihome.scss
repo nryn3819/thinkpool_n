@@ -129,6 +129,7 @@
         border: 1px solid #5368ff;
         font-size: 12px;
         color: #5368ff;
+        font-weight:400;
       }
     }
   }
@@ -268,6 +269,9 @@
       gap: 2px;
 
       .time {
+        display: flex;
+        align-items: center;
+        gap:2px;
         font-size: 12px;
         color: #999;
         font-weight: 400;
@@ -275,6 +279,12 @@
 
         em {
           font-style: normal;
+          background:#f4f4f4;
+          width:20px;
+          height:13px;
+          text-align:center;
+          line-height:13px;
+          font-size:10px;
         }
       }
     }
@@ -499,17 +509,18 @@
           line-height: 14px;
           display: flex;
           align-items: center;
+          gap:2px;
 
           em {
             font-style: normal;
             background: #F4F4F4;
-            padding: 0 4px;
             border-radius: 1px;
             font-size: 10px;
-            margin-left: 4px;
-            height: 14px;
-            line-height: 14px;
+            height: 13px;
+            line-height: 13px;
             color: #999;
+            width:20px;
+            text-align:center;
           }
         }
       }
@@ -538,7 +549,7 @@
 
         .content {
           .summary {
-            height:42px;
+            max-height:42px;
             overflow:hidden;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -633,7 +644,7 @@
             font-size: 13px;
             color: #333;
             display: -webkit-box;
-            max-width: 92px;
+            max-width: 84px;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             height: 19px;
@@ -823,7 +834,6 @@
       font-size: 12px;
       color: #999;
       line-height: 1.6;
-      word-break: keep-all;
 
       &::before {
         content: "·";
@@ -867,19 +877,23 @@
       gap: 2px;
 
       span {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap:2px;
         font-size: 11px;
         color: #999;
         line-height: 1.2;
 
         em {
+          width:20px;
+          height:13px;
+          line-height:13px;
           font-style: normal;
           background: #F4F4F4;
-          padding: 0 4px;
           border-radius: 1px;
           font-size: 10px;
-          margin-right: 2px;
           color: #999;
+          text-align: center;
         }
       }
     }

@@ -220,9 +220,17 @@
   overflow: hidden;
   max-height: 42px;
   transition: max-height 0.3s ease;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .issue-desc-section .ids-body.is-expanded {
   max-height: 1000px;
+  -webkit-line-clamp: unset;
+  text-overflow: unset;
+  -webkit-box-orient: unset;
+  display: block;
 }
 .issue-desc-section .ids-footer {
   display: flex;
@@ -326,7 +334,9 @@
   font-weight: 400;
   color: #5f6673;
   line-height: 1.2;
-  white-space: pre-line;
+}
+.issue-stock-section .iso-tab:disabled {
+  opacity: 40%;
 }
 .issue-stock-section .iso-tab.active {
   background: #5367ff;
@@ -364,9 +374,11 @@
   border: 0;
   background: none;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   color: #999;
   cursor: pointer;
+  border: 1px solid #999;
+  border-radius: 100%;
 }
 .issue-stock-section .iso-list {
   display: flex;
@@ -645,6 +657,12 @@
   color: #333;
   line-height: 1.46;
   margin: 0;
+  max-height: 38px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .issue-timeline-section .itl-more-btn {
   display: flex;

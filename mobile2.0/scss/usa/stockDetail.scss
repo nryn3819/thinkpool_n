@@ -379,9 +379,18 @@
     overflow: hidden;
     max-height: 42px;
     transition: max-height 0.3s ease;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
 
     &.is-expanded {
       max-height: 1000px;
+      text-overflow: unset;
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
     }
   }
 
@@ -529,7 +538,7 @@
     color: #000;
     line-height: 24px;
     margin: 0;
-    width:100%;
+    width: 100%;
   }
 
   // 불릿 목록
@@ -902,9 +911,9 @@
     border-radius: 10px;
     padding: 15px;
 
-    .chart{
-      width:100%;
-      padding:0 30px;
+    .chart {
+      width: 100%;
+      padding: 0 30px;
     }
 
     .chart-label {
@@ -1042,6 +1051,7 @@
     &:hover {
       color: #666 !important;
     }
+
     &.active:hover {
       color: #fff !important;
     }
@@ -1104,7 +1114,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top:10px;
+    margin-top: 10px;
   }
 
   // 개별 지표 항목

@@ -24,7 +24,7 @@
 // 섹션 배경(#dcd9ed)은 section.issue-detail-header 에 적용
 .issue-detail-header {
   padding: 26px 17px 26px;
-  background:#fff;
+  background: #fff;
 
   // layout_248PIV: column, gap:12px
   .idh-inner {
@@ -81,8 +81,13 @@
     line-height: 1.2;
     align-self: flex-end;
 
-    &.up { color: #ff414f; }
-    &.dn { color: #5367ff; }
+    &.up {
+      color: #ff414f;
+    }
+
+    &.dn {
+      color: #5367ff;
+    }
   }
 
   // layout_ZOY0VU: column, width:90px
@@ -251,8 +256,8 @@
 // ─── 섹션 3: 이슈 설명 ──────────────────────────────────────
 .issue-desc-section {
   padding: 26px 17px;
-  border-top:8px solid #f6f6f6;
-  background:#fff;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
 
   // not_16b: 16px 700
   .ids-label {
@@ -287,9 +292,18 @@
     overflow: hidden;
     max-height: 42px; // ~3줄 접힌 상태
     transition: max-height 0.3s ease;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
 
     &.is-expanded {
       max-height: 1000px;
+      -webkit-line-clamp: unset;
+      text-overflow: unset;
+      -webkit-box-orient: unset;
+      display: block;
     }
   }
 
@@ -300,7 +314,7 @@
     align-items: center;
     gap: 2px;
     padding-top: 7px;
-    border:0;
+    border: 0;
     border-top: 1px solid #e4e4e4;
     background: none;
     width: 100%;
@@ -337,8 +351,8 @@
 // ─── 섹션 4: 종목개요 ───────────────────────────────────────
 .issue-stock-section {
   padding: 26px 17px;
-  border-top:8px solid #F6F6F6;
-  background:#fff;
+  border-top: 8px solid #F6F6F6;
+  background: #fff;
 
   // 헤더: space-between, align flex-end
   .iso-header {
@@ -388,7 +402,7 @@
     display: flex;
     gap: 6px;
     margin-bottom: 15px;
-    padding-top:6px;
+    padding-top: 6px;
   }
 
   // layout_8QJW11 / layout_E1NRVA: row, align-items:center, gap:10px, padding:6px 8px 7px
@@ -421,7 +435,10 @@
       font-weight: 400;
       color: #5f6673;
       line-height: 1.2;
-      white-space: pre-line;
+    }
+
+    &:disabled{
+      opacity: 40%;
     }
 
     &.active {
@@ -469,9 +486,11 @@
     border: 0;
     background: none;
     padding: 0;
-    font-size: 12px;
+    font-size: 10px;
     color: #999;
     cursor: pointer;
+    border:1px solid #999;
+    border-radius: 100%;
   }
 
   // 종목 목록 (column, gap:8px)
@@ -617,11 +636,11 @@
       font-family: "Noto Sans KR", sans-serif;
       font-size: 11px;
       color: #333;
-      line-height:16px;
+      line-height: 16px;
 
-      em{
-        font-size:14px;
-        font-weight:500;
+      em {
+        font-size: 14px;
+        font-weight: 500;
       }
 
     }
@@ -656,7 +675,7 @@
     gap: 12px;
 
     span {
-      width:100%;
+      width: 100%;
       font-family: "Noto Sans KR", sans-serif;
       font-size: 14px;
       color: #333;
@@ -691,8 +710,8 @@
 // ─── 섹션 5: 이슈 타임라인 ─────────────────────────────────
 .issue-timeline-section {
   padding: 26px 17px;
-  border-top:8px solid #F6F6F6;
-  background:#fff;
+  border-top: 8px solid #F6F6F6;
+  background: #fff;
 
 
   .itl-title {
@@ -734,16 +753,16 @@
     flex-direction: column;
     gap: 6px;
 
-    &::before{
-      content:'';
-      width:10px;
-      height:10px;
-      border:1px solid #5367ff;
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid #5367ff;
       border-radius: 100%;
-      background:#fff;
+      background: #fff;
       position: absolute;
-      left:-22px;
-      top:3px;
+      left: -22px;
+      top: 3px;
     }
   }
 
@@ -819,6 +838,12 @@
     color: #333;
     line-height: 1.46;
     margin: 0;
+    max-height:38px;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
   }
 
   // 더보기 버튼
