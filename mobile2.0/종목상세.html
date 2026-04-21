@@ -858,7 +858,12 @@
                   </p>
                 </div>
               </div>
-              <button class="sis-card-footer" type="button">
+              <button
+                class="sis-card-footer"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#relatedNewsModal"
+              >
                 <span>관련기사 보기</span>
                 <svg
                   width="20"
@@ -2151,7 +2156,7 @@
                       <span class="ai-modal-bullet"></span>
                       <p>
                         꾸준한 실적은 내는 기업을 평가하는 지표로, 시가총액
-                        상위20%평균 점수보다 높을 경우 안정적인 실적을 내는
+                        상위 20% 평균 점수보다 높을 경우 안정적인 실적을 내는
                         것으로 평가
                       </p>
                     </li>
@@ -2401,6 +2406,81 @@
           </div>
         </div>
         <!-- //PBR 분석요소 모달 -->
+
+        <!-- 관련기사 모달 -->
+        <div
+          class="modal fade ai-info-modal"
+          id="relatedNewsModal"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="ai-modal-inner">
+                <div class="ai-modal-header">
+                  <p class="ai-modal-title">관련기사</p>
+                  <button
+                    type="button"
+                    class="ai-modal-close"
+                    data-bs-dismiss="modal"
+                    aria-label="닫기"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 6L6 18M6 6l12 12"
+                        stroke="#333"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="ai-modal-body">
+                  <ul class="related-news-list">
+                    <li class="related-news-item">
+                      <a href="#" class="related-news-link">
+                        <span class="bullet">·</span>
+                        <span class="text">관련기사1 바로가기 ></span>
+                      </a>
+                    </li>
+                    <li class="related-news-item">
+                      <a href="#" class="related-news-link">
+                        <span class="bullet">·</span>
+                        <span class="text">관련기사2 바로가기 ></span>
+                      </a>
+                    </li>
+                    <li class="related-news-item">
+                      <a href="#" class="related-news-link">
+                        <span class="bullet">·</span>
+                        <span class="text">관련기사3 바로가기 ></span>
+                      </a>
+                    </li>
+                    <li class="related-news-item">
+                      <a href="#" class="related-news-link">
+                        <span class="bullet">·</span>
+                        <span class="text">관련기사4 바로가기 ></span>
+                      </a>
+                    </li>
+                    <li class="related-news-item">
+                      <a href="#" class="related-news-link">
+                        <span class="bullet">·</span>
+                        <span class="text">관련기사5 바로가기 ></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //관련기사 모달 -->
       </div>
       <!-- /wrap -->
       <!-- bootstrap js -->

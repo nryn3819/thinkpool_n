@@ -1353,3 +1353,32 @@
 .smi-guide-modal .smi-level--low {
   color: #5368ff;
 }
+
+.related-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.related-news-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+.related-news-link .bullet {
+  color: #999;
+  margin-right: 8px;
+}
+
+.related-news-link .text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
