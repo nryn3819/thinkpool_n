@@ -12823,10 +12823,10 @@
   position: absolute;
   left: 0;
   top: 10px;
-  width: 2px;
-  height: 2px;
+  width: 2.5px;
+  height: 2.5px;
   border-radius: 50%;
-  background: #333;
+  background: #999;
 }
 .smi-guide-modal .smi-level--high {
   color: #FC2F2F;
