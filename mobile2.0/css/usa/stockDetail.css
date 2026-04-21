@@ -1345,11 +1345,11 @@
   background: #aab8c2;
 }
 .smi-guide-modal .smi-level--high {
-  color: #ff4d4d;
+  color: #FC2F2F;
 }
 .smi-guide-modal .smi-level--normal {
-  color: #3c4b64;
+  color: #333;
 }
 .smi-guide-modal .smi-level--low {
-  color: #aab8c2;
+  color: #5368ff;
 }
