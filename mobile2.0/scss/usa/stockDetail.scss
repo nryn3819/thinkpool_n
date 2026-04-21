@@ -1593,7 +1593,7 @@
 
     p {
       position: relative;
-      padding-left: 10px;
+      padding-left: 5px;
       margin: 0;
       font-family: "Noto Sans KR", sans-serif;
       font-size: 13px;
@@ -1604,24 +1604,12 @@
         content: "";
         position: absolute;
         left: 0;
-        top: 7px;
-        width: 6px;
-        height: 6px;
+        top: 10px;
+        width: 2px;
+        height: 2px;
         border-radius: 50%;
+        background:#333;
       }
-    }
-
-    // 마켓 관심도 단계별 불릿 색상
-    &:nth-child(1) p::before {
-      background: #ff4d4d; // 높음 (Red)
-    }
-
-    &:nth-child(2) p::before {
-      background: #3c4b64; // 보통 (Navy)
-    }
-
-    &:nth-child(3) p::before {
-      background: #aab8c2; // 낮음 (Light Blue)
     }
   }
 

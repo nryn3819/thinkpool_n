@@ -1319,7 +1319,7 @@
 }
 .smi-guide-modal .smi-modal-item p {
   position: relative;
-  padding-left: 10px;
+  padding-left: 5px;
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 13px;
@@ -1330,19 +1330,11 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 7px;
-  width: 6px;
-  height: 6px;
+  top: 10px;
+  width: 2px;
+  height: 2px;
   border-radius: 50%;
-}
-.smi-guide-modal .smi-modal-item:nth-child(1) p::before {
-  background: #ff4d4d;
-}
-.smi-guide-modal .smi-modal-item:nth-child(2) p::before {
-  background: #3c4b64;
-}
-.smi-guide-modal .smi-modal-item:nth-child(3) p::before {
-  background: #aab8c2;
+  background: #333;
 }
 .smi-guide-modal .smi-level--high {
   color: #FC2F2F;
