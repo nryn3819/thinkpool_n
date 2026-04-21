@@ -1252,6 +1252,8 @@
     border: none;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width:480px;
+    margin:0 auto;
   }
 
   .modal-header {
@@ -1390,6 +1392,8 @@
     border-radius: 8px;
     border: none;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width:480px;
+    margin:0 auto;
   }
 
   .ai-modal-inner {
@@ -1524,6 +1528,8 @@
     border-radius: 8px;
     border: none;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width:480px;
+    margin:0 auto;
   }
 
   .smi-modal-inner {

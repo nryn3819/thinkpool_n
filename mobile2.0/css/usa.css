@@ -3790,6 +3790,8 @@
   border-radius: 12px;
   border: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  margin: 0 auto;
 }
 .calendar-modal .modal-body {
   padding: 26px 20px;
@@ -5400,6 +5402,8 @@
   border: none;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  margin: 0 auto;
 }
 .guide-modal .modal-header {
   padding: 20px 20px 10px;
@@ -5516,6 +5520,8 @@
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
+  margin: 0 auto;
 }
 .ai-info-modal .ai-modal-inner {
   padding: 16px 16px 24px;
@@ -5629,6 +5635,8 @@
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
+  margin: 0 auto;
 }
 .smi-guide-modal .smi-modal-inner {
   padding: 16px 16px 24px;
