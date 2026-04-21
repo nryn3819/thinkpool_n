@@ -91,6 +91,16 @@
         border-bottom:0;
       }
 
+      &.basic{
+        .news-content{
+          .title{
+            .obj{
+              max-width:100%;
+            }
+          }
+        }
+      }
+
       .ai-badge {
         width: 16px;
         height: 16px;

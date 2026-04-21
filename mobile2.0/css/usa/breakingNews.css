@@ -82,6 +82,9 @@
 .breaking-news-container .breaking-news-list .breaking-news-item:last-child {
   border-bottom: 0;
 }
+.breaking-news-container .breaking-news-list .breaking-news-item.basic .news-content .title .obj {
+  max-width: 100%;
+}
 .breaking-news-container .breaking-news-list .breaking-news-item .ai-badge {
   width: 16px;
   height: 16px;
