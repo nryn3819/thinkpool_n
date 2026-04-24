@@ -329,17 +329,58 @@
                         <!-- // -->
                         <div class="sub-content mt-40">
                             <h4 class="sub-title main-issue_title">
-                                <span>AI이슈포착</span>
+                                <div class="left">
+                                    <span>AI이슈포착</span>
 
-                                <div class="main-issue_tab">
-                                    <button class="active">
-                                        <img src="./img/main-issue_tab_kor.png" alt="">
-                                        <span>한국</span>
-                                    </button>
-                                    <button>
-                                        <img src="./img/main-issue_tab_usa.png" alt="">
-                                        <span>미국</span>
-                                    </button>
+                                    <div class="main-issue_tab">
+                                        <button class="active">
+                                            <img src="./img/main-issue_tab_kor.png" alt="">
+                                            <span>한국</span>
+                                        </button>
+                                        <button>
+                                            <img src="./img/main-issue_tab_usa.png" alt="">
+                                            <span>미국</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="swiper bannerSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <button>
+                                                    <img src="https://img.thinkpool.com/www/img/thbn01.png" alt="엑스퍼트 배너">
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button>
+                                                    <img src="https://img.thinkpool.com/www/img/thbn03.png" alt="하우투머니 배너">
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button>
+                                                    <img src="https://img.thinkpool.com/www/img/thbn02.png" alt="스탁론 배너">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <script>
+                                        var bannerSwiper = new Swiper(".bannerSwiper", {
+                                            direction: "vertical",
+                                            slidesPerView: 1,
+                                            spaceBetween: 8,
+                                            autoplay: {
+                                                delay: 4000,
+                                                disableOnInteraction : false,
+                                            },
+                                            loop: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                clickable: true,
+                                            }
+                                        });
+                                    </script>
                                 </div>
                             </h4>
                             <div class="sub-section">
