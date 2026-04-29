@@ -644,45 +644,6 @@
                 </section>
                 <!-- // 나의종목-->
 
-                <div class="mobile-banner">
-                    <div class="swiper bannerSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <button>
-                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn01.png" alt="엑스퍼트 배너">
-                                </button>
-                            </div>
-                            <div class="swiper-slide">
-                                <button>
-                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn03.png" alt="하우투머니 배너">
-                                </button>
-                            </div>
-                            <div class="swiper-slide">
-                                <button>
-                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn02.png" alt="스탁론 배너">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <script>
-                        var bannerSwiper = new Swiper(".bannerSwiper", {
-                            slidesPerView: 1,
-                            spaceBetween: 8,
-                            autoplay: {
-                                delay: 4000,
-                                disableOnInteraction : false,
-                            },
-                            loop: true,
-                            pagination: {
-                                el: ".swiper-pagination",
-                                clickable: true,
-                            }
-                        });
-                    </script>
-                </div>
-
                 <section class="section noPadding rmt-8">
                     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -1273,6 +1234,46 @@
                     <!-- // -->
                 </div>
                 <!-- //이슈 모달 -->
+
+                <!-- 모바일 배너 -->
+                <div class="mobile-banner">
+                    <div class="swiper bannerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button>
+                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn01.png" alt="엑스퍼트 배너">
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button>
+                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn03.png" alt="스탁론 배너">
+                                </button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button>
+                                    <img src="https://img.thinkpool.com/www/mobile/img/mbbn02.png" alt="하우투머니 배너">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        var bannerSwiper = new Swiper(".bannerSwiper", {
+                            slidesPerView: 1,
+                            autoplay: {
+                                delay: 4000,
+                                disableOnInteraction : false,
+                            },
+                            loop: true,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            }
+                        });
+                    </script>
+                </div>
+                <!-- // -->
 
                 <section class="section section-basic rmt-8">
                     <h3 class="title title-bullet title-bullet-rassi">라씨매매신호</h3>

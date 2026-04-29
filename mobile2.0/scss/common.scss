@@ -611,14 +611,22 @@ body {
       }
     }
     .swiper-pagination{
+      position: absolute;
       margin-top: 0;
+      margin-bottom: 10px;
       height: 18px;
       display: flex;
       justify-content: center;
       align-items: center;
 
       .swiper-pagination-bullet{
-        background: #000;
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .swiper-pagination-bullet-active{
+        opacity: 1;
+        background: #5368FF;
       }
     }
   }
