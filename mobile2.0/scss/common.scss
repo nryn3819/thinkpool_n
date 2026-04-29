@@ -613,7 +613,7 @@ body {
     .swiper-pagination{
       position: absolute;
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       height: 18px;
       display: flex;
       justify-content: center;
@@ -626,7 +626,7 @@ body {
 
       .swiper-pagination-bullet-active{
         opacity: 1;
-        background: #5368FF;
+        background: #fff;
       }
     }
   }
