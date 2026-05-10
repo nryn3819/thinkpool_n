@@ -215,6 +215,12 @@
               }
             }
           }
+          .right{
+            img{
+              border-radius: 100%;
+              overflow: hidden;
+            }
+          }
         }
         .bottom{
           display: flex;
