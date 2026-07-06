@@ -238,6 +238,7 @@
           button,
           a {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 200px;
@@ -247,6 +248,10 @@
             outline: 0;
             padding: 0;
             background: #3e72ed;
+
+            &:hover {
+              text-decoration: none;
+            }
 
             span {
               display: block;
