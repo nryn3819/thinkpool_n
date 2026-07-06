@@ -29,7 +29,7 @@
             </div>
             <div class="pageBack"><button type="button">이전페이지</button></div>
             <div class="headerTitle centerHeader">
-              <strong>미국 60대 테마</strong>
+              <strong>테마 상세</strong>
             </div>
             <div class="subSchBtn">
               <button type="button" id="opensch" class="schButton">종목검색</button>
@@ -90,7 +90,7 @@
               <!-- period__tabs -->
 
               <div class="section__tabs">
-                <button type="button" class="active" data-scroll-target="#themeMarket" aria-selected="true">테마시황</button>
+                <button type="button" class="active" data-scroll-target="#dataIntelligence" aria-selected="true">테마시황</button>
                 <button type="button" data-scroll-target="#coreStocks" aria-selected="false">종목</button>
                 <button type="button" data-scroll-target="#coreEtf" aria-selected="false">ETF</button>
                 <button type="button" data-scroll-target="#themeAiReport" aria-selected="false">AI분석</button>
@@ -120,23 +120,23 @@
                 </div>
                 <!-- themeMap -->
 
-                <div class="themeStat">
-                  <div class="left">
-                    <p class="themeName">AI &amp; 데이터 지능</p>
-                    <p class="date">2026/05/05 장마감 기준</p>
-                  </div>
-                  <div class="right">
-                    <p class="label">평균수익률</p>
-                    <div class="rankRow">
-                      <span class="rankChange up">3 ▲</span>
-                      <span class="pctBadge up"><span class="pct">+3.82%</span></span>
+                <div class="section__tab-track">
+                  <div class="themeStat tab-pane" id="dataIntelligence">
+                    <div class="left">
+                      <p class="themeName">AI &amp; 데이터 지능</p>
+                      <p class="date">2026/05/05 장마감 기준</p>
+                    </div>
+                    <div class="right">
+                      <p class="label">평균수익률</p>
+                      <div class="rankRow">
+                        <span class="rankChange up">3 ▲</span>
+                        <span class="pctBadge up"><span class="pct">+3.82%</span></span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- themeStat -->
+                  <!-- themeStat -->
 
-                <div class="section__tab-track">
-                  <div class="tab-pane" id="themeMarket">
+                  <div class="tab-pane" id="themeMarket" data-tab-group="dataIntelligence">
                     <div class="title">
                       <strong>
                         <span>테마 시황</span>
@@ -452,13 +452,21 @@
             return child.classList.contains('tab-pane');
           });
 
+          // 버튼 하나가 여러 tab-pane을 아우르는 경우(예: 테마시황 = dataIntelligence + themeMarket),
+          // data-tab-group으로 소속을 표시합니다. 없으면 자기 자신의 id가 곧 그룹입니다.
+          function getPaneGroup(pane) {
+            return pane.getAttribute('data-tab-group') || pane.id;
+          }
+
           function setActivePane(pane) {
+            const group = getPaneGroup(pane);
             sectionPanes.forEach(function (p) {
-              p.classList.toggle('active', p === pane);
-              p.classList.toggle('show', p === pane);
+              const isSameGroup = getPaneGroup(p) === group;
+              p.classList.toggle('active', isSameGroup);
+              p.classList.toggle('show', isSameGroup);
             });
             sectionTabButtons.forEach(function (button) {
-              const isActive = button.getAttribute('data-scroll-target') === '#' + pane.id;
+              const isActive = button.getAttribute('data-scroll-target') === '#' + group;
               button.classList.toggle('active', isActive);
               button.setAttribute('aria-selected', String(isActive));
             });
@@ -471,6 +479,24 @@
               targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
               setActivePane(targetPane);
             });
+          });
+
+          // 사용자가 직접 세로로 스크롤해도 버튼이 동기화되도록, 스크롤이 멈추면 가장 가까운 섹션을 활성화합니다.
+          let scrollEndTimer = null;
+          window.addEventListener('scroll', function () {
+            clearTimeout(scrollEndTimer);
+            scrollEndTimer = setTimeout(function () {
+              let closestPane = null;
+              let closestDistance = Infinity;
+              sectionPanes.forEach(function (pane) {
+                const distance = Math.abs(pane.getBoundingClientRect().top - 169);
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  closestPane = pane;
+                }
+              });
+              if (closestPane) setActivePane(closestPane);
+            }, 120);
           });
         });
       });

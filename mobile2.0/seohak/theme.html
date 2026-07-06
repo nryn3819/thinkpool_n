@@ -714,6 +714,8 @@
                   <div class="modal-body">
                     <strong>테마 선택</strong>
                     <span>5개 테마가 모두 선택되었습니다. 다른 테마를 선택하려면 선택된 테마 중 하나를 해제해 주세요.</span>
+                    <button type="button" class="confirm" data-bs-dismiss="modal">확인</button>
+                    <!-- 확인버튼 -->
                     <button class="modal-close" data-bs-dismiss="modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -954,6 +956,24 @@
               targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
               setActivePane(targetPane);
             });
+          });
+
+          // 사용자가 직접 세로로 스크롤해도 버튼이 동기화되도록, 스크롤이 멈추면 가장 가까운 섹션을 활성화합니다.
+          let scrollEndTimer = null;
+          window.addEventListener('scroll', function () {
+            clearTimeout(scrollEndTimer);
+            scrollEndTimer = setTimeout(function () {
+              let closestPane = null;
+              let closestDistance = Infinity;
+              sectionPanes.forEach(function (pane) {
+                const distance = Math.abs(pane.getBoundingClientRect().top - 169);
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  closestPane = pane;
+                }
+              });
+              if (closestPane) setActivePane(closestPane);
+            }, 120);
           });
         });
       });

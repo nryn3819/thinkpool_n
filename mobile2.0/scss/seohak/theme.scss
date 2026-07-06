@@ -315,6 +315,19 @@
       @include modal-guide-text;
     }
 
+    // 테마 선택 최대 개수 안내 모달 - 바텀시트 하단의 확인 버튼과 동일한 스타일을 사용합니다.
+    #themeSelectMaxGuide .modal-body .confirm {
+      position: static;
+      width: 100%;
+      height: 40px;
+      border: 0;
+      border-radius: 8px;
+      background: $seohak-color-accent;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
     // 테마 선택 바텀시트 - Bootstrap offcanvas-bottom을 사용합니다.
     .themeSelectSheet {
       --bs-offcanvas-height: auto;

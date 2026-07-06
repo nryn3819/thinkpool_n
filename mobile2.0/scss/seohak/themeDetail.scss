@@ -103,8 +103,7 @@
           align-items: center;
           width: 100%;
           padding: 30px 17px;
-          border-top: 8px solid #f6f6f6;
-          border-bottom: 8px solid #f6f6f6;
+          border-top: 8px solid #f6f6f6 !important;
           p {
             margin: 0;
           }
@@ -279,6 +278,7 @@
                 &.col-name {
                   display: flex;
                   flex-direction: column;
+                  justify-content: center;
                   gap: 2px 0;
                   min-width: 0; // flex 자식이 content 너비만큼 커지려는 것을 막아 말줄임이 동작하도록 합니다.
 
