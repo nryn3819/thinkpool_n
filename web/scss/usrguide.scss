@@ -237,7 +237,9 @@
 
           button,
           a {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 200px;
             height: 70px;
             border-radius: 5px;
