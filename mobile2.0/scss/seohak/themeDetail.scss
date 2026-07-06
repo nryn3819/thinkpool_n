@@ -183,8 +183,11 @@
           }
         }
 
+        // period__tabs까지 sticky 영역에 포함되어 있어(48px + 75px + 46px = 169px),
+        // 스크롤 이동 시 콘텐츠 상단이 가려지지 않도록 scroll-margin-top을 덮어씁니다.
         .section__tab-track > .tab-pane {
           @include section-tab-pane;
+          scroll-margin-top: 169px;
         }
 
         // 테마 시황 영상 썸네일 - AI분석의 videoBox와 동일 + 재생버튼만 추가

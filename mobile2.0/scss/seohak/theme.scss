@@ -70,9 +70,12 @@
       }
 
       // section__tab-track 내부의 각 탭 콘텐츠 - main.scss의 section__tab-track과 동일한 구분선·여백
+      // period__tabs까지 sticky 영역에 포함되어 있어(48px + 75px + 46px = 169px),
+      // 스크롤 이동 시 콘텐츠 상단이 가려지지 않도록 scroll-margin-top을 덮어씁니다.
       .section__tab-track > .tab-pane {
         @include section-tab-pane;
         padding-top: 0 !important;
+        scroll-margin-top: 169px;
       }
 
       .themeMap {

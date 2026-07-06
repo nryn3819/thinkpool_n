@@ -129,7 +129,7 @@
 .seohak__main-table.table-sm tbody tr td.col-name span {
   display: block;
   width: 100%;
-  max-width: 160px;
+  max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -362,6 +362,7 @@
 }
 #seohak.seohak-map .mainContent .section__tab-track > .tab-pane {
   padding-top: 0 !important;
+  scroll-margin-top: 169px;
 }
 #seohak.seohak-map .mainContent .themeMap {
   padding-top: 20px;

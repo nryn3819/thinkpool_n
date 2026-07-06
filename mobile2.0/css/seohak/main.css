@@ -521,7 +521,6 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
   display: flex;
   width: 100%;
-  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs button {
   height: 38px;
@@ -537,6 +536,9 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
+  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content {
   padding-top: 20px;
@@ -578,8 +580,6 @@
   display: flex;
   gap: 0 4px;
   width: 100%;
-  gap: 0;
-  justify-content: space-between;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
   display: flex;
@@ -599,6 +599,10 @@
   background: #5367ff;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs {
+  gap: 0;
+  justify-content: space-between;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
   width: calc((100% - 12px) / 4);
@@ -706,7 +710,6 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
   display: flex;
   width: 100%;
-  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs button {
   height: 38px;
@@ -722,6 +725,9 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
+  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content {
   padding-top: 20px;
@@ -1205,7 +1211,7 @@
 .seohak__main-table.table-sm tbody tr td.col-name span {
   display: block;
   width: 100%;
-  max-width: 160px;
+  max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
