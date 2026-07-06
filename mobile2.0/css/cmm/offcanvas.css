@@ -1,1 +1,229 @@
-.searcharea{position:fixed;display:none;width:100%;height:100%;top:0;left:0;background:#fff;z-index:-1;opacity:0}@media(min-width: 719px){.searcharea{width:720px;left:50%;margin-left:-360px}}.searcharea-main{top:48px;border-top:1px solid #5368ff}.searcharea.sch-show{display:block;opacity:1;z-index:998}.searcharea-header{display:flex;height:48px;padding:0 18px;justify-content:space-between;align-items:center;align-content:center;border-bottom:1px solid #5368ff}.searcharea-header .logo{margin:0}.searcharea-header .logo img{float:left}.searcharea-header .searcharea-sch{width:calc(100% - 72px)}.searcharea-header .searcharea-sch input{width:calc(100% - 40px);height:20px;border-radius:0 !important;outline:0 !important;border:0;font-size:16px;padding:0 10px;background:none}.searcharea-header .searcharea-sch input:focus,.searcharea-header .searcharea-sch input:active{outline:0}.searcharea-header .searcharea-sch .schButton{display:block;width:20px;height:20px;background:url(https://img.thinkpool.com/www/mobile/img/b-sch.png) no-repeat 0 0;background-size:20px auto;margin-top:-0.5px !important;float:left}.searcharea-header>.btn-close{padding:0;width:20px;height:20px}.searcharea-body{padding:20px 17px}.searcharea-body .off-basic .tag{display:block;width:100%}.searcharea-body .off-basic .tag span{font-size:16px;color:#5368ff;padding-right:5px}.searcharea-body .off-basic .tag span:last-child{padding-right:0}.searcharea-body .off-basic .tag span::before{content:"#"}.searcharea-body .off-basic .schTop{display:block;width:100%;padding-bottom:10px;border-bottom:1px solid #cacaca}.searcharea-body .off-basic .schTop span{display:inline-block;font-size:16px;color:#000;padding-right:5px;padding-bottom:10px}.searcharea-body .off-basic .schTop span:last-child{padding-right:0}.searcharea-body .off-basic .latest{display:block;width:100%}.searcharea-body .off-basic .latest strong{display:block;font-size:16px;color:#000;font-weight:700}.searcharea-body .off-basic .latest span{display:block;font-size:16px;color:#000;margin-top:10px;padding-left:10px}.searcharea-body .off-basic .latest span.tag::before{content:"#"}.searcharea-body .off-basic .latest span:first-child{margin-top:15px}.searcharea-body .off-basic .latest span em{font-size:16px;color:#999}.searcharea02{position:fixed;display:none;width:100%;height:100%;top:0;left:0;background:#fff;z-index:-1;opacity:0}@media(min-width: 719px){.searcharea02{width:720px;left:50%;margin-left:-360px}}.searcharea02-main{top:48px;border-top:1px solid #5368ff}.searcharea02.sch-show{display:block;opacity:1;z-index:998}.searcharea02-header{display:flex;height:48px;padding:0 18px;justify-content:space-between;align-items:center;align-content:center;border-bottom:1px solid #5368ff}.searcharea02-header .logo{margin:0}.searcharea02-header .logo img{float:left}.searcharea02-header .searcharea-sch{width:calc(100% - 72px)}.searcharea02-header .searcharea-sch input{width:calc(100% - 40px);height:20px;border-radius:0 !important;outline:0 !important;border:0;font-size:16px;padding:0 10px;background:none}.searcharea02-header .searcharea-sch input:focus,.searcharea02-header .searcharea-sch input:active{outline:0}.searcharea02-header .searcharea-sch .schButton{display:block;width:20px;height:20px;background:url(https://img.thinkpool.com/www/mobile/img/b-sch.png) no-repeat 0 0;background-size:20px auto;margin-top:-0.5px !important;float:left}.searcharea02-header>.btn-close{padding:0;width:20px;height:20px}.favtop{display:block;width:100%;line-height:33px}.favtop strong{font-size:16px}.favitemlist{display:block;width:100%;margin-top:25px;border-top:1px solid #cacaca;padding:20px 10px}.favitemlist div{margin-bottom:10px}.favitemlist div label>em{color:#999}
+.searcharea {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  opacity: 0;
+}
+@media (min-width: 719px) {
+  .searcharea {
+    width: 720px;
+    left: 50%;
+    margin-left: -360px;
+  }
+}
+.searcharea-main {
+  top: 48px;
+  border-top: 1px solid #5368FF;
+}
+.searcharea.sch-show {
+  display: block;
+  opacity: 1;
+  z-index: 998;
+}
+.searcharea-header {
+  display: flex;
+  height: 48px;
+  padding: 0 18px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid #5368FF;
+}
+.searcharea-header .logo {
+  margin: 0;
+}
+.searcharea-header .logo img {
+  float: left;
+}
+.searcharea-header .searcharea-sch {
+  width: calc(100% - 72px);
+}
+.searcharea-header .searcharea-sch input {
+  width: calc(100% - 40px);
+  height: 20px;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: 0;
+  font-size: 16px;
+  padding: 0 10px;
+  background: none;
+}
+.searcharea-header .searcharea-sch input:focus, .searcharea-header .searcharea-sch input:active {
+  outline: 0;
+}
+.searcharea-header .searcharea-sch .schButton {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(https://img.thinkpool.com/www/mobile/img/b-sch.png) no-repeat 0 0;
+  background-size: 20px auto;
+  margin-top: -0.5px !important;
+  float: left;
+}
+.searcharea-header > .btn-close {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+.searcharea-body {
+  padding: 20px 17px;
+}
+.searcharea-body .off-basic .tag {
+  display: block;
+  width: 100%;
+}
+.searcharea-body .off-basic .tag span {
+  font-size: 16px;
+  color: #5368FF;
+  padding-right: 5px;
+}
+.searcharea-body .off-basic .tag span:last-child {
+  padding-right: 0;
+}
+.searcharea-body .off-basic .tag span::before {
+  content: "#";
+}
+.searcharea-body .off-basic .schTop {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cacaca;
+}
+.searcharea-body .off-basic .schTop span {
+  display: inline-block;
+  font-size: 16px;
+  color: #000;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+.searcharea-body .off-basic .schTop span:last-child {
+  padding-right: 0;
+}
+.searcharea-body .off-basic .latest {
+  display: block;
+  width: 100%;
+}
+.searcharea-body .off-basic .latest strong {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+}
+.searcharea-body .off-basic .latest span {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.searcharea-body .off-basic .latest span.tag::before {
+  content: "#";
+}
+.searcharea-body .off-basic .latest span:first-child {
+  margin-top: 15px;
+}
+.searcharea-body .off-basic .latest span em {
+  font-size: 16px;
+  color: #999;
+}
+
+.searcharea02 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  opacity: 0;
+}
+@media (min-width: 719px) {
+  .searcharea02 {
+    width: 720px;
+    left: 50%;
+    margin-left: -360px;
+  }
+}
+.searcharea02-main {
+  top: 48px;
+  border-top: 1px solid #5368FF;
+}
+.searcharea02.sch-show {
+  display: block;
+  opacity: 1;
+  z-index: 998;
+}
+.searcharea02-header {
+  display: flex;
+  height: 48px;
+  padding: 0 18px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid #5368FF;
+}
+.searcharea02-header .logo {
+  margin: 0;
+}
+.searcharea02-header .logo img {
+  float: left;
+}
+.searcharea02-header .searcharea-sch {
+  width: calc(100% - 72px);
+}
+.searcharea02-header .searcharea-sch input {
+  width: calc(100% - 40px);
+  height: 20px;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: 0;
+  font-size: 16px;
+  padding: 0 10px;
+  background: none;
+}
+.searcharea02-header .searcharea-sch input:focus, .searcharea02-header .searcharea-sch input:active {
+  outline: 0;
+}
+.searcharea02-header .searcharea-sch .schButton {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(https://img.thinkpool.com/www/mobile/img/b-sch.png) no-repeat 0 0;
+  background-size: 20px auto;
+  margin-top: -0.5px !important;
+  float: left;
+}
+.searcharea02-header > .btn-close {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.favtop {
+  display: block;
+  width: 100%;
+  line-height: 33px;
+}
+.favtop strong {
+  font-size: 16px;
+}
+
+.favitemlist {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  border-top: 1px solid #cacaca;
+  padding: 20px 10px;
+}
+.favitemlist div {
+  margin-bottom: 10px;
+}
+.favitemlist div label > em {
+  color: #999;
+}

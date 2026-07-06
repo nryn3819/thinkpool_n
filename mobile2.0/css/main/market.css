@@ -1,1 +1,196 @@
-.market .marketList{padding:0 17px}.market .marketList.themelist .list .left{width:calc(100% - 125px)}.market .marketList.themelist .list .price{padding:0 10px 0 0}.market .marketList .list{display:flex;justify-content:space-between;align-items:center;padding:10px 0 11px 0;border-bottom:1px solid #e2e2e2}.market .marketList .list:last-child{border-bottom:0}.market .marketList .list .leftDate{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;width:45px;height:51px}.market .marketList .list .leftDate span{display:inline-block;font-size:16px;color:#999;height:23px;line-height:23px;font-weight:400}.market .marketList .list .leftDate span.pvl{margin-top:5px}.market .marketList .list .left{display:block;width:calc(100% - 77px)}.market .marketList .list .left-sec{width:calc(100% - 77px - 45px)}.market .marketList .list .left .top{width:100%;min-height:23px;line-height:23px}.market .marketList .list .left .top .date{font-size:16px;color:#999;font-weight:400}.market .marketList .list .left .top .pvl{font-size:16px;color:#999;font-weight:400}.market .marketList .list .left .top .nameObj{font-size:16px;color:#000;font-weight:700}.market .marketList .list .left .top .nameObj .objDate{font-size:14px;color:#000;font-weight:400}.market .marketList .list .left .top .theme{font-size:16px;color:#000;font-weight:500}.market .marketList .list .left .btm{width:100%;min-height:23px;line-height:23px;padding-top:2px}.market .marketList .list .left .btm .contxt{font-size:14px;color:#000}.market .marketList .list .left .btm .date{font-size:13px;color:#999}.market .marketList .list .left .btm .optxt{padding-left:45px;font-size:14px;color:#000}.market .marketList .list .left .btm .optxt span{display:block}.market .marketList .list .right{display:block;width:66px}.market .marketList .list .right .per{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;width:100%;min-height:22px;max-height:30px;box-sizing:content-box;background:#cbcbcb;font-size:12px;color:#fff;padding:3px 0;text-align:center;border-radius:3px}.market .marketList .list .right .per.up{background:#ff414f}.market .marketList .list .right .per.dn{background:#5367ff}.market .marketList .list .right .per span{display:block;width:100%;min-height:15px;line-height:15px;font-weight:300}.market .marketList .list .right .per em{display:block;width:100%;min-height:15px;line-height:15px;font-weight:700}.market .marketList .list .right .like{display:block;width:20px}.market .marketList .list .right .like button{display:inline-block;width:20px;height:20px;padding:0;border:0;background:url("https://img.thinkpool.com/www/mobile/img/fav.png") no-repeat center 50%;background-size:20px auto;text-indent:-9999em}.market .marketList .list .right .like button.active{background:url("https://img.thinkpool.com/www/mobile/img/favOn.png") no-repeat center 50%;background-size:20px auto}.market .marketList .list-market .right{width:56px}.theme-o-list{display:block;width:100%;padding:0 17px}.theme-o-list .list{display:block;width:100%;padding:10px 0;border-bottom:1px solid #e2e2e2}.theme-o-list .list .date{display:block;font-size:13px;color:#999;height:19px;line-height:19px}.theme-o-list .list .txt{display:block;font-size:16px;color:#000;width:100%}.theme-o-list .list .txt a,.theme-o-list .list .txt span{color:#000}.theme-o-list .list .tag{display:block;font-size:14px;color:#5367ff;margin-top:5px}.theme-o-list .list .tag em{display:inline-block;margin-right:10px}
+.market .marketList {
+  padding: 0 17px;
+}
+.market .marketList.themelist .list .left {
+  width: calc(100% - 125px);
+}
+.market .marketList.themelist .list .price {
+  padding: 0 10px 0 0;
+}
+.market .marketList .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 11px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.market .marketList .list:last-child {
+  border-bottom: 0;
+}
+.market .marketList .list .leftDate {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 51px;
+}
+.market .marketList .list .leftDate span {
+  display: inline-block;
+  font-size: 16px;
+  color: #999;
+  height: 23px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.market .marketList .list .leftDate span.pvl {
+  margin-top: 5px;
+}
+.market .marketList .list .left {
+  display: block;
+  width: calc(100% - 77px);
+}
+.market .marketList .list .left-sec {
+  width: calc(100% - 77px - 45px);
+}
+.market .marketList .list .left .top {
+  width: 100%;
+  min-height: 23px;
+  line-height: 23px;
+}
+.market .marketList .list .left .top .date {
+  font-size: 16px;
+  color: #999;
+  font-weight: 400;
+}
+.market .marketList .list .left .top .pvl {
+  font-size: 16px;
+  color: #999;
+  font-weight: 400;
+}
+.market .marketList .list .left .top .nameObj {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+}
+.market .marketList .list .left .top .nameObj .objDate {
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+}
+.market .marketList .list .left .top .theme {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+.market .marketList .list .left .btm {
+  width: 100%;
+  min-height: 23px;
+  line-height: 23px;
+  padding-top: 2px;
+}
+.market .marketList .list .left .btm .contxt {
+  font-size: 14px;
+  color: #000;
+}
+.market .marketList .list .left .btm .date {
+  font-size: 13px;
+  color: #999;
+}
+.market .marketList .list .left .btm .optxt {
+  padding-left: 45px;
+  font-size: 14px;
+  color: #000;
+}
+.market .marketList .list .left .btm .optxt span {
+  display: block;
+}
+.market .marketList .list .right {
+  display: block;
+  width: 66px;
+}
+.market .marketList .list .right .per {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 22px;
+  max-height: 30px;
+  box-sizing: content-box;
+  background: #cbcbcb;
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 0;
+  text-align: center;
+  border-radius: 3px;
+}
+.market .marketList .list .right .per.up {
+  background: #FF414F;
+}
+.market .marketList .list .right .per.dn {
+  background: #5367FF;
+}
+.market .marketList .list .right .per span {
+  display: block;
+  width: 100%;
+  min-height: 15px;
+  line-height: 15px;
+  font-weight: 300;
+}
+.market .marketList .list .right .per em {
+  display: block;
+  width: 100%;
+  min-height: 15px;
+  line-height: 15px;
+  font-weight: 700;
+}
+.market .marketList .list .right .like {
+  display: block;
+  width: 20px;
+}
+.market .marketList .list .right .like button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: url("https://img.thinkpool.com/www/mobile/img/fav.png") no-repeat center 50%;
+  background-size: 20px auto;
+  text-indent: -9999em;
+}
+.market .marketList .list .right .like button.active {
+  background: url("https://img.thinkpool.com/www/mobile/img/favOn.png") no-repeat center 50%;
+  background-size: 20px auto;
+}
+.market .marketList .list-market .right {
+  width: 56px;
+}
+
+.theme-o-list {
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+}
+.theme-o-list .list {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.theme-o-list .list .date {
+  display: block;
+  font-size: 13px;
+  color: #999;
+  height: 19px;
+  line-height: 19px;
+}
+.theme-o-list .list .txt {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+}
+.theme-o-list .list .txt a, .theme-o-list .list .txt span {
+  color: #000;
+}
+.theme-o-list .list .tag {
+  display: block;
+  font-size: 14px;
+  color: #5367FF;
+  margin-top: 5px;
+}
+.theme-o-list .list .tag em {
+  display: inline-block;
+  margin-right: 10px;
+}

@@ -1,0 +1,231 @@
+.seohak__main-table {
+  thead {
+    tr {
+      th {
+        height: 38px;
+        background: #f8f9fb;
+        font-size: 13px;
+        color: $seohak-color-text-secondary;
+        font-weight: 350;
+        padding: 0 4px;
+        border-top: 1px solid $seohak-color-border-light;
+        border-bottom: 1px solid $seohak-color-border-light;
+
+        &.ta_r {
+          text-align: right;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        td:first-child {
+          span {
+            width: 24px;
+            height: 21px;
+            border: 1px solid rgba(83, 103, 255, 0.5);
+            background: #f2f3ff;
+            color: $seohak-color-accent;
+          }
+        }
+      }
+      &.rowTop {
+        td {
+          border-bottom: 0;
+          &:first-child {
+            border-bottom: 1px solid $seohak-color-border-light;
+          }
+        }
+      }
+      td {
+        height: 42px;
+        padding: 0 4px;
+        border-bottom: 1px solid $seohak-color-border-light;
+
+        &:first-child {
+          span {
+            display: flex;
+            width: 24px;
+            height: 21px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgba(102, 102, 102, 0.2);
+            font-size: 14px;
+            font-weight: 700;
+            color: $seohak-color-text-secondary;
+          }
+        }
+
+        &:nth-child(2) {
+          span {
+            font-size: 14px;
+            color: $seohak-color-text;
+            font-weight: 700;
+          }
+        }
+        &:nth-child(3) {
+          span {
+            font-size: 14px;
+            font-weight: 700;
+            color: $seohak-color-text;
+            &.up {
+              color: $seohak-color-up;
+            }
+            &.dn {
+              color: $seohak-color-down;
+            }
+          }
+        }
+        &:last-child {
+          span {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+
+        &.ta_c {
+          text-align: center;
+        }
+        &.ta_r {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &.table__doubleLine {
+    tbody {
+      tr {
+        &.rowTop {
+          &:nth-child(1),
+          &:nth-child(3),
+          &:nth-child(5) {
+            td:first-child {
+              span {
+                width: 24px;
+                height: 21px;
+                border: 1px solid rgba(83, 103, 255, 0.5);
+                background: #f2f3ff;
+                color: $seohak-color-accent;
+              }
+            }
+          }
+          td {
+            height: 31px;
+            padding-top: 10px;
+            padding-bottom: 0;
+
+            &:first-child {
+              padding: 10px 4px;
+            }
+
+            &:nth-child(2) {
+              font-size: 14px;
+              color: $seohak-color-text;
+              font-weight: 700;
+
+              span {
+                font-weight: 700;
+              }
+              em {
+                display: inline-flex;
+                align-items: center;
+                margin-left: 4px;
+                padding: 0 4px;
+                background: #f3811d;
+                border-radius: 4px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 400;
+                height: 14px;
+              }
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+              span {
+                font-size: 14px;
+                color: $seohak-color-text;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        &:not(.rowTop) {
+          td {
+            height: 31px;
+            padding-bottom: 10px;
+            padding-top: 0;
+
+            span {
+              display: block;
+              width: 100%;
+              font-size: 13px;
+              color: $seohak-color-text;
+              font-weight: 400;
+              background: 0;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.table-sm {
+    tbody tr {
+      td:nth-child(2) {
+        span {
+          display: block;
+          width: 100%;
+          max-width: 160px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.seohak__main-tableS {
+  thead {
+    tr {
+      th {
+        color: $seohak-color-text-secondary;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 400;
+        border-top: 1px solid $seohak-color-border-light;
+        border-bottom: 1px solid $seohak-color-border-light;
+        background: #f8f9fb;
+        padding: 10px 4px;
+        height: 16px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid $seohak-color-border-light;
+        padding: 10px 4px;
+        min-height: 21px;
+
+        .date {
+          color: $seohak-color-text-secondary;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 400;
+        }
+
+        .stocks {
+          color: $seohak-color-text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px; /* 150% */
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>씽크풀</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+        <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show"><img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid" /></a>
+            </div>
+            <div class="pageBack"><button type="button">이전페이지</button></div>
+            <div class="headerTitle centerHeader">
+              <strong>미국 60대 테마</strong>
+            </div>
+            <div class="subSchBtn">
+              <button type="button" id="opensch" class="schButton">종목검색</button>
+            </div>
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div data-bs-toggle="offcanvas" data-bs-target="#sideContent" class="sideMenuBtn sch-hide">
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled="disabled" />
+                  <label for="sdmnu" class="menu"
+                    ><div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div
+                  ></label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <!-- 테마 상세 -->
+          <link rel="stylesheet" href="../css/seohak/themeDetail.css" />
+          <div id="seohak" class="seohak-themeDetail">
+            <div class="visual">
+              <div class="txt">
+                <strong>미국 60대 테마</strong>
+                <span>테마별 핵심 종목과 대표 ETF를 확인해 <br />시장 흐름을 빠르게 파악</span>
+              </div>
+              <button>테마 투자 전략 알아보기</button>
+
+              <div class="visual-img">
+                <img src="../img/seohak/theme/visual.png" alt="미국 60대 테마" width="100%" />
+              </div>
+              <!-- 비주얼이미지 -->
+            </div>
+            <!-- //상단 비주얼 -->
+
+            <div class="mainContent">
+              <div class="periodSelect">
+                <div class="title">
+                  <strong>분석 기간 선택</strong>
+                  <span>선택 시 하단 콘텐츠 전체의 기간 변경</span>
+                </div>
+                <!-- title -->
+
+                <div class="period__tabs">
+                  <button type="button" class="active">1일</button>
+                  <button type="button">1주</button>
+                  <button type="button">1개월</button>
+                  <button type="button">3개월</button>
+                  <button type="button">6개월</button>
+                  <button type="button">1년</button>
+                </div>
+                <!-- period__tabs -->
+              </div>
+              <!-- periodSelect -->
+
+              <div class="section__tabs">
+                <button type="button" class="active" data-scroll-target="#themeMarket" aria-selected="true">테마시황</button>
+                <button type="button" data-scroll-target="#coreStocks" aria-selected="false">종목</button>
+                <button type="button" data-scroll-target="#coreEtf" aria-selected="false">ETF</button>
+                <button type="button" data-scroll-target="#themeAiReport" aria-selected="false">AI분석</button>
+              </div>
+              <!-- section__tabs -->
+
+              <div class="section__tab-content tab-content">
+                <div class="themeMap">
+                  <div class="title">
+                    <strong>
+                      <span>테마지도</span>
+                    </strong>
+                    <span>2026/05/05 장마감 기준</span>
+                  </div>
+                  <!-- title -->
+
+                  <div class="mapDetail">
+                    <p class="mapDetail-title">기술 패권 &amp; 디지털 혁신</p>
+                    <div class="chart">
+                      <img src="../img/seohak/themeDetail/map-detail.png" alt="기술 패권 &amp; 디지털 혁신 테마지도" width="100%" />
+                    </div>
+                    <!-- chart -->
+                  </div>
+                  <!-- mapDetail -->
+
+                  <p class="note">※ 두 손가락으로 확대·축소할 수 있습니다.</p>
+                </div>
+                <!-- themeMap -->
+
+                <div class="themeStat">
+                  <div class="left">
+                    <p class="themeName">AI &amp; 데이터 지능</p>
+                    <p class="date">2026/05/05 장마감 기준</p>
+                  </div>
+                  <div class="right">
+                    <p class="label">평균수익률</p>
+                    <div class="rankRow">
+                      <span class="rankChange up">3 ▲</span>
+                      <span class="pctBadge up"><span class="pct">+3.82%</span></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- themeStat -->
+
+                <div class="section__tab-track">
+                  <div class="tab-pane" id="themeMarket">
+                    <div class="title">
+                      <strong>
+                        <span>테마 시황</span>
+                      </strong>
+                    </div>
+                    <!--  -->
+                    <div class="videoBox">
+                      <div class="video">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/Wy9Utuqf3nE?si=jBIST6_wkJ9-yEXn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                      <!-- 썸네일 -->
+
+                      <div class="video-title">
+                        <strong class="title">삼성전자 말고 '이 주식' 보세요. 델(DELL) 57조 수주 잔고와 AI 엣지 TOP 5</strong>
+                        <span class="info">케이트렌드 US · 2026/05/05</span>
+                      </div>
+                      <!-- 영상 제목&정보 -->
+                    </div>
+                    <!-- videoBox -->
+                  </div>
+                  <!-- themeMarket -->
+
+                  <div class="tab-pane" id="coreStocks">
+                    <div class="title">
+                      <strong>
+                        <span>핵심 5종목</span>
+                      </strong>
+                      <span>2026/05/05 장마감 기준</span>
+                    </div>
+                    <!-- title -->
+
+                    <table class="seohak__stock-table" width="100%">
+                      <colgroup>
+                        <col width="28" />
+                        <col width="*" />
+                        <col width="53" />
+                        <col width="70" />
+                        <col width="65" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>순위</th>
+                          <th>종목명</th>
+                          <th class="ta_r">비중</th>
+                          <th class="ta_r">보관금액</th>
+                          <th class="ta_r">평균수익률</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="rank">1</span></td>
+                          <td>
+                            <span class="ticker">NVDA</span>
+                            <span class="name">엔비디아가나다라마</span>
+                          </td>
+                          <td class="ta_r"><span>13.21%</span></td>
+                          <td class="ta_r"><span>396,382억</span></td>
+                          <td class="ta_r"><span class="up">+180.12%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="rank">2</span></td>
+                          <td>
+                            <span class="ticker">PLTR</span>
+                            <span class="name">팔란티어</span>
+                          </td>
+                          <td class="ta_r"><span>13.21%</span></td>
+                          <td class="ta_r"><span>396,382억</span></td>
+                          <td class="ta_r"><span class="up">+180.12%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="rank">3</span></td>
+                          <td>
+                            <span class="ticker">TSLA</span>
+                            <span class="name">테슬라</span>
+                          </td>
+                          <td class="ta_r"><span>13.21%</span></td>
+                          <td class="ta_r"><span>396,382억</span></td>
+                          <td class="ta_r"><span class="up">+180.12%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="rank">4</span></td>
+                          <td>
+                            <span class="ticker">TSLA</span>
+                            <span class="name">테슬라가나다라마바</span>
+                          </td>
+                          <td class="ta_r"><span>13.21%</span></td>
+                          <td class="ta_r"><span>396,382억</span></td>
+                          <td class="ta_r"><span class="up">+180.12%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="rank">5</span></td>
+                          <td>
+                            <span class="ticker">TSLA</span>
+                            <span class="name">테슬라</span>
+                          </td>
+                          <td class="ta_r"><span>13.21%</span></td>
+                          <td class="ta_r"><span>396,382억</span></td>
+                          <td class="ta_r"><span class="up">+180.12%</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- seohak__stock-table -->
+
+                    <div class="stockReturn">
+                      <div class="title">
+                        <strong>
+                          <span>핵심 5종목 수익률</span>
+                        </strong>
+                        <span>2026/05/05 장마감 기준</span>
+                      </div>
+                      <!-- title -->
+
+                      <div class="chart">
+                        <img src="../img/seohak/themeDetail/stock-chart.png" alt="핵심 5종목 수익률 차트" width="100%" />
+                      </div>
+                      <!-- chart -->
+
+                      <div class="chart-label">
+                        <span class="label label001">NVDA</span>
+                        <span class="label label002">MSFT</span>
+                        <span class="label label003">PLTR</span>
+                        <span class="label label004">META</span>
+                        <span class="label label005">GOOGL</span>
+                      </div>
+                      <!-- chart-label -->
+                    </div>
+                    <!-- stockReturn -->
+                  </div>
+                  <!-- coreStocks -->
+
+                  <div class="tab-pane" id="coreEtf">
+                    <div class="title">
+                      <strong>
+                        <span>대표ETF</span>
+                      </strong>
+                      <span>2026/05/05 장마감 기준</span>
+                    </div>
+                    <!-- title -->
+
+                    <div class="etf__list">
+                      <div class="etf">
+                        <div class="left">
+                          <p class="ticker">ATQ</p>
+                          <p class="name">반에크 반도체 ETF</p>
+                        </div>
+                        <p class="pct up">+223.82%</p>
+                      </div>
+                      <!-- ATQ -->
+
+                      <div class="etf">
+                        <div class="left">
+                          <p class="ticker">ARTY</p>
+                          <p class="name">디파이언스 비트마인 이머션 테크놀로지스 데일리 2배 인버스 ETF</p>
+                        </div>
+                        <p class="pct up">+223.82%</p>
+                      </div>
+                      <!-- ARTY -->
+                    </div>
+                    <!-- etf__list -->
+
+                    <div class="etfReturn">
+                      <div class="title">
+                        <strong>
+                          <span>대표 ETF 수익률</span>
+                        </strong>
+                        <span>2026/05/05 장마감 기준</span>
+                      </div>
+                      <!-- title -->
+
+                      <div class="chart">
+                        <img src="../img/seohak/themeDetail/etf-chart.png" alt="대표 ETF 수익률 차트" width="100%" />
+                      </div>
+                      <!-- chart -->
+
+                      <div class="chart-label">
+                        <span class="label label001">NVDA</span>
+                        <span class="label label002">MSFT</span>
+                      </div>
+                      <!-- chart-label -->
+                    </div>
+                    <!-- etfReturn -->
+                  </div>
+                  <!-- coreEtf -->
+
+                  <div class="tab-pane" id="themeAiReport">
+                    <div class="summaryText">
+                      <div class="title">
+                        <strong>
+                          <span>테마 리포트</span>
+                          <em>Ai</em>
+                        </strong>
+                        <span>2026/05/05 장마감 기준</span>
+                      </div>
+                      <!-- 타이틀 -->
+
+                      <span> 이번 1개월 사이클의 주도권은 기술 패권 &amp; 디지털 혁신 섹터가 압도적으로 장악하였습니다. AI 엣지 디바이스, 사이버 보안, 데이터 프라이버시 등 상위권 테마가 모두 이 섹터에서 배출된 점은 단순한 테마별 순환이 아닌, AI 인프라 전반에 걸친 구조적 자금 유입임을 시사합니다. 특히 DELL의 세 자릿수 급등은 AI 추론 수요가 클라우드 중심에서 엣지 하드웨어 레이어로 확장되고 있음을 증명하며, OKTA와 CRWD의 동반 급등은 AI 확산에 따른 공격 표면 증가가 사이버 보안 지출을 필수 비용으로 고착화시키고 있다는 시장의 컨센서스를 반영합니다. 신공급망 &amp; 국가 안보 섹터 또한 15%를 상회하는 수익률로 견고한 공동 주도권을 형성하였으며, 소버린 AI와 우주 경제 테마에서의 ARM, RKLB 급등은 AI 자주권 확보와 우주 상업화라는 지정학적 내러티브가 자본 배분의 새로운 기준축으로 부상했음을 명확히 보여줍니다. </span>
+
+                      <button class="more">
+                        <span>펼치기</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M15 8.3335L10.5893 12.7442C10.2638 13.0697 9.73618 13.0697 9.41075 12.7442L5 8.3335" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- summaryText -->
+                  </div>
+                  <!-- themeAiReport -->
+                </div>
+                <!-- section__tab-track -->
+              </div>
+              <!-- section__tab-content -->
+
+              <div class="common__importantNote">
+                <strong>※ 유의사항</strong>
+
+                <div class="txt">
+                  <span>본 서비스는 일부 콘텐츠에 한해 AI가 선별·요약한 투자정보를 제공합니다.</span>
+                  <span>본 지수의 2020~2025년 구간은 실제 운용되지 않은 백테스트(Backtest) 결과입니다.</span>
+                  <span>2023년 이후 일부 종목(전체의 1~2%)의 보관금액은 추정치를 포함합니다.</span>
+                  <span>지수 가중치는 세이브로 결제 데이터 기준 T+2 기준으로 산출됩니다.</span>
+                  <span>과거 수익률이 미래 수익률을 보장하지 않습니다.</span>
+                  <span>제공 내용은 참고용이며 추천 또는 투자 권유 목적이 아닙니다.</span>
+                </div>
+                <!-- txt -->
+              </div>
+              <!-- common__importantNote -->
+            </div>
+            <!-- mainContent -->
+          </div>
+          <!-- //seohak -->
+        </main>
+        <!-- //container -->
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img src="../img/flogin.png" class="figure-img img-fluid" alt="로그인" />
+              <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fpc.png" class="figure-img img-fluid" alt="PC버전" />
+              <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드" />
+              <figcaption class="figure-caption text-center">씽크풀앱<br />다운로드</figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+
+            <span class="d-block">
+              씽크풀에서 제공되는 정보는 오류 및 지연이 될 수 있으며,<br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.<br />
+              또한 이용자는 본 정보를 무단 복사, 전재 및 재배포 할 수 없습니다.<br /><br />
+
+              씽크풀 내 일부 투자자문서비스는 씽크풀투자자문을 통해 제공되며, <br />
+              해당 서비스에서 제공되는 모든 정보는 투자판단의 참고자료로 <br />
+              원금 손실이 발생될 수 있으며, 그 손실은 투자자에게 귀속됩니다.
+            </span>
+
+            <span class="d-block">
+              고객센터 1666-6300 사업자 등록번호 116-81-54775 대표 :
+              <span>김동진</span>
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+    </div>
+    <!-- //app -->
+
+    <script>
+      // period__tabs: 콘텐츠 연동 전이라 클릭 시 활성 버튼만 전환합니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.period__tabs').forEach(function (group) {
+          const buttons = Array.from(group.querySelectorAll('button'));
+          buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+              buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+              });
+              button.classList.add('active');
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      // section__tabs 콘텐츠는 fade 대신 페이지 세로 스크롤로 전환됩니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        const sectionGroups = Array.from(document.querySelectorAll('.section__tabs'))
+          .map(function (tabs) {
+            const container = tabs.parentElement;
+            const track = container ? container.querySelector('.section__tab-track') : null;
+            return { tabs: tabs, track: track };
+          })
+          .filter(function (group) {
+            return !!group.track;
+          });
+
+        sectionGroups.forEach(function (group) {
+          const sectionTrack = group.track;
+          const sectionTabButtons = Array.from(group.tabs.querySelectorAll('button'));
+          const sectionPanes = Array.from(sectionTrack.children).filter(function (child) {
+            return child.classList.contains('tab-pane');
+          });
+
+          function setActivePane(pane) {
+            sectionPanes.forEach(function (p) {
+              p.classList.toggle('active', p === pane);
+              p.classList.toggle('show', p === pane);
+            });
+            sectionTabButtons.forEach(function (button) {
+              const isActive = button.getAttribute('data-scroll-target') === '#' + pane.id;
+              button.classList.toggle('active', isActive);
+              button.setAttribute('aria-selected', String(isActive));
+            });
+          }
+
+          sectionTabButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+              const targetPane = document.querySelector(button.getAttribute('data-scroll-target'));
+              if (!targetPane) return;
+              targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              setActivePane(targetPane);
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      // summaryText의 more 버튼을 누르면 클램프된 텍스트가 애니메이션과 함께 전부 펼쳐집니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.summaryText .more').forEach(function (button) {
+          button.addEventListener('click', function () {
+            const wrapper = button.closest('.summaryText');
+            const text = wrapper.querySelector(':scope > span');
+            const label = button.querySelector('span');
+            if (!text) return;
+
+            const isExpanded = wrapper.classList.contains('expanded');
+            if (!isExpanded) {
+              text.style.maxHeight = text.scrollHeight + 'px';
+              wrapper.classList.add('expanded');
+              if (label) label.textContent = '접기';
+            } else {
+              text.style.maxHeight = '105px';
+              wrapper.classList.remove('expanded');
+              if (label) label.textContent = '펼치기';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

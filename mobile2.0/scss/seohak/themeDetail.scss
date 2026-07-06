@@ -1,0 +1,408 @@
+@import 'main/variables';
+@import 'main/mixins';
+@import 'main/animations';
+
+// ────────────────────────────────────────────────────────────
+// theme.html/main.html과 디자인이 동일한 부분은 기존 믹스인을 그대로 재사용했습니다.
+// (.visual, .periodSelect, .section__tabs, .themeMap .title/.note, videoBox,
+//  summaryText, chart-label, common__importantNote 등)
+// 이 페이지에만 있는 새 컴포넌트(.mapDetail, .themeStat, .seohak__stock-table,
+// .etf__list, playBtn)만 새로 작성했습니다.
+// ────────────────────────────────────────────────────────────
+
+#seohak {
+  &.seohak-themeDetail {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding-bottom: 50px;
+
+    // 상단 히어로 배너 - theme.html의 .visual과 동일
+    .visual {
+      @include visual-banner;
+    }
+
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+      // 분석 기간 선택 - theme.html과 동일
+      .periodSelect {
+        padding: 0 17px 0;
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 24px;
+
+          strong {
+            font-size: 16px;
+            font-weight: 700;
+            color: $seohak-color-text-black;
+          }
+          span {
+            font-size: 13px;
+            color: $seohak-color-text-muted;
+            font-weight: 400;
+          }
+        }
+
+        .period__tabs {
+          @include segmented-tab-buttons;
+          padding: 15px 0 20px;
+        }
+      }
+
+      // 테마시황/종목/ETF/AI분석 - section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
+      .section__tabs {
+        @include sticky-section-tabs(25%);
+      }
+
+      .section__tab-content {
+        .themeMap {
+          padding: 20px 17px 0;
+
+          .title {
+            @include section-title;
+          }
+
+          // 특정 테마의 지도 상세 - 새 컴포넌트
+          .mapDetail {
+            padding-top: 15px;
+
+            .mapDetail-title {
+              font-size: 14px;
+              font-weight: 700;
+              color: $seohak-color-text;
+              line-height: 21px;
+            }
+          }
+
+          .note {
+            padding-top: 12px;
+            color: $seohak-color-text-muted;
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+
+        // 테마명 + 평균수익률 요약 행 - 새 컴포넌트
+        .themeStat {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 30px 17px;
+          border-top: 8px solid #f6f6f6;
+          border-bottom: 8px solid #f6f6f6;
+          p {
+            margin: 0;
+          }
+
+          .left,
+          .right {
+            display: flex;
+            flex-direction: column;
+            gap: 4px 0;
+          }
+          .right {
+            align-items: flex-end;
+          }
+
+          .themeName {
+            font-size: 16px;
+            font-weight: 700;
+            color: $seohak-color-text-black;
+            line-height: 24px;
+          }
+          .date {
+            font-size: 13px;
+            color: $seohak-color-text-muted;
+            line-height: 19px;
+          }
+
+          .label {
+            font-size: 12px;
+            color: $seohak-color-text-muted;
+            line-height: 18px;
+          }
+          .rankRow {
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+
+            .rankChange {
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 21px;
+
+              &.up {
+                color: $seohak-color-up;
+              }
+              &.dn {
+                color: $seohak-color-down;
+              }
+            }
+            .pctBadge {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px 8px;
+              border-radius: 5px;
+
+              &.up {
+                background: #ffebeb;
+
+                .pct {
+                  color: $seohak-color-up;
+                }
+              }
+              &.dn {
+                background: #ebf1fd;
+
+                .pct {
+                  color: $seohak-color-down;
+                }
+              }
+
+              .pct {
+                font-size: 14px;
+                line-height: 21px;
+              }
+            }
+          }
+        }
+
+        .section__tab-track > .tab-pane {
+          @include section-tab-pane;
+        }
+
+        // 테마 시황 영상 썸네일 - AI분석의 videoBox와 동일 + 재생버튼만 추가
+        .videoBox {
+          display: flex;
+          flex-direction: column;
+          gap: 15px 0;
+          padding-top: 15px;
+
+          .video {
+            position: relative;
+            border-radius: 12px;
+            height: auto;
+            background: #000;
+            min-height: 180px;
+            overflow: hidden;
+          }
+
+          .video-title {
+            display: flex;
+            flex-direction: column;
+            gap: 4px 0;
+
+            strong {
+              color: #333;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 22px; /* 146.667% */
+            }
+
+            span {
+              overflow: hidden;
+              color: #999;
+              text-overflow: ellipsis;
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 19px; /* 146.154% */
+            }
+          }
+        }
+
+        // 핵심 5종목 - 새 테이블
+        .seohak__stock-table {
+          margin-top: 20px;
+
+          thead {
+            tr {
+              th {
+                height: 38px;
+                background: #f8f9fb;
+                font-size: 13px;
+                color: $seohak-color-text-secondary;
+                font-weight: 350;
+                padding: 0 4px;
+                border-top: 1px solid $seohak-color-border-light;
+                border-bottom: 1px solid $seohak-color-border-light;
+
+                &.ta_r {
+                  text-align: right;
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                height: 56px;
+                padding: 0 4px;
+                border-bottom: 1px solid $seohak-color-border-light;
+
+                &:first-child {
+                  .rank {
+                    display: flex;
+                    width: 24px;
+                    height: 21px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 4px;
+                    border: 1px solid rgba(83, 103, 255, 0.5);
+                    background: #f2f3ff;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $seohak-color-accent;
+                  }
+                }
+
+                &:nth-child(2) {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 2px 0;
+
+                  .ticker {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $seohak-color-text;
+                  }
+                  .name {
+                    font-size: 12px;
+                    color: $seohak-color-text-muted;
+                  }
+                }
+
+                &:nth-child(3) span,
+                &:nth-child(4) span {
+                  font-size: 13px;
+                  color: $seohak-color-text;
+                }
+                &:nth-child(4) span {
+                  color: $seohak-color-text-secondary;
+                }
+                &:last-child span {
+                  font-size: 13px;
+                  font-weight: 700;
+
+                  &.up {
+                    color: $seohak-color-up;
+                  }
+                  &.dn {
+                    color: $seohak-color-down;
+                  }
+                }
+
+                &.ta_r {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+
+        .stockReturn,
+        .etfReturn {
+          margin-top: 30px;
+
+          .title {
+            @include section-title;
+          }
+          .chart {
+            padding-top: 20px;
+          }
+          .chart-label {
+            @include dash-legend;
+          }
+        }
+
+        // 대표ETF 카드 목록 - 새 컴포넌트
+        .etf__list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px 0;
+          padding-top: 15px;
+
+          .etf {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: $seohak-color-bg-soft;
+
+            p {
+              margin: 0;
+            }
+
+            .left {
+              display: flex;
+              flex-direction: column;
+              gap: 2px 0;
+
+              .ticker {
+                font-size: 16px;
+                font-weight: 700;
+                color: $seohak-color-text;
+                line-height: 24px;
+              }
+              .name {
+                font-size: 13px;
+                color: $seohak-color-text-secondary;
+                line-height: 19px;
+              }
+            }
+
+            .pct {
+              flex-shrink: 0;
+              padding-left: 12px;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              text-align: right;
+
+              &.up {
+                color: $seohak-color-up;
+              }
+              &.dn {
+                color: $seohak-color-down;
+              }
+            }
+          }
+        }
+
+        // 테마 리포트 - AI분석의 summaryText와 동일
+        #themeAiReport {
+          padding-bottom: 20px !important;
+
+          .summaryText {
+            border: 1px solid #e4e4e4;
+            border-radius: 10px;
+            padding: 12px;
+
+            .title {
+              @include ai-card-title;
+            }
+
+            @include summary-text-collapse;
+          }
+        }
+      }
+
+      // 유의사항 - 다른 페이지들과 동일
+      .common__importantNote {
+        margin: 10px 17px 0;
+        width: calc(100% - 34px);
+        @include important-note;
+      }
+    }
+  }
+}

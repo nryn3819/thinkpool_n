@@ -1,0 +1,441 @@
+@import 'main/variables';
+@import 'main/mixins';
+@import 'main/animations';
+@import 'main/table';
+
+// ────────────────────────────────────────────────────────────
+// 아래는 index.html/sixtyTheme.html과 디자인이 동일해서 재사용한 부분입니다.
+// .periodSelect, .themeMap, .themeLead, .themeReturn, .themeRank 등
+// 이 페이지에만 있는 새 레이아웃(래퍼 여백/구성)은 main.scss·sixtyTheme.scss의
+// 공통 여백·타이포 규칙을 참조해 최소한으로 채워뒀습니다.
+// ────────────────────────────────────────────────────────────
+
+#seohak {
+  &.seohak-map {
+    display: block;
+    width: 100%;
+    padding-bottom: 50px;
+    background: #fff;
+
+    // 상단 히어로 배너 - index.html의 .visual과 동일
+    .visual {
+      @include visual-banner;
+    }
+
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+      // 분석 기간 선택(1일~1년) - index.html .video-title(제목+설명 세로배치) 여백 규칙 참조
+      .periodSelect {
+        padding: 0 17px;
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 24px;
+
+          strong {
+            font-size: 16px;
+            font-weight: 700;
+            color: $seohak-color-text-black;
+          }
+          span {
+            font-size: 13px;
+            color: $seohak-color-text-muted;
+            font-weight: 400;
+          }
+        }
+
+        // 분석 기간(1일~1년) - chart__tabs와 동일한 세그먼트 버튼 스타일
+        .period__tabs {
+          @include segmented-tab-buttons;
+          padding: 15px 0 20px;
+        }
+      }
+
+      // 전체테마/AI분석/수익률/테마탐색 - 지수현황의 section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
+      .section__tabs {
+        @include sticky-section-tabs(25%);
+      }
+
+      // section__tab-track 내부의 각 탭 콘텐츠 - main.scss의 section__tab-track과 동일한 구분선·여백
+      .section__tab-track > .tab-pane {
+        @include section-tab-pane;
+        padding-top: 0 !important;
+      }
+
+      .themeMap {
+        padding-top: 20px;
+        .chart {
+          padding-top: 15px;
+        }
+        .note {
+          padding-top: 15px;
+          color: #999;
+          font-size: 12px;
+          line-height: 15px;
+          margin: 0;
+        }
+      }
+
+      .themeLead {
+        margin-top: 30px;
+
+        // 주도테마/자금동향/인사이트 - AI분석의 analyze__tabs와 동일
+        .lead__tabs {
+          @include accent-pill-tabs;
+        }
+
+        // 주도테마/자금동향/인사이트 콘텐츠 - AI분석의 swiper-slide + summaryText와 동일
+        .lead__tab-content {
+          padding-top: 15px;
+          width: 100%;
+
+          .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e4e4e4;
+            width: 100%;
+            border-radius: 10px;
+            padding: 12px;
+            gap: 12px 0;
+
+            .title {
+              @include ai-card-title;
+              padding-bottom: 12px;
+            }
+
+            .summaryText {
+              @include summary-text-collapse;
+            }
+          }
+        }
+      }
+
+      .themeReturn {
+        margin-top: 30px;
+
+        // 테마 선택 드롭다운 - 클릭 시 하단 바텀시트(offcanvas)가 열립니다.
+        .themeSelect {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0 8px;
+          width: 100%;
+          height: 36px;
+          margin-top: 15px;
+          padding: 0 8px 0 12px;
+          border: 1px solid $seohak-color-border;
+          border-radius: 4px;
+          background: #fff;
+
+          span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color: $seohak-color-text;
+          }
+
+          svg {
+            flex-shrink: 0;
+          }
+        }
+
+        .chart {
+          padding-top: 15px;
+        }
+
+        // 테마별 수익률 범례 - 지수비교 chart-label과 동일한 5색 대시 범례
+        .chart-label {
+          @include dash-legend;
+        }
+      }
+
+      #themeSearch {
+        padding-bottom: 20px;
+      }
+      .themeRank {
+        margin-top: 30px;
+
+        // 테마순위/메가트렌드 - fundFlow__tabs 등과 동일한 알약형 버튼
+        .rank__tabs {
+          @include pill-tab-buttons;
+          margin-bottom: 15px;
+        }
+
+        .rank__tab-content {
+          .tab-pane {
+            display: none;
+
+            &.active {
+              display: block;
+            }
+          }
+        }
+
+        // 상승 TOP10/하락 TOP10/전체 - analyze__tabs와 동일
+        .rank__filter {
+          @include accent-pill-tabs;
+          padding: 15px 0;
+        }
+
+        // 5대 메가트렌드 목록 - question(행)을 누르면 answer(테마 칩 그리드)가 펼쳐지는 아코디언
+        .megaTrend__list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px 0;
+          padding-top: 15px;
+
+          .megaTrend {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            border: 1px solid #e4e4e4;
+            border-radius: 10px;
+
+            .question {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .text-group {
+                display: flex;
+                flex-direction: column;
+                gap: 2px 0;
+                width: calc(100% - 30px);
+
+                .name {
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: $seohak-color-text;
+                  line-height: 21px;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                .stat {
+                  font-size: 13px;
+                  color: $seohak-color-text-muted;
+                  line-height: 19px;
+                  margin: 0;
+                  padding: 0;
+
+                  .up {
+                    font-weight: 700;
+                    color: $seohak-color-up;
+                  }
+                  .dn {
+                    font-weight: 700;
+                    color: $seohak-color-down;
+                  }
+                }
+              }
+
+              // 기본(접힘) 상태는 아래를 향하고, 펼치면 180도 회전해 위를 향합니다.
+              svg {
+                flex-shrink: 0;
+                transform: none;
+                transition: transform 0.2s ease;
+              }
+            }
+
+            &.expanded .question svg {
+              transform: rotate(180deg);
+            }
+
+            // 실제 높이(scrollHeight)만큼만 부드럽게 펼쳐지도록 answer에서 max-height를 애니메이션합니다.
+            .answer {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.3s ease;
+            }
+
+            .answer .chip-grid {
+              display: flex;
+              flex-direction: column;
+              gap: 4px 0;
+              padding-top: 12px;
+
+              .chip-row {
+                display: flex;
+                gap: 0 4px;
+
+                .chip {
+                  display: flex;
+                  flex: 1 0 0;
+                  justify-content: center;
+                  align-items: center;
+                  height: 54px;
+                  padding: 8px 12px;
+                  border-radius: 6px;
+                  background: $seohak-color-bg-pill;
+                  margin-bottom: 0;
+
+                  p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 13px;
+                    color: $seohak-color-text;
+                    text-align: center;
+                    line-height: 19px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 유의사항 - 다른 페이지들과 동일
+      .common__importantNote {
+        margin: 10px 17px 0;
+        width: calc(100% - 34px);
+        @include important-note;
+      }
+    }
+
+    // 정보 안내 모달 - #allIndexGuide와 동일
+    .seohak__modal-guideText {
+      @include modal-guide-text;
+    }
+
+    // 테마 선택 바텀시트 - Bootstrap offcanvas-bottom을 사용합니다.
+    .themeSelectSheet {
+      --bs-offcanvas-height: auto;
+      max-height: calc(100vh - 260px);
+      height: auto !important;
+      border: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      .offcanvas-header {
+        position: relative;
+        padding: 20px 20px 0;
+        justify-content: flex-start;
+
+        .offcanvas-title {
+          font-size: 18px;
+          font-weight: 700;
+          color: #191919;
+          line-height: 25px;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          padding: 0;
+          margin: 0;
+          border: 0;
+          background: none;
+        }
+      }
+
+      .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        .themeOption-list {
+          display: flex;
+          flex-direction: column;
+          max-height: 55vh;
+          overflow-y: auto;
+          padding-top: 8px;
+
+          .themeOption {
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            width: 100%;
+            padding: 12px 20px;
+            border: 0;
+            background: none;
+            text-align: left;
+
+            &.selected {
+              background: #f8f9fb;
+
+              .radio {
+                border-color: $seohak-color-accent;
+
+                &::after {
+                  transform: translate(-50%, -50%) scale(1);
+                }
+              }
+            }
+
+            .radio {
+              position: relative;
+              flex-shrink: 0;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              border: 1px solid #767676;
+
+              &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $seohak-color-accent;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.15s ease;
+              }
+            }
+
+            .label {
+              font-size: 16px;
+              color: $seohak-color-text;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .themeSelect-footer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px 0;
+          padding: 6px 20px 16px;
+
+          .counter {
+            font-size: 14px;
+            color: $seohak-color-text-muted;
+            line-height: 21px;
+
+            .count {
+              font-weight: 700;
+              color: $seohak-color-accent;
+            }
+          }
+
+          .confirm {
+            width: 100%;
+            height: 40px;
+            border: 0;
+            border-radius: 8px;
+            background: $seohak-color-accent;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ────────────────────────────────────────────────────────────
+// 현재는 이 페이지에만 있던 새 레이아웃 없이, 모든 컴포넌트가
+// 기존 페이지들과 동일한 디자인 패턴으로 재사용되었습니다.
+// ────────────────────────────────────────────────────────────

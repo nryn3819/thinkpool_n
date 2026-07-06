@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>씽크풀</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+        <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show"><img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid" /></a>
+            </div>
+            <div class="pageBack"><button type="button">이전페이지</button></div>
+            <div class="headerTitle centerHeader">
+              <strong>미국 60대 테마</strong>
+            </div>
+            <div class="subSchBtn">
+              <button type="button" id="opensch" class="schButton">종목검색</button>
+            </div>
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div data-bs-toggle="offcanvas" data-bs-target="#sideContent" class="sideMenuBtn sch-hide">
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled="disabled" />
+                  <label for="sdmnu" class="menu"
+                    ><div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div
+                  ></label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <!-- 서학개미 지수산정방법 안내 -->
+          <link rel="stylesheet" href="../css/seohak/sixtyTheme.css" />
+          <div id="seohak" class="seohak-theme">
+            <div class="theme__tabs">
+              <button type="button" class="active" data-bs-toggle="tab" data-bs-target="#usaIndexGuide" aria-selected="true">서학 100 지수</button>
+              <button type="button" data-bs-toggle="tab" data-bs-target="#sixtyThemeGuide" aria-selected="false">미국 60대 테마</button>
+            </div>
+            <!-- guide tabs -->
+
+            <div class="theme__tab-content tab-content">
+              <section class="tab-pane active" id="usaIndexGuide">
+                <div class="theme__visual">
+                  <div class="visual__header">
+                    <strong><img src="../img/seohak/guide/visual__title.png" alt="서학 100지수" width="167px" /></strong>
+                  </div>
+                  <!-- visual__header -->
+
+                  <div class="visual__content">
+                    <strong>
+                      <span>미국 주식 시장에서</span>
+                      <em> 서학개미의 <br />‘진짜 트렌드’를 찾다! </em>
+                    </strong>
+                    <span>오직 서학개미 데이터로만 산출한 <br />차별화된 지수로 글로벌 주요 지수와의 <br />성과 비교를 한눈에 직관적으로 제공</span>
+                  </div>
+                  <!-- visual__content -->
+
+                  <div class="visual__blur"></div>
+                  <!-- blur -->
+                </div>
+                <!-- visual -->
+
+                <div class="usaIndex">
+                  <div class="indexList">
+                    <div class="list">
+                      <span>기준일·기준값</span>
+                      <strong>1,000 pt</strong>
+                      <em>2020년 1월 1일<br />기준</em>
+                    </div>
+                    <!-- list -->
+
+                    <div class="list">
+                      <span>구성 종목 수</span>
+                      <strong>100종목</strong>
+                      <em>세이브로 보관금액<br />상위 100개</em>
+                    </div>
+                    <!-- list -->
+
+                    <div class="list">
+                      <span>데이터 출처</span>
+                      <strong>세이브로</strong>
+                      <em>한국예탁결제원<br />공식 통계</em>
+                    </div>
+                    <!-- list -->
+                  </div>
+                  <!-- indexList -->
+
+                  <div class="indexGuide">
+                    <div class="guide">
+                      <strong>나스닥100과 다른 점</strong>
+
+                      <div class="txt">
+                        <span>시가총액이 아닌 한국인 실제 보유금액 기준</span>
+                        <span>실제 보관금액 비율을 가중치로 사용</span>
+                        <span>레버리지 ETF 포함·Cap 없이 실제 수급 반영</span>
+                        <span>한국 투자자 집단의 실제 포트폴리오 추적</span>
+                      </div>
+                      <!-- txt -->
+                    </div>
+                    <!-- guide -->
+
+                    <div class="guide">
+                      <strong>지수 산출 원칙</strong>
+
+                      <div class="txt">
+                        <span>Price Index 방식(배당 미반영)</span>
+                        <span>체인 수익률 방식(Divisor 미사용)</span>
+                        <span>Look-ahead Bias 완전 방지</span>
+                        <span>모든 추정 구간 명시적 공개</span>
+                      </div>
+                      <!-- txt -->
+                    </div>
+                    <!-- guide -->
+                  </div>
+                  <!-- indexGuide -->
+                </div>
+                <!-- usaIndex -->
+
+                <div class="indexMeasure">
+                  <div class="title">
+                    <strong>
+                      <span>지수 측정</span>
+                    </strong>
+                  </div>
+                  <!-- title -->
+
+                  <div class="measure__guide">
+                    <div class="guide">
+                      <div class="top">
+                        <em>1A · 초기 추정 지수</em>
+                        <strong>실제 데이터 기반 구축</strong>
+                        <span>2020/01 ~ 2022/12</span>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          세이브로의 실제 보관 및 매매 데이터만을 활용하여 초기 추정 지수를 생성합니다. <br />
+                          데이터 가용성에 맞춰 종목을 운영하며, 억지로 100개를 채우지 않아 생존자 편향을 원천 차단합니다.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- guide -->
+
+                    <div class="guide">
+                      <div class="top">
+                        <em>1B · 확장 추정 지수 </em>
+                        <strong>전체 종목 풀 기반으로 확장 </strong>
+                        <span>2023/01 ~ 2025/12 </span>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          전체 종목 풀에서 상장일 필터링을 거쳐 생존자 편향을 방지한 100개 종목을 구성합니다. <br />
+                          51~100위 보관금액은 대칭 배분법으로 추정(전체 비중의 약 1~2%)하여 반영하며, 추정 종목은 SATELLITE_EST로 표시합니다.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- guide -->
+
+                    <div class="guide">
+                      <div class="top">
+                        <em>2 · 실제 지수 </em>
+                        <strong>100% 실데이터 매일 발표</strong>
+                        <span>2026/01~ </span>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          세이브로 T+2일 데이터로 가중치를 매일 갱신하며 공식 지수를 산출합니다. <br />
+                          추정/확정 이중 구조를 폐지하고 단일 일간 지수로 발표하며, 1B 단계와 체인 방식으로 자동 연결하여 운영합니다.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- guide -->
+                  </div>
+                </div>
+                <!-- 지수측정 -->
+
+                <div class="stockInExclusion">
+                  <div class="title">
+                    <strong>
+                      <span>종목 편·출입 조건</span>
+                    </strong>
+                  </div>
+                  <!-- title -->
+
+                  <div class="inExclusionCondition">
+                    <div class="condition__list">
+                      <div class="condition">
+                        <div class="top">
+                          <strong>편입 조건</strong>
+                          <span> 보관금액 기준 90위 이내에 2주 연속 진입한 종목 </span>
+                        </div>
+                        <!-- top -->
+
+                        <div class="txt">
+                          <span> - 조건 충족 주의 금요일 사전 공지 </span>
+                          <span> - 다음 주 월요일 지수에 반영 </span>
+                        </div>
+                      </div>
+                      <!-- 조건 -->
+
+                      <div class="condition">
+                        <div class="top">
+                          <strong>편출 조건</strong>
+                          <span> 보관금액 기준 110위 밖으로 2주 연속 밀린 종목 </span>
+                        </div>
+                        <!-- top -->
+
+                        <div class="txt">
+                          <span> - 조건 충족 주의 금요일 사전 공지 </span>
+                          <span> - 다음 주 월요일 지수에서 제거 </span>
+                        </div>
+                      </div>
+                      <!-- 조건 -->
+                    </div>
+                    <!-- 조건 리스트 -->
+
+                    <div class="guide__txt">
+                      <span>※ 버퍼 존(90위·110위)을 두는 이유: 단순 순위 변동에 따른 잦은 종목 교체를 방지합니다. 100위 경계에서 진동하는 종목이 매주 편출입되면 지수 연속성이 깨집니다.</span>
+                    </div>
+                    <!-- 조건 안내사항 -->
+                  </div>
+                  <!-- 편출입조건 -->
+                </div>
+                <!-- 종목편출입 -->
+
+                <div class="indexQna">
+                  <div class="title">
+                    <strong>
+                      <span>Q&A</span>
+                    </strong>
+                  </div>
+                  <!-- title -->
+
+                  <div class="qna__list">
+                    <div class="qna">
+                      <div class="question">
+                        <span>배당은 왜 반영하지 않나요?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 11.8394L9.29289 7.10153C9.68342 6.75196 10.3166 6.75196 10.7071 7.10153L16 11.8394" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <!-- 질문 -->
+                      <div class="answer">
+                        <span> 본 지수는 Price Index 기준으로 산출됩니다. NDX(나스닥 100)도 Price Index 기준이므로 두 지수를 직접 비교할 수 있습니다. 배당을 포함한 Total Return Index는 별도 버전으로 검토 중입니다. </span>
+                      </div>
+                      <!-- 답변 -->
+                    </div>
+                    <!-- qna -->
+
+                    <div class="qna">
+                      <div class="question">
+                        <span>레버리지 ETF가 포함되는 이유는? </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 11.8394L9.29289 7.10153C9.68342 6.75196 10.3166 6.75196 10.7071 7.10153L16 11.8394" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <!-- 질문 -->
+                      <div class="answer">
+                        <span>한국 투자자들이 실제로 SOXL, TQQQ 등 레버리지 ETF를 대규모로 보유하고 있으며 세이브로 보관금액 상위권에 실제로 등장합니다. 지수는 실제 포트폴리오를 그대로 반영하는 것이 원칙이므로 별도 제외하거나 비중을 제한하지 않습니다.</span>
+                      </div>
+                      <!-- 답변 -->
+                    </div>
+                    <!-- qna -->
+
+                    <div class="qna">
+                      <div class="question">
+                        <span>2020~25년 수익률을 그대로 믿어도 되나요? </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 11.8394L9.29289 7.10153C9.68342 6.75196 10.3166 6.75196 10.7071 7.10153L16 11.8394" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <!-- 질문 -->
+                      <div class="answer">
+                        <span>1A 단계(2020~2022)는 실제 세이브로 데이터만 사용하여 생존자 편향이 없습니다. 1B 단계(2023~2025)는 51~100위 종목 보관금액의 약 1~2%가 추정치입니다. 두 구간 모두 백테스트이므로 실제 운용 결과가 아님을 명시합니다.</span>
+                      </div>
+                      <!-- 답변 -->
+                    </div>
+                    <!-- qna -->
+
+                    <div class="qna">
+                      <div class="question">
+                        <span>KRW 수익률은 어떻게 계산하나요? </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 11.8394L9.29289 7.10153C9.68342 6.75196 10.3166 6.75196 10.7071 7.10153L16 11.8394" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <!-- 질문 -->
+                      <div class="answer">
+                        <span>KRW 지수 = USD 지수×(해당일 USD/KRW 환율 / 기준일 2020-01-06 USD/KRW 환율). 한국은행 매매기준율을 사용하며 기준일 환율은 최초 산출 시 확정 후 고정됩니다.</span>
+                      </div>
+                      <!-- 답변 -->
+                    </div>
+                    <!-- qna -->
+
+                    <div class="qna">
+                      <div class="question">
+                        <span>지수에 오류가 발견되면 소급 수정하나요?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 11.8394L9.29289 7.10153C9.68342 6.75196 10.3166 6.75196 10.7071 7.10153L16 11.8394" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <!-- 질문 -->
+                      <div class="answer">
+                        <span>지수 포인트에서 1% 미만 영향이면 소급 수정하지 않고 다음 주기에 자연 반영합니다. 1% 이상 영향이면 소급 수정하며 사용자에게 발생 원인, 수정 전후 지수값, 적용 일자를 공지합니다.</span>
+                      </div>
+                      <!-- 답변 -->
+                    </div>
+                    <!-- qna -->
+                  </div>
+                  <!-- qna 리스트 -->
+                </div>
+                <!-- Q&A -->
+              </section>
+              <!-- usaIndexGuide -->
+
+              <section class="tab-pane" id="sixtyThemeGuide">
+                <div class="theme__visual">
+                  <div class="visual__header">
+                    <strong><img src="../img/seohak/guide/visual__title2.png" alt="미국 60대 테마" width="192px" /></strong>
+                  </div>
+                  <!-- visual__header -->
+
+                  <div class="visual__content">
+                    <strong>
+                      <span>미국 주식 시장을</span>
+                      <span><em class="point1">‘5대 메가트렌드’</em>와</span>
+                      <span><em class="point2">‘60개 테마’</em>로 읽는다!</span>
+                    </strong>
+                    <span>어떤 섹터에 돈이 몰리는지, 어떤 ETF로 접근하는지 <br />시장의 흐름을 테마 단위로 정리한 <br />서학개미 필수 레퍼런스</span>
+                  </div>
+                  <!-- visual__content -->
+
+                  <div class="visual__blur"></div>
+                  <!-- blur -->
+                </div>
+                <!-- theme__visual -->
+
+                <div class="themeStats">
+                  <div class="stats">
+                    <div class="stat">
+                      <strong>5대</strong>
+                      <span>메가트렌드</span>
+                    </div>
+                    <!-- stat -->
+
+                    <div class="stat">
+                      <strong>60개</strong>
+                      <span>핵심 테마</span>
+                    </div>
+                    <!-- stat -->
+
+                    <div class="stat">
+                      <strong>120+</strong>
+                      <span>대표 ETF</span>
+                    </div>
+                    <!-- stat -->
+
+                    <div class="stat">
+                      <strong>매달</strong>
+                      <span>흐름 업데이트</span>
+                    </div>
+                    <!-- stat -->
+                  </div>
+                  <!-- stats -->
+
+                  <div class="themeAbout">
+                    <div class="about">
+                      <strong>테마 지도란?</strong>
+                      <span>미국 주식 시장을 개별 종목이 아닌 ‘테마’ 단위로 분류한 구조화된 지식 지도입니다. 어떤 기술이 부상하고 있는지, 어떤 산업이 구조적으로 성장하는지를 한눈에 파악할 수 있습니다.</span>
+                    </div>
+                    <!-- about -->
+
+                    <div class="about">
+                      <strong>핵심 종목 리포트</strong>
+                      <span>시장 흐름에 따라 각 테마의 핵심 5종목을 업데이트합니다. 단순 정보 정리가 아니라, 지금 어디에 주목해야 하는지를 알려주는 동적인 투자 나침반입니다.</span>
+                    </div>
+                    <!-- about -->
+
+                    <div class="about">
+                      <strong>ETF 중심 접근</strong>
+                      <span>각 테마마다 대표 ETF 2개를 선정해 직접 투자 수단을 바로 제시합니다. 종목 발굴이 어려운 투자자도 ETF 하나로 해당 테마 전체에 분산 투자할 수 있습니다.</span>
+                    </div>
+                    <!-- about -->
+                  </div>
+                  <!-- themeAbout -->
+                </div>
+                <!-- themeStats -->
+
+                <div class="themeSteps">
+                  <div class="title">
+                    <strong>
+                      <span>활용가이드</span>
+                    </strong>
+                  </div>
+                  <!-- title -->
+
+                  <div class="steps__list">
+                    <div class="step">
+                      <div class="top">
+                        <em>STEP 01</em>
+                        <strong>흐름파악</strong>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          ‘미국 60대 테마’에서 오늘 상위 테마와 수익률·순위 변동을 먼저 훑어보세요. <br />
+                          어떤 테마가 꾸준히 상단을 지키는지(지속성)와 갑자기 치고 올라오는지(변화)를 함께 확인하면 좋아요.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- step -->
+
+                    <div class="step">
+                      <div class="top">
+                        <em>STEP 02</em>
+                        <strong>테마 탐색</strong>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          ‘테마 지도’ 또는 ‘테마 순위’, ‘메가트렌드별 테마’에서 관심 테마를 선택해 어떤 테마들이 시장에서 비중을 차지하는지 확인해보세요. <br />
+                          비슷한 성격의 테마도 같이 비교해보는 걸 추천해요.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- step -->
+
+                    <div class="step">
+                      <div class="top">
+                        <em>STEP 03</em>
+                        <strong>유튜브 연결</strong>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          선택한 테마의 세부 분석 화면에서 관련 유튜브 콘텐츠로 핵심만 빠르게 학습하세요. <br />
+                          테마 정의·핵심 이슈·대표 종목 흐름 위주로 보면 효율적이에요.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- step -->
+
+                    <div class="step">
+                      <div class="top">
+                        <em>STEP 04</em>
+                        <strong>종목 &amp; ETF 확인</strong>
+                      </div>
+                      <!-- top -->
+
+                      <div class="cont">
+                        <span>
+                          핵심 5종목과 대표 ETF 2개를 확인해 테마를 실제 투자 단위로 연결하세요. <br />
+                          종목으로 직접 접근할지, ETF로 분산할지 판단한 뒤, 내가 이미 보유한 종목/ETF와 겹치는지까지 확인하면 활용도가 확 올라가요.
+                        </span>
+                      </div>
+                      <!-- cont -->
+                    </div>
+                    <!-- step -->
+                  </div>
+                  <!-- steps__list -->
+                </div>
+                <!-- themeSteps -->
+              </section>
+              <!-- sixtyThemeGuide -->
+            </div>
+            <!-- guide__tab-content -->
+
+            <div class="common__importantNote">
+              <strong>※ 유의사항</strong>
+
+              <div class="txt">
+                <span>본 서비스는 일부 콘텐츠에 한해 AI가 선별·요약한 투자정보를 제공합니다.</span>
+                <span>본 지수의 2020~2025년 구간은 실제 운용되지 않은 백테스트(Backtest) 결과입니다.</span>
+                <span>2023년 이후 일부 종목(전체의 1~2%)의 보관금액은 추정치를 포함합니다.</span>
+                <span>지수 가중치는 세이브로 결제 데이터 기준 T+2 기준으로 산출됩니다.</span>
+                <span>과거 수익률이 미래 수익률을 보장하지 않습니다.</span>
+                <span>제공 내용은 참고용이며 추천 또는 투자 권유 목적이 아닙니다.</span>
+              </div>
+              <!-- txt -->
+            </div>
+            <!-- common__importantNote -->
+          </div>
+          <!-- //seohak -->
+        </main>
+        <!-- //container -->
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img src="../img/flogin.png" class="figure-img img-fluid" alt="로그인" />
+              <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fpc.png" class="figure-img img-fluid" alt="PC버전" />
+              <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드" />
+              <figcaption class="figure-caption text-center">씽크풀앱<br />다운로드</figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+
+            <span class="d-block">
+              씽크풀에서 제공되는 정보는 오류 및 지연이 될 수 있으며,<br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.<br />
+              또한 이용자는 본 정보를 무단 복사, 전재 및 재배포 할 수 없습니다.<br /><br />
+
+              씽크풀 내 일부 투자자문서비스는 씽크풀투자자문을 통해 제공되며, <br />
+              해당 서비스에서 제공되는 모든 정보는 투자판단의 참고자료로 <br />
+              원금 손실이 발생될 수 있으며, 그 손실은 투자자에게 귀속됩니다.
+            </span>
+
+            <span class="d-block">
+              고객센터 1666-6300 사업자 등록번호 116-81-54775 대표 :
+              <span>김동진</span>
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+    </div>
+    <!-- //app -->
+
+    <script>
+      // 상단 서학 100 지수 / 미국 60대 테마 탭을 전환합니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.theme__tabs button').forEach(function (button) {
+          button.addEventListener('click', function () {
+            const targetSelector = button.getAttribute('data-bs-target');
+            const targetPane = document.querySelector(targetSelector);
+            if (!targetPane) return;
+
+            document.querySelectorAll('.theme__tabs button').forEach(function (btn) {
+              btn.classList.remove('active');
+              btn.setAttribute('aria-selected', 'false');
+            });
+            document.querySelectorAll('.theme__tab-content > .tab-pane').forEach(function (pane) {
+              pane.classList.remove('active');
+            });
+
+            button.classList.add('active');
+            button.setAttribute('aria-selected', 'true');
+            targetPane.classList.add('active');
+          });
+        });
+      });
+    </script>
+    <script>
+      // Q&A 아코디언: 질문(question)을 누르면 답변(answer)이 펼쳐지고 다시 누르면 접힙니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.qna').forEach(function (qna) {
+          const question = qna.querySelector('.question');
+          const answer = qna.querySelector('.answer');
+          if (!question || !answer) return;
+
+          question.addEventListener('click', function () {
+            const isExpanded = qna.classList.contains('expanded');
+            if (!isExpanded) {
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+              qna.classList.add('expanded');
+            } else {
+              answer.style.maxHeight = '0px';
+              qna.classList.remove('expanded');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

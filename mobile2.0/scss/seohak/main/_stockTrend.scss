@@ -1,0 +1,14 @@
+.stockTrend__tabs {
+  @include pill-tab-buttons;
+  padding-top: 15px;
+}
+
+.stockTrend__tab-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .chart-label {
+    @include dot-legend;
+  }
+}

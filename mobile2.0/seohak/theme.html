@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- common.css -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>씽크풀</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrap">
+        <h1 class="visually-hidden">씽크풀</h1>
+        <h2 class="visually-hidden">Title for screen readers</h2>
+        <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
+        <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+        <!-- header - header.scss -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="javascript:;" class="float-start h-logo h-show"><img src="https://img.thinkpool.com/www/mobile/img/logo.png" alt="씽크풀로고" class="img-fluid" /></a>
+            </div>
+            <div class="pageBack"><button type="button">이전페이지</button></div>
+            <div class="headerTitle centerHeader">
+              <strong>미국 60대 테마</strong>
+            </div>
+            <div class="subSchBtn">
+              <button type="button" id="opensch" class="schButton">종목검색</button>
+            </div>
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div data-bs-toggle="offcanvas" data-bs-target="#sideContent" class="sideMenuBtn sch-hide">
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled="disabled" />
+                  <label for="sdmnu" class="menu"
+                    ><div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div
+                  ></label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- // -->
+
+        <main id="container" class="clearfix">
+          <!-- 미국 60대 테마 -->
+          <link rel="stylesheet" href="../css/seohak/theme.css" />
+          <div id="seohak" class="seohak-map">
+            <div class="visual">
+              <div class="txt">
+                <strong>미국 60대 테마</strong>
+                <span>테마별 핵심 종목과 대표 ETF를 확인해 <br />시장 흐름을 빠르게 파악</span>
+              </div>
+              <button>테마 투자 전략 알아보기</button>
+
+              <div class="visual-img">
+                <img src="../img/seohak/theme/visual.png" alt="미국 60대 테마" width="100%" />
+              </div>
+              <!-- 비주얼이미지 -->
+            </div>
+            <!-- //상단 비주얼 -->
+
+            <div class="mainContent">
+              <div class="periodSelect">
+                <div class="title">
+                  <strong>분석 기간 선택</strong>
+                  <span>선택 시 하단 콘텐츠 전체의 기간 변경</span>
+                </div>
+                <!-- title -->
+
+                <div class="period__tabs">
+                  <button type="button" class="active">1일</button>
+                  <button type="button">1주</button>
+                  <button type="button">1개월</button>
+                  <button type="button">3개월</button>
+                  <button type="button">6개월</button>
+                  <button type="button">1년</button>
+                </div>
+                <!-- period__tabs -->
+              </div>
+              <!-- periodSelect -->
+
+              <div class="section__tabs">
+                <button type="button" class="active" data-scroll-target="#allTheme" aria-selected="true">전체테마</button>
+                <button type="button" data-scroll-target="#aiAnalysisTheme" aria-selected="false">AI분석</button>
+                <button type="button" data-scroll-target="#themeReturnTab" aria-selected="false">수익률</button>
+                <button type="button" data-scroll-target="#themeSearch" aria-selected="false">테마탐색</button>
+              </div>
+              <!-- section__tabs -->
+
+              <div class="section__tab-content tab-content">
+                <div class="section__tab-track">
+                  <div class="tab-pane active" id="allTheme">
+                    <div class="themeMap">
+                      <div class="title">
+                        <strong>
+                          <span>테마지도</span>
+                        </strong>
+                        <span>2026/05/05 장마감 기준</span>
+                      </div>
+                      <!-- title -->
+
+                      <div class="chart">
+                        <img src="../img/seohak/theme/theme-map.png" alt="테마지도" width="100%" />
+                      </div>
+                      <!-- chart -->
+
+                      <p class="note">※ 두 손가락으로 확대·축소할 수 있습니다. 테마 블록을 선택하면 상세 리포트와 구성 종목을 확인할 수 있습니다.</p>
+                    </div>
+                    <!-- themeMap -->
+                  </div>
+                  <!-- allTheme -->
+                  <div class="tab-pane" id="aiAnalysisTheme">
+                    <div class="themeLead">
+                      <div class="lead__tabs">
+                        <button type="button" class="active" data-swiper-target="#leadMainTheme" aria-selected="true">주도테마</button>
+                        <button type="button" data-swiper-target="#leadFundFlow" aria-selected="false">자금동향</button>
+                        <button type="button" data-swiper-target="#leadInsight" aria-selected="false">인사이트</button>
+                      </div>
+                      <!-- lead__tabs -->
+
+                      <div class="lead__tab-content swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" id="leadMainTheme">
+                            <div class="summaryText">
+                              <div class="title">
+                                <strong>
+                                  <span>주도 테마 분석</span>
+                                  <em>Ai</em>
+                                </strong>
+                                <span>2026/05/05 장마감 기준</span>
+                              </div>
+                              <!-- 타이틀 -->
+
+                              <span> 이번 1개월 사이클의 주도권은 기술 패권 &amp; 디지털 혁신 섹터가 압도적으로 장악하였습니다. AI 엣지 디바이스, 사이버 보안, 데이터 프라이버시 등 상위권 테마가 모두 이 섹터에서 배출된 점은 단순한 테마별 순환이 아닌, AI 인프라 전반에 걸친 구조적 자금 유입임을 시사합니다. 특히 DELL의 세 자릿수 급등은 AI 추론 수요가 클라우드 중심에서 엣지 하드웨어 레이어로 확장되고 있음을 증명하며, OKTA와 CRWD의 동반 급등은 AI 확산에 따른 공격 표면 증가가 사이버 보안 지출을 필수 비용으로 고착화시키고 있다는 시장의 컨센서스를 반영합니다. 신공급망 &amp; 국가 안보 섹터 또한 15%를 상회하는 수익률로 견고한 공동 주도권을 형성하였으며, 소버린 AI와 우주 경제 테마에서의 ARM, RKLB 급등은 AI 자주권 확보와 우주 상업화라는 지정학적 내러티브가 자본 배분의 새로운 기준축으로 부상했음을 명확히 보여줍니다. </span>
+
+                              <button class="more">
+                                <span>펼치기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M15 8.3335L10.5893 12.7442C10.2638 13.0697 9.73618 13.0697 9.41075 12.7442L5 8.3335" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </button>
+                            </div>
+                            <!-- summaryText -->
+                          </div>
+                          <!-- leadMainTheme -->
+
+                          <div class="swiper-slide" id="leadFundFlow">
+                            <div class="summaryText">
+                              <div class="title">
+                                <strong>
+                                  <span>자금 이동 및 동향</span>
+                                  <em>Ai</em>
+                                </strong>
+                                <span>2026/05/05 장마감 기준</span>
+                              </div>
+                              <!-- 타이틀 -->
+
+                              <span> 금일 서학 100 지수는 전일 대비 1.14% 하락한 5811.26pt를 기록하며 조정 장세를 보였습니다. 엔비디아(NVDA)와 아이온큐(IONQ) 등 주요 기술주들의 약세가 지수 하락을 견인한 반면, 디렉시온 미국 반도체 불 3X ETF(SOXL)는 홀로 강세를 보이며 반도체 섹터 내에서도 엇갈린 흐름을 나타냈습니다. 투자자들은 대형 반도체주에 대한 꾸준한 유입을 유지하면서도, 일부 고평가 종목에 대한 차익 실현 움직임을 보인 하루였습니다. </span>
+
+                              <button class="more">
+                                <span>펼치기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M15 8.3335L10.5893 12.7442C10.2638 13.0697 9.73618 13.0697 9.41075 12.7442L5 8.3335" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </button>
+                            </div>
+                            <!-- summaryText -->
+                          </div>
+                          <!-- leadFundFlow -->
+
+                          <div class="swiper-slide" id="leadInsight">
+                            <div class="summaryText">
+                              <div class="title">
+                                <strong>
+                                  <span>투자 인사이트</span>
+                                  <em>Ai</em>
+                                </strong>
+                                <span>2026/05/05 장마감 기준</span>
+                              </div>
+                              <!-- 타이틀 -->
+
+                              <span> 금일 서학 100 지수는 전일 대비 1.14% 하락한 5811.26pt를 기록하며 조정 장세를 보였습니다. 엔비디아(NVDA)와 아이온큐(IONQ) 등 주요 기술주들의 약세가 지수 하락을 견인한 반면, 디렉시온 미국 반도체 불 3X ETF(SOXL)는 홀로 강세를 보이며 반도체 섹터 내에서도 엇갈린 흐름을 나타냈습니다. 투자자들은 대형 반도체주에 대한 꾸준한 유입을 유지하면서도, 일부 고평가 종목에 대한 차익 실현 움직임을 보인 하루였습니다. </span>
+
+                              <button class="more">
+                                <span>펼치기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M15 8.3335L10.5893 12.7442C10.2638 13.0697 9.73618 13.0697 9.41075 12.7442L5 8.3335" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </button>
+                            </div>
+                            <!-- summaryText -->
+                          </div>
+                          <!-- leadInsight -->
+                        </div>
+                        <!-- swiper-wrapper -->
+                      </div>
+                      <!-- lead__tab-content -->
+                    </div>
+                    <!-- themeLead -->
+                  </div>
+                  <!-- aiAnalysisTheme -->
+
+                  <div class="tab-pane" id="themeReturnTab">
+                    <div class="themeReturn">
+                      <div class="title">
+                        <strong>
+                          <span>테마별 수익률</span>
+                        </strong>
+                        <span>2026/05/05 장마감 기준</span>
+                      </div>
+                      <!-- title -->
+
+                      <button type="button" class="themeSelect" data-bs-toggle="offcanvas" data-bs-target="#themeSelectSheet">
+                        <span>AI &amp; 데이터 지능, 차세대 원자력, 바이오 혁신, 우주항공 &amp; 방산, 디지털 커머스</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M4 7.10153L9.29289 11.8394C9.68342 12.189 10.3166 12.189 10.7071 11.8394L16 7.10153" stroke="#333333" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </button>
+                      <!-- themeSelect -->
+
+                      <div class="chart">
+                        <img src="../img/seohak/theme/return-chart.png" alt="테마별 수익률 차트" width="100%" />
+                      </div>
+                      <!-- chart -->
+
+                      <div class="chart-label">
+                        <span class="label label001">AI &amp; 데이터 지능</span>
+                        <span class="label label002">차세대 원자력</span>
+                        <span class="label label003">바이오 혁신</span>
+                        <span class="label label004">우주항공 &amp; 방산</span>
+                        <span class="label label005">디지털 커머스</span>
+                      </div>
+                      <!-- chart-label -->
+                    </div>
+                    <!-- themeReturn -->
+                  </div>
+                  <!-- themeReturnTab -->
+
+                  <div class="tab-pane" id="themeSearch">
+                    <div class="themeRank">
+                      <div class="rank__tabs">
+                        <button type="button" class="active" data-target="#rankThemeList">테마순위</button>
+                        <button type="button" data-target="#rankMegaTrend">메가트렌드</button>
+                      </div>
+                      <!-- rank__tabs -->
+
+                      <div class="rank__tab-content">
+                        <div class="tab-pane active" id="rankThemeList">
+                          <div class="title">
+                            <strong>
+                              <span>60대 테마 순위</span>
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#themeRankGuide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M9 0.75C13.5564 0.75 17.25 4.44365 17.25 9C17.25 13.5564 13.5564 17.25 9 17.25C4.44365 17.25 0.75 13.5564 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75Z" stroke="#999999" stroke-width="1.5" />
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 13.3047C8.63181 13.3047 8.33333 13.0099 8.33333 12.6462L8.33333 8.25591C8.33333 7.89221 8.63181 7.59737 9 7.59737C9.36819 7.59737 9.66667 7.89221 9.66667 8.25591L9.66667 12.6462C9.66667 13.0099 9.36819 13.3047 9 13.3047Z" fill="#999999" />
+                                  <path d="M9 4.30469C8.44772 4.30469 8 4.74694 8 5.29249C8 5.83804 8.44772 6.2803 9 6.2803C9.55228 6.2803 10 5.83804 10 5.29249C10 4.74694 9.55228 4.30469 9 4.30469Z" fill="#999999" />
+                                </svg>
+                              </button>
+                            </strong>
+                            <span>2026/05/05 장마감 기준</span>
+                          </div>
+                          <!-- title -->
+
+                          <div class="rank__filter">
+                            <button type="button" class="active">상승 TOP10</button>
+                            <button type="button">하락 TOP10</button>
+                            <button type="button">전체</button>
+                          </div>
+                          <!-- rank__filter -->
+
+                          <table class="seohak__main-table table-sm" width="100%">
+                            <colgroup>
+                              <col width="44" />
+                              <col width="*" />
+                              <col width="72" />
+                              <col width="64" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>순위</th>
+                                <th>테마명</th>
+                                <th class="ta_r">평균수익률</th>
+                                <th class="ta_r">순위변동</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><span>1</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="up">3 ▲</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>2</span></td>
+                                <td><span>반도체 하이웨어</span></td>
+                                <td class="ta_r"><span class="dn">-3.82%</span></td>
+                                <td class="ta_r"><span class="dn">2 ▼</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>3</span></td>
+                                <td><span>우주항공 방산</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="up">3 ▲</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>4</span></td>
+                                <td><span>사이버 보안</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="up">3 ▲</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>5</span></td>
+                                <td><span>전력망 인프라</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="up">3 ▲</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>6</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="up">3 ▲</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>7</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="up">+3.82%</span></td>
+                                <td class="ta_r"><span class="dn">2 ▼</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>8</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="dn">-3.82%</span></td>
+                                <td class="ta_r"><span class="dn">2 ▼</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>9</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="dn">-3.82%</span></td>
+                                <td class="ta_r"><span class="dn">2 ▼</span></td>
+                              </tr>
+                              <tr>
+                                <td><span>10</span></td>
+                                <td><span>AI &amp; 데이터 지능가나다라라마바</span></td>
+                                <td class="ta_r"><span class="dn">-3.82%</span></td>
+                                <td class="ta_r"><span class="dn">2 ▼</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- seohak__main-table -->
+                        </div>
+                        <!-- rankThemeList -->
+
+                        <div class="tab-pane" id="rankMegaTrend">
+                          <div class="title">
+                            <strong>
+                              <span>5대 메가트렌드</span>
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#megaTrandGuide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M9 0.75C13.5564 0.75 17.25 4.44365 17.25 9C17.25 13.5564 13.5564 17.25 9 17.25C4.44365 17.25 0.75 13.5564 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75Z" stroke="#999999" stroke-width="1.5" />
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 13.3047C8.63181 13.3047 8.33333 13.0099 8.33333 12.6462L8.33333 8.25591C8.33333 7.89221 8.63181 7.59737 9 7.59737C9.36819 7.59737 9.66667 7.89221 9.66667 8.25591L9.66667 12.6462C9.66667 13.0099 9.36819 13.3047 9 13.3047Z" fill="#999999" />
+                                  <path d="M9 4.30469C8.44772 4.30469 8 4.74694 8 5.29249C8 5.83804 8.44772 6.2803 9 6.2803C9.55228 6.2803 10 5.83804 10 5.29249C10 4.74694 9.55228 4.30469 9 4.30469Z" fill="#999999" />
+                                </svg>
+                              </button>
+                            </strong>
+                            <span>2026/05/05 장마감 기준</span>
+                          </div>
+                          <!-- title -->
+
+                          <div class="megaTrend__list">
+                            <div class="megaTrend qna">
+                              <div class="question">
+                                <div class="text-group">
+                                  <p class="name">기술 패권 &amp; 디지털 혁신</p>
+                                  <p class="stat">평균수익률 : <span class="up">+19.06%</span> (18개 테마)</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M16 8.16064L10.7071 12.8985C10.3166 13.248 9.68342 13.248 9.29289 12.8985L4 8.16064" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </div>
+                              <!-- question -->
+
+                              <div class="answer">
+                                <div class="chip-grid">
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI &amp; 데이터 지능</p></div>
+                                    <div class="chip"><p>AI 가상 비서</p></div>
+                                    <div class="chip"><p>AI 수익화</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI 엣지 디바이스</p></div>
+                                    <div class="chip"><p>RWA 토큰화</p></div>
+                                    <div class="chip"><p>게임 &amp; 메타버스</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>데이터 프라이버시</p></div>
+                                    <div class="chip"><p>디지털 금융</p></div>
+                                    <div class="chip"><p>디지털 트윈</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>로봇 &amp; 자동화</p></div>
+                                    <div class="chip"><p>반도체 설계 소프트웨어</p></div>
+                                    <div class="chip"><p>반도체 패키징</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>반도체 하드웨어</p></div>
+                                    <div class="chip"><p>블록체인</p></div>
+                                    <div class="chip"><p>사이버 보안</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>스마트 시티</p></div>
+                                    <div class="chip"><p>양자 컴퓨터</p></div>
+                                    <div class="chip"><p>클라우드 &amp; SW</p></div>
+                                  </div>
+                                </div>
+                                <!-- chip-grid -->
+                              </div>
+                              <!-- answer -->
+                            </div>
+                            <!-- 기술 패권 & 디지털 혁신 -->
+
+                            <div class="megaTrend qna">
+                              <div class="question">
+                                <div class="text-group">
+                                  <p class="name">에너지 주권 &amp; 지구의 미래</p>
+                                  <p class="stat">평균수익률 : <span class="up">+19.06%</span> (12개 테마)</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M16 8.16064L10.7071 12.8985C10.3166 13.248 9.68342 13.248 9.29289 12.8985L4 8.16064" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </div>
+                              <!-- question -->
+
+                              <div class="answer">
+                                <div class="chip-grid">
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI &amp; 데이터 지능</p></div>
+                                    <div class="chip"><p>AI 가상 비서</p></div>
+                                    <div class="chip"><p>AI 수익화</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI 엣지 디바이스</p></div>
+                                    <div class="chip"><p>RWA 토큰화</p></div>
+                                    <div class="chip"><p>게임 &amp; 메타버스</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>데이터 프라이버시</p></div>
+                                    <div class="chip"><p>디지털 금융</p></div>
+                                    <div class="chip"><p>디지털 트윈</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>로봇 &amp; 자동화</p></div>
+                                    <div class="chip"><p>반도체 설계 소프트웨어</p></div>
+                                    <div class="chip"><p>반도체 패키징</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>반도체 하드웨어</p></div>
+                                    <div class="chip"><p>블록체인</p></div>
+                                    <div class="chip"><p>사이버 보안</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>스마트 시티</p></div>
+                                    <div class="chip"><p>양자 컴퓨터</p></div>
+                                    <div class="chip"><p>클라우드 &amp; SW</p></div>
+                                  </div>
+                                </div>
+                                <!-- chip-grid -->
+                              </div>
+                              <!-- answer -->
+                            </div>
+                            <!-- 에너지 주권 & 지구의 미래 -->
+
+                            <div class="megaTrend qna">
+                              <div class="question">
+                                <div class="text-group">
+                                  <p class="name">바이오 혁명 &amp; 인류의 진화</p>
+                                  <p class="stat">평균수익률 : <span class="up">+19.06%</span> (10개 테마)</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M16 8.16064L10.7071 12.8985C10.3166 13.248 9.68342 13.248 9.29289 12.8985L4 8.16064" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </div>
+                              <!-- question -->
+
+                              <div class="answer">
+                                <div class="chip-grid">
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI &amp; 데이터 지능</p></div>
+                                    <div class="chip"><p>AI 가상 비서</p></div>
+                                    <div class="chip"><p>AI 수익화</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI 엣지 디바이스</p></div>
+                                    <div class="chip"><p>RWA 토큰화</p></div>
+                                    <div class="chip"><p>게임 &amp; 메타버스</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>데이터 프라이버시</p></div>
+                                    <div class="chip"><p>디지털 금융</p></div>
+                                    <div class="chip"><p>디지털 트윈</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>로봇 &amp; 자동화</p></div>
+                                    <div class="chip"><p>반도체 설계 소프트웨어</p></div>
+                                    <div class="chip"><p>반도체 패키징</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>반도체 하드웨어</p></div>
+                                    <div class="chip"><p>블록체인</p></div>
+                                    <div class="chip"><p>사이버 보안</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>스마트 시티</p></div>
+                                    <div class="chip"><p>양자 컴퓨터</p></div>
+                                    <div class="chip"><p>클라우드 &amp; SW</p></div>
+                                  </div>
+                                </div>
+                                <!-- chip-grid -->
+                              </div>
+                              <!-- answer -->
+                            </div>
+                            <!-- 바이오 혁명 & 인류의 진화 -->
+
+                            <div class="megaTrend qna">
+                              <div class="question">
+                                <div class="text-group">
+                                  <p class="name">신공급망 &amp; 국가 안보</p>
+                                  <p class="stat">평균수익률 : <span class="up">+19.06%</span> (10개 테마)</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M16 8.16064L10.7071 12.8985C10.3166 13.248 9.68342 13.248 9.29289 12.8985L4 8.16064" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </div>
+                              <!-- question -->
+
+                              <div class="answer">
+                                <div class="chip-grid">
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI &amp; 데이터 지능</p></div>
+                                    <div class="chip"><p>AI 가상 비서</p></div>
+                                    <div class="chip"><p>AI 수익화</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI 엣지 디바이스</p></div>
+                                    <div class="chip"><p>RWA 토큰화</p></div>
+                                    <div class="chip"><p>게임 &amp; 메타버스</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>데이터 프라이버시</p></div>
+                                    <div class="chip"><p>디지털 금융</p></div>
+                                    <div class="chip"><p>디지털 트윈</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>로봇 &amp; 자동화</p></div>
+                                    <div class="chip"><p>반도체 설계 소프트웨어</p></div>
+                                    <div class="chip"><p>반도체 패키징</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>반도체 하드웨어</p></div>
+                                    <div class="chip"><p>블록체인</p></div>
+                                    <div class="chip"><p>사이버 보안</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>스마트 시티</p></div>
+                                    <div class="chip"><p>양자 컴퓨터</p></div>
+                                    <div class="chip"><p>클라우드 &amp; SW</p></div>
+                                  </div>
+                                </div>
+                                <!-- chip-grid -->
+                              </div>
+                              <!-- answer -->
+                            </div>
+                            <!-- 신공급망 & 국가 안보 -->
+
+                            <div class="megaTrend qna">
+                              <div class="question">
+                                <div class="text-group">
+                                  <p class="name">미래 소비 &amp; 라이프스타일</p>
+                                  <p class="stat">평균수익률 : <span class="up">+19.06%</span> (10개 테마)</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M16 8.16064L10.7071 12.8985C10.3166 13.248 9.68342 13.248 9.29289 12.8985L4 8.16064" stroke="#999999" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                              </div>
+                              <!-- question -->
+
+                              <div class="answer">
+                                <div class="chip-grid">
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI &amp; 데이터 지능</p></div>
+                                    <div class="chip"><p>AI 가상 비서</p></div>
+                                    <div class="chip"><p>AI 수익화</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>AI 엣지 디바이스</p></div>
+                                    <div class="chip"><p>RWA 토큰화</p></div>
+                                    <div class="chip"><p>게임 &amp; 메타버스</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>데이터 프라이버시</p></div>
+                                    <div class="chip"><p>디지털 금융</p></div>
+                                    <div class="chip"><p>디지털 트윈</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>로봇 &amp; 자동화</p></div>
+                                    <div class="chip"><p>반도체 설계 소프트웨어</p></div>
+                                    <div class="chip"><p>반도체 패키징</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>반도체 하드웨어</p></div>
+                                    <div class="chip"><p>블록체인</p></div>
+                                    <div class="chip"><p>사이버 보안</p></div>
+                                  </div>
+                                  <div class="chip-row">
+                                    <div class="chip"><p>스마트 시티</p></div>
+                                    <div class="chip"><p>양자 컴퓨터</p></div>
+                                    <div class="chip"><p>클라우드 &amp; SW</p></div>
+                                  </div>
+                                </div>
+                                <!-- chip-grid -->
+                              </div>
+                              <!-- answer -->
+                            </div>
+                            <!-- 미래 소비 & 라이프스타일 -->
+                          </div>
+                          <!-- megaTrend__list -->
+                        </div>
+                        <!-- rankMegaTrend -->
+                      </div>
+                      <!-- rank__tab-content -->
+                    </div>
+                    <!-- themeRank -->
+                  </div>
+                  <!-- themeSearch -->
+                </div>
+                <!-- section__tab-track -->
+
+                <div class="common__importantNote">
+                  <strong>※ 유의사항</strong>
+
+                  <div class="txt">
+                    <span>본 서비스는 일부 콘텐츠에 한해 AI가 선별·요약한 투자정보를 제공합니다.</span>
+                    <span>본 지수의 2020~2025년 구간은 실제 운용되지 않은 백테스트(Backtest) 결과입니다.</span>
+                    <span>2023년 이후 일부 종목(전체의 1~2%)의 보관금액은 추정치를 포함합니다.</span>
+                    <span>지수 가중치는 세이브로 결제 데이터 기준 T+2 기준으로 산출됩니다.</span>
+                    <span>과거 수익률이 미래 수익률을 보장하지 않습니다.</span>
+                    <span>제공 내용은 참고용이며 추천 또는 투자 권유 목적이 아닙니다.</span>
+                  </div>
+                  <!-- txt -->
+                </div>
+                <!-- common__importantNote -->
+              </div>
+              <!-- section__tab-content -->
+            </div>
+            <!-- mainContent -->
+
+            <div class="modal seohak__modal-guideText fade" id="themeRankGuide" tabindex="-1" aria-labelledby="60대 테마 순위 설명">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <strong>60대 테마 순위</strong>
+                    <span>테마명을 선택하면 상세 리포트와 구성 종목을 확인할 수 있습니다.</span>
+                    <button class="modal-close" data-bs-dismiss="modal">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <!-- 모달닫기 -->
+                  </div>
+                  <!-- 모달바디 -->
+                </div>
+                <!-- 모달컨텐츠 -->
+              </div>
+              <!-- 모달Dialog -->
+            </div>
+            <!-- themeRankGuide -->
+
+            <div class="modal seohak__modal-guideText fade" id="megaTrandGuide" tabindex="-1" aria-labelledby="5대 메가트렌드">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <strong>5대 메가트렌드</strong>
+                    <span>테마명을 선택하면 상세 리포트와 구성 종목을 확인할 수 있습니다.</span>
+                    <button class="modal-close" data-bs-dismiss="modal">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <!-- 모달닫기 -->
+                  </div>
+                  <!-- 모달바디 -->
+                </div>
+                <!-- 모달컨텐츠 -->
+              </div>
+              <!-- 모달Dialog -->
+            </div>
+            <!-- themeRankGuide -->
+
+            <div class="modal seohak__modal-guideText fade" id="themeSelectMaxGuide" tabindex="-1" aria-labelledby="테마 선택 안내">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <strong>테마 선택</strong>
+                    <span>5개 테마가 모두 선택되었습니다. 다른 테마를 선택하려면 선택된 테마 중 하나를 해제해 주세요.</span>
+                    <button class="modal-close" data-bs-dismiss="modal">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <!-- 모달닫기 -->
+                  </div>
+                  <!-- 모달바디 -->
+                </div>
+                <!-- 모달컨텐츠 -->
+              </div>
+              <!-- 모달Dialog -->
+            </div>
+            <!-- themeSelectMaxGuide -->
+
+            <aside id="themeSelectSheet" tabindex="-1" aria-labelledby="테마 선택" class="offcanvas offcanvas-bottom themeSelectSheet">
+              <div class="offcanvas-header">
+                <div class="offcanvas-title">테마 선택</div>
+                <button type="button" class="close-btn" data-bs-dismiss="offcanvas">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1.25 1.25L18.75 18.75M18.75 1.25L1.25 18.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+              <!-- offcanvas-header -->
+
+              <div class="offcanvas-body">
+                <div class="themeOption-list">
+                  <button type="button" class="themeOption selected">
+                    <span class="radio"></span>
+                    <span class="label">AI &amp; 데이터 지능</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">AI 가상 비서</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">AI 수익화</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">AI 엣지 디바이스</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">RWA 토큰화</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">UAM</span>
+                  </button>
+                  <button type="button" class="themeOption">
+                    <span class="radio"></span>
+                    <span class="label">가정용 로봇</span>
+                  </button>
+                </div>
+                <!-- themeOption-list -->
+
+                <div class="themeSelect-footer">
+                  <p class="counter">최대 5개 선택 가능 (<span class="count">1</span>개 선택중)</p>
+                  <button type="button" class="confirm" data-bs-dismiss="offcanvas">확인</button>
+                </div>
+                <!-- themeSelect-footer -->
+              </div>
+              <!-- offcanvas-body -->
+            </aside>
+            <!-- themeSelectSheet -->
+          </div>
+          <!-- //seohak -->
+        </main>
+        <!-- //container -->
+
+        <footer id="footer" class="clearfix">
+          <menu id="fmenu">
+            <figure class="figure">
+              <img src="../img/flogin.png" class="figure-img img-fluid" alt="로그인" />
+              <figcaption class="figure-caption text-center rmt-7">로그인</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fpc.png" class="figure-img img-fluid" alt="PC버전" />
+              <figcaption class="figure-caption text-center rmt-7">PC버전</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../img/fdw.png" class="figure-img img-fluid" alt="씽크풀앱 다운로드" />
+              <figcaption class="figure-caption text-center">씽크풀앱<br />다운로드</figcaption>
+            </figure>
+          </menu>
+
+          <menu id="fmenu2">
+            <a href="#">고객센터</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </menu>
+
+          <div class="copyright">
+            <span class="d-block">@Thinkpool</span>
+
+            <span class="d-block">
+              씽크풀에서 제공되는 정보는 오류 및 지연이 될 수 있으며,<br />
+              그 이용에 따르는 책임은 이용자 본인에게 있습니다.<br />
+              또한 이용자는 본 정보를 무단 복사, 전재 및 재배포 할 수 없습니다.<br /><br />
+
+              씽크풀 내 일부 투자자문서비스는 씽크풀투자자문을 통해 제공되며, <br />
+              해당 서비스에서 제공되는 모든 정보는 투자판단의 참고자료로 <br />
+              원금 손실이 발생될 수 있으며, 그 손실은 투자자에게 귀속됩니다.
+            </span>
+
+            <span class="d-block">
+              고객센터 1666-6300 사업자 등록번호 116-81-54775 대표 :
+              <span>김동진</span>
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- /wrap -->
+    </div>
+    <!-- //app -->
+
+    <script>
+      // period__tabs·rank__filter: 콘텐츠 연동 전이라 클릭 시 활성 버튼만 전환합니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.period__tabs, .rank__filter').forEach(function (group) {
+          const buttons = Array.from(group.querySelectorAll('button'));
+          buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+              buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+              });
+              button.classList.add('active');
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      // 테마순위/메가트렌드(rank__tabs) 콘텐츠를 전환합니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.rank__tabs').forEach(function (tabs) {
+          const container = tabs.parentElement;
+          const content = container ? container.querySelector('.rank__tab-content') : null;
+          if (!content) return;
+
+          const buttons = Array.from(tabs.querySelectorAll('button'));
+          const panes = Array.from(content.children).filter(function (child) {
+            return child.classList.contains('tab-pane');
+          });
+
+          buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+              const targetPane = document.querySelector(button.getAttribute('data-target'));
+              if (!targetPane) return;
+
+              buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+              });
+              button.classList.add('active');
+
+              panes.forEach(function (pane) {
+                pane.classList.toggle('active', pane === targetPane);
+              });
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      // 테마 선택 바텀시트: 최대 5개까지 다중 선택할 수 있습니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        const sheet = document.getElementById('themeSelectSheet');
+        if (!sheet) return;
+
+        const MAX_SELECTED = 5;
+        const options = Array.from(sheet.querySelectorAll('.themeOption'));
+        const countEl = sheet.querySelector('.themeSelect-footer .count');
+        const maxGuideModalEl = document.getElementById('themeSelectMaxGuide');
+        const maxGuideModal = maxGuideModalEl && window.bootstrap ? new bootstrap.Modal(maxGuideModalEl) : null;
+
+        function updateCount() {
+          const selectedCount = options.filter(function (option) {
+            return option.classList.contains('selected');
+          }).length;
+          if (countEl) countEl.textContent = String(selectedCount);
+          return selectedCount;
+        }
+
+        options.forEach(function (option) {
+          option.addEventListener('click', function () {
+            const isSelected = option.classList.contains('selected');
+            if (!isSelected && updateCount() >= MAX_SELECTED) {
+              if (maxGuideModal) maxGuideModal.show();
+              return;
+            }
+            option.classList.toggle('selected');
+            updateCount();
+          });
+        });
+
+        updateCount();
+      });
+    </script>
+    <script>
+      // section__tabs 콘텐츠는 fade 대신 페이지 세로 스크롤로 전환됩니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        const sectionGroups = Array.from(document.querySelectorAll('.section__tabs'))
+          .map(function (tabs) {
+            const container = tabs.parentElement;
+            const track = container ? container.querySelector('.section__tab-track') : null;
+            return { tabs: tabs, track: track };
+          })
+          .filter(function (group) {
+            return !!group.track;
+          });
+
+        sectionGroups.forEach(function (group) {
+          const sectionTrack = group.track;
+          const sectionTabButtons = Array.from(group.tabs.querySelectorAll('button'));
+          const sectionPanes = Array.from(sectionTrack.children).filter(function (child) {
+            return child.classList.contains('tab-pane');
+          });
+
+          function setActivePane(pane) {
+            sectionPanes.forEach(function (p) {
+              p.classList.toggle('active', p === pane);
+              p.classList.toggle('show', p === pane);
+            });
+            sectionTabButtons.forEach(function (button) {
+              const isActive = button.getAttribute('data-scroll-target') === '#' + pane.id;
+              button.classList.toggle('active', isActive);
+              button.setAttribute('aria-selected', String(isActive));
+            });
+          }
+
+          sectionTabButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+              const targetPane = document.querySelector(button.getAttribute('data-scroll-target'));
+              if (!targetPane) return;
+              targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              setActivePane(targetPane);
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      // 주도테마/자금동향/인사이트(lead__tabs) 콘텐츠는 Swiper로 좌우 슬라이드 전환됩니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        const leadSwiperEl = document.querySelector('.lead__tab-content');
+        if (!leadSwiperEl) return;
+
+        const leadTabButtons = Array.from(document.querySelectorAll('.lead__tabs button'));
+
+        const leadSwiper = new Swiper(leadSwiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          on: {
+            slideChange: function (swiper) {
+              leadTabButtons.forEach(function (button, idx) {
+                const isActive = idx === swiper.activeIndex;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-selected', String(isActive));
+              });
+            },
+          },
+        });
+
+        leadTabButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            const targetSlide = document.querySelector(button.getAttribute('data-swiper-target'));
+            const idx = targetSlide ? leadSwiper.slides.indexOf(targetSlide) : -1;
+            if (idx > -1) leadSwiper.slideTo(idx);
+          });
+        });
+      });
+    </script>
+    <script>
+      // qna 아코디언: question을 누르면 answer가 펼쳐지고 다시 누르면 접힙니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.qna').forEach(function (qna) {
+          const question = qna.querySelector('.question');
+          const answer = qna.querySelector('.answer');
+          if (!question || !answer) return;
+
+          question.addEventListener('click', function () {
+            const isExpanded = qna.classList.contains('expanded');
+            if (!isExpanded) {
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+              qna.classList.add('expanded');
+            } else {
+              answer.style.maxHeight = '0px';
+              qna.classList.remove('expanded');
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      // summaryText의 more 버튼을 누르면 클램프된 텍스트가 애니메이션과 함께 전부 펼쳐집니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.summaryText .more').forEach(function (button) {
+          button.addEventListener('click', function () {
+            const wrapper = button.closest('.summaryText');
+            const text = wrapper.querySelector(':scope > span');
+            const label = button.querySelector('span');
+            if (!text) return;
+
+            const isExpanded = wrapper.classList.contains('expanded');
+            if (!isExpanded) {
+              text.style.maxHeight = text.scrollHeight + 'px';
+              wrapper.classList.add('expanded');
+              if (label) label.textContent = '접기';
+            } else {
+              text.style.maxHeight = '105px';
+              wrapper.classList.remove('expanded');
+              if (label) label.textContent = '펼치기';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

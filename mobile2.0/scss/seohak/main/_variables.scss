@@ -1,0 +1,37 @@
+$seohak-font-base: 'Noto Sans KR';
+
+// 텍스트 색상
+$seohak-color-text: #333;
+$seohak-color-text-secondary: #666;
+$seohak-color-text-muted: #999;
+$seohak-color-text-black: #000;
+
+// 브랜드/강조 색상
+$seohak-color-accent: #5367ff;
+$seohak-color-accent-dark: #3d4665;
+
+// 등락 색상
+$seohak-color-up: #fc2f2f;
+$seohak-color-down: #447aec;
+
+// 배경/보더
+$seohak-color-bg-pill: #f1f3f7;
+$seohak-color-bg-soft: #f9f9f9;
+$seohak-color-bg-divider: #f6f6f6;
+$seohak-color-border: #cfd3d9;
+$seohak-color-border-light: #dee2e5;
+
+// 지수비교 차트 범례(5색)
+$seohak-chart-legend-colors: (
+  1: #e15c61,
+  2: #ffa050,
+  3: #70b48d,
+  4: #4889e5,
+  5: #8c8eb7,
+);
+
+// 자금흐름/종목동향 차트 범례(2색, 증가/축소)
+$seohak-flow-legend-colors: (
+  1: #e82a39,
+  2: #feab65,
+);

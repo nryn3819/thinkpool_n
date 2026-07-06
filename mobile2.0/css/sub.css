@@ -12629,7 +12629,7 @@
   transition: background 0.2s;
 }
 .guide-modal .modal-footer .btn-modal-confirm:active {
-  background: rgb(32, 59.226744186, 255);
+  background: #203bff;
 }
 
 .ai-info-modal .modal-dialog {

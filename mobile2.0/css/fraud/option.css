@@ -1,1 +1,146 @@
-.fraud-option{width:100%;padding:20px 20px 50px}.fraud-option .option-tab{width:100%;height:40px;display:flex;justify-content:center;align-items:center;background:#ebebeb;border-radius:6px;margin-bottom:20px}.fraud-option .option-tab button{width:50%;height:40px;border:none;border-radius:6px;font-size:14px;font-weight:400;color:#666}.fraud-option .option-tab button.active{background:#000;color:#fff;font-weight:700}.fraud-option .option-content .option-title{width:100%;color:#141414;font-size:18px;font-weight:700;line-height:25px}.fraud-option .option-content .option-txt{width:100%;color:#141414;font-size:14px;font-weight:400;line-height:21px}.fraud-option .option-content .option-txt p{margin-bottom:12px}.fraud-option .option-content .option-txt p:last-child{margin-bottom:0}.fraud-option .option-content .option-txt p em{display:block;position:relative;padding-left:20px}.fraud-option .option-content .option-txt p em::before{content:"";display:inline-block;width:3.5px;height:3.5px;border-radius:100%;background:#444;position:absolute;left:9px;top:9px}.fraud-option .option-content .option-txt p span{font-size:15px;font-weight:500}.fraud-option .option-content .option-txt button{text-decoration-line:underline;border:none;background:none;padding:0;color:#114eed;font-size:14px;font-weight:400;line-height:21px;text-align:left}.fraud-option .option-content .option-box{width:100%;padding:20px 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:30px}.fraud-option .option-content .option-as{width:100%}.fraud-option .option-content .option-as .as-title{width:100%;padding:7px 10px;display:flex;justify-content:flex-start;align-items:center;gap:10px;border-radius:100px;background:#e8e9f9;margin-bottom:12px}.fraud-option .option-content .option-as .as-title.bg-gray{background:#f4f4f4}.fraud-option .option-content .option-as .as-title.prev-as{border-radius:22px}.fraud-option .option-content .option-as .as-title span{display:flex;justify-content:center;align-items:center;width:30px;height:30px;border-radius:100px;background:#363ede;color:#fff;font-size:16px;font-weight:700;line-height:24px}.fraud-option .option-content .option-as .as-title strong{display:inline-block;font-size:16px;font-weight:700;line-height:24px;color:#141414}.fraud-option .option-content .option-as .as-title strong em{font-size:14px;font-weight:400;line-height:21px}.fraud-option .option-content .option-as .as-title strong b{color:#d82828}.fixbanner{border:none;padding:0;margin:0;background:none;position:fixed;right:14px;top:85%}
+.fraud-option {
+  width: 100%;
+  padding: 20px 20px 50px;
+}
+.fraud-option .option-tab {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EBEBEB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.fraud-option .option-tab button {
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+.fraud-option .option-tab button.active {
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+}
+.fraud-option .option-content .option-title {
+  width: 100%;
+  color: #141414;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.fraud-option .option-content .option-txt {
+  width: 100%;
+  color: #141414;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.fraud-option .option-content .option-txt p {
+  margin-bottom: 12px;
+}
+.fraud-option .option-content .option-txt p:last-child {
+  margin-bottom: 0;
+}
+.fraud-option .option-content .option-txt p em {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+}
+.fraud-option .option-content .option-txt p em::before {
+  content: "";
+  display: inline-block;
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 100%;
+  background: #444;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+}
+.fraud-option .option-content .option-txt p span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.fraud-option .option-content .option-txt button {
+  text-decoration-line: underline;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #114EED;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+.fraud-option .option-content .option-box {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+.fraud-option .option-content .option-as {
+  width: 100%;
+}
+.fraud-option .option-content .option-as .as-title {
+  width: 100%;
+  padding: 7px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #E8E9F9;
+  margin-bottom: 12px;
+}
+.fraud-option .option-content .option-as .as-title.bg-gray {
+  background: #F4F4F4;
+}
+.fraud-option .option-content .option-as .as-title.prev-as {
+  border-radius: 22px;
+}
+.fraud-option .option-content .option-as .as-title span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: #363ede;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.fraud-option .option-content .option-as .as-title strong {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #141414;
+}
+.fraud-option .option-content .option-as .as-title strong em {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.fraud-option .option-content .option-as .as-title strong b {
+  color: #D82828;
+}
+
+.fixbanner {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  position: fixed;
+  right: 14px;
+  top: 85%;
+}

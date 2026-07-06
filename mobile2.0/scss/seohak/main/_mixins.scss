@@ -1,0 +1,558 @@
+@import 'variables';
+
+// 알약형(pill) 탭 버튼 그룹
+// fundFlow, contribution, stockTrend, constituentStocks, indexInExclusion 탭에서 공통으로 사용합니다.
+@mixin pill-tab-buttons {
+  display: flex;
+  width: 100%;
+
+  button {
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 8px;
+    background: $seohak-color-bg-pill;
+    font-size: 15px;
+    color: $seohak-color-text-secondary;
+    border: 0;
+    margin-right: 4px;
+
+    &.active {
+      background: $seohak-color-accent-dark;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}
+
+// 구분선이 있는 세그먼트 탭 버튼 그룹
+// chart__tabs(지수비교), deposit__tabs·netPurchase__tabs(자금흐름), period__tabs(테마)에서 공통으로 사용합니다.
+// flex: 1 0 0을 사용해 버튼 개수와 무관하게 동일한 너비로 분배됩니다.
+@mixin segmented-tab-buttons {
+  display: flex;
+  width: 100%;
+
+  button {
+    flex: 1 0 0;
+    height: 40px;
+    border: 1px solid $seohak-color-border;
+    background: none;
+    font-size: 14px;
+    color: $seohak-color-text-secondary;
+    border-right: 0;
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    &:last-child {
+      border-right: 1px solid $seohak-color-border;
+      border-radius: 0 8px 8px 0;
+    }
+    &.active {
+      border: 0;
+      background: $seohak-color-accent;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}
+
+// 콘텐츠 상단 타이틀(제목 + 우측 안내문구) 패턴
+// #allIndex, section__tab-track > .tab-pane(지수현황/구성현황)에서 공통으로 사용합니다.
+@mixin section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  strong {
+    display: flex;
+    align-items: center;
+    height: 24px;
+
+    span {
+      font-size: 16px;
+      color: $seohak-color-text-black;
+      font-weight: 700;
+      padding-right: 5px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      height: 18px;
+      margin: 3px 0 0;
+      padding: 0;
+      background: none;
+      border: 0;
+    }
+  }
+
+  & > span {
+    font-size: 13px;
+    color: $seohak-color-text-muted;
+    font-weight: 400 !important;
+  }
+}
+
+// section__tab-track 내부 각 탭 패널(.tab-pane)의 공통 여백/구분선
+@mixin section-tab-pane {
+  scroll-margin-top: 80px; // 상단 sticky 헤더(48px) + sticky section__tabs(30px)에 가리지 않도록
+  padding: 30px 17px;
+  border-top: 8px solid $seohak-color-bg-divider;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  .title {
+    @include section-title;
+  }
+}
+
+// 상단 sticky 서브탭 바(section__tabs)
+// 지수현황(5개 탭, 20%)과 구성현황(2개 탭, 50%)에서 버튼 너비만 다르게 사용합니다.
+@mixin sticky-section-tabs($button-width) {
+  position: sticky;
+  top: 48px;
+  z-index: 50;
+  background: #f2f3f7;
+  display: flex;
+  width: 100%;
+  padding: 0 17px;
+  height: 46px;
+
+  button {
+    display: flex;
+    width: $button-width;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: $seohak-color-text;
+    border: 0;
+    background: none;
+
+    &.active {
+      color: $seohak-color-accent;
+      font-weight: 700;
+      border-bottom: 3px solid $seohak-color-accent;
+    }
+  }
+}
+
+// 원형 점 범례 (자금흐름/종목동향 차트 공통)
+@mixin dot-legend($colors: $seohak-flow-legend-colors) {
+  padding-top: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
+  span {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 13px;
+    color: $seohak-color-text-secondary;
+    line-height: 19px;
+
+    &::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      margin: 2px 3px 0 0;
+    }
+
+    @each $index, $color in $colors {
+      &.label00#{$index}::before {
+        background: $color;
+      }
+    }
+  }
+}
+
+// 테두리 있는 "더보기"류 버튼
+// constituentStocks .itemList, indexInExclusion .inExclusion__history-stocks에서 공통으로 사용합니다.
+@mixin outline-more-button {
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 36px;
+    border-radius: 6px;
+    background: none;
+    padding: 0;
+    font-size: 12px;
+    color: #333d47;
+  }
+}
+
+// 하단 "유의사항" 안내 블록
+// main.scss(.common__importantNote), sixtyTheme.scss에서 공통으로 사용합니다.
+@mixin important-note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  padding: 12px;
+  background: $seohak-color-bg-soft;
+  border-radius: 8px;
+
+  strong {
+    color: $seohak-color-text-secondary;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 146.154% */
+  }
+
+  .txt {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+
+    span {
+      display: flex;
+      gap: 0 4px;
+      line-height: 18px;
+      font-size: 12px;
+      color: #969799;
+
+      &::before {
+        content: '';
+        width: 2.5px;
+        height: 2.5px;
+        background: $seohak-color-text-muted;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+// 상단 히어로 배너(.visual)
+// index.html/theme.html에서 공통으로 사용합니다.
+@mixin visual-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-size: 100% 185px;
+  padding-bottom: 20px;
+
+  .txt {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    strong {
+      overflow: hidden;
+      color: #fff;
+      text-overflow: ellipsis;
+      font-family: $seohak-font-base;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 29px; /* 131.818% */
+    }
+
+    span {
+      color: #b8c1ff;
+      font-family: $seohak-font-base;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+      padding-top: 8px;
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 40px;
+    right: 18px;
+    z-index: 2;
+    display: flex;
+    height: 36px;
+    padding: 2px 16px 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #4c2dd9;
+    color: #fff;
+    font-family: $seohak-font-base;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+  }
+
+  .visual-img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// 알약형(pill) 탭 버튼 그룹 - 포인트 색상(#5367ff) 강조
+// analyze__tabs(AI분석), lead__tabs·rank__filter(테마)에서 공통으로 사용합니다.
+@mixin accent-pill-tabs {
+  display: flex;
+  gap: 0 4px;
+  width: 100%;
+
+  button {
+    display: flex;
+    width: auto;
+    height: 35px;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: $seohak-color-bg-pill;
+    border: 0;
+    font-size: 14px;
+    color: $seohak-color-text;
+
+    &.active {
+      background: $seohak-color-accent;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}
+
+// 정사각형 대시 범례 (지수비교 차트, 테마별 수익률 차트에서 공통으로 사용)
+@mixin dash-legend($colors: $seohak-chart-legend-colors) {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: $seohak-color-bg-soft;
+  margin-top: 12px;
+  gap: 4px 0;
+
+  .label {
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: $seohak-color-text-secondary;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    @each $index, $color in $colors {
+      &.label00#{$index}::before {
+        background: $color;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 4px;
+      margin-right: 4px;
+    }
+  }
+}
+
+// AI 분석 카드 타이틀(Ai 뱃지 + 제목 + 우측 날짜)
+// aiAnalysis .swiper-slide .title, theme.html "주도 테마 분석"에서 공통으로 사용합니다.
+@mixin ai-card-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  strong {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+
+    span {
+      font-size: 14px;
+      color: $seohak-color-text;
+      font-weight: 700;
+      line-height: 21px;
+      padding: 0;
+    }
+    em {
+      width: 16px;
+      height: 16px;
+      background: $seohak-color-accent;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+
+  & > span {
+    overflow: hidden;
+    color: $seohak-color-text-muted;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 146.154% */
+  }
+}
+
+// 요약 텍스트 5줄 클램프 + 펼치기/접기 버튼
+// aiAnalysis .summaryText, theme.html "주도 테마 분석"에서 공통으로 사용합니다.
+@mixin summary-text-collapse {
+  display: flex;
+  flex-direction: column;
+
+  > span {
+    max-height: 105px;
+    line-height: 21px;
+    font-size: 14px;
+    color: $seohak-color-text;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    align-self: stretch;
+    transition: max-height 0.35s ease;
+  }
+
+  &.expanded > span {
+    -webkit-line-clamp: unset;
+  }
+
+  .more {
+    display: flex;
+    width: 100%;
+    height: 27px;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+    border: 0;
+    border-top: 1px solid #e4e4e4;
+    background: 0;
+    padding: 7px 0 0;
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: $seohak-color-text-muted;
+
+    span {
+      height: 20px;
+      line-height: 20px;
+      margin-top: 0;
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &.expanded .more svg {
+    transform: rotate(180deg);
+  }
+}
+
+// 질문(question)을 누르면 답변(answer)이 펼쳐지는 아코디언 - sixtyTheme.html의 Q&A와 동일합니다.
+@mixin qna-accordion {
+  padding: 12px;
+  border: 1px solid #e4e4e4;
+  min-height: 21px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+
+    span {
+      color: #333;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px; /* 150% */
+      width: calc(100% - 30px);
+    }
+
+    svg {
+      flex-shrink: 0;
+      transform: rotate(180deg);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  .answer {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px; /* 146.154% */
+    transition: max-height 0.3s ease;
+
+    span {
+      display: block;
+      padding-top: 12px;
+    }
+  }
+
+  &.expanded {
+    .question svg {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+// 정보 안내 모달(중앙 정렬) - .seohak__modal-guideText와 동일합니다.
+@mixin modal-guide-text {
+  .modal-content {
+    position: relative;
+    padding: 16px;
+    border-radius: 8px !important;
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      gap: 20px 0;
+
+      strong {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $seohak-color-text;
+      }
+      span {
+        font-size: 13px;
+        color: $seohak-color-text;
+        line-height: 19px;
+      }
+
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: none;
+        z-index: 10024;
+      }
+    }
+  }
+}
