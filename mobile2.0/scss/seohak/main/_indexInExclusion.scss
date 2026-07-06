@@ -20,6 +20,11 @@
       width: 100%;
 
       @include outline-more-button;
+
+      // 부모의 gap이 이미 여백을 주고 있어 버튼의 기본 margin-top은 제거합니다.
+      button {
+        margin-top: 0;
+      }
     }
   }
 

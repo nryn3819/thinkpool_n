@@ -392,10 +392,10 @@
   border-radius: 8px;
   background: #f9f9f9;
   margin-top: 12px;
-  gap: 4px 0;
+  gap: 4px 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label {
-  width: 33.3333333333%;
+  width: auto;
   font-size: 12px;
   color: #666;
   line-height: 18px;
@@ -429,7 +429,7 @@
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tabs button {
   height: 38px;
-  padding: 0 10px;
+  padding: 0 16px;
   border-radius: 8px;
   background: #f1f3f7;
   font-size: 15px;
@@ -515,13 +515,17 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label span.label002::before {
   background: #feab65;
 }
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane#netPurchase .tab-content .tab-pane .chart-label .label002::before {
+  background: #306ceb;
+}
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
   display: flex;
   width: 100%;
+  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs button {
   height: 38px;
-  padding: 0 10px;
+  padding: 0 16px;
   border-radius: 8px;
   background: #f1f3f7;
   font-size: 15px;
@@ -533,9 +537,6 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
-}
-#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
-  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content {
   padding-top: 20px;
@@ -577,12 +578,14 @@
   display: flex;
   gap: 0 4px;
   width: 100%;
+  gap: 0;
+  justify-content: space-between;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
   display: flex;
   width: auto;
   height: 35px;
-  padding: 10px 12px;
+  padding: 7px 12px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -596,6 +599,10 @@
   background: #5367ff;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
+  width: calc((100% - 12px) / 4);
+  padding: 7px 4px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content {
   padding-top: 15px;
@@ -699,10 +706,11 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
   display: flex;
   width: 100%;
+  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs button {
   height: 38px;
-  padding: 0 10px;
+  padding: 0 16px;
   border-radius: 8px;
   background: #f1f3f7;
   font-size: 15px;
@@ -714,9 +722,6 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
-}
-#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
-  padding-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content {
   padding-top: 20px;
@@ -748,7 +753,7 @@
   background: #e82a39;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span.label002::before {
-  background: #feab65;
+  background: #306ceb;
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tabs {
   position: sticky;
@@ -825,7 +830,7 @@
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs button {
   height: 38px;
-  padding: 0 10px;
+  padding: 0 16px;
   border-radius: 8px;
   background: #f1f3f7;
   font-size: 15px;
@@ -890,7 +895,7 @@
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tabs button {
   height: 38px;
-  padding: 0 10px;
+  padding: 0 16px;
   border-radius: 8px;
   background: #f1f3f7;
   font-size: 15px;
@@ -932,6 +937,9 @@
   padding: 0;
   font-size: 12px;
   color: #333d47;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory .inExclusion__history-stocks button {
+  margin-top: 0;
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule {
   flex-direction: column;
@@ -1062,6 +1070,9 @@
 }
 #seohak .seohak__modal-guideText .modal-content .modal-body button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   right: 0;
   padding: 0;
@@ -1084,25 +1095,21 @@
 .seohak__main-table thead tr th.ta_r {
   text-align: right;
 }
-.seohak__main-table tbody tr:nth-child(1) td:first-child span, .seohak__main-table tbody tr:nth-child(2) td:first-child span, .seohak__main-table tbody tr:nth-child(3) td:first-child span {
-  width: 24px;
-  height: 21px;
-  border: 1px solid rgba(83, 103, 255, 0.5);
-  background: #f2f3ff;
-  color: #5367ff;
-}
 .seohak__main-table tbody tr.rowTop td {
   border-bottom: 0;
 }
-.seohak__main-table tbody tr.rowTop td:first-child {
+.seohak__main-table tbody tr.rowTop td.col-rank {
   border-bottom: 1px solid #dee2e5;
+}
+.seohak__main-table tbody tr.rowTop.row-last td.col-rank {
+  border-bottom: 0;
 }
 .seohak__main-table tbody tr td {
   height: 42px;
   padding: 0 4px;
   border-bottom: 1px solid #dee2e5;
 }
-.seohak__main-table tbody tr td:first-child span {
+.seohak__main-table tbody tr td.col-rank span {
   display: flex;
   width: 24px;
   height: 21px;
@@ -1114,23 +1121,28 @@
   font-weight: 700;
   color: #666;
 }
-.seohak__main-table tbody tr td:nth-child(2) span {
+.seohak__main-table tbody tr td.col-rank span.rank-top {
+  border: 1px solid rgba(83, 103, 255, 0.5);
+  background: #f2f3ff;
+  color: #5367ff;
+}
+.seohak__main-table tbody tr td.col-name span {
   font-size: 14px;
   color: #333;
   font-weight: 700;
 }
-.seohak__main-table tbody tr td:nth-child(3) span {
+.seohak__main-table tbody tr td.col-value span {
   font-size: 14px;
   font-weight: 700;
   color: #333;
 }
-.seohak__main-table tbody tr td:nth-child(3) span.up {
+.seohak__main-table tbody tr td.col-value span.up {
   color: #fc2f2f;
 }
-.seohak__main-table tbody tr td:nth-child(3) span.dn {
+.seohak__main-table tbody tr td.col-value span.dn {
   color: #447aec;
 }
-.seohak__main-table tbody tr td:last-child span {
+.seohak__main-table tbody tr td.col-change span {
   font-size: 14px;
   font-weight: 400;
 }
@@ -1140,30 +1152,23 @@
 .seohak__main-table tbody tr td.ta_r {
   text-align: right;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop:nth-child(1) td:first-child span, .seohak__main-table.table__doubleLine tbody tr.rowTop:nth-child(3) td:first-child span, .seohak__main-table.table__doubleLine tbody tr.rowTop:nth-child(5) td:first-child span {
-  width: 24px;
-  height: 21px;
-  border: 1px solid rgba(83, 103, 255, 0.5);
-  background: #f2f3ff;
-  color: #5367ff;
-}
 .seohak__main-table.table__doubleLine tbody tr.rowTop td {
   height: 31px;
   padding-top: 10px;
   padding-bottom: 0;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop td:first-child {
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-rank {
   padding: 10px 4px;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop td:nth-child(2) {
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name {
   font-size: 14px;
   color: #333;
   font-weight: 700;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop td:nth-child(2) span {
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name span {
   font-weight: 700;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop td:nth-child(2) em {
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name em {
   display: inline-flex;
   align-items: center;
   margin-left: 4px;
@@ -1175,10 +1180,13 @@
   font-weight: 400;
   height: 14px;
 }
-.seohak__main-table.table__doubleLine tbody tr.rowTop td:nth-child(3) span, .seohak__main-table.table__doubleLine tbody tr.rowTop td:nth-child(4) span {
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-weight span, .seohak__main-table.table__doubleLine tbody tr.rowTop td.col-amount span {
   font-size: 14px;
   color: #333;
   font-weight: 400;
+}
+.seohak__main-table.table__doubleLine tbody tr:not(.rowTop).row-last td {
+  border-bottom: 0;
 }
 .seohak__main-table.table__doubleLine tbody tr:not(.rowTop) td {
   height: 31px;
@@ -1194,7 +1202,7 @@
   background: 0;
   border: 0;
 }
-.seohak__main-table.table-sm tbody tr td:nth-child(2) span {
+.seohak__main-table.table-sm tbody tr td.col-name span {
   display: block;
   width: 100%;
   max-width: 160px;
@@ -1213,6 +1221,9 @@
   background: #f8f9fb;
   padding: 10px 4px;
   height: 16px;
+}
+.seohak__main-tableS tbody tr:last-child td {
+  border-bottom: 0;
 }
 .seohak__main-tableS tbody tr td {
   border-bottom: 1px solid #dee2e5;

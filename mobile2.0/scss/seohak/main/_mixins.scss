@@ -8,7 +8,7 @@
 
   button {
     height: 38px;
-    padding: 0 10px;
+    padding: 0 16px;
     border-radius: 8px;
     background: $seohak-color-bg-pill;
     font-size: 15px;
@@ -312,7 +312,7 @@
     display: flex;
     width: auto;
     height: 35px;
-    padding: 10px 12px;
+    padding: 7px 12px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -338,10 +338,10 @@
   border-radius: 8px;
   background: $seohak-color-bg-soft;
   margin-top: 12px;
-  gap: 4px 0;
+  gap: 4px 15px;
 
   .label {
-    width: calc(100% / 3);
+    width: auto;
     font-size: 12px;
     color: $seohak-color-text-secondary;
     line-height: 18px;
@@ -545,6 +545,9 @@
 
       button {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0;
         right: 0;
         padding: 0;

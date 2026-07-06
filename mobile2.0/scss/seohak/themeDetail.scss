@@ -30,13 +30,12 @@
 
       // 분석 기간 선택 - theme.html과 동일
       .periodSelect {
-        padding: 0 17px 0;
-
         .title {
           display: flex;
           justify-content: space-between;
           align-items: center;
           height: 24px;
+          padding: 0 17px;
 
           strong {
             font-size: 16px;
@@ -49,16 +48,24 @@
             font-weight: 400;
           }
         }
+      }
 
-        .period__tabs {
-          @include segmented-tab-buttons;
-          padding: 15px 0 20px;
-        }
+      // section__tabs와 나란히 sticky 영역을 이루도록 .mainContent의 형제 요소로 두고
+      // 헤더(48px) 바로 아래에 고정합니다.
+      .period__tabs {
+        @include segmented-tab-buttons;
+        position: sticky;
+        top: 48px;
+        z-index: 51;
+        background: #fff;
+        padding: 15px 17px 20px;
       }
 
       // 테마시황/종목/ETF/AI분석 - section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
+      // period__tabs(고정 높이 75px)가 위에 붙으므로, 그 아래(48px + 75px)에 이어서 고정됩니다.
       .section__tabs {
         @include sticky-section-tabs(25%);
+        top: 123px;
       }
 
       .section__tab-content {
@@ -222,6 +229,7 @@
         // 핵심 5종목 - 새 테이블
         .seohak__stock-table {
           margin-top: 20px;
+          table-layout: fixed; // colgroup의 열 너비를 고정해 .name 말줄임이 실제로 동작하도록 합니다.
 
           thead {
             tr {
@@ -234,6 +242,7 @@
                 padding: 0 4px;
                 border-top: 1px solid $seohak-color-border-light;
                 border-bottom: 1px solid $seohak-color-border-light;
+                white-space: nowrap;
 
                 &.ta_r {
                   text-align: right;
@@ -248,7 +257,7 @@
                 padding: 0 4px;
                 border-bottom: 1px solid $seohak-color-border-light;
 
-                &:first-child {
+                &.col-rank {
                   .rank {
                     display: flex;
                     width: 24px;
@@ -264,10 +273,11 @@
                   }
                 }
 
-                &:nth-child(2) {
+                &.col-name {
                   display: flex;
                   flex-direction: column;
                   gap: 2px 0;
+                  min-width: 0; // flex 자식이 content 너비만큼 커지려는 것을 막아 말줄임이 동작하도록 합니다.
 
                   .ticker {
                     font-size: 14px;
@@ -275,20 +285,25 @@
                     color: $seohak-color-text;
                   }
                   .name {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                     font-size: 12px;
                     color: $seohak-color-text-muted;
                   }
                 }
 
-                &:nth-child(3) span,
-                &:nth-child(4) span {
+                &.col-weight span,
+                &.col-amount span {
                   font-size: 13px;
                   color: $seohak-color-text;
                 }
-                &:nth-child(4) span {
+                &.col-amount span {
                   color: $seohak-color-text-secondary;
                 }
-                &:last-child span {
+                &.col-return span {
                   font-size: 13px;
                   font-weight: 700;
 
@@ -390,6 +405,7 @@
 
             .title {
               @include ai-card-title;
+              padding-bottom: 12px;
             }
 
             @include summary-text-collapse;

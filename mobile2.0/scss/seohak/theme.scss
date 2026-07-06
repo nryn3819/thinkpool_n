@@ -30,13 +30,12 @@
 
       // 분석 기간 선택(1일~1년) - index.html .video-title(제목+설명 세로배치) 여백 규칙 참조
       .periodSelect {
-        padding: 0 17px;
-
         .title {
           display: flex;
           justify-content: space-between;
           align-items: center;
           height: 24px;
+          padding: 0 17px;
 
           strong {
             font-size: 16px;
@@ -49,17 +48,25 @@
             font-weight: 400;
           }
         }
+      }
 
-        // 분석 기간(1일~1년) - chart__tabs와 동일한 세그먼트 버튼 스타일
-        .period__tabs {
-          @include segmented-tab-buttons;
-          padding: 15px 0 20px;
-        }
+      // 분석 기간(1일~1년) - chart__tabs와 동일한 세그먼트 버튼 스타일
+      // section__tabs와 나란히 sticky 영역을 이루도록 .mainContent의 형제 요소로 두고
+      // 헤더(48px) 바로 아래에 고정합니다.
+      .period__tabs {
+        @include segmented-tab-buttons;
+        position: sticky;
+        top: 48px;
+        z-index: 51;
+        background: #fff;
+        padding: 15px 17px 20px;
       }
 
       // 전체테마/AI분석/수익률/테마탐색 - 지수현황의 section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
+      // period__tabs(고정 높이 75px)가 위에 붙으므로, 그 아래(48px + 75px)에 이어서 고정됩니다.
       .section__tabs {
         @include sticky-section-tabs(25%);
+        top: 123px;
       }
 
       // section__tab-track 내부의 각 탭 콘텐츠 - main.scss의 section__tab-track과 동일한 구분선·여백

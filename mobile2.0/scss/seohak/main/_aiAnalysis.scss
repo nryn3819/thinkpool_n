@@ -36,8 +36,16 @@
   flex-direction: column;
   width: 100%;
 
+  // 4개 버튼을 space-between으로 배치해 버튼 사이 여백이 4px이 되도록 합니다.
   .analyze__tabs {
     @include accent-pill-tabs;
+    gap: 0;
+    justify-content: space-between;
+
+    button {
+      width: calc((100% - 12px) / 4);
+      padding: 7px 4px;
+    }
   }
   .analyze__tab-content {
     padding-top: 15px;

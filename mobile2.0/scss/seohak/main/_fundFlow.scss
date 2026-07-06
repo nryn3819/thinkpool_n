@@ -27,5 +27,19 @@
         @include dot-legend;
       }
     }
+
+    &#netPurchase {
+      .tab-content {
+        .tab-pane {
+          .chart-label {
+            .label002 {
+              &::before {
+                background: #306ceb;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
