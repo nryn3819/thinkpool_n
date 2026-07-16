@@ -262,11 +262,6 @@
 #seohak.seohak-map .mainContent .period__tabs {
   display: flex;
   width: 100%;
-  position: sticky;
-  top: 48px;
-  z-index: 51;
-  background: #fff;
-  padding: 15px 17px 20px;
 }
 #seohak.seohak-map .mainContent .period__tabs button {
   flex: 1 0 0;
@@ -290,6 +285,13 @@
   color: #fff;
   font-weight: 700;
 }
+#seohak.seohak-map .mainContent .period__tabs {
+  position: sticky;
+  top: 48px;
+  z-index: 51;
+  background: #fff;
+  padding: 15px 17px 20px;
+}
 #seohak.seohak-map .mainContent .section__tabs {
   position: sticky;
   top: 48px;
@@ -299,7 +301,6 @@
   width: 100%;
   padding: 0 17px;
   height: 46px;
-  top: 123px;
 }
 #seohak.seohak-map .mainContent .section__tabs button {
   display: flex;
@@ -317,12 +318,13 @@
   font-weight: 700;
   border-bottom: 3px solid #5367ff;
 }
+#seohak.seohak-map .mainContent .section__tabs {
+  top: 123px;
+}
 #seohak.seohak-map .mainContent .section__tab-track > .tab-pane {
   scroll-margin-top: 80px;
   padding: 30px 17px;
   border-top: 8px solid #f6f6f6;
-  padding-top: 0 !important;
-  scroll-margin-top: 169px;
 }
 #seohak.seohak-map .mainContent .section__tab-track > .tab-pane:first-child {
   border-top: 0;
@@ -357,6 +359,10 @@
   font-size: 13px;
   color: #999;
   font-weight: 400 !important;
+}
+#seohak.seohak-map .mainContent .section__tab-track > .tab-pane {
+  padding-top: 0 !important;
+  scroll-margin-top: 169px;
 }
 #seohak.seohak-map .mainContent .themeMap {
   padding-top: 20px;
@@ -416,7 +422,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 12px;
 }
 #seohak.seohak-map .mainContent .themeLead .lead__tab-content .swiper-slide .title strong {
   display: flex;
@@ -450,6 +455,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 19px; /* 146.154% */
+}
+#seohak.seohak-map .mainContent .themeLead .lead__tab-content .swiper-slide .title {
+  padding-bottom: 12px;
 }
 #seohak.seohak-map .mainContent .themeLead .lead__tab-content .swiper-slide .summaryText {
   display: flex;
@@ -574,7 +582,6 @@
 #seohak.seohak-map .mainContent .themeRank .rank__tabs {
   display: flex;
   width: 100%;
-  margin-bottom: 15px;
 }
 #seohak.seohak-map .mainContent .themeRank .rank__tabs button {
   height: 38px;
@@ -591,17 +598,33 @@
   color: #fff;
   font-weight: 700;
 }
+#seohak.seohak-map .mainContent .themeRank .rank__tabs {
+  margin-bottom: 15px;
+}
 #seohak.seohak-map .mainContent .themeRank .rank__tab-content .tab-pane {
   display: none;
 }
 #seohak.seohak-map .mainContent .themeRank .rank__tab-content .tab-pane.active {
   display: block;
 }
+#seohak.seohak-map .mainContent .themeRank .rank__tab-content .tab-pane .seohak__table-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 36px;
+  border-radius: 6px;
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: #333d47;
+}
 #seohak.seohak-map .mainContent .themeRank .rank__filter {
   display: flex;
   gap: 0 4px;
   width: 100%;
-  padding: 15px 0;
 }
 #seohak.seohak-map .mainContent .themeRank .rank__filter button {
   display: flex;
@@ -621,6 +644,9 @@
   background: #5367ff;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-map .mainContent .themeRank .rank__filter {
+  padding: 15px 0;
 }
 #seohak.seohak-map .mainContent .themeRank .megaTrend__list {
   display: flex;

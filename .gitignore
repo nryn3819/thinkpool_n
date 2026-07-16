@@ -243,3 +243,6 @@ yarn.
 
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn,macos,visualstudiocode,git
 .DS_Store
+
+./old
+old/

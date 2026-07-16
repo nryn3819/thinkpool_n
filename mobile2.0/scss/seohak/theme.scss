@@ -185,6 +185,21 @@
             &.active {
               display: block;
             }
+
+            .seohak__table-more {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              margin-top: 15px;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              height: 36px;
+              border-radius: 6px;
+              background: none;
+              padding: 0;
+              font-size: 12px;
+              color: #333d47;
+            }
           }
         }
 
