@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Cache-Control" content="No-Cache">
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  	<title></title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/font.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/import.css" media="screen" title="no title" charset="utf-8">
+    <!-- //css -->
+    <!-- script -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- script -->
+  </head>
+  <body>
+      <div id="member_wrap">
+          <header id="header">
+            <div class="stg_header">
+                <div class="title">
+                    <a href="#타이틀">로그인</a>
+                </div>
+                <!-- // 페이지 타이틀 -->
+
+                <div class="header_right">
+                    <div class="page_close">
+                        <a href="#닫기"><img src="./img/ico_close.png" alt=""></a>
+                    </div>
+                    <!-- //페이지닫기 -->
+                </div>
+                <!-- //우측버튼 -->
+            
+                <div class="page_back">
+                    <a href="#이전페이지"><img src="./img/ico_back.png" alt="이전 페이지"></a>
+                </div>
+                <!-- //이전페이지 -->
+
+                <div class="page_home">
+                  <a href="#홈으로돌아가기"><img src="./img/ico_home.png" alt="홈화면 돌아가기"></a>
+                </div>
+            </div>
+            <!-- //마이페이지 상단 영역 -->
+          </header>
+          <!-- //header -->
+
+          <hr>
+          <main>
+              <div class="login_w">
+                  <div class="idpw_top">
+                      <strong>비밀번호 찾기</strong>
+                  </div>
+                  <!-- //idpw -->
+
+                  <div class="idpw_sch_input">
+                      <dl>
+                          <dt><label for="">아이디</label></dt>
+                          <dd><input type="text" placeholder="아이디를 입력하세요"></dd>
+                          <!-- // -->
+
+                          <dt><label for="">이름</label></dt>
+                          <dd><input type="text" placeholder="가입시 등록한 이름을 입력하세요"></dd>
+                          <!-- // -->
+
+                          <dt>휴대폰번호</dt>
+                          <dd>
+                              <input type="text" placeholder="'-'없이 번호만 입력하세요.">
+                              <button class="num_cl">인증번호받기</button>
+                          </dd>
+                          <!-- // -->
+
+                          <dt class="cl_num">인증번호</dt>
+                          <dd class="cl_num">
+                              <input type="text" placeholder="">
+                              <button class="cl">인증</button>
+                          </dd>
+                          <!-- // -->
+                      </dl>
+                      <script>
+                          $(function(){
+                              $('.num_cl').on('click', function(){
+                                  $('.cl_num').show();
+                              });
+                          });
+                      </script>
+
+                      <div class="idpw_guide">
+                        비밀번호 찾기에 여러움이 있으시면 고객센터 1666-3600으로 <br>
+                        연락주시기 바랍니다.
+                      </div>
+
+                      <div class="schBtn pw">
+                          <a href="#">확인</a>
+                      </div>
+                      <!-- // -->
+                  </div>
+                  <!-- //isp -->
+              </div>
+          </main>
+      </div>
+  </body>
+</html>

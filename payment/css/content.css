@@ -1,0 +1,93 @@
+html,body{height:100%;}
+#container_pay{position:relative;width:982px;margin:0 auto;}
+
+.pay_tit{display:inline-block;line-height:20px;height:20px;padding-left:27px;background:url(../img/bu_pay_tit.gif) no-repeat 0 50%;font-size:14px;color:#333333;font-weight:bold;}
+.input_cm01{display:inline-block;height:18px;vertical-align:middle;line-height:18px;border:1px solid #cecece;padding:0 5px;font-size:12px;color:#000;font-family:'dotum';}
+
+.cm_pay_box01{position:relative;display:inline-block;width:100%;margin-top:40px;}
+.cm_pay_board01{display:inline-block;width:100%;border-top:2px solid #232833;margin-top:10px;}
+.cm_pay_board01 th{height:36px;line-height:36px;font-size:12px;color:#232833;font-weight:bold;border-bottom:1px solid #d5d5d5;}
+.cm_pay_board01 td{height:36px;line-height:36px;font-size:12px;color:#232833;border-bottom:1px solid #d5d5d5;}
+.btn_cmpay_modify{position:absolute;top:0;left:100px;}
+
+.cm_pay_box02{position:relative;width:100%;margin-top:20px;}
+.cm_pay_board02{display:inline-block;width:100%;border:1px solid #d5d5d5;margin-top:10px;}
+.cm_pay_board02 thead th{height:33px;line-height:33px;background:#999999;font-size:12px;color:#fff;text-align:center;font-weight:bold;border-left:1px solid #d5d5d5;}
+.cm_pay_board02 thead th.first{border-left:none;}
+.cm_pay_board02 tbody td{height:35px;line-height:35px;font-size:12px;color:#333;font-weight:bold;text-align:center;border-left:1px solid #d5d5d5;}
+.cm_pay_board02 tbody td.first{border-left:none;}
+.cm_pay_board02 tbody td span{font-size:12px;color:#333;font-weight:bold;display:inline-block;width:90px;float:left;margin-left:10px;}
+.cm_pay_board02 tbody td select{display:inline-block;width:115px;height:18px;border:1px solid #707070;float:left;margin:8px 0 0 0px;}
+.cm_pay_board02 tbody td .btn_apply{display:inline-block;float:left;margin:7px 0 0 5px;}
+
+.cmpay_caution_box{display:inline-block;width:950px;border:1px solid #d5d5d5;background:#f7f7f7;padding:15px;margin-top:30px;font-family:'Nanum Gothic'}
+.cmpay_caution_box .cmpay_tit{font-size:11px;color:#333;font-weight:bold;font-family:'Nanum Gothic'}
+.cmpay_caution_box .cmpay_txt{font-size:12px;line-height:16px;color:#111;font-family:'Nanum Gothic'}
+.cmpay_caution_box ul{display:inline-block;margin-top:10px;}
+.cmpay_caution_box li{font-size:12px;color:#333;line-height:18px;font-family:'Nanum Gothic'}
+
+.cm_pay_box03{position:relative;width:100%;margin-top:20px;}
+.cm_pay_board03{display:inline-block;width:100%;border-top:2px solid #232833;margin-top:10px;}
+.cm_pay_board03 tbody th{width:120px;height:33px;line-height:33px;text-align:left;padding-left:25px;font-size:12px;color:#000;background:#f6f7f8;border-bottom:1px solid #d4d8dc;vertical-align:top;}
+.cm_pay_board03 tbody td{height:33px;line-height:33px;text-align:left;padding-left:25px;font-size:12px;color:#000;border-bottom:1px solid #d4d8dc;}
+.cm_pay_box03 .cmpay_agree{display:inline-block;width:100%;margin-top:5px;text-align:center;}
+.cm_pay_box03 .cmpay_agree label{font-size:12px;color:#333;}
+.cmpay_btn_box{display:inline-block;width:100%;text-align:center;margin-top:30px;}
+
+.cmpay_paybox{display:block;width:100%;background:#fff;margin-top:50px;}
+.paybox_tit{display:inline-block;width:100%;font-size:14px;color:#333;font-weight:bold;}
+.paybox_table{display:inline-block;width:100%;margin-top:25px;border-top:1px solid #dadada;}
+.paybox_table td{height:35px;line-height:35px;font-size:12px;color:#333;padding-left:13px !important;border-bottom:1px solid #dadada;}
+.paybox_table td.table_tit{height:37px;line-height:37px;background:#f2f2f2;font-size:13px;font-weight:bold;}
+.paybox_table td.table_txt{border-bottom:none;}
+.paybox_table td li span{display:inline-block;width:55px;}
+.tbl_tit{font-weight:bold;color:#111;padding-top:15px;}
+.pay_cho{font-size:12px;color:#333;padding:0 15px;}
+
+.paybox_table02{padding-left:0 !important;}
+.paybox_table02 th{height:35px !important;line-height:35px !important;font-size:12px;color:#333;border-top:1px solid #dadada;text-align:left;padding-left:10px !important;border-bottom:none !important;background:none !important;}
+.paybox_table02 td{height:35px;line-height:35px;font-size:12px;color:#333;border-top:1px solid #dadada;}
+.paybox_table02 td .address span{font-size:12px;color:#969696;display:inline-block;width:76px;text-align:center;}
+.paybox_table02 td.end{border-bottom:none !important;}
+
+.cmpay_caution_box02{display:inline-block;width:100%;min-height:106px;background:#f7f7f7;border:1px solid #d5d5d5;margin:55px 0 10px 0;padding-bottom:15px;font-family:'Nanum Gothic'}
+.cmpay_caution_box02 .tit{display:inline-block;width:600px;margin:12px 0 0 15px !important;font-size:12px;color:#888;font-weight:bold;font-family:'Nanum Gothic'}
+.cmpay_caution_box02 ul{display:inline-block;margin:10px 0 0 15px !important;font-size:12px;color:#888;}
+.cmpay_caution_box02 ul li{display:inline-block;width:90%;line-height:18px;font-family:'Nanum Gothic'}
+
+.payment_cmpt{display:inline-block;width:714px;height:106px;line-height:106px;background:#f7f7f7;border:1px solid #d5d5d5;text-align:center;font-size:24px;color:#333;}
+.cmpay_paybox_n{display:inline-block;width:714px;border:1px solid #d5d5d5;margin-top:30px;}
+.cmpay_paybox_n .tit{display:inline-block;width:704px;height:33px;line-height:33px;padding-left:10px;font-size:12px;color:#fff;font-weight:700;background:#999999;border-bottom:1px solid #d5d5d5;}
+.cmpay_paybox_n .txt{display:inline-block;width:100%;text-align:center;font-size:24px;color:333;padding:45px 0;}
+.cmpay_paybox_n .txt em{display:inline-block;width:100%;text-align:center;font-size:12px;color:333;padding:10px 0;}
+.cmpay_paybox_n .paybox_table{display:block;width:640px;margin:0 auto;border:none;}
+.cmpay_paybox_n .paybox_table table{border:1px solid #d5d5d5;}
+.cmpay_paybox_n .paybox_table .paybox_table_tit{height:30px;line-height:30px;padding-left:10px;background:#f6f2eb;font-size:12px;color:#333;}
+.cmpay_paybox_n .paybox_table .paybox_table_txt{display:inline-block;width:100%;text-align:center;padding:30px 0;font-size:12px;color:#333;font-weight:700;}
+.cmpay_paybox_n .paybox_table th{height:33px;line-height:33px;padding-left:10px;font-size:12px;color:#333;background:#f6f6f6;border-bottom:1px solid #d5d5d5;}
+.cmpay_paybox_n .paybox_table td{border-left:1px solid #d5d5d5;border-bottom:1px solid #d5d5d5;padding-left:10px;font-size:12px;color:333;}
+.cmpay_paybox_n .txt02{display:block;width:642px;margin:0 auto;padding-top:20px;font-size:12px;color:#888;line-height:18px;}
+.paybox_btn_box{display:inline-block;width:100%;padding:40px 0;text-align:center;}
+
+.pop01{position:absolute;top:0;left:50%;margin-left:-403px;z-index:999;display:none;}
+.pop02{position:absolute;top:0;left:50%;margin-left:-403px;z-index:999;}
+.pop03{position:absolute;top:0;left:50%;margin-left:-403px;z-index:999;display:none;}
+.pop04{position:absolute;top:0;left:50%;margin-left:-403px;z-index:999;display:none;}
+
+.card_guide{display:inline-block;float:right;}
+.caution_box_s{display:inline-block;height:70px;border:1px solid #d5d5d5;margin:10px 0;font-size:12px;line-height:18px;padding:15px;overflow-y:scroll;}
+.auto_guide{display:inline-block;padding:5px;font-size:12px;color:red;}
+.payment_complete{width:716px;margin:0 auto; padding-top:10px;}
+.top_pay{display:inline-block;text-align:center;}
+
+.footer{position:relative;width:100%;padding-bottom:50px;}
+.fnb{display:inline-block;width:100%;height:22px;padding-top:9px;border-top:2px solid #666;border-bottom:1px solid #cdcdcd;}
+.fnb li{display:inline-block;float:left;padding:0 16px 0 15px;background:url(../img/sta_common.gif) no-repeat 0 -128px}
+.fnb li.first{padding:0 16px 0 0;background:none;margin-left:105px;}
+.fnb li a{font-size:12px;color:#333;}
+.fnb li.privacy a{color:red;font-weight:700;}
+.footer address{display:inline-block;width:100%;text-align:center;padding-top:16px;font-size:11px;line-height:13px;color:#666;}
+.footer address .copy{display:inline-block;width:100%;color:#999;font-size:11px;padding-top:13px;}
+
+.bgOut{position:fixed;top:0;left:0;width:100%;height:100%;background:url(../img/bgOut.png) repeat 0 0;z-index:99;display:none;}
+.paymentPop{position:fixed;background:#fff;top:50%;left:50%;display:none;z-index:999;}

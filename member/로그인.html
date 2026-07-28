@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Cache-Control" content="No-Cache">
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  	<title></title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/font.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/import.css" media="screen" title="no title" charset="utf-8">
+    <!-- //css -->
+    <!-- script -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- script -->
+  </head>
+  <body>
+      <div id="member_wrap">
+          <header id="header">
+            <div class="stg_header">
+                <div class="title">
+                    <a href="#타이틀">로그인</a>
+                </div>
+                <!-- // 페이지 타이틀 -->
+
+                <div class="header_right">
+                    <div class="page_close">
+                        <a href="#닫기"><img src="./img/ico_close.png" alt=""></a>
+                    </div>
+                    <!-- //페이지닫기 -->
+                </div>
+                <!-- //우측버튼 -->
+            
+                <div class="page_back">
+                    <a href="#이전페이지"><img src="./img/ico_back.png" alt="이전 페이지"></a>
+                </div>
+                <!-- //이전페이지 -->
+
+                <div class="page_home">
+                  <a href="#홈으로돌아가기"><img src="./img/ico_home.png" alt="홈화면 돌아가기"></a>
+                </div>
+            </div>
+            <!-- //마이페이지 상단 영역 -->
+          </header>
+          <!-- //header -->
+
+          <hr>
+          <main>
+              <div class="login_w">
+                <div class="logo">
+                  <img src="./img/logo.png" alt="씽크풀 로고">
+                  <em>씽크풀 아이디 로그인</em>
+                </div>
+                <!-- //로그인로고 -->
+
+                <div class="user_input">
+                  <ul>
+                    <li class="id"><input type="text" id="uid" placeholder="아이디를 입력하세요"></li>
+                    <li class="pw"><input type="password" id="upw" placeholder="비밀번호를 입력하세요"></li>
+                    <li class="btn"><a href="#" data-popup-id="fail">로그인</a></li>
+                  </ul>
+                </div>
+                <!-- //입력 -->
+
+                <div class="user_chk">
+                  <ul>
+                    <li><input type="checkbox" id="save_id"><label for="save_id">아이디 저장하기</label></li>
+                    <li class="last"><input type="checkbox" id="save_login"><label for="save_login">로그인상태유지</label></li>
+                  </ul>
+                  <a href="#">SignKorea 인증서 로그인</a>
+                  <p>아이디,비밀번호 찾기는 PC에서 이용해 주세요.</p>
+                </div>
+                <!-- //선택 -->
+
+                <div class="idpw_ch">
+                  <a href="#" class="ft_l">아이디 찾기</a>
+                  <a href="#" class="ft_r pwc">비밀번호 찾기</a>
+                </div>
+
+                <div class="user_join">
+                  <dl>
+                    <dt>씽크풀 계정이 없으시면</dt>
+                    <dd>
+                      <a href="#">간편회원가입</a>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //회원가입 -->
+
+                <div class="nv_btn">
+                  <a href="#"><img src="./img/btn_naver.png" alt="네이버 아이디 로그인"></a>
+                </div>
+                <!-- //네이버로그인 -->
+                
+                <div class="view_clause">
+                  <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                  </ul>
+                </div>
+                <!-- //약관 -->
+              </div>
+          </main>
+
+          <aside class="pop">
+            <section id="fail" class="pop_con">
+              <div class="dialog01">
+                <p>
+                  회원이 아니거나 입력정보가 <br>
+                  맞지 않습니다. <br>
+                  확인후 재입력 하시기 바랍니다.
+                </p>
+                <a href="#" class="pop_ok">확인</a>
+              </div>
+              <!-- //팝업내용에 따라 달라짐 -->
+              <div class="pop_close">
+                <a href="#"><img src="./img/pop_close.png" alt="팝업닫기"></a>
+              </div>
+            </section>
+          </aside>
+          <script type="text/javascript">
+            $(function () {
+              $('[data-popup-id').on('click', function () {
+                var failId = '#' + $(this).attr('data-popup-id');
+                $('.pop').fadeIn();
+                $(failId).stop().animate({
+                  "top": $(window).height() / 2 - $('.pop_con').innerHeight(),
+                  "opacity": 1
+                }, "fast");
+              });
+              $('.pop_close a').on('click', function () {
+                $(this).parents('.pop_con').stop().animate({
+                  "top": 0,
+                  "opacity": 0
+                }, "fast").queue(function () {
+                  $('.pop').fadeOut();
+                });
+              });
+            });
+          </script>
+      </div>
+  </body>
+</html>
