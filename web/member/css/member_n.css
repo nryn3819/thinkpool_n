@@ -1041,6 +1041,10 @@ img {
   margin-top: 20px;
 }
 
+.member-page--login .check-control__input {
+  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+}
+
 .member-page--login .member-form > .button--primary:last-child {
   margin-top: 0;
 }
