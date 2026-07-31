@@ -1195,6 +1195,13 @@ img {
   font-weight: 500;
 }
 
+@media (min-width: 768px) {
+  .member-page {
+    height: 1100px;
+    min-height: 1100px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
