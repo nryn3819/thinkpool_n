@@ -1065,6 +1065,57 @@ img {
   line-height: 22px;
 }
 
+.member-page--signup-integrated .member-section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.member-form--signup-integrated {
+  display: block;
+}
+
+.signup-integrated__panel,
+.signup-integrated__fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup-integrated__panel[hidden] {
+  display: none;
+}
+
+.signup-integrated__fields {
+  gap: 20px;
+}
+
+.signup-integrated__panel > .button--primary {
+  margin-top: 60px;
+}
+
+.member-page--signup-integrated
+  [data-signup-step="2"]
+  .agreement-item:not(.agreement-item--sub)
+  .check-control__input {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.member-page--signup-integrated
+  [data-signup-step="2"]
+  .agreement-item:not(.agreement-item--sub)
+  .check-control__input:checked {
+  border-color: transparent;
+  background-color: var(--member-primary);
+  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+}
+
+.member-page--signup-integrated [data-signup-step="2"] .form-error {
+  font-size: 15px;
+  line-height: 22px;
+}
+
 .member-page--signup-step2 .member-form > .button--primary {
   margin-top: 40px;
 }
