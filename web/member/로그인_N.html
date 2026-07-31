@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>로그인 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--login">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="login-title">
+          <h1 id="login-title" class="member-title">로그인</h1>
+
+          <form class="member-form" action="#" method="post">
+            <div class="member-form__fields">
+              <div class="form-field">
+                <label class="visually-hidden" for="login-id">아이디</label>
+                <input
+                  id="login-id"
+                  class="form-field__input"
+                  type="text"
+                  name="userId"
+                  placeholder="아이디를 입력해주세요."
+                  autocomplete="username"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label class="visually-hidden" for="login-password">비밀번호</label>
+                <input
+                  id="login-password"
+                  class="form-field__input"
+                  type="password"
+                  name="password"
+                  placeholder="비밀번호를 입력해 주세요."
+                  autocomplete="current-password"
+                  required
+                >
+              </div>
+
+              <p class="form-error" role="alert" data-warning-key="member-mismatch">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                회원이 아니거나 입력정보가 맞지 않습니다.
+              </p>
+            </div>
+
+            <label class="check-control">
+              <input class="check-control__input" type="checkbox" name="keepLogin">
+              <span class="check-control__label">로그인 유지</span>
+            </label>
+
+            <button class="button button--primary button--block" type="submit">로그인</button>
+          </form>
+
+          <nav class="member-links" aria-label="회원 계정 메뉴">
+            <a href="./아이디찾기_N.html">아이디 찾기</a>
+            <a href="./비밀번호찾기_N.html">비밀번호 찾기</a>
+            <a href="./회원가입1단계_N.html">회원가입</a>
+          </nav>
+
+          <section class="social-login" aria-labelledby="social-login-title">
+            <h2 id="social-login-title" class="social-login__title">간편로그인</h2>
+            <button class="button button--naver button--block" type="button">
+              <img class="button__icon button__icon--naver" src="https://img.thinkpool.com/www/member/img/icon-naver.svg" alt="">
+              네이버 아이디로 로그인
+            </button>
+            <button class="button button--kakao button--block" type="button">
+              <img class="button__icon button__icon--kakao" src="https://img.thinkpool.com/www/member/img/icon-kakao.svg" alt="">
+              카카오 아이디로 로그인
+            </button>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

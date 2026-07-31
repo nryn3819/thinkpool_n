@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>회원가입 2단계 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--signup member-page--signup-step2">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="signup-step2-title">
+          <h1 id="signup-step2-title" class="member-title">회원가입</h1>
+
+          <div class="member-step" aria-label="회원가입 2단계 중 2단계">
+            <strong class="member-step__count">2/2</strong>
+            <span class="member-step__title">회원정보 입력하기</span>
+            <span class="member-step__line" aria-hidden="true"></span>
+          </div>
+
+          <form class="member-form" action="#" method="post">
+            <div class="form-field">
+              <label class="form-field__label" for="signup-name">이름</label>
+              <input
+                id="signup-name"
+                class="form-field__input"
+                type="text"
+                name="name"
+                placeholder="이름을 입력해 주세요."
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <fieldset class="form-fieldset verification-fieldset">
+              <legend class="form-field__label">휴대폰 번호</legend>
+              <div class="form-field__row">
+                <label class="visually-hidden" for="signup-phone">휴대폰 번호</label>
+                <input
+                  id="signup-phone"
+                  class="form-field__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="숫자만 입력해주세요."
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  required
+                >
+                <button
+                  class="button button--secondary button--verification"
+                  type="button"
+                  data-verification-action="send"
+                  disabled
+                >인증번호받기</button>
+              </div>
+              <div class="form-field__row">
+                <label class="visually-hidden" for="signup-verification">인증번호</label>
+                <input
+                  id="signup-verification"
+                  class="form-field__input"
+                  type="text"
+                  name="verificationCode"
+                  placeholder="수신하신 인증번호를 입력해 주세요."
+                  inputmode="numeric"
+                  aria-describedby="signup-verification-error"
+                  disabled
+                  required
+                >
+                <span class="verification-code-timer" aria-hidden="true" hidden>03:00</span>
+                <button
+                  class="button button--secondary button--verification"
+                  type="button"
+                  data-verification-action="confirm"
+                  disabled
+                >확인</button>
+              </div>
+              <p
+                id="signup-verification-error"
+                class="form-error"
+                role="alert"
+                data-warning-key="verification-invalid"
+              >
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                인증번호를 확인해 주세요.
+              </p>
+            </fieldset>
+
+            <fieldset class="agreement-list">
+              <legend class="visually-hidden">약관 동의</legend>
+
+              <div class="agreement-item">
+                <label class="check-control">
+                  <input class="check-control__input" type="checkbox" name="agreeTerms" checked required>
+                  <span class="check-control__label">
+                    이용약관 동의<span class="agreement-item__required">(필수)</span>
+                  </span>
+                </label>
+                <a class="agreement-item__detail" href="#">내용보기</a>
+              </div>
+
+              <div class="agreement-item">
+                <label class="check-control">
+                  <input class="check-control__input" type="checkbox" name="agreePrivacy" checked required>
+                  <span class="check-control__label">
+                    개인정보 처리방침 동의<span class="agreement-item__required">(필수)</span>
+                  </span>
+                </label>
+                <a class="agreement-item__detail" href="#">내용보기</a>
+              </div>
+
+              <div class="agreement-item">
+                <label class="check-control">
+                  <input class="check-control__input" type="checkbox" name="agreeMarketing">
+                  <span class="check-control__label">
+                    마케팅 광고 활용을 위한 수집 동의&nbsp;<span class="agreement-item__optional">(선택)</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="agreement-item agreement-item--sub">
+                <label class="check-control check-control--sms">
+                  <input class="check-control__input" type="checkbox" name="agreeMarketingSms">
+                  <span class="check-control__label">휴대폰 문자</span>
+                </label>
+              </div>
+
+              <p class="form-error" role="alert" data-warning-key="terms-required">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                가입을 위해 이용약관에 동의해 주세요.
+              </p>
+            </fieldset>
+
+            <button class="button button--primary button--block" type="submit">씽크풀 가입하기</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>회원정보 변경 확인 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--profile-entry">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="profile-entry-title">
+          <h1 id="profile-entry-title" class="member-title">회원정보 변경</h1>
+
+          <p class="member-description">
+            필명, 휴대폰 번호등 회원정보 변경을 위해 확인을 눌러주세요.
+          </p>
+
+          <form class="member-form" action="./회원정보변경_N.html" method="post">
+            <div class="form-field form-field--horizontal">
+              <label class="form-field__label" for="profile-entry-password">비밀번호</label>
+              <div class="form-field__content">
+                <input
+                  id="profile-entry-password"
+                  class="form-field__input"
+                  type="password"
+                  name="password"
+                  placeholder="비밀번호를 입력하세요."
+                  autocomplete="current-password"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="form-error-list" aria-label="프론트엔드 개발용 경고 문구">
+              <p class="form-error" role="alert" data-warning-key="password-unavailable">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                비밀번호가 일치하지 않습니다. 다시 입력해주세요.
+              </p>
+            </div>
+
+            <button class="button button--primary button--block" type="submit">확인</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

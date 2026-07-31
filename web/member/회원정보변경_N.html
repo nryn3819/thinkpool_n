@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>회원정보 변경 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--profile-edit">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="profile-edit-title">
+          <h1 id="profile-edit-title" class="member-title">회원정보 변경</h1>
+
+          <form class="member-form member-form--profile" action="#" method="post">
+            <div class="profile-data">
+              <div class="profile-fields">
+                <div class="form-field form-field--horizontal">
+                  <label class="form-field__label" for="profile-id">아이디</label>
+                  <div class="form-field__content">
+                    <input
+                      id="profile-id"
+                      class="form-field__input"
+                      type="text"
+                      name="userId"
+                      value="THINK"
+                      readonly
+                    >
+                    <p class="form-help">현재 네이버 아이디로 로그인하여 이용중입니다.</p>
+                  </div>
+                </div>
+
+                <div class="form-field form-field--horizontal">
+                  <label class="form-field__label" for="profile-name">이름</label>
+                  <div class="form-field__content">
+                    <input
+                      id="profile-name"
+                      class="form-field__input"
+                      type="text"
+                      name="name"
+                      value="홍길동"
+                      autocomplete="name"
+                      readonly
+                      required
+                    >
+                  </div>
+                </div>
+
+                <div class="form-field form-field--horizontal">
+                  <label class="form-field__label" for="profile-nickname">필명</label>
+                  <div class="form-field__content form-field__content--action">
+                    <input
+                      id="profile-nickname"
+                      class="form-field__input"
+                      type="text"
+                      name="nickname"
+                      value="가자가자"
+                      required
+                    >
+                    <button
+                      class="button button--secondary button--change"
+                      type="button"
+                      data-profile-change-target="profile-nickname"
+                      disabled
+                    >변경</button>
+                  </div>
+                </div>
+
+                <div class="form-field form-field--horizontal">
+                  <label class="form-field__label" for="profile-phone">휴대폰번호</label>
+                  <div class="form-field__content form-field__content--action">
+                    <input
+                      id="profile-phone"
+                      class="form-field__input"
+                      type="tel"
+                      name="phone"
+                      value="010-000-000"
+                      autocomplete="tel"
+                      required
+                    >
+                    <button
+                      class="button button--secondary button--change"
+                      type="button"
+                      data-profile-change-target="profile-phone"
+                      disabled
+                    >변경</button>
+                  </div>
+                </div>
+
+                <fieldset class="form-fieldset form-fieldset--horizontal">
+                  <legend class="form-field__label">마케팅 동의</legend>
+                  <div class="choice-group">
+                    <label class="radio-control">
+                      <input type="radio" name="agreeMarketing" value="yes" checked>
+                      <span>동의</span>
+                    </label>
+                    <label class="radio-control">
+                      <input type="radio" name="agreeMarketing" value="no">
+                      <span>미동의</span>
+                    </label>
+                  </div>
+                  <label class="check-control check-control--sub check-control--sms">
+                    <input class="check-control__input" type="checkbox" name="agreeMarketingSms" checked>
+                    <span class="check-control__label">휴대폰 문자</span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <p class="form-help form-help--marketing">
+                마케팅 동의는 씽크풀의 이벤트 및 서비스 혜택 제공 등 유용한 소식 안내를 위해서만 사용합니다.<br>
+                (유료 서비스의 관련 사항 및 회사의 주요 정책 등의 여부와 관계없이 발송합니다.)
+              </p>
+            </div>
+
+            <div class="profile-submit">
+              <p class="form-error form-error--submit" role="alert" data-warning-key="profile-update-failed">
+                변경되지 않았습니다. 문제가 지속될 경우 고객센터로 연락주세요.
+              </p>
+
+              <button class="button button--primary button--block" type="submit">다음</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

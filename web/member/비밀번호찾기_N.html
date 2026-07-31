@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>비밀번호 찾기 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--find-password">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="find-password-title">
+          <h1 id="find-password-title" class="member-title">비밀번호 찾기</h1>
+
+          <form class="member-form" action="#" method="post">
+            <div class="form-field">
+              <label class="form-field__label" for="find-password-id">아이디</label>
+              <input
+                id="find-password-id"
+                class="form-field__input"
+                type="text"
+                name="userId"
+                placeholder="아이디를 입력하세요."
+                autocomplete="username"
+                required
+              >
+              <p class="form-error" role="alert" data-warning-key="id-unavailable">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                존재하지 않는 아이디 입니다. 아이디를 확인해 주세요.
+              </p>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="find-password-name">이름</label>
+              <input
+                id="find-password-name"
+                class="form-field__input"
+                type="text"
+                name="name"
+                placeholder="이름을 입력해 주세요."
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <fieldset class="form-fieldset verification-fieldset">
+              <legend class="form-field__label">휴대폰 번호</legend>
+              <div class="form-field__row">
+                <label class="visually-hidden" for="find-password-phone">휴대폰 번호</label>
+                <input
+                  id="find-password-phone"
+                  class="form-field__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="숫자만 입력해주세요."
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  required
+                >
+                <button
+                  class="button button--secondary button--verification"
+                  type="button"
+                  data-verification-action="send"
+                  disabled
+                >인증번호받기</button>
+              </div>
+
+              <div class="form-field__row">
+                <label class="visually-hidden" for="find-password-verification">인증번호</label>
+                <input
+                  id="find-password-verification"
+                  class="form-field__input"
+                  type="text"
+                  name="verificationCode"
+                  placeholder="수신하신 인증번호를 입력해 주세요."
+                  inputmode="numeric"
+                  aria-describedby="find-password-verification-error"
+                  disabled
+                  required
+                >
+                <span class="verification-code-timer" aria-hidden="true" hidden>03:00</span>
+                <button
+                  class="button button--secondary button--verification"
+                  type="button"
+                  data-verification-action="confirm"
+                  disabled
+                >확인</button>
+              </div>
+
+              <p
+                id="find-password-verification-error"
+                class="form-error"
+                role="alert"
+                data-warning-key="verification-invalid"
+              >
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                인증번호를 확인해 주세요.
+              </p>
+            </fieldset>
+
+            <p class="form-error" role="alert" data-warning-key="member-mismatch">
+              <span class="form-error__icon" aria-hidden="true">!</span>
+              회원이 아니거나 입력정보가 맞지 않습니다.
+            </p>
+
+            <div class="member-notices">
+              <p class="member-notice">
+                <span class="member-notice__mark" aria-hidden="true">※</span>
+                <span class="member-notice__text">비밀번호찾기에 어려움이 있으시면 고객센터 1666-6300 으로 연락주시기 바랍니다.</span>
+              </p>
+              <p class="member-notice">
+                <span class="member-notice__mark" aria-hidden="true">※</span>
+                <span class="member-notice__text">네이버로그인 회원은 이용이 불가 합니다.</span>
+              </p>
+            </div>
+
+            <button class="button button--primary button--block" type="submit">다음</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

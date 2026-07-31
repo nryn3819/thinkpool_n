@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>회원정보 추가입력 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--profile-extra">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="profile-extra-title">
+          <h1 id="profile-extra-title" class="member-title">회원정보 추가입력</h1>
+
+          <div class="member-step member-step--notice">
+            <strong class="member-step__notice-icon" aria-hidden="true">!</strong>
+            <span class="member-step__title">회원 정보를 추가 입력해 주세요.</span>
+            <span class="member-step__line" aria-hidden="true"></span>
+          </div>
+
+          <form class="member-form" action="#" method="post">
+            <div class="form-field">
+              <label class="form-field__label" for="extra-name">이름</label>
+              <input
+                id="extra-name"
+                class="form-field__input"
+                type="text"
+                name="name"
+                placeholder="실명을 입력하세요. (비밀번호 찾기에 쓰입니다. )"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="extra-nickname">필명</label>
+              <input
+                id="extra-nickname"
+                class="form-field__input"
+                type="text"
+                name="nickname"
+                placeholder="2~6자리 한글, 4~12영문, 숫자만 가능"
+                required
+              >
+              <p class="form-error" role="alert" data-warning-key="nickname-unavailable">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                사용할 수 없는 필명 입니다. 다른 필명으로 설정하세요.
+              </p>
+            </div>
+
+            <div class="profile-extra__contact">
+              <fieldset class="form-fieldset verification-fieldset">
+                <legend class="form-field__label">휴대폰 번호</legend>
+                <div class="form-field__row">
+                  <label class="visually-hidden" for="extra-phone">휴대폰 번호</label>
+                  <input
+                    id="extra-phone"
+                    class="form-field__input"
+                    type="tel"
+                    name="phone"
+                    placeholder="숫자만 입력해주세요."
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    required
+                  >
+                  <button
+                    class="button button--secondary button--verification"
+                    type="button"
+                    data-verification-action="send"
+                    disabled
+                  >인증번호받기</button>
+                </div>
+
+                <div class="form-field__row">
+                  <label class="visually-hidden" for="extra-verification">인증번호</label>
+                  <input
+                    id="extra-verification"
+                    class="form-field__input"
+                    type="text"
+                    name="verificationCode"
+                    placeholder="수신하신 인증번호를 입력해 주세요."
+                    inputmode="numeric"
+                    aria-describedby="extra-verification-error"
+                    disabled
+                    required
+                  >
+                  <span class="verification-code-timer" aria-hidden="true" hidden>03:00</span>
+                  <button
+                    class="button button--secondary button--verification"
+                    type="button"
+                    data-verification-action="confirm"
+                    disabled
+                  >확인</button>
+                </div>
+
+                <p
+                  id="extra-verification-error"
+                  class="form-error"
+                  role="alert"
+                  data-warning-key="verification-invalid"
+                >
+                  <span class="form-error__icon" aria-hidden="true">!</span>
+                  인증번호를 확인해 주세요.
+                </p>
+              </fieldset>
+
+              <p class="form-error" role="alert" data-warning-key="member-mismatch">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                회원이 아니거나 입력정보가 맞지 않습니다.
+              </p>
+
+              <fieldset class="form-fieldset form-fieldset--horizontal">
+                <legend class="form-field__label">마케팅 동의</legend>
+                <div class="choice-group">
+                  <label class="radio-control">
+                    <input type="radio" name="agreeMarketing" value="yes" checked>
+                    <span>동의</span>
+                  </label>
+                  <label class="radio-control">
+                    <input type="radio" name="agreeMarketing" value="no">
+                    <span>미동의</span>
+                  </label>
+                </div>
+                <label class="check-control check-control--sub check-control--sms">
+                  <input class="check-control__input" type="checkbox" name="agreeMarketingSms" checked>
+                  <span class="check-control__label">휴대폰 문자</span>
+                </label>
+              </fieldset>
+            </div>
+
+            <a class="text-button" href="./아이디찾기_N.html">아이디 찾기</a>
+
+            <div class="button-group">
+              <button class="button button--primary" type="submit">가입완료</button>
+              <button class="button button--secondary" type="button">취소</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

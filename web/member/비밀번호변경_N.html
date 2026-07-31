@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+    <title>비밀번호 변경 | 씽크풀</title>
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
+  </head>
+  <body>
+    <div class="member-page member-page--password-change">
+      <header class="member-header">
+        <button type="button" class="member-header__back" aria-label="이전 화면">
+          <span class="member-header__back-icon" aria-hidden="true"></span>
+        </button>
+        <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+        </a>
+        <span class="member-header__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="member-main">
+        <section class="member-section" aria-labelledby="password-change-title">
+          <h1 id="password-change-title" class="member-title">비밀번호 변경</h1>
+
+          <form class="member-form" action="./비밀번호변경완료_N.html" method="post">
+            <div class="form-field">
+              <label class="form-field__label" for="current-password">현재 비밀번호</label>
+              <input
+                id="current-password"
+                class="form-field__input"
+                type="password"
+                name="currentPassword"
+                placeholder="비밀번호를 입력해 주세요."
+                autocomplete="current-password"
+                required
+              >
+              <p class="form-error" role="alert" data-warning-key="current-password-invalid">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                현재 비밀번호가 일치하지 않습니다. 다시 입력해 주세요.
+              </p>
+            </div>
+
+            <fieldset class="form-fieldset">
+              <legend class="form-field__label">새 비밀번호</legend>
+              <div class="form-field">
+                <label class="visually-hidden" for="new-password">새 비밀번호</label>
+                <input
+                  id="new-password"
+                  class="form-field__input"
+                  type="password"
+                  name="newPassword"
+                  placeholder="비밀번호를 입력해 주세요."
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label class="visually-hidden" for="new-password-confirm">새 비밀번호 확인</label>
+                <input
+                  id="new-password-confirm"
+                  class="form-field__input"
+                  type="password"
+                  name="newPasswordConfirm"
+                  placeholder="비밀번호 확인을 위해 한번더 입력해 주세요."
+                  autocomplete="new-password"
+                  minlength="6"
+                  aria-describedby="new-password-error"
+                  required
+                >
+              </div>
+              <p
+                id="new-password-error"
+                class="form-error"
+                role="alert"
+                data-warning-key="password-minlength"
+              >
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                비밀번호가 일치하지 않습니다. 다시 입력해 주세요.
+              </p>
+            </fieldset>
+
+            <button class="button button--primary button--block" type="submit">변경 완료</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
