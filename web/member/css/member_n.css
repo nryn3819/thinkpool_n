@@ -221,10 +221,30 @@ img {
   gap: 16px;
 }
 
-.form-field,
-.form-fieldset {
+.form-field {
   gap: 8px;
   min-width: 0;
+}
+
+.form-fieldset {
+  gap: 12px;
+  min-width: 0;
+}
+
+.form-field > .form-field__input + .form-field__input,
+.form-field > .form-field__row + .form-field__row {
+  margin-top: 4px;
+}
+
+.form-field > .form-field__input + .form-error,
+.form-field > .form-field__row + .form-error,
+.form-fieldset > .form-field + .form-error,
+.form-fieldset > .form-field__row + .form-error,
+.form-fieldset > .form-field__input + .form-error,
+.form-fieldset > .form-field + .form-error-list,
+.form-fieldset > .form-field__row + .form-error-list,
+.form-fieldset > .form-field__input + .form-error-list {
+  margin-top: -4px;
 }
 
 .form-fieldset,
@@ -244,8 +264,7 @@ img {
   line-height: 24px;
 }
 
-.member-page--signup .form-fieldset > .form-field__label,
-.member-page--signup-social .form-fieldset > .form-field__label {
+.form-fieldset > .form-field__label {
   margin-bottom: 8px;
 }
 
@@ -281,6 +300,11 @@ img {
   border-color: var(--member-primary);
   background: #ffffff;
   box-shadow: none;
+}
+
+.form-field__input.is-completed:not(:focus) {
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
 }
 
 .form-field__input[readonly] {
@@ -798,6 +822,15 @@ img {
   gap: 8px;
 }
 
+.form-error-list--full {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.form-error-list--full .form-error {
+  width: 100%;
+}
+
 .form-error--grid {
   grid-column: 1 / -1;
 }
@@ -948,13 +981,14 @@ img {
   margin-top: 30px;
 }
 
+.member-page--profile-entry .form-field--horizontal {
+  column-gap: 20px;
+  row-gap: 8px;
+}
+
 .member-page--profile-extra .member-section {
   width: 400px;
   margin: 0 auto;
-}
-
-.member-page--profile-extra .verification-fieldset > .form-field__label {
-  margin-bottom: 8px;
 }
 
 .member-page--profile-extra .form-error {
@@ -1143,10 +1177,6 @@ img {
   line-height: 22px;
 }
 
-.member-page--find-password .verification-fieldset > .form-field__label {
-  margin-bottom: 8px;
-}
-
 .member-page--find-password .form-error__icon {
   font-size: 14px;
   line-height: 16px;
@@ -1163,10 +1193,6 @@ img {
 .member-page--password-change .member-section {
   width: 400px;
   margin: 0 auto;
-}
-
-.member-page--password-change .form-fieldset > .form-field__label {
-  margin-bottom: 8px;
 }
 
 .member-page--password-social .member-title {

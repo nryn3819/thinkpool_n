@@ -279,6 +279,7 @@
         verified = false;
         verificationExpired = false;
         verificationCode.value = "";
+        verificationCode.classList.remove("is-completed");
         fieldset.removeAttribute("data-verification-status");
         fieldset.removeAttribute("data-verification-expired");
 
@@ -315,6 +316,7 @@
         verified = false;
         verificationExpired = false;
         verificationCode.value = "";
+        verificationCode.classList.remove("is-completed");
         startTimer();
         updateButtonStates();
         window.alert("인증번호를 보냈습니다.");
@@ -350,6 +352,40 @@
       // 페이지 최초 진입 시 타이머 표시값과 모든 컨트롤 상태를 초기 상태로 맞춥니다.
       stopTimer(true);
       updateButtonStates();
+    });
+  }
+
+  /**
+   * 입력이 완료된 필드의 포커스 아웃 디자인을 적용합니다.
+   *
+   * 값이 있는 입력창에서 포커스가 빠지면 is-completed 클래스를 추가합니다.
+   * CSS에서는 이 클래스가 있고 포커스가 없는 경우에만 흰 배경과 회색 테두리를
+   * 표시하므로, 다시 입력창을 선택하면 기존 파란색 포커스 디자인이 우선됩니다.
+   */
+  function bindCompletedInputStyles() {
+    document.querySelectorAll(".form-field__input").forEach(function (input) {
+      // 현재 값을 기준으로 완료 클래스를 추가하거나 제거합니다.
+      function updateCompletedState() {
+        if (input.value.trim() !== "") {
+          input.classList.add("is-completed");
+          return;
+        }
+
+        input.classList.remove("is-completed");
+      }
+
+      // 사용자가 입력을 마치고 다른 요소로 이동한 시점에 완료 디자인을 적용합니다.
+      input.addEventListener("blur", updateCompletedState);
+
+      // 완료된 필드의 값을 모두 삭제하면 포커스 아웃 전이라도 완료 상태를 해제합니다.
+      input.addEventListener("input", function () {
+        if (input.value.trim() === "") {
+          input.classList.remove("is-completed");
+        }
+      });
+
+      // 서버에서 미리 채운 값이나 브라우저 자동완성 값도 완료 디자인으로 시작합니다.
+      updateCompletedState();
     });
   }
 
@@ -483,6 +519,7 @@
     bindBackButtons();
     bindPasswordConfirmation();
     bindPhoneVerification();
+    bindCompletedInputStyles();
     bindProfileChangeControls();
   });
 })();

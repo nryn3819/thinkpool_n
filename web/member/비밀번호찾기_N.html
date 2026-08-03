@@ -98,21 +98,22 @@
                 >확인</button>
               </div>
 
-              <p
-                id="find-password-verification-error"
-                class="form-error"
-                role="alert"
-                data-warning-key="verification-invalid"
-              >
-                <span class="form-error__icon" aria-hidden="true">!</span>
-                인증번호를 확인해 주세요.
-              </p>
+              <div class="form-error-list">
+                <p
+                  id="find-password-verification-error"
+                  class="form-error"
+                  role="alert"
+                  data-warning-key="verification-invalid"
+                >
+                  <span class="form-error__icon" aria-hidden="true">!</span>
+                  인증번호를 확인해 주세요.
+                </p>
+                <p class="form-error" role="alert" data-warning-key="member-mismatch">
+                  <span class="form-error__icon" aria-hidden="true">!</span>
+                  회원이 아니거나 입력정보가 맞지 않습니다.
+                </p>
+              </div>
             </fieldset>
-
-            <p class="form-error" role="alert" data-warning-key="member-mismatch">
-              <span class="form-error__icon" aria-hidden="true">!</span>
-              회원이 아니거나 입력정보가 맞지 않습니다.
-            </p>
 
             <div class="member-notices">
               <p class="member-notice">
