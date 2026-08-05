@@ -131,10 +131,10 @@
   }
 
   /**
-   * 휴대폰 인증번호 발송, 입력 활성화, 3분 타이머와 인증 완료 상태를 관리합니다.
+   * 휴대폰 인증번호 발송, 입력 활성화와 인증 완료 상태를 관리합니다.
    *
    * 이 함수는 .verification-fieldset 단위로 독립 실행되므로 한 페이지에 인증 영역이
-   * 여러 개 있어도 상태와 타이머가 서로 섞이지 않습니다.
+   * 여러 개 있어도 각 영역의 발송/확인 상태가 서로 섞이지 않습니다.
    */
   function bindPhoneVerification() {
     document.querySelectorAll(".verification-fieldset").forEach(function (fieldset) {
@@ -149,8 +149,6 @@
       var confirmButton = fieldset.querySelector(
         '[data-verification-action="confirm"]'
       );
-      var timer = fieldset.querySelector(".verification-code-timer");
-
       // 필수 요소가 하나라도 없는 영역은 잘못된 이벤트 연결을 방지하기 위해 건너뜁니다.
       if (!phone || !verificationCode || !sendButton || !confirmButton) {
         return;
@@ -159,91 +157,18 @@
       /*
        * codeSent: 인증번호가 한 번 이상 발송되어 입력창을 사용할 수 있는 상태
        * verified: 확인 버튼을 눌러 프론트 화면에서 인증 완료 처리된 상태
-       * verificationExpired: 발송 후 3분이 지나 확인 시 시간초과 알림이 필요한 상태
        */
       var codeSent = false;
       var verified = false;
-      var verificationExpired = false;
-
-      // 실행 중인 interval ID와 실제 만료 시각을 인증 영역별로 보관합니다.
-      var timerId = null;
-      var timerExpiresAt = 0;
 
       // 휴대폰 번호 변경 후에도 "재발송" 문구를 유지하므로
       // 최초 버튼 문구를 저장하는 초기화 로직은 사용하지 않습니다.
       // var sendButtonLabel = sendButton.textContent.trim();
 
-      // 초 단위 숫자를 화면 표시용 MM:SS 형식으로 변환합니다.
-      function formatTimer(seconds) {
-        var minutes = Math.floor(seconds / 60);
-        var remainingSeconds = seconds % 60;
-
-        return (
-          String(minutes).padStart(2, "0") +
-          ":" +
-          String(remainingSeconds).padStart(2, "0")
-        );
-      }
-
-      // 타이머 요소가 있는 페이지에서만 남은 시간을 갱신합니다.
-      function renderTimer(seconds) {
-        if (timer) {
-          timer.textContent = formatTimer(seconds);
-        }
-      }
-
-      /*
-       * 실행 중인 타이머를 안전하게 중지합니다.
-       * resetDisplay가 true이면 다음 발송을 준비할 수 있도록 표시값도 03:00으로 되돌립니다.
-       * hidden 여부는 updateButtonStates에서 인증 상태에 맞춰 별도로 처리합니다.
-       */
-      function stopTimer(resetDisplay) {
-        if (timerId !== null) {
-          window.clearInterval(timerId);
-          timerId = null;
-        }
-
-        timerExpiresAt = 0;
-
-        if (resetDisplay) {
-          renderTimer(180);
-        }
-      }
-
-      /*
-       * 3분 타이머를 시작합니다.
-       * 단순히 180에서 1씩 빼지 않고 실제 만료 시각(Date.now)을 기준으로 계산하여
-       * 모바일 브라우저가 백그라운드에서 interval 실행을 늦추더라도 시간 오차를 줄입니다.
-       */
-      function startTimer() {
-        // 재발송 시 기존 interval이 중복 실행되지 않도록 먼저 정리합니다.
-        stopTimer(false);
-        verificationExpired = false;
-        fieldset.removeAttribute("data-verification-expired");
-        timerExpiresAt = Date.now() + 180000;
-        renderTimer(180);
-
-        timerId = window.setInterval(function () {
-          var remainingSeconds = Math.max(
-            0,
-            Math.ceil((timerExpiresAt - Date.now()) / 1000)
-          );
-
-          renderTimer(remainingSeconds);
-
-          // 00:00이 되면 만료 상태를 표시하고 버튼 상태를 다시 계산합니다.
-          if (remainingSeconds === 0) {
-            stopTimer(false);
-            verificationExpired = true;
-            fieldset.setAttribute("data-verification-expired", "true");
-            updateButtonStates();
-          }
-        }, 1000);
-      }
-
-      // 휴대폰 번호는 하이픈 없이 숫자 10~11자리만 유효하게 처리합니다.
+      // 화면에 하이픈이 포함된 기존 번호가 표시될 수 있으므로 숫자만 추출해 검사합니다.
       function hasValidPhone() {
-        return /^\d{10,11}$/.test(phone.value.trim());
+        var phoneDigits = phone.value.replace(/\D/g, "");
+        return /^\d{10,11}$/.test(phoneDigits);
       }
 
       // 예제 화면의 인증번호는 숫자 4~6자리 입력을 유효값으로 봅니다.
@@ -251,42 +176,28 @@
         return /^\d{4,6}$/.test(verificationCode.value.trim());
       }
 
-      /**
-       * 현재 인증 상태에 맞춰 입력창과 버튼의 활성/비활성 상태를 한 곳에서 갱신합니다.
-       *
-       * 시간 만료 후에는 확인 버튼을 disabled로 만들지 않습니다. 사용자가 확인 버튼을
-       * 눌렀을 때 "입력시간이 초과 되었습니다." 알림을 보여주기 위해 클릭 가능해야 합니다.
-       */
+      // 현재 발송/인증 상태에 맞춰 입력창과 두 버튼의 활성 상태를 갱신합니다.
       function updateButtonStates() {
         verificationCode.disabled = verified || !codeSent;
         sendButton.disabled = verified || !hasValidPhone();
-        confirmButton.disabled = verificationExpired
-          ? false
-          : verified || !codeSent || !hasValidVerificationCode();
-
-        // 발송 전이나 인증 완료 후에는 입력창 위의 시간 표시를 숨깁니다.
-        if (timer) {
-          timer.hidden = verified || !codeSent;
-        }
+        confirmButton.disabled =
+          verified || !codeSent || !hasValidVerificationCode();
       }
 
       /*
-       * 휴대폰 번호가 변경되면 이전 번호로 받은 인증번호와 타이머는 더 이상 유효하지 않으므로
+       * 휴대폰 번호가 변경되면 이전 번호로 받은 인증번호는 더 이상 유효하지 않으므로
        * 인증 상태와 인증번호 입력값을 초기화합니다. 단, 버튼 문구 "재발송"은 유지합니다.
        */
       phone.addEventListener("input", function () {
         codeSent = false;
         verified = false;
-        verificationExpired = false;
         verificationCode.value = "";
         verificationCode.classList.remove("is-completed");
         fieldset.removeAttribute("data-verification-status");
-        fieldset.removeAttribute("data-verification-expired");
 
         // 버튼 문구를 "인증번호받기"로 초기화하지 않습니다.
         // sendButton.textContent = sendButtonLabel;
 
-        stopTimer(true);
         updateButtonStates();
       });
 
@@ -302,8 +213,8 @@
 
       /*
        * 인증번호 발송/재발송 처리
-       * 1) 기존 입력값과 만료 상태를 정리
-       * 2) 입력창을 활성화하고 03:00 타이머 시작
+       * 1) 기존 인증번호 입력값을 정리
+       * 2) 인증번호 입력창을 활성화
        * 3) 발송 안내 알림을 닫은 후 버튼 문구를 "재발송"으로 변경
        * 4) 바로 인증번호를 입력할 수 있도록 입력창에 포커스
        */
@@ -314,10 +225,8 @@
 
         codeSent = true;
         verified = false;
-        verificationExpired = false;
         verificationCode.value = "";
         verificationCode.classList.remove("is-completed");
-        startTimer();
         updateButtonStates();
         window.alert("인증번호를 보냈습니다.");
 
@@ -329,14 +238,8 @@
         }
       });
 
-      // 인증번호 확인 버튼의 만료/정상 처리 흐름을 구분합니다.
+      // 인증번호 형식이 유효한 경우 프론트 예제의 인증 완료 상태로 처리합니다.
       confirmButton.addEventListener("click", function () {
-        if (verificationExpired) {
-          // 3분이 지난 상태에서는 인증 처리 대신 시간초과 알림을 표시합니다.
-          window.alert("입력시간이 초과 되었습니다.");
-          return;
-        }
-
         // 입력 길이가 부족하거나 아직 발송 전인 경우에는 아무 작업도 하지 않습니다.
         if (confirmButton.disabled) {
           return;
@@ -344,13 +247,19 @@
 
         // 실제 서버 검증 연결 전의 프론트 예제이므로 현재 입력값을 인증 완료 상태로 처리합니다.
         verified = true;
-        stopTimer(true);
         fieldset.setAttribute("data-verification-status", "verified");
         updateButtonStates();
+
+        /*
+         * 회원정보 변경 페이지처럼 인증 완료 후 별도의 편집 UI를 닫아야 하는 화면에서
+         * 공통 인증 로직을 다시 작성하지 않고 완료 시점만 전달할 수 있도록 이벤트를 보냅니다.
+         */
+        fieldset.dispatchEvent(
+          new CustomEvent("member:verification-complete", { bubbles: true })
+        );
       });
 
-      // 페이지 최초 진입 시 타이머 표시값과 모든 컨트롤 상태를 초기 상태로 맞춥니다.
-      stopTimer(true);
+      // 페이지 최초 진입 시 모든 인증 컨트롤을 초기 상태로 맞춥니다.
       updateButtonStates();
     });
   }
@@ -390,45 +299,185 @@
   }
 
   /**
-   * 회원정보 변경 페이지의 개별 변경 버튼을 입력값 변경 여부에 따라 활성화합니다.
-   * 최초 값과 같거나 빈 값이면 비활성화하고, 실제 변경값이 있을 때만 클릭할 수 있습니다.
+   * 회원정보 변경 페이지의 필명/휴대폰 번호 편집 상태를 관리합니다.
+   *
+   * 기본 상태에서는 두 입력창을 disabled로 두고 회색 "변경" 버튼만 노출합니다.
+   * 필명은 변경 버튼을 누르면 입력창과 "변경하기" 버튼을 활성화하고, 변경된 값을
+   * 다시 확정하면 비활성 기본 상태로 돌아갑니다. 휴대폰 번호는 편집을 시작할 때
+   * 인증번호 발송 버튼과 인증번호 입력 행을 표시하며, 공통 인증 완료 이벤트를 받은
+   * 뒤 현재 번호를 저장하고 기본 상태로 돌아갑니다.
    */
   function bindProfileChangeControls() {
-    document
-      .querySelectorAll("[data-profile-change-target]")
-      .forEach(function (button) {
-        // 버튼의 data-profile-change-target 값으로 연결할 입력 필드 ID를 찾습니다.
-        var inputId = button.getAttribute("data-profile-change-target");
-        var input = inputId ? document.getElementById(inputId) : null;
+    var editorGroups = document.querySelectorAll("[data-profile-editor]");
 
-        if (!input) {
-          return;
+    editorGroups.forEach(function (group) {
+      var editorType = group.getAttribute("data-profile-editor");
+      var input = group.querySelector("[data-profile-edit-input]");
+      var editButton = group.querySelector("[data-profile-edit-action]");
+
+      if (!input || !editButton) {
+        return;
+      }
+
+      // 마지막으로 사용자가 확정한 값을 편집 전후 비교 기준으로 보관합니다.
+      var savedValue = input.value;
+
+      // 필명 편집 상태와 버튼의 문구/활성 상태/경고 문구를 함께 갱신합니다.
+      if (editorType === "nickname") {
+        var warning = group.querySelector("[data-profile-edit-warning]");
+        var adminWarning = group.querySelector("[data-profile-admin-warning]");
+
+        // 서버 템플릿에서 role 값을 admin으로 지정하면 관리자 전용 안내를 사용합니다.
+        function isAdminNickname() {
+          return group.getAttribute("data-profile-nickname-role") === "admin";
         }
 
-        // 마지막으로 저장된 값을 기준값으로 보관합니다.
-        var savedValue = input.value;
-
-        // 공백이 아닌 값이 기준값과 달라졌을 때만 변경 버튼을 활성화합니다.
-        function updateButtonState() {
+        function updateNicknameButton() {
           var hasChanged =
             input.value.trim() !== "" && input.value !== savedValue;
-          button.disabled = !hasChanged;
+          editButton.disabled = !hasChanged;
         }
 
-        input.addEventListener("input", updateButtonState);
+        function setNicknameEditing(isEditing) {
+          if (isEditing) {
+            group.setAttribute("data-profile-editing", "true");
+          } else {
+            group.removeAttribute("data-profile-editing");
+          }
 
-        button.addEventListener("click", function () {
-          if (button.disabled) {
+          input.disabled = !isEditing;
+          editButton.textContent = isEditing ? "변경하기" : "변경";
+          editButton.setAttribute("aria-expanded", String(isEditing));
+
+          // 일반회원 편집 상태에는 기존 필명 중복 경고만 표시합니다.
+          if (warning) {
+            warning.hidden = !isEditing || isAdminNickname();
+          }
+
+          // 관리자 전용 안내는 관리자 편집 제한 상태에서만 표시합니다.
+          if (adminWarning) {
+            adminWarning.hidden = !isEditing || !isAdminNickname();
+          }
+
+          if (isEditing) {
+            updateNicknameButton();
+            input.focus();
+            input.select();
             return;
           }
 
-          // 변경 버튼 클릭 후 현재 값을 새로운 기준값으로 저장합니다.
+          // 기본 상태의 변경 버튼은 회색이지만 다음 편집을 위해 클릭 가능해야 합니다.
+          editButton.disabled = false;
+        }
+
+        input.addEventListener("input", updateNicknameButton);
+
+        editButton.addEventListener("click", function () {
+          var isEditing =
+            group.getAttribute("data-profile-editing") === "true";
+
+          if (!isEditing) {
+            /*
+             * 관리자는 필명을 편집할 수 없으므로 입력창을 활성화하지 않고
+             * Figma에 정의된 관리자/변경 제한 안내만 표시합니다.
+             */
+            if (isAdminNickname()) {
+              if (warning) {
+                warning.hidden = true;
+              }
+
+              if (adminWarning) {
+                adminWarning.hidden = false;
+              }
+
+              editButton.setAttribute("aria-expanded", "true");
+              return;
+            }
+
+            setNicknameEditing(true);
+            return;
+          }
+
+          if (editButton.disabled) {
+            return;
+          }
+
+          // 변경하기를 누른 현재 값을 새 기준값으로 저장하고 필드를 다시 잠급니다.
           savedValue = input.value;
           input.defaultValue = input.value;
-          updateButtonState();
+          setNicknameEditing(false);
         });
 
-        updateButtonState();
+        setNicknameEditing(false);
+        return;
+      }
+
+      // 휴대폰 편집 상태에서는 변경 버튼 대신 발송 버튼과 인증번호 행을 표시합니다.
+      if (editorType === "phone") {
+        var sendButton = group.querySelector(
+          '[data-verification-action="send"]'
+        );
+        var verificationRow = group.querySelector(
+          "[data-profile-verification-row]"
+        );
+
+        if (!sendButton || !verificationRow) {
+          return;
+        }
+
+        function setPhoneEditing(isEditing) {
+          if (isEditing) {
+            group.setAttribute("data-profile-editing", "true");
+          } else {
+            group.removeAttribute("data-profile-editing");
+          }
+
+          input.disabled = !isEditing;
+          editButton.hidden = isEditing;
+          sendButton.hidden = !isEditing;
+          verificationRow.hidden = !isEditing;
+          editButton.setAttribute("aria-expanded", String(isEditing));
+
+          if (isEditing) {
+            /*
+             * 공통 인증 로직에 현재 번호를 다시 전달해 인증번호받기 버튼 상태를 계산하고,
+             * 사용자가 기존 번호를 바로 덮어쓸 수 있도록 전체 값을 선택합니다.
+             */
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+            input.focus();
+            input.select();
+          }
+        }
+
+        editButton.addEventListener("click", function () {
+          setPhoneEditing(true);
+        });
+
+        group.addEventListener("member:verification-complete", function () {
+          // 인증에 성공한 번호를 다음 편집의 기준값으로 저장합니다.
+          savedValue = input.value;
+          input.defaultValue = input.value;
+          setPhoneEditing(false);
+        });
+
+        setPhoneEditing(false);
+      }
+    });
+
+    /*
+     * disabled 입력은 기본 폼 전송값에서 제외되므로 제출 직전에만 잠금을 해제합니다.
+     * 화면 전환이 일어나는 제출 시점이므로 사용자에게 편집 가능한 상태로 노출되지는 않습니다.
+     */
+    document
+      .querySelectorAll(".member-page--profile-edit .member-form--profile")
+      .forEach(function (form) {
+        form.addEventListener("submit", function () {
+          form
+            .querySelectorAll("[data-profile-edit-input]:disabled")
+            .forEach(function (input) {
+              input.disabled = false;
+            });
+        });
       });
   }
 

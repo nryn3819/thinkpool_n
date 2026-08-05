@@ -34,7 +34,7 @@ body {
   margin: 0;
   color: var(--member-text);
   background: #fff;
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
 }
@@ -110,7 +110,8 @@ img {
 .member-header__back {
   padding: 0;
   border: 0;
-  background: url("https://img.thinkpool.com/www/member/img/icon-back.svg") center / 23px 20px no-repeat;
+  background: url('https://img.thinkpool.com/www/member/img/icon-back.svg') center / 23px 20px
+    no-repeat;
 }
 
 .member-header__back-icon {
@@ -311,7 +312,7 @@ img {
   cursor: default;
 }
 
-.verification-fieldset input[name="verificationCode"]:disabled {
+.verification-fieldset input[name='verificationCode']:disabled {
   cursor: default;
   opacity: 1;
 }
@@ -326,38 +327,6 @@ img {
 
 .form-field__row .form-field__input {
   flex: 1 1 auto;
-}
-
-.form-field__row input[name="verificationCode"] {
-  padding-right: 70px;
-}
-
-.verification-code-timer {
-  position: absolute;
-  top: 50%;
-  right: 144px;
-  color: var(--member-primary);
-  font-size: 14px;
-  font-weight: 500;
-  font-variant-numeric: tabular-nums;
-  line-height: 21px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-
-.verification-code-timer[hidden] {
-  display: none;
-}
-
-.verification-fieldset[data-verification-expired="true"]
-  .verification-code-timer {
-  color: var(--member-error);
-}
-
-.verification-fieldset[data-verification-expired="true"]
-  [data-verification-action="confirm"] {
-  cursor: pointer;
-  background: var(--member-placeholder);
 }
 
 .form-error {
@@ -501,7 +470,7 @@ img {
 
 .check-control__input:checked {
   background-color: var(--member-primary);
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check.svg');
 }
 
 .check-control--sub .check-control__input {
@@ -510,8 +479,9 @@ img {
   border-radius: 0;
   background-color: transparent;
   background-image: none;
-  -webkit-mask: url("https://img.thinkpool.com/www/member/img/icon-check.svg") center / 13px 9px no-repeat;
-  mask: url("https://img.thinkpool.com/www/member/img/icon-check.svg") center / 13px 9px no-repeat;
+  -webkit-mask: url('https://img.thinkpool.com/www/member/img/icon-check.svg') center / 13px 9px
+    no-repeat;
+  mask: url('https://img.thinkpool.com/www/member/img/icon-check.svg') center / 13px 9px no-repeat;
 }
 
 .check-control--sub .check-control__input:checked {
@@ -609,7 +579,7 @@ img {
   width: 1px;
   height: 14px;
   background: var(--member-border);
-  content: "";
+  content: '';
 }
 
 .member-links a:last-child {
@@ -641,7 +611,7 @@ img {
   flex: 1 1 auto;
   height: 1px;
   background: var(--member-divider);
-  content: "";
+  content: '';
 }
 
 .button--naver,
@@ -721,33 +691,27 @@ img {
   padding-left: 24px;
 }
 
-.member-page--signup-step2
-  .agreement-item:not(.agreement-item--sub)
-  .check-control__input,
-.member-page--signup-social
-  .agreement-item:not(.agreement-item--sub)
-  .check-control__input {
+.member-page--signup-step2 .agreement-item:not(.agreement-item--sub) .check-control__input,
+.member-page--signup-social .agreement-item:not(.agreement-item--sub) .check-control__input {
   border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
   background-image: none;
 }
 
-.member-page--signup-step2
-  .agreement-item:not(.agreement-item--sub)
-  .check-control__input:checked,
+.member-page--signup-step2 .agreement-item:not(.agreement-item--sub) .check-control__input:checked,
 .member-page--signup-social
   .agreement-item:not(.agreement-item--sub)
   .check-control__input:checked {
   border-color: transparent;
   background-color: var(--member-primary);
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check.svg');
 }
 
 .check-control--sms .check-control__input {
   border: 0;
   border-radius: 0;
   background-color: transparent;
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check-sms-off.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check-sms-off.svg');
   background-size: 24px 24px;
   -webkit-mask: none;
   mask: none;
@@ -755,7 +719,7 @@ img {
 
 .check-control--sms .check-control__input:checked {
   background-color: transparent;
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check-sms-on.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check-sms-on.svg');
 }
 
 .member-notices {
@@ -865,6 +829,130 @@ img {
 
 .member-form--profile .button--secondary {
   width: 80px;
+}
+
+.member-page--profile-edit .form-field__content--action {
+  grid-template-columns: minmax(0, 1fr) 90px;
+}
+
+.member-page--profile-edit .member-section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.member-page--profile-edit .member-form--profile .button--secondary {
+  width: 90px;
+}
+
+.profile-edit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.profile-edit-group--phone {
+  gap: 12px;
+}
+
+.profile-edit-actions {
+  width: 90px;
+  height: 54px;
+}
+
+.profile-edit-actions .button {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-edit-group .button--change,
+.profile-edit-group .button--change:not(:disabled) {
+  cursor: pointer;
+  background: var(--member-placeholder);
+}
+
+.profile-edit-group[data-profile-editing='true'] .button--change:not(:disabled) {
+  background: var(--member-primary);
+}
+
+.profile-edit-group .form-field__input[data-profile-edit-input]:disabled {
+  cursor: default;
+  opacity: 1;
+  border-color: transparent;
+  background: var(--member-field);
+  -webkit-text-fill-color: var(--member-text);
+}
+
+.profile-edit-group .form-field__input[data-profile-edit-input]:disabled:hover {
+  border-color: transparent;
+}
+
+.profile-edit-group__error {
+  margin-left: 100px;
+}
+
+.profile-edit-group__error .form-error__icon {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.profile-edit-group__admin-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  width: 300px;
+  margin-left: 100px;
+  color: var(--member-error);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  word-break: break-word;
+}
+
+.profile-edit-group__admin-warning-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.profile-edit-group__admin-warning-icon .form-error__icon {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  transform: translateY(4px);
+}
+
+.profile-edit-group__admin-warning-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.profile-edit-group__admin-warning-text p {
+  margin: 0;
+}
+
+.profile-verification-send {
+  padding: 0 8px;
+}
+
+.profile-verification-send span {
+  line-height: 24px;
+}
+
+.profile-verification-content {
+  position: relative;
+}
+
+.profile-verification-content input[name='verificationCode'] {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .form-fieldset--horizontal {
@@ -1076,7 +1164,7 @@ img {
 }
 
 .member-page--login .check-control__input {
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check.svg');
 }
 
 .member-page--login .member-form > .button--primary:last-child {
@@ -1132,7 +1220,7 @@ img {
 }
 
 .member-page--signup-integrated
-  [data-signup-step="2"]
+  [data-signup-step='2']
   .agreement-item:not(.agreement-item--sub)
   .check-control__input {
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -1141,15 +1229,15 @@ img {
 }
 
 .member-page--signup-integrated
-  [data-signup-step="2"]
+  [data-signup-step='2']
   .agreement-item:not(.agreement-item--sub)
   .check-control__input:checked {
   border-color: transparent;
   background-color: var(--member-primary);
-  background-image: url("https://img.thinkpool.com/www/member/img/icon-check.svg");
+  background-image: url('https://img.thinkpool.com/www/member/img/icon-check.svg');
 }
 
-.member-page--signup-integrated [data-signup-step="2"] .form-error {
+.member-page--signup-integrated [data-signup-step='2'] .form-error {
   font-size: 15px;
   line-height: 22px;
 }
@@ -1371,6 +1459,34 @@ img {
 .member-page--password-social .member-message__body strong {
   color: var(--member-primary);
   font-weight: 500;
+}
+
+.member-page--profile-social .member-section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.member-page--profile-social .member-title {
+  margin-bottom: 80px;
+}
+
+.member-page--profile-social .member-message__lead {
+  color: var(--member-text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.member-page--profile-social .member-message__body {
+  margin-top: 30px;
+  color: var(--member-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.member-page--profile-social .member-message .button {
+  margin-top: 50px;
 }
 
 @media (min-width: 768px) {
