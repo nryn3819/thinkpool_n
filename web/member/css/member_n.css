@@ -1260,6 +1260,76 @@ img {
   line-height: 16px;
 }
 
+.member-page--find-password-complete .member-section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.member-page--find-password-complete .member-title {
+  margin-bottom: 80px;
+}
+
+.find-password-complete {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+}
+
+.find-password-complete__message {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.find-password-complete__lead,
+.find-password-complete__delivery,
+.find-password-complete__contact {
+  margin: 0;
+  color: var(--member-text);
+}
+
+.find-password-complete__lead {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.find-password-complete__delivery,
+.find-password-complete__contact {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.find-password-complete__delivery span {
+  display: block;
+}
+
+.find-password-complete__highlight {
+  color: var(--member-primary);
+  font-weight: 500;
+}
+
+.find-password-complete__actions {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.find-password-complete__actions .button {
+  flex: 1 1 0;
+  height: 60px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.find-password-complete__login {
+  background: var(--member-placeholder);
+}
+
 .member-page--profile-edit .member-form > .button--primary:last-child {
   margin-top: 38px;
 }
