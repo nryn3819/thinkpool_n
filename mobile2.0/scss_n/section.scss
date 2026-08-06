@@ -1,0 +1,60 @@
+@use "tools" as *;
+
+//   section
+.section {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 0 !important;
+
+  .empty {
+    font-size: 14px;
+    color: tp-color(text-muted);
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  &-basic {
+    padding: 22px 17px;
+  }
+
+  &-item {
+    padding: 0;
+
+    &-home {
+      padding: 0 17px;
+    }
+  }
+
+  &-npd {
+    padding: 22px 0;
+
+    .title {
+      padding-left: 17px;
+    }
+
+    .title-bullet {
+      padding-left: 39px;
+    }
+
+    .shorcutBtn {
+      padding: 0 17px;
+    }
+  }
+
+  &-nbg {
+    padding: 22px 17px;
+    background: none;
+
+    //border-bottom:1px solid #d6d6d6;
+  }
+
+  &.noBg {
+    background: none !important;
+  }
+}
+
+.modal-body .shorcutBtn {
+  padding: 0 !important;
+}

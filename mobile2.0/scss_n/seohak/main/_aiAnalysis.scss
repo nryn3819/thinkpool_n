@@ -1,0 +1,72 @@
+.videoBox {
+  display: flex;
+  flex-direction: column;
+
+  .video {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+  }
+
+  .video-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+
+    .title {
+      font-size: 15px;
+      color: $seohak-color-text;
+      font-weight: 500;
+      line-height: 22px;
+    }
+
+    .info {
+      font-size: 13px;
+      color: $seohak-color-text-muted;
+      line-height: 19px;
+    }
+  }
+}
+
+.analyzeBox {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // 4개 버튼을 space-between으로 배치해 버튼 사이 여백이 4px이 되도록 합니다.
+  .analyze__tabs {
+    @include accent-pill-tabs;
+    gap: 0;
+    justify-content: space-between;
+
+    button {
+      width: calc((100% - 12px) / 4);
+      padding: 7px 4px;
+    }
+  }
+  .analyze__tab-content {
+    padding-top: 15px;
+    width: 100%;
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e4e4e4;
+      width: 100%;
+      border-radius: 10px;
+      padding: 12px;
+      gap: 12px 0;
+
+      .title {
+        @include ai-card-title;
+      }
+
+      .summaryText {
+        @include summary-text-collapse;
+      }
+    }
+  }
+}

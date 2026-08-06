@@ -1,0 +1,49 @@
+@use "../tools" as *;
+
+.fraud-manager {
+  width: 100%;
+  padding: 20px 20px 50px;
+
+  .manager-title {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #363ede;
+  }
+  .manager-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+
+    button {
+      width: 100%;
+      padding: 12px 10px 12px 30px;
+      text-align: left;
+      border-radius: tp-radius(xl);
+      border: 1px solid #e1e1e1;
+      background: #fff;
+
+      strong {
+        display: block;
+        margin-bottom: 4px;
+        color: tp-color(ink);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+      }
+      span {
+        display: block;
+        color: #444;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+}

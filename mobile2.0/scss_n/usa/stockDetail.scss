@@ -1,0 +1,1646 @@
+@use "../tools" as *;
+
+@use "sass:color";
+
+// ============================================================
+// stockDetail.scss  —  종목상세 전용 스타일 (Figma: 238-4650)
+// ============================================================
+
+// ─── 공통: 날짜 타임존 박스 ────────────────────────────────
+%tz-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  padding: 1px 0;
+  background: #f4f4f4;
+  border-radius: 1px;
+  font-family: tp-font(spoqa);
+  font-size: 10px;
+  font-weight: 400;
+  color: tp-color(text-muted);
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+
+// ─── 공통: info 아이콘 버튼 ────────────────────────────────
+%info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+// ─── 섹션 1: 종목 헤더 ──────────────────────────────────────
+// layout_238:4682: column, gap:26px, bg:#fff, padding:26px 17px
+.stock-detail-header {
+  padding: 26px 17px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  // 상단 행: 로고 + 종목명 + 관심종목 버튼
+  .sdh-top {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  // 42×42 원형 로고
+  .sdh-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+    @include tp-flex-center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__fallback {
+      font-family: tp-font(noto);
+      font-size: 14px;
+      font-weight: 700;
+      color: #555;
+    }
+  }
+
+  // 종목명 영역 (flex 1)
+  .sdh-name-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // 종목명 행: 이름 + 관심종목
+  .sdh-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sdh-name-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+
+  // style bg:#F2F4FB, radius:4px → 티커 코드 배지
+  .sdh-ticker-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 4px 2px;
+    background: #f2f4fb;
+    border-radius: tp-radius(xs);
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-secondary);
+    line-height: 1.3;
+    align-self: flex-start;
+    white-space: nowrap;
+    margin-bottom: 2px;
+  }
+
+  // not_20b: 20px 700
+  .sdh-name {
+    font-family: tp-font(noto);
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    line-height: 27px;
+    margin: 0;
+    @include tp-text-ellipsis;
+    max-width: 230px;
+  }
+
+  // 관심종목 버튼 영역
+  .sdh-star-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+    width: 37px;
+    cursor: pointer;
+
+    &.active {
+      .sdh-star-btn svg path {
+        stroke: tp-color(primary) !important;
+        fill: tp-color(primary) !important;
+      }
+
+      .sdh-star-label {
+        color: tp-color(primary) !important;
+      }
+    }
+  }
+
+  .sdh-star-btn {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    @include tp-flex-center;
+  }
+
+  // not_10: 10px #999
+  .sdh-star-label {
+    font-family: tp-font(noto);
+    font-size: 10px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 15px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  // 날짜 + 등락률 행
+  // layout_238:4697: row, justify-between, align-end
+  .sdh-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 12px;
+  }
+
+  // 날짜 컬럼 (동일 패턴: column, width:90px, gap:4px)
+  .sdh-dates {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+  }
+
+  .sdh-date-row {
+    display: flex;
+    height: 15px;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .sdh-date-text {
+    font-family: tp-font(spoqa);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .sdh-tz-box {
+    @extend %tz-box;
+  }
+
+  // 등락률 + 시총 영역 (align-end, column, gap:4px)
+  .sdh-rate-area {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+  }
+
+  // 등락률 행
+  .sdh-rate-row {
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+    white-space: nowrap;
+  }
+
+  .sdh-rate-label {
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    letter-spacing: -0.03em;
+    line-height: 18px;
+  }
+
+  // 등락률 수치: 16px 700
+  .sdh-rate {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &.up {
+      color: tp-color(danger);
+    }
+
+    &.dn {
+      color: tp-color(primary-legacy);
+    }
+  }
+
+  // 시총 행
+  .sdh-mktcap-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .sdh-mktcap-label {
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    letter-spacing: -0.03em;
+    line-height: normal;
+  }
+
+  // Spoqa 13px, #333, letter-spacing -0.39px
+  .sdh-mktcap-value {
+    font-family: tp-font(spoqa);
+    font-size: 13px;
+    font-weight: 400;
+    color: tp-color(text-primary);
+    letter-spacing: -0.03em;
+    line-height: normal;
+    text-align: right;
+    width: 68px;
+
+    strong {
+      font-family: tp-font(spoqa);
+      font-weight: 500;
+    }
+  }
+
+  // 이슈 해시태그 칩 (두 줄 wrapping)
+  // layout_281:2529: column, gap:4px
+  .sdh-hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4px;
+    margin-top: 12px;
+  }
+
+  // layout_238:4722: row, gap:5px
+  .sdh-hashtag-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+  }
+
+  // bg:#F3F4FF, color:#5367FF, 12px, padding:3px 4px 4px
+  .sdh-hashtag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 4px 4px;
+    background: #f3f4ff;
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(primary-legacy);
+    line-height: 18px;
+    white-space: nowrap;
+  }
+
+  // 필터 칩 (시총 TOP2000 / S&P500 / 한국인거래)
+  // layout_275:1685: row, justify-end, align-end, gap:8px
+  .sdh-chips {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .sdh-chip {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 3px 2px;
+    background: #f3f4ff;
+    border: 0;
+    border-radius: 0;
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b6f8f;
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+// ─── 섹션 2: 기업 개요 ──────────────────────────────────────
+.stock-overview-section {
+  padding: 26px 17px;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
+
+  .sov-title {
+    display: block;
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .sov-card {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: tp-radius(xl);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sov-body {
+    font-family: tp-font(noto);
+    font-size: 14px;
+    font-weight: 400;
+    color: tp-color(text-primary);
+    line-height: 1.5;
+    margin: 0;
+    overflow: hidden;
+    max-height: 42px;
+    transition: max-height 0.3s ease;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    &.is-expanded {
+      max-height: 1000px;
+      text-overflow: unset;
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+    }
+  }
+
+  .sov-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding-top: 7px;
+    border: 0;
+    border-top: 1px solid #e4e4e4;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+
+    .sov-footer-text {
+      font-family: tp-font(noto);
+      font-size: 13px;
+      font-weight: 400;
+      color: tp-color(text-muted);
+    }
+
+    .sov-chevron {
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+
+      svg {
+        display: block;
+      }
+    }
+
+    &.is-expanded .sov-chevron {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// ─── 섹션 3: 이슈 ────────────────────────────────────────────
+.stock-issue-section {
+  padding: 26px 17px;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  // 이슈 탭 (해시태그 pill 버튼)
+  // layout_238:4752: column, gap:4px
+  .sis-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .sis-tab-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4px;
+    align-items: center;
+  }
+
+  // layout: height:35px, radius:8px, padding:2px 12px 3px
+  // active: bg:#5367FF, color:#fff, 700
+  // inactive: bg:#F3F4FF, color:#5367FF, 400
+  .sis-tab {
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 12px 3px;
+    border: 0;
+    border-radius: tp-radius(lg);
+    font-family: tp-font(noto);
+    font-size: 14px;
+    font-weight: 400;
+    color: tp-color(primary-legacy);
+    background: #f3f4ff;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.active {
+      background: tp-color(primary-legacy);
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+
+  // 날짜/포착 메타 (카드 위)
+  .sis-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sis-date-row {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .sis-date-text {
+    font-family: tp-font(spoqa);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .sis-tz-box {
+    @extend %tz-box;
+  }
+
+  .sis-capture {
+    font-family: tp-font(spoqa);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 1.25;
+    margin-left: 2px;
+  }
+
+  // 요약 카드: bg:#F7F7F7, radius:10px, padding:15px
+  .sis-card {
+    background: #f7f7f7;
+    border-radius: tp-radius(xl);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  // not_16b
+  .sis-card__title {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px;
+    margin: 0;
+    width: 100%;
+  }
+
+  // 불릿 목록
+  .sis-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sis-bullet {
+    position: relative;
+    min-height: 21px;
+    padding-left: 11px;
+
+    &__dot {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(51, 51, 51, 0.8);
+      flex-shrink: 0;
+    }
+
+    &__text {
+      display: block;
+      font-family: tp-font(noto);
+      font-size: 14px;
+      font-weight: 400;
+      color: tp-color(text-primary);
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  // 카드 하단: "관련기사 보기" + chevron
+  .sis-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding-top: 7px;
+    border: 0;
+    border-top: 1px solid #e4e4e4;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+
+    span {
+      font-family: tp-font(noto);
+      font-size: 13px;
+      font-weight: 400;
+      color: tp-color(text-secondary);
+      line-height: 19px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+// ─── 섹션 4: 시장 관심도 ────────────────────────────────────
+.stock-interest-section {
+  padding: 26px 17px;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
+
+  .smi-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  .smi-title {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .smi-info-btn {
+    @extend %info-btn;
+  }
+
+  .smi-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .smi-text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  // not_11: 11px #999
+  .smi-media-label {
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 16px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .smi-media-value {
+    margin: 0;
+    line-height: 0;
+
+    .smi-value-normal {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 400;
+      color: tp-color(text-primary);
+      line-height: 22px;
+    }
+
+    .smi-value-up {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 700;
+      color: tp-color(danger);
+      line-height: 22px;
+    }
+  }
+
+  .smi-gauge-wrap {
+    width: 88px;
+    flex-shrink: 0;
+  }
+
+  .smi-gauge {
+    display: block;
+    width: 88px;
+    height: 52px;
+  }
+}
+
+// ─── 섹션 5: 종목 타임라인 ──────────────────────────────────
+.stock-timeline-section {
+  padding: 26px 17px;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
+
+  .stl-title {
+    display: block;
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  // layout_251:9378: 세로선 6px #DEE5FF, padding-left:20px
+  .stl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 6px;
+      background: #dee5ff;
+    }
+  }
+
+  // layout_251:9380: column, gap:6px — 각 항목에 원형 도트
+  .stl-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    // 원형 도트: 10×10, border:1px #5367FF, bg:#fff, 절대 위치
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 1px solid tp-color(primary-legacy);
+      border-radius: tp-radius(circle);
+      background: #fff;
+      position: absolute;
+      left: -22px;
+      top: 3px;
+    }
+  }
+
+  // 시간 행
+  .stl-time-row {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-left: 3px;
+  }
+
+  // #666 12px
+  .stl-time {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-secondary);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .stl-tz,
+  .stl-capture {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  // 컨텐츠 행
+  .stl-content-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  // 레이블 뱃지
+  .stl-label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 4px 2px;
+    border-radius: tp-radius(xs);
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 18px;
+    min-width: 31px;
+
+    &--issue {
+      background: #eaf5ff;
+      color: tp-color(primary-legacy);
+    }
+
+    &--flash {
+      background: #ffeded;
+      color: #ff414e;
+    }
+  }
+
+  .stl-text {
+    font-family: tp-font(noto);
+    font-size: 13px;
+    font-weight: 400;
+    color: tp-color(text-primary);
+    line-height: 19px;
+    margin: 0;
+  }
+
+  // 더보기 버튼
+  .stl-more-btn {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    border: 1px solid #e4e4e4;
+    border-radius: tp-radius(md);
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+
+    span {
+      font-family: tp-font(noto);
+      font-size: 12px;
+      color: #333d47;
+    }
+  }
+}
+
+// ─── 섹션 6: AI 평가점수 ────────────────────────────────────
+.sai-score-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stock-ai-section {
+  padding: 26px 17px 50px;
+  border-top: 8px solid #f6f6f6;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  // 타이틀
+  .sai-title {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  // AI 점수 카드: border:#D6D6D6, radius:10px, p:15px
+  .sai-score-card {
+    border: 1px solid #d6d6d6;
+    border-radius: tp-radius(xl);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__label {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 500;
+      color: tp-color(ink);
+      line-height: 22px;
+    }
+
+    &__value {
+      font-family: tp-font(spoqa);
+      font-size: 15px;
+      font-weight: 400;
+      color: tp-color(ink);
+      line-height: normal;
+      margin: 0;
+
+      strong {
+        font-family: tp-font(spoqa);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .sai-info-btn {
+    @extend %info-btn;
+  }
+
+  // 레이더 차트 컨테이너
+  .sai-radar-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 204px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    border-radius: tp-radius(xl);
+    padding: 15px;
+
+    .chart {
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    .chart-label {
+      position: absolute;
+      bottom: 18px;
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .chart-label__item {
+        display: flex;
+        height: 13px;
+        align-items: center;
+        gap: 3px;
+
+        .label__txt {
+          font-size: 12px;
+          color: tp-color(text-secondary);
+        }
+
+        .label__bullet {
+          width: 12px;
+          height: 12px;
+          border-radius: tp-radius(circle);
+
+          &.today {
+            background: #ff775e;
+          }
+
+          &.average {
+            background: #19d4b6;
+          }
+        }
+      }
+
+      .chart-label__guide {
+        font-size: 11px;
+        color: tp-color(text-muted);
+        line-height: 13px;
+      }
+    }
+  }
+
+  .sai-radar-svg {
+    display: block;
+    width: 100%;
+    max-width: 326px;
+    margin: 0 auto;
+  }
+
+  // 레이더 범례
+  .sai-radar-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sai-radar-legend__item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .sai-radar-legend__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .sai-radar-legend__label {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-secondary);
+    line-height: 13px;
+    white-space: nowrap;
+  }
+
+  .sai-radar-legend__sub {
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 13px;
+    text-align: center;
+    display: block;
+  }
+
+  // 탭: 성장성 / 안정성 / 수익성 / 멀티플
+  .sai-tabs.nav-pills {
+    display: flex;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .nav-item {
+      flex: 1;
+      margin: 0;
+    }
+  }
+
+  // active: bg:#3D4665 white text bold
+  // inactive: bg:#F1F3F7 color:#666
+  .nav-link.sai-tab {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    @include tp-flex-center;
+    border: 0;
+    border-radius: tp-radius(lg);
+    font-family: tp-font(spoqa);
+    font-size: 16px;
+    font-weight: 400;
+    color: tp-color(text-secondary) !important;
+    background: #f1f3f7 !important;
+    cursor: pointer;
+    line-height: 22px;
+    transition: none;
+
+    &.active {
+      background: #3d4665 !important;
+      color: #fff !important;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: tp-color(text-secondary) !important;
+    }
+
+    &.active:hover {
+      color: #fff !important;
+    }
+  }
+
+  // 점수 그룹 (설명 + 평균 카드 + 지표 카드)
+  .sai-score-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // not_12: 12px #999
+  .sai-desc {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 18px;
+    margin: 0;
+  }
+
+  // 평균 점수 카드: border rgba(0,0,0,0.1), radius 10px, p 15px
+  .sai-avg-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: tp-radius(xl);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__label {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 700;
+      color: tp-color(text-primary);
+      line-height: 22px;
+      white-space: nowrap;
+    }
+
+    &__value {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 400;
+      color: tp-color(text-primary);
+      line-height: 22px;
+      margin: 0;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  // 개별 지표 카드: border:#EAEAEA, radius:10px, p:15px
+  .sai-metrics-card {
+    border: 1px solid #eaeaea;
+    border-radius: tp-radius(xl);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  // 개별 지표 항목
+  .sai-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__name-wrap {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__name {
+      font-family: tp-font(noto);
+      font-size: 14px;
+      font-weight: 500;
+      color: tp-color(text-primary);
+      line-height: 21px;
+      white-space: nowrap;
+    }
+
+    &__score {
+      font-family: tp-font(noto);
+      font-size: 15px;
+      font-weight: 400;
+      color: tp-color(text-primary);
+      line-height: 22px;
+      margin: 0;
+      white-space: nowrap;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  // 바 차트 영역
+  .sai-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sai-bar-track {
+    width: 100%;
+    height: 10px;
+    background: #ebebeb;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sai-bar-fill {
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .sai-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    position: relative;
+  }
+
+  .sai-bar-labels span {
+    font-family: tp-font(noto);
+    font-size: 11px;
+    font-weight: 400;
+    color: tp-color(text-secondary);
+    line-height: 16px;
+  }
+
+  .sai-bar-label--avg {
+    position: absolute;
+    left: 43.33%;
+    transform: translateX(-50%);
+  }
+}
+
+// ─── 면책 고지 ──────────────────────────────────────────────
+.stock-disclaimer {
+  padding: 20px 17px 30px;
+
+  .sdis-box {
+    background: #f9f9f9;
+    border-radius: tp-radius(lg);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sdis-item {
+    display: flex;
+    gap: 3px;
+    align-items: flex-start;
+  }
+
+  .sdis-bullet {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: tp-color(text-muted);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .sdis-item p {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    font-weight: 400;
+    color: tp-color(text-muted);
+    line-height: 18px;
+    margin: 0;
+    flex: 1;
+  }
+}
+
+// ─── 공통 가이드 모달 (Guide Modal) ───────────────────────────
+.guide-modal {
+  .modal-content {
+    border-radius: 16px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .modal-header {
+    padding: 20px 20px 10px;
+    border-bottom: none;
+    position: relative;
+
+    .modal-title {
+      font-family: tp-font(noto);
+      font-size: 18px;
+      font-weight: 700;
+      color: #000;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      padding: 10px;
+      background-size: 12px;
+    }
+  }
+
+  .modal-body {
+    padding: 10px 20px 20px;
+  }
+
+  .guide-content {
+    .guide-summary {
+      font-family: tp-font(noto);
+      font-size: 14px;
+      line-height: 1.6;
+      color: tp-color(text-primary);
+      margin-bottom: 20px;
+      background: #f8f9ff;
+      padding: 15px;
+      border-radius: tp-radius(xl);
+
+      strong {
+        color: tp-color(primary);
+      }
+    }
+
+    .guide-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding-left: 14px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 6px;
+          height: 6px;
+          background: tp-color(primary);
+          border-radius: 50%;
+        }
+      }
+
+      .guide-item-title {
+        font-family: tp-font(noto);
+        font-size: 14px;
+        font-weight: 700;
+        color: #000;
+      }
+
+      .guide-item-desc {
+        font-family: tp-font(noto);
+        font-size: 13px;
+        color: tp-color(text-secondary);
+        line-height: 1.4;
+      }
+    }
+
+    .guide-note {
+      padding: 12px;
+      background: #f6f6f6;
+      border-radius: tp-radius(lg);
+
+      p {
+        font-family: tp-font(noto);
+        font-size: 12px;
+        color: tp-color(text-muted);
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 0 20px 20px;
+    border-top: none;
+
+    .btn-modal-confirm {
+      width: 100%;
+      height: 48px;
+      background: tp-color(primary);
+      color: #fff;
+      border: none;
+      border-radius: tp-radius(xl);
+      font-family: tp-font(noto);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:active {
+        background: color.adjust(tp-color(primary), $lightness: -10%);
+      }
+    }
+  }
+}
+
+// ===== AI 분析요소 / 점수 안내 모달 공통 =====
+.ai-info-modal {
+  .modal-dialog {
+    margin: auto 16px;
+    max-width: none;
+    width: calc(100% - 32px);
+  }
+
+  .modal-content {
+    border-radius: tp-radius(lg);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .ai-modal-inner {
+    padding: 16px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .ai-modal-title {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: tp-color(text-primary);
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  .ai-modal-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    @include tp-flex-center;
+  }
+
+  .ai-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-modal-desc {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    color: tp-color(text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .ai-modal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-modal-item {
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      position: relative;
+      padding-left: 10px;
+      margin: 0;
+      font-family: tp-font(noto);
+      color: tp-color(text-secondary);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 4px;
+        height: 4px;
+        background: #c0bfbf;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // 분析요소 본문 텍스트 (14px)
+  .ai-modal-item--lg p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  // AI 평가점수 개요 텍스트 (13px)
+  .ai-modal-item--sm p {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .ai-modal-term {
+    font-weight: 700;
+    color: tp-color(text-primary);
+  }
+
+  // 확인 버튼
+  .ai-modal-confirm-btn {
+    @include tp-flex-center;
+    width: 100%;
+    height: 40px;
+    background: tp-color(primary-legacy);
+    border: none;
+    border-radius: tp-radius(md);
+    cursor: pointer;
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 24px;
+  }
+}
+
+// ===== 시장 관심도 안내 모달 =====
+.smi-guide-modal {
+  .modal-dialog {
+    margin: auto 16px;
+    max-width: none;
+    width: calc(100% - 32px);
+  }
+
+  .modal-content {
+    border-radius: tp-radius(lg);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .smi-modal-inner {
+    padding: 16px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .smi-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .smi-modal-title {
+    font-family: tp-font(noto);
+    font-size: 16px;
+    font-weight: 700;
+    color: tp-color(text-primary);
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  .smi-modal-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    @include tp-flex-center;
+  }
+
+  .smi-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .smi-modal-desc {
+    font-family: tp-font(noto);
+    font-size: 12px;
+    color: tp-color(text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  .smi-modal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .smi-modal-item {
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      position: relative;
+      padding-left: 5px;
+      margin: 0;
+      font-family: tp-font(noto);
+      font-size: 13px;
+      color: tp-color(text-primary);
+      line-height: 1.5;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 2.5px;
+        height: 2.5px;
+        border-radius: 50%;
+        background: tp-color(text-muted);
+      }
+    }
+  }
+
+  .smi-level--high {
+    color: #fc2f2f;
+  }
+
+  .smi-level--normal {
+    color: tp-color(text-primary);
+  }
+
+  .smi-level--low {
+    color: tp-color(primary);
+  }
+}
+// ===== 관련기사 모달 전용 스타일 =====
+.related-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.related-news-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: tp-color(text-primary);
+  font-size: 13px;
+}
+.related-news-link .bullet {
+  color: tp-color(text-muted);
+  margin-right: 8px;
+}
+.related-news-link .text {
+  flex: 1;
+  @include tp-text-ellipsis;
+}

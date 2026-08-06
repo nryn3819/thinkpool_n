@@ -1,0 +1,358 @@
+@use "../tools" as *;
+
+.fraud-experience {
+  width: 100%;
+  padding: 20px 20px 50px;
+
+  .experience-tab {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebebeb;
+    border-radius: tp-radius(md);
+    margin-bottom: 30px;
+
+    button {
+      width: 50%;
+      height: 40px;
+      border: none;
+      border-radius: tp-radius(md);
+      font-size: 14px;
+      font-weight: 400;
+      color: tp-color(text-secondary);
+
+      &.active {
+        background: #000;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .experience-content {
+    .p-10 {
+      padding: 0px 10px;
+    }
+    .exp-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 30px;
+
+      .exp-box_txt {
+        span {
+          display: block;
+          margin-bottom: 10px;
+          color: tp-color(ink);
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 27px;
+        }
+        p {
+          display: block;
+          color: tp-color(ink);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+      }
+      .exp-box_img {
+        img {
+          width: 100px;
+        }
+      }
+    }
+    .checkList-box {
+      width: 100%;
+      padding: 16px;
+      border-radius: tp-radius(2xl);
+      border: 1px solid #363ede;
+      margin-bottom: 30px;
+    }
+    .check-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .list-txt {
+        color: tp-color(ink);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .list-btn {
+        button {
+          width: 100px;
+          padding-bottom: 3px;
+          height: 30px;
+          border: none;
+          border-radius: 3px;
+          background: #363ede;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+
+          &.aicheck-btn {
+            width: 120px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 라디오버튼 커스텀
+.fraud-radio-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+
+  &.gap-12 {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .radio-title {
+    width: 100%;
+    color: tp-color(ink);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .radio-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    &.grid-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .radio-input {
+    width: 100%;
+    position: relative;
+
+    input[type="text"] {
+      width: 100%;
+      height: 45px;
+      padding: 10px 12px 12px;
+      border-radius: tp-radius(lg);
+      border: 1px solid #3f54c3;
+      background: #fff;
+      color: tp-color(text-secondary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &::placeholder {
+        color: tp-color(text-muted);
+      }
+      &.amount {
+        text-align: right;
+        padding-right: 45px;
+      }
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 10.5px;
+      right: 12px;
+      color: tp-color(text-secondary);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+  .radio-group {
+    input[type="radio"].radio-fraud {
+      display: none !important;
+    }
+    input[type="radio"].radio-fraud + label {
+      display: inline-block;
+      padding-left: 30px;
+      height: 22px;
+      line-height: 22px;
+      background: url(../img/exp-rdo.png) no-repeat 0 0;
+      background-size: 22px auto;
+      font-size: 14px;
+      color: tp-color(ink);
+      font-weight: 400;
+      line-height: 22px;
+    }
+    input[type="radio"].radio-fraud:checked + label {
+      display: inline-block;
+      padding-left: 30px;
+      height: 22px;
+      line-height: 22px;
+      background: url(../img/exp-rdo_check.png) no-repeat 0 0;
+      background-size: 22px auto;
+      font-size: 14px;
+      color: tp-color(ink);
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 21px;
+      margin-top: 12px;
+
+      &::before {
+        content: "";
+        width: 3.5px;
+        height: 3.5px;
+        display: inline-block;
+        background: #444;
+        border-radius: tp-radius(circle);
+        position: absolute;
+        top: 9px;
+        left: 8px;
+      }
+      &:first-child {
+        margin-top: 0;
+
+        &::before {
+          top: 21px;
+        }
+      }
+      .radio-input {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+
+        input[type="text"] {
+          text-align: right;
+          display: block;
+          width: calc(100% - 125px);
+        }
+
+        span {
+          position: static;
+          font-size: 14px;
+          color: #444;
+          font-weight: 400;
+          line-height: 21px;
+        }
+      }
+      .li-title {
+        font-size: 14px;
+        color: #444;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+// 공통 버튼 커스텀
+.fraud-btn {
+  width: 100%;
+
+  button {
+    width: 100%;
+    padding-bottom: 3px;
+    height: 40px;
+    border-radius: tp-radius(sm);
+    background: #363ede;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    &.complete {
+      color: #444;
+      border-radius: tp-radius(sm);
+      border: 1px solid tp-color(text-muted);
+      background: #fff;
+    }
+  }
+}
+
+// 공통 팝업창 커스텀
+.fraudModal {
+  width: 100%;
+  padding: 0px 10px !important;
+
+  .modal-content {
+    border-radius: 16px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.08);
+
+    .modal-body {
+      position: relative;
+      padding: 54px 20px 20px;
+
+      .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .txt {
+        width: 100%;
+        text-align: center;
+        color: tp-color(ink);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 30px;
+      }
+      .check {
+        width: 100%;
+        height: 40px;
+        border-radius: tp-radius(md);
+        border: none;
+        background: #363ede;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          width: 50%;
+          height: 40px;
+          border-radius: tp-radius(md);
+          background: #363ede;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          border: none;
+
+          &.close {
+            background: tp-color(text-muted);
+          }
+        }
+      }
+    }
+  }
+}

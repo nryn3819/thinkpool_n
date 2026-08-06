@@ -1,0 +1,70 @@
+@import "../variable.scss";
+.item-home-navi {
+  position: sticky;
+  top: 48px;
+  width: 100%;
+  background: #252f56;
+  height: 52px;
+  padding: 0 17px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 98;
+  float: none;
+
+  .nav {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+  .nav-item {
+    display: block;
+    float: left;
+    margin-right: 10px;
+
+    .nav-link {
+      font-size: 15px;
+      color: #9ba3c6;
+      padding: 0;
+      float: left;
+      height: 48px;
+      line-height: 48px;
+
+      &.active {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      &.new::after {
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background: url(https://img.thinkpool.com/www/mobile/img/new.png)
+          no-repeat center;
+        background-size: 17px 17px;
+        margin-left: 3px;
+        vertical-align: middle;
+        margin-bottom: 3px;
+      }
+    }
+
+    button {
+      border: 0;
+      background: none;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      color: #9ba3c6;
+      float: left;
+      height: 48px;
+
+      &::before {
+        content: "|";
+        color: #9ba3c6;
+        padding-right: 7px;
+      }
+    }
+  }
+}

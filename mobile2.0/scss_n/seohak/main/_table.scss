@@ -1,0 +1,228 @@
+.seohak__main-table {
+  thead {
+    tr {
+      th {
+        height: 38px;
+        background: #f8f9fb;
+        font-size: 13px;
+        color: $seohak-color-text-secondary;
+        font-weight: 350;
+        padding: 0 4px;
+        border-top: 1px solid $seohak-color-border-light;
+        border-bottom: 1px solid $seohak-color-border-light;
+
+        &.ta_r {
+          text-align: right;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      &.rowTop {
+        td {
+          border-bottom: 0;
+
+          &.col-rank {
+            border-bottom: 1px solid $seohak-color-border-light;
+          }
+        }
+
+        // col-rank는 rowspan으로 다음 행까지 이어지므로, 표의 마지막 항목에서는
+        // row-last가 표시하는 실제 마지막 행의 구분선까지 함께 없애야 합니다.
+        &.row-last td.col-rank {
+          border-bottom: 0;
+        }
+      }
+      td {
+        height: 42px;
+        padding: 0 4px;
+        border-bottom: 1px solid $seohak-color-border-light;
+
+        &.col-rank {
+          span {
+            display: flex;
+            width: 24px;
+            height: 21px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgba(102, 102, 102, 0.2);
+            font-size: 14px;
+            font-weight: 700;
+            color: $seohak-color-text-secondary;
+
+            // 순위 1~3위 강조 배지
+            &.rank-top {
+              border: 1px solid rgba(83, 103, 255, 0.5);
+              background: #f2f3ff;
+              color: $seohak-color-accent;
+            }
+          }
+        }
+
+        &.col-name {
+          span {
+            font-size: 14px;
+            color: $seohak-color-text;
+            font-weight: 700;
+          }
+        }
+        &.col-value {
+          span {
+            font-size: 14px;
+            font-weight: 700;
+            color: $seohak-color-text;
+            &.up {
+              color: $seohak-color-up;
+            }
+            &.dn {
+              color: $seohak-color-down;
+            }
+          }
+        }
+        &.col-change {
+          span {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+
+        &.ta_c {
+          text-align: center;
+        }
+        &.ta_r {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &.table__doubleLine {
+    tbody {
+      tr {
+        &.rowTop {
+          td {
+            height: 31px;
+            padding-top: 10px;
+            padding-bottom: 0;
+
+            &.col-rank {
+              padding: 10px 4px;
+            }
+
+            &.col-name {
+              font-size: 14px;
+              color: $seohak-color-text;
+              font-weight: 700;
+
+              span {
+                font-weight: 700;
+              }
+              em {
+                display: inline-flex;
+                align-items: center;
+                margin-left: 4px;
+                padding: 0 4px;
+                background: #f3811d;
+                border-radius: 4px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 400;
+                height: 14px;
+              }
+            }
+            &.col-weight,
+            &.col-amount {
+              span {
+                font-size: 14px;
+                color: $seohak-color-text;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        &:not(.rowTop) {
+          &.row-last td {
+            border-bottom: 0;
+          }
+          td {
+            height: 31px;
+            padding-bottom: 10px;
+            padding-top: 0;
+
+            span {
+              display: block;
+              width: 100%;
+              font-size: 13px;
+              color: $seohak-color-text;
+              font-weight: 400;
+              background: 0;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.table-sm {
+    tbody tr {
+      td.col-name {
+        span {
+          display: block;
+          width: 100%;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.seohak__main-tableS {
+  thead {
+    tr {
+      th {
+        color: $seohak-color-text-secondary;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 400;
+        border-top: 1px solid $seohak-color-border-light;
+        border-bottom: 1px solid $seohak-color-border-light;
+        background: #f8f9fb;
+        padding: 10px 4px;
+        height: 16px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+
+      td {
+        border-bottom: 1px solid $seohak-color-border-light;
+        padding: 10px 4px;
+        min-height: 21px;
+
+        .date {
+          color: $seohak-color-text-secondary;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 400;
+        }
+
+        .stocks {
+          color: $seohak-color-text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px; /* 150% */
+        }
+      }
+    }
+  }
+}

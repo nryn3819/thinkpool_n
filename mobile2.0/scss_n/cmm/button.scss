@@ -1,0 +1,407 @@
+@use "../tools" as *;
+
+// btn
+@import "../variable.scss";
+.btn {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+  &-outline {
+    &-detail {
+      height: 37px !important;
+      padding: 0 !important;
+      border-radius: tp-radius(xs) !important;
+      border: 1px solid #d5d5d5 !important;
+      font-size: 14px !important;
+      color: #000 !important;
+      background: #fff;
+    }
+  }
+
+  &-custom {
+    &.doneradius {
+      border-radius: tp-radius(sm) !important;
+    }
+    &.caromini {
+      padding: 0 18px;
+    }
+
+    &-outline {
+      &.add {
+        height: 28px;
+        line-height: 26px;
+        padding: 0;
+        border: 1px solid tp-color(primary);
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 0 10px;
+        color: #000;
+        background: #fff;
+
+        &::before {
+          content: "\002b";
+          color: tp-color(primary);
+          padding-right: 5px;
+          font-size: 15px;
+          height: 26px;
+          line-height: 26px;
+          float: left;
+        }
+      }
+      &.rmv {
+        height: 28px;
+        line-height: 26px;
+        padding: 0;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 0 10px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #d5d5d5;
+
+        &::before {
+          content: "\00d7";
+          font-size: 15px;
+          height: 26px;
+          line-height: 26px;
+          float: left;
+        }
+      }
+      &.cancel {
+        height: 29px;
+        line-height: 27px;
+        border: 1px solid tp-color(primary);
+        padding: 0 10px;
+        font-size: 14px;
+        color: tp-color(primary);
+        border-radius: 29px;
+        background: #fff;
+
+        &.sm {
+          font-size: 10px;
+          font-weight: 300;
+          padding: 0 12px;
+          height: 16px;
+          border-radius: 16px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    &-alarm {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: tp-radius(sm);
+      background: tp-color(primary);
+      color: #fff;
+      vertical-align: middle;
+
+      &.active {
+        border: 1px solid tp-color(primary);
+        line-height: 34px;
+        color: tp-color(primary);
+        background: #fff;
+        padding: 0 12px;
+
+        .on {
+          display: none;
+        }
+        .off {
+          display: inline-block;
+        }
+      }
+
+      .on {
+        display: inline-block;
+      }
+      .off {
+        display: none;
+      }
+
+      img {
+        float: left;
+        margin: 10px 5px 0 0;
+      }
+    }
+    &-svc {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: tp-radius(sm);
+      background: #d2d7ff;
+      color: tp-color(primary);
+      vertical-align: middle;
+    }
+    &-primary {
+      height: 37px;
+      line-height: 37px;
+      padding: 0 28px;
+      color: #fff;
+      background: #5567fd;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 37px;
+      border: 0;
+
+      &.sm {
+        padding: 0 20px;
+        line-height: 35px;
+      }
+
+      &.square {
+        border-radius: 3px;
+      }
+
+      &.outline {
+        background: #fff;
+        border: 1px solid tp-color(primary-legacy);
+        color: tp-color(primary);
+        font-size: 14px;
+        line-height: 35px;
+        padding: 0;
+        text-align: center;
+        border-radius: tp-radius(sm);
+      }
+
+      &.member {
+        width: 48%;
+        height: 48px;
+        background: #3d71ed;
+        font-size: 18px;
+        padding: 0;
+        font-weight: 300 !important;
+
+        @media (min-width: 425px) {
+          width: 40%;
+          height: 38px;
+          font-size: 16px;
+        }
+      }
+    }
+    &-default {
+      height: 37px;
+      line-height: 35px;
+      padding: 0 28px;
+      color: #000;
+      background: #fff;
+      border: 1px solid #d5d5d5;
+      font-size: 16px;
+      border-radius: 37px;
+
+      &.member {
+        width: 48%;
+        height: 52px;
+        border: 1px solid #3d71ed;
+        font-size: 18px;
+        padding: 0;
+
+        @media (max-width: 425px) {
+          width: 40%;
+          height: 38px;
+          font-size: 16px;
+        }
+      }
+
+      &.square {
+        border-radius: 3px !important;
+      }
+    }
+    &-grey {
+      height: 37px;
+      line-height: 35px;
+      padding: 0 28px;
+      color: #fff;
+      background: tp-color(text-muted);
+      border: 1px solid #d5d5d5;
+      font-size: 16px;
+      border-radius: 37px;
+    }
+    &-white {
+      min-width: 147px;
+      height: 37px !important;
+      padding: 0 26px !important;
+      border: 1px solid #d5d5d5 !important;
+      outline: 0 !important;
+      font-size: 16px !important;
+      border-radius: 37px !important;
+      margin: 0 10px;
+
+      svg {
+        margin-top: -2px;
+        color: #989898;
+      }
+    }
+    &-share {
+      height: 37px;
+      line-height: 37px;
+      padding: 0 8px;
+      border-radius: tp-radius(sm);
+      background: #f1f3f7;
+      font-size: 13px;
+      color: #000;
+      border: 0;
+    }
+
+    &-board {
+      height: 33px;
+      line-height: 31px;
+      font-size: 14px;
+      border: 1px solid #d5d5d5;
+      border-radius: tp-radius(sm);
+      padding: 0 10px;
+      background: #fff;
+
+      &.up {
+        width: 58px;
+        padding: 0 10px;
+        text-align: right;
+        background: url(#{$imgUrlSv}/bu-up.png) no-repeat 10px 50%;
+        background-size: 16px auto;
+
+        &.on {
+          background-color: #fff2f3;
+          border: 1px solid #ff4150;
+        }
+      }
+      &.dn {
+        width: 58px;
+        padding: 0 10px;
+        text-align: right;
+        background: url(#{$imgUrlSv}/bu-dn.png) no-repeat 10px 50%;
+        background-size: 16px auto;
+
+        &.on {
+          background-color: #f0f4ff;
+          border: 1px solid tp-color(primary);
+        }
+      }
+
+      &.write {
+        border: 1px solid tp-color(primary);
+        background: url(#{$imgUrlSv}/bu_write.png) no-repeat 13px 50%;
+        background-size: 16px auto;
+        padding: 0 13px 0 36px;
+        color: #000;
+        font-weight: 700;
+        font-size: 14px;
+
+        &-mini {
+          background: none;
+          padding: 0 13px;
+        }
+      }
+
+      &.pagetop {
+        padding: 0 13px 0 30px;
+        background: url(#{$imgUrlSv}/buTop.png) no-repeat 13px 50%;
+        background-size: 10px auto;
+        color: #000;
+        font-size: 14px;
+        border: 1px solid #d5d5d5;
+        border-radius: tp-radius(sm);
+      }
+
+      &.image {
+        padding: 0 13px 0 36px;
+        background: url(#{$imgUrlSv}/buImage.png) no-repeat 13px 50%;
+        background-size: 17px auto;
+        color: #000;
+        font-size: 14px;
+        border: 1px solid #d5d5d5;
+        border-radius: tp-radius(sm);
+      }
+
+      &.mini {
+        border: 1px solid #d5d5d5 !important;
+        float: left;
+        padding: 0 10px !important;
+        border-radius: 0;
+        font-size: 14px;
+
+        &:first-child {
+          border-radius: 5px 0 0 5px;
+          border-right: 0;
+        }
+        &.active {
+          border: 1px solid tp-color(primary) !important;
+          background: tp-color(primary);
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-rassi {
+      width: 100%;
+      min-width: 225px;
+      height: 42px;
+      border: 0;
+      border-radius: 42px;
+      margin-top: 10px;
+      background: #3f4565;
+
+      span {
+        display: inline-block;
+        height: 42px;
+        line-height: 42px;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      &.web {
+        background: tp-color(primary-legacy);
+
+        span::before {
+          display: block;
+          width: 23px;
+          height: 42px;
+          content: " ";
+          background: url(#{$imgUrlSv}/bu-rassi.png) no-repeat 0 50%;
+          background-size: 17px auto;
+          float: left;
+        }
+      }
+      &.and {
+        span::before {
+          display: block;
+          width: 20px;
+          height: 42px;
+          content: " ";
+          background: url(#{$imgUrlSv}/bu-and.png) no-repeat 0 50%;
+          background-size: 15px auto;
+          float: left;
+        }
+      }
+      &.ios {
+        span::before {
+          display: block;
+          width: 21px;
+          height: 42px;
+          content: " ";
+          background: url(#{$imgUrlSv}/bu-ios.png) no-repeat 0 50%;
+          background-size: 16px auto;
+          float: left;
+        }
+      }
+    }
+  }
+
+  &-customOutline {
+    &-primary {
+      padding: 0 13px !important;
+      height: 18px !important;
+      border-radius: 18px !important;
+      font-size: 10px !important;
+      font-weight: 300 !important;
+      margin: 0 !important;
+      border: 1px solid tp-color(primary) !important;
+      color: tp-color(primary) !important;
+    }
+  }
+}

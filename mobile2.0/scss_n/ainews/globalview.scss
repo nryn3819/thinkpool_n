@@ -1,0 +1,131 @@
+@use "../tools" as *;
+
+.gblbox {
+  display: block;
+  width: 100%;
+
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.infoguide {
+  display: flex;
+  width: 100%;
+  padding: 10px 4px;
+  background: #f8f5ec;
+  gap: 5px;
+  justify-content: center;
+
+  span {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: tp-color(text-secondary);
+    font-family: "inter";
+    font-style: normal;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+
+    em {
+      color: #10a37f;
+    }
+  }
+}
+
+.infocontent {
+  display: block;
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+
+  border-top: 1px solid #7abaaa;
+  border-bottom: 1px solid #7abaaa;
+  background: #f7f7f8;
+
+  padding: 15px 8px 15px 13px;
+
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  color: tp-color(text-primary);
+}
+
+.gblview {
+  display: block;
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+
+  .ogl-link {
+    display: block;
+    width: 100%;
+    float: left;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      color: tp-color(text-primary);
+      font-weight: 700;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      color: tp-color(text-secondary);
+      word-wrap: break-word;
+      white-space: wrap;
+      margin-top: 10px;
+      text-decoration: underline !important;
+    }
+  }
+
+  .textcontent {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    float: left;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700 !important;
+      color: tp-color(text-primary);
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      color: tp-color(text-secondary);
+      padding-top: 10px;
+    }
+  }
+
+  .gbl-v-chart {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      color: tp-color(text-primary);
+      font-weight: 700 !important;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      padding-top: 10px;
+    }
+  }
+}

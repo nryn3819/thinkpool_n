@@ -1,0 +1,45 @@
+@use "../tools" as *;
+
+@import "../variable.scss";
+.c-theme {
+  position: relative;
+  padding: 20px 0 5px;
+  border-bottom: 1px solid #e2e2e2;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+  &:first-child {
+    padding-top: 0;
+
+    .ab-btn.more {
+      top: 0;
+    }
+  }
+
+  .title {
+    font-size: 15px;
+    color: tp-color(primary);
+    font-weight: 400 !important;
+  }
+
+  #myItem {
+    padding: 15px 0;
+
+    .myItemList {
+      .myItemBox {
+        &.item {
+          span.und,
+          span.per {
+            display: inline-block !important;
+            width: auto !important;
+            font-weight: 400 !important;
+          }
+          span.und {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

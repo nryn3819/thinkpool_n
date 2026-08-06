@@ -1,0 +1,1250 @@
+@charset "UTF-8";
+@keyframes seohakTabFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#seohak.seohak-main {
+  display: block;
+  width: 100%;
+  background: #fff;
+}
+#seohak.seohak-main .visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-size: 100% 185px;
+  padding-bottom: 20px;
+}
+#seohak.seohak-main .visual .txt {
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+#seohak.seohak-main .visual .txt strong {
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px; /* 131.818% */
+}
+#seohak.seohak-main .visual .txt span {
+  color: #b8c1ff;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  padding-top: 8px;
+}
+#seohak.seohak-main .visual button {
+  position: absolute;
+  bottom: 40px;
+  right: 18px;
+  z-index: 2;
+  display: flex;
+  height: 36px;
+  padding: 2px 16px 3px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #4c2dd9;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  border: 0;
+  margin: 0;
+}
+#seohak.seohak-main .visual .visual-img {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+#seohak.seohak-main .visual .visual-img img {
+  display: block;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+#seohak.seohak-main .mainContent .main__tabs {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 46px;
+  padding: 0 17px;
+  border-bottom: 1px solid #d6d6d6;
+}
+#seohak.seohak-main .mainContent .main__tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  right: auto;
+  display: block;
+  width: calc((100% - 34px) / 2);
+  height: 3px;
+  background: #333;
+  z-index: 10;
+  transition: left 0.3s ease, right 0.3s ease;
+}
+#seohak.seohak-main .mainContent .main__tabs.is-tab2-active::after {
+  left: auto;
+  right: 17px;
+}
+#seohak.seohak-main .mainContent .main__tabs button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 46px;
+  border: 0;
+  background: none;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  z-index: 2;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus.active {
+  display: block;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tabs {
+  position: sticky;
+  top: 48px;
+  z-index: 50;
+  background: #f2f3f7;
+  display: flex;
+  width: 100%;
+  padding: 0 17px;
+  height: 46px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tabs button {
+  display: flex;
+  width: 20%;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  border: 0;
+  background: none;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tabs button.active {
+  color: #5367ff;
+  font-weight: 700;
+  border-bottom: 3px solid #5367ff;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 26px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex {
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title strong {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title strong span {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  padding-right: 5px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title strong button {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin: 3px 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title > span {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400 !important;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 6px) / 2);
+  height: 65px;
+  padding: 10px 8px;
+  background: #f1f3f7;
+  border-radius: 6px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox::after {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  content: "";
+  width: 3px;
+  height: 45px;
+  border-radius: 100px;
+  background: #bec7d9;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .name {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .value {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .value .pt {
+  font-size: 18px;
+  color: #111;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .value .per {
+  font-size: 13px;
+  font-weight: 500;
+  padding-left: 8px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .value .per.up {
+  color: #fc2f2f;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .topIndexList .indexBox .value .per.dn {
+  color: #447aec;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #f1f3f7;
+  height: 87px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 32px) / 3);
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .name {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 4px;
+  background: #838b9a;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .value {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 4px 0;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .value .pt {
+  font-size: 14px;
+  color: #000;
+  line-height: 21px;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .value .per {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .value .per.up {
+  color: #fc2f2f;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .stockIndexList .btmIndexList .indexBox .value .per.dn {
+  color: #447aec;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane {
+  scroll-margin-top: 80px;
+  padding: 30px 17px;
+  border-top: 8px solid #f6f6f6;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane:first-child {
+  border-top: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane .title strong {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane .title strong span {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  padding-right: 5px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane .title strong button {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin: 3px 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane .title > span {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400 !important;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tabs button {
+  flex: 1 0 0;
+  height: 40px;
+  border: 1px solid #cfd3d9;
+  background: none;
+  font-size: 14px;
+  color: #666;
+  border-right: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tabs button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tabs button:last-child {
+  border-right: 1px solid #cfd3d9;
+  border-radius: 0 8px 8px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tabs button.active {
+  border: 0;
+  background: #5367ff;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  margin-top: 12px;
+  gap: 4px 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label {
+  width: auto;
+  font-size: 12px;
+  color: #666;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label.label001::before {
+  background: #e15c61;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label.label002::before {
+  background: #ffa050;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label.label003::before {
+  background: #70b48d;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label.label004::before {
+  background: #4889e5;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label.label005::before {
+  background: #8c8eb7;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent .chart__tab-content .chart-label .label::before {
+  content: "";
+  width: 10px;
+  height: 4px;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tabs button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #f1f3f7;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tabs button.active {
+  background: #3d4665;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .deposit__tabs,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .netPurchase__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .deposit__tabs button,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .netPurchase__tabs button {
+  flex: 1 0 0;
+  height: 40px;
+  border: 1px solid #cfd3d9;
+  background: none;
+  font-size: 14px;
+  color: #666;
+  border-right: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .deposit__tabs button:first-child,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .netPurchase__tabs button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .deposit__tabs button:last-child,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .netPurchase__tabs button:last-child {
+  border-right: 1px solid #cfd3d9;
+  border-radius: 0 8px 8px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .deposit__tabs button.active,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .netPurchase__tabs button.active {
+  border: 0;
+  background: #5367ff;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart {
+  padding-top: 12px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label {
+  padding-top: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label span {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 13px;
+  color: #666;
+  line-height: 19px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin: 2px 3px 0 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label span.label001::before {
+  background: #e82a39;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane .tab-content .chart-label span.label002::before {
+  background: #feab65;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content .tab-pane#netPurchase .tab-content .tab-pane .chart-label .label002::before {
+  background: #306ceb;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #f1f3f7;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs button.active {
+  background: #3d4665;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tabs {
+  padding-top: 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content {
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox {
+  display: flex;
+  flex-direction: column;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title .title {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  line-height: 22px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title .info {
+  font-size: 13px;
+  color: #999;
+  line-height: 19px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs {
+  display: flex;
+  gap: 0 4px;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
+  display: flex;
+  width: auto;
+  height: 35px;
+  padding: 7px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: #f1f3f7;
+  border: 0;
+  font-size: 14px;
+  color: #333;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button.active {
+  background: #5367ff;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs {
+  gap: 0;
+  justify-content: space-between;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
+  width: calc((100% - 12px) / 4);
+  padding: 7px 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content {
+  padding-top: 15px;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e4e4e4;
+  width: 100%;
+  border-radius: 10px;
+  padding: 12px;
+  gap: 12px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .title strong {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .title strong span {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .title strong em {
+  width: 16px;
+  height: 16px;
+  background: #5367ff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .title > span {
+  overflow: hidden;
+  color: #999;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px; /* 146.154% */
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText {
+  display: flex;
+  flex-direction: column;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText > span {
+  max-height: 105px;
+  line-height: 21px;
+  font-size: 14px;
+  color: #333;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  align-self: stretch;
+  transition: max-height 0.35s ease;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText.expanded > span {
+  -webkit-line-clamp: unset;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText .more {
+  display: flex;
+  width: 100%;
+  height: 27px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  align-self: stretch;
+  border: 0;
+  border-top: 1px solid #e4e4e4;
+  background: 0;
+  padding: 7px 0 0;
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #999;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText .more span {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText .more svg {
+  transition: transform 0.3s ease;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content .swiper-slide .summaryText.expanded .more svg {
+  transform: rotate(180deg);
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #f1f3f7;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs button.active {
+  background: #3d4665;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs {
+  padding-top: 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label {
+  padding-top: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 13px;
+  color: #666;
+  line-height: 19px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin: 2px 3px 0 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span.label001::before {
+  background: #e82a39;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span.label002::before {
+  background: #306ceb;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tabs {
+  position: sticky;
+  top: 48px;
+  z-index: 50;
+  background: #f2f3f7;
+  display: flex;
+  width: 100%;
+  padding: 0 17px;
+  height: 46px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tabs button {
+  display: flex;
+  width: 50%;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  border: 0;
+  background: none;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tabs button.active {
+  color: #5367ff;
+  font-weight: 700;
+  border-bottom: 3px solid #5367ff;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content {
+  display: flex;
+  flex-direction: column;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane {
+  scroll-margin-top: 80px;
+  padding: 30px 17px;
+  border-top: 8px solid #f6f6f6;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane:first-child {
+  border-top: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane .title strong {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane .title strong span {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  padding-right: 5px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane .title strong button {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin: 3px 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane .title > span {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400 !important;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #f1f3f7;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs button.active {
+  background: #3d4665;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 10px;
+  padding: 20px 0 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label .label {
+  width: 20%;
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label .label::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: grey;
+  border-radius: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .itemList {
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .itemList button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 36px;
+  border-radius: 6px;
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: #333d47;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tabs {
+  display: flex;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tabs button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #f1f3f7;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+  margin-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tabs button.active {
+  background: #3d4665;
+  color: #fff;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content {
+  padding-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory {
+  flex-direction: column;
+  gap: 15px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory.active {
+  display: flex;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory .inExclusion__history-stocks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+  width: 100%;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory .inExclusion__history-stocks button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 36px;
+  border-radius: 6px;
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: #333d47;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExHistory .inExclusion__history-stocks button {
+  margin-top: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule {
+  flex-direction: column;
+  gap: 15px 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule.active {
+  display: flex;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks {
+  display: flex;
+  width: 100%;
+  gap: 0 12px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 12px) / 2);
+  gap: 8px 0;
+  background: #f1f3f7;
+  border-radius: 8px;
+  padding: 12px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e5;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .top strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 21px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .top span {
+  font-size: 14px;
+  color: #999;
+  line-height: 21px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .cont {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  justify-content: space-between;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .cont span {
+  display: block;
+  max-width: 50%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+  padding-right: 4px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content #inExSchedule .imminentStocks .stocks .cont span::before {
+  content: "·";
+  margin-right: 6px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .tab-content > .tab-pane.active {
+  animation: seohakTabFadeIn 0.3s ease;
+}
+#seohak.seohak-main .mainContent .common__importantNote {
+  margin: 10px 17px 50px;
+  width: calc(100% - 34px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+#seohak.seohak-main .mainContent .common__importantNote strong {
+  color: #666;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px; /* 146.154% */
+}
+#seohak.seohak-main .mainContent .common__importantNote .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+#seohak.seohak-main .mainContent .common__importantNote .txt span {
+  display: flex;
+  gap: 0 4px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #969799;
+}
+#seohak.seohak-main .mainContent .common__importantNote .txt span::before {
+  content: "";
+  width: 2.5px;
+  height: 2.5px;
+  background: #999;
+  margin-top: 8px;
+}
+#seohak .seohak__modal-guideText .modal-content {
+  position: relative;
+  padding: 16px;
+  border-radius: 8px !important;
+}
+#seohak .seohak__modal-guideText .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 20px 0;
+}
+#seohak .seohak__modal-guideText .modal-content .modal-body strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #333;
+}
+#seohak .seohak__modal-guideText .modal-content .modal-body span {
+  font-size: 13px;
+  color: #333;
+  line-height: 19px;
+}
+#seohak .seohak__modal-guideText .modal-content .modal-body button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  z-index: 10024;
+}
+
+.seohak__main-table thead tr th {
+  height: 38px;
+  background: #f8f9fb;
+  font-size: 13px;
+  color: #666;
+  font-weight: 350;
+  padding: 0 4px;
+  border-top: 1px solid #dee2e5;
+  border-bottom: 1px solid #dee2e5;
+}
+.seohak__main-table thead tr th.ta_r {
+  text-align: right;
+}
+.seohak__main-table tbody tr.rowTop td {
+  border-bottom: 0;
+}
+.seohak__main-table tbody tr.rowTop td.col-rank {
+  border-bottom: 1px solid #dee2e5;
+}
+.seohak__main-table tbody tr.rowTop.row-last td.col-rank {
+  border-bottom: 0;
+}
+.seohak__main-table tbody tr td {
+  height: 42px;
+  padding: 0 4px;
+  border-bottom: 1px solid #dee2e5;
+}
+.seohak__main-table tbody tr td.col-rank span {
+  display: flex;
+  width: 24px;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(102, 102, 102, 0.2);
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+}
+.seohak__main-table tbody tr td.col-rank span.rank-top {
+  border: 1px solid rgba(83, 103, 255, 0.5);
+  background: #f2f3ff;
+  color: #5367ff;
+}
+.seohak__main-table tbody tr td.col-name span {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+.seohak__main-table tbody tr td.col-value span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+.seohak__main-table tbody tr td.col-value span.up {
+  color: #fc2f2f;
+}
+.seohak__main-table tbody tr td.col-value span.dn {
+  color: #447aec;
+}
+.seohak__main-table tbody tr td.col-change span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.seohak__main-table tbody tr td.ta_c {
+  text-align: center;
+}
+.seohak__main-table tbody tr td.ta_r {
+  text-align: right;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td {
+  height: 31px;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-rank {
+  padding: 10px 4px;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name span {
+  font-weight: 700;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-name em {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  padding: 0 4px;
+  background: #f3811d;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  height: 14px;
+}
+.seohak__main-table.table__doubleLine tbody tr.rowTop td.col-weight span, .seohak__main-table.table__doubleLine tbody tr.rowTop td.col-amount span {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+.seohak__main-table.table__doubleLine tbody tr:not(.rowTop).row-last td {
+  border-bottom: 0;
+}
+.seohak__main-table.table__doubleLine tbody tr:not(.rowTop) td {
+  height: 31px;
+  padding-bottom: 10px;
+  padding-top: 0;
+}
+.seohak__main-table.table__doubleLine tbody tr:not(.rowTop) td span {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  color: #333;
+  font-weight: 400;
+  background: 0;
+  border: 0;
+}
+.seohak__main-table.table-sm tbody tr td.col-name span {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seohak__main-tableS thead tr th {
+  color: #666;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  border-top: 1px solid #dee2e5;
+  border-bottom: 1px solid #dee2e5;
+  background: #f8f9fb;
+  padding: 10px 4px;
+  height: 16px;
+}
+.seohak__main-tableS tbody tr:last-child td {
+  border-bottom: 0;
+}
+.seohak__main-tableS tbody tr td {
+  border-bottom: 1px solid #dee2e5;
+  padding: 10px 4px;
+  min-height: 21px;
+}
+.seohak__main-tableS tbody tr td .date {
+  color: #666;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+.seohak__main-tableS tbody tr td .stocks {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+}

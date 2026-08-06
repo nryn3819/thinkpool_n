@@ -1,0 +1,234 @@
+@use "../tools" as *;
+
+@import "../variable.scss";
+//market
+.market {
+  .marketList {
+    padding: 0 17px;
+
+    &.themelist {
+      .list {
+        .left {
+          width: calc(100% - 125px);
+        }
+        .price {
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0 11px 0;
+      border-bottom: 1px solid #e2e2e2;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .leftDate {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        width: 45px;
+        height: 51px;
+
+        span {
+          display: inline-block;
+          font-size: 16px;
+          color: tp-color(text-muted);
+          height: 23px;
+          line-height: 23px;
+          font-weight: 400;
+
+          &.pvl {
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .left {
+        display: block;
+        width: calc(100% - 77px);
+
+        &-sec {
+          width: calc(100% - 77px - 45px);
+        }
+
+        .top {
+          width: 100%;
+          min-height: 23px;
+          line-height: 23px;
+
+          .date {
+            font-size: 16px;
+            color: tp-color(text-muted);
+            font-weight: 400;
+          }
+          .pvl {
+            font-size: 16px;
+            color: tp-color(text-muted);
+            font-weight: 400;
+          }
+
+          .nameObj {
+            font-size: 16px;
+            color: #000;
+            font-weight: 700;
+
+            .objDate {
+              font-size: 14px;
+              color: #000;
+              font-weight: 400;
+            }
+          }
+          .theme {
+            font-size: 16px;
+            color: #000;
+            font-weight: 500;
+          }
+        }
+
+        .btm {
+          width: 100%;
+          min-height: 23px;
+          line-height: 23px;
+          padding-top: 2px;
+
+          .contxt {
+            font-size: 14px;
+            color: #000;
+          }
+          .date {
+            font-size: 13px;
+            color: tp-color(text-muted);
+          }
+          .optxt {
+            padding-left: 45px;
+            font-size: 14px;
+            color: #000;
+
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+      .right {
+        display: block;
+        width: 66px;
+
+        .per {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+          min-height: 22px;
+          max-height: 30px;
+          box-sizing: content-box;
+          background: #cbcbcb;
+          font-size: 12px;
+          color: #fff;
+          padding: 3px 0;
+          text-align: center;
+          border-radius: 3px;
+
+          &.up {
+            background: tp-color(danger);
+          }
+          &.dn {
+            background: tp-color(primary-legacy);
+          }
+
+          span {
+            display: block;
+            width: 100%;
+            min-height: 15px;
+            line-height: 15px;
+            font-weight: 300;
+          }
+          em {
+            display: block;
+            width: 100%;
+            min-height: 15px;
+            line-height: 15px;
+            font-weight: 700;
+          }
+        }
+        .like {
+          display: block;
+          width: 20px;
+
+          button {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            border: 0;
+            background: url("#{$imgUrlSv}/fav.png") no-repeat center 50%;
+            background-size: 20px auto;
+            text-indent: -9999em;
+
+            &.active {
+              background: url("#{$imgUrlSv}/favOn.png") no-repeat center 50%;
+              background-size: 20px auto;
+            }
+          }
+        }
+      }
+
+      &-market {
+        .right {
+          width: 56px;
+        }
+      }
+    }
+  }
+}
+
+.theme-o-list {
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+
+  .list {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e2e2;
+
+    .date {
+      display: block;
+      font-size: 13px;
+      color: tp-color(text-muted);
+      height: 19px;
+      line-height: 19px;
+    }
+    .txt {
+      display: block;
+      font-size: 16px;
+      color: #000;
+      width: 100%;
+
+      a,
+      span {
+        color: #000;
+      }
+    }
+    .tag {
+      display: block;
+      font-size: 14px;
+      color: tp-color(primary-legacy);
+      margin-top: 5px;
+
+      em {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}

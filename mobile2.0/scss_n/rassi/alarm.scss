@@ -1,0 +1,88 @@
+@use "../tools" as *;
+
+@import "../variable.scss";
+.alarmlist {
+  display: block;
+  width: 100%;
+
+  & > span {
+    display: block;
+    font-size: 14px;
+    color: tp-color(text-muted);
+    padding-bottom: 5px;
+
+    &::before {
+      content: "\00b7";
+      color: tp-color(text-muted);
+      padding-right: 5px;
+    }
+  }
+
+  & > div {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: tp-radius(sm);
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #d5d5d5;
+
+    &.up {
+      .date {
+        background: tp-color(danger);
+      }
+    }
+    &.dn {
+      .date {
+        background: tp-color(primary-legacy);
+      }
+    }
+
+    .tit {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+
+      .date {
+        font-size: 13px;
+        color: #fff;
+        display: block;
+        width: 49px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 24px;
+        text-align: center;
+        margin-right: 6px;
+      }
+
+      .name {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        margin-right: 5px;
+      }
+
+      .cls {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+
+    .cont {
+      display: block;
+      margin-top: 15px;
+      padding-left: 55px;
+      font-size: 15px;
+      color: #000;
+      line-height: 21px;
+    }
+  }
+
+  .shorcutBtn {
+    background: none;
+    padding: 0;
+    border: 0;
+  }
+}

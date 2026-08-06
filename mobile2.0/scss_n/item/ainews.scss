@@ -1,0 +1,108 @@
+@use "../tools" as *;
+
+@import "../variable.scss";
+.ainews {
+  padding-bottom: 20px;
+  //border-top:1px solid #e2e2e2;
+  //margin: 0 17px;
+
+  &-guide {
+    margin: 0 17px 0 17px !important;
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: tp-color(text-muted);
+    border-bottom: 1px solid #e2e2e2;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      background: url(#{$imgUrlSv}/bu_ai.png) no-repeat 0 0;
+      background-size: 14px auto;
+      margin: 3px 5px 0 0;
+      float: left;
+    }
+  }
+
+  .list {
+    display: block;
+    padding: 0 0 0;
+    margin: 0 17px;
+    //border-top:1px solid #e2e2e2;
+    overflow: hidden;
+
+    &-inline-ad {
+      margin: 15px 0 0 0;
+      padding: 0;
+      border-top: 0;
+    }
+
+    .list-show {
+      display: block;
+      padding: 15px 0;
+      border-bottom: 1px solid #e2e2e2;
+
+      .obj {
+        height: 18px;
+        line-height: 18px;
+        color: #000;
+      }
+
+      .date {
+        font-size: 13px;
+        color: tp-color(text-muted);
+        padding-top: 5px;
+      }
+    }
+
+    .list-summary {
+      //padding-bottom:15px;
+
+      .card {
+        background: #f6f6f8;
+        border: 0;
+        border-bottom: 1px solid #e2e2e2;
+        border-radius: 0;
+
+        padding: 15px;
+
+        .title {
+          font-size: 16px;
+          color: #5388ff;
+          font-weight: 700;
+          padding: 0;
+        }
+        .txt {
+          line-height: 21px;
+          font-size: 15px;
+          color: #000;
+
+          span {
+            display: block;
+            min-height: 21px;
+            line-height: 21px;
+            padding-bottom: 5px;
+
+            &:first-child {
+              padding-top: 10px;
+            }
+
+            // &::before{
+            //     content: '-';
+            //     padding-right:5px;
+            //     font-size:15px;
+            //     color:#000;
+            // }
+          }
+        }
+        .date {
+          padding-top: 5px;
+          color: tp-color(text-muted);
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

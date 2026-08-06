@@ -1,0 +1,19 @@
+.chartContent {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+
+  .chart__tabs {
+    @include segmented-tab-buttons;
+  }
+  .chart__tab-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+
+    .chart-label {
+      @include dash-legend;
+    }
+  }
+}

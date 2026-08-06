@@ -1,0 +1,7 @@
+.contribution__tabs {
+  @include pill-tab-buttons;
+  padding-top: 15px;
+}
+.contribution__tab-content {
+  padding-top: 20px;
+}

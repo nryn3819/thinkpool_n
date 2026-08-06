@@ -1,0 +1,183 @@
+@use "tools" as *;
+
+@import "variable.scss";
+//main
+
+//tab
+.ch_tab {
+  width: 100%;
+  overflow: auto;
+  padding: 20px 0 10px;
+  white-space: nowrap;
+}
+
+//mainColumnGuideBox
+.mainColumnGuideBox {
+  overflow: hidden;
+  padding: 10px 17px;
+
+  &.tabInBtm {
+    padding: 10px 5px;
+    margin: 0 17px;
+    border-top: 1px solid #e2e2e2;
+
+    span {
+      display: block;
+      width: 100%;
+      line-height: 14px;
+      float: left;
+      padding: 2px 0;
+
+      em {
+        &.pptnudn {
+          width: calc(100% - 42px);
+          padding-left: 5px;
+        }
+
+        &.st_gd {
+          display: block;
+          width: 24px;
+          height: 14px;
+          background: tp-color(danger);
+          border-radius: 3px;
+          float: left;
+        }
+      }
+    }
+  }
+  &.tblBtm {
+    border-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  span {
+    clear: left;
+    font-size: 12px;
+    color: tp-color(text-muted);
+
+    em {
+      display: block;
+      width: calc(100% - 18px);
+      float: left;
+    }
+
+    &::before {
+      display: block;
+      float: left;
+      padding-right: 5px;
+      content: "\00B7";
+    }
+  }
+}
+
+//alram
+.mainColumnAlramBox {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 17px 10px;
+
+  span {
+    display: block;
+    width: calc(100% - 85px);
+    float: left;
+    font-size: 12px;
+    color: tp-color(text-muted);
+
+    @include mini {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    em {
+      display: block;
+      float: left;
+    }
+
+    &::before {
+      display: block;
+      float: left;
+      padding-right: 5px;
+      content: "\00B7";
+    }
+  }
+
+  button {
+    float: right;
+    margin-left: 5px !important;
+  }
+}
+
+//bubble-202408
+.bubbleChart-tab {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  .tabArea {
+    display: flex;
+    width: 130px;
+    border-radius: 99px;
+    background: #f5f5f5;
+
+    button {
+      border: 0;
+      background: none;
+      width: 65px;
+      height: 30px;
+      line-height: 28px;
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      color: tp-color(text-muted);
+      border-radius: 99px;
+      padding: 0;
+
+      &.active {
+        background: tp-color(primary-legacy);
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .dayArea {
+    display: flex;
+    gap: 3px;
+
+    button {
+      height: 30px;
+      line-height: 26px;
+      box-sizing: border-box;
+      padding: 0 10px;
+      border: 1px solid #cfd3d9;
+      font-size: 14px;
+      color: tp-color(text-muted);
+      background: none;
+      border-radius: tp-radius(xs);
+      display: flex;
+      justify-content: center;
+
+      &.active {
+        border: 1px solid tp-color(primary-legacy);
+        font-weight: 700;
+        color: tp-color(primary-legacy);
+      }
+    }
+  }
+}
+
+@import "./main/item.scss"; //종목정보
+@import "./main/signal.scss"; // 라씨매매신호
+@import "./main/aibest.scss"; //베스트수익률
+@import "./main/issue.scss"; // 이슈
+@import "./main/market.scss"; //특징주
+@import "./main/report.scss"; //리포트분석
+@import "./main/snd.scss";
+@import "./main/video.scss";
+@import "./main/table.scss";
+@import "./main/search.scss";
+@import "./main/itemCdn.scss";
+@import "./main/setting.scss";
+@import "./main/expert.scss";

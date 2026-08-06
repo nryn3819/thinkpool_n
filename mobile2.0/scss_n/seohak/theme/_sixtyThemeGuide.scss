@@ -1,0 +1,209 @@
+.theme__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 34px);
+  height: 273px;
+  border-radius: 16px;
+  background-image: url("../../img/seohak/guide/visual-bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #050217;
+  padding: 23px 0;
+  margin: 26px 17px 0;
+  overflow: hidden;
+
+  .visual__header {
+    width: 100%;
+    z-index: 20;
+
+    strong {
+      padding-left: 10px;
+    }
+  }
+  .visual__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 17px 0 20px;
+    width: 100%;
+    gap: 12px 0;
+    z-index: 20;
+
+    strong {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+      }
+
+      em {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+
+        &.point1 {
+          color: #b99cff;
+        }
+        &.point2 {
+          color: #96a4ff;
+        }
+      }
+    }
+    span {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+      letter-spacing: -0.28px;
+    }
+  }
+  .visual__blur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url("../../img/seohak/guide/visualBlur.png") no-repeat 0 0;
+    background-size: 100% auto;
+    z-index: 10;
+  }
+}
+
+.themeStats {
+  display: flex;
+  flex-direction: column;
+  padding: 0 17px 10px;
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 12px;
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      width: calc((100% - 12px) / 2);
+      height: 94px;
+      border-radius: 8px;
+      border: 1px solid #c9dbff;
+      background: linear-gradient(180deg, #f4f8ff 0%, #e0e7f6 100%);
+      padding: 16px 12px;
+      gap: 6px 0;
+
+      strong {
+        color: #5148c9;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px; /* 129.167% */
+      }
+
+      span {
+        color: #333;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px; /* 146.667% */
+      }
+    }
+  }
+
+  .themeAbout {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    padding-top: 30px;
+
+    .about {
+      display: flex;
+      padding: 16px 12px;
+      flex-direction: column;
+      gap: 6px;
+      border-radius: 8px;
+      background: #f8f9fb;
+
+      strong {
+        color: #333;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+      }
+
+      span {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px; /* 150% */
+      }
+    }
+  }
+}
+
+.themeSteps {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 17px 0px;
+  border-top: 8px solid #f6f6f6;
+
+  .steps__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 8px 0;
+
+    .step {
+      display: flex;
+      width: 100%;
+      padding: 12px;
+      flex-direction: column;
+      gap: 12px;
+      border-radius: 10px;
+      border: 1px solid #e4e4e4;
+      background: #fff;
+
+      .top {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+
+        em {
+          display: flex;
+          padding: 4px 12px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 100px;
+          background: #54b5ad;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 18px; /* 150% */
+        }
+
+        strong {
+          color: #333;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 22px; /* 146.667% */
+        }
+      }
+
+      .cont {
+        span {
+          color: #333;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 19px; /* 146.154% */
+        }
+      }
+    }
+  }
+}

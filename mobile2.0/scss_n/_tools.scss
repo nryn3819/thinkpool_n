@@ -1,0 +1,71 @@
+@use "sass:map";
+
+// 공통 디자인 토큰입니다. 기존 CSS 값을 그대로 반환해 화면 결과를 유지합니다.
+$tp-colors: (
+  primary: #5368ff,
+  primary-legacy: #5367ff,
+  success: #34d399,
+  danger: #ff414f,
+  text-primary: #333,
+  text-secondary: #666,
+  text-muted: #999,
+  border-default: #d4d4d8,
+  ink: #141414,
+);
+
+$tp-radii: (
+  xs: 4px,
+  sm: 5px,
+  md: 6px,
+  lg: 8px,
+  xl: 10px,
+  2xl: 12px,
+  circle: 100%,
+);
+
+$tp-font-families: (
+  noto: (
+    "Noto Sans KR",
+    sans-serif,
+  ),
+  spoqa: (
+    "Spoqa Han Sans Neo",
+    sans-serif,
+  ),
+);
+
+@function tp-color($name) {
+  @if not map.has-key($tp-colors, $name) {
+    @error "정의되지 않은 색상 토큰입니다: #{$name}";
+  }
+
+  @return map.get($tp-colors, $name);
+}
+
+@function tp-radius($name) {
+  @if not map.has-key($tp-radii, $name) {
+    @error "정의되지 않은 radius 토큰입니다: #{$name}";
+  }
+
+  @return map.get($tp-radii, $name);
+}
+
+@function tp-font($name) {
+  @if not map.has-key($tp-font-families, $name) {
+    @error "정의되지 않은 font 토큰입니다: #{$name}";
+  }
+
+  @return map.get($tp-font-families, $name);
+}
+
+@mixin tp-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin tp-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

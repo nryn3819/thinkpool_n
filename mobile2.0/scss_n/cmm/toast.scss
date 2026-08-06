@@ -1,0 +1,124 @@
+@use "../tools" as *;
+
+.toast {
+  &.bbchart {
+    background: #000;
+    background-clip: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: tp-radius(sm);
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 326px;
+    position: relative;
+    margin: 0 auto 20px;
+
+    .toast-body {
+      background: none;
+      background-clip: none;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      color: #fff;
+      justify-content: center;
+
+      &::after {
+        content: " ";
+        font-weight: 700;
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        margin-left: -15px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid black;
+        border-bottom: 15px solid transparent;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+      }
+
+      .btn-close {
+        margin: 0;
+        padding: 0;
+        background: none;
+        opacity: 1;
+        color: #fff;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &.like {
+    background: #000;
+    background-clip: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: tp-radius(sm);
+    padding: 10px 15px;
+    width: calc(100% - 79px);
+    position: absolute;
+    top: 0;
+    right: 62px;
+    overflow: visible !important;
+
+    &::before {
+      display: none !important;
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 25px solid transparent;
+      border-top: 25px solid transparent;
+      border-left: 25px solid black;
+      border-right: 25px solid transparent;
+      position: absolute;
+      top: 5px;
+      right: -38px;
+    }
+
+    .toast-body {
+      background: none;
+      background-clip: none;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      color: #fff;
+      justify-content: inherit;
+      overflow: hidden;
+
+      &::before {
+        display: none;
+      }
+
+      strong {
+        display: block;
+        width: calc(100% - 30px);
+        text-align: center;
+        float: left;
+        font-weight: 400 !important;
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      .btn-close {
+        margin: 10px 0 0 0;
+        padding: 0;
+        background: none;
+        opacity: 1;
+        color: #fff;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-weight: 700;
+        float: left;
+      }
+    }
+  }
+}

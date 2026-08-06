@@ -1,0 +1,105 @@
+.indexInExclusion__tabs {
+  @include pill-tab-buttons;
+}
+
+.indexInExclusion__tab-content {
+  padding-top: 20px;
+
+  #inExHistory {
+    flex-direction: column;
+    gap: 15px 0;
+
+    &.active {
+      display: flex;
+    }
+
+    .inExclusion__history-stocks {
+      display: flex;
+      flex-direction: column;
+      gap: 15px 0;
+      width: 100%;
+
+      @include outline-more-button;
+
+      // 부모의 gap이 이미 여백을 주고 있어 버튼의 기본 margin-top은 제거합니다.
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+
+  #inExSchedule {
+    flex-direction: column;
+    gap: 15px 0;
+
+    &.active {
+      display: flex;
+    }
+
+    .imminentStocks {
+      display: flex;
+      width: 100%;
+      gap: 0 12px;
+
+      .stocks {
+        display: flex;
+        flex-direction: column;
+        width: calc((100% - 12px) / 2);
+        gap: 8px 0;
+        background: $seohak-color-bg-pill;
+        border-radius: 8px;
+        padding: 12px;
+
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-bottom: 8px;
+          border-bottom: 1px solid $seohak-color-border-light;
+
+          strong {
+            font-size: 14px;
+            font-weight: 700;
+            color: $seohak-color-text;
+            line-height: 21px;
+          }
+          span {
+            font-size: 14px;
+            color: $seohak-color-text-muted;
+            line-height: 21px;
+          }
+        }
+
+        .cont {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          gap: 4px 0;
+          justify-content: space-between;
+
+          span {
+            display: block;
+            max-width: 50%;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color: $seohak-color-text;
+            line-height: 21px;
+            padding-right: 4px;
+
+            &::before {
+              content: "\00b7";
+              margin-right: 6px;
+              font-size: 14px;
+              color: $seohak-color-text;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
