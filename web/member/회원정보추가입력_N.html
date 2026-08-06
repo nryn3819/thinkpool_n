@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=480">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=480" />
     <title>회원정보 추가입력 | 씽크풀</title>
-    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css" />
     <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
   </head>
   <body>
@@ -14,7 +14,7 @@
           <span class="member-header__back-icon" aria-hidden="true"></span>
         </button>
         <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
-          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL" />
         </a>
         <span class="member-header__spacer" aria-hidden="true"></span>
       </header>
@@ -40,7 +40,7 @@
                 placeholder="실명을 입력하세요. (비밀번호 찾기에 쓰입니다. )"
                 autocomplete="name"
                 required
-              >
+              />
             </div>
 
             <div class="form-field">
@@ -52,10 +52,17 @@
                 name="nickname"
                 placeholder="2~6자리 한글, 4~12영문, 숫자만 가능"
                 required
-              >
+              />
+              <p class="form-error" role="alert" data-warning-key="nickname-format">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                4~12자리 영문과 숫자로 입력하세요
+              </p>
               <p class="form-error" role="alert" data-warning-key="nickname-unavailable">
                 <span class="form-error__icon" aria-hidden="true">!</span>
-                사용할 수 없는 필명 입니다. 다른 필명으로 설정하세요.
+                이미 사용 중입니다. 다른 필명을 설정해 주세요.
+              </p>
+              <p class="form-complete" role="status" data-complete-key="nickname-available">
+                사용 가능한 필명입니다.
               </p>
             </div>
 
@@ -73,13 +80,15 @@
                     autocomplete="tel"
                     inputmode="numeric"
                     required
-                  >
+                  />
                   <button
                     class="button button--secondary button--verification"
                     type="button"
                     data-verification-action="send"
                     disabled
-                  >인증번호받기</button>
+                  >
+                    인증번호받기
+                  </button>
                 </div>
 
                 <div class="form-field__row">
@@ -94,16 +103,26 @@
                     aria-describedby="extra-verification-error"
                     disabled
                     required
-                  >
+                  />
                   <button
                     class="button button--secondary button--verification"
                     type="button"
                     data-verification-action="confirm"
                     disabled
-                  >확인</button>
+                  >
+                    확인
+                  </button>
                 </div>
 
                 <div class="form-error-list">
+                  <p class="form-error" role="alert" data-warning-key="phone-required">
+                    <span class="form-error__icon" aria-hidden="true">!</span>
+                    휴대폰 번호를 입력해 주세요.
+                  </p>
+                  <p class="form-error" role="alert" data-warning-key="phone-in-use">
+                    <span class="form-error__icon" aria-hidden="true">!</span>
+                    이미 사용 중인 휴대폰 번호입니다. 아이디 찾기를 이용해 주세요.
+                  </p>
                   <p
                     id="extra-verification-error"
                     class="form-error"
@@ -111,11 +130,29 @@
                     data-warning-key="verification-invalid"
                   >
                     <span class="form-error__icon" aria-hidden="true">!</span>
-                    인증번호를 확인해 주세요.
+                    인증번호가 다릅니다. 다시 확인해 주세요.
                   </p>
                   <p class="form-error" role="alert" data-warning-key="member-mismatch">
                     <span class="form-error__icon" aria-hidden="true">!</span>
                     회원이 아니거나 입력정보가 맞지 않습니다.
+                  </p>
+                  <p
+                    class="form-complete"
+                    role="status"
+                    data-verification-message="sent"
+                    data-complete-key="verification-sent"
+                    hidden
+                  >
+                    인증번호가 발송되었습니다
+                  </p>
+                  <p
+                    class="form-complete"
+                    role="status"
+                    data-verification-message="verified"
+                    data-complete-key="verification-completed"
+                    hidden
+                  >
+                    휴대폰 인증이 완료되었습니다.
                   </p>
                 </div>
               </fieldset>
@@ -124,16 +161,21 @@
                 <legend class="form-field__label">마케팅 동의</legend>
                 <div class="choice-group">
                   <label class="radio-control">
-                    <input type="radio" name="agreeMarketing" value="yes" checked>
+                    <input type="radio" name="agreeMarketing" value="yes" checked />
                     <span>동의</span>
                   </label>
                   <label class="radio-control">
-                    <input type="radio" name="agreeMarketing" value="no">
+                    <input type="radio" name="agreeMarketing" value="no" />
                     <span>미동의</span>
                   </label>
                 </div>
                 <label class="check-control check-control--sub check-control--sms">
-                  <input class="check-control__input" type="checkbox" name="agreeMarketingSms" checked>
+                  <input
+                    class="check-control__input"
+                    type="checkbox"
+                    name="agreeMarketingSms"
+                    checked
+                  />
                   <span class="check-control__label">휴대폰 문자</span>
                 </label>
               </fieldset>

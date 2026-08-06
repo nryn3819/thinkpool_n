@@ -248,6 +248,12 @@ img {
   margin-top: -4px;
 }
 
+.form-fieldset > .form-error + .form-error,
+.form-fieldset > .form-error + .form-complete,
+.form-fieldset > .form-complete + .form-complete {
+  margin-top: -4px;
+}
+
 .form-fieldset,
 .agreement-list {
   min-width: 0;
@@ -331,7 +337,7 @@ img {
 
 .form-error {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   margin: 0;
   color: var(--member-error);
@@ -347,11 +353,20 @@ img {
   justify-content: center;
   width: 18px;
   height: 18px;
+  margin-top: 2px;
   border: 1px solid var(--member-error);
   border-radius: 50%;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+}
+
+.form-complete {
+  margin: 0;
+  color: #5568fd;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 .form-help {
@@ -903,8 +918,21 @@ img {
   background-color: #ecf0f5;
 }
 
-.profile-edit-group__error {
+.profile-edit-group__error,
+.profile-edit-group__messages,
+.profile-edit-group__phone-messages {
+  width: 300px;
   margin-left: 100px;
+}
+
+.profile-edit-group__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-edit-group__phone-messages {
+  width: 300px;
 }
 
 .profile-edit-group__error .form-error__icon {
@@ -936,6 +964,7 @@ img {
 .profile-edit-group__admin-warning-icon .form-error__icon {
   width: 16px;
   height: 16px;
+  margin-top: 0;
   font-size: 12px;
   line-height: 14px;
   transform: translateY(4px);
@@ -1109,7 +1138,8 @@ img {
   margin: 0 auto;
 }
 
-.member-page--profile-extra .form-error {
+.member-page--profile-extra .form-error,
+.member-page--profile-extra .form-complete {
   font-size: 15px;
   line-height: 22px;
 }
@@ -1211,12 +1241,14 @@ img {
   margin-top: 40px;
 }
 
-.member-page--signup-step2 .form-error {
+.member-page--signup-step2 .form-error,
+.member-page--signup-step2 .form-complete {
   font-size: 15px;
   line-height: 22px;
 }
 
-.member-page--signup-social .form-error {
+.member-page--signup-social .form-error,
+.member-page--signup-social .form-complete {
   font-size: 15px;
   line-height: 22px;
 }

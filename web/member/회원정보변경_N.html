@@ -74,7 +74,7 @@
                         name="nickname"
                         value="가자가자"
                         data-profile-edit-input
-                        aria-describedby="profile-nickname-unavailable-warning profile-nickname-admin-warning"
+                        aria-describedby="profile-nickname-member-messages profile-nickname-admin-warning"
                         disabled
                         required
                       >
@@ -82,22 +82,32 @@
                         class="button button--secondary button--change"
                         type="button"
                         data-profile-edit-action
-                        aria-controls="profile-nickname profile-nickname-unavailable-warning profile-nickname-admin-warning"
+                        aria-controls="profile-nickname profile-nickname-member-messages profile-nickname-admin-warning"
                         aria-expanded="false"
                       >변경</button>
                     </div>
                   </div>
-                  <p
-                    id="profile-nickname-unavailable-warning"
-                    class="form-error profile-edit-group__error"
-                    role="alert"
+                  <div
+                    id="profile-nickname-member-messages"
+                    class="profile-edit-group__messages"
                     data-profile-edit-warning
-                    data-warning-key="nickname-unavailable"
                     hidden
                   >
-                    <span class="form-error__icon" aria-hidden="true">!</span>
-                    이미 사용중 입니다. 다른 필명을 설정해 주세요.
-                  </p>
+                    <p class="form-error" role="alert" data-warning-key="nickname-format">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      4~12자리 영문과 숫자로 입력하세요
+                    </p>
+                    <p class="form-error" role="alert" data-warning-key="nickname-unavailable">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      이미 사용 중입니다. 다른 필명을 설정해 주세요.
+                    </p>
+                    <p class="form-complete" role="status" data-complete-key="nickname-available">
+                      사용 가능한 필명입니다.
+                    </p>
+                    <p class="form-complete" role="status" data-complete-key="profile-update-completed">
+                      필명이 변경되었습니다. 다시 로그인을 하시면 변경된 필명이 사용됩니다.
+                    </p>
+                  </div>
                   <div
                     id="profile-nickname-admin-warning"
                     class="profile-edit-group__admin-warning"
@@ -136,6 +146,7 @@
                         autocomplete="tel"
                         inputmode="numeric"
                         data-profile-edit-input
+                        aria-describedby="profile-phone-messages"
                         disabled
                         required
                       >
@@ -144,7 +155,7 @@
                           class="button button--secondary button--change"
                           type="button"
                           data-profile-edit-action
-                          aria-controls="profile-phone profile-verification-row"
+                          aria-controls="profile-phone profile-verification-row profile-phone-messages"
                           aria-expanded="false"
                         >변경</button>
                         <button
@@ -173,6 +184,7 @@
                         name="verificationCode"
                         placeholder="인증번호를 입력해주세요."
                         inputmode="numeric"
+                        aria-describedby="profile-phone-messages"
                         disabled
                         required
                       >
@@ -183,6 +195,37 @@
                         disabled
                       >확인</button>
                     </div>
+                  </div>
+
+                  <div
+                    id="profile-phone-messages"
+                    class="form-error-list profile-edit-group__phone-messages"
+                    data-profile-phone-messages
+                    hidden
+                  >
+                    <p class="form-error" role="alert" data-warning-key="phone-required">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      휴대폰 번호를 입력해 주세요.
+                    </p>
+                    <p class="form-error" role="alert" data-warning-key="phone-current">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      현재 등록된 휴대폰 번호입니다.
+                    </p>
+                    <p class="form-error" role="alert" data-warning-key="phone-in-use">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      이미 사용 중인 휴대폰 번호입니다. 아이디 찾기를 이용해 주세요.
+                    </p>
+                    <p class="form-error" role="alert" data-warning-key="verification-invalid">
+                      <span class="form-error__icon" aria-hidden="true">!</span>
+                      인증번호가 다릅니다. 다시 확인해 주세요.
+                    </p>
+                    <p
+                      class="form-complete"
+                      role="status"
+                      data-verification-message="sent"
+                      data-complete-key="verification-sent"
+                      hidden
+                    >인증번호가 발송되었습니다</p>
                   </div>
                 </fieldset>
 
@@ -215,7 +258,6 @@
               <p class="form-error form-error--submit" role="alert" data-warning-key="profile-update-failed">
                 변경되지 않았습니다. 문제가 지속될 경우 고객센터로 연락주세요.
               </p>
-
               <button class="button button--primary button--block" type="submit">다음</button>
             </div>
           </form>

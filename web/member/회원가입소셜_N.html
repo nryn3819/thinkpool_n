@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=480">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=480" />
     <title>소셜 회원가입 | 씽크풀</title>
-    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css">
+    <link rel="stylesheet" href="https://img.thinkpool.com/www/member/css/member_n.css" />
     <script src="https://img.thinkpool.com/www/member/js/member_n.js" defer></script>
   </head>
   <body>
@@ -14,7 +14,7 @@
           <span class="member-header__back-icon" aria-hidden="true"></span>
         </button>
         <a class="member-header__brand" href="/" aria-label="씽크풀 홈">
-          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL">
+          <img src="https://img.thinkpool.com/www/member/img/logo-thinkpool.png" alt="THINKPOOL" />
         </a>
         <span class="member-header__spacer" aria-hidden="true"></span>
       </header>
@@ -39,7 +39,7 @@
                 placeholder="이름을 입력해 주세요."
                 autocomplete="name"
                 required
-              >
+              />
             </div>
 
             <fieldset class="form-fieldset verification-fieldset">
@@ -55,13 +55,15 @@
                   autocomplete="tel"
                   inputmode="numeric"
                   required
-                >
+                />
                 <button
                   class="button button--secondary button--verification"
                   type="button"
                   data-verification-action="send"
                   disabled
-                >인증번호받기</button>
+                >
+                  인증번호받기
+                </button>
               </div>
               <div class="form-field__row">
                 <label class="visually-hidden" for="social-verification">인증번호</label>
@@ -75,14 +77,24 @@
                   aria-describedby="social-verification-error"
                   disabled
                   required
-                >
+                />
                 <button
                   class="button button--secondary button--verification"
                   type="button"
                   data-verification-action="confirm"
                   disabled
-                >확인</button>
+                >
+                  확인
+                </button>
               </div>
+              <p class="form-error" role="alert" data-warning-key="phone-required">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                휴대폰 번호를 입력해 주세요.
+              </p>
+              <p class="form-error" role="alert" data-warning-key="phone-in-use">
+                <span class="form-error__icon" aria-hidden="true">!</span>
+                이미 사용 중인 휴대폰 번호입니다. 아이디 찾기를 이용해 주세요.
+              </p>
               <p
                 id="social-verification-error"
                 class="form-error"
@@ -90,7 +102,25 @@
                 data-warning-key="verification-invalid"
               >
                 <span class="form-error__icon" aria-hidden="true">!</span>
-                인증번호를 확인해 주세요.
+                인증번호가 다릅니다. 다시 확인해 주세요.
+              </p>
+              <p
+                class="form-complete"
+                role="status"
+                data-verification-message="sent"
+                data-complete-key="verification-sent"
+                hidden
+              >
+                인증번호가 발송되었습니다
+              </p>
+              <p
+                class="form-complete"
+                role="status"
+                data-verification-message="verified"
+                data-complete-key="verification-completed"
+                hidden
+              >
+                휴대폰 인증이 완료되었습니다.
               </p>
             </fieldset>
 
@@ -99,7 +129,13 @@
 
               <div class="agreement-item">
                 <label class="check-control">
-                  <input class="check-control__input" type="checkbox" name="agreeTerms" checked required>
+                  <input
+                    class="check-control__input"
+                    type="checkbox"
+                    name="agreeTerms"
+                    checked
+                    required
+                  />
                   <span class="check-control__label">
                     이용약관 동의<span class="agreement-item__required">(필수)</span>
                   </span>
@@ -109,7 +145,13 @@
 
               <div class="agreement-item">
                 <label class="check-control">
-                  <input class="check-control__input" type="checkbox" name="agreePrivacy" checked required>
+                  <input
+                    class="check-control__input"
+                    type="checkbox"
+                    name="agreePrivacy"
+                    checked
+                    required
+                  />
                   <span class="check-control__label">
                     개인정보 처리방침 동의<span class="agreement-item__required">(필수)</span>
                   </span>
@@ -119,16 +161,18 @@
 
               <div class="agreement-item">
                 <label class="check-control">
-                  <input class="check-control__input" type="checkbox" name="agreeMarketing">
+                  <input class="check-control__input" type="checkbox" name="agreeMarketing" />
                   <span class="check-control__label">
-                    마케팅 광고 활용을 위한 수집 동의&nbsp;<span class="agreement-item__optional">(선택)</span>
+                    마케팅 광고 활용을 위한 수집 동의&nbsp;<span class="agreement-item__optional"
+                      >(선택)</span
+                    >
                   </span>
                 </label>
               </div>
 
               <div class="agreement-item agreement-item--sub">
                 <label class="check-control check-control--sms">
-                  <input class="check-control__input" type="checkbox" name="agreeMarketingSms">
+                  <input class="check-control__input" type="checkbox" name="agreeMarketingSms" />
                   <span class="check-control__label">휴대폰 문자</span>
                 </label>
               </div>
@@ -139,7 +183,9 @@
               </p>
             </fieldset>
 
-            <button class="button button--primary button--block" type="submit">씽크풀 가입하기</button>
+            <button class="button button--primary button--block" type="submit">
+              씽크풀 가입하기
+            </button>
           </form>
         </section>
       </main>

@@ -149,6 +149,12 @@
       var confirmButton = fieldset.querySelector(
         '[data-verification-action="confirm"]'
       );
+      var sentMessage = fieldset.querySelector(
+        '[data-verification-message="sent"]'
+      );
+      var verifiedMessage = fieldset.querySelector(
+        '[data-verification-message="verified"]'
+      );
       // 필수 요소가 하나라도 없는 영역은 잘못된 이벤트 연결을 방지하기 위해 건너뜁니다.
       if (!phone || !verificationCode || !sendButton || !confirmButton) {
         return;
@@ -184,6 +190,17 @@
           verified || !codeSent || !hasValidVerificationCode();
       }
 
+      // PPT description에 정의된 발송/인증 완료 문구 중 현재 상태에 맞는 문구만 표시합니다.
+      function updateVerificationMessage(state) {
+        if (sentMessage) {
+          sentMessage.hidden = state !== "sent";
+        }
+
+        if (verifiedMessage) {
+          verifiedMessage.hidden = state !== "verified";
+        }
+      }
+
       /*
        * 휴대폰 번호가 변경되면 이전 번호로 받은 인증번호는 더 이상 유효하지 않으므로
        * 인증 상태와 인증번호 입력값을 초기화합니다. 단, 버튼 문구 "재발송"은 유지합니다.
@@ -194,6 +211,7 @@
         verificationCode.value = "";
         verificationCode.classList.remove("is-completed");
         fieldset.removeAttribute("data-verification-status");
+        updateVerificationMessage("");
 
         // 버튼 문구를 "인증번호받기"로 초기화하지 않습니다.
         // sendButton.textContent = sendButtonLabel;
@@ -215,7 +233,7 @@
        * 인증번호 발송/재발송 처리
        * 1) 기존 인증번호 입력값을 정리
        * 2) 인증번호 입력창을 활성화
-       * 3) 발송 안내 알림을 닫은 후 버튼 문구를 "재발송"으로 변경
+       * 3) 입력 영역 아래에 발송 완료 문구를 표시하고 버튼 문구를 "재발송"으로 변경
        * 4) 바로 인증번호를 입력할 수 있도록 입력창에 포커스
        */
       sendButton.addEventListener("click", function () {
@@ -228,9 +246,9 @@
         verificationCode.value = "";
         verificationCode.classList.remove("is-completed");
         updateButtonStates();
-        window.alert("인증번호를 보냈습니다.");
+        updateVerificationMessage("sent");
 
-        // 최초 발송 알림을 닫은 직후부터 버튼 문구를 "재발송"으로 유지합니다.
+        // 최초 발송 직후부터 버튼 문구를 "재발송"으로 유지합니다.
         sendButton.textContent = "재발송";
 
         if (!verificationCode.disabled) {
@@ -249,6 +267,7 @@
         verified = true;
         fieldset.setAttribute("data-verification-status", "verified");
         updateButtonStates();
+        updateVerificationMessage("verified");
 
         /*
          * 회원정보 변경 페이지처럼 인증 완료 후 별도의 편집 UI를 닫아야 하는 화면에서
@@ -261,6 +280,7 @@
 
       // 페이지 최초 진입 시 모든 인증 컨트롤을 초기 상태로 맞춥니다.
       updateButtonStates();
+      updateVerificationMessage("");
     });
   }
 
@@ -420,6 +440,9 @@
         var verificationRow = group.querySelector(
           "[data-profile-verification-row]"
         );
+        var phoneMessages = group.querySelector(
+          "[data-profile-phone-messages]"
+        );
 
         if (!sendButton || !verificationRow) {
           return;
@@ -436,6 +459,9 @@
           editButton.hidden = isEditing;
           sendButton.hidden = !isEditing;
           verificationRow.hidden = !isEditing;
+          if (phoneMessages) {
+            phoneMessages.hidden = !isEditing;
+          }
           editButton.setAttribute("aria-expanded", String(isEditing));
 
           if (isEditing) {
