@@ -18,6 +18,26 @@
       width: 100%;
       height: auto;
 
+      .prepare__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 148px;
+        padding: 11px 4px;
+        border-top: 1px solid $seohak-color-border-light;
+        border-bottom: 1px solid $seohak-color-border-light;
+        background: #fff;
+
+        span {
+          color: $seohak-color-text-secondary;
+          font-family: $seohak-font-base;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+      }
+
       .main__tabs {
         position: relative;
         display: flex;

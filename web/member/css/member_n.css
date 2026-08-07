@@ -433,17 +433,18 @@ img {
   background: var(--member-placeholder);
 }
 
-.button--verification,
-.button--verification:disabled,
-.button--change,
-.button--change:disabled {
+
+.button--verification.is-inactive,
+.button--verification:disabled.is-inactive,
+.button--change.is-inactive,
+.button--change:disabled.is-inactive {
   cursor: default;
   opacity: 1;
   background: #8a9aaf;
 }
 
-.button--verification:not(:disabled),
-.button--change:not(:disabled) {
+.button--verification:not(.is-inactive):not(:disabled),
+.button--change:not(.is-inactive):not(:disabled) {
   cursor: pointer;
   background: #5568fd;
 }
