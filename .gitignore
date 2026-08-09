@@ -246,3 +246,6 @@ yarn.
 
 ./old
 old/
+
+# AI web redesign workspace
+/web/web__editForAi/

@@ -66,6 +66,10 @@
       .section__tabs {
         @include sticky-section-tabs(25%);
         top: 123px;
+
+        button:disabled {
+          color: #888888;
+        }
       }
 
       .section__tab-content {
