@@ -233,6 +233,10 @@ dist
 !.yarn/versions
 yarn.
 
+# 정리용 미사용 SCSS/CSS 폴더
+/mobile2.0/scss_n/
+/mobile2.0/css_n/
+
 
 # if you are NOT using Zero-installs, then:
 # comment the following lines
