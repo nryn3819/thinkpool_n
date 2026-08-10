@@ -1,7 +1,0 @@
-@for $i from 1 to 999 {
-  .hspace#{$i} {
-    display: block;
-    width: 1px;
-    height: ($i + px);
-  }
-}
