@@ -236,6 +236,9 @@ yarn.
 # 정리용 미사용 SCSS/CSS 폴더
 /mobile2.0/scss_n/
 /mobile2.0/css_n/
+/mobile2.0/old/
+/mobile2.0/mobile__editForAi/
+/new__tp/
 
 
 # if you are NOT using Zero-installs, then:
@@ -253,3 +256,7 @@ old/
 
 # AI web redesign workspace
 /web/web__editForAi/
+
+.gitignore
+/.gitignore
+
