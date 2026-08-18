@@ -83,14 +83,22 @@
 }
 #seohak.seohak-main .mainContent .prepare__box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 100%;
-  height: 148px;
-  padding: 11px 4px;
-  border-top: 1px solid #dee2e5;
-  border-bottom: 1px solid #dee2e5;
-  background: #fff;
+  height: 200px;
+  padding: 10px;
+  gap: 10px;
+  background: #f9fafb;
+}
+#seohak.seohak-main .mainContent .prepare__box img,
+#seohak.seohak-main .mainContent .prepare__box svg {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
 }
 #seohak.seohak-main .mainContent .prepare__box span {
   color: #666;
@@ -98,6 +106,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  text-align: center;
 }
 #seohak.seohak-main .mainContent .main__tabs {
   position: relative;
@@ -180,6 +189,9 @@
   display: block;
   width: 100%;
   padding: 0 17px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex > .prepare__box {
+  margin-top: 20px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content #allIndex .title {
   display: flex;
@@ -366,6 +378,12 @@
   color: #999;
   font-weight: 400 !important;
 }
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track > .tab-pane {
+  display: block;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison > .title {
+  display: none;
+}
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #indexComparison .chartContent {
   display: block;
   width: 100%;
@@ -459,6 +477,12 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tabs {
+  padding-top: 15px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .prepare__box {
+  margin-top: 20px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #fundFlow .fundFlow__tab-content {
   display: flex;
@@ -561,16 +585,56 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content {
   padding-top: 20px;
 }
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .prepare__box {
+  margin-top: 20px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .aiAnalysis__title {
+  justify-content: flex-start;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .aiAnalysis__title strong {
+  gap: 5px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .aiAnalysis__title strong em {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding-bottom: 1px;
+  border-radius: 4px;
+  background: #5367ff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .aiAnalysis__title strong span {
+  padding-right: 0;
+  line-height: 24px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .aiAnalysis__title + .prepare__box,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyze__tabs + .prepare__box {
+  margin-top: 15px;
+}
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video {
   display: block;
   width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
-  margin: 15px 0;
+  background: #191919;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title {
   display: flex;
@@ -578,9 +642,10 @@
   gap: 4px 0;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title .title {
+  display: block;
   font-size: 15px;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 22px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .videoBox .video-title .info {
@@ -619,11 +684,13 @@
   font-weight: 700;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs {
-  gap: 0;
-  justify-content: space-between;
+  gap: 4px;
+  width: 100%;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tabs button {
-  width: calc((100% - 12px) / 4);
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
   padding: 7px 4px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #aiAnalysis .analyzeBox .analyze__tab-content {
@@ -779,6 +846,9 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tab-content .chart-label span.label002::before {
   background: #306ceb;
 }
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #stockTrend .stockTrend__tabs + .prepare__box {
+  margin-top: 20px;
+}
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tabs {
   position: sticky;
   top: 48px;
@@ -848,6 +918,9 @@
   color: #999;
   font-weight: 400 !important;
 }
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track > .tab-pane {
+  display: block;
+}
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs {
   display: flex;
   width: 100%;
@@ -867,34 +940,19 @@
   color: #fff;
   font-weight: 700;
 }
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tabs {
+  margin-top: 15px;
+}
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content {
   display: flex;
   flex-direction: column;
   gap: 20px 0;
   padding-top: 20px;
 }
-#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label {
-  display: flex;
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart,
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox img {
+  display: block;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 6px 10px;
-  padding: 20px 0 15px;
-}
-#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label .label {
-  width: 20%;
-  font-size: 13px;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 0 8px;
-}
-#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .chartBox .chart-label .label::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  background: grey;
-  border-radius: 100%;
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #constituentStocks .constituentStocks__tab-content .itemList {
   padding-top: 20px;
@@ -931,6 +989,9 @@
   background: #3d4665;
   color: #fff;
   font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tabs {
+  margin-top: 15px;
 }
 #seohak.seohak-main .mainContent .main__tab-content #compositionStatus .section__tab-content .section__tab-track #indexInExclusion .indexInExclusion__tab-content {
   padding-top: 20px;

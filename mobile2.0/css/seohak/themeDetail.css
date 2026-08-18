@@ -75,11 +75,52 @@
   display: block;
   width: 100%;
 }
+#seohak.seohak-themeDetail .visual {
+  height: 205px;
+}
+#seohak.seohak-themeDetail .visual .visual-img {
+  height: 185px;
+  overflow: hidden;
+}
+#seohak.seohak-themeDetail .visual .visual-img img {
+  height: 185px;
+  object-fit: cover;
+}
 #seohak.seohak-themeDetail .mainContent {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
+}
+#seohak.seohak-themeDetail .mainContent .prepare__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  gap: 10px;
+  background: #f9fafb;
+}
+#seohak.seohak-themeDetail .mainContent .prepare__box img,
+#seohak.seohak-themeDetail .mainContent .prepare__box svg {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+#seohak.seohak-themeDetail .mainContent .prepare__box span {
+  color: #666;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+#seohak.seohak-themeDetail .mainContent .prepare__box {
+  margin-top: 15px;
 }
 #seohak.seohak-themeDetail .mainContent .periodSelect .title {
   display: flex;
@@ -94,7 +135,7 @@
   color: #000;
 }
 #seohak.seohak-themeDetail .mainContent .periodSelect .title span {
-  font-size: 13px;
+  font-size: 12px;
   color: #999;
   font-weight: 400;
 }
@@ -164,7 +205,8 @@
   color: #b8b8b8;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap {
-  padding: 20px 17px 0;
+  padding: 26px 17px 30px;
+  scroll-margin-top: 169px;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .title {
   display: flex;
@@ -200,14 +242,28 @@
 #seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .mapDetail {
   padding-top: 15px;
 }
-#seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .mapDetail .mapDetail-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #333;
-  line-height: 21px;
+#seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .mapDetail .chart,
+#seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .mapDetail .chart img {
+  display: block;
+  width: 100%;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .mapDetail .mapDetail-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  margin: 0;
+  padding: 6px 4px;
+  background: #e1e7ef;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .themeMap .note {
-  padding-top: 12px;
+  margin: 0;
+  padding-top: 10px;
   color: #999;
   font-size: 12px;
   line-height: 18px;
@@ -287,6 +343,11 @@
   font-size: 14px;
   line-height: 21px;
 }
+#seohak.seohak-themeDetail .mainContent .section__tab-content .section__tab-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 #seohak.seohak-themeDetail .mainContent .section__tab-content .section__tab-track > .tab-pane {
   scroll-margin-top: 80px;
   padding: 30px 17px;
@@ -327,7 +388,50 @@
   font-weight: 400 !important;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .section__tab-track > .tab-pane {
+  display: block;
   scroll-margin-top: 169px;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content #dataIntelligence {
+  order: 1;
+  display: flex;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content #themeMarket {
+  order: 2;
+  padding-bottom: 15px;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content #themeAiReport {
+  order: 3;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content #coreStocks {
+  order: 4;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content #coreEtf {
+  order: 5;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content .aiAnalysis-title {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  height: 24px;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content .aiAnalysis-title em {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: #5367ff;
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content .aiAnalysis-title strong {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .videoBox {
   display: flex;
@@ -363,7 +467,7 @@
   line-height: 19px; /* 146.154% */
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .seohak__stock-table {
-  margin-top: 20px;
+  margin-top: 15px;
   table-layout: fixed;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .seohak__stock-table thead tr th {
@@ -439,6 +543,11 @@
 #seohak.seohak-themeDetail .mainContent .section__tab-content .seohak__stock-table tbody tr td.ta_r {
   text-align: right;
 }
+#seohak.seohak-themeDetail .mainContent .section__tab-content .seohak__stock-table tbody tr:nth-child(n+4) .col-rank .rank {
+  border-color: #dee2e5;
+  background: #fff;
+  color: #999;
+}
 #seohak.seohak-themeDetail .mainContent .section__tab-content .stockReturn,
 #seohak.seohak-themeDetail .mainContent .section__tab-content .etfReturn {
   margin-top: 30px;
@@ -481,7 +590,7 @@
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .stockReturn .chart,
 #seohak.seohak-themeDetail .mainContent .section__tab-content .etfReturn .chart {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .stockReturn .chart-label,
 #seohak.seohak-themeDetail .mainContent .section__tab-content .etfReturn .chart-label {
@@ -528,6 +637,10 @@
   width: 10px;
   height: 4px;
   margin-right: 4px;
+}
+#seohak.seohak-themeDetail .mainContent .section__tab-content .stockReturn .chart-label,
+#seohak.seohak-themeDetail .mainContent .section__tab-content .etfReturn .chart-label {
+  justify-content: center;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content .etf__list {
   display: flex;
@@ -578,7 +691,8 @@
   color: #447aec;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content #themeAiReport {
-  padding-bottom: 20px !important;
+  padding: 0 17px 30px !important;
+  border-top: 0 !important;
 }
 #seohak.seohak-themeDetail .mainContent .section__tab-content #themeAiReport .summaryText {
   border: 1px solid #e4e4e4;
@@ -675,7 +789,7 @@
   transform: rotate(180deg);
 }
 #seohak.seohak-themeDetail .mainContent .common__importantNote {
-  margin: 10px 17px 0;
+  margin: 30px 17px 0;
   width: calc(100% - 34px);
   display: flex;
   flex-direction: column;

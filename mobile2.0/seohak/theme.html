@@ -93,7 +93,7 @@
               <!-- period__tabs -->
 
               <div class="section__tabs">
-                <button type="button" class="active" data-scroll-target="#allTheme" aria-selected="true">전체테마</button>
+                <button type="button" class="active" data-scroll-target="#allTheme" aria-selected="true">테마지도</button>
                 <button type="button" data-scroll-target="#aiAnalysisTheme" aria-selected="false">AI분석</button>
                 <button type="button" data-scroll-target="#themeReturnTab" aria-selected="false">수익률</button>
                 <button type="button" data-scroll-target="#themeSearch" aria-selected="false">테마탐색</button>
@@ -117,12 +117,19 @@
                       </div>
                       <!-- chart -->
 
+                      <button type="button" class="map-more">더보기</button>
+
                       <p class="note">※ 두 손가락으로 확대·축소할 수 있습니다. 테마 블록을 선택하면 상세 리포트와 구성 종목을 확인할 수 있습니다.</p>
                     </div>
                     <!-- themeMap -->
                   </div>
                   <!-- allTheme -->
                   <div class="tab-pane" id="aiAnalysisTheme">
+                    <div class="aiAnalysis-title">
+                      <em>Ai</em>
+                      <strong>AI분석</strong>
+                    </div>
+
                     <div class="themeLead">
                       <div class="lead__tabs">
                         <button type="button" class="active" data-swiper-target="#leadMainTheme" aria-selected="true">주도테마</button>
@@ -137,8 +144,8 @@
                             <div class="summaryText">
                               <div class="title">
                                 <strong>
-                                  <span>주도 테마 분석</span>
                                   <em>Ai</em>
+                                  <span>주도 테마 분석</span>
                                 </strong>
                                 <span>2026/05/05 장마감 기준</span>
                               </div>
@@ -161,8 +168,8 @@
                             <div class="summaryText">
                               <div class="title">
                                 <strong>
-                                  <span>자금 이동 및 동향</span>
                                   <em>Ai</em>
+                                  <span>자금 이동 및 동향</span>
                                 </strong>
                                 <span>2026/05/05 장마감 기준</span>
                               </div>
@@ -185,8 +192,8 @@
                             <div class="summaryText">
                               <div class="title">
                                 <strong>
-                                  <span>투자 인사이트</span>
                                   <em>Ai</em>
+                                  <span>투자 인사이트</span>
                                 </strong>
                                 <span>2026/05/05 장마감 기준</span>
                               </div>
@@ -250,6 +257,25 @@
                   <!-- themeReturnTab -->
 
                   <div class="tab-pane" id="themeSearch">
+                    <div class="title themeSearch-title">
+                      <strong>
+                        <span>테마 탐색</span>
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#themeRankGuide"
+                          aria-label="테마 탐색 안내"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M9 0.75C13.5564 0.75 17.25 4.44365 17.25 9C17.25 13.5564 13.5564 17.25 9 17.25C4.44365 17.25 0.75 13.5564 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75Z" stroke="#999999" stroke-width="1.5" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 13.3047C8.63181 13.3047 8.33333 13.0099 8.33333 12.6462L8.33333 8.25591C8.33333 7.89221 8.63181 7.59737 9 7.59737C9.36819 7.59737 9.66667 7.89221 9.66667 8.25591L9.66667 12.6462C9.66667 13.0099 9.36819 13.3047 9 13.3047Z" fill="#999999" />
+                            <path d="M9 4.30469C8.44772 4.30469 8 4.74694 8 5.29249C8 5.83804 8.44772 6.2803 9 6.2803C9.55228 6.2803 10 5.83804 10 5.29249C10 4.74694 9.55228 4.30469 9 4.30469Z" fill="#999999" />
+                          </svg>
+                        </button>
+                      </strong>
+                      <span>2026/05/05 장마감 기준</span>
+                    </div>
+
                     <div class="themeRank">
                       <div class="rank__tabs">
                         <button type="button" class="active" data-target="#rankThemeList">테마순위</button>
@@ -259,21 +285,6 @@
 
                       <div class="rank__tab-content">
                         <div class="tab-pane active" id="rankThemeList">
-                          <div class="title">
-                            <strong>
-                              <span>60대 테마 순위</span>
-                              <button type="button" data-bs-toggle="modal" data-bs-target="#themeRankGuide">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                  <path d="M9 0.75C13.5564 0.75 17.25 4.44365 17.25 9C17.25 13.5564 13.5564 17.25 9 17.25C4.44365 17.25 0.75 13.5564 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75Z" stroke="#999999" stroke-width="1.5" />
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 13.3047C8.63181 13.3047 8.33333 13.0099 8.33333 12.6462L8.33333 8.25591C8.33333 7.89221 8.63181 7.59737 9 7.59737C9.36819 7.59737 9.66667 7.89221 9.66667 8.25591L9.66667 12.6462C9.66667 13.0099 9.36819 13.3047 9 13.3047Z" fill="#999999" />
-                                  <path d="M9 4.30469C8.44772 4.30469 8 4.74694 8 5.29249C8 5.83804 8.44772 6.2803 9 6.2803C9.55228 6.2803 10 5.83804 10 5.29249C10 4.74694 9.55228 4.30469 9 4.30469Z" fill="#999999" />
-                                </svg>
-                              </button>
-                            </strong>
-                            <span>2026/05/05 장마감 기준</span>
-                          </div>
-                          <!-- title -->
-
                           <div class="rank__filter">
                             <button type="button" class="active">상승 TOP10</button>
                             <button type="button">하락 TOP10</button>
@@ -668,13 +679,24 @@
             </div>
             <!-- mainContent -->
 
-            <div class="modal seohak__modal-guideText fade" id="themeRankGuide" tabindex="-1" aria-labelledby="60대 테마 순위 설명">
+            <div
+              class="modal seohak__modal-guideText fade"
+              id="themeRankGuide"
+              tabindex="-1"
+              aria-labelledby="themeRankGuideTitle"
+              aria-hidden="true"
+            >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <strong>60대 테마 순위</strong>
+                    <strong id="themeRankGuideTitle">테마 탐색</strong>
                     <span>테마명을 선택하면 상세 리포트와 구성 종목을 확인할 수 있습니다.</span>
-                    <button class="modal-close" data-bs-dismiss="modal">
+                    <button
+                      type="button"
+                      class="modal-close"
+                      data-bs-dismiss="modal"
+                      aria-label="테마 탐색 안내창 닫기"
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M1 1L8 8M15 15L8 8M8 8L15 1M8 8L1 15" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
@@ -746,11 +768,11 @@
 
               <div class="offcanvas-body">
                 <div class="themeOption-list">
-                  <button type="button" class="themeOption selected">
+                  <button type="button" class="themeOption selected is-focused">
                     <span class="radio"></span>
                     <span class="label">AI &amp; 데이터 지능</span>
                   </button>
-                  <button type="button" class="themeOption">
+                  <button type="button" class="themeOption selected">
                     <span class="radio"></span>
                     <span class="label">AI 가상 비서</span>
                   </button>
@@ -778,7 +800,14 @@
                 <!-- themeOption-list -->
 
                 <div class="themeSelect-footer">
-                  <p class="counter">최대 5개 선택 가능 (<span class="count">1</span>개 선택중)</p>
+                  <div class="selectionControls">
+                    <p class="counter">최대 5개 선택 가능 (<span class="count">2</span>개 선택중)</p>
+                    <button type="button" class="reset-selection">선택 초기화</button>
+                  </div>
+                  <div class="selectionSummary">
+                    <strong>선택한 테마</strong>
+                    <p>AI &amp; 데이터 지능, AI 가상 비서</p>
+                  </div>
                   <button type="button" class="confirm" data-bs-dismiss="offcanvas">확인</button>
                 </div>
                 <!-- themeSelect-footer -->
@@ -893,14 +922,26 @@
         const MAX_SELECTED = 5;
         const options = Array.from(sheet.querySelectorAll('.themeOption'));
         const countEl = sheet.querySelector('.themeSelect-footer .count');
+        const summaryEl = sheet.querySelector('.selectionSummary p');
+        const resetButton = sheet.querySelector('.reset-selection');
+        const confirmButton = sheet.querySelector('.themeSelect-footer .confirm');
         const maxGuideModalEl = document.getElementById('themeSelectMaxGuide');
         const maxGuideModal = maxGuideModalEl && window.bootstrap ? new bootstrap.Modal(maxGuideModalEl) : null;
 
         function updateCount() {
-          const selectedCount = options.filter(function (option) {
+          const selectedOptions = options.filter(function (option) {
             return option.classList.contains('selected');
-          }).length;
+          });
+          const selectedCount = selectedOptions.length;
           if (countEl) countEl.textContent = String(selectedCount);
+          if (summaryEl) {
+            summaryEl.textContent = selectedOptions
+              .map(function (option) {
+                return option.querySelector('.label').textContent.trim();
+              })
+              .join(', ');
+          }
+          if (confirmButton) confirmButton.disabled = selectedCount === 0;
           return selectedCount;
         }
 
@@ -911,10 +952,23 @@
               if (maxGuideModal) maxGuideModal.show();
               return;
             }
+            options.forEach(function (item) {
+              item.classList.remove('is-focused');
+            });
+            option.classList.add('is-focused');
             option.classList.toggle('selected');
             updateCount();
           });
         });
+
+        if (resetButton) {
+          resetButton.addEventListener('click', function () {
+            options.forEach(function (option) {
+              option.classList.remove('selected', 'is-focused');
+            });
+            updateCount();
+          });
+        }
 
         updateCount();
       });

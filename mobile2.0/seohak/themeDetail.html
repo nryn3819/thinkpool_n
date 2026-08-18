@@ -45,7 +45,7 @@
             </div>
             <div class="pageBack"><button type="button">이전페이지</button></div>
             <div class="headerTitle centerHeader">
-              <strong>테마 상세</strong>
+              <strong>미국 60대 테마</strong>
             </div>
             <div class="subSchBtn">
               <button type="button" id="opensch" class="schButton">종목검색</button>
@@ -113,30 +113,25 @@
                 <button
                   type="button"
                   class="active"
-                  data-scroll-target="#dataIntelligence"
+                  data-scroll-target="#themeMap"
                   aria-selected="true"
                 >
-                  테마시황
+                  테마
+                </button>
+                <button type="button" data-scroll-target="#themeMarket" aria-selected="false">
+                  AI분석
                 </button>
                 <button type="button" data-scroll-target="#coreStocks" aria-selected="false">
                   종목
                 </button>
-                <button type="button" data-scroll-target="#coreEtf" aria-selected="false" disabled>
+                <button type="button" data-scroll-target="#coreEtf" aria-selected="false">
                   ETF
-                </button>
-                <button
-                  type="button"
-                  data-scroll-target="#themeAiReport"
-                  aria-selected="false"
-                  disabled
-                >
-                  AI분석
                 </button>
               </div>
               <!-- section__tabs -->
 
               <div class="section__tab-content tab-content">
-                <div class="themeMap">
+                <div class="themeMap" id="themeMap">
                   <div class="title">
                     <strong>
                       <span>테마지도</span>
@@ -145,8 +140,18 @@
                   </div>
                   <!-- title -->
 
+                  <div class="prepare__box">
+                    <img
+                      src="../img/seohak/prepare-info.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                    <span>준비중입니다.</span>
+                  </div>
+                  <!-- 준비중입니다. -->
+
                   <div class="mapDetail">
-                    <p class="mapDetail-title">기술 패권 &amp; 디지털 혁신</p>
                     <div class="chart">
                       <img
                         src="../img/seohak/themeDetail/map-detail.png"
@@ -155,6 +160,9 @@
                       />
                     </div>
                     <!-- chart -->
+                    <p class="mapDetail-path">
+                      기술 패권 &amp; 디지털 혁신 &gt; AI &amp; 데이터 지능
+                    </p>
                   </div>
                   <!-- mapDetail -->
 
@@ -163,7 +171,11 @@
                 <!-- themeMap -->
 
                 <div class="section__tab-track">
-                  <div class="themeStat tab-pane" id="dataIntelligence">
+                  <div
+                    class="themeStat tab-pane"
+                    id="dataIntelligence"
+                    data-tab-group="themeMap"
+                  >
                     <div class="left">
                       <p class="themeName">AI &amp; 데이터 지능</p>
                       <p class="date">2026/05/05 장마감 기준</p>
@@ -178,13 +190,12 @@
                   </div>
                   <!-- themeStat -->
 
-                  <div class="tab-pane" id="themeMarket" data-tab-group="dataIntelligence">
-                    <div class="title">
-                      <strong>
-                        <span>테마 시황</span>
-                      </strong>
+                  <div class="tab-pane" id="themeMarket">
+                    <div class="aiAnalysis-title">
+                      <em>Ai</em>
+                      <strong>AI분석</strong>
                     </div>
-                    <!--  -->
+                    <!-- AI분석 -->
                     <div class="videoBox">
                       <div class="video">
                         <iframe
@@ -229,6 +240,17 @@
                       <span>2026/05/05 장마감 기준</span>
                     </div>
                     <!-- title -->
+
+                    <div class="prepare__box">
+                      <img
+                        src="../img/seohak/prepare-info.svg"
+                        alt=""
+                        width="20"
+                        height="20"
+                      />
+                      <span>준비중입니다.</span>
+                    </div>
+                    <!-- 준비중입니다. -->
 
                     <table class="seohak__stock-table" width="100%">
                       <colgroup>
@@ -311,6 +333,17 @@
                       </div>
                       <!-- title -->
 
+                      <div class="prepare__box">
+                        <img
+                          src="../img/seohak/prepare-info.svg"
+                          alt=""
+                          width="20"
+                          height="20"
+                        />
+                        <span>준비중입니다.</span>
+                      </div>
+                      <!-- 준비중입니다. -->
+
                       <div class="chart">
                         <img
                           src="../img/seohak/themeDetail/stock-chart.png"
@@ -389,21 +422,17 @@
                       </div>
                       <!-- chart-label -->
 
-                      <div class="prepare__box">
-                        <span>준비중입니다.</span>
-                      </div>
-                      <!-- 준비중입니다. -->
                     </div>
                     <!-- etfReturn -->
                   </div>
                   <!-- coreEtf -->
 
-                  <div class="tab-pane" id="themeAiReport">
+                  <div class="tab-pane" id="themeAiReport" data-tab-group="themeMarket">
                     <div class="summaryText">
                       <div class="title">
                         <strong>
-                          <span>테마 리포트</span>
                           <em>Ai</em>
+                          <span>테마 리포트</span>
                         </strong>
                         <span>2026/05/05 장마감 기준</span>
                       </div>
@@ -553,11 +582,13 @@
         sectionGroups.forEach(function (group) {
           const sectionTrack = group.track;
           const sectionTabButtons = Array.from(group.tabs.querySelectorAll('button'));
-          const sectionPanes = Array.from(sectionTrack.children).filter(function (child) {
-            return child.classList.contains('tab-pane');
-          });
+          const sectionPanes = Array.from(
+            group.tabs.parentElement.querySelectorAll(
+              '.themeMap, .section__tab-track > .tab-pane'
+            )
+          );
 
-          // 버튼 하나가 여러 tab-pane을 아우르는 경우(예: 테마시황 = dataIntelligence + themeMarket),
+          // 버튼 하나가 여러 콘텐츠를 아우르는 경우(예: 테마 = themeMap + dataIntelligence),
           // data-tab-group으로 소속을 표시합니다. 없으면 자기 자신의 id가 곧 그룹입니다.
           function getPaneGroup(pane) {
             return pane.getAttribute('data-tab-group') || pane.id;

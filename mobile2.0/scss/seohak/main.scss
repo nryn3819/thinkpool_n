@@ -19,23 +19,7 @@
       height: auto;
 
       .prepare__box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 148px;
-        padding: 11px 4px;
-        border-top: 1px solid $seohak-color-border-light;
-        border-bottom: 1px solid $seohak-color-border-light;
-        background: #fff;
-
-        span {
-          color: $seohak-color-text-secondary;
-          font-family: $seohak-font-base;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 21px;
-        }
+        @include prepare-box;
       }
 
       .main__tabs {
@@ -107,6 +91,10 @@
               display: block;
               width: 100%;
               padding: 0 17px;
+
+              > .prepare__box {
+                margin-top: 20px;
+              }
 
               .title {
                 @include section-title;
@@ -242,9 +230,14 @@
 
               & > .tab-pane {
                 @include section-tab-pane;
+                display: block;
               }
 
               #indexComparison {
+                > .title {
+                  display: none;
+                }
+
                 @import 'main/indexComparison';
               }
 
@@ -279,6 +272,7 @@
             .section__tab-track {
               & > .tab-pane {
                 @include section-tab-pane;
+                display: block;
               }
               #constituentStocks {
                 @import 'main/constituentStocks';

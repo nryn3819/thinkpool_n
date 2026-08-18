@@ -1,5 +1,6 @@
 .constituentStocks__tabs {
   @include pill-tab-buttons;
+  margin-top: 15px;
 }
 
 .constituentStocks__tab-content {
@@ -9,30 +10,10 @@
   padding-top: 20px;
 
   .chartBox {
-    .chart-label {
-      display: flex;
+    .chart,
+    img {
+      display: block;
       width: 100%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 6px 10px;
-      padding: 20px 0 15px;
-
-      .label {
-        width: 20%;
-        font-size: 13px;
-        color: $seohak-color-text;
-        display: flex;
-        align-items: center;
-        gap: 0 8px;
-
-        &::before {
-          content: '';
-          width: 9px;
-          height: 9px;
-          background: grey;
-          border-radius: 100%;
-        }
-      }
     }
   }
 

@@ -197,7 +197,11 @@
       }
 
       .cont {
-        span {
+        width: 100%;
+
+        p {
+          width: 100%;
+          margin: 0;
           color: #333;
           font-size: 13px;
           font-weight: 400;

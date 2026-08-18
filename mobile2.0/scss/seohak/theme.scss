@@ -20,6 +20,17 @@
     // 상단 히어로 배너 - index.html의 .visual과 동일
     .visual {
       @include visual-banner;
+      height: 205px;
+
+      .visual-img {
+        height: 185px;
+        overflow: hidden;
+
+        img {
+          height: 185px;
+          object-fit: cover;
+        }
+      }
     }
 
     .mainContent {
@@ -43,7 +54,7 @@
             color: $seohak-color-text-black;
           }
           span {
-            font-size: 13px;
+            font-size: 12px;
             color: $seohak-color-text-muted;
             font-weight: 400;
           }
@@ -62,7 +73,7 @@
         padding: 15px 17px 20px;
       }
 
-      // 전체테마/AI분석/수익률/테마탐색 - 지수현황의 section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
+      // 테마지도/AI분석/수익률/테마탐색 - 지수현황의 section__tabs(스크롤 탭)와 동일(버튼 4개라 25%)
       // period__tabs(고정 높이 75px)가 위에 붙으므로, 그 아래(48px + 75px)에 이어서 고정됩니다.
       .section__tabs {
         @include sticky-section-tabs(25%);
@@ -72,19 +83,59 @@
       // section__tab-track 내부의 각 탭 콘텐츠 - main.scss의 section__tab-track과 동일한 구분선·여백
       // period__tabs까지 sticky 영역에 포함되어 있어(48px + 75px + 46px = 169px),
       // 스크롤 이동 시 콘텐츠 상단이 가려지지 않도록 scroll-margin-top을 덮어씁니다.
-      .section__tab-track > .tab-pane {
-        @include section-tab-pane;
-        padding-top: 0 !important;
-        scroll-margin-top: 169px;
+      .section__tab-track {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        > .tab-pane {
+          @include section-tab-pane;
+          display: block;
+          padding-top: 0 !important;
+          scroll-margin-top: 169px;
+        }
+      }
+
+      // Figma 기본 화면의 세로 콘텐츠 순서
+      #allTheme {
+        order: 1;
+      }
+      #themeReturnTab {
+        order: 2;
+      }
+      #aiAnalysisTheme {
+        order: 3;
+      }
+      #themeSearch {
+        order: 4;
       }
 
       .themeMap {
         padding-top: 20px;
         .chart {
           padding-top: 15px;
+
+          img {
+            display: block;
+          }
+        }
+        .map-more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 36px;
+          margin-top: 4px;
+          padding: 0;
+          border: 0;
+          border-radius: 4px;
+          background: #e9edf5;
+          color: #70769d;
+          font-size: 12px;
+          line-height: 22px;
         }
         .note {
-          padding-top: 15px;
+          padding-top: 10px;
           color: #999;
           font-size: 12px;
           line-height: 15px;
@@ -93,7 +144,7 @@
       }
 
       .themeLead {
-        margin-top: 30px;
+        margin-top: 15px;
 
         // 주도테마/자금동향/인사이트 - AI분석의 analyze__tabs와 동일
         .lead__tabs {
@@ -123,6 +174,35 @@
               @include summary-text-collapse;
             }
           }
+        }
+      }
+
+      .aiAnalysis-title {
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+        height: 24px;
+        margin-top: 30px;
+
+        em {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          border-radius: 4px;
+          background: $seohak-color-accent;
+          color: #fff;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 700;
+        }
+
+        strong {
+          color: $seohak-color-text-black;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
         }
       }
 
@@ -170,12 +250,18 @@
         padding-bottom: 20px;
       }
       .themeRank {
-        margin-top: 30px;
+        margin-top: 15px;
 
         // 테마순위/메가트렌드 - fundFlow__tabs 등과 동일한 알약형 버튼
         .rank__tabs {
           @include pill-tab-buttons;
           margin-bottom: 15px;
+
+          button {
+            width: 112px;
+            height: 40px;
+            font-size: 16px;
+          }
         }
 
         .rank__tab-content {
@@ -187,7 +273,7 @@
             }
 
             .seohak__table-more {
-              display: flex;
+              display: none;
               align-items: center;
               justify-content: center;
               width: 100%;
@@ -317,6 +403,10 @@
         }
       }
 
+      .themeSearch-title {
+        margin-top: 30px;
+      }
+
       // 유의사항 - 다른 페이지들과 동일
       .common__importantNote {
         margin: 10px 17px 0;
@@ -345,16 +435,20 @@
 
     // 테마 선택 바텀시트 - Bootstrap offcanvas-bottom을 사용합니다.
     .themeSelectSheet {
-      --bs-offcanvas-height: auto;
-      max-height: calc(100vh - 260px);
-      height: auto !important;
+      --bs-offcanvas-height: 602px;
+      width: 100%;
+      height: 602px !important;
+      max-height: calc(100vh - 80px);
       border: 0;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
+      overflow: hidden;
 
       .offcanvas-header {
         position: relative;
-        padding: 20px 20px 0;
+        flex-shrink: 0;
+        min-height: 61px;
+        padding: 36px 20px 0;
         justify-content: flex-start;
 
         .offcanvas-title {
@@ -378,56 +472,60 @@
       .offcanvas-body {
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding: 24px 0 0;
+        overflow: hidden;
 
         .themeOption-list {
           display: flex;
           flex-direction: column;
-          max-height: 55vh;
+          flex-shrink: 0;
+          gap: 1px 0;
+          height: 343px;
+          max-height: 343px;
           overflow-y: auto;
-          padding-top: 8px;
+          padding: 0;
 
           .themeOption {
             display: flex;
             align-items: center;
-            gap: 0 16px;
+            flex-shrink: 0;
+            gap: 0 12px;
             width: 100%;
+            height: 48px;
             padding: 12px 20px;
             border: 0;
             background: none;
             text-align: left;
 
             &.selected {
-              background: #f8f9fb;
-
               .radio {
-                border-color: $seohak-color-accent;
-
-                &::after {
-                  transform: translate(-50%, -50%) scale(1);
-                }
+                background: $seohak-color-accent;
               }
+            }
+
+            &.is-focused {
+              background: #f8f9fb;
             }
 
             .radio {
               position: relative;
               flex-shrink: 0;
-              width: 16px;
-              height: 16px;
+              width: 20px;
+              height: 20px;
               border-radius: 50%;
-              border: 1px solid #767676;
+              border: 0;
+              background: #c9d3e2;
 
               &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background: $seohak-color-accent;
-                transform: translate(-50%, -50%) scale(0);
-                transition: transform 0.15s ease;
+                width: 7px;
+                height: 4px;
+                border-left: 1.5px solid #fff;
+                border-bottom: 1.5px solid #fff;
+                transform: translate(-50%, -65%) rotate(-45deg);
               }
             }
 
@@ -443,17 +541,67 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 4px 0;
+          flex: 1 0 auto;
+          gap: 8px 0;
           padding: 6px 20px 16px;
 
-          .counter {
-            font-size: 14px;
-            color: $seohak-color-text-muted;
-            line-height: 21px;
+          .selectionControls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 8px;
+            width: 100%;
 
-            .count {
+            .counter {
+              margin: 0;
+              font-size: 14px;
+              color: $seohak-color-text-muted;
+              line-height: 21px;
+
+              .count {
+                font-weight: 700;
+                color: $seohak-color-accent;
+              }
+            }
+
+            .reset-selection {
+              height: 24px;
+              padding: 1px 8px;
+              border: 1px solid #c9d3e2;
+              border-radius: 4px;
+              background: #fff;
+              color: $seohak-color-text-secondary;
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+
+          .selectionSummary {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 75px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #f4f8ff;
+
+            strong,
+            p {
+              margin: 0;
+              font-size: 14px;
+              line-height: 21px;
+            }
+
+            strong {
+              color: $seohak-color-text;
               font-weight: 700;
-              color: $seohak-color-accent;
+            }
+
+            p {
+              min-height: 42px;
+              color: #70769d;
+              font-weight: 400;
             }
           }
 
@@ -466,11 +614,20 @@
             color: #fff;
             font-size: 16px;
             font-weight: 700;
+
+            &:disabled {
+              background: #a4affa;
+              opacity: 1;
+            }
           }
         }
       }
     }
   }
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.2;
 }
 
 // ────────────────────────────────────────────────────────────

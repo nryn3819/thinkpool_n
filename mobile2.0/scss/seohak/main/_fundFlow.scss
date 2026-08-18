@@ -1,5 +1,10 @@
 .fundFlow__tabs {
   @include pill-tab-buttons;
+  padding-top: 15px;
+}
+
+.prepare__box {
+  margin-top: 20px;
 }
 
 .fundFlow__tab-content {
