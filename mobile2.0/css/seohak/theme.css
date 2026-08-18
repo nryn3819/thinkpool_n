@@ -724,13 +724,13 @@
   font-weight: 700;
 }
 #seohak.seohak-map .mainContent .themeRank .rank__filter {
-  padding: 15px 0;
+  padding: 5px 0 15px;
 }
 #seohak.seohak-map .mainContent .themeRank .megaTrend__list {
   display: flex;
   flex-direction: column;
   gap: 12px 0;
-  padding-top: 15px;
+  padding-top: 5px;
 }
 #seohak.seohak-map .mainContent .themeRank .megaTrend__list .megaTrend {
   display: flex;

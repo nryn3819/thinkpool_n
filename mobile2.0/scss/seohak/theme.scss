@@ -292,7 +292,7 @@
         // 상승 TOP10/하락 TOP10/전체 - analyze__tabs와 동일
         .rank__filter {
           @include accent-pill-tabs;
-          padding: 15px 0;
+          padding: 5px 0 15px;
         }
 
         // 5대 메가트렌드 목록 - question(행)을 누르면 answer(테마 칩 그리드)가 펼쳐지는 아코디언
@@ -300,7 +300,7 @@
           display: flex;
           flex-direction: column;
           gap: 12px 0;
-          padding-top: 15px;
+          padding-top: 5px;
 
           .megaTrend {
             display: flex;
