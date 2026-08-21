@@ -585,6 +585,36 @@
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content {
   padding-top: 20px;
 }
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table {
+  table-layout: fixed;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td {
+  height: 61px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td.col-name {
+  min-width: 0;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td.col-name .ticker,
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td.col-name .name {
+  display: block;
+  line-height: 21px;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td.col-name .ticker {
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+}
+#seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .contribution__tab-content .seohak__main-table tbody tr td.col-name .name {
+  width: 100%;
+  max-width: 10em;
+  overflow: hidden;
+  color: #999;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 #seohak.seohak-main .mainContent .main__tab-content #indexStatus .section__tab-content .section__tab-track #contribution .prepare__box {
   margin-top: 20px;
 }

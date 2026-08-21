@@ -4,6 +4,42 @@
 }
 .contribution__tab-content {
   padding-top: 20px;
+
+  .seohak__main-table {
+    table-layout: fixed;
+
+    tbody tr td {
+      height: 61px;
+
+      &.col-name {
+        min-width: 0;
+
+        .ticker,
+        .name {
+          display: block;
+          line-height: 21px;
+        }
+
+        .ticker {
+          color: $seohak-color-text;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .name {
+          width: 100%;
+          max-width: 10em;
+          overflow: hidden;
+          color: $seohak-color-text-muted;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 19px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }
 
 .prepare__box {
