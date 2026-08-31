@@ -137,7 +137,6 @@
 
             span{
                 display:block;
-                height:24px;
                 line-height:24px;
                 font-size:18px;
                 font-weight: 400;
@@ -146,16 +145,22 @@
                     content: '-';
                     padding-right:2px;
                 }
+                &.no-before{
+                    content: none;
+                }
             }
 
             &01{
                 background:url(https://img.thinkpool.com/www/img/sub/introduce/itd01.png) no-repeat 650px 75px;
+                background-position-y: center;
             }
             &02{
                 background:#FAFAFC url(https://img.thinkpool.com/www/img/sub/introduce/itd02.png) no-repeat 70px 75px;
+                background-position-y: center;
             }
             &03{
                 background:url(https://img.thinkpool.com/www/img/sub/introduce/itd03.png) no-repeat 650px 75px;
+                background-position-y: center;
             }
 
         }
@@ -196,6 +201,16 @@
             padding:10px 0 0 15px;
         }
     }
+}
+
+.usr-notice{
+    width: 100%;
+    height: 24px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+    text-align: center;
 }
 
 .dwn_tit{
