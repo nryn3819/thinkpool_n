@@ -152,3 +152,20 @@
         }
     }
 }
+
+// 업데이트 일시 + 시세 기준 안내 (시장특징주 하위 탭)
+.main-items-tab .update-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 24px;
+    margin: -32px 0 8px;
+
+    &__date {
+        padding: 0 5px 0 10px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 12px;
+        color: #999;
+    }
+}

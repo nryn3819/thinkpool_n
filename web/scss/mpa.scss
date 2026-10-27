@@ -166,3 +166,26 @@
         }
     }
 }
+
+// 업데이트 일시 + 시세 기준 안내 (탭 상단 우측, 툴팁 컴포넌트: main.scss .issue-help)
+.mpa .update-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 24px;
+    width: max-content;     // 우측 내용 폭만 차지 (위 탭 클릭 가림 방지)
+    margin: -20px 0 8px auto; // 상단 탭과 20px (tab-content mt-40 기준)
+
+    &__date {
+        padding: 0 5px 0 10px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 12px;
+        color: #999;
+    }
+
+    // 표와의 간격 8px (Figma 기준) - 바로 다음 table_w의 mt-20 무효화
+    & + .table_w {
+        margin-top: 0 !important;
+    }
+}

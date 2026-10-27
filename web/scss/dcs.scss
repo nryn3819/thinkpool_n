@@ -15,6 +15,13 @@
             position:absolute;
             top:0;
             right:0;
+            display:flex;           // 업데이트 일시 + ? 버튼
+            align-items:center;
+
+            // 시세 기준 안내 (컴포넌트: main.scss .issue-help)
+            .issue-help{
+                margin-left:5px;
+            }
 
             span{
                 font: {

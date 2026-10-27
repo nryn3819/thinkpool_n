@@ -184,6 +184,36 @@
     display: block;
     width: 100%;
 
+    // 탭 우측 시세 기준 안내 (컴포넌트: main.scss .issue-help)
+    > .issue-help {
+        position: absolute;
+        top: 15px;      // 탭 높이(54px) 세로 중앙
+        right: 18px;
+
+        // 툴팁 박스 우측을 탭 라인 끝에 맞춤 (아이콘 inset 18px 만큼 이동, 꼬리는 아이콘 중앙)
+        .issue-help__tip {
+            right: -18px;
+
+            &::before {
+                right: 24px;
+            }
+        }
+
+        // 게시판 버튼용 공통 규칙(.item_board_nav button / #cwrap .item_board_nav button) 무효화
+        .issue-help__btn,
+        .issue-help__btn:hover,
+        #cwrap & .issue-help__btn,
+        #cwrap & .issue-help__btn:hover {
+            position: static;
+            width: 24px;
+            height: 24px;
+            line-height: normal;
+            padding: 0;
+            border: 0;
+            background: none;
+        }
+    }
+
     .nav {
         border-bottom: 1px solid #d6d6d6;
 

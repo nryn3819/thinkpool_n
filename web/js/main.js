@@ -451,3 +451,11 @@ $(function () {
     }
   });
 });
+
+// 시세 기준 안내 툴팁 (클릭 토글)
+// - 위 $(function) 내부 에러와 무관하게 동작하도록 document 위임으로 바로 바인딩
+$(document).on("click", ".issue-help__btn", function () {
+  var $help = $(this).closest(".issue-help");
+  var isOpen = $help.toggleClass("is-open").hasClass("is-open");
+  $(this).attr("aria-expanded", isOpen ? "true" : "false");
+});

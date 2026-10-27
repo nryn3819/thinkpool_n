@@ -26,12 +26,19 @@
             position:absolute;
             top:0;
             right:0;
+            display:flex;           // 날짜 시간 기준 + ? 버튼
+            align-items:center;
 
             span{
                 display:block;
                 line-height:26px;
                 font-size:13px;
                 color:#999;
+            }
+
+            // 시세 기준 안내 (컴포넌트: main.scss .issue-help)
+            .issue-help{
+                margin-left:5px;
             }
         }
     }
@@ -45,12 +52,28 @@
             position:absolute;
             top:0;
             right:0;
+            display:flex;           // 날짜 시간 기준 + ? 버튼
+            align-items:center;
 
             span{
                 font-size:13px;
                 color:#999;
             }
+
+            // 시세 기준 안내 (컴포넌트: main.scss .issue-help)
+            .issue-help{
+                margin-left:5px;
+            }
         }
+    }
+}
+
+// themebox는 overflow:hidden 이므로 우측정렬 툴팁을 아이콘 끝에 맞춤 (잘림 방지)
+.themebox .issue-help--right .issue-help__tip{
+    right:0;
+
+    &::before{
+        right:6px;
     }
 }
 
