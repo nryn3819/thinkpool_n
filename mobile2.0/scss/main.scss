@@ -182,3 +182,36 @@
 @import './main/itemCdn.scss';
 @import './main/setting.scss';
 @import './main/expert.scss';
+
+/* AI분석 메인의 가로 스크롤: 가까운 항목 시작점에 스냅합니다. */
+#wrap:has(.main-issue) .allNav > .globalNavigation {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 18px;
+}
+#wrap:has(.main-issue) .allNav > .globalNavigation > a {
+  scroll-snap-align: start;
+}
+#wrap:has(.main-issue) #myItem {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+#wrap:has(.main-issue) #myItem .myItemList > .myItemBox {
+  scroll-snap-align: start;
+}
+#wrap:has(.main-issue) #container .nav.nav-round {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+#wrap:has(.main-issue) #container .nav.nav-round > .nav-item {
+  scroll-snap-align: start;
+}
+
+/* 가로 탭 스크롤: 탭 시작점을 좌측 여백에 맞춥니다. */
+.ch_tab,
+.ch_tab > .nav {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+.ch_tab > .nav > .nav-item {
+  scroll-snap-align: start;
+}

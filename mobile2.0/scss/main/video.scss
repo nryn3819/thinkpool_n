@@ -1,63 +1,79 @@
 @import '../variable.scss';
-//video
-.videoList{
-    padding-top:12px;
-
-    .card{
-        width:100%;
-        border:0;
-        border-bottom:1px solid #e2e2e2;
-        padding:14px 0;
-
-        &:last-child{
-            border-bottom:0;
-        }
-
-        &-video{
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            .thumb{
-                position: relative;
-                display:block;
-                width:90px;
-                min-height:61px;
-                background:#f8f8f8;
-                border-radius: 5px;
-
-                &>img{
-                    height:61px;
-                }
-
-                .play{
-                    position: absolute;
-                    top:50%;
-                    left:50%;
-                    width:27px;
-                    margin:-15px 0 0 -10px;
-                    z-index:91;
-                }
-            }
-            .txt{
-                display:flex;
-                align-content: center;
-                flex-wrap: wrap;
-                width:calc(100% - 105px);
-                
-                .cont{
-                    width:100%;
-                    line-height:18px;
-                    font-size:16px;
-                    color:#000;
-                }
-                .info{
-                    width:100%;
-                    line-height:15px;
-                    font-size:13px;
-                    color:#999;
-                    margin-top:5px;
-                }
-            }
-        }
-    }
+// video
+.videoList {
+  padding-top: 12px;
+}
+.videoList .card {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 14px 0;
+}
+.videoList .card:last-child {
+  border-bottom: 0;
+}
+.videoList .card-video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+.videoList .card-video .thumb {
+  position: relative;
+  display: block;
+  flex: 0 0 90px;
+  width: 90px;
+  height: 61px;
+  min-height: 61px;
+  max-height: 61px;
+  overflow: hidden;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+.videoList .card-video .thumb > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.videoList .card-video .thumb .play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  z-index: 91;
+}
+.videoList .card-video .thumb .play > img {
+  display: block;
+  flex: 0 0 27px;
+  width: 27px;
+  height: auto;
+  /* 삼각형의 시각적 중심과 이미지 캔버스 중심 차이를 보정합니다. */
+  transform: translateX(3px);
+}
+.videoList .card-video .txt {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+}
+.videoList .card-video .txt .cont {
+  width: 100%;
+  line-height: 18px;
+  font-size: 16px;
+  color: #000;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.videoList .card-video .txt .info {
+  width: 100%;
+  line-height: 15px;
+  font-size: 13px;
+  color: #999;
 }

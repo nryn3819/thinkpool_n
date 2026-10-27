@@ -194,6 +194,49 @@
   color: #5368ff;
   font-weight: bold;
 }
+.issue-chart .chartTab.chartTab-with-time {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 9.5px 10px;
+}
+.issue-chart .chartTab.chartTab-with-time > button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 106px;
+  width: 106px;
+  min-width: 106px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #cfd3d9;
+  border-radius: 4px;
+  background: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999;
+  white-space: nowrap;
+}
+.issue-chart .chartTab.chartTab-with-time > button.active {
+  border-color: #5368ff;
+  color: #5368ff;
+  font-weight: 700;
+}
+.issue-chart .chartTab.chartTab-with-time .chart-time {
+  flex: 1 1 auto;
+  width: auto;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999;
+  text-align: left;
+  white-space: nowrap;
+}
+
 .issue-chart .chart_guide_txt {
   display: flex;
   flex-direction: column;
@@ -606,4 +649,36 @@
 .cnn-item section .marketList .list .right {
   width: 20px;
   margin-right: 10px;
+}
+
+/* 메인 차트 툴팁을 우측 여백 중간까지 확장하고 꼬리는 아이콘 아래에 유지합니다. */
+.main-issue .chartArea .issue-help--right .issue-help__tip {
+  right: -14px;
+}
+.main-issue .chartArea .issue-help--right .issue-help__tip::before {
+  right: 18px;
+}
+
+/* 최근이슈: Figma 923:5364의 24px 물음표 및 툴팁 위치 */
+.recent-issues {
+  position: relative;
+}
+.recent-issues > .issue-help {
+  position: absolute;
+  top: 76px;
+  right: 17px;
+}
+.recent-issues .issueList {
+  padding-top: 84px;
+}
+.recent-issues .issue-help--right .issue-help__tip {
+  right: -3px;
+  width: 291px;
+  max-width: calc(100vw - 28px);
+}
+.recent-issues .issue-help--right .issue-help__tip::before {
+  right: 9px;
+}
+.recent-issues .issue-help__tip p {
+  white-space: normal;
 }

@@ -1,0 +1,127 @@
+/* [툴팁 공통 적용 영역] .issue-help 및 차트 시간 기준 배치 (이 부분 작업하시면 됩니다.) */
+// 시세 기준 안내 (! 버튼 + 툴팁) 공통 컴포넌트
+// - 클릭 토글: js/issue-help.js
+// - 기본: 툴팁 가운데 정렬 / .issue-help--right: 툴팁 오른쪽 정렬
+.issue-help {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 10;
+
+  &__btn {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    line-height: 0;
+    cursor: pointer;
+
+    svg {
+      display: block;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #447aec;
+      outline-offset: 2px;
+      border-radius: 50%;
+    }
+  }
+
+  &__tip {
+    position: absolute;
+    top: calc(100% + 12px); // 아이콘 아래 12px
+    left: 50%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #323335;
+    filter: drop-shadow(0 8px 11px rgba(20, 20, 22, 0.18));
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    pointer-events: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      border-radius: 2px;
+      background: #323335;
+      transform: rotate(45deg);
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 21.45px;
+      letter-spacing: -0.325px;
+      color: #fff;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+
+  &.is-open &__tip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // 툴팁 오른쪽 정렬 - 툴팁 우측이 아이콘보다 6px 바깥, 꼬리는 아이콘(20px) 중앙 (Figma 기준)
+  &--right &__tip {
+    left: auto;
+    right: -6px;
+    transform: none;
+
+    &::before {
+      left: auto;
+      right: 10px;
+      margin-left: 0;
+    }
+  }
+}
+
+
+/* 이슈 차트: 시간 기준과 시세 안내 (Figma 945:6508) */
+.issue-chart-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  width: 100%;
+  gap: 8px;
+}
+.issue-help--chart {
+  display: flex;
+  flex: 0 0 24px;
+  align-items: center;
+}
+.issue-help--chart .issue-help__tip {
+  box-sizing: border-box;
+  width: 291px;
+  right: -3px;
+}
+
+.issue-chart .issue-help--chart .issue-help__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 0;
+}

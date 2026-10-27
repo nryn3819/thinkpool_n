@@ -177,21 +177,23 @@
   padding-left: 10px;
 }
 .cdnbox > div .info {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   width: 140px;
   text-align: right;
 }
 .cdnbox > div .info > em {
-  display: block;
-  height: 16px;
-  line-height: 16px;
+  display: flex;
+  align-items: center;
   font-size: 12px;
   color: #999;
 }
 .cdnbox > div .info span {
-  display: block;
-  height: 24px;
-  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-size: 14px;
   color: #000;
 }
@@ -306,6 +308,13 @@
   line-height: 18px;
 }
 .s_briefing .txtSwiper .swiper-slide .txt {
+  box-sizing: border-box;
+  width: auto;
+  min-width: 0;
+  padding: 0 17px;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
   font-size: 16px;
   font-weight: 700;
   color: #000;
@@ -1070,4 +1079,29 @@
   font-size: 16px;
   color: #999;
   padding-bottom: 55px;
+}
+
+/* 라씨 메인: 500px 초과에서는 기존 위·아래 정보를 순서대로 한 줄에 배치합니다. */
+@media (min-width: 501px) {
+  .cdnbox > div .cdn {
+    flex: 0 0 43px;
+  }
+  .cdnbox > div .name {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cdnbox > div .info {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    white-space: nowrap;
+  }
 }

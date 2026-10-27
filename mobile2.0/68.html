@@ -23,8 +23,9 @@
             <!-- header - header.scss -->
             <header id="header" class="clearfix">
                 <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
+                <div id="top" class="float-start header-row">
                     
+                  <div class="header-side header-side--left">
                     <div class="logo">
                         <h3 class="visually-hidden">로고</h3>
                         <a href="main.html" class="float-start h-logo h-show"><img src="./img/logo.png" alt="씽크풀로고" class="img-fluid"></a>
@@ -32,6 +33,7 @@
                             <button type="button" onclick="history.back()">이전페이지</button>
                         </div>
                     </div>
+                  </div>
                     <!-- //logo -->
                 
                     <div class="headerTitle text-truncate subTitle">
@@ -39,6 +41,7 @@
                     </div>
                     <!-- //종목명 -->
 
+                  <div class="header-side header-side--right">
                     <div class="subSchBtn">
                         <button type="button" id="opensch" class="schButton">종목검색</button>
 
@@ -203,9 +206,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
 
-                                    <div class="amn">
+<div class="amn">
                                         <button type="button" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="">
                                             AI추천
                                         </button>
@@ -220,25 +222,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
 
-                                    <div class="amn">
-                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="">
-                                            라씨신호
-                                        </button>
-                                        <div class="collapse" id="amn03">
-                                            <ul>
-                                                <li><a href="#">라씨매매신호홈</a></li>
-                                                <li><a href="#">서비스소개</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                                <li><a href="#">나의신호</a></li>
-                                                <li><a href="#">(앱다운로드)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
-                                    <div class="amn">
+<div class="amn">
                                         <button type="button" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="">
                                             AI속보
                                         </button>
@@ -254,9 +239,45 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
 
-                                    <div class="amn">
+<div class="amn">
+                                        <button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="">
+                                            라씨신호
+                                        </button>
+                                        <div class="collapse" id="amn03">
+                                            <ul>
+                                                <li><a href="#">라씨매매신호홈</a></li>
+                                                <li><a href="#">서비스소개</a></li>
+                                                <li><a href="#">이용안내</a></li>
+                                                <li><a href="#">나의신호</a></li>
+                                                <li><a href="#">(앱다운로드)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+<div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush08">
+                                            <button type="button" class="accordion-button collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#amn08" aria-expanded="false"
+                                                aria-controls="amn08">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                    <path d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z" fill="#34D399"></path>
+                                                    <path d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z" fill="black"></path>
+                                                </svg>
+                                                엑스퍼트
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn08"
+                                            aria-labelledby="flush-headingOne">
+                                            <ul>
+                                                <li><a href="#">종목추천</a></li>
+                                                <li><a href="#">전략과 분석</a></li>
+                                                <li><a href="#">나의 엑스퍼트</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+<div class="amn">
                                         <button type="button" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="">
                                             토론실
                                         </button>
@@ -272,9 +293,20 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
 
-                                    <div class="amn">
+<div class="amn accordion-item">
+  <div class="accordion-header" id="flush09">
+    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn09" aria-expanded="false" aria-controls="amn09">AI미국</button>
+  </div>
+  <div class="accordion-collapse collapse" id="amn09" aria-labelledby="flush09" data-bs-parent="#accoridon-flush-menu">
+    <ul>
+      <li><a href="./seohak/index.html">서학 100 지수</a></li>
+      <li><a href="./seohak/sixtyTheme.html">미국 60대 테마</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="amn">
                                         <button type="button" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="">
                                             더보기
                                         </button>
@@ -303,6 +335,7 @@
                             </div>
                         </aside>
                     </div>
+                  </div>
                     <!-- //sideMenu -->
                 </div>
                 <!-- //top -->

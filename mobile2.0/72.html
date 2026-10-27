@@ -22,11 +22,13 @@
             <!-- header - header.scss -->
             <header id="header" class="clearfix item">
                 <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
+                <div id="top" class="float-start header-row">
                     
+                  <div class="header-side header-side--left">
                     <div class="pageBack">
                         <button type="button" onclick="history.back()">이전페이지</button>
                     </div>
+                  </div>
                     <!-- //이전페이지 -->
                 
                     <div class="headerTitle text-truncate subTitle">
@@ -34,6 +36,7 @@
                     </div>
                     <!-- //종목명 -->
 
+                  <div class="header-side header-side--right">
                     <div class="subSchBtn">
                         <button type="button" class="schButton">종목검색</button>
                     </div>
@@ -64,6 +67,7 @@
                               </div>
                         </aside>
                     </div>
+                  </div>
                     <!-- //sideMenu -->
                 </div>
                 <!-- //top -->
@@ -91,7 +95,7 @@
                                 </div>
                             </div>
                             <!-- //item -->
-                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                            <div class="myItemBox item shadow-sm" onclick="location.href='AI분석_시세분석.html'">
                                 <span class="name text-truncate">KOSPI</span>
                                 <!-- //종목명 -->
                                 <span class="price">2,920.2</span>
@@ -107,7 +111,7 @@
                             </div>
                             <!-- //item -->
                             
-                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                            <div class="myItemBox item shadow-sm" onclick="location.href='AI분석_시세분석.html'">
                                 <span class="name text-truncate">KOSDAQ</span>
                                 <!-- //종목명 -->
                                 <span class="price">920.2</span>

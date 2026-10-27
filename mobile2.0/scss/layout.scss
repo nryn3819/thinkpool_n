@@ -1,5 +1,12 @@
-*{
-    font-family: 'Noto Sans KR', 'sans-serif' !important;
+html body {
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
 }
 html,body{
     background:#f6f6f7 !important;

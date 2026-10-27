@@ -186,8 +186,9 @@
 
             .txtBox{
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
+                gap: 24px;
 
                 .txt{
                     font-size: 16px;
@@ -269,4 +270,113 @@
             }
         }
     }
+}
+/* 라씨매매신호 메인: 제목·아이콘 중앙 정렬 및 두 줄 안내 */
+.s_signal .s_signalTitle--help {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  line-height: 20px;
+}
+.s_signalTitle--help > span {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+.s_signalTitle--help > .issue-help {
+  position: static;
+  display: flex;
+  align-items: center;
+  flex: 0 0 20px;
+  height: 20px;
+}
+.s_signalTitle--help .issue-help__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.s_signalTitle--help .issue-help--right .issue-help__tip {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 34px);
+}
+.s_signalTitle--help .issue-help__tip p {
+  white-space: nowrap;
+}
+.s_signalTitle--help .issue-help__tip::before {
+  display: none;
+}
+.s_signalTitle--help .issue-help__btn::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #323335;
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+.s_signalTitle--help .issue-help.is-open .issue-help__btn::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* AI분석·라씨 메인: 매수·매도 원 크기(120px)와 간격(60px)을 유지합니다. */
+.s_signal .s_signalTitle--help + .result,
+#wrap:has(.main-issue) .s_signal .result {
+  justify-content: center;
+  gap: 60px;
+}
+.s_signal .s_signalTitle--help + .result .s_result,
+#wrap:has(.main-issue) .s_signal .result .s_result {
+  flex: 0 0 120px;
+  margin: 0;
+}
+
+/* 라씨 메인: 380px 화면에서 좌우 17px을 뺀 txtBox 너비를 유지합니다. */
+.s_signal .s_signalTitle--help ~ .s_alarm .txtBox {
+  width: 100%;
+  max-width: 346px;
+  margin-inline: auto;
+}
+
+/* 매매신호 문장 전체를 하나의 flex 항목으로 중앙 정렬합니다. */
+.s_signal .s_alarm .sigTxtSwiper .swiper-wrapper {
+  align-items: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > em,
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > span,
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > strong {
+  float: none;
+  margin: 0;
 }

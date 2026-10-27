@@ -11,45 +11,67 @@
   border-bottom: 0;
 }
 .videoList .card-video {
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
+  gap: 15px;
 }
 .videoList .card-video .thumb {
   position: relative;
   display: block;
+  flex: 0 0 90px;
   width: 90px;
+  height: 61px;
   min-height: 61px;
+  max-height: 61px;
+  overflow: hidden;
   background: #f8f8f8;
   border-radius: 5px;
 }
 .videoList .card-video .thumb > img {
-  height: 61px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .videoList .card-video .thumb .play {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 27px;
-  margin: -15px 0 0 -10px;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   z-index: 91;
+}
+.videoList .card-video .thumb .play > img {
+  display: block;
+  flex: 0 0 27px;
+  width: 27px;
+  height: auto;
+  /* 삼각형의 시각적 중심과 이미지 캔버스 중심 차이를 보정합니다. */
+  transform: translateX(3px);
 }
 .videoList .card-video .txt {
   display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  width: calc(100% - 105px);
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
 }
 .videoList .card-video .txt .cont {
   width: 100%;
   line-height: 18px;
   font-size: 16px;
   color: #000;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .videoList .card-video .txt .info {
   width: 100%;
   line-height: 15px;
   font-size: 13px;
   color: #999;
-  margin-top: 5px;
 }

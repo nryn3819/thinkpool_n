@@ -24,7 +24,8 @@
         <!-- header - header.scss -->
         <header id="header" class="item clearfix">
           <h2 class="visually-hidden">상단영역</h2>
-          <div id="top" class="float-start">
+          <div id="top" class="float-start header-row">
+          <div class="header-side header-side--left">
             <div class="logo">
               <h3 class="visually-hidden">로고</h3>
               <a href="javascript:;" class="float-start h-logo h-show">
@@ -32,12 +33,14 @@
               </a>
               <!---->
             </div>
+          </div>
             <!---->
             <div class="headerTitle centerHeader text-truncate">
               <strong>AI속보</strong>
               <!---->
             </div>
             <!---->
+          <div class="header-side header-side--right">
             <div class="subSchBtn">
               <button type="button" id="opensch" class="schButton">종목검색</button>
               <div class="searcharea undefined">
@@ -124,7 +127,8 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="amn accordion-item">
+
+<div class="amn accordion-item">
                       <div id="flush02" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02" class="accordion-button collapsed">AI추천</button></div>
                       <div id="amn02" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
                         <ul>
@@ -137,18 +141,8 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="amn accordion-item">
-                      <div id="flush03" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03" class="accordion-button collapsed">라씨신호</button></div>
-                      <div id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
-                        <ul>
-                          <li data-bs-dismiss="offcanvas"><a href="/signal" class="">라씨매매신호홈</a></li>
-                          <li data-bs-dismiss="offcanvas"><a href="/signal/intro" class="">서비스소개</a></li>
-                          <li data-bs-dismiss="offcanvas"><a href="/signal/guide" class="">이용안내</a></li>
-                          <li data-bs-dismiss="offcanvas"><a href="/signal/my" class="">나의신호</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="amn accordion-item">
+
+<div class="amn accordion-item">
                       <div id="flush04" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04" class="accordion-button collapsed">AI속보</button></div>
                       <div id="amn04" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse" style="">
                         <ul>
@@ -162,7 +156,42 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="amn accordion-item">
+
+<div class="amn accordion-item">
+                      <div id="flush03" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03" class="accordion-button collapsed">라씨신호</button></div>
+                      <div id="amn03" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
+                        <ul>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal" class="">라씨매매신호홈</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/intro" class="">서비스소개</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/guide" class="">이용안내</a></li>
+                          <li data-bs-dismiss="offcanvas"><a href="/signal/my" class="">나의신호</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+<div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush08">
+                                            <button type="button" class="accordion-button collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#amn08" aria-expanded="false"
+                                                aria-controls="amn08">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                    <path d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z" fill="#34D399"></path>
+                                                    <path d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z" fill="black"></path>
+                                                </svg>
+                                                엑스퍼트
+                                            </button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn08"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                                <li><a href="#">종목추천</a></li>
+                                                <li><a href="#">전략과 분석</a></li>
+                                                <li><a href="#">나의 엑스퍼트</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+<div class="amn accordion-item">
                       <div id="flush05" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05" class="accordion-button collapsed">토론실</button></div>
                       <div id="amn05" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
                         <ul>
@@ -175,7 +204,20 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="amn accordion-item">
+
+<div class="amn accordion-item">
+  <div class="accordion-header" id="flush09">
+    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn09" aria-expanded="false" aria-controls="amn09">AI미국</button>
+  </div>
+  <div class="accordion-collapse collapse" id="amn09" aria-labelledby="flush09" data-bs-parent="#accoridon-flush-menu">
+    <ul>
+      <li><a href="./seohak/index.html">서학 100 지수</a></li>
+      <li><a href="./seohak/sixtyTheme.html">미국 60대 테마</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="amn accordion-item">
                       <div id="flush06" class="accordion-header"><button type="button" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06" class="accordion-button collapsed">더보기</button></div>
                       <div id="amn06" aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu" class="accordion-collapse collapse">
                         <ul>
@@ -191,6 +233,7 @@
                 </div>
               </aside>
             </div>
+          </div>
             <!---->
             <!---->
             <!---->

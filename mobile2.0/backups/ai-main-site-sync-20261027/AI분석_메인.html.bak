@@ -16,6 +16,8 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script src="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 시세 기준 안내 툴팁 토글 -->
+    <script src="./js/issue-help.js" defer></script>
     <title>씽크풀</title>
 </head>
 
@@ -103,7 +105,7 @@
             <header id="header" class="clearfix">
                 <h2 class="visually-hidden">상단영역</h2>
                 <div id="top" class="float-start main-top">
-                    <div class="logo main-logo h-logo h-show"">
+                    <div class="logo main-logo h-logo h-show">
                         <h3 class=" visually-hidden">로고</h3>
                         <a href="#" class="f01">
                             <img src="./img/logo.png" alt="씽크풀로고" class="img-fluid w-32">
@@ -181,7 +183,7 @@
                     <div id="sideMenu">
                         <h3 class="visually-hidden">사이드메뉴열기</h3>
                         <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
-                            data-cate-id="amn02">
+                            data-cate-id="amn01">
                             <form name="sidemenu">
                                 <input type="checkbox" id="sdmnu" name="tgle" disabled>
                                 <label class="menu main-menu" for="sdmnu">
@@ -195,228 +197,141 @@
 
 
                         <!-- 2022.06.28 변경 -->
-                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
+                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-label="전체 메뉴">
                             <div class="offcanvas-header">
                                 <div class="offcanvas-title">
-                                    <div class="logo"><img src="./img/thinklogo.png" alt="logo" width="102"></div>
-                                    <div class="app">
-                                        <button><img src="./img/bulogo.png" alt="tp" width="18"> 앱다운로드</button>
-                                    </div>
+                                    <div class="logo"><a href="./AI분석_메인.html"><img src="./img/thinklogo.png" alt="씽크풀 홈" width="102"></a></div>
+                                    <div class="app"><button type="button">앱다운로드</button></div>
                                 </div>
                             </div>
                             <div class="offcanvas-body">
                                 <div class="loginmenu">
                                     <div class="before">
-                                        <button class="btn-custom-primary" style="width:120px">로그인</button>
-                                        <button class="btn-custom-default" style="width:120px">회원가입</button>
+                                        <button type="button" class="btn-custom-primary">로그인</button>
+                                        <button type="button" class="btn-custom-default">회원가입</button>
                                     </div>
-                                    <!-- // -->
-
-                                    <!-- <div class="after">
-                                        <div class="top">
-                                            <strong><em>에너지만땅</em>님</strong>
-                                            <button>로그아웃</button>
-                                        </div>
-                                        <div class="menu">
-                                            <button>MY종목</button>
-                                            <button>알림설정</button>
-                                            <button>나의활동</button>
-                                            <button>쪽지함 <span class="badge">4</span></button>
-                                        </div>
-                                    </div> -->
-                                    <!-- // -->
                                 </div>
-                                <!-- // -->
-
                                 <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush01">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false"
-                                                aria-controls="amn01">
-                                                AI분석
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">AI분석</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn01"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush01" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">AI분석홈</a></li>
-                                                <li><a href="#">시세분석</a></li>
-                                                <li><a href="#">이슈분석</a></li>
-                                                <li><a href="#">수급분석</a></li>
-                                                <li><a href="#">테마분석</a></li>
-                                                <li><a href="#">공시분석</a></li>
-                                                <li><a href="#">리포트분석</a></li>
+                                            <li><a href="./AI분석_메인.html">AI분석홈</a></li>
+                                            <li><a href="./AI분석_시세분석.html">시세분석</a></li>
+                                            <li><a href="./AI분석_이슈분석.html">이슈분석</a></li>
+                                            <li><a href="https://m.thinkpool.com/analysis/supply?div=1">수급분석</a></li>
+                                            <li><a href="https://m.thinkpool.com/analysis/theme">테마분석</a></li>
+                                            <li><a href="https://m.thinkpool.com/analysis/notice/main?depth1Code=1">공시분석</a></li>
+                                            <li><a href="https://m.thinkpool.com/analysis/report/main?depth1Code=1">리포트분석</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
-
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush02">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false"
-                                                aria-controls="amn02">
-                                                AI추천
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">AI추천</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn02"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush02" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">AI종목추천홈</a></li>
-                                                <li><a href="#">오늘의종목</a></li>
-                                                <li><a href="#">종목추천</a></li>
-                                                <li><a href="#">포트폴리오</a></li>
-                                                <li><a href="#">나의서비스</a></li>
-                                                <li><a href="#">이용안내</a></li>
+                                            <li><a href="https://m.thinkpool.com/advisor">AI종목추천홈</a></li>
+                                            <li><a href="https://m.thinkpool.com/advisor/todays">오늘의종목</a></li>
+                                            <li><a href="https://m.thinkpool.com/advisor/recomm/00000039">종목추천</a></li>
+                                            <li><a href="https://m.thinkpool.com/advisor/portfolio/00000050">포트폴리오</a></li>
+                                            <li><a href="https://m.thinkpool.com/advisor/guide">이용안내</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
-
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush04">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false"
-                                                aria-controls="amn04">
-                                                AI속보
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">AI속보</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn04"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush04" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">주요속보</a></li>
-                                                <li><a href="#">수급</a></li>
-                                                <li><a href="#">테마</a></li>
-                                                <li><a href="#">리포트</a></li>
-                                                <li><a href="#">실적</a></li>
-                                                <li><a href="#">공시</a></li>
-                                                <li><a href="#">태그전체보기</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/breakingNews">주요속보</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/supply">수급</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/theme">테마</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/report">리포트</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/record">실적</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/notice">공시</a></li>
+                                            <li><a href="https://m.thinkpool.com/news/tagAllView">태그전체보기</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
-
-                                    <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush05">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false"
-                                                aria-controls="amn05">
-                                                토론실
-                                            </button>
-                                        </div>
-                                        <div class="accordion-collapse collapse" id="amn05"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
-                                            <ul>
-                                                <li><a href="#">토론실홈</a></li>
-                                                <li><a href="#">증권가속보</a></li>
-                                                <li><a href="#">특징주포착</a></li>
-                                                <li><a href="#">주식종합토론</a></li>
-                                                <li><a href="#">유머방</a></li>
-                                                <li><a href="#">정치방</a></li>
-                                                <li><a href="#">나의활동</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush03">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false"
-                                                aria-controls="amn03">
-                                                <img width="17" src="https://img.thinkpool.com/www/mobile/img/rassi-icon.png" alt="라씨아이콘" style="margin-right: 3px; margin-top: 2px;">
-                                                라씨매매신호
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03"><img src="./img/rassi-icon.png" alt="" width="17"> 라씨신호</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn03"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush03" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">라씨매매신호홈</a></li>
-                                                <li><a href="#">서비스소개</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                                <li><a href="#">나의신호</a></li>
-                                                <li><a href="#">(앱다운로드)</a></li>
+                                            <li><a href="./라씨매매신호_메인.html">라씨매매신호홈</a></li>
+                                            <li><a href="https://m.thinkpool.com/signal/intro">서비스소개</a></li>
+                                            <li><a href="https://m.thinkpool.com/signal/guide">이용안내</a></li>
+                                            <li><a href="https://m.thinkpool.com/signal/my">나의신호</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
-
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush08">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn08" aria-expanded="false"
-                                                aria-controls="amn08">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                                    <path d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z" fill="#34D399"></path>
-                                                    <path d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z" fill="black"></path>
-                                                </svg>
-                                                엑스퍼트
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn08" aria-expanded="false" aria-controls="amn08"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                                            <path d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z" fill="#34D399"></path>
+                                                                            <path d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z" fill="black"></path>
+                                                                        </svg> 엑스퍼트</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn08"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn08" aria-labelledby="flush08" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">종목추천</a></li>
-                                                <li><a href="#">전략과 분석</a></li>
-                                                <li><a href="#">나의 엑스퍼트</a></li>
+                                            <li><a role="button" tabindex="0">종목추천</a></li>
+                                            <li><a role="button" tabindex="0">전략과 분석</a></li>
+                                            <li><a role="button" tabindex="0">나의 엑스퍼트</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
-
-                                    <!-- <div class="amn accordion-item">
-                                        <div class="accordion-header" id="flush07">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn07" aria-expanded="false"
-                                                aria-controls="amn07">
-                                                미국주식
-                                            </button>
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush05">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">토론실</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn07"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush05" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">홈</a></li>
-                                                <li><a href="#">AI미국추천</a></li>
-                                                <li><a href="#">AI종목속보</a></li>
-                                                <li><a href="#">AI미국이슈</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                                <li><a href="#">MY</a></li>
+                                            <li><a href="https://m.thinkpool.com/social">토론실홈</a></li>
+                                            <li><a href="https://m.thinkpool.com/breakingNews/list">증권가속보</a></li>
+                                            <li><a href="https://m.thinkpool.com/screening/list">특징주포착</a></li>
+                                            <li><a href="https://m.thinkpool.com/compDiscuss/list">주식종합토론</a></li>
+                                            <li><a href="https://m.thinkpool.com/politics/list">정치방</a></li>
+                                            <li><a href="https://m.thinkpool.com/my">나의활동</a></li>
                                             </ul>
                                         </div>
-                                    </div> -->
-                                    <!-- // -->
-
+                                    </div>
+                                    <div class="amn accordion-item">
+                                        <div class="accordion-header" id="flush09">
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn09" aria-expanded="false" aria-controls="amn09">AI미국</button>
+                                        </div>
+                                        <div class="accordion-collapse collapse" id="amn09" aria-labelledby="flush09" data-bs-parent="#accoridon-flush-menu">
+                                            <ul>
+                                            <li><a href="https://m.thinkpool.com/seohak">서학 100 지수</a></li>
+                                            <li><a href="https://m.thinkpool.com/seohak/theme">미국 60대 테마</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <div class="amn accordion-item">
                                         <div class="accordion-header" id="flush06">
-                                            <button type="button" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false"
-                                                aria-controls="amn06">
-                                                더보기
-                                            </button>
+                                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">더보기</button>
                                         </div>
-                                        <div class="accordion-collapse collapse" id="amn06"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#accoridon-flush-menu">
+                                        <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush06" data-bs-parent="#accoridon-flush-menu">
                                             <ul>
-                                                <li><a href="#">공지사항 및 문의</a></li>
-                                                <li><a href="#">회원정보관리</a></li>
-                                                <li><a href="#">약관및정책</a></li>
+                                            <li><a href="https://m.thinkpool.com/customer">공지사항 및 문의</a></li>
+                                            <li><a href="https://m.thinkpool.com/customer/user">회원정보관리</a></li>
+                                            <li><a href="#">약관및정책</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- // -->
                                 </div>
-                                <!-- // -->
-
                                 <div class="sfmenu">
-                                    <button class="btn-custom-primary outline">블로그</button>
-                                    <button class="btn-custom-primary outline">유투브</button>
-                                    <button class="btn-custom-primary outline">AI매매 시그널</button>
+                                    <button type="button" class="btn-custom-primary outline">블로그</button>
+                                    <button type="button" class="btn-custom-primary outline">유튜브</button>
+                                    <button type="button" class="btn-custom-primary outline">라씨 매매비서</button>
                                 </div>
-                                <!-- // -->
-
-                                <div class="other rmt-25 text-center">
-                                    <button class="btn-custom-default">PC버전으로 보기</button>
+                                <div class="other text-center">
+                                    <button type="button" class="btn-custom-default">PC버전으로 보기</button>
                                 </div>
                             </div>
                         </aside>
@@ -495,7 +410,6 @@
                     <h3 class="visually-hidden">네비게이션</h3>
                     <a href="#" class="active">AI분석</a>
                     <a href="#">AI속보</a>
-                    <a href="#">토론실</a>
                     <a href="#">
                         <img width="17" src="https://img.thinkpool.com/www/mobile/img/rassi-icon.png" alt="라씨아이콘" style="margin-right: 3px; margin-top: 2px;">
                         라씨매매신호
@@ -511,6 +425,7 @@
                         </svg>
                         엑스퍼트
                     </a>
+                    <a href="#">토론실</a>
                 </menu>
                 <!-- //gloabal navi -->
             </div>
@@ -536,7 +451,7 @@
                                 </div>
                             </div>
                             <!-- //item -->
-                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                            <div class="myItemBox item shadow-sm" onclick="location.href='AI분석_시세분석.html'">
                                 <span class="name text-truncate">KOSPI</span>
                                 <!-- //종목명 -->
                                 <span class="price">2,920.2</span>
@@ -552,7 +467,7 @@
                             </div>
                             <!-- //item -->
 
-                            <div class="myItemBox item shadow-sm" onclick="location.href='시세분석.html'">
+                            <div class="myItemBox item shadow-sm" onclick="location.href='AI분석_시세분석.html'">
                                 <span class="name text-truncate">KOSDAQ</span>
                                 <!-- //종목명 -->
                                 <span class="price">920.2</span>
@@ -921,16 +836,37 @@
                         <!-- 202408 추가 -->
 
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane">
+                            <div class="tab-pane show active">
 
                                 <div class="chartArea">
                                     <img src="./img/demoBublle.png" alt="" class="img-fluid" data-bs-toggle="modal"
                                         data-bs-target="#issueModal">
+                                    <!-- 시세 기준 안내 툴팁 (차트 우측 상단) -->
+                                    <div class="issue-help issue-help--right">
+                                        <button type="button" class="issue-help__btn" aria-label="시세 기준 안내" aria-expanded="false" aria-controls="mIssueHelpTip">
+                                            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 7.83399C9.73478 7.83399 9.48043 7.72864 9.29289 7.5411C9.10536 7.35356 9 7.09921 9 6.83399C9 6.56878 9.10536 6.31442 9.29289 6.12689C9.48043 5.93935 9.73478 5.83399 10 5.83399C10.2652 5.83399 10.5196 5.93935 10.7071 6.12689C10.8946 6.31442 11 6.56878 11 6.83399C11 7.09921 10.8946 7.35356 10.7071 7.5411C10.5196 7.72864 10.2652 7.83399 10 7.83399ZM10 14.167C9.54 14.167 9.167 13.793 9.167 13.333L9.167 9.58299C9.167 9.36207 9.25476 9.15019 9.41098 8.99397C9.5672 8.83776 9.77908 8.74999 10 8.74999C10.2209 8.74999 10.4328 8.83776 10.589 8.99397C10.7452 9.15019 10.833 9.36207 10.833 9.58299L10.833 13.333C10.833 13.793 10.46 14.167 10 14.167Z" fill="#999999"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99903 18.333C8.35092 18.333 6.73982 17.8443 5.36947 16.9286C3.99911 16.013 2.93105 14.7116 2.30034 13.1889C1.66964 11.6663 1.50462 9.99077 1.82615 8.37432C2.14768 6.75788 2.94132 5.27308 4.10671 4.10769C5.2721 2.9423 6.7569 2.14866 8.37334 1.82712C9.98979 1.50559 11.6653 1.67061 13.1879 2.30132C14.7106 2.93202 16.012 4.00009 16.9277 5.37044C17.8433 6.7408 18.332 8.3519 18.332 10C18.332 12.2101 17.4541 14.3296 15.8914 15.8923C14.3286 17.4551 12.2091 18.333 9.99903 18.333ZM9.99903 16.667C10.8746 16.667 11.7415 16.4946 12.5504 16.1595C13.3593 15.8245 14.0942 15.3334 14.7133 14.7143C15.3324 14.0952 15.8235 13.3602 16.1585 12.5514C16.4936 11.7425 16.666 10.8755 16.666 10C16.666 9.12449 16.4936 8.25754 16.1585 7.44866C15.8235 6.63978 15.3324 5.90481 14.7133 5.28573C14.0942 4.66664 13.3593 4.17555 12.5504 3.8405C11.7415 3.50546 10.8746 3.33301 9.99903 3.33301C8.23083 3.33301 6.53506 4.03542 5.28475 5.28573C4.03445 6.53603 3.33203 8.23181 3.33203 10C3.33203 11.7682 4.03445 13.464 5.28475 14.7143C6.53506 15.9646 8.23083 16.667 9.99903 16.667Z" fill="#999999"/>
+                                            </svg>
+                                        </button>
+                                        <div class="issue-help__tip" id="mIssueHelpTip" role="tooltip">
+                                            <p>KRX 정규장과 애프터마켓 시장 시세를 반영합니다.<br>ETF/ETN은 정규장에만 반영돼요.</p>
+                                        </div>
+                                    </div>
+                                    <!-- //시세 기준 안내 툴팁 -->
                                 </div>
 
-                                <!-- 차트박스 아래 -->
+                                <!-- 차트박스 아래 : 시간 및 상태 표시 영역
+                                    · 정규장 (~16:00)          : MM.DD HH:mm                 예) 10.21 14:30
+                                    · 애프터마켓 (16:00~20:00) : MM.DD HH:mm 애프터마켓 기준   예) 10.21 19:43 애프터마켓 기준
+                                    · 장마감 (20:00 이후)      : MM.DD 장마감 (시간 표기 없이 날짜)   예) 10.21 장마감
+                                      (현행과 같이 애프터마켓 종료 시 장마감 문구 노출)
+                                -->
                                 <div class="refresh">
                                     <div>
+                                        <span>10.21 장마감</span>
+                                        <!-- <span>10.21 19:43 애프터마켓 기준</span> -->
+                                        <!-- <span>10.21 14:30</span> -->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                                             <path
@@ -940,14 +876,13 @@
                                                 d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z">
                                             </path>
                                         </svg>
-                                        <span>12/31 12:30</span>
                                     </div>
                                 </div>
                                 <!-- //차트박스 아래 -->
                             </div>
                             <!-- 이슈포착 차트 -->
 
-                            <div class="tab-pane show active">
+                            <div class="tab-pane">
                                 <!-- 미국이슈 차트영역 -->
 
                                 <div class="chartArea">
@@ -1035,7 +970,7 @@
 
                     <div class="shorcutBtn d-grid gap-2 rmt-20">
                         <button class="btn-outline-detail"
-                            onclick="location.href='최근이슈.html'">자세히보기&nbsp;&nbsp;〉</button>
+                            onclick="location.href='AI분석_이슈분석.html'">자세히보기&nbsp;&nbsp;〉</button>
                     </div>
                     <!-- //바로가기 -->
                 </section>
@@ -1108,8 +1043,10 @@
 
                                     <div class="issue-chart">
                                         <div class="modal-issue-tab">
-                                            <button class="active">이슈 검색 추이</button>
-                                            <button>이슈 수급 동향</button>
+                                            <button class="active">이슈 검색추이</button>
+                                            <button>이슈 수급동향</button>
+                                            <!-- 시간 기준 (정규장: 10.20 14:30 / 16~20시: 10.20 19:43 애프터마켓 기준 / 20시 이후: 10.20 장마감) -->
+                                            <span class="modal-issue-time">10.20 19:43 애프터마켓 기준</span>
                                         </div>
                                         <!-- // -->
 
@@ -2710,7 +2647,21 @@
                 <!-- //주말특징주 -->
 
                 <section class="section section-npd rmt-8">
-                    <h3 class="title">시장특징주</h3>
+                    <div class="market-featured-heading">
+                        <h3 class="title">시장특징주</h3>
+                        <div class="issue-help issue-help--right">
+                                        <button type="button" class="issue-help__btn" aria-label="시세 기준 안내" aria-expanded="false" aria-controls="marketIssueHelpTip">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+  <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#999999"/>
+  <path d="M12 6.00007C11.0717 6.00007 10.1815 6.36882 9.52513 7.02519C8.86875 7.68157 8.5 8.57181 8.5 9.50007C8.5 9.76528 8.60536 10.0196 8.79289 10.2072C8.98043 10.3947 9.23478 10.5001 9.5 10.5001C9.76522 10.5001 10.0196 10.3947 10.2071 10.2072C10.3946 10.0196 10.5 9.76528 10.5 9.50007C10.5 9.2034 10.588 8.91339 10.7528 8.66671C10.9176 8.42004 11.1519 8.22778 11.426 8.11425C11.7001 8.00072 12.0017 7.97101 12.2926 8.02889C12.5836 8.08677 12.8509 8.22963 13.0607 8.43941C13.2704 8.64919 13.4133 8.91646 13.4712 9.20743C13.5291 9.4984 13.4994 9.8 13.3858 10.0741C13.2723 10.3482 13.08 10.5824 12.8334 10.7473C12.5867 10.9121 12.2967 11.0001 12 11.0001C11.7348 11.0001 11.4804 11.1054 11.2929 11.293C11.1054 11.4805 11 11.7349 11 12.0001V14.0001C11 14.2653 11.1054 14.5196 11.2929 14.7072C11.4804 14.8947 11.7348 15.0001 12 15.0001C12.2652 15.0001 12.5196 14.8947 12.7071 14.7072C12.8946 14.5196 13 14.2653 13 14.0001V12.8401C13.8081 12.6041 14.5037 12.0839 14.9585 11.3755C15.4133 10.6671 15.5967 9.81814 15.4749 8.98513C15.3532 8.15213 14.9344 7.39122 14.2958 6.84266C13.6572 6.29409 12.8418 5.99484 12 6.00007Z" fill="#999999"/>
+  <path d="M12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18Z" fill="#999999"/>
+</svg>
+                                        </button>
+                                        <div class="issue-help__tip" id="marketIssueHelpTip" role="tooltip">
+                                            <p>KRX 정규장과 애프터마켓 시장 시세를 반영합니다.<br>ETF/ETN은 정규장에만 반영돼요.</p>
+                                        </div>
+                                    </div>
+                    </div>
 
                     <div class="market">
                         <div class="ch_tab .ch_tab01">
@@ -2744,14 +2695,14 @@
                         </div>
 
                         <div class="itemUpdate">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                            </svg>
-                            <span>12/31 12:30</span>
+                            <!-- 시간 기준 표시
+                                 16시 이전: MM.DD HH:mm
+                                 16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                 20시 이후: MM.DD 장마감 (시간 생략)
+                            -->
+                            <span>10.21 장마감</span>
+                            <!-- 정규장: <span>10.21 14:30</span> -->
+                            <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                         </div>
 
                         <div class="tab-content">
@@ -3161,14 +3112,14 @@
                                 <!-- // -->
 
                                 <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                    </svg>
-                                    <span>12/31 12:30</span>
+                                    <!-- 시간 기준 표시
+                                    16시 이전: MM.DD HH:mm
+                                    16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                    20시 이후: MM.DD 장마감 (시간 생략)
+                                    -->
+                                    <span>10.21 장마감</span>
+                                    <!-- 정규장: <span>10.21 14:30</span> -->
+                                    <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                                 </div>
 
                                 <div class="marketList">
@@ -3248,14 +3199,14 @@
                                 <!-- // -->
 
                                 <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                    </svg>
-                                    <span>12/31 12:30</span>
+                                    <!-- 시간 기준 표시
+                                    16시 이전: MM.DD HH:mm
+                                    16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                    20시 이후: MM.DD 장마감 (시간 생략)
+                                    -->
+                                    <span>10.21 장마감</span>
+                                    <!-- 정규장: <span>10.21 14:30</span> -->
+                                    <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                                 </div>
 
                                 <div class="marketList">
@@ -3325,14 +3276,14 @@
                                 <!-- // -->
 
                                 <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                    </svg>
-                                    <span>12/31 12:30</span>
+                                    <!-- 시간 기준 표시
+                                    16시 이전: MM.DD HH:mm
+                                    16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                    20시 이후: MM.DD 장마감 (시간 생략)
+                                    -->
+                                    <span>10.21 장마감</span>
+                                    <!-- 정규장: <span>10.21 14:30</span> -->
+                                    <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                                 </div>
 
                                 <div class="marketList">
@@ -3407,14 +3358,14 @@
                                 <!-- // -->
 
                                 <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                    </svg>
-                                    <span>12/31 12:30</span>
+                                    <!-- 시간 기준 표시
+                                    16시 이전: MM.DD HH:mm
+                                    16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                    20시 이후: MM.DD 장마감 (시간 생략)
+                                    -->
+                                    <span>10.21 장마감</span>
+                                    <!-- 정규장: <span>10.21 14:30</span> -->
+                                    <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                                 </div>
 
                                 <div class="marketList">
@@ -3484,14 +3435,14 @@
                                 <!-- // -->
 
                                 <div class="itemUpdate">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-                                    </svg>
-                                    <span>12/31 12:30</span>
+                                    <!-- 시간 기준 표시
+                                    16시 이전: MM.DD HH:mm
+                                    16시 이상 ~ 20시 미만: MM.DD HH:mm 애프터마켓 기준
+                                    20시 이후: MM.DD 장마감 (시간 생략)
+                                    -->
+                                    <span>10.21 장마감</span>
+                                    <!-- 정규장: <span>10.21 14:30</span> -->
+                                    <!-- 애프터마켓: <span>10.21 19:43 애프터마켓 기준</span> -->
                                 </div>
 
                                 <div class="marketList">

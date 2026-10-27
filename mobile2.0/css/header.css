@@ -18,17 +18,98 @@
   background: url(https://img.thinkpool.com/www/mobile/img/b-sch.png) no-repeat 0 0;
   background-size: 20px auto;
 }
-#header .centerHeader {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  top: 0;
+/* 같은 너비의 좌우 영역 사이에서 제목을 flex로 중앙 정렬합니다. */
+#header .header-side {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+#header .header-side--left {
+  justify-content: flex-start;
+  gap: 4px;
+}
+#header .header-side--right {
+  justify-content: flex-end;
+}
+#header #top.header-row {
+  --header-actions-width: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 18px;
+}
+#header #top.header-row:has(> .header-side--left > .logo + .pageBack) {
+  --header-actions-width: 68px;
+}
+#header #top.header-row:has(> .header-side--right > .rightBtn) {
+  --header-actions-width: 96px;
+}
+#header #top.header-row:has(> .header-side--right > .rightBtn .app) {
+  --header-actions-width: 80px;
+}
+#header #top.header-row > .headerTitle,
+#header #top.header-row > .header-title {
+  position: static;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: calc(100% - 2 * var(--header-actions-width) - 16px);
+  width: auto;
+  height: auto;
   margin: 0;
   padding: 0;
-  height: 49px;
-  line-height: 49px;
-  z-index: -1;
+  float: none;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#header .header-side > .logo,
+#header .header-side > .pageBack,
+#header .header-side > .toplogo,
+#header .header-side > .rightlogo {
+  flex-shrink: 0;
+  float: none;
+  margin: 0;
+}
+#header #top.header-row .header-side > .subSchBtn,
+#header #top.header-row .header-side > #sideMenu,
+#header #top.header-row .header-side > .rightBtn,
+#header #top.header-row .header-side > .prev-btn {
+  position: static;
+  flex-shrink: 0;
+  margin: 0;
+}
+#header .header-side .pageBack button {
+  display: block;
+  height: 20px;
+  background-position: center;
+}
+#header .header-side .sideMenuBtn .menu {
+  top: 0;
+  left: 0;
+}
+#header .header-side > .subSchBtn .schButton {
+  margin: 0 !important;
+}
+#header #top.main-top {
+  min-height: 48px;
+  padding: 0 18px;
+}
+#header #top.main-top > .logo {
+  margin-top: 0;
+}
+#header #top.main-top > #sideMenu {
+  top: 16px;
+  transform: none;
+}
+#header #top.main-top .menu.main-menu {
+  top: 0;
+  left: 0;
+  padding: 0;
 }
 
 .logo {
@@ -57,10 +138,7 @@
 .logo > a.ai-logo {
   position: absolute;
 }
-.logo > a.f02 {
-  position: absolute;
-  left: 33px;
-}
+.logo > a.f02,
 .logo > a.f03 {
   position: absolute;
   left: 33px;
@@ -75,7 +153,7 @@
   position: relative;
   display: block;
   width: 100%;
-  min-height: 20px;
+  min-height: 48px;
   padding: 14px 18px 0;
   overflow: hidden;
 }
@@ -95,7 +173,7 @@
   overflow-x: auto;
   background: #fff;
   z-index: 99;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 0;
 }
 
 .h-show {
@@ -133,114 +211,47 @@
   background: none !important;
 }
 
-.f01 {
-  animation-name: f01ani;
-  animation-duration: 8s;
+/* 헤더 로고의 공통 애니메이션 설정 */
+.f01,
+.ai-logo,
+.f02,
+.f03 {
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
   animation-direction: normal;
   animation-iteration-count: infinite;
 }
-.f01 img {
-  height: 18px !important;
+.f01 img,
+.f02 img,
+.f03 img {
+  height: 18px;
 }
+.f01 { animation-name: f01ani; }
+.ai-logo { animation-name: aiLogoani; }
+.f02 { animation-name: f02ani; }
+.f03 { animation-name: f03ani; }
 
 @keyframes f01ani {
-  0% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%, 35% { opacity: 1; }
+  40%, 95% { opacity: 0; }
+  100% { opacity: 1; }
 }
-.ai-logo {
-  animation-name: aiLogoani;
-  animation-duration: 8s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-}
-
 @keyframes aiLogoani {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%, 35% { opacity: 0; }
+  40%, 95% { opacity: 1; }
+  100% { opacity: 0; }
 }
-.f02 {
-  animation-name: f02ani;
-  animation-duration: 8s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-}
-.f02 img {
-  height: 18px !important;
-}
-
 @keyframes f02ani {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%, 35% { opacity: 0; }
+  40%, 65% { opacity: 1; }
+  70%, 100% { opacity: 0; }
 }
-.f03 {
-  animation-name: f03ani;
-  animation-duration: 8s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-}
-.f03 img {
-  height: 18px !important;
+@keyframes f03ani {
+  0%, 65% { opacity: 0; }
+  70%, 95% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-@keyframes f03ani {
-  0% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .btn-img {
   border: 0;
   margin: 0 !important;
@@ -327,72 +338,126 @@
     margin-right: -350px;
   }
 }
+@media (max-width: 768px) {
+  #sideContent {
+    width: 295px;
+    min-width: 295px;
+    max-width: 295px;
+  }
+}
+/* 사이드메뉴 내부: 위치 보정 대신 flex와 gap으로 정렬합니다. */
 #sideContent .offcanvas-header {
+  align-items: center;
   padding: 10px 17px;
 }
 #sideContent .offcanvas-header .offcanvas-title {
   display: flex;
-  width: 100%;
+  align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  width: 100%;
 }
 #sideContent .offcanvas-header .offcanvas-title .logo {
-  display: block;
-  width: 50%;
-  height: 20px;
-  line-height: 20px;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  float: none;
+}
+#sideContent .offcanvas-header .offcanvas-title .logo > a {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  float: none;
 }
 #sideContent .offcanvas-header .offcanvas-title .logo img {
-  float: left;
-  margin-top: 3px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: none;
+  margin: 0;
 }
 #sideContent .offcanvas-header .offcanvas-title .app {
-  display: block;
-  width: 50%;
-  height: 20px;
-  text-align: right;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  height: auto;
 }
 #sideContent .offcanvas-header .offcanvas-title .app button {
-  display: inline-block;
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   max-width: 102px;
-  height: 20px;
-  line-height: 20px;
+  min-height: 20px;
   padding: 0 10px;
   border-radius: 20px;
   background: #F0F2F6;
   border: 0;
   font-size: 13px;
   color: #3E4665;
+  white-space: nowrap;
 }
 #sideContent .offcanvas-header .offcanvas-title .app button img {
-  float: left;
-  margin-top: 5px;
+  display: block;
+  flex-shrink: 0;
+  float: none;
+  margin: 0;
 }
 #sideContent .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
   padding: 15px 17px;
 }
 #sideContent .offcanvas-body .loginmenu {
-  display: block;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
 }
 #sideContent .offcanvas-body .loginmenu .before {
   display: flex;
+  align-items: center;
+  gap: 10px;
   width: 100%;
-  justify-content: space-around;
 }
 #sideContent .offcanvas-body .loginmenu .before button {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  width: auto !important;
   padding: 0 10px !important;
 }
 #sideContent .offcanvas-body .loginmenu .after {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
 }
 #sideContent .offcanvas-body .loginmenu .after .top {
   display: flex;
-  width: 100%;
+  align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  width: 100%;
 }
 #sideContent .offcanvas-body .loginmenu .after .top strong {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px;
+  min-width: 0;
   font-size: 14px;
   font-weight: 400 !important;
 }
@@ -400,11 +465,11 @@
   font-size: 16px;
   color: #5568fd;
   font-weight: 700;
-  padding-left: 2px;
 }
 #sideContent .offcanvas-body .loginmenu .after .top button {
+  flex-shrink: 0;
   border: 0;
-  background: 0;
+  background: none;
   padding: 0;
   font-size: 14px;
   color: #999;
@@ -412,25 +477,31 @@
 }
 #sideContent .offcanvas-body .loginmenu .after .menu {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 10px;
+  width: 100%;
 }
 #sideContent .offcanvas-body .loginmenu .after .menu button {
-  width: 48.5%;
-  min-width: 100px;
+  display: flex;
+  flex: 1 1 calc(50% - 5px);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
   height: 33px;
   border: 1px solid #d5d5d5;
   border-radius: 5px;
   padding: 0;
-  text-align: center;
+  margin: 0;
   font-size: 14px;
   color: #000;
   background: #fff;
-  margin: 5px 0;
 }
 #sideContent .offcanvas-body .loginmenu .after .menu button .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   padding: 0 !important;
   min-width: 18px !important;
   height: 18px;
@@ -440,17 +511,22 @@
   color: #fff;
 }
 #sideContent .offcanvas-body .allmenulist {
-  margin-top: 20px;
-  display: block;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
   width: 100%;
+  margin: 0;
   border-top: 1px solid #d5d5d5;
 }
 #sideContent .offcanvas-body .allmenulist .amn {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 #sideContent .offcanvas-body .allmenulist .amn button {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   height: 40px;
   width: 100%;
   border: 0;
@@ -461,66 +537,86 @@
   background: #fff;
   text-align: left;
 }
+#sideContent .offcanvas-body .allmenulist .amn button > img,
+#sideContent .offcanvas-body .allmenulist .amn button > svg {
+  flex-shrink: 0;
+  margin: 0 !important;
+}
 #sideContent .offcanvas-body .allmenulist .amn button::after {
-  position: absolute;
-  top: 14px;
-  right: 11px;
-  content: " ";
+  position: static;
+  flex: 0 0 8px;
+  margin: 0 0 0 auto;
+  content: "";
   width: 8px;
   height: 8px;
+  background: none;
   border: 2px solid #888;
   border-bottom: 0;
   border-right: 0;
   transform: rotate(224deg);
-  transition: all ease 0.1s;
+  transition: transform 0.1s ease;
 }
 #sideContent .offcanvas-body .allmenulist .amn button[aria-expanded=true]::after {
-  top: 16px;
   transform: rotate(45deg);
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse, #sideContent .offcanvas-body .allmenulist .amn .collapsing {
+#sideContent .offcanvas-body .allmenulist .amn .collapse,
+#sideContent .offcanvas-body .allmenulist .amn .collapsing {
   width: 100%;
   background: #f6f6f7;
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul {
-  display: block;
+#sideContent .offcanvas-body .allmenulist .amn .collapse ul,
+#sideContent .offcanvas-body .allmenulist .amn .collapsing ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
   padding: 15px 17px;
   margin: 0;
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li {
+#sideContent .offcanvas-body .allmenulist .amn .collapse ul li,
+#sideContent .offcanvas-body .allmenulist .amn .collapsing ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
   list-style: none;
-  margin-bottom: 10px;
+  margin: 0;
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li a, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li a {
+#sideContent .offcanvas-body .allmenulist .amn .collapse ul li a,
+#sideContent .offcanvas-body .allmenulist .amn .collapsing ul li a {
   font-size: 15px;
   color: #333;
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li > ul.sub-depth, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li > ul.sub-depth {
+#sideContent .offcanvas-body .allmenulist .amn .collapse ul li > ul.sub-depth,
+#sideContent .offcanvas-body .allmenulist .amn .collapsing ul li > ul.sub-depth {
+  gap: 5px;
   padding: 0 0 0 10px;
-  margin: 10px 0 0 0;
+  margin: 0;
 }
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li > ul.sub-depth li, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li > ul.sub-depth li {
-  margin-bottom: 5px;
-}
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li > ul.sub-depth li:last-child, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li > ul.sub-depth li:last-child {
-  margin-bottom: 0;
-}
-#sideContent .offcanvas-body .allmenulist .amn .collapse ul li > ul.sub-depth li a, #sideContent .offcanvas-body .allmenulist .amn .collapsing ul li > ul.sub-depth li a {
+#sideContent .offcanvas-body .allmenulist .amn ul li > ul.sub-depth li a {
   font-size: 14px;
 }
 #sideContent .offcanvas-body .sfmenu {
   display: flex;
-  width: 100%;
-  justify-content: flex-start;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 25px;
+  width: 100%;
+  margin: 0;
 }
 #sideContent .offcanvas-body .sfmenu button {
+  display: flex;
+  flex: 1 1 calc(50% - 5px);
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
   padding: 0 13px;
-  width: calc(50% - 5px);
+}
+#sideContent .offcanvas-body > .other {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  margin-top: 0 !important;
 }
 
 .globalNavigation {
@@ -581,23 +677,18 @@
 }
 
 .headerTitle {
-  width: calc(100% - 102px);
   height: 20px;
   line-height: 20px;
-  margin-left: 25px;
-  text-align: left;
-  float: left;
+  text-align: center;
   font-size: 16px;
   color: #000;
   font-weight: 700 !important;
-  float: left;
 }
 .headerTitle em {
   font-size: 14px;
   font-weight: 400;
 }
 .headerTitle.subTitle {
-  width: calc(100% - 130px);
   text-align: center;
   margin: 0;
 }

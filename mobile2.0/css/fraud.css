@@ -2515,16 +2515,20 @@
   padding: 12px 20px;
 }
 .fraud-header #top .header-title {
-  width: 100%;
-  position: absolute;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
+.fraud-header #top .header-title span:has(svg) {
+  flex-shrink: 0;
+}
 .fraud-header #top .header-title span {
   display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;

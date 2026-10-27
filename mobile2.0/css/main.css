@@ -422,8 +422,9 @@
 }
 .s_signal .s_push .box .txtBox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 .s_signal .s_push .box .txtBox .txt {
   font-size: 16px;
@@ -1453,47 +1454,69 @@
   border-bottom: 0;
 }
 .videoList .card-video {
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
+  gap: 15px;
 }
 .videoList .card-video .thumb {
   position: relative;
   display: block;
+  flex: 0 0 90px;
   width: 90px;
+  height: 61px;
   min-height: 61px;
+  max-height: 61px;
+  overflow: hidden;
   background: #f8f8f8;
   border-radius: 5px;
 }
 .videoList .card-video .thumb > img {
-  height: 61px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .videoList .card-video .thumb .play {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 27px;
-  margin: -15px 0 0 -10px;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   z-index: 91;
+}
+.videoList .card-video .thumb .play > img {
+  display: block;
+  flex: 0 0 27px;
+  width: 27px;
+  height: auto;
+  /* 삼각형의 시각적 중심과 이미지 캔버스 중심 차이를 보정합니다. */
+  transform: translateX(3px);
 }
 .videoList .card-video .txt {
   display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  width: calc(100% - 105px);
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
 }
 .videoList .card-video .txt .cont {
   width: 100%;
   line-height: 18px;
   font-size: 16px;
   color: #000;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .videoList .card-video .txt .info {
   width: 100%;
   line-height: 15px;
   font-size: 13px;
   color: #999;
-  margin-top: 5px;
 }
 
 .mainListTable {
@@ -2382,4 +2405,148 @@
   line-height: 20px;
   color: #999999;
   letter-spacing: -0.32px;
+}
+
+/* 라씨매매신호 메인: 제목·아이콘 중앙 정렬 및 두 줄 안내 */
+.s_signal .s_signalTitle--help {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  line-height: 20px;
+}
+.s_signalTitle--help > span {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+.s_signalTitle--help > .issue-help {
+  position: static;
+  display: flex;
+  align-items: center;
+  flex: 0 0 20px;
+  height: 20px;
+}
+.s_signalTitle--help .issue-help__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.s_signalTitle--help .issue-help--right .issue-help__tip {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 34px);
+}
+.s_signalTitle--help .issue-help__tip p {
+  white-space: nowrap;
+}
+.s_signalTitle--help .issue-help__tip::before {
+  display: none;
+}
+.s_signalTitle--help .issue-help__btn::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #323335;
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+.s_signalTitle--help .issue-help.is-open .issue-help__btn::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* AI분석·라씨 메인: 매수·매도 원 크기(120px)와 간격(60px)을 유지합니다. */
+.s_signal .s_signalTitle--help + .result,
+#wrap:has(.main-issue) .s_signal .result {
+  justify-content: center;
+  gap: 60px;
+}
+.s_signal .s_signalTitle--help + .result .s_result,
+#wrap:has(.main-issue) .s_signal .result .s_result {
+  flex: 0 0 120px;
+  margin: 0;
+}
+
+/* 라씨 메인: 380px 화면에서 좌우 17px을 뺀 txtBox 너비를 유지합니다. */
+.s_signal .s_signalTitle--help ~ .s_alarm .txtBox {
+  width: 100%;
+  max-width: 346px;
+  margin-inline: auto;
+}
+
+/* 매매신호 문장 전체를 하나의 flex 항목으로 중앙 정렬합니다. */
+.s_signal .s_alarm .sigTxtSwiper .swiper-wrapper {
+  align-items: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > em,
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > span,
+.s_signal .s_alarm .sigTxtSwiper .sigTxtSwiper__text > strong {
+  float: none;
+  margin: 0;
+}
+
+
+/* AI분석 메인의 가로 스크롤: 가까운 항목 시작점에 스냅합니다. */
+#wrap:has(.main-issue) .allNav > .globalNavigation {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 18px;
+}
+#wrap:has(.main-issue) .allNav > .globalNavigation > a {
+  scroll-snap-align: start;
+}
+#wrap:has(.main-issue) #myItem {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+#wrap:has(.main-issue) #myItem .myItemList > .myItemBox {
+  scroll-snap-align: start;
+}
+#wrap:has(.main-issue) #container .nav.nav-round {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+#wrap:has(.main-issue) #container .nav.nav-round > .nav-item {
+  scroll-snap-align: start;
+}
+
+/* 가로 탭 스크롤: 탭 시작점을 좌측 여백에 맞춥니다. */
+.ch_tab,
+.ch_tab > .nav {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 17px;
+}
+.ch_tab > .nav > .nav-item {
+  scroll-snap-align: start;
 }

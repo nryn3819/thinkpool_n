@@ -361,26 +361,46 @@
 }
 #issueModal .modal-content .modal-body .modal-issue-tab {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 10px;
+  gap: 9.5px 10px;
   padding-bottom: 10px;
 }
-#issueModal .modal-content .modal-body .modal-issue-tab button {
+#issueModal .modal-content .modal-body .modal-issue-tab > button {
+  box-sizing: border-box;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 106px;
+  width: 106px;
   min-width: 106px;
   height: 30px;
-  line-height: 24px;
+  padding: 0 10px;
   border: 1px solid #cfd3d9;
-  background: none;
   border-radius: 4px;
+  background: none;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
   color: #999;
-  justify-content: center;
+  white-space: nowrap;
 }
-#issueModal .modal-content .modal-body .modal-issue-tab button.active {
-  border: 1px solid #5368ff;
+#issueModal .modal-content .modal-body .modal-issue-tab > button.active {
+  border-color: #5368ff;
   color: #5368ff;
-  font-weight: bold;
+  font-weight: 700;
+}
+#issueModal .modal-content .modal-body .modal-issue-tab .modal-issue-time {
+  flex: 1 1 auto;
+  width: auto;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999;
+  text-align: left;
+  white-space: nowrap;
 }
 
 #endToRassiro .modal-dialog {

@@ -30,12 +30,18 @@
         }
     }
     .tag{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px 18px;
         width:100%;
         min-height:15px;
         line-height:15px;
         padding-top:5px;
 
         a{
+            white-space: nowrap;
             color:#000;
             font-size:13px;
 
@@ -46,7 +52,7 @@
         span{
             font-size:13px;
             color:#999;
-            margin-left:18px;
+            white-space: nowrap;
 
             &::before{
                 font-size:13px;

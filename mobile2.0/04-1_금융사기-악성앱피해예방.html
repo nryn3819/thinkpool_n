@@ -27,16 +27,19 @@
       <!-- header - header.scss -->
       <header id="header" class="clearfix fraud-header fraud-content_header">
         <h2 class="visually-hidden">상단영역</h2>
-        <div id="top" class="float-start">
+        <div id="top" class="float-start header-row">
+        <div class="header-side header-side--left">
           <button class="prev-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M3 12L9 18M3 12L9 6M3 12H21" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
+        </div>
           <div class="header-title">
             <span>악성 앱 피해와 예방 한눈에 보기</span>
           </div>
           <!-- 헤더 타이틀 -->
+        <div class="header-side header-side--right">
           <div id="sideMenu">
             <h3 class="visually-hidden">사이드메뉴열기</h3>
             <div class="sideMenuBtn sch-hide" data-bs-toggle="offcanvas" data-bs-target="#sideContent"
@@ -179,6 +182,7 @@
             </aside>
 
           </div>
+        </div>
           <!-- //sideMenu -->
         </div>
         <!-- //top -->

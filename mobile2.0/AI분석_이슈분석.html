@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/issue-help.js" defer></script>
     <title>씽크풀</title>
   </head>
   <body>
@@ -20,54 +21,279 @@
             <a class="visually-hidden-focusable" href="#container">Skip to main content</a>
             <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
             <!-- header - header.scss -->
-            <header id="header" class="clearfix item">
-                <h2 class="visually-hidden">상단영역</h2>
-                <div id="top" class="float-start">
-                    
-                    <div class="pageBack">
-                        <button type="button" onclick="history.back()">이전페이지</button>
-                    </div>
-                    <!-- //이전페이지 -->
-                
-                    <div class="headerTitle subTitle text-truncate">
-                        <strong>최근이슈</strong>
-                    </div>
-                    <!-- //종목명 -->
+        <header id="header" class="clearfix item">
+          <h2 class="visually-hidden">상단영역</h2>
+          <div id="top" class="float-start header-row">
+          <div class="header-side header-side--left">
+            <div class="logo">
+              <h3 class="visually-hidden">로고</h3>
+              <a href="./AI분석_메인.html" class="float-start h-logo h-show">
+                <img
+                  src="https://img.thinkpool.com/www/mobile/img/logo.png"
+                  alt="씽크풀로고"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+            <!-- logo -->
 
-                    <div class="subSchBtn subSch">
-                        <button type="button" class="schButton">종목검색</button>
-                    </div>
-                
-                    <div id="sideMenu">
-                        <h3 class="visually-hidden">사이드메뉴열기</h3>
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button>
+            <div class="headerTitle centerHeader text-truncate">
+              <strong>최근이슈</strong>
+            </div>
+            <!-- //종목명 -->
 
-                        <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="사이드컨텐츠">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <div class="header-side header-side--right">
+            <div class="subSchBtn">
+              <button type="button" class="schButton">종목검색</button>
+            </div>
+
+            <div id="sideMenu">
+              <h3 class="visually-hidden">사이드메뉴열기</h3>
+              <div
+                class="sideMenuBtn sch-hide"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sideContent"
+                data-cate-id="amn01"
+              >
+                <form name="sidemenu">
+                  <input type="checkbox" id="sdmnu" name="tgle" disabled />
+                  <label class="menu" for="sdmnu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </label>
+                </form>
+              </div>
+              <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sideContent" aria-controls="사이드메뉴" class="btn-img sideMenuBtn">사이드메뉴</button> -->
+
+              <!-- 2022.06.28 변경 -->
+              <aside id="sideContent" class="offcanvas offcanvas-end" tabindex="-1" aria-label="전체 메뉴">
+                  <div class="offcanvas-header">
+                      <div class="offcanvas-title">
+                          <div class="logo"><a href="./AI분석_메인.html"><img src="./img/thinklogo.png" alt="씽크풀 홈" width="102"></a></div>
+                          <div class="app"><button type="button">앱다운로드</button></div>
+                      </div>
+                  </div>
+                  <div class="offcanvas-body">
+                      <div class="loginmenu">
+                          <div class="before">
+                              <button type="button" class="btn-custom-primary">로그인</button>
+                              <button type="button" class="btn-custom-default">회원가입</button>
+                          </div>
+                      </div>
+                      <div class="allmenulist accordion accordion-flush" id="accoridon-flush-menu">
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush01">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn01" aria-expanded="false" aria-controls="amn01">AI분석</button>
                               </div>
-                              <div class="offcanvas-body">
-                                <div>
-                                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                                </div>
-                                <div class="dropdown mt-3">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <div class="accordion-collapse collapse" id="amn01" aria-labelledby="flush01" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="./AI분석_메인.html">AI분석홈</a></li>
+                                  <li><a href="./AI분석_시세분석.html">시세분석</a></li>
+                                  <li><a href="./AI분석_이슈분석.html">이슈분석</a></li>
+                                  <li><a href="./AI분석_수급분석.html">수급분석</a></li>
+                                  <li><a href="https://m.thinkpool.com/analysis/theme">테마분석</a></li>
+                                  <li><a href="https://m.thinkpool.com/analysis/notice/main?depth1Code=1">공시분석</a></li>
+                                  <li><a href="https://m.thinkpool.com/analysis/report/main?depth1Code=1">리포트분석</a></li>
                                   </ul>
-                                </div>
                               </div>
-                        </aside>
-                    </div>
-                    <!-- //sideMenu -->
-                </div>
-                <!-- //top -->
-            </header>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush02">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn02" aria-expanded="false" aria-controls="amn02">AI추천</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn02" aria-labelledby="flush02" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="https://m.thinkpool.com/advisor">AI종목추천홈</a></li>
+                                  <li><a href="https://m.thinkpool.com/advisor/todays">오늘의종목</a></li>
+                                  <li><a href="https://m.thinkpool.com/advisor/recomm/00000039">종목추천</a></li>
+                                  <li><a href="https://m.thinkpool.com/advisor/portfolio/00000050">포트폴리오</a></li>
+                                  <li><a href="https://m.thinkpool.com/advisor/guide">이용안내</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush04">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn04" aria-expanded="false" aria-controls="amn04">AI속보</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn04" aria-labelledby="flush04" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="https://m.thinkpool.com/news/breakingNews">주요속보</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/supply">수급</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/theme">테마</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/report">리포트</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/record">실적</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/notice">공시</a></li>
+                                  <li><a href="https://m.thinkpool.com/news/tagAllView">태그전체보기</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush03">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn03" aria-expanded="false" aria-controls="amn03"><img src="./img/rassi-icon.png" alt="" width="17"> 라씨신호</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn03" aria-labelledby="flush03" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="./라씨매매신호_메인.html">라씨매매신호홈</a></li>
+                                  <li><a href="https://m.thinkpool.com/signal/intro">서비스소개</a></li>
+                                  <li><a href="https://m.thinkpool.com/signal/guide">이용안내</a></li>
+                                  <li><a href="https://m.thinkpool.com/signal/my">나의신호</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush08">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn08" aria-expanded="false" aria-controls="amn08"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                                  <path d="M8.13038 6.4888L10.6079 1.89453H14.2761L10.4756 8.41311L14.3723 14.9557H10.7402L8.13038 10.4096L5.58068 14.9557H1.88843L5.77311 8.41311L2.02072 1.89453H5.71298L8.13038 6.4888Z" fill="#34D399"></path>
+                                                                  <path d="M8.15287 6.4888H8.21079L10.5414 8.48576L10.4981 8.41311L14.3948 14.9557H10.7627L8.15287 10.4096L5.7956 8.48576V8.41311L2.04321 1.89453H5.73547L8.15287 6.4888Z" fill="black"></path>
+                                                              </svg> 엑스퍼트</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn08" aria-labelledby="flush08" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a role="button" tabindex="0">종목추천</a></li>
+                                  <li><a role="button" tabindex="0">전략과 분석</a></li>
+                                  <li><a role="button" tabindex="0">나의 엑스퍼트</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush05">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn05" aria-expanded="false" aria-controls="amn05">토론실</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn05" aria-labelledby="flush05" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="https://m.thinkpool.com/social">토론실홈</a></li>
+                                  <li><a href="https://m.thinkpool.com/breakingNews/list">증권가속보</a></li>
+                                  <li><a href="https://m.thinkpool.com/screening/list">특징주포착</a></li>
+                                  <li><a href="https://m.thinkpool.com/compDiscuss/list">주식종합토론</a></li>
+                                  <li><a href="https://m.thinkpool.com/politics/list">정치방</a></li>
+                                  <li><a href="https://m.thinkpool.com/my">나의활동</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush09">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn09" aria-expanded="false" aria-controls="amn09">AI미국</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn09" aria-labelledby="flush09" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="https://m.thinkpool.com/seohak">서학 100 지수</a></li>
+                                  <li><a href="https://m.thinkpool.com/seohak/theme">미국 60대 테마</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="amn accordion-item">
+                              <div class="accordion-header" id="flush06">
+                                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#amn06" aria-expanded="false" aria-controls="amn06">더보기</button>
+                              </div>
+                              <div class="accordion-collapse collapse" id="amn06" aria-labelledby="flush06" data-bs-parent="#accoridon-flush-menu">
+                                  <ul>
+                                  <li><a href="https://m.thinkpool.com/customer">공지사항 및 문의</a></li>
+                                  <li><a href="https://m.thinkpool.com/customer/user">회원정보관리</a></li>
+                                  <li><a href="#">약관및정책</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="sfmenu">
+                          <button type="button" class="btn-custom-primary outline">블로그</button>
+                          <button type="button" class="btn-custom-primary outline">유튜브</button>
+                          <button type="button" class="btn-custom-primary outline">라씨 매매비서</button>
+                      </div>
+                      <div class="other text-center">
+                          <button type="button" class="btn-custom-default">PC버전으로 보기</button>
+                      </div>
+                  </div>
+              </aside>
+
+              <script>
+                const cate = document.querySelector(".sideMenuBtn");
+                const cateId = "#" + cate.getAttribute("data-cate-id");
+                const offId = document.querySelector("#sideContent");
+
+                cate.addEventListener("click", function () {
+                  const bsCollapse = new bootstrap.Collapse(cateId, {}).show;
+                });
+
+                offId.addEventListener("hide.bs.offcanvas", function () {
+                  const showCate = document.querySelector(".collapse.show");
+
+                  const bsCollapse = new bootstrap.Collapse(showCate, {}).hide;
+                });
+              </script>
+              <!-- //2022.06.28 변경 -->
+            </div>
+          </div>
+            <!-- //sideMenu -->
+
+            <script>
+              document
+                .getElementById("hd_sch")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.add("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "");
+                  document.querySelector(".h-logo").classList.remove("h-show");
+                  document.querySelector(".h-logo").classList.add("h-hide");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-hide");
+                  document.querySelector(".pageBack").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "checked";
+                });
+
+              document
+                .querySelector(".sch-hide")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.remove("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "#sideContent");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "offcanvas");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-show");
+                  document.querySelector(".pageBack").classList.add("h-hide");
+                  document.querySelector(".h-logo").classList.remove("h-hide");
+                  document.querySelector(".h-logo").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "";
+                });
+
+              document
+                .querySelector(".sch-hide2")
+                .addEventListener("click", function () {
+                  document
+                    .querySelector(".searcharea")
+                    .classList.remove("sch-show");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-target", "#sideContent");
+                  document
+                    .querySelector(".sideMenuBtn")
+                    .setAttribute("data-bs-toggle", "offcanvas");
+                  document
+                    .querySelector(".pageBack")
+                    .classList.remove("h-show");
+                  document.querySelector(".pageBack").classList.add("h-hide");
+                  document.querySelector(".h-logo").classList.remove("h-hide");
+                  document.querySelector(".h-logo").classList.add("h-show");
+                  document.forms.sidemenu.tgle.checked = "";
+                });
+            </script>
+          </div>
+          <!-- //top -->
+        </header>
             <!-- // -->
 
             <main id="container" class="clearfix">
@@ -87,7 +313,21 @@
                 </section>
                 <!-- //이슈겁색 -->
 
-                <section class="section section-basic">
+                <section class="section section-basic recent-issues">
+                    <!-- 시세 기준 안내 툴팁 -->
+                    <!-- [툴팁 적용 영역] 최근이슈 시세 기준 툴팁 (이 부분 작업하시면 됩니다.) -->
+                    <div class="issue-help issue-help--right">
+                                        <button type="button" class="issue-help__btn" aria-label="시세 기준 안내" aria-expanded="false" aria-controls="recentIssueHelpTip">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+  <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#999999"/>
+  <path d="M12 6.00007C11.0717 6.00007 10.1815 6.36882 9.52513 7.02519C8.86875 7.68157 8.5 8.57181 8.5 9.50007C8.5 9.76528 8.60536 10.0196 8.79289 10.2072C8.98043 10.3947 9.23478 10.5001 9.5 10.5001C9.76522 10.5001 10.0196 10.3947 10.2071 10.2072C10.3946 10.0196 10.5 9.76528 10.5 9.50007C10.5 9.2034 10.588 8.91339 10.7528 8.66671C10.9176 8.42004 11.1519 8.22778 11.426 8.11425C11.7001 8.00072 12.0017 7.97101 12.2926 8.02889C12.5836 8.08677 12.8509 8.22963 13.0607 8.43941C13.2704 8.64919 13.4133 8.91646 13.4712 9.20743C13.5291 9.4984 13.4994 9.8 13.3858 10.0741C13.2723 10.3482 13.08 10.5824 12.8334 10.7473C12.5867 10.9121 12.2967 11.0001 12 11.0001C11.7348 11.0001 11.4804 11.1054 11.2929 11.293C11.1054 11.4805 11 11.7349 11 12.0001V14.0001C11 14.2653 11.1054 14.5196 11.2929 14.7072C11.4804 14.8947 11.7348 15.0001 12 15.0001C12.2652 15.0001 12.5196 14.8947 12.7071 14.7072C12.8946 14.5196 13 14.2653 13 14.0001V12.8401C13.8081 12.6041 14.5037 12.0839 14.9585 11.3755C15.4133 10.6671 15.5967 9.81814 15.4749 8.98513C15.3532 8.15213 14.9344 7.39122 14.2958 6.84266C13.6572 6.29409 12.8418 5.99484 12 6.00007Z" fill="#999999"/>
+  <path d="M12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18Z" fill="#999999"/>
+</svg>
+                                        </button>
+                                        <div class="issue-help__tip" id="recentIssueHelpTip" role="tooltip">
+                                            <p>KRX 정규장과 애프터마켓 시장 시세를 반영합니다.<br>ETF/ETN은 정규장에만 반영돼요.</p>
+                                        </div>
+                                    </div>
                     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
                     <div dir="rtl" class="swiper mySwiper">

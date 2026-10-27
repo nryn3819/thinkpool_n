@@ -1,21 +1,16 @@
 .headerTitle {
-  width: calc(100% - 102px);
   height: 20px;
   line-height: 20px;
-  margin-left: 25px;
-  text-align: left;
-  float: left;
+  text-align: center;
   font-size: 16px;
   color: #000;
   font-weight: 700 !important;
-  float: left;
 }
 .headerTitle em {
   font-size: 14px;
   font-weight: 400;
 }
 .headerTitle.subTitle {
-  width: calc(100% - 130px);
   text-align: center;
   margin: 0;
 }
