@@ -76,8 +76,9 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px; // 글씨 시각적 중심과 맞춤
     border-radius: 100px;
     background: #ff6247;
     font-style: normal;
