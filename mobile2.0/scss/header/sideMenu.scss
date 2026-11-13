@@ -309,3 +309,13 @@
     max-width: 295px;
   }
 }
+
+// 술술 ETF 버튼 (하단 sfmenu, 디자인은 추후 적용)
+#sideContent .offcanvas-body .sfmenu a.btn-etf {
+  display: flex;
+  flex: 1 1 calc(50% - 5px);
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 13px;
+}

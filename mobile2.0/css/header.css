@@ -808,3 +808,37 @@
   margin-top: -9px;
   transform: rotate(45deg);
 }
+
+/* 술술 ETF 메뉴 (아이콘은 추후 디자인 적용) */
+.globalNavigation a.menu-etf {
+  gap: 4px;
+}
+.globalNavigation a.menu-etf .icon-etf {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  background: #ff6247;
+  font-style: normal;
+}
+.globalNavigation a.menu-etf .icon-etf::before {
+  content: "N";
+  font-family: "Spoqa Han Sans Neo", "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+}
+
+/* 술술 ETF 버튼 (하단 sfmenu, 디자인은 추후 적용) */
+#sideContent .offcanvas-body .sfmenu a.btn-etf {
+  display: flex;
+  flex: 1 1 calc(50% - 5px);
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 13px;
+}
