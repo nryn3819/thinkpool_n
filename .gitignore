@@ -234,6 +234,10 @@ dist
 yarn.
 
 # 정리용 미사용 SCSS/CSS 폴더
+/m/scss_n/
+/m/css_n/
+/m/old/
+/m/mobile__editForAi/
 /mobile2.0/scss_n/
 /mobile2.0/css_n/
 /mobile2.0/old/
@@ -260,3 +264,38 @@ old/
 .gitignore
 /.gitignore
 
+
+# ===== 불필요 파일 (압축/백업/작업파일/OS 임시파일) =====
+# 압축 파일
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tgz
+
+# 디자인 원본/작업 파일
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+
+# 백업/임시 파일
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+~$*
+*.tmp
+
+# 백업 폴더
+/m/backups/
+backups/
+
+# OS 임시 파일
+.DS_Store
+**/.DS_Store
+Thumbs.db
+desktop.ini
